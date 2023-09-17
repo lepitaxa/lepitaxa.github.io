@@ -1,6 +1,3 @@
 ### LEPITAXA
 
-To-do:
-- Upload all data to the repository
-- Write the Readme
-- Test everything
+To-do: Write a proper README for this project!
