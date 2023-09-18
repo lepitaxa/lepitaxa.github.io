@@ -1,3 +1,10 @@
-### LEPITAXA
+Note: This README is WORK IN PROGRESS
 
-To-do: Write a proper README for this project!
+# <img src="lepitaxa.png" height="32"> LEPITAXA  – Lepidopteran Classification Project
+##### Website: https://lepitaxa.github.io/lepitaxa/
+
+To-do:
+- Add more infos and details here ...
+- Summarize the overall structure
+- How to add data
+- Data types and guidelines
