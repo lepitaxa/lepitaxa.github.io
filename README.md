@@ -21,7 +21,24 @@ This GitHub repository also provides a place to discuss data, propose changes an
 -- _Georg Hammerschmid_
 
 ## Basic structure
-To-do: Summarize the overall structure of Lepitaxa
+Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or datapoints! An overview of the group structure can be found in the table below.
+
+|Color|English name|German name|Included Taxa|
+|---|---|---|---|
+||_"Macrolepidopterans"_|_"Großschmetterlinge"_||
+|${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$<br>${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
+|${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$<br>${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
+|${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$<br>${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
+|${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$<br>${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
+||_"Microlepidopterans"_|_"Kleinschmetterlinge"_||
+|${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$<br>${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
+|${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$<br>${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
+|${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$<br>${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$<br>${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
+
+Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
+
+
 
 ## Setup workspace
 To-do: How to get started
