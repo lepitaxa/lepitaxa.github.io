@@ -6,7 +6,7 @@ Note: This README is WORK IN PROGRESS
 ## Overview
 - [Introduction](#introduction)
 - [Basic structure](#basic-structure)
-- [Setup workspace](#setup-workspace)
+- [Workspace setup](#workspace-setup)
 - [Data types and guidelines](#data-types-and-guidelines)
 
 ## Introduction
@@ -38,10 +38,29 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 
 Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
+## Workspace setup
+### Setting up Git
+This project uses Git as a version control system and its repository is hosted here on GitHub, naturally you’ll need to setup a GitHub account (if you haven’t done so already) and install Git on your computer. There’s many good tutorials out there about how to get started with Git, so I won’t go too much into detail. If you absolutely can’t figure out where to start, here’s my recommendation on how to proceed:
+- Go to https://github.com/ and login or register.
+- Go to https://desktop.github.com/ and download GitHub Desktop. Simply install the application, it will automatically setup and configure Git and an easy-to-use GUI for you.
+- Open GitHub Desktop. You’ll be prompted to link it to your GitHub account. Proceed accordingly.
+- Within GitHub Desktop, select “Clone a repository”, move to the “URL” tab and enter the following repository URL:
+https://github.com/lepitaxa/lepitaxa.git
+- Below, choose the local directory you want to use as a workspace. Start cloning. Git now will download all files included in the repository to your local workspace directory.
+- From here on, you should be good to go on the Git front. Git will from now on detect and list all changes to the workspace directory, keep all development branches up-to-date and allow you to create new branches, commit changes and additions and push them back into the online repository, as well as open pull requests for merging changes into the main branch.
 
+### Editing the data
+All Lepitaxa data is included within a single file, index.html. This file also contains all the HTML, CSS and JavaScript code needed for the Lepitaxa webpage. Theoretically, you can open and edit this file using any text editor (even Windows Notepad), although I highly recommend to use a more modern text editor with support for code highlighting, along with a proper monospace font like Courier or Consolas. A solid and popular choice would be Notepad++ (https://notepad-plus-plus.org/).
 
-## Setup workspace
-To-do: How to get started
+To get around faster within the large dataset, simply use your text editors search function to jump to whatever datapoint you’d like to modify.
+
+### Checking data integrity
+To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, I recommend to additionally run an automated data integrity check. To do this, open index.html in a web browser, show all taxa using the search button on top of the page and type “lepitest” in the search bar. Running a search like this will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them and repeat the lepitest for confirmation.
+
+Note that running a successfull lepitest does NOT guarantee full data integrity, as this simple script  can by no means detect everything. Also keep in mind that sometimes a single mistake within the data can cause several error points in a lepitest log, don’t get confused by that. They will all resolve after fixing the mistake.
+
+### Exporting raw data
+If you want to use Lepitaxa data for your own research, you’re free to do so in any way you want at all times, no need to ask for permission. More details about the dataset, its licensing as well as a data export feature (supports txt, csv, tsv and xml formats) can be found by clicking the “Stats & Infos” button on the bottom of the Lepitaxa webpage.
 
 ## Data types and guidelines
 To-do: List all the different data types and data structure guidelines
