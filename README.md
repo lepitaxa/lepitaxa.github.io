@@ -1,4 +1,5 @@
-Note: This README is WORK IN PROGRESS
+> [!NOTE]  
+> This README is WORK IN PROGRESS
 
 # <img src="lepitaxa.png" height="32"> LEPITAXA  – Lepidopteran Classification Project
 #### Website: https://lepitaxa.github.io/lepitaxa/
@@ -63,4 +64,78 @@ Note that running a successfull lepitest does NOT guarantee full data integrity,
 If you want to use Lepitaxa data for your own research, you’re free to do so in any way you want at all times, no need to ask for permission. More details about the dataset, its licensing as well as a data export feature (supports txt, csv, tsv and xml formats) can be found by clicking the “Stats & Infos” button on the bottom of the Lepitaxa webpage.
 
 ## Data types and guidelines
+### Basic data syntax
+All data points within the Lepitaxa dataset share the following simple syntax made of four elements: **_class_ TAB _data_ BR**. These elements are:
+1.  ***class*** – The data point class, which is a short and easy to remember set of 1-2 characters. Each class is linked to a data type and defines how the data string is handled and displayed.
+2. **TAB** – A single tab (U+0009 TAB character, \t). Do NOT use spaces instead, no matter how many!
+3. ***data*** – The actual data string, its specific fine structure for each data point class is explained further below.
+4. **BR** – A single line break (U+000A NEWLINE character, \n). Avoid any unneeded carriage return characters (U+000D CR character, \r) here!
+
+Example of some data points:
+```
+a	machaon
+e	Swallowtail
+e	Old World Swallowtail
+e	Common Yellow Swallowtail
+d	Schwalbenschwanz
+s	hippocrates
+u	hippocrates
+```
+
+These datapoints form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
+
+### Overview of supported data point classes and data types
+Note: This overview is also included as a HTML comment within the first lines of the Lepitaxa index.html source code, as a quickly accessible cheatsheet while editing.
+
+|Data point class|Data type|Data string fine structure|Short description|
+|---|---|---|---|
+|`x9`|ORD|[NAME]|Order name|
+|`x8`|SUBORD|[NAME]|Suborder name|
+|`x7`|INFRAORD|[NAME]|Infraorder name|
+|`x6`|PARVORD|[NAME]|Parvorder name|
+|`x5`|MICROORD|[NAME]|Microorder name|
+|`x4`|SECT|[NAME]|Section name|
+|`x3`|SUBSECT|[NAME]|Subsection name|
+|`x2`|INFRASECT|[NAME]|Infrasection name|
+|`x`|SUPERFAM|[NAME]|Superfamily name|
+|`xs`|SERIES|[NAME]|Series name|
+|`xp`|PARAPHYLUM|[NAME]|Paraphylum name|
+|`f`|FAM|[NAME]|Family name|
+|`y`|SUBFAM|[NAME]|Subfamily name|
+|`t`|TRI|[NAME]|Tribe name|
+|`j`|SUBTRI|[NAME]|Subtribe name|
+|`h`|INFRATRI|[NAME]|Infratribe name|
+|`g`|GEN|[GEN]|Genus name|
+|`i`|SUBGEN|[NAME]|Subgenus name|
+|`o`|SPGR|[NAME]|Species group name|
+|`a`|SP|{GEN} [SP]|Epithet of extant species|
+|`ae`|SP_EXT|{GEN} [SP] {"†"}|Epithet of extinct species|
+|`c`|AGG|{GEN} [SP] {"agg."}|Aggregate name<br>(species complex/superspecies epithet)|
+|`m`|SEG|{GEN} [SP]|Segregate name<br>(microspecies epithet)|
+|`u`|SSP|{GEN} {SP} [SSP]|Epithet of extant subspecies|
+|`ue`|SSP_EXT|{GEN} {SP} [SSP] {"†"}|Epithet of extinct subspecies|
+|`e`|NAME_EN|[NAME]|English common name of a<br>species or species complex|
+|`e2`|NAME_EN|[NAME]|English common name of a<br>family/tribe-level taxon|
+|`d`|NAME_DE|[NAME]|German common name of a<br>species or species complex|
+|`d2`|NAME_DE|[NAME]|German common name of a<br>family/tribe-level taxon|
+|`s`|SYN|{GEN} [SP] (SSP)|Species synonym with different<br>species (+ optional subspecies) epithet|
+|`s2`|SYN|[GEN] (SP) {SP/SSP}|(Sub)species synonym with different<br>genus (+optional species) name
+|`s3`|SYN|{GEN} [SP] {SSP}|Species synonym of former subspecies<br>of the given parent species epithet|
+|`s4`|SYN|[GEN] [SP] (SSP)|(Sub)species synonym with completely<br>different genus and species name
+|`r`|REF|[AUT1]{" et al., 20"}['YY]|Scientific reference first author+year<br>when >2 authors|
+|`r2`|REF|[AUT1]{" & "}(,AUT2){", 20"}['YY]|Scientific reference author(s)+year<br>when ≤2 authors|
+|`l`|REF_TITLE|[TITLE]|Title of scientific reference|
+|`p`|REF_ID|{", doi:"}[DOI]|ID of scientific reference via DOI|
+|`p2`|REF_ID|{", ISSN-L "}[ISSN-L,] [VOL]\(ISSUE\)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
+
+{#} Auto-generated data substring – added on page load via JavaScript
+
+[#] Required data (sub)string – must always be present
+
+(#) Optional data substring – can be added in addition to a required substring
+
+### Guidelines and details for the individual data types
+(include note that SECT and SERIES are meant in zoological sense, not the same as the ones used in botany)
+PARAPHYLUM - major obsolete paraphyletic taxon
+
 To-do: List all the different data types and data structure guidelines
