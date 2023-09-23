@@ -68,7 +68,7 @@ All data points within the Lepitaxa dataset share the following simple syntax ma
 1.  ***`class`*** – The data point class, which is a short and easy to remember set of 1-2 characters. Each class is linked to a data type and defines how the data string is handled and displayed.
 2. **`TAB`** – A single tab (U+0009 TAB character, \t). Do NOT use spaces instead, no matter how many!
 3. ***`data`*** – The actual data string, its specific fine structure for each data point class is explained further below.
-4. **`BR`** – A single line break (U+000A NEWLINE character, \n). Avoid any unneeded carriage return characters (U+000D CR character, \r) here!
+4. **`BR`** – A single line break (U+000A NEWLINE character, \n). Unneeded carriage return characters (U+000D CR character, \r) should be removed automatically by Git.
 
 Example of some data points:
 ```
