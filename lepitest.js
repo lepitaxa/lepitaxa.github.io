@@ -1,4 +1,4 @@
-////// LEPITEST DATA INTEGRITY CHECK 
+////// LEPITEST DATA INTEGRITY CHECK
 var data = $$('p')
 
 ////1 Start data check results log
