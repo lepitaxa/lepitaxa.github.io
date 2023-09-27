@@ -351,7 +351,7 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 - 20.9. The publication year _YY_ value must be separated by a single apostrophe (U+0027) from the author(s). The apostrophe is replaced with ", 20" automatically via JavaScript.
 - 20.10. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
 - 20.11. Referenced publications should preferentially be available in English, but are also accepted in German. If they're written in any other language, at least the abstract and data should be available in English.
-- 20.12. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of title + ISSN + Volume should be sufficient for identification, otherwise it will not be accepted.
+- 20.12. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
 
 ---
 ### 21 - REF_TITLE (`l`)
