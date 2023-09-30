@@ -1,5 +1,5 @@
 # <img src="lepitaxa.png" height="32"> LEPITAXA – Lepidopteran Classification Project
-#### Website: https://lepitaxa.github.io/lepitaxa/
+#### Website: [lepitaxa.github.io](https://lepitaxa.github.io/)
 
 ## Overview
 - [Introduction](#introduction)
@@ -384,6 +384,6 @@ The ID of a referenced scientific publication. This data type forms the last ele
 - Author: [Georg Hammerschmid](https://github.com/lepitaxa)
 - Creation date: 05.12.2020
 - Webhost Lepitaxa site: [pages.github.com](https://pages.github.com/) since 17.09.2023
-- GitHub repository: [lepitaxa / lepitaxa](https://github.com/lepitaxa/lepitaxa)
+- GitHub repository: [lepitaxa / lepitaxa.github.io](https://github.com/lepitaxa/lepitaxa.github.io)
 - Licencing lepitaxa designs: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 - Licencing raw data: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

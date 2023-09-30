@@ -9,10 +9,10 @@
 <meta name="theme-color" content="#000">
 <meta name="viewport" content="initial-scale=1">
 <meta name="google-site-verification" content="-IysjuyuagoksvXOgvJ2lBqIuQplmPbNLmFrGdo0lKs">
-<meta property="og:image" content="https://lepitaxa.github.io/lepitaxa/lepitaxa.png">
+<meta property="og:image" content="https://lepitaxa.github.io/lepitaxa.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
-<meta property="og:url" content="https://lepitaxa.github.io/lepitaxa/">
+<meta property="og:url" content="https://lepitaxa.github.io">
 <link rel="icon">
 
 <!--LEPITAXA- Data types: {#} Auto-generated, [#] Required data, (#) Optional data
@@ -74,26 +74,26 @@ main::before, footer	{content:" "; display:block; border-top:0.13rem solid gray;
 b						{animation-name:error; animation-delay:5s; animation-fill-mode:both; color:red}
 img						{height:2rem}
 #h1						{height:1.4rem; margin:1rem 12rem 0 0.2rem; vertical-align:0.22rem}
-button					{height:1.5rem; cursor:pointer; border-radius:0.44rem; background:none; float:right}
-svg:not(#h1)			{height:1.2rem; fill:#999}
+button					{height:2rem; cursor:pointer; border-radius:0.44rem; background:none; float:right}
+svg:not(#h1)			{height:1.3rem; fill:#999}
 svg:not(#h1):hover		{fill:blue}
 svg:not(#h1):active		{fill:red}
-[onclick*="load("]		{border:0; margin:1.1rem 0.2rem; position:sticky; top:0.8rem; z-index:1}
+[onclick*="load("]		{border:0; margin:0.8rem 0.15rem; position:sticky; top:0.5rem; z-index:1}
 footer					{margin:0.75rem 0; transform:translateY(-0.44rem)}
 h3, h4, h5, li			{font-size:0.72rem; font-weight:400; margin-top:0.5rem}
 li						{font-family:Arial, sans; margin:-0.7rem 0 1.2rem -1.5rem}
 h4						{font-family:var(--m); font-size:0.94rem; white-space:pre; margin:0.13rem 0; padding:0.44rem; background:#EEEEE6}
 h5						{font-size:0.8rem; margin:0.3rem 0; color:#777; letter-spacing:0.06rem}
-h5+button, [onclick*="togLn"]	{font-size:0.81rem; position:relative; bottom:1.8rem; margin:0 0 -1.8rem}
-h5+button				{width:6rem; padding:0.13rem 0.3rem; color:#777; border:0.06rem solid #DDD}
+h5+button, [onclick*="togLn"]	{font-size:0.9rem; position:relative; bottom:2rem; margin:0 0 -1.8rem}
+h5+button				{width:7rem; padding:0.13rem 0.3rem; color:#777; border:0.06rem solid #DDD}
 h5+button:hover			{background:#E9E9E9}
 h5+button:active		{background:#D0D0D0}
 .off					{opacity:0.2; cursor:default}
 .off:hover, .off:active {background:#FFF}
-[onclick*="togLn"]		{width:2.5rem; color:#CCC; border:0.1rem solid #FFF; right:6.2rem}
+[onclick*="togLn"]		{width:2.5rem; color:#CCC; border:0.1rem solid #FFF; right:0.5rem}
 [onclick*="togLn"]:not(.act):hover	{color:blue; border-color:#AAF}
 [onclick*="togLn"]:not(.act):active	{color:red; border-color:#FAA}
-[onclick*="'en'"]		{right:8.9rem}
+[onclick*="'en'"]		{right:1rem}
 .act					{cursor:default; color:#555; border-color:#CCC}
 
 /*Search form*/
@@ -162,23 +162,7 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .l			{font-size:0.7rem; padding:0 0.5rem 0.35rem 7.25rem; color:#666}
 p>a			{color:#666}
 
-/*Translatable strings*/
-#p>h2::after	{content:'"Butterflies"'}
-#p>h2.de::after	{content:'„Tagfalter”'}
-#n>h2::after	{content:'"Owlet Moths"'}
-#n>h2.de::after	{content:'„Eulen”'}
-#g>h2::after	{content:'"Geometrid Moths"'}
-#g>h2.de::after	{content:'„Spannerartige”'}
-#b>h2::after	{content:'"Silkmoths"'}
-#b>h2.de::after	{content:'„Spinner”'}
-#h>h2::after	{content:'"Higher Micromoths"'}
-#h>h2.de::after	{content:'„Höhere Motten”'}
-#c>h2::after	{content:'"Cossid Micromoths"'}
-#c>h2.de::after	{content:'„Bohrerartige”'}
-#m>h2::after	{content:'"Typical Micromoths"'}
-#m>h2.de::after	{content:'„Klassische Motten”'}
-#a>h2::after	{content:'"Archaic Micromoths"'}
-#a>h2.de::after	{content:'„Primitive Motten”'}
+/*Translatable CSS content*/
 .x9::before		{content:"Order "}
 .de.x9::before	{content:"Ordnung "}
 .x8::before		{content:"Suborder "}
@@ -214,14 +198,6 @@ p>a			{color:#666}
 .de.i::before	{content:"Untergattung "}
 .o::after		{content:" Group"}
 .de.o::after	{content:"-Gruppe"}
-#f1::before		{content:"Note:"}
-.de#f1::before	{content:"Beachte:"}
-#f2::before		{content:"The dataset is by no means complete, but primarily lists well-studied taxa according to modern phylogenetics!"}
-.de#f2::before	{content:"Der Datensatz ist keinesfalls vollständig, sondern listet vorrangig gut untersuchte Taxa nach moderner Phylogenetik!"}
-#f3::before		{content:'"REF" marks scientific references to relevant taxonomic changes the data is based on.'}
-.de#f3::before	{content:'„REF” markiert wissenschaftliche Referenzen zu relevanten taxonomischen Änderungen, auf denen die Daten basieren.'}
-#f4::before		{content:"If you would like to contribute to the project by adding / correcting data, reporting / fixing issues or making proposals, please visit the Lepitaxa GitHub repository"}
-.de#f4::before	{content:"Falls du zum Projekt beitragen möchtest, indem du Daten hinzufügst / korrigierst, Probleme meldest / behebst oder Vorschläge machst, besuch bitte das Lepitaxa-GitHub-Repository"}
 #i1::before		{content:"Data points total count:      "}
 .de#i1::before	{content:"Gesamtzahl Datenpunkte:       "}
 #i2::before		{content:"Total size of project:        "}
@@ -244,20 +220,19 @@ p>a			{color:#666}
 .de#i10::before	{content:"Lizenz Rohdaten:              "}
 #i11::before	{content:"Export raw data:              "}
 .de#i11::before	{content:"Rohdaten exportieren:         "}
-/*Strings for tooltips see JS function tooltips()*/
 </style>
 </head>
 
 <body onload="rload()">
 <header><h1>LEPITAXA</h1>⌛ Initializing ... <br><b>[ERROR: Initialization failed! This problem could be caused by an outdated browser, faulty script execution or bad internet connection.]</b></header>
 
-<img itemprop="logo" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
+<img itemprop="logo" alt="Lepitaxa Logo" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
 <svg id="h1" fill="#AAA" viewBox="0 0 2820 389"><path d="M0 0v389h238v-61H69V0Zm371 0v389h248v-61H440V221h128v-58H440V62h179V0Zm376 0v389h69V241c43-1 88 1 127-19 36-18 58-56 60-96 4-36-7-78-39-98C928 4 884-1 843 0Zm131 63c22 4 46 15 53 39 9 27-6 61-34 69-26 10-54 8-81 9V60c21 1 42 0 62 3zm251-63v389h69V0Zm200 0v62h124v327h69V62h129V0Zm503 0-153 389h76l31-88h119l31 88h76L1858 0Zm14 125 39 122h-80zm244 264 114-201L2097 0h70l79 132 89-132h69l-123 189 130 200h-75l-90-140-85 140zM2640 0l-153 389h76l31-88h119l31 88h76L2666 0Zm14 125 39 122h-80z"/></svg>
-<button onclick="rload()" tabindex="2"><svg viewBox="0 0 474 389"><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg></button>
-<button onclick="sload()" tabindex="1"><svg viewBox="0 0 918 543"><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg></button>
+<button onclick="rload()"><svg viewBox="0 0 474 389"><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg></button>
+<button onclick="sload()"><svg viewBox="0 0 918 543"><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg></button>
 
 <span id="form">
-<input type="search" onchange="document.querySelector('#sb').click()">
+<input type="search" onchange="seON()">
 <input type="button" value="►" onclick="seON()" id="sb">
 <input type="button" value="❌" onclick="seOFF()" id="sc">
 </span>
@@ -302,7 +277,7 @@ xp	Macrolepidoptera
 e2	Macrolepidopterans
 d2	Großschmetterlinge
 x3	Rhopalocera
-</div><div id="p"><h2></h2>
+</div><div id="p"><h2><span lang="en">"Butterflies"</span><span lang="de">„Tagfalter”</span></h2>
 x	Papilionoidea
 r	Espeland'18
 l	A Comprehensive and Dated Phylogenomic Analysis of Butterflies
@@ -24250,7 +24225,7 @@ l	Further progress on the phylogeny of Noctuoidea (Insecta: Lepidoptera) using a
 p	10.1111/syen.12199
 e2	Owlet Moths
 d2	Eulen
-</div><div id="n"><h2></h2>
+</div><div id="n"><h2><span lang="en">"Owlet Moths"</span><span lang="de">„Eulen”</span></h2>
 xs	Noctuiformes
 f	Noctuidae
 r	Zahiri'13
@@ -28171,7 +28146,7 @@ l	A comprehensive molecular phylogeny of Geometridae (Lepidoptera) with a focus 
 p	10.7717/peerj.7386
 e2	Geometrid Moths
 d2	Spannerartige
-</div><div id="g"><h2></h2>
+</div><div id="g"><h2><span lang="en">"Geometrid Moths"</span><span lang="de">„Spannerartige”</span></h2>
 xs	Geometriformes
 f	Geometridae
 e2	Geometer Moths
@@ -29529,7 +29504,7 @@ y	Heraculinae
 g	Heracula
 a	discivitta
 x2	Bombycina
-</div><div id="b"><h2></h2>
+</div><div id="b"><h2><span lang="en">"Silkmoths"</span><span lang="de">„Spinner”</span></h2>
 x	Bombycoidea
 r	Hamilton'19
 l	Phylogenomics resolves major relationships and reveals significant diversification rate shifts in the evolution of silk moths and relatives
@@ -32211,7 +32186,7 @@ e2	Micromoths
 e2	Microlepidopterans
 d2	Motten
 d2	Kleinschmetterlinge
-</div><div id="h"><h2></h2>
+</div><div id="h"><h2><span lang="en">"Higher Micromoths"</span><span lang="de">„Höhere Motten”</span></h2>
 x2	Drepanina
 x	Drepanoidea
 r	Wu'09
@@ -34739,7 +34714,7 @@ g	Prodidactis
 a	mystica
 e	Meyrick's Mystic Moth
 x4	Cossina
-</div><div id="c"><h2></h2>
+</div><div id="c"><h2><span lang="en">"Cossid Micromoths"</span><span lang="de">„Bohrerartige”</span></h2>
 x3	Cossoina
 x	Cossoidea
 e2	Cossid Millers
@@ -36627,7 +36602,7 @@ g	Hyperxena
 a	scierana
 g	Piestoceros
 a	conjunctella
-</div><div id="m"><h2></h2>
+</div><div id="m"><h2><span lang="en">"Typical Micromoths"</span><span lang="de">„Klassische Motten”</span></h2>
 x4	Gelechiina
 x	Gelechioidea
 r	Kaila'11
@@ -43124,7 +43099,7 @@ g	Eudarcia
 a	pagenstecherella
 a	richardsoni
 a	simulatricella
-</div><div id="a"><h2></h2>
+</div><div id="a"><h2><span lang="en">"Archaic Micromoths"</span><span lang="de">„Primitive Motten”</span></h2>
 xp	Monotrysia
 e2	Monotrysian Moths
 x6	Etimonotrysia
@@ -43930,11 +43905,11 @@ g	Zealandopterix
 
 <footer>
 <section id="footnotes">
-<h3 id="f1"></h3>
+<h3 id="f1"><span lang="en">Note:</span><span lang="de">Beachte:</span></h3>
 <ul>
-<li id="f2"></li>
-<li id="f3"></li>
-<li id="f4"> (<a href="https://github.com/lepitaxa/lepitaxa">github.com/lepitaxa/lepitaxa</a>).</li>
+<li id="f2"><span lang="en">The dataset is by no means complete, but primarily lists well-studied taxa according to modern phylogenetics!</span><span lang="de">Der Datensatz ist keinesfalls vollständig, sondern listet vorrangig gut untersuchte Taxa nach moderner Phylogenetik!</span></li>
+<li id="f3"><span lang="en">"REF" marks scientific references to relevant taxonomic changes the data is based on.</span><span lang="de">„REF” markiert wissenschaftliche Referenzen zu relevanten taxonomischen Änderungen, auf denen die Daten basieren.</span></li>
+<li id="f4"><span lang="en">If you would like to contribute to the project by adding / correcting data, reporting / fixing issues or making proposals, please visit the Lepitaxa GitHub repository</span><span lang="de">Falls du zum Projekt beitragen möchtest, indem du Daten hinzufügst / korrigierst, Probleme meldest / behebst oder Vorschläge machst, besuch bitte das Lepitaxa-GitHub-Repository</span> (<a href="https://github.com/lepitaxa/lepitaxa.github.io">github.com/lepitaxa/lepitaxa.github.io</a>).</li>
 </ul>
 </section>
 
@@ -43946,7 +43921,7 @@ g	Zealandopterix
 <h4 id="i5">2020-12-05</h5>
 <h4 id="i6">2023-09-17</h5>
 <h4 id="i7"><a href="https://pages.github.com">pages.github.com</a></h5>
-<h4 id="i8"><a href="https://github.com/lepitaxa/lepitaxa">lepitaxa / lepitaxa</a></h5>
+<h4 id="i8"><a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h5>
 <h4 id="i9"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></h5>
 <h4 id="i10"><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></h5>
 <h4 id="i11"><a onclick="dsv('txt')">txt</a> <a onclick="dsv('csv')">csv</a> <a onclick="dsv('tsv')">tsv</a> <a onclick="xml()">xml</a></h5>
@@ -43955,9 +43930,9 @@ g	Zealandopterix
 <section id="footend">
 <h5 itemprop="name">LEPITAXA – Lepidopteran Classification Project</h6>
 <h5 itemprop="copyrightNotice">© 2020-2023 – Georg Hammerschmid</h6>
-<button onclick="document.getElementById('infostats').classList.remove('hide'); event.target.classList.add('off')" tabindex="5">Stats & Infos</button>
-<button title="Deutsch" onclick="togLn('de')" tabindex="4">DE</button>
-<button title="English" onclick="togLn('en')" tabindex="3">EN</button>
+<button onclick="document.getElementById('infostats').classList.remove('hide'); event.target.classList.add('off')">Stats & Infos</button>
+<button title="Deutsch" onclick="togLn('de')">DE</button>
+<button title="English" onclick="togLn('en')">EN</button>
 </section>
 </footer>
 
@@ -44028,10 +44003,10 @@ while (sib) { // Loop for each div
 }});
 
 ///7 Check if browserLns contains de and preset this lang, else use en
-var Lns = $$('p,h2,[id],input'); // Get translatables
+var Lns = $$('p,h2,[id],input'); // Get translatable CSS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
-if (browserLns.includes('de')) {Lns.forEach(f=>{f.classList.add('de')}); $('[title^="De"]').classList.add('act')}
-else {$('[title^="En"]').classList.add('act')};
+if (browserLns.includes('de')) {Lns.forEach(f=>{f.classList.add('de')}); $$('span[lang=en]').forEach(f=>{f.classList.add('hide')}); $('[title^="De"]').classList.add('act')}
+else {$('[title^="En"]').classList.add('act'); $$('span[lang=de]').forEach(f=>{f.classList.add('hide')})};
 
 ///8 Remove init+error message
 $('header').style.display = "none";	////INIT complete
@@ -44061,7 +44036,8 @@ seOFF(); tooltips()}; // Reset search form, place button tooltips
 
 function togLn(ln) {
 $('.act').classList.remove('act'); event.target.classList.add('act');
-Lns.forEach(f=>{f.classList.remove('en','de'); f.classList.add(ln)}); tooltips()}; // Toggle lang
+Lns.forEach(f=>{f.classList.remove('en','de'); f.classList.add(ln)});
+$$('span[lang]').forEach(f=>{f.classList.toggle('hide')}); tooltips()}; // Toggle lang
 
 function tooltips() {
 var m = se.matches('.en');
