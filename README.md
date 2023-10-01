@@ -1,4 +1,4 @@
-# <img src="lepitaxa.png" height="32"> LEPITAXA – Lepidopteran Classification Project
+# <picture><source media="(prefers-color-scheme:light)" srcset="lepitaxa.png"><source media="(prefers-color-scheme:dark)" srcset="lepitaxa2.png"><img src="lepitaxa.png" height="32"></picture> LEPITAXA – Lepidopteran Classification Project
 #### Website: [lepitaxa.github.io](https://lepitaxa.github.io/)
 
 ## Overview
@@ -45,7 +45,7 @@ This project uses Git as a version control system and its repository is hosted h
 - Go to https://desktop.github.com/ and download GitHub Desktop. Simply install the application, it will automatically setup and configure Git and an easy-to-use GUI for you.
 - Open GitHub Desktop. You’ll be prompted to link it to your GitHub account. Proceed accordingly.
 - Within GitHub Desktop, select “Clone a repository”, move to the “URL” tab and enter the following repository URL:
-https://github.com/lepitaxa/lepitaxa.git
+https://github.com/lepitaxa/lepitaxa.github.io.git
 - Below, choose the local directory you want to use as a workspace. Start cloning. Git now will download all files included in the repository to your local workspace directory.
 - From here on, you should be good to go on the Git front. Git will from now on detect and list all changes to the workspace directory, keep all development branches up-to-date and allow you to create new branches, commit changes and additions and push them back into the online repository, as well as open pull requests for merging changes into the main branch.
 
