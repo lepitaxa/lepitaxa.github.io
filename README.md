@@ -86,8 +86,6 @@ u	hippocrates
 These datapoints form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
 
 ### Overview of supported data point classes and data types
-Note: This overview is also included as a HTML comment within the first lines of the Lepitaxa index.html source code, as a quickly accessible cheatsheet while editing.
-
 |Data point class|Data type|Data string fine structure|Short description|
 |---|---|---|---|
 |`x9`|ORD|[NAME]|Order name|
@@ -382,7 +380,8 @@ The ID of a referenced scientific publication. This data type forms the last ele
 
 **LEPITAXA – Lepidopteran Classification Project**
 - Author: [Georg Hammerschmid](https://github.com/lepitaxa)
-- Creation date: 05.12.2020
+- Creation date of base tree: 07.07.2008
+- Creation date of project: 05.12.2020
 - Webhost Lepitaxa site: [pages.github.com](https://pages.github.com/) since 17.09.2023
 - GitHub repository: [lepitaxa / lepitaxa.github.io](https://github.com/lepitaxa/lepitaxa.github.io)
 - Licencing lepitaxa designs: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
