@@ -226,6 +226,74 @@ for (let t = 0; t < testArrayD2.length - 1; t++) {
 };
 
 
-////5 Finish log, show results
+////6 Remove padding, finish log, show results if issues found
+$$('p:not([class])').forEach(f=>{f.remove()});
+if (i > 0) {
 var results = 'Lepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '.\n' + log;
-console.log(results); alert(results);
+console.log(results); alert(results)};
+
+
+////7 Call the correct converter for the selected export format
+if (format == 'xml') xml(); else dsv();
+
+
+
+
+////// RAW DATA EXPORT
+var m1 = 'META_DATASET'; var m2 = 'META_ORIGIN';
+
+//// DSV converter
+function dsv() {
+var del = ''; var q = '';
+if (format == 'txt') {var del = ";"}
+if (format == 'csv') {var del = ","; var q = '"'}
+if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
+
+	//Build dsv content
+	var file_cont = m1 + del + q + version + q + "\n" + m2 + del + q + url + q;
+	$$('p:not(.l),.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + del + q + f.innerHTML + q});
+
+var file_link = document.createElement('a'); // Generate, click and remove download link
+file_link.setAttribute('download',version + '.' + format);
+file_link.setAttribute('href','data:text/' + format + ';charset=utf-8,' + encodeURIComponent(file_cont));
+file_link.click(); file_link.remove()};
+
+//// XML converter
+function xml() {
+	//1 xml start, add meta
+	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="' + url + '" />\n\n<taxa>\n';
+
+	//2 xml main, add taxalist
+	$$('p:not(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)').forEach(f=>{
+		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
+		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var SYN = ''; // Start element lists
+		while (sib) { // Loop for each taxon
+		if (sib.matches('.r,.r2')) REF += '\t\t<ref>' + sib.innerHTML + '</ref>\n'; // If sib matches selector, add to REF list
+		else if (sib.matches('.l')) RTI += '\t\t<ref_title>' + sib.firstElementChild.innerHTML + '</ref_title>\n'; // If sib matches selector, add innerHTML of first child to RTI list
+		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
+		else if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
+		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
+		else if (sib.matches('.s,.s2,.s3,.s4')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
+		else break
+		sib = sib.nextElementSibling};
+
+		file_cont += '\t<taxon type="' + convert(f.classList) + '">\n\t\t<name>' + f.innerHTML + '</name>\n' + REF + RTI + RID + nEN + nDE + SYN + '\t</taxon>\n'});
+
+	//3 xml end
+	file_cont += '</taxa>\n</lepitaxa>';
+
+var file_link = document.createElement('a'); // Generate, click and remove download link
+file_link.setAttribute('download',version + '.xml');
+file_link.setAttribute('href','data:application/xml;charset=utf-8,' + encodeURIComponent(file_cont));
+file_link.click(); file_link.remove()};
+
+
+
+
+////// AUX FUNCTION - Class list data type extractor
+function convert(dt) {
+dt = dt.toString();
+dt = dt.replace(/(en|de|hide|open)/g,'');
+dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('ls','REF_TITLE');
+dt = dt.replace(/\d/g,'').replace('x','SUPERFAM').replace('f','FAM').replace('y','SUBFAM').replace('t','TRI').replace('j','SUBTRI').replace('h','INFRATRI').replace('g','GEN').replace('i','SUBGEN').replace('o','SPGR').replace('a','SP').replace('c','AGG').replace('m','SEG').replace('u','SSP').replace('r','REF').replace('l','REF_TITLE').replace('p','REF_ID').replace('e','NAME_EN').replace('d','NAME_DE').replace('s','SYN');
+return dt};
