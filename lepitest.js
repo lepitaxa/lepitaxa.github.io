@@ -226,11 +226,22 @@ for (let t = 0; t < testArrayD2.length - 1; t++) {
 };
 
 
-////6 Remove padding, finish log, show results if issues found
+////6 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
-if (i > 0) {
-var results = 'Lepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
-console.log(results); alert(results)};
+
+var exSize; var info2;
+
+if (/(txt|tsv)/.test(format)) exSize = size * 1.4 / 1000;
+else if (format == 'csv') exSize = size * 1.5 / 1000;
+else exSize = size * 3.3 / 1000;
+
+var info1 = '- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
+
+if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the raw data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
+else info2 = "No data integrity issues found!\n\n";
+
+var results = '------------------------\nLepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
+console.log(results); alert(info1 + info2 + results);
 
 
 ////7 Call the correct converter for the selected export format
