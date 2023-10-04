@@ -21,7 +21,7 @@ var sf = 'The suffix of this taxon type must be "'
 
 
 // Special characters and capitalization
-if (!f.matches('.xp') && / $/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
 if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.a,.ae,.c,.m,.u,.ue,.s,.s2,.s3,.s4') && /[^A-z -.†]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('p:not(.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('p:not(.xp,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
@@ -226,6 +226,83 @@ for (let t = 0; t < testArrayD2.length - 1; t++) {
 };
 
 
-////5 Finish log, show results
-var results = 'Lepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '.\n' + log;
-console.log(results); alert(results);
+////6 Remove padding, calculate download size, finish log, show infos and results
+$$('p:not([class])').forEach(f=>{f.remove()});
+
+var exSize; var info2;
+
+if (/(txt|tsv)/.test(format)) exSize = size * 1.4 / 1000;
+else if (format == 'csv') exSize = size * 1.5 / 1000;
+else exSize = size * 3.3 / 1000;
+
+var info1 = '- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
+
+if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the raw data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
+else info2 = "No data integrity issues found!\n\n";
+
+var results = '------------------------\nLepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
+console.log(results); alert(info1 + info2 + results);
+
+
+////7 Call the correct converter for the selected export format
+if (format == 'xml') xml(); else dsv();
+
+
+
+
+////// RAW DATA EXPORT
+//// DSV converter
+function dsv() {
+var del = ''; var q = '';
+if (format == 'txt') {var del = ";"}
+if (format == 'csv') {var del = ","; var q = '"'}
+if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
+
+	//Build dsv content
+	var file_cont = 'META_DATASET' + del + q + version + q + "\n" + 'META_ORIGIN' + del + q + url + q;
+	$$('p:not(.l),.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + del + q + f.innerHTML + q});
+
+var file_link = document.createElement('a'); // Generate, click and remove download link
+file_link.setAttribute('download',version + '.' + format);
+file_link.setAttribute('href','data:text/' + format + ';charset=utf-8,' + encodeURIComponent(file_cont));
+file_link.click(); file_link.remove()};
+
+//// XML converter
+function xml() {
+	//1 xml start, add meta
+	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="' + url + '" />\n\n<taxa>\n';
+
+	//2 xml main, add taxalist
+	$$('p:not(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)').forEach(f=>{
+		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
+		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var SYN = ''; // Start element lists
+		while (sib) { // Loop for each taxon
+		if (sib.matches('.r,.r2')) REF += '\t\t<ref>' + sib.innerHTML + '</ref>\n'; // If sib matches selector, add to REF list
+		else if (sib.matches('.l')) RTI += '\t\t<ref_title>' + sib.firstElementChild.innerHTML + '</ref_title>\n'; // If sib matches selector, add innerHTML of first child to RTI list
+		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
+		else if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
+		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
+		else if (sib.matches('.s,.s2,.s3,.s4')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
+		else break
+		sib = sib.nextElementSibling};
+
+		file_cont += '\t<taxon type="' + convert(f.classList) + '">\n\t\t<name>' + f.innerHTML + '</name>\n' + REF + RTI + RID + nEN + nDE + SYN + '\t</taxon>\n'});
+
+	//3 xml end
+	file_cont += '</taxa>\n</lepitaxa>';
+
+var file_link = document.createElement('a'); // Generate, click and remove download link
+file_link.setAttribute('download',version + '.xml');
+file_link.setAttribute('href','data:application/xml;charset=utf-8,' + encodeURIComponent(file_cont));
+file_link.click(); file_link.remove()};
+
+
+
+
+////// AUX FUNCTION - Class list data type extractor
+function convert(dt) {
+dt = dt.toString();
+dt = dt.replace(/(en|de|hide|open)/g,'');
+dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('ls','REF_TITLE');
+dt = dt.replace(/\d/g,'').replace('x','SUPERFAM').replace('f','FAM').replace('y','SUBFAM').replace('t','TRI').replace('j','SUBTRI').replace('h','INFRATRI').replace('g','GEN').replace('i','SUBGEN').replace('o','SPGR').replace('a','SP').replace('c','AGG').replace('m','SEG').replace('u','SSP').replace('r','REF').replace('l','REF_TITLE').replace('p','REF_ID').replace('e','NAME_EN').replace('d','NAME_DE').replace('s','SYN');
+return dt};
