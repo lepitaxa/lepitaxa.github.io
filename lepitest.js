@@ -21,7 +21,7 @@ var sf = 'The suffix of this taxon type must be "'
 
 
 // Special characters and capitalization
-if (!f.matches('.xp') && / $/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
 if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.a,.ae,.c,.m,.u,.ue,.s,.s2,.s3,.s4') && /[^A-z -.†]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('p:not(.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('p:not(.xp,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
@@ -229,7 +229,7 @@ for (let t = 0; t < testArrayD2.length - 1; t++) {
 ////6 Remove padding, finish log, show results if issues found
 $$('p:not([class])').forEach(f=>{f.remove()});
 if (i > 0) {
-var results = 'Lepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '.\n' + log;
+var results = 'Lepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
 console.log(results); alert(results)};
 
 
@@ -240,8 +240,6 @@ if (format == 'xml') xml(); else dsv();
 
 
 ////// RAW DATA EXPORT
-var m1 = 'META_DATASET'; var m2 = 'META_ORIGIN';
-
 //// DSV converter
 function dsv() {
 var del = ''; var q = '';
@@ -250,7 +248,7 @@ if (format == 'csv') {var del = ","; var q = '"'}
 if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
 
 	//Build dsv content
-	var file_cont = m1 + del + q + version + q + "\n" + m2 + del + q + url + q;
+	var file_cont = 'META_DATASET' + del + q + version + q + "\n" + 'META_ORIGIN' + del + q + url + q;
 	$$('p:not(.l),.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + del + q + f.innerHTML + q});
 
 var file_link = document.createElement('a'); // Generate, click and remove download link

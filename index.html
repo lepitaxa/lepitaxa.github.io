@@ -7521,9 +7521,6 @@ a	carye
 e	Western Painted Lady
 d	Südamerikanischer Distelfalter
 s2	Cynthia
-
-
-
 j	Araschniina
 g	Araschnia
 a	burejana
@@ -13352,9 +13349,7 @@ e	Mediterranean Marbled White
 d	Levante-Schachbrett
 j	Ypthimina
 h	Ypthimiti
-
 g	Austroypthima
-
 g	Cassionympha
 a	cassius
 e	Rainforest Brown
@@ -13362,34 +13357,26 @@ d	Südafrikanischer Regenwaldbräunling
 a	detecta
 e	Cape Brown
 d	Kapbräunling
-
 g	Coenyra
 a	hebe
 e	Zulu Shadefly
 d	Zuluauge
-
 g	Coenyropsis
 a	natalii
 e	Natal Brown
 d	Natalbräunling
-
 g	Mashuna
 a	mashuna
-
 g	Melampias
 a	huebneri
 e	Boland Brown
 d	Bolandbräunling
-
 g	Neita
 a	extensa
 e	Savanna Brown
 d	Savannenbräunling
-
 g	Neocoenyra
-
 g	Paralasa
-
 g	Pseudonympha
 a	magus
 e	Silver-bottom Brown
@@ -13399,13 +13386,11 @@ e	Spotted-eye Brown
 e	Small Hillside Brown
 d	Dreikernauge
 s2	Paternympha
-
 g	Strabena
 a	tamatavae
 e	Tamatave Brown
 d	Tamatave-Bräunling
 a	triophthalma
-
 g	Stygionympha
 a	irrorata
 e	Karoo Hillside Brown
@@ -13415,7 +13400,6 @@ a	vigilans
 e	Western Hillside Brown
 a	wichgrafi
 e	Wichgraf's Hillside Brown
-
 g	Ypthima
 a	albida
 e	Silver Ringlet
@@ -14584,7 +14568,7 @@ m	tullia
 m	yukonensis
 g	Dodonidia
 a	helmsii
-e	Helm's Butterfly	
+e	Helm's Butterfly
 e	Helm's Forest Ringlet
 d	Helm's Zebravögelchen
 g	Erycinidia
@@ -21316,7 +21300,7 @@ d	Grünbrauner Zipfelfalter
 a	dumetorum
 e	Lotus Hairstreak
 e	Bramble Green Hairstreak
-d	Kalifornischer Brombeer-Zipfelfalter	
+d	Kalifornischer Brombeer-Zipfelfalter
 s	perplexa
 a	sheridanii
 e	Sheridan's Hairstreak
@@ -26769,7 +26753,7 @@ g	Areas
 a	aquila
 r2	Nakao,Černý'13
 l	A new species of the genus Areas Walker, 1855 from Laos and Thailand (Noctuoidea, Erebidae, Arctiinae)
-p2	0723-9912,34(1/2)	
+p2	0723-9912,34(1/2)
 e	Laotian Tiger Moth
 d	Laotischer Fleckleibbär
 a	galactina
@@ -26866,10 +26850,10 @@ d	Isabellabär
 g	Rajendra
 g	Rhodogastria
 a	amasis
-e	Tricolour Tiger Moth	
+e	Tricolour Tiger Moth
 d	Südafrikanischer Fleckleibbär
 a	similis
-e	Pretoria Tiger Moth	
+e	Pretoria Tiger Moth
 d	Pretoria-Fleckleibbär
 g	Saenura
 g	Seirarctia
@@ -43845,6 +43829,7 @@ const $$ = document.querySelectorAll.bind(document);
 //// INITIALIZATION STEPS
 ///1 Generate infostats from unmodified source
 var count = $('main').innerHTML.match(/\t/g).length;
+var empty = $('main').innerHTML.match(/(\n\n|x9\t)/g).length - 1;
 var html = $('html').outerHTML;
 var size = (html.length + html.match(/[ÄäáéÖöÜüß]/g).length - 15)/1000;
 var url = $('[property="og:url"]').getAttribute('content');
