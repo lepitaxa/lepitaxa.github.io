@@ -135,7 +135,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 Here you can find guidelines and details for the individual data types, which should be followed when modifying the dataset. They are important to ensure that all data points are displayed in their correct position and format on the Lepitaxa webpage. Only data points fulfilling these guidelines will be accepted and merged into the main branch. Running a lepitest before opening a pull request can help knock out many common mistakes when it comes to the data fine structure and sorting.
 
 ---
-### 1 - ORD, SUBORD, INFRAORD, PARVORD, MICROORD (`x9, x8, x7, x6, x5`)
+### 1 - ORD, SUBORD, INFRAORD, PARVORD, MICROORD (`x9`, `x8`, `x7`, `x6`, `x5`)
 The highest-level taxa, forming the backbone of the order Lepidoptera. These are not supposed to be changed, unless there is solid and undisputable phylogenetic proof to do so.
 
 :point_right: **Guidelines:**
@@ -146,7 +146,7 @@ The highest-level taxa, forming the backbone of the order Lepidoptera. These are
 - 1.5. The naming and arrangement are only to be changed if there's undisputable phylogenetic proof to do so.
   
 ---
-### 2 - SECT, SUBSECT, INFRASECT (`x4, x3, x2`)
+### 2 - SECT, SUBSECT, INFRASECT (`x4`, `x3`, `x2`)
 The section-level taxa are used to further subdivide very diverse microorders in zoology. Note that this is different from botany, where sections are used to further subdivide large subgenera!
 
 :point_right: **Guidelines:**
@@ -260,7 +260,7 @@ Species groups are occasionally used to further subdivide very large subgenera.
 - 13.3. The name of a species group should be identical to the species epithet of its most important species, but start with an upper-case letter. 
 
 ---
-### 14 - SP, SP_EXT (`a, ae`)
+### 14 - SP, SP_EXT (`a`, `ae`)
 The epithet of an extant (`a`) or extinct (`ae`) species. The genus name is prepended automatically via JavaScript to form the full binomial name of the species. Extinct species have, in addition, the "†" sign appended automatically after the epithet.
 
 :point_right: **Guidelines:**
@@ -290,7 +290,7 @@ A species segregate (microspecies epithet). The species-like subdivisions of an 
 - 16.4. Species segregates cannot contain subspecies, due to them often not being clearly separated themselves and them being treated similar to subspecies internally.
 
 ---
-### 17 - SSP, SSP_EXT (`u, ue`)
+### 17 - SSP, SSP_EXT (`u`, `ue`)
 The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and species epithet is prepended automatically via JavaScript to form the full trinomial name of the subspecies. Extinct subspecies have, in addition, the "†" sign appended automatically after the epithet.
 
 :point_right: **Guidelines:**
@@ -300,13 +300,13 @@ The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and 
 - 17.4. Only prominent/important subspecies should be listed, it's also not wrong to list non at all when they're practically indistinguishable. Listing the nominate subspecies is not necessary either, but can be done if important.
 
 ---
-### 18 - NAME_EN, NAME_DE (`e, e2, d, d2`)
-The English (`e, e2`) and German (`d, d2`) common/trivial names of a species, species complex or certain higher-level taxa like families and tribes.
+### 18 - NAME_EN, NAME_DE (`e`, `e2`, `d`, `d2`)
+The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species, species complex or certain higher-level taxa like families and tribes.
 
 :point_right: **Guidelines:**
-- 18.1. The addition of type 1 common names (`e, d`) is supported for species and species aggregates. These names must be written in SINGULAR.
-- 18.2. The addition of type 2 common names (`e2, d2`) is supported for all family- and tribe-level taxa (`x, f, y, t, j, h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
-- 18.3. Common names are supported for the English (`e, e2`) and German language (`d, d2`) only, with the English ones being listed first.
+- 18.1. The addition of type 1 common names (`e`, `d`) is supported for species and species aggregates. These names must be written in SINGULAR.
+- 18.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
+- 18.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
 - 18.4. Common names must be grouped and sorted AFTER all references, but BEFORE all synonyms, microspecies or subspecies.
 - 18.5. The common names of each language should be sorted relative to each other according to their importance/prominence in everyday use or according to their preference when a newer name is supposed to phase-out the use of an older one. More important/preferred names should be listed closer to the top.
 - 18.6. The allowed character sets are basic latin (A-Z), extended latin (äáéöüß etc.), apostrophes (U+0027), hyphens (U+002D) and spaces (U+0020).
@@ -320,8 +320,8 @@ The English (`e, e2`) and German (`d, d2`) common/trivial names of a species, sp
 - 18.14. Abbreviations like "&" for "and/und", "St." for "Saint/Sankt" or "Mt." for "Mount" should be avoided, common names should always contain full words.
 
 ---
-### 19 - SYN (`s, s2, s3, s4`)
-A binomial or trinomial synonym of a species, subspecies or microspecies. These synonyms can be listed within species and species aggregates to make obsolete scientific names available via the search function. Depending on which part of the species' or species aggregate's binomial name is retained in the synonym, different data point classes (`s, s2, s3, s4`) can be chosen to automatically generate the retained part via JavaScript.
+### 19 - SYN (`s`, `s2`, `s3`, `s4`)
+A binomial or trinomial synonym of a species, subspecies or microspecies. These synonyms can be listed within species and species aggregates to make obsolete scientific names available via the search function. Depending on which part of the species' or species aggregate's binomial name is retained in the synonym, different data point classes (`s`, `s2`, `s3`, `s4`) can be chosen to automatically generate the retained part via JavaScript.
 
 :point_right: **Guidelines:**
 - 19.1. Type 1 synonyms (`s`) should be used for synonyms with the same genus name, but a different species (+optional subspecies) epithet. The parent genus name is prepended automatically via JavaScript.
@@ -334,13 +334,13 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 19.8. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
 
 ---
-### 20 - REF (`r, r2`)
+### 20 - REF (`r`, `r2`)
 A reference to a scientific publication/dataset the phylogenetic data is based on. This data type forms the first element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
 - 20.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
 - 20.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
-- 20.3. References are supported for all species-level taxa (`a, ae, c`), genera, subgenera and species groups (`g, i, o`), family- and tribe-level taxa (`x, f, y, t, j, h`), paraphyla (`xp`) and orders (`x9`).
+- 20.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
 - 20.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
 - 20.5. References must be grouped and sorted BEFORE common names, synonyms, microspecies or subspecies.
 - 20.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
@@ -362,7 +362,7 @@ The title of a referenced scientific publication. This data type forms the secon
 - 21.3. The sorting follows Guideline 20.5.
 
 ---
-### 22 - REF_ID (`p, p2`)
+### 22 - REF_ID (`p`, `p2`)
 The ID of a referenced scientific publication. This data type forms the last element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
