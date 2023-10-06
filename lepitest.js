@@ -198,7 +198,7 @@ var testArrayD2 = [];
 var testArrayTX = [];
 
 // Collect all names
-$$('p[id],.e,.e2,.d,.d2').forEach(f=>{
+$$('p[id]:not(.o),.e,.e2,.d,.d2').forEach(f=>{
 
 if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
