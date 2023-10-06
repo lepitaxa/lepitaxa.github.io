@@ -187,42 +187,49 @@ if (testArray[0] == 'SPGR') {i++; log += '[#' + i + s7 + 'GEN ' + f.innerHTML + 
 });
 
 
-////5 Check for duplicate common names
-var s8 = ']  Duplicate name detected for "';
+////5 Check for duplicate common names and taxa
+var s8 = ']  Duplicate name detected for ';
 
 // Create test arrays
 var testArrayE = [];
 var testArrayE2 = [];
 var testArrayD = [];
 var testArrayD2 = [];
+var testArrayTX = [];
 
 // Collect all names
-$$('.e,.e2,.d,.d2').forEach(f=>{
+$$('p[id]:not(.o),.e,.e2,.d,.d2').forEach(f=>{
 
 if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
-});
+if (f.matches('p[id]')) testArrayTX.push(f.id.replace(/_/g,' '))});
 
 // Sort the names
 testArrayE.sort();
 testArrayE2.sort();
 testArrayD.sort();
 testArrayD2.sort();
+testArrayTX.sort();
 
 // Check the arrays for duplicates
 for (let t = 0; t < testArrayE.length - 1; t++) {
-	if (testArrayE[t].localeCompare(testArrayE[t+1], 'en') == 0) {i++; log += '[#' + i + s8 + 'NAME_EN (type 1) ' + testArrayE[t] + '". One of them should be considered invalid.\n'};
+	if (testArrayE[t].localeCompare(testArrayE[t+1], 'en') == 0) {i++; log += '[#' + i + s8 + '"NAME_EN (type 1) ' + testArrayE[t] + '". One of them should be considered invalid.\n'};
 };
 for (let t = 0; t < testArrayE2.length - 1; t++) {
-	if (testArrayE2[t].localeCompare(testArrayE2[t+1], 'en') == 0) {i++; log += '[#' + i + s8 + 'NAME_EN (type 2) ' + testArrayE2[t] + '". One of them should be considered invalid.\n'};
+	if (testArrayE2[t].localeCompare(testArrayE2[t+1], 'en') == 0) {i++; log += '[#' + i + s8 + '"NAME_EN (type 2) ' + testArrayE2[t] + '". One of them should be considered invalid.\n'};
 };
 for (let t = 0; t < testArrayD.length - 1; t++) {
-	if (testArrayD[t].localeCompare(testArrayD[t+1], 'de') == 0) {i++; log += '[#' + i + s8 + 'NAME_DE (type 1) ' + testArrayD[t] + '". One of them should be considered invalid.\n'};
+	if (testArrayD[t].localeCompare(testArrayD[t+1], 'de') == 0) {i++; log += '[#' + i + s8 + '"NAME_DE (type 1) ' + testArrayD[t] + '". One of them should be considered invalid.\n'};
 };
 for (let t = 0; t < testArrayD2.length - 1; t++) {
-	if (testArrayD2[t].localeCompare(testArrayD2[t+1], 'de') == 0) {i++; log += '[#' + i + s8 + 'NAME_DE (type 2) ' + testArrayD2[t] + '". One of them should be considered invalid.\n'};
+	if (testArrayD2[t].localeCompare(testArrayD2[t+1], 'de') == 0) {i++; log += '[#' + i + s8 + '"NAME_DE (type 2) ' + testArrayD2[t] + '". One of them should be considered invalid.\n'};
+};
+for (let t = 0; t < testArrayTX.length - 1; t++) {
+	if (testArrayTX[t].localeCompare(testArrayTX[t+1], 'en') == 0) {
+		testArrayTX[t] = testArrayTX[t].replace(/.+\$/,''); testArrayTX[t] = testArrayTX[t].charAt(0).toUpperCase() + testArrayTX[t].slice(1);
+		i++; log += '[#' + i + s8 + 'taxon "' + testArrayTX[t] + '". One of them must be considered invalid.\n'};
 };
 
 
