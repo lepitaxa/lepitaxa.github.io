@@ -43870,7 +43870,7 @@ while (sib) { // Loop for each GEN
 }});
 
 ///6 Generate taxon IDs, prefix/suffix strings
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c').forEach(f=>{f.id = f.classList + '_' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
