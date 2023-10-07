@@ -141,7 +141,7 @@ p>a			{color:#666}
 </style>
 </head>
 
-<body onload="setT(); if (/#/.test(window.location.href)) return; else rload()">
+<body onload="setT(); if (/#/.test(window.location.href)) sload()">
 <header><h1>LEPITAXA</h1>⌛ Initializing ... <br><b>[ERROR: Initialization failed! This problem could be caused by an outdated browser, faulty script execution or bad internet connection.]</b></header>
 
 <img itemprop="logo" alt="Lepitaxa Logo" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
@@ -43858,7 +43858,7 @@ var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
 spc.forEach(f=>{f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')})}); // Toggle spoilers on spc click
 
 spc.forEach(f=>{
-var div = document.createElement("div"); f.after(div); // Create new spoiler div after each spc
+var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
 while (sib) { // Loop for each div
 	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
