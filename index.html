@@ -43807,26 +43807,27 @@ const $$ = document.querySelectorAll.bind(document);
 
 //// INITIALIZATION STEPS
 ///1 Generate infostats from unmodified source
-var count = $('main').innerHTML.match(/\t/g).length;
-var empty = $('main').innerHTML.match(/(\n\n|x9\t)/g).length - 1;
+var raw	= $('main');
+var count = raw.innerHTML.match(/\t/g).length;
+var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
 var html = $('html').outerHTML;
 var size = (html.length + html.match(/[ÄäáéÖöÜüß]/g).length - 15)/1000;
 var url = $('[property="og:url"]').getAttribute('content');
 var version = $('[itemprop=version]').getAttribute('content');
-$$('h3').forEach(f=>{f.innerHTML = f.innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19))});
+$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19));
 
 ///2 Get logo from img and feed to tab icon
 $('link').setAttribute('href',$('img').getAttribute('src'));
 
 ///3 Convert raw data to HTML
-$$('div').forEach(f=>{f.innerHTML = f.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>')});
+raw.innerHTML = raw.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>');
 
 ///4 Add SP epithets to SSP and s2/s3 SYN
 $$('.a,.ae,.c').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each SP
-	if (sib.matches('.u,.ue')) sib.innerHTML = f.innerHTML.replace(' †','') + ' ' + sib.innerHTML; // If SSP, add SP name before
-	if (sib.matches('.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML.replace(' †','').replace(' agg.',''); // If s2/s3 SYN, add SP name after
+	if (sib.matches('.u,.ue')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If SSP, add SP name before
+	if (sib.matches('.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML; // If s2/s3 SYN, add SP name after
 	if (sib.matches('.a,.ae,.c')) break // If next SP reached, stop loop
 	sib = sib.nextElementSibling}});
 
@@ -43874,7 +43875,7 @@ while (sib) { // Loop for each div
 ///8 Check if browserLns contains de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
-if (browserLns.includes('de')) {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
+if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
 ///9 Remove init+error message
