@@ -2,10 +2,8 @@
 <head>
 <title>LEPITAXA – Lepidopteran Classification Project</title><base target="_blank"><meta charset="utf-8">
 
-<meta itemprop="creator" content="Lepitaxa Project by Georg Hammerschmid">
-<meta itemprop="version" content="Lepitaxa_2023-10-07_1">
-<meta name="color-scheme" content="only light">
 <meta name="description" property="og:description" content="A modern, phylogeny-based classification of the large insect order Lepidoptera (Butterflies & Moths) in a simple and lightweight format.">
+<meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#000">
 <meta name="viewport" content="initial-scale=1">
 <meta name="google-site-verification" content="-IysjuyuagoksvXOgvJ2lBqIuQplmPbNLmFrGdo0lKs">
@@ -43813,7 +43811,7 @@ var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
 var html = $('html').outerHTML;
 var size = (html.length + html.match(/[ÄäáéÖöÜüß]/g).length - 15)/1000;
 var url = $('[property="og:url"]').getAttribute('content');
-var version = $('[itemprop=version]').getAttribute('content');
+var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
 $('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19));
 
 ///2 Get logo from img and feed to tab icon
@@ -43856,9 +43854,9 @@ else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.s
 
 ///7 Generate spoilers and their eventlisteners
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
-spc.forEach(f=>{f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')})}); // Toggle spoilers on spc click
-
 spc.forEach(f=>{
+f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')}); // Toggle spoilers on spc click
+
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
 while (sib) { // Loop for each div
@@ -43869,8 +43867,7 @@ while (sib) { // Loop for each div
 	else if (f.matches('.j') && sib.matches('p:not(.f,.y,.t,.j,[class^="x"])')) div.appendChild(sib); // If spc is SUBTRI & sib matches, move sib into div
 	else if (f.matches('.h') && sib.matches('p:not(.f,.y,.t,.j,.h,[class^="x"])')) div.appendChild(sib); // If spc is INFRATRI & sib matches, move sib into div
 	else break
-	sib = div.nextElementSibling
-}});
+	sib = div.nextElementSibling}});
 
 ///8 Check if browserLns contains de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
