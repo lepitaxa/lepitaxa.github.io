@@ -1,7 +1,6 @@
 <!DOCTYPE html><html lang="en">
 <head>
 <title>LEPITAXA – Lepidopteran Classification Project</title><base target="_blank"><meta charset="utf-8">
-
 <meta name="description" property="og:description" content="A modern, phylogeny-based classification of the large insect order Lepidoptera (Butterflies & Moths) in a simple and lightweight format.">
 <meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#000">
@@ -43779,13 +43778,13 @@ g	Zealandopterix
 <footer>
 <section id="infostats" class="hide">
 <h3 id="i1"><span class="EN">Data points total count:         </span><span class="DE">Gesamtzahl Datenpunkte:          </span>_c</h3>
-<h3 id="i2"><span class="EN">Total size of project:           </span><span class="DE">Gseamtgröße des Projekts:        </span>_s KB</h3>
+<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>ca. _s KB</h3>
 <h3 id="i3"><span class="EN">Date of last update:             </span><span class="DE">Letzte Aktualisierung am:        </span>_v</h3>
 <h3 id="i4"><span class="EN">Project started on:              </span><span class="DE">Projekt gestartet am:            </span>2020-12-05</h3>
 <h3 id="i5"><span class="EN">Github repository:               </span><span class="DE">Github-Repository:               </span><a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h3>
 <h3 id="i6"><span class="EN">Licensing Lepitaxa designs:      </span><span class="DE">Lizenz Lepitaxa-Designs:         </span><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></h3>
-<h3 id="i7"><span class="EN">Licensing raw data:              </span><span class="DE">Lizenz Rohdaten:                 </span><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></h3>
-<h3 id="i8"><span class="EN">Check & export raw data:         </span><span class="DE">Rohdaten prüfen & exportieren:   </span><u onclick="lepitest('txt')">txt</u> <u onclick="lepitest('csv')">csv</u> <u onclick="lepitest('tsv')">tsv</u> <u onclick="lepitest('xml')">xml</u></h3>
+<h3 id="i7"><span class="EN">Licensing Lepitaxa dataset:      </span><span class="DE">Lizenz Lepitaxa-Datensatz:       </span><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></h3>
+<h3 id="i8"><span class="EN">Check & export dataset:          </span><span class="DE">Datensatz prüfen & exportieren:  </span><u onclick="lepitest('txt')">txt</u> <u onclick="lepitest('csv')">csv</u> <u onclick="lepitest('tsv')">tsv</u> <u onclick="lepitest('xml')">xml</u></h3>
 </section>
 
 <section id="footend">
@@ -43802,25 +43801,22 @@ g	Zealandopterix
 const $ = document.querySelector.bind(document); // querySelector shortcuts
 const $$ = document.querySelectorAll.bind(document);
 
-
-//// INITIALIZATION STEPS
-///1 Generate infostats from unmodified source
+// INITIALIZATION STEPS
+//1 Generate infostats from unmodified source
 var raw	= $('main');
 var count = raw.innerHTML.match(/\t/g).length;
 var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
-var html = $('html').outerHTML;
-var size = (html.length + html.match(/[ÄäáéÖöÜüß]/g).length - 15)/1000;
-var url = $('[property="og:url"]').getAttribute('content');
+var	size = count * 0.0164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
 $('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19));
 
-///2 Get logo from img and feed to tab icon
+//2 Get logo from img and feed to tab icon
 $('link').setAttribute('href',$('img').getAttribute('src'));
 
-///3 Convert raw data to HTML
+//3 Convert raw data to HTML
 raw.innerHTML = raw.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>');
 
-///4 Add SP epithets to SSP and s2/s3 SYN
+//4 Add SP epithets to SSP and s2/s3 SYN
 $$('.a,.ae,.c').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each SP
@@ -43829,16 +43825,15 @@ while (sib) { // Loop for each SP
 	if (sib.matches('.a,.ae,.c')) break // If next SP reached, stop loop
 	sib = sib.nextElementSibling}});
 
-///5 Add GEN names to SP epithets
+//5 Add GEN names to SP epithets
 $$('.g').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each GEN
 	if (sib.matches('.a,.ae,.c,.m,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
 	if (sib.matches('.g')) break // If next GEN reached, stop loop
-	sib = sib.nextElementSibling
-}});
+	sib = sib.nextElementSibling}});
 
-///6 Generate taxon IDs, prefix/suffix strings
+//6 Generate taxon IDs, prefix/suffix strings
 $$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
@@ -43852,10 +43847,9 @@ $$('.l').forEach(f=>{var sib = f.nextElementSibling.innerHTML; f.innerHTML = '<s
 if (f.nextElementSibling.matches('.p')) {f.innerHTML += '<a href="https://doi.org/' + sib.substring(4,sib.length) + '">' + sib + '</a>'}
 else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.substring(7,16) + '">' + sib.substring(0,16) + '</a>' + sib.substring(16,sib.length)}});
 
-///7 Generate spoilers and their eventlisteners
+//7 Generate spoilers and their eventlisteners
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
-spc.forEach(f=>{
-f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')}); // Toggle spoilers on spc click
+spc.forEach(f=>{f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')}); // Toggle spoilers on spc click
 
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
@@ -43869,42 +43863,24 @@ while (sib) { // Loop for each div
 	else break
 	sib = div.nextElementSibling}});
 
-///8 Check if browserLns contains de and preset this lang, else use en
+//8 Check if browserLns contains de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
-///9 Remove init+error message
+//9 Remove init+error message
 $('header').style.display = "none";	////INIT complete
 
-
-//// MAIN FUNCTIONS
-var spd = $$('div:not([id])'); // Get all spoiler divs
-var format; // Export format
-
-function sload() {
-spc.forEach(f=>{f.classList.add('open')}); // Open all spc
-spd.forEach(f=>{f.classList.remove('hide')})}; // Show all spd
-
-function rload() {
-spc.forEach(f=>{f.classList.remove('open')}); // Close all spc
-spd.forEach(f=>{f.classList.add('hide')})}; // Hide all spd
-
-function togLn() {
-Lns.forEach(f=>{f.classList.toggle('de')});
-$$('.EN,.DE').forEach(f=>{f.classList.toggle('hide')}); setT()}; // Toggle lang
-
-function setT() {
-var m = $('.x9').matches('.de');
+// MAIN FUNCTIONS
+var format;
+function sload() {spc.forEach(f=>{f.classList.add('open'); f.nextElementSibling.classList.remove('hide')})}; // Open all spoilers
+function rload() {spc.forEach(f=>{f.classList.remove('open'); f.nextElementSibling.classList.add('hide')})}; // Close all spoilers
+function lepitest(xxx) {var script = document.createElement('script'); script.src = 'lepitest.js'; document.body.appendChild(script); format = xxx};
+function togLn() {Lns.forEach(f=>{f.classList.toggle('de')}); $$('.EN,.DE').forEach(f=>{f.classList.toggle('hide')}); setT()}; // Toggle lang
+function setT() {var m = $('.x9').matches('.de');
 $('#ex').innerHTML = (m) ? 'Alle Taxa zeigen und durchsuchen' : 'Show and search all taxa';
-$('#re').innerHTML = (m) ? 'Taxaliste zurücksetzen' : 'Reset taxa list'}; // Set header tooltips
-
-function lepitest(xxx) {
-var script = document.createElement('script');
-script.src = 'lepitest.js'; document.body.appendChild(script);
-format = xxx;
-};
+$('#re').innerHTML = (m) ? 'Seite zurücksetzen' : 'Reset page'}; // Set header tooltips
 </script>
 </body>
 </html>

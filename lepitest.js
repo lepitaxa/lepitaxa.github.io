@@ -238,9 +238,9 @@ $$('p:not([class])').forEach(f=>{f.remove()});
 
 var exSize; var info2;
 
-if (/(txt|tsv)/.test(format)) exSize = size * 1.4 / 1000;
-else if (format == 'csv') exSize = size * 1.5 / 1000;
-else exSize = size * 3.3 / 1000;
+if (/(txt|tsv)/.test(format)) exSize = size * 0.0014;
+else if (format == 'csv') exSize = size * 0.0015;
+else exSize = size * 0.0034;
 
 var info1 = '- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
 
@@ -266,7 +266,7 @@ if (format == 'csv') {var del = ","; var q = '"'}
 if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
 
 	//Build dsv content
-	var file_cont = 'META_DATASET' + del + q + version + q + "\n" + 'META_ORIGIN' + del + q + url + q;
+	var file_cont = 'META_DATASET' + del + q + version + q + "\n" + 'META_ORIGIN' + del + q + 'https://lepitaxa.github.io' + q;
 	$$('p:not(.l),.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + del + q + f.innerHTML + q});
 
 var file_link = document.createElement('a'); // Generate, click and remove download link
@@ -277,7 +277,7 @@ file_link.click(); file_link.remove()};
 //// XML converter
 function xml() {
 	//1 xml start, add meta
-	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="' + url + '" />\n\n<taxa>\n';
+	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="https://lepitaxa.github.io' + '" />\n\n<taxa>\n';
 
 	//2 xml main, add taxalist
 	$$('p:not(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)').forEach(f=>{
