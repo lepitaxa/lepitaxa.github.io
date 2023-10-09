@@ -57,9 +57,10 @@ footer::before	{transform:translateY(-0.75rem)}
 #c :is(h2,.f,.g)	{color:#E09}
 #m :is(h2,.f,.g)	{color:#1eb9bc}
 #a :is(h2,.f,.g)	{color:#A85}
-[class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; margin:0; padding-bottom:0.2rem}
+[class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; padding-bottom:0.2rem}
 
 /*Main - data*/
+p			{margin:0}
 :is(.x9,.x,.xp,.f,.y,.t,.j,.h,.open)::after	{content:">"; display:inline-block; font-family:var(--m); font-size:0.9em; font-weight:400; font-style:normal; line-height:0; rotate:90deg; scale:0.9 1.1; translate:0.5em}
 .open::after	{content:"\003c"}
 div:not([id])	{padding-bottom:0.5rem}
@@ -75,18 +76,18 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .x			{padding-left:7.1rem; font-weight:700; color:#000}
 .xs			{padding:0.2rem 0 0.2rem 8.4rem; margin-top:0.4rem; font-size:1.19rem; font-style:italic}
 .xp			{padding-left:0.3rem; font-style:italic}
-.f			{margin:0.31rem; font-size:2.3rem; font-weight:700}
-.y			{margin:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
-.t,.j,.h	{margin:0.75rem 0 0 1.88rem; font-size:1.69rem}
-.j			{margin-left:2.8rem; font-size:1.5rem}
-.h			{margin-left:3.7rem; font-size:1.3rem}
-.g			{margin:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
+.f			{padding:0.31rem; padding-right:0; font-size:2.3rem; font-weight:700}
+.y			{padding:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
+.t,.j,.h	{padding:0.75rem 0 0 1.88rem; font-size:1.69rem}
+.j			{padding-left:2.8rem; font-size:1.5rem}
+.h			{padding-left:3.7rem; font-size:1.3rem}
+.g			{padding:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
 .g::before	{content:"▪ "; font-style:normal; color:#000}
-.i,.o		{margin:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
+.i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c	{margin:0 0 0 6.5rem}
+.a,.ae,.c	{padding:0 0 0 6.5rem}
 :is(.a,.ae,.c)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
-.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{margin:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.r,.r2	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
@@ -95,8 +96,8 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 :is(.d,.d2)::after	{content:'”'}
 [class^="s"]{text-decoration:line-through; color:#F77}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
-.r,.r2,.l	{margin:0; padding:0.1rem 0 0 7.25rem; color:#33A}
-.l			{font-size:0.7rem; padding:0 0.5rem 0.35rem 7.25rem; color:#666}
+.r,.r2,.l	{padding:0.1rem 0 0 7.25rem; color:#33A}
+.l			{padding:0 0.5rem 0.35rem 7.25rem; font-size:0.7rem; color:#666}
 p>a			{color:#666}
 
 /*Main - taxa*/
@@ -146,7 +147,7 @@ p>a			{color:#666}
 <svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
 
-<main>
+<main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}" oncontextmenu="if (event.target.matches('.f,.a')) alert('https://lepitaxa.github.io#' + event.target.id)">
 <div id="l">
 x9	Lepidoptera
 r	Mutanen'10
@@ -43849,8 +43850,7 @@ else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.s
 
 //7 Generate spoilers and their eventlisteners
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
-spc.forEach(f=>{f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')}); // Toggle spoilers on spc click
-
+spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
 while (sib) { // Loop for each div
@@ -43863,7 +43863,7 @@ while (sib) { // Loop for each div
 	else break
 	sib = div.nextElementSibling}});
 
-//8 Check if browserLns contains de and preset this lang, else use en
+//8 Check if browserLns is de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
