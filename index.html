@@ -89,7 +89,7 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 :is(.a,.ae,.c)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
-.e2,.d2,.r,.r2	{color:#000; font-size:0.85rem}
+.e2,.d2,.sh,.r,.r2	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
 :is(.e,.e2)::after	{content:'"'}
 :is(.d,.d2)::before	{content:'DE „'}
@@ -16862,6 +16862,7 @@ m	sudassana
 y	Danainae
 e2	Danaids
 d2	Danaiden
+sh	Danaidae
 t	Danaini
 r	Brower'10
 l	Phylogenetic relationships among genera of danaine butterflies (Lepidoptera: Nymphalidae) as implied by morphology and DNA sequences
@@ -28617,6 +28618,9 @@ g	Eufidonia
 g	Melanolophia
 j	Erannina
 g	Erannis
+a	defoliaria
+e	Mottled Umber
+d	Großer Frostspanner
 j	Bistonina
 g	Agriopis
 g	Apocheima
@@ -43779,7 +43783,7 @@ g	Zealandopterix
 <footer>
 <section id="infostats" class="hide">
 <h3 id="i1"><span class="EN">Data points total count:         </span><span class="DE">Gesamtzahl Datenpunkte:          </span>_c</h3>
-<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>ca. _s KB</h3>
+<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>_s MB</h3>
 <h3 id="i3"><span class="EN">Date of last update:             </span><span class="DE">Letzte Aktualisierung am:        </span>_v</h3>
 <h3 id="i4"><span class="EN">Project started on:              </span><span class="DE">Projekt gestartet am:            </span>2020-12-05</h3>
 <h3 id="i5"><span class="EN">Github repository:               </span><span class="DE">Github-Repository:               </span><a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h3>
@@ -43807,9 +43811,9 @@ const $$ = document.querySelectorAll.bind(document);
 var raw	= $('main');
 var count = raw.innerHTML.match(/\t/g).length;
 var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
-var	size = count * 0.0164;
+var	size = count * 0.0000164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
-$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19));
+$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19));
 
 //2 Get logo from img and feed to tab icon
 $('link').setAttribute('href',$('img').getAttribute('src'));
@@ -43835,7 +43839,7 @@ while (sib) { // Loop for each GEN
 	sib = sib.nextElementSibling}});
 
 //6 Generate taxon IDs, prefix/suffix strings
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
