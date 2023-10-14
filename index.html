@@ -76,7 +76,7 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .x			{padding-left:7.1rem; font-weight:700; color:#000}
 .xs			{padding:0.2rem 0 0.2rem 8.4rem; margin-top:0.4rem; font-size:1.19rem; font-style:italic}
 .xp			{padding-left:0.3rem; font-style:italic}
-.f			{padding:0.31rem; padding-right:0; font-size:2.3rem; font-weight:700}
+.f			{padding:0.31rem 0 0 0.31rem; font-size:2.3rem; font-weight:700}
 .y			{padding:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
 .t,.j,.h	{padding:0.75rem 0 0 1.88rem; font-size:1.69rem}
 .j			{padding-left:2.8rem; font-size:1.5rem}
@@ -147,7 +147,7 @@ p>a			{color:#666}
 <svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
 
-<main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}" oncontextmenu="if (event.target.matches('.f,.a')) alert('https://lepitaxa.github.io#' + event.target.id)">
+<main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}">
 <div id="l">
 x9	Lepidoptera
 r	Mutanen'10
@@ -31518,12 +31518,22 @@ g	Eumorpha
 a	achemon
 e	Achemon Sphinx
 d	Achemon-Weinschwärmer
+a	capronnieri
+e	Leafwing Sphinx
+d	Blattflügel-Weinschwärmer
 a	fasciatus
 e	Banded Sphinx
 d	Heusenkrautschwärmer
 a	labruscae
 e	Gaudy Sphinx
 d	Grüner Weinschwärmer
+a	megaeacus
+e	Eacus Sphinx
+d	Aiakosschwärmer
+s	eacus
+a	phorbas
+e	Amazon Sphinx
+d	Amazonas-Weinschwärmer
 a	vitis
 e	Vine Sphinx
 d	Amerikanischer Weinschwärmer
@@ -43858,7 +43868,7 @@ spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
 while (sib) { // Loop for each div
-	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
+	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
 	else if (f.matches('.f') && sib.matches('p:not(.f,[class^="x"])')) div.appendChild(sib); // If spc is FAM & sib matches, move sib into div
 	else if (f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])')) div.appendChild(sib); // If spc is SUBFAM & sib matches, move sib into div
 	else if (f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])')) div.appendChild(sib); // If spc is TRI & sib matches, move sib into div

@@ -287,7 +287,7 @@ function xml() {
 	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="https://lepitaxa.github.io' + '" />\n\n<taxa>\n';
 
 	//2 xml main, add taxalist
-	$$('p:not(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)').forEach(f=>{
+	$$('p:not(.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l,.p,.p2)').forEach(f=>{
 		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
 		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var SYN = ''; // Start element lists
 		while (sib) { // Loop for each taxon
@@ -296,7 +296,7 @@ function xml() {
 		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
 		else if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
 		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
-		else if (sib.matches('.s,.s2,.s3,.s4')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
+		else if (sib.matches('[class^="s"]')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
 		else break
 		sib = sib.nextElementSibling};
 
