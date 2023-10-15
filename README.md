@@ -88,49 +88,49 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 ### Overview of supported data point classes and data types
 |Data point class|Data type|Data string fine structure|Short description|
 |---|---|---|---|
-|`x9`|ORD|[NAME]|Order name|
-|`x8`|SUBORD|[NAME]|Suborder name|
-|`x7`|INFRAORD|[NAME]|Infraorder name|
-|`x6`|PARVORD|[NAME]|Parvorder name|
-|`x5`|MICROORD|[NAME]|Microorder name|
-|`x4`|SECT|[NAME]|Section name|
-|`x3`|SUBSECT|[NAME]|Subsection name|
-|`x2`|INFRASECT|[NAME]|Infrasection name|
-|`x`|SUPERFAM|[NAME]|Superfamily name|
-|`xs`|SERIES|[NAME]|Series name|
-|`xp`|PARAPHYLUM|[NAME]|Paraphylum name|
-|`f`|FAM|[NAME]|Family name|
-|`y`|SUBFAM|[NAME]|Subfamily name|
-|`t`|TRI|[NAME]|Tribe name|
-|`j`|SUBTRI|[NAME]|Subtribe name|
-|`h`|INFRATRI|[NAME]|Infratribe name|
-|`g`|GEN|[GEN]|Genus name|
-|`i`|SUBGEN|[NAME]|Subgenus name|
-|`o`|SPGR|[NAME]|Species group name|
-|`a`|SP|$\color{#CCC}{\textsf{GEN }}$ [SP]|Epithet of extant species|
-|`ae`|SP_EXT|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ †}}$|Epithet of extinct species|
-|`c`|AGG|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ agg.}}$|Aggregate name<br>(species complex/superspecies epithet)|
-|`m`|SEG|$\color{#CCC}{\textsf{GEN }}$ [SP]|Segregate name<br>(microspecies epithet)|
-|`u`|SSP|$\color{#CCC}{\textsf{GEN SP }}$ [SSP]|Epithet of extant subspecies|
-|`ue`|SSP_EXT|$\color{#CCC}{\textsf{GEN SP }}$ [SSP] $\color{#CCC}{\textsf{ †}}$|Epithet of extinct subspecies|
-|`e`|NAME_EN|[NAME]|English common name of a<br>species or species complex|
-|`e2`|NAME_EN|[NAME]|English common name of a<br>family/tribe-level taxon|
-|`d`|NAME_DE|[NAME]|German common name of a<br>species or species complex|
-|`d2`|NAME_DE|[NAME]|German common name of a<br>family/tribe-level taxon|
-|`s`|SYN|$\color{#CCC}{\textsf{GEN }}$ [SP] (SSP)|Species synonym with different<br>species (+ optional subspecies) epithet|
-|`s2`|SYN|[GEN] (SP) $\color{#CCC}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
-|`s3`|SYN|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
-|`s4`|SYN|[GEN] [SP] (SSP)|(Sub)species synonym with completely<br>different genus and species name|
-|`sh`|SYN_H|[NAME]|Synonym of higher taxon|
-|`r`|REF|[AUT1] $\color{#CCC}{\textsf{ et al., 20}}$ ['YY]|Scientific reference first author+year<br>when >2 authors|
-|`r2`|REF|[AUT1] $\color{#CCC}{\textsf{ ＆ }}$ (,AUT2) $\color{#CCC}{\textsf{, 20}}$ ['YY]|Scientific reference author(s)+year<br>when ≤2 authors|
-|`l`|REF_TITLE|[TITLE]|Title of scientific reference|
-|`p`|REF_ID|$\color{#CCC}{\textsf{doi:}}$ [DOI]|ID of scientific reference via DOI|
-|`p2`|REF_ID|$\color{#CCC}{\textsf{ISSN-L:}}$ [ISSN-L,][VOL]\(ISSUE\)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
+|`x9`|ORD|**NAME**|Order name|
+|`x8`|SUBORD|**NAME**|Suborder name|
+|`x7`|INFRAORD|**NAME**|Infraorder name|
+|`x6`|PARVORD|**NAME**|Parvorder name|
+|`x5`|MICROORD|**NAME**|Microorder name|
+|`x4`|SECT|**NAME**|Section name|
+|`x3`|SUBSECT|**NAME**|Subsection name|
+|`x2`|INFRASECT|**NAME**|Infrasection name|
+|`x`|SUPERFAM|**NAME**|Superfamily name|
+|`xs`|SERIES|**NAME**|Series name|
+|`xp`|PARAPHYLUM|**NAME**|Paraphylum name|
+|`f`|FAM|**NAME**|Family name|
+|`y`|SUBFAM|**NAME**|Subfamily name|
+|`t`|TRI|**NAME**|Tribe name|
+|`j`|SUBTRI|**NAME**|Subtribe name|
+|`h`|INFRATRI|**NAME**|Infratribe name|
+|`g`|GEN|**GEN**|Genus name|
+|`i`|SUBGEN|**NAME**|Subgenus name|
+|`o`|SPGR|**NAME**|Species group name|
+|`a`|SP|$\color{#CCC}{\textsf{GEN }}$ **SP**|Epithet of extant species|
+|`ae`|SP_EXT|$\color{#CCC}{\textsf{GEN }}$ **SP** $\color{#CCC}{\textsf{ †}}$|Epithet of extinct species|
+|`c`|AGG|$\color{#CCC}{\textsf{GEN }}$ **SP** $\color{#CCC}{\textsf{ agg.}}$|Aggregate name<br>(species complex/superspecies epithet)|
+|`m`|SEG|$\color{#CCC}{\textsf{GEN }}$ **SP**|Segregate name<br>(microspecies epithet)|
+|`u`|SSP|$\color{#CCC}{\textsf{GEN SP }}$ **SSP**|Epithet of extant subspecies|
+|`ue`|SSP_EXT|$\color{#CCC}{\textsf{GEN SP }}$ **SSP** $\color{#CCC}{\textsf{ †}}$|Epithet of extinct subspecies|
+|`e`|NAME_EN|**NAME**|English common name of a<br>species or species complex|
+|`e2`|NAME_EN|**NAME**|English common name of a<br>family/tribe-level taxon|
+|`d`|NAME_DE|**NAME**|German common name of a<br>species or species complex|
+|`d2`|NAME_DE|**NAME**|German common name of a<br>family/tribe-level taxon|
+|`s`|SYN|$\color{#CCC}{\textsf{GEN }}$ **SP** SSP|Species synonym with different<br>species (+ optional subspecies) epithet|
+|`s2`|SYN|**GEN** SP $\color{#CCC}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
+|`s3`|SYN|$\color{#CCC}{\textsf{GEN }}$ **SP** $\color{#CCC}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
+|`s4`|SYN|**GEN SP** SSP|(Sub)species synonym with completely<br>different genus and species name|
+|`sh`|SYN_H|**NAME**|Synonym of higher taxon|
+|`r`|REF|**AUT1** $\color{#CCC}{\textsf{ et al., 20}}$ **'YY**|Scientific reference first author+year<br>when >2 authors|
+|`r2`|REF|**AUT1** $\color{#CCC}{\textsf{ ＆ }}$ ,AUT2 $\color{#CCC}{\textsf{, 20}}$ **'YY**|Scientific reference author(s)+year<br>when ≤2 authors|
+|`l`|REF_TITLE|**TITLE**|Title of scientific reference|
+|`p`|REF_ID|$\color{#CCC}{\textsf{doi:}}$ **DOI**|ID of scientific reference via DOI|
+|`p2`|REF_ID|$\color{#CCC}{\textsf{ISSN-L:}}$ **ISSN-L,VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-$\color{#CCC}{\textsf{ X }}$ Auto-generated data substring – added on page load via JavaScript<br>
-[X] Required data (sub)string – must always be present<br>
-(X) Optional data substring – can be added in addition to a required substring
+$\color{#CCC}{\textsf{X}}$ Auto-generated data substring – added on page load via JavaScript<br>
+**X**&nbsp; Required data (sub)string – must always be present<br>
+X&nbsp; Optional data substring – can be added in addition to a required substring
 
 ## Guidelines
 Here you can find guidelines and details for the individual data types, which should be followed when modifying the dataset. They are important to ensure that all data points are displayed in their correct position and format on the Lepitaxa webpage. Only data points fulfilling these guidelines will be accepted and merged into the main branch. Running a lepitest before opening a pull request can help knock out many common mistakes when it comes to the data fine structure and sorting.
