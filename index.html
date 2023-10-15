@@ -57,9 +57,10 @@ footer::before	{transform:translateY(-0.75rem)}
 #c :is(h2,.f,.g)	{color:#E09}
 #m :is(h2,.f,.g)	{color:#1eb9bc}
 #a :is(h2,.f,.g)	{color:#A85}
-[class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; margin:0; padding-bottom:0.2rem}
+[class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; padding-bottom:0.2rem}
 
 /*Main - data*/
+p			{margin:0}
 :is(.x9,.x,.xp,.f,.y,.t,.j,.h,.open)::after	{content:">"; display:inline-block; font-family:var(--m); font-size:0.9em; font-weight:400; font-style:normal; line-height:0; rotate:90deg; scale:0.9 1.1; translate:0.5em}
 .open::after	{content:"\003c"}
 div:not([id])	{padding-bottom:0.5rem}
@@ -75,28 +76,28 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .x			{padding-left:7.1rem; font-weight:700; color:#000}
 .xs			{padding:0.2rem 0 0.2rem 8.4rem; margin-top:0.4rem; font-size:1.19rem; font-style:italic}
 .xp			{padding-left:0.3rem; font-style:italic}
-.f			{margin:0.31rem; font-size:2.3rem; font-weight:700}
-.y			{margin:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
-.t,.j,.h	{margin:0.75rem 0 0 1.88rem; font-size:1.69rem}
-.j			{margin-left:2.8rem; font-size:1.5rem}
-.h			{margin-left:3.7rem; font-size:1.3rem}
-.g			{margin:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
+.f			{padding:0.31rem 0 0 0.31rem; font-size:2.3rem; font-weight:700}
+.y			{padding:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
+.t,.j,.h	{padding:0.75rem 0 0 1.88rem; font-size:1.69rem}
+.j			{padding-left:2.8rem; font-size:1.5rem}
+.h			{padding-left:3.7rem; font-size:1.3rem}
+.g			{padding:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
 .g::before	{content:"▪ "; font-style:normal; color:#000}
-.i,.o		{margin:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
+.i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c	{margin:0 0 0 6.5rem}
+.a,.ae,.c	{padding:0 0 0 6.5rem}
 :is(.a,.ae,.c)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
-.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{margin:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
-.e2,.d2,.r,.r2	{color:#000; font-size:0.85rem}
+.e2,.d2,.sh,.r,.r2	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
 :is(.e,.e2)::after	{content:'"'}
 :is(.d,.d2)::before	{content:'DE „'}
 :is(.d,.d2)::after	{content:'”'}
 [class^="s"]{text-decoration:line-through; color:#F77}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
-.r,.r2,.l	{margin:0; padding:0.1rem 0 0 7.25rem; color:#33A}
-.l			{font-size:0.7rem; padding:0 0.5rem 0.35rem 7.25rem; color:#666}
+.r,.r2,.l	{padding:0.1rem 0 0 7.25rem; color:#33A}
+.l			{padding:0 0.5rem 0.35rem 7.25rem; font-size:0.7rem; color:#666}
 p>a			{color:#666}
 
 /*Main - taxa*/
@@ -146,7 +147,7 @@ p>a			{color:#666}
 <svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
 
-<main>
+<main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}">
 <div id="l">
 x9	Lepidoptera
 r	Mutanen'10
@@ -217,6 +218,8 @@ l	Additional taxonomic refinements suggested by genomic analysis of butterflies
 p	10.5281/zenodo.7604053
 e2	True Butterflies
 d2	Echte Tagfalter
+sh	Hedyloidea
+sh	Hesperioidea
 xs	Papilioniformes
 f	Papilionidae
 r	Simonsen'11
@@ -1796,6 +1799,7 @@ d	Indischer Kaiser
 t	Leptocircini
 e2	Kite Swallowtails
 d2	Segelfalter
+sh	Graphiini
 g	Eurytides
 i	Eurytides
 o	Dolicaon
@@ -3180,6 +3184,7 @@ g	Turesis
 t	Megathymini
 e2	Giant Skippers
 d2	Riesendickkopffalter
+sh	Megathyminae
 j	Megathymina
 g	Aegiale
 a	hesperiaris
@@ -4266,6 +4271,7 @@ e2	Firetips
 e2	Firetail Skippers
 e2	Firetails
 d2	Feuerschwänze
+sh	Pyrrhopyginae
 j	Pyrrhopygina
 h	Pyrrhopygiti
 g	Gunayan
@@ -4618,6 +4624,7 @@ a	tricuspidata
 t	Tagiadini
 e2	Flats
 d2	Wichte
+sh	Tagiadinae
 j	Tagiadina
 g	Abantis
 a	arctomarginata
@@ -5841,6 +5848,7 @@ a	wagenknechti
 s2	Hypsochila
 s2	Tatochila
 j	Aporiina
+sh	Aporiini
 h	Aporiiti
 g	Aporia
 r2	Ding,Zhang'16
@@ -6260,6 +6268,7 @@ d	Ameisenweißling
 j	Appiadina
 e2	Albatrosses
 d2	Albatrosse
+sh	Appiadini
 g	Appias
 i	Appias
 a	indra
@@ -6546,6 +6555,7 @@ a	glaucippe
 e	Great Orange-tip
 d	Großer Aurorafalter
 j	Teracolina
+sh	Teracolini
 g	Colotis
 r	Nazari'11
 l	Phylogenetic systematics of Colotis and associated genera (Lepidoptera: Pieridae): evolutionary and taxonomic implications
@@ -6913,6 +6923,7 @@ a	eurydice
 e	California Dogface
 d	Kalifornischer Stoppelhopser
 j	Gonepterygina
+sh	Gonepterygini
 g	Dercas
 a	verhuelli
 e	Siamese Tailed Sulphur
@@ -11390,6 +11401,9 @@ y	Heliconiinae
 e2	Longwings
 e2	Heliconians
 d2	Heliconiiden
+sh	Heliconidae
+sh	Heliconiidae
+sh	Heliconinae
 t	Heliconiini
 r	Beltrán'02
 l	Phylogenetic Discordance at the Species Boundary: Comparative Gene Genealogies Among Rapidly Radiating Heliconius Butterflies
@@ -11405,6 +11419,7 @@ l	Multilocus Species Trees Show the Recent Adaptive Radiation of the Mimetic Hel
 p	10.1093/sysbio/syv007
 e2	Passion Butterflies
 d2	Passionsfalter
+sh	Heliconini
 j	Heliconiina
 g	Eueides
 a	aliphera
@@ -11711,6 +11726,8 @@ l	Taxonomic revision of the tribe Acraeini Boisduval, 1833 (Papilionoidea: Nymph
 p	10.4314/met.v34i1.4
 e2	Acraeas
 d2	Acräen
+sh	Acraeidae
+sh	Acraeinae
 j	Acraeina
 g	Acraea
 i	Acraea
@@ -13138,6 +13155,7 @@ l	Higher level phylogeny of Satyrinae butterflies (Lepidoptera: Nymphalidae) bas
 p	10.1016/j.ympev.2006.02.007
 e2	Satyrs
 d2	Augenfalter
+sh	Satyridae
 t	Satyrini
 j	Satyrina
 h	Satyriti
@@ -13318,6 +13336,7 @@ d	Weißkernauge
 h	Melanargiiti
 e2	Marbled Whites
 d2	Schachbrettfalter
+sh	Melanargiina
 g	Melanargia
 a	arge
 e	Italian Marbled White
@@ -13481,6 +13500,7 @@ e	Swamp Ringlet
 d	Afrikanisches Sumpfauge
 s2	Ypthima
 h	Callerebiiti
+sh	Callerebiina
 g	Argestina
 g	Callerebia
 a	annada
@@ -13517,6 +13537,8 @@ a	afra
 e	Dalmatian Ringlet
 d	Dalmatischer Mohrenfalter
 j	Erebiina
+sh	Cercyonina
+sh	Maniolina
 g	Cercyonis
 i	Cercyonis
 a	hypoleuca
@@ -13994,6 +14016,7 @@ a	thibetanus
 e	Tibetan Marbled Satyr
 d	Tibetischer Satyr
 h	Lethiti
+sh	Lethina
 g	Aphysoneura
 a	pigmentaria
 e	Painted Bamboo Ringlet
@@ -14327,6 +14350,7 @@ a	talboti
 e	Bornean Satyr
 d	Kinabalu-Satyr
 h	Mycalesiti
+sh	Mycalesina
 g	Bicyclus
 a	anynana
 e	Squinting Bushbrown
@@ -14484,6 +14508,7 @@ e	Red-disc Bushbrown
 d	Großes Rotauge
 s2	Mycalesis
 j	Coenonymphina
+sh	Hypocystina
 g	Altiapa
 g	Argynnina
 a	cyrila
@@ -15245,6 +15270,8 @@ d	Travancore-Abendbräunling
 t	Morphini
 e2	Morphos
 d2	Morphofalter
+sh	Morphidae
+sh	Morphinae
 j	Morphina
 g	Morpho
 r2	Penz,Devries'02
@@ -15400,6 +15427,8 @@ t	Brassolini
 r	Matos-Maraví'21
 l	Mesoamerica is a cradle and the Atlantic Forest is a museum of Neotropical butterfly diversity: insights from the evolution and biogeography of Brassolini (Lepidoptera: Nymphalidae)
 p	10.1093/biolinnean/blab034
+sh	Brassolidae
+sh	Brassolinae
 j	Brassolina
 g	Blepolensis
 a	batea
@@ -15591,6 +15620,8 @@ a	actorion
 e	Uncertain Owlet
 d	Geschweifter Palmenfalter
 t	Amathusiini
+sh	Amathusiidae
+sh	Amathusiinae
 j	Amathusiina
 g	Aemona
 a	amathusia
@@ -15637,10 +15668,10 @@ e	Northern Jungle Queen
 d	Assam-Dschungelkönigin
 a	cambodia
 e	Cambodian Jungle Queen
-d	Kambodschanischer Dschungelkönigin
+d	Kambodschanische Dschungelkönigin
 a	howqua
 e	Taiwanese Jungle Queen
-d	Taiwanesischer Dschungelkönigin
+d	Taiwanesische Dschungelkönigin
 a	louisa
 e	Oriental Jungle Queen
 d	Dschungelkönigin
@@ -16861,6 +16892,7 @@ m	sudassana
 y	Danainae
 e2	Danaids
 d2	Danaiden
+sh	Danaidae
 t	Danaini
 r	Brower'10
 l	Phylogenetic relationships among genera of danaine butterflies (Lepidoptera: Nymphalidae) as implied by morphology and DNA sequences
@@ -17217,6 +17249,10 @@ p	10.1080/14772000.2014.899650
 e2	Clearwing Butterflies
 e2	Glasswing Butterflies
 d2	Glasflügelfalter
+sh	Ithomidae
+sh	Ithomiidae
+sh	Ithomiinae
+sh	Ithominae
 j	Ithomiina
 h	Ithomiiti
 g	Ithomia
@@ -19206,6 +19242,7 @@ e	Azure-winged Underleaf
 d	Azur-Blatthocker
 s	fulgens
 j	Mesosemiina
+sh	Mesosemiini
 h	Mesosemiiti
 g	Ectosemia
 a	erinnya
@@ -19994,6 +20031,7 @@ u	timaeus
 t	Euselasiini
 e2	Euselasias
 d2	Euselasien
+sh	Euselasiinae
 j	Euselasiina
 g	Eugelasia
 a	brevicauda
@@ -21868,6 +21906,7 @@ l	A molecular phylogeny of the subfamily Polyommatinae (Lepidoptera: Lycaenidae)
 p	10.23885/1814-3326-2016-12-1-145-156
 e2	Typical Blues
 d2	Echte Bläulinge
+sh	Polyommatinae
 j	Polyommatina
 h	Polyommatiti
 g	Agriades
@@ -22907,6 +22946,7 @@ a	panaegides
 a	tatjana
 s2	Otnjukovia
 j	Lampidina
+sh	Lampidini
 h	Lampiditi
 g	Lampides
 a	boeticus
@@ -23490,6 +23530,7 @@ d	Prächtiger Saphir-Schmuckfalter
 g	Teratoneura
 a	isabellae
 j	Epitolina
+sh	Epitolini
 g	Aethiopana
 a	honorius
 e	Bematistes Gem
@@ -23552,6 +23593,7 @@ a	flava
 j	Pentilina
 e2	Zulus
 d2	Zulus
+sh	Pentilini
 g	Alaena
 a	amazoula
 e	Yellow Zulu
@@ -23905,6 +23947,8 @@ d	Indischer Silberfalter
 x	Thyridoidea
 e2	Moth Butterflies
 d2	Echte Trugfalter
+sh	Calliduloidea
+sh	Whalleyanoidea
 xs	Thyridiformes
 f	Thyrididae
 e2	Window-Wings
@@ -24248,6 +24292,7 @@ g	Anicla
 g	Peridroma
 g	Scania
 t	Hadenini
+sh	Hadeninae
 j	Hadenina
 g	Enterpia
 g	Hadena
@@ -24317,6 +24362,7 @@ g	Polia
 j	Tiracolina
 g	Tiracola
 j	Leucaniina
+sh	Leucaniini
 g	Dasygaster
 g	Leucania
 g	Mythimna
@@ -24328,6 +24374,7 @@ e	Common Wainscot
 d	Bleiche Graseule
 g	Persectania
 j	Orthosiina
+sh	Orthosiini
 g	Achatia
 g	Anorthoa
 g	Crocigrapha
@@ -24373,10 +24420,12 @@ g	Tricholita
 g	Ulolonche
 g	Zosteropoda
 j	Tholerina
+sh	Tholerini
 g	Cerapteryx
 g	Nephelodes
 g	Tholera
 t	Xylenini
+sh	Xyleninae
 j	Xylenina
 h	Xyleniti
 g	Agrochola
@@ -24466,6 +24515,7 @@ g	Sutyna
 g	Trigonophora
 g	Xylotype
 j	Apameina
+sh	Apameini
 h	Apameiti
 g	Acrapex
 g	Apamea
@@ -24561,6 +24611,7 @@ a	pampina
 e	Scalloped Sallow Moth
 g	Rhizagrotis
 j	Phlogophorina
+sh	Phlogophorini
 g	Checupa
 g	Conservula
 g	Euplexia
@@ -24648,6 +24699,7 @@ g	Platyprosopa
 a	nigrostrigata
 t	Bryophilini
 d2	Flechteneulen
+sh	Bryophilinae
 g	Acopa
 g	Bryophila
 g	Bryopsis
@@ -24667,6 +24719,7 @@ a	littera
 g	Leucosigma
 g	Lophomyra
 t	Eriopini
+sh	Eriopinae
 j	Eriopina
 g	Argyrosticta
 g	Callopistria
@@ -24675,6 +24728,7 @@ j	Prodeniina
 e2	Armyworm Moths
 d2	Seidenglanzeulen
 d2	Heerwürmer
+sh	Prodeniini
 g	Galgula
 a	partita
 e	Wedgeling
@@ -24725,6 +24779,7 @@ e	Orache Moth
 d	Meldeneule
 t	Heliothini
 d2	Sonneneulen
+sh	Heliothinae
 g	Adisura
 g	Australothis
 g	Chloridea
@@ -24760,6 +24815,7 @@ a	florida
 e	Evening-primrose Moth
 d	Nachtkerzen-Sonneneule
 t	Aediini
+sh	Aediinae
 g	Aedia
 g	Copibryophila
 a	angelica
@@ -24769,6 +24825,7 @@ e	Four-spotted Moth
 e	Field Bindweed Moth
 d	Ackerwinden-Trauereule
 t	Condicini
+sh	Condicinae
 j	Condicina
 g	Acosmetia
 g	Alvaradoia
@@ -24791,6 +24848,7 @@ a	albiocula
 g	Hemicephalis
 g	Neotarache
 j	Pseudeustrotiina
+sh	Pseudeustrotiini
 g	Pseudeustrotia
 j	Anterastriina
 g	Anterastria
@@ -25228,6 +25286,7 @@ j	Lophonyctina
 g	Lophonycta
 a	confusa
 t	Cropiini
+sh	Cropiinae
 g	Cropia
 y	Stiriinae
 d2	Tageulchen
@@ -25273,12 +25332,15 @@ g	Cerathosia
 a	tricolor
 g	Fota
 t	Grotellini
+sh	Grotellinae
 g	Grotella
 g	Grotellaforma
 g	Neogrotella
 g	Podagra
 t	Metoponiini
+sh	Metoponiinae
 j	Metoponiina
+sh	Cydosiinae
 g	Aegle
 g	Axenus
 g	Cydosia
@@ -25351,6 +25413,7 @@ g	Klugeana
 g	Meganephria
 g	Ulochlaena
 t	Pantheini
+sh	Pantheinae
 g	Antitrisuloides
 g	Bathyra
 g	Charadra
@@ -25361,6 +25424,9 @@ g	Panthea
 g	Thiacidas
 g	Trichosea
 t	Dilobini
+sh	Balsinae
+sh	Dilobinae
+sh	Raphiinae
 g	Balsa
 a	labecula
 a	malana
@@ -25528,6 +25594,7 @@ d	Seladoneule
 j	Cyclodina
 g	Cyclodes
 t	Cobubathini
+sh	Cobubathinae
 g	Aucha
 g	Cobubatha
 g	Tripudia
@@ -25776,6 +25843,7 @@ g	Melipotis
 g	Panula
 g	Phoberia
 t	Catocalini
+sh	Catocalinae
 j	Catocalina
 e2	True Underwing Moths
 d2	Echte Ordensbänder
@@ -26108,6 +26176,7 @@ a	fuliginaria
 e	Waved Black
 d	Pilzeule
 t	Trisatelini
+sh	Trisatelinae
 g	Hypenagonia
 g	Mataeomera
 g	Metaemene
@@ -26117,6 +26186,7 @@ a	emortualis
 e	Olive Crescent
 d	Gelblinien-Spannereule
 t	Eublemmini
+sh	Eublemminae
 g	Eublemma
 a	panonica
 d	Pannonisches Prachteulchen
@@ -26128,8 +26198,10 @@ a	purpurina
 d	Purpur-Prachteulchen
 d	Purpur-Zwergeulchen
 t	Araeopteronini
+sh	Araeopteroninae
 g	Araeopteron
 t	Aventiini
+sh	Aventiinae
 g	Ataboruza
 g	Cerynea
 g	Enispa
@@ -26139,6 +26211,7 @@ e	Beautiful Hook-tip
 d	Sicheleule
 g	Zurobata
 t	Phytometrini
+sh	Phytometrinae
 g	Corgatha
 g	Gesonia
 g	Hemeroplanis
@@ -26173,13 +26246,16 @@ r2	Fibiger'11
 l	Revision of the Micronoctuidae (Lepidoptera: Noctuoidea). Part 4, Taxonomy of the subfamilies Tentaxinae and Micronoctuinae
 p	10.11646/zootaxa.2842.1.1
 e2	Micronoctuid Moths
+sh	Micronoctuidae
 j	Micronoctuina
+sh	Micronoctuinae
 g	Medius
 g	Micronoctua
 a	karsholti
 g	Micronola
 g	Sternitta
 j	Tentaxina
+sh	Tentaxinae
 g	Acusa
 a	acus
 g	Alienia
@@ -26195,6 +26271,7 @@ a	cambodiana
 g	Tentaspina
 g	Tentax
 j	Tactusina
+sh	Tactusinae
 h	Tactusiti
 g	Bruma
 g	Conspica
@@ -26207,6 +26284,7 @@ g	Tactusa
 g	Tumula
 g	Vas
 h	Obscurioriti
+sh	Obscuriorini
 g	Abes
 g	Asylemissa
 g	Asyprocessa
@@ -26219,12 +26297,14 @@ g	Obscurior
 g	Paradoxica
 g	Tantulius
 j	Belluliina
+sh	Belluliinae
 h	Belluliiti
 g	Bellulia
 h	Medialiti
 g	Mediala
 g	Melaleucia
 j	Magnina
+sh	Magninae
 h	Magniti
 g	Basalia
 g	Bilinea
@@ -26232,10 +26312,12 @@ g	Brevis
 g	Magna
 g	Palnissa
 h	Faeculoiditi
+sh	Faeculoidini
 g	Faeculoides
 g	Indieditum
 g	Rustica
 j	Parachrostiina
+sh	Parachrostiinae
 h	Parachrostiiti
 g	Anellus
 g	Digita
@@ -26243,9 +26325,11 @@ g	Mimachrostia
 g	Parachrostia
 g	Taiwani
 h	Duplexiti
+sh	Duplexini
 g	Duplex
 g	Sinochrostia
 j	Pollexina
+sh	Pollexinae
 g	Disca
 g	Pollex
 g	Tolpia
@@ -26326,6 +26410,7 @@ l	Molecular phylogeny of Lymantriinae (Lepidoptera, Noctuoidea, Erebidae) inferr
 p	10.1111/cla.12108
 e2	Tussock Moths
 d2	Trägspinner
+sh	Lymantriidae
 t	Lymantriini
 j	Lymantriina
 g	Caviria
@@ -26372,6 +26457,7 @@ g	Pida
 g	Ruanda
 t	Orgyiini
 d2	Bürstenspinner
+sh	Orgyiinae
 g	Aroa
 a	discalis
 g	Calliteara
@@ -26493,6 +26579,7 @@ g	Daplasa
 y	Arctiinae
 e2	Tiger Moths
 d2	Bärenspinner
+sh	Arctiidae
 t	Arctiini
 e2	True Tiger Moths
 d2	Echte Bärenspinner
@@ -26709,6 +26796,7 @@ s2	Phragmatobia
 j	Spilosomina
 e2	True Ermine Moths
 d2	Fleckleibbären
+sh	Spilosomini
 g	Afromurzinia
 a	lutescens
 e	Translucent Ermine
@@ -27179,6 +27267,7 @@ g	Uranophora
 j	Euchromiina
 e2	New World Wasp Moths
 d2	Neuwelt-Wespenbären
+sh	Euchromiini
 g	Autochloris
 g	Calonotos
 g	Chrysocale
@@ -27254,6 +27343,7 @@ t	Syntomini
 e2	Old World Wasp Moths
 e2	Old World Handmaiden Moths
 d2	Altwelt-Wespenbären
+sh	Syntominae
 g	Amata
 c	cerbera
 e	Heady Maiden
@@ -27313,6 +27403,7 @@ t	Lithosiini
 e2	Lichen Moths
 e2	Footmen
 d2	Flechtenbären
+sh	Lithosiinae
 j	Lithosiina
 g	Agylla
 g	Apistosia
@@ -27730,6 +27821,8 @@ g	Pheosia
 g	Ptilodon
 t	Dicranurini
 d2	Gabelschwänze
+sh	Cerurinae
+sh	Dicranurinae
 g	Americerura
 a	rarata
 e	South American Puss Moth
@@ -27813,6 +27906,7 @@ e	Lobster Prominent
 d	Buchen-Zahnspinner
 g	Syntypistis
 t	Hemiceratini
+sh	Hemiceratinae
 g	Hemiceras
 y	Phalerinae
 d2	Mondvögel
@@ -28009,6 +28103,7 @@ a	banksiae
 e	Banksia Moth
 f	Oenosandridae
 e2	Oenosandrid Moths
+sh	Oenosandrinae
 g	Diceratucha
 a	xenopis
 g	Discophlebia
@@ -28616,6 +28711,9 @@ g	Eufidonia
 g	Melanolophia
 j	Erannina
 g	Erannis
+a	defoliaria
+e	Mottled Umber
+d	Großer Frostspanner
 j	Bistonina
 g	Agriopis
 g	Apocheima
@@ -29674,6 +29772,7 @@ l	Cladistic analysis of moon moths using morphology, molecules, and behaviour: A
 p2	0300-5267,33(131)
 e2	Moon Moths
 d2	Mondspinner
+sh	Actiini
 g	Actias
 c	artemis
 r2	Zolotuhin'11
@@ -30979,6 +31078,7 @@ a	tau
 e	Tau Emperor Moth
 d	Nagelfleck
 t	Hirpidini
+sh	Hirpidinae
 g	Hirpida
 a	gaujoni
 a	nigrolinea
@@ -31513,12 +31613,22 @@ g	Eumorpha
 a	achemon
 e	Achemon Sphinx
 d	Achemon-Weinschwärmer
+a	capronnieri
+e	Leafwing Sphinx
+d	Blattflügel-Weinschwärmer
 a	fasciatus
 e	Banded Sphinx
 d	Heusenkrautschwärmer
 a	labruscae
 e	Gaudy Sphinx
 d	Grüner Weinschwärmer
+a	megaeacus
+e	Eacus Sphinx
+d	Aiakosschwärmer
+s	eacus
+a	phorbas
+e	Amazon Sphinx
+d	Amazonas-Weinschwärmer
 a	vitis
 e	Vine Sphinx
 d	Amerikanischer Weinschwärmer
@@ -31607,6 +31717,7 @@ a	saturnioides
 e	Dryandra Moth
 d	Dryandraspinner
 f	Phiditiidae
+sh	Phiditiinae
 g	Phiditia
 g	Rolepa
 g	Sorocaba
@@ -31635,6 +31746,8 @@ xs	Brahmaeiformes
 f	Brahmaeidae
 e2	Brahmin Moths
 d2	Brahmaspinner
+sh	Lemonidae
+sh	Lemoninae
 g	Brahmaea
 a	europaea
 e	European Owl Moth
@@ -31759,6 +31872,7 @@ g	Tissanga
 f	Apatelodidae
 e2	American Silkmoths
 d2	Amerikaspinner
+sh	Apatelodinae
 g	Apatelodes
 a	pudefacta
 e	Pudefacted Apatelodes Moth
@@ -32178,6 +32292,7 @@ a	hyalodisca
 y	Thyatirinae
 e2	False Owlets
 d2	Eulenspinner
+sh	Thyatiridae
 t	Thyatirini
 g	Achlya
 a	flavicornis
@@ -32279,6 +32394,7 @@ a	amilia
 g	Tostallo
 a	albescens
 t	Lacosomini
+sh	Lacosominae
 j	Lacosomina
 g	Citralla
 g	Lacosoma
@@ -32297,6 +32413,7 @@ j	Trogopterina
 g	Reinmara
 g	Trogoptera
 t	Druenticini
+sh	Druenticinae
 j	Druenticina
 g	Druentica
 g	Pamea
@@ -32306,6 +32423,7 @@ j	Luramina
 g	Lurama
 g	Ulmara
 t	Cicinnini
+sh	Cicinninae
 j	Cicinnina
 g	Aceclostria
 g	Aleyda
@@ -32325,6 +32443,7 @@ j	Bedosiina
 g	Bedosia
 g	Bedosiallo
 t	Aurorianini
+sh	Aurorianinae
 g	Auroriana
 a	florianensis
 y	Meneviinae
@@ -33191,6 +33310,7 @@ d	Großer Mooszünsler
 a	ustimacula
 e	Boot Scoparia Moth
 t	Heliothelini
+sh	Heliothelinae
 g	Eclipsiodes
 g	Heliothela
 a	ophideresana
@@ -33198,6 +33318,7 @@ a	wulfeniana
 d	Schwarzer Stiefmütterchenzünsler
 g	Phanomorpha
 t	Erupini
+sh	Erupinae
 g	Erupa
 g	Lancia
 g	Schoenerupa
@@ -33305,6 +33426,7 @@ g	Tetrernia
 g	Theila
 g	Usingeriessa
 t	Schoenobiini
+sh	Schoenobiinae
 g	Brihaspa
 g	Calamoschoena
 g	Carectocultus
@@ -33420,6 +33542,7 @@ d	Prächtiger Farnzünsler
 g	Uthinia
 t	Lathrotelini
 d2	Palmenzünsler
+sh	Lathrotelinae
 g	Diplopseustis
 a	perieresalis
 e	Carex Moth
@@ -33523,6 +33646,7 @@ e	White-spotted Nephrogramma Moth
 g	Scybalistodes
 g	Trischistognatha
 t	Linostini
+sh	Linostinae
 g	Linosta
 a	centralis
 y	Odontiinae
@@ -34597,6 +34721,7 @@ x3	Cossoina
 x	Cossoidea
 e2	Cossid Millers
 d2	Bohrer
+sh	Sesioidea
 xs	Cossiformes
 f	Cossidae
 e2	Carpenter Moths
@@ -36262,6 +36387,7 @@ g	Platyprosterna
 y	Dalcerinae
 e2	Jewel Caterpillar Moths
 d2	Schmuckspinner
+sh	Dalceridae
 g	Acraga
 a	coa
 e	Orange Jewel Caterpillar Moth
@@ -36323,6 +36449,7 @@ y	Aidinae
 r2	Volkova,Zolotuhin'21
 l	On the Status of Aididae (Lepidoptera, Zygaenoidea)
 p	10.1134/S0013873821070162
+sh	Aididae
 g	Aidos
 g	Brachycodilla
 g	Xenarchus
@@ -37239,6 +37366,7 @@ a	xanthobasis
 e	Yellow-vested Moth
 d	Gelbwestenmotte
 y	Batrachedrinae
+sh	Batrachedridae
 g	Batrachedra
 a	busiris
 a	enormis
@@ -37256,6 +37384,7 @@ e2	Case-bearers
 e2	Casebearing Moths
 d2	Miniersackträger
 d2	Sackträgermotten
+sh	Coleophoridae
 g	Augasma
 g	Coleophora
 a	accordella
@@ -37666,6 +37795,7 @@ a	lewinella
 y	Aeolanthinae
 g	Aeolanthes
 y	Peleoponinae
+sh	Peleopodidae
 t	Peleopodini
 g	Durrantia
 a	piperatella
@@ -37721,6 +37851,7 @@ e	Straw-coloured Tubic
 y	Chimabachinae
 e2	Chimabachid Moths
 d2	Breitflügelmotten
+sh	Chimabachidae
 g	Cheimophila
 a	salicella
 e	Spring Tubic
@@ -38496,6 +38627,8 @@ g	Idioglossa
 x4	Tortricina
 x	Tortricoidea
 d2	Wicklerartige
+sh	Galacticoidea
+sh	Immoidea
 f	Tortricidae
 r	Regier'12
 l	A Molecular Phylogeny for the Leaf-Roller Moths (Lepidoptera: Tortricidae) and Its Implications for Classification and Life History Evolution
@@ -40603,6 +40736,9 @@ x4	Pterophorina
 x3	Pterophoroina
 x	Pterophoroidea
 d2	Federmottenartige
+sh	Alucitoidea
+sh	Copromorphoidea
+sh	Epermenioidea
 xs	Pterophoriformes
 f	Pterophoridae
 r2	Gielis'00
@@ -41159,6 +41295,7 @@ d	Pfauenaugen-Spreizflügelfalter
 g	Litobrenthia
 x	Urodoidea
 d2	Trugwidderchenartige
+sh	Schreckensteinioidea
 f	Urodidae
 e2	New World False Burnets
 d2	Trugwidderchen
@@ -41821,6 +41958,7 @@ d	Gamander-Miniermotte
 g	Spanioptila
 g	Systoloneura
 t	Parornichini
+sh	Parornichinae
 g	Callisto
 a	denticulella
 e	Garden Apple Slender
@@ -42086,6 +42224,7 @@ a	serotinella
 a	smilacisella
 a	viburnella
 t	Oecophyllembiini
+sh	Oecophyllembiinae
 g	Angelabella
 a	tecomae
 g	Corythoxestis
@@ -42095,6 +42234,7 @@ d	Karamu-Miniermotte
 g	Eumetriochroa
 g	Metriochroa
 t	Phyllocnistini
+sh	Phyllocnistinae
 g	Phyllocnistis
 a	ampelopsiella
 a	citrella
@@ -42229,6 +42369,7 @@ x	Tineoidea
 r	Regier'14
 l	A molecular phylogeny and revised classification for the oldest ditrysian moth lineages (Lepidoptera: Tineoidea), with implications for ancestral feeding habits of the mega-diverse Ditrysia
 p	10.1111/syen.12110
+sh	Psychoidea
 xs	Tineiformes
 f	Tineidae
 e2	Clothes Moths
@@ -42815,6 +42956,7 @@ a	monachopis
 g	Trichocossus
 g	Westia
 y	Arrhenophaninae
+sh	Arrhenophanidae
 t	Arrhenophanini
 g	Arrhenophanes
 a	arrheno
@@ -42964,6 +43106,7 @@ g	Kruegerellus
 a	singularis
 x5	Meessiina
 x	Meessioidea
+sh	Meessiinae
 f	Meessiidae
 g	Bathroxena
 a	heteropalpella
@@ -42978,6 +43121,7 @@ x6	Etimonotrysia
 x	Tischerioidea
 e2	Tischeriid Moths
 d2	Schopfstirnmottenartige
+sh	Palaephatoidea
 f	Tischeriidae
 e2	Trumpet Leafminer Moths
 d2	Schopfstirnmotten
@@ -43422,6 +43566,7 @@ x7	Exoporia
 x	Hepialoidea
 e2	Ghost Moths
 d2	Wurzelbohrerartige
+sh	Mnesarchaeoidea
 xs	Hepialiformes
 f	Hepialidae
 e2	Swift Moths
@@ -43441,6 +43586,7 @@ e	Bardi Grub
 e	Waikerie
 d	Australischer Wurzelbohrer
 d	Waikerie
+s2	Trictena
 a	hyalinatus
 e	Mustard Ghost Moth
 a	hydrographus
@@ -43688,9 +43834,8 @@ e	Small Hazel Purple
 d	Hainbuchen-Trugmotte
 s2	Eriocrania
 x	Neopseustoidea
-r	Kristensen'15
-l	A new extant family of primitive moths from Kangaroo Island, Australia, and its significance for understanding early Lepidoptera evolution
-p	10.1111/syen.12115
+sh	Acanthopteroctetidae
+sh	Aenigmatineoidea
 f	Neopseustidae
 g	Apoplania
 g	Neopseustis
@@ -43698,6 +43843,9 @@ a	meyricki
 g	Synempora
 a	andesae
 f	Aenigmatineidae
+r	Kristensen'15
+l	A new extant family of primitive moths from Kangaroo Island, Australia, and its significance for understanding early Lepidoptera evolution
+p	10.1111/syen.12115
 g	Aenigmatinea
 a	glatzella
 f	Acanthopteroctetidae
@@ -43778,7 +43926,7 @@ g	Zealandopterix
 <footer>
 <section id="infostats" class="hide">
 <h3 id="i1"><span class="EN">Data points total count:         </span><span class="DE">Gesamtzahl Datenpunkte:          </span>_c</h3>
-<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>ca. _s KB</h3>
+<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>_s MB</h3>
 <h3 id="i3"><span class="EN">Date of last update:             </span><span class="DE">Letzte Aktualisierung am:        </span>_v</h3>
 <h3 id="i4"><span class="EN">Project started on:              </span><span class="DE">Projekt gestartet am:            </span>2020-12-05</h3>
 <h3 id="i5"><span class="EN">Github repository:               </span><span class="DE">Github-Repository:               </span><a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h3>
@@ -43806,9 +43954,9 @@ const $$ = document.querySelectorAll.bind(document);
 var raw	= $('main');
 var count = raw.innerHTML.match(/\t/g).length;
 var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
-var	size = count * 0.0164;
+var	size = count * 0.0000164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
-$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(0)).replace('_v',version.substring(9,19));
+$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19));
 
 //2 Get logo from img and feed to tab icon
 $('link').setAttribute('href',$('img').getAttribute('src'));
@@ -43834,7 +43982,7 @@ while (sib) { // Loop for each GEN
 	sib = sib.nextElementSibling}});
 
 //6 Generate taxon IDs, prefix/suffix strings
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
@@ -43849,12 +43997,11 @@ else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.s
 
 //7 Generate spoilers and their eventlisteners
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
-spc.forEach(f=>{f.addEventListener('mousedown',(ev)=>{ev.target.classList.toggle('open'); ev.target.nextElementSibling.classList.toggle('hide')}); // Toggle spoilers on spc click
-
+spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
 while (sib) { // Loop for each div
-	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
+	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
 	else if (f.matches('.f') && sib.matches('p:not(.f,[class^="x"])')) div.appendChild(sib); // If spc is FAM & sib matches, move sib into div
 	else if (f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])')) div.appendChild(sib); // If spc is SUBFAM & sib matches, move sib into div
 	else if (f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])')) div.appendChild(sib); // If spc is TRI & sib matches, move sib into div
@@ -43863,7 +44010,7 @@ while (sib) { // Loop for each div
 	else break
 	sib = div.nextElementSibling}});
 
-//8 Check if browserLns contains de and preset this lang, else use en
+//8 Check if browserLns is de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}

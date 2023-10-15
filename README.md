@@ -107,29 +107,30 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`g`|GEN|[GEN]|Genus name|
 |`i`|SUBGEN|[NAME]|Subgenus name|
 |`o`|SPGR|[NAME]|Species group name|
-|`a`|SP|{GEN} [SP]|Epithet of extant species|
-|`ae`|SP_EXT|{GEN} [SP] {"†"}|Epithet of extinct species|
-|`c`|AGG|{GEN} [SP] {"agg."}|Aggregate name<br>(species complex/superspecies epithet)|
-|`m`|SEG|{GEN} [SP]|Segregate name<br>(microspecies epithet)|
-|`u`|SSP|{GEN} {SP} [SSP]|Epithet of extant subspecies|
-|`ue`|SSP_EXT|{GEN} {SP} [SSP] {"†"}|Epithet of extinct subspecies|
+|`a`|SP|$\color{#CCC}{\textsf{GEN }}$ [SP]|Epithet of extant species|
+|`ae`|SP_EXT|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ †}}$|Epithet of extinct species|
+|`c`|AGG|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ agg.}}$|Aggregate name<br>(species complex/superspecies epithet)|
+|`m`|SEG|$\color{#CCC}{\textsf{GEN }}$ [SP]|Segregate name<br>(microspecies epithet)|
+|`u`|SSP|$\color{#CCC}{\textsf{GEN SP }}$ [SSP]|Epithet of extant subspecies|
+|`ue`|SSP_EXT|$\color{#CCC}{\textsf{GEN SP }}$ [SSP] $\color{#CCC}{\textsf{ †}}$|Epithet of extinct subspecies|
 |`e`|NAME_EN|[NAME]|English common name of a<br>species or species complex|
 |`e2`|NAME_EN|[NAME]|English common name of a<br>family/tribe-level taxon|
 |`d`|NAME_DE|[NAME]|German common name of a<br>species or species complex|
 |`d2`|NAME_DE|[NAME]|German common name of a<br>family/tribe-level taxon|
-|`s`|SYN|{GEN} [SP] (SSP)|Species synonym with different<br>species (+ optional subspecies) epithet|
-|`s2`|SYN|[GEN] (SP) {SP/SSP}|(Sub)species synonym with different<br>genus (+optional species) name
-|`s3`|SYN|{GEN} [SP] {SSP}|Species synonym of former subspecies<br>of the given species epithet|
-|`s4`|SYN|[GEN] [SP] (SSP)|(Sub)species synonym with completely<br>different genus and species name
-|`r`|REF|[AUT1]{" et al., 20"}['YY]|Scientific reference first author+year<br>when >2 authors|
-|`r2`|REF|[AUT1]{" & "}(,AUT2){", 20"}['YY]|Scientific reference author(s)+year<br>when ≤2 authors|
+|`s`|SYN|$\color{#CCC}{\textsf{GEN }}$ [SP] (SSP)|Species synonym with different<br>species (+ optional subspecies) epithet|
+|`s2`|SYN|[GEN] (SP) $\color{#CCC}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
+|`s3`|SYN|$\color{#CCC}{\textsf{GEN }}$ [SP] $\color{#CCC}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
+|`s4`|SYN|[GEN] [SP] (SSP)|(Sub)species synonym with completely<br>different genus and species name|
+|`sh`|SYN_H|[NAME]|Synonym of higher taxon|
+|`r`|REF|[AUT1] $\color{#CCC}{\textsf{ et al., 20}}$ ['YY]|Scientific reference first author+year<br>when >2 authors|
+|`r2`|REF|[AUT1] $\color{#CCC}{\textsf{ ＆ }}$ (,AUT2) $\color{#CCC}{\textsf{, 20}}$ ['YY]|Scientific reference author(s)+year<br>when ≤2 authors|
 |`l`|REF_TITLE|[TITLE]|Title of scientific reference|
-|`p`|REF_ID|{", doi:"}[DOI]|ID of scientific reference via DOI|
-|`p2`|REF_ID|{", ISSN-L "}[ISSN-L,] [VOL]\(ISSUE\)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
+|`p`|REF_ID|$\color{#CCC}{\textsf{doi:}}$ [DOI]|ID of scientific reference via DOI|
+|`p2`|REF_ID|$\color{#CCC}{\textsf{ISSN-L:}}$ [ISSN-L,][VOL]\(ISSUE\)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-{#} Auto-generated data substring – added on page load via JavaScript<br>
-[#] Required data (sub)string – must always be present<br>
-(#) Optional data substring – can be added in addition to a required substring
+$\color{#CCC}{\textsf{ X }}$ Auto-generated data substring – added on page load via JavaScript<br>
+[X] Required data (sub)string – must always be present<br>
+(X) Optional data substring – can be added in addition to a required substring
 
 ## Guidelines
 Here you can find guidelines and details for the individual data types, which should be followed when modifying the dataset. They are important to ensure that all data points are displayed in their correct position and format on the Lepitaxa webpage. Only data points fulfilling these guidelines will be accepted and merged into the main branch. Running a lepitest before opening a pull request can help knock out many common mistakes when it comes to the data fine structure and sorting.
@@ -334,45 +335,55 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 19.8. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
 
 ---
-### 20 - REF (`r`, `r2`)
+### 20 - SYN_H (`sh`)
+The synonym of a higher taxon, especially family- and tribe-level taxa.
+
+:point_right: **Guidelines:**
+- 20.1. Higher taxon synonyms are supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
+- 20.2. Higher taxon synonyms must be sorted according to guidelines 19.5. and 19.6.
+- 20.3. The naming of section-level taxa follows Guidelines 1.2. and 1.3.
+- 20.4. Guideline 19.8. applies for higher taxon synonyms as well.
+
+---
+### 21 - REF (`r`, `r2`)
 A reference to a scientific publication/dataset the phylogenetic data is based on. This data type forms the first element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 20.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
-- 20.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
-- 20.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
-- 20.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
-- 20.5. References must be grouped and sorted BEFORE common names, synonyms, microspecies or subspecies.
-- 20.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
-- 20.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
-- 20.7. The author names must be their last name only and follow Guideline 18.6.
-- 20.8. The publication year only supports 21<sup>st</sup> century values in _YY_ format. This restriction should limit references to the ones providing "modern phylogeny". Even though phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.
-- 20.9. The publication year _YY_ value must be separated by a single apostrophe (U+0027) from the author(s). The apostrophe is replaced with ", 20" automatically via JavaScript.
-- 20.10. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
-- 20.11. Referenced publications should preferentially be available in English, but are also accepted in German. If they're written in any other language, at least the abstract and data should be available in English.
-- 20.12. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
+- 21.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
+- 21.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
+- 21.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
+- 21.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
+- 21.5. References must be grouped and sorted BEFORE common names, synonyms, microspecies or subspecies.
+- 21.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
+- 21.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
+- 21.8. The author names must be their last name only and follow Guideline 18.6.
+- 21.9. The publication year only supports 21<sup>st</sup> century values in _YY_ format. This restriction should limit references to the ones providing "modern phylogeny". Even though phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.
+- 21.10. The publication year _YY_ value must be separated by a single apostrophe (U+0027) from the author(s). The apostrophe is replaced with ", 20" automatically via JavaScript.
+- 21.11. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
+- 21.12. Referenced publications should preferentially be available in English, but are also accepted in German. If they're written in any other language, at least the abstract and data should be available in English.
+- 21.13. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
 
 ---
-### 21 - REF_TITLE (`l`)
+### 22 - REF_TITLE (`l`)
 The title of a referenced scientific publication. This data type forms the second element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 21.1. The title should be taken straight from the publication, unmodified. If there's two or more titles in different languages available, English has priority 1 and should be used instead (if present), German has priority 2.
-- 21.2. Titles must always be the second element of a REF data triplet, therefore be prepended by a REF and appended by a REF_ID. These three data points belong together and should not be separated!
-- 21.3. The sorting follows Guideline 20.5.
+- 22.1. The title should be taken straight from the publication, unmodified. If there's two or more titles in different languages available, English has priority 1 and should be used instead (if present), German has priority 2.
+- 22.2. Titles must always be the second element of a REF data triplet, therefore be prepended by a REF and appended by a REF_ID. These three data points belong together and should not be separated!
+- 22.3. The sorting follows Guideline 21.5.
 
 ---
-### 22 - REF_ID (`p`, `p2`)
+### 23 - REF_ID (`p`, `p2`)
 The ID of a referenced scientific publication. This data type forms the last element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 22.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
-- 22.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
-- 22.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
-- 22.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. The ISSN-L will be turned into a link to the ISSN portal on the Lepitaxa webpage, offering more details on the publication source. Please make sure this link actually works!
-- 22.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and NO spaces. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
-- 22.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
-- 22.7. The sorting follows Guideline 20.5.
+- 23.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
+- 23.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
+- 23.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
+- 23.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. The ISSN-L will be turned into a link to the ISSN portal on the Lepitaxa webpage, offering more details on the publication source. Please make sure this link actually works!
+- 23.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and NO spaces. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
+- 23.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
+- 23.7. The sorting follows Guideline 21.5.
 
 ---
 

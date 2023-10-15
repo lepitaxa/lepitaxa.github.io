@@ -22,7 +22,7 @@ var sf = 'The suffix of this taxon type must be "'
 
 // Special characters and capitalization
 if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
-if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
+if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.a,.ae,.c,.m,.u,.ue,.s,.s2,.s3,.s4') && /[^A-z -.†]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('p:not(.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('p:not(.xp,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
@@ -52,15 +52,16 @@ if (f.matches('p:not(.r,.r2,.l,.p,.p2,.xp)') && /(P|p)aplio/.test(d)) {i++; log 
 if (f.matches('.a,.ae,.c,.m,.u,.ue,.e,.e2,.d,.d2') && /( -|- )/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces before/after the hyphen.\n'};
 
 // Taxon suffixes
-if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && d.substring(d.length-1,d.length) != 'a' || f.matches('.xp') && d.substring(d.length-3,d.length-2) != 'a') {i++; log += '[#' + i + s1 + sf + 'a".\n'};
-if (f.matches('.x') && d.substring(d.length-5,d.length) != 'oidea') {i++; log += '[#' + i + s1 + sf + 'oidea".\n'};
-if (f.matches('.xs') && d.substring(d.length-7,d.length) != 'iformes') {i++; log += '[#' + i + s1 + sf + 'iformes".\n'};
-if (f.matches('.f') && d.substring(d.length-4,d.length) != 'idae') {i++; log += '[#' + i + s1 + sf + 'idae".\n'};
-if (f.matches('.y') && d.substring(d.length-4,d.length) != 'inae') {i++; log += '[#' + i + s1 + sf + 'inae".\n'};
-if (f.matches('.t') && d.substring(d.length-3,d.length) != 'ini') {i++; log += '[#' + i + s1 + sf + 'ini".\n'};
-if (f.matches('.j') && d.substring(d.length-3,d.length) != 'ina') {i++; log += '[#' + i + s1 + sf + 'ina".\n'};
-if (f.matches('.h') && d.substring(d.length-3,d.length) != 'iti') {i++; log += '[#' + i + s1 + sf + 'iti".\n'};
-if (f.matches('p:not(.c)') && d.substring(d.length-5,d.length) == ' agg.') {i++; log += '[#' + i + s1 + 'Use the AGG datatype to add the "agg." suffix to a species complex.\n'};
+if (f.matches('.sh') && !(/(a|e|i)$/.test(d))) {i++; log += '[#' + i + s1 + 'The suffix of this synonym must match a valid higher level taxon.\n'};
+if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && !(/a$/.test(d)) || f.matches('.xp') && !(/a" $/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
+if (f.matches('.x') && !(/oidea$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'oidea".\n'};
+if (f.matches('.xs') && !(/iformes$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iformes".\n'};
+if (f.matches('.f') && !(/idae$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'idae".\n'};
+if (f.matches('.y') && !(/inae$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'inae".\n'};
+if (f.matches('.t') && !(/ini$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'ini".\n'};
+if (f.matches('.j') && !(/ina$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'ina".\n'};
+if (f.matches('.h') && !(/iti$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iti".\n'};
+if (f.matches('p:not(.c)') && (/ agg\.$/.test(d))) {i++; log += '[#' + i + s1 + 'Use the AGG datatype to add the "agg." suffix to a species complex.\n'};
 
 // REF errors
 if (f.matches('.r,.r2') && !(/, 20\d\d$/.test(d))) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in 'YY format.\n"};
@@ -73,15 +74,16 @@ if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log +=
 if (f.matches('.x9') && !(f.matches('p:first-of-type'))) {i += 1; log += '[#' + i + s2 + 'There must be a single one located at the top of taxa section.\n'};
 if (f.matches('.f,.i,.o,.a,.ae,.c,.m,.u,.ue') && f.matches('p:first-of-type') || f.matches('.m,.u,.ue') && f.matches('p:nth-of-type(2)')) {i++; log += '[#' + i + s2 + 'Must be located within a valid parent taxon.\n'};
 if (f.matches('.e2,.d2') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'This type 2 common name must be located below a SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
+if (f.matches('.sh') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'This synonym must be located below a ORD, PARAPHYLUM, SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
 if (f.matches('.e,.d,.s,.s2,.s3,.s4') && !(f.matches(':is(p.a,p.ae,p.c)~p'))) {i++; log += '[#' + i + s4 + 'Type 1 common names and SYN must be located below a SP/AGG taxon.\n'};
 if (f.matches('.e') && f.matches('p.d+p') || f.matches('.e2') && f.matches('p.d2+p')) {i++; log += '[#' + i + s4 + 'German common names should be placed after english common names.\n'};
-if (f.matches('.e,.d') && f.matches('p:is(.s,.s2,.s3,.s4,.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'SYN, SSP and SEG should be placed after common names.\n'};
+if (f.matches('.e,.d') && f.matches('p:is(.s,.s2,.s3,.s4,.u,.ue,.m)+p') || f.matches('.e2,.d2') && f.matches('p.sh+p')) {i++; log += '[#' + i + s4 + 'SYN, SYN_H, SSP and SEG should be placed after common names.\n'};
 if (f.matches('.s,.s2,.s3,.s4') && f.matches('p:is(.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'SSP and SEG should be placed after synonyms.\n'};
-if (f.matches('.r,.r2,.l,.p,.p2') && f.matches('p:is(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed before common names, synonyms, SSP and SEG.\n'};
+if (f.matches('.r,.r2,.l,.p,.p2') && f.matches('p:is(.e,.e2,.d,.d2,[class^="s"],.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed before common names, synonyms, SSP and SEG.\n'};
 if (f.matches('.l') && !(f.matches('p:is(.r,.r2)+p')) || f.matches('.p,.p2') && !(f.matches('p.l+p'))) {i++; log += '[#' + i + s4 + 'Every REF must be followed by a proper REF_TITLE and REF_ID.\n'};
 
 // Data types
-if (f.matches('p:not(.x9,.x8,.x7,.x6,.x5,.x4,.x3,.x2,.x,.xs,.xp,.f,.y,.t,.j,.h,.g,.i,.o,.a,.ae,.c,.m,.u,.ue,.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)')) {i++; log += '[#' + i + s3 + 'Use a valid data type.\n'};
+if (f.matches('p:not(.x9,.x8,.x7,.x6,.x5,.x4,.x3,.x2,.x,.xs,.xp,.f,.y,.t,.j,.h,.g,.i,.o,.a,.ae,.c,.m,.u,.ue,.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.sh,.r,.r2,.l,.p,.p2)')) {i++; log += '[#' + i + s3 + 'Use a valid data type.\n'};
 });
 
 
@@ -105,6 +107,15 @@ while (sib) {
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "SYN ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "SYN ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
 	if (sib.nextElementSibling.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.s,.s2,.s3,.s4)')) break
+	sib = sib.nextElementSibling}});
+
+// Order of SYN_H within higher taxons
+$$('.x9,.x,.xp,.f,.y,.t,.j,.h').forEach(f=>{
+var sib = f.nextElementSibling.firstElementChild;
+while (sib) {
+	if (sib.matches('.sh') && sib.nextElementSibling.matches('.sh') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "SYN_H ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
+	if (sib.matches('.sh') && sib.nextElementSibling.matches('.sh') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "SYN_H ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
+	if (sib.nextElementSibling.matches('p:not(.r,.r2,.l,.p,.p2,.e2,.d2,.sh)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SSP within SP
@@ -158,23 +169,19 @@ var s7 = ']  Wrong subdata hierarchy detected at positition "';
 
 // SSP within AGG
 $$('.c').forEach(f=>{
-var sib = f.nextElementSibling; var testArray = [];
+var sib = f.nextElementSibling;
 while (sib) {
-	if (sib.matches('.u,.ue')) testArray.push(convert(sib.classList));
+	if (sib.matches('.u,.ue')) {i++; log += '[#' + i + s7 + 'AGG ' + f.innerHTML + '". AGG can' + "'t contain SSP, only SEG.\n"};
 	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.s,.s2,.s3,.s4,.u,.ue,.m)')) break
-	sib = sib.nextElementSibling};
-if (testArray.includes('SSP') || testArray.includes('SSP_EXT')) {i++; log += '[#' + i + s7 + 'AGG ' + f.innerHTML + '". AGG can' + "'t contain SSP, only SEG.\n"};
-});
+	sib = sib.nextElementSibling}});
 
 // SEG within SP
 $$('.a,.ae').forEach(f=>{
-var sib = f.nextElementSibling; var testArray = [];
+var sib = f.nextElementSibling;
 while (sib) {
-	if (sib.matches('.m')) testArray.push(convert(sib.classList));
+	if (sib.matches('.m')) {i++; log += '[#' + i + s7 + convert(f.classList) + ' ' + f.innerHTML + '". Species can' + "'t contain SEG, only SSP.\n"};
 	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.s,.s2,.s3,.s4,.u,.ue,.m)')) break
-	sib = sib.nextElementSibling};
-if (testArray.includes('SEG')) {i++; log += '[#' + i + s7 + convert(f.classList) + ' ' + f.innerHTML + '". Species can' + "'t contain SEG, only SSP.\n"};
-});
+	sib = sib.nextElementSibling}});
 
 // SPGR before SUBGEN within GEN
 $$('.g').forEach(f=>{
@@ -238,9 +245,9 @@ $$('p:not([class])').forEach(f=>{f.remove()});
 
 var exSize; var info2;
 
-if (/(txt|tsv)/.test(format)) exSize = size * 0.0014;
-else if (format == 'csv') exSize = size * 0.0015;
-else exSize = size * 0.0034;
+if (/(txt|tsv)/.test(format)) exSize = size * 1.4;
+else if (format == 'csv') exSize = size * 1.5;
+else exSize = size * 3.4;
 
 var info1 = '- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
 
@@ -280,7 +287,7 @@ function xml() {
 	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="https://lepitaxa.github.io' + '" />\n\n<taxa>\n';
 
 	//2 xml main, add taxalist
-	$$('p:not(.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.r,.r2,.l,.p,.p2)').forEach(f=>{
+	$$('p:not(.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l,.p,.p2)').forEach(f=>{
 		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
 		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var SYN = ''; // Start element lists
 		while (sib) { // Loop for each taxon
@@ -289,7 +296,7 @@ function xml() {
 		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
 		else if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
 		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
-		else if (sib.matches('.s,.s2,.s3,.s4')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
+		else if (sib.matches('[class^="s"]')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
 		else break
 		sib = sib.nextElementSibling};
 
@@ -310,6 +317,6 @@ file_link.click(); file_link.remove()};
 function convert(dt) {
 dt = dt.toString();
 dt = dt.replace(/(en|de|hide|open)/g,'');
-dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('ls','REF_TITLE');
+dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('ls','REF_TITLE').replace('sh','SYN_H');
 dt = dt.replace(/\d/g,'').replace('x','SUPERFAM').replace('f','FAM').replace('y','SUBFAM').replace('t','TRI').replace('j','SUBTRI').replace('h','INFRATRI').replace('g','GEN').replace('i','SUBGEN').replace('o','SPGR').replace('a','SP').replace('c','AGG').replace('m','SEG').replace('u','SSP').replace('r','REF').replace('l','REF_TITLE').replace('p','REF_ID').replace('e','NAME_EN').replace('d','NAME_DE').replace('s','SYN');
 return dt};
