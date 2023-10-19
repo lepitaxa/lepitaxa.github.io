@@ -286,7 +286,7 @@ A species segregate (microspecies epithet). The species-like subdivisions of an 
 
 :point_right: **Guidelines:**
 - 16.1. Species segregates must be sorted strictly alphabetical relative to each other within a species aggregate.
-- 16.2. Species segregates must be grouped and sorted AFTER all references, common names and synonyms within a species aggregate.
+- 16.2. Species segregates must be grouped and sorted AFTER all common names and synonyms, but BEFORE all references within a species aggregate.
 - 16.3. The naming of species segregates follows Guidelines 14.2. and 14.3.
 - 16.4. Species segregates cannot contain subspecies, due to them often not being clearly separated themselves and them being treated similar to subspecies internally.
 
@@ -296,7 +296,7 @@ The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and 
 
 :point_right: **Guidelines:**
 - 17.1. Subspecies must be sorted strictly alphabetical relative to each other within a species.
-- 17.2. Subspecies must be grouped and sorted AFTER all references, common names and synonyms within a species.
+- 17.2. Subspecies must be grouped and sorted AFTER all common names and synonyms, but BEFORE all references within a species.
 - 17.3. The naming of subspecies follows Guidelines 14.2. and 14.3.
 - 17.4. Only prominent/important subspecies should be listed, it's also not wrong to list non at all when they're practically indistinguishable. Listing the nominate subspecies is not necessary either, but can be done if important.
 
@@ -308,7 +308,7 @@ The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species
 - 18.1. The addition of type 1 common names (`e`, `d`) is supported for species and species aggregates. These names must be written in SINGULAR.
 - 18.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
 - 18.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
-- 18.4. Common names must be grouped and sorted AFTER all references, but BEFORE all synonyms, microspecies or subspecies.
+- 18.4. Common names must be grouped and sorted BEFORE all synonyms, microspecies or subspecies, and references.
 - 18.5. The common names of each language should be sorted relative to each other according to their importance/prominence in everyday use or according to their preference when a newer name is supposed to phase-out the use of an older one. More important/preferred names should be listed closer to the top.
 - 18.6. The allowed character sets are basic latin (A-Z), extended latin (äáéöüß etc.), apostrophes (U+0027), hyphens (U+002D) and spaces (U+0020).
 - 18.7. The words of a common name must always start with an upper-case letter, with the exception of conjunctions like "and", "of", "du", "und", "von", which should be lower-case only.
@@ -329,7 +329,7 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 19.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
 - 19.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
 - 19.4. Type 4 synonyms (`s4`) should be used if neither the genus name nor the species epithet of the parent matches. A different genus name and species epithet must be given (+an optional subspecies epithet).
-- 19.5. Synonyms must be grouped and sorted AFTER all references and common names, but BEFORE all microspecies or subspecies.
+- 19.5. Synonyms must be grouped and sorted AFTER all common names, but BEFORE all microspecies or subspecies, and references.
 - 19.6. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
 - 19.7. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
 - 19.8. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
@@ -353,7 +353,7 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 - 21.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
 - 21.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
 - 21.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
-- 21.5. References must be grouped and sorted BEFORE common names, synonyms, microspecies or subspecies.
+- 21.5. References must be grouped and sorted AFTER all common names, synonyms, microspecies or subspecies.
 - 21.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
 - 21.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
 - 21.8. The author names must be their last name only and follow Guideline 18.6.

@@ -79,7 +79,7 @@ if (f.matches('.e,.d,.s,.s2,.s3,.s4') && !(f.matches(':is(p.a,p.ae,p.c)~p'))) {i
 if (f.matches('.e') && f.matches('p.d+p') || f.matches('.e2') && f.matches('p.d2+p')) {i++; log += '[#' + i + s4 + 'German common names should be placed after english common names.\n'};
 if (f.matches('.e,.d') && f.matches('p:is(.s,.s2,.s3,.s4,.u,.ue,.m)+p') || f.matches('.e2,.d2') && f.matches('p.sh+p')) {i++; log += '[#' + i + s4 + 'SYN, SYN_H, SSP and SEG should be placed after common names.\n'};
 if (f.matches('.s,.s2,.s3,.s4') && f.matches('p:is(.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'SSP and SEG should be placed after synonyms.\n'};
-if (f.matches('.r,.r2,.l,.p,.p2') && f.matches('p:is(.e,.e2,.d,.d2,[class^="s"],.u,.ue,.m)+p')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed before common names, synonyms, SSP and SEG.\n'};
+if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,[class^="s"],.u,.ue,.m)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, synonyms, SSP or SEG.\n'};
 if (f.matches('.l') && !(f.matches('p:is(.r,.r2)+p')) || f.matches('.p,.p2') && !(f.matches('p.l+p'))) {i++; log += '[#' + i + s4 + 'Every REF must be followed by a proper REF_TITLE and REF_ID.\n'};
 
 // Data types
@@ -291,16 +291,16 @@ function xml() {
 		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
 		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var SYN = ''; // Start element lists
 		while (sib) { // Loop for each taxon
-		if (sib.matches('.r,.r2')) REF += '\t\t<ref>' + sib.innerHTML + '</ref>\n'; // If sib matches selector, add to REF list
-		else if (sib.matches('.l')) RTI += '\t\t<ref_title>' + sib.firstElementChild.innerHTML + '</ref_title>\n'; // If sib matches selector, add innerHTML of first child to RTI list
-		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
-		else if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
+		if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
 		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
 		else if (sib.matches('[class^="s"]')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
+		else if (sib.matches('.r,.r2')) REF += '\t\t<ref>' + sib.innerHTML + '</ref>\n'; // If sib matches selector, add to REF list
+		else if (sib.matches('.l')) RTI += '\t\t<ref_title>' + sib.firstElementChild.innerHTML + '</ref_title>\n'; // If sib matches selector, add innerHTML of first child to RTI list
+		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
 		else break
 		sib = sib.nextElementSibling};
 
-		file_cont += '\t<taxon type="' + convert(f.classList) + '">\n\t\t<name>' + f.innerHTML + '</name>\n' + REF + RTI + RID + nEN + nDE + SYN + '\t</taxon>\n'});
+		file_cont += '\t<taxon type="' + convert(f.classList) + '">\n\t\t<name>' + f.innerHTML + '</name>\n' + nEN + nDE + SYN + REF + RTI + RID + '\t</taxon>\n'});
 
 	//3 xml end
 	file_cont += '</taxa>\n</lepitaxa>';
