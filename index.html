@@ -5,7 +5,6 @@
 <meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#000">
 <meta name="viewport" content="initial-scale=1">
-<meta name="google-site-verification" content="-IysjuyuagoksvXOgvJ2lBqIuQplmPbNLmFrGdo0lKs">
 <meta property="og:image" content="https://lepitaxa.github.io/lepitaxa.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
@@ -16,7 +15,7 @@
 @media screen and (max-width: 660px) {:root	{--z:2.424vw}}
 
 :root			{--m:Consolas, monospace; font-size:var(--z)}
-.hide,.p,.p2	{display:none}
+.hide,.v2,.p,.p2{display:none}
 body			{font-family:Verdana, sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
 a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
@@ -85,19 +84,19 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .g::before	{content:"▪ "; font-style:normal; color:#000}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c	{padding:0 0 0 6.5rem}
-:is(.a,.ae,.c)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
-.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"]	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.a,.ae,.c,.w{padding:0 0 0 6.5rem}
+:is(.a,.ae,.c,.w)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
+.u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
-.e2,.d2,.sh,.r,.r2	{color:#000; font-size:0.85rem}
+.e2,.d2,.sh	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
 :is(.e,.e2)::after	{content:'"'}
 :is(.d,.d2)::before	{content:'DE „'}
 :is(.d,.d2)::after	{content:'”'}
 [class^="s"]{text-decoration:line-through; color:#F77}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
-.r,.r2,.l	{padding:0.1rem 0 0 7.25rem; color:#33A}
-.l			{padding:0 0.5rem 0.35rem 7.25rem; font-size:0.7rem; color:#666}
+.r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
+.l			{padding:0 0.5rem 0.15rem 7.25rem}
 p>a			{color:#666}
 
 /*Main - taxa*/
@@ -150,6 +149,10 @@ p>a			{color:#666}
 <main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}">
 <div id="l">
 x9	Lepidoptera
+e2	Butterflies and Moths
+e2	Lepidopterans
+d2	Schmetterlinge
+d2	Schuppenflügler
 r	Mutanen'10
 l	Comprehensive gene and taxon coverage elucidates radiation patterns in moths and butterflies
 p	10.1098/rspb.2010.0392
@@ -174,10 +177,6 @@ p	10.1111/syen.12481
 r	Rota'22
 l	The unresolved phylogenomic tree of butterflies and moths (Lepidoptera): assessing the potential causes and consequences
 p	10.1111/syen.12545
-e2	Butterflies and Moths
-e2	Lepidopterans
-d2	Schmetterlinge
-d2	Schuppenflügler
 x8	Glossata
 x7	Heteroneura
 x6	Ditrysia
@@ -189,6 +188,10 @@ d2	Großschmetterlinge
 x3	Rhopalocera
 </div><div id="p"><h2 class="EN">"Butterflies"</h2><h2 class="DE">„Tagfalter”</h2>
 x	Papilionoidea
+e2	True Butterflies
+d2	Echte Tagfalter
+sh	Hedyloidea
+sh	Hesperioidea
 r	Espeland'18
 l	A Comprehensive and Dated Phylogenomic Analysis of Butterflies
 p	10.1016/j.cub.2018.01.061
@@ -216,12 +219,10 @@ p	10.1038/s41559-023-02041-9
 r	Zhang'23
 l	Additional taxonomic refinements suggested by genomic analysis of butterflies
 p	10.5281/zenodo.7604053
-e2	True Butterflies
-d2	Echte Tagfalter
-sh	Hedyloidea
-sh	Hesperioidea
 xs	Papilioniformes
 f	Papilionidae
+e2	Swallowtail Butterflies
+d2	Ritterfalter
 r	Simonsen'11
 l	Phylogenetics and divergence times of Papilioninae (Lepidoptera) with special reference to the enigmatic genera Teinopalpus and Meandrusa
 p	10.1111/j.1096-0031.2010.00326.x
@@ -231,21 +232,19 @@ p	10.1111/j.1461-0248.2011.01737.x
 r	Condamine'18
 l	Mitochondrial phylogenomics, the origin of swallowtail butterflies, and the impact of the number of clocks in Bayesian molecular dating
 p	10.1111/syen.12284
-e2	Swallowtail Butterflies
-d2	Ritterfalter
 y	Papilioninae
 e2	Swallowtails
 d2	Schwalbenschwänze
 t	Papilionini
 j	Papilionina
+e2	True Swallowtails
+d2	Echte Schwalbenschwänze
 r	Zakharov'04
 l	Molecular Phylogeny, Historical Biogeography, and Divergence Time Estimates for Swallowtail Butterflies of the Genus Papilio (Lepidoptera: Papilionidae)
 p	10.1080/10635150490423403
 r	Condamine'23
 l	A comprehensive phylogeny and revised taxonomy illuminate the origin and diversification of the global radiation of Papilio (Lepidoptera: Papilionidae)
 p	10.1016/j.ympev.2023.107758
-e2	True Swallowtails
-d2	Echte Schwalbenschwänze
 h	Papilioniti
 g	Alexanoria
 a	alexanor
@@ -261,6 +260,13 @@ i	Papilio
 r2	Dupuis,Sperling'20
 l	Phylogenomic test of mitochondrial clues to archaic ancestors in a group of hybridizing swallowtail butterflies
 p	10.1016/j.ympev.2020.106921
+w	hospitonoides
+s	hospitonoides
+v	hospiton
+v2	machaon
+r2	Nardelli'06
+l	Hybridisierungsversuche zwischen Papilio hospiton Géné, 1839 aus Sardinien und P. machaon Linnaeus, 1758 aus Sizilien (Lepidoptera: Papilionidae)
+p2	0723-9912,27(4)
 o	Indra
 a	indra
 e	Indra Swallowtail
@@ -324,9 +330,6 @@ a	hospiton
 e	Corsican Swallowtail
 d	Korsischer Schwalbenschwanz
 a	polyxenes
-r2	Orellana'09
-l	Description of a new tropical subspecies of the black swallowtail butterfly, Papilio polyxenes (Lepidoptera: Papilionidae) from Venezuela
-p2	0123-3068,13(1)
 e	Black Swallowtail
 e	American Swallowtail
 e	Parsnip Swallowtail
@@ -340,9 +343,13 @@ u	asterius
 u	coloro
 u	costarum
 u	stabilis
+r2	Orellana'09
+l	Description of a new tropical subspecies of the black swallowtail butterfly, Papilio polyxenes (Lepidoptera: Papilionidae) from Venezuela
+p2	0123-3068,13(1)
 a	zelicaon
 e	Anise Swallowtail
 d	Anis-Schwalbenschwanz
+s	nitra
 i	Sinoprinceps
 a	benguetanus
 s	benguelana
@@ -362,6 +369,7 @@ o	Echerioides
 a	echerioides
 e	White-banded Swallowtail
 d	Weißgestreifter Schwalbenschwanz
+s	zoroastres
 u	joiceyi
 a	fuelleborni
 a	jacksoni
@@ -396,7 +404,9 @@ c	chrapkowskoides
 e	Broadly Green-banded Swallowtail
 d	Grüngestreifter Schwalbenschwanz
 s	bromius
+s	brontes
 s	interjecta
+s	magdae
 s	nireus chitondensis
 m	chitondensis
 m	chrapkowskii
@@ -581,6 +591,10 @@ i	Menelaides
 r2	Joshi,Kunte'22
 l	Polytypy and systematics: diversification of Papilio swallowtail butterflies in the biogeographically complex Indo-Australian Region
 p	10.1101/2022.03.23.485569
+w	nubilus
+s	nubilus
+v	nephelus
+v2	polytes
 o	Aegeus
 a	aegeus
 e	Orchard Swallowtail
@@ -733,6 +747,7 @@ e	Great Mormon
 d	Großer Mormone
 s3	memnon
 s	memnon heronus
+s	polymnestoroides
 u	heronus
 a	ascalaphus
 e	Ascalaphus Swallowtail
@@ -831,6 +846,7 @@ d	Kleiner Mormone
 d	Mormonenfalter
 s	javanus
 s	sakontala
+s	walkeri
 u	javanus
 a	protenor
 e	Spangle
@@ -860,11 +876,11 @@ e	Small Citrus Butterfly
 d	Kleiner Obstgarten-Schwalbenschwanz
 s2	Eleppone
 a	natewa
+e	Natewa Swallowtail
+d	Natewa-Schwalbenschwanz
 r	Tennent'18
 l	A remarkable new swallowtail butterfly from Fiji (Lepidoptera, Papilionidae)
 p2	0723-9912,39(2)
-e	Natewa Swallowtail
-d	Natewa-Schwalbenschwanz
 i	Druryia
 o	Antimachus
 a	antimachus
@@ -880,21 +896,24 @@ a	constantinus
 e	Constantine's Swallowtail
 d	Konstantins Schwalbenschwanz
 a	dardanus
-r	Thompson'11
-l	Hybrid Origins: DNA Techniques Confirm that Papilio nandina is a Species Hybrid (Papilionidae)
-p	10.18473/lepi.v65i3.a11
 e	African Swallowtail
 e	Mocker Swallowtail
 e	Flying Handkerchief
 d	Afrikanischer Schwalbenschwanz
 d	Schein-Schwalbenschwanz
-s	nandina
 a	humbloti
 s	dardanus humblodti
 s3	dardanus
 s	humblodti
 a	meriones
 s3	dardanus
+w	nandina
+s	nandina
+v	dardanus
+v2	phorcas
+r	Thompson'11
+l	Hybrid Origins: DNA Techniques Confirm that Papilio nandina is a Species Hybrid (Papilionidae)
+p	10.18473/lepi.v65i3.a11
 a	phorcas
 e	Apple-green Swallowtail
 d	Apfelgrüner Schwalbenschwanz
@@ -986,13 +1005,19 @@ e	Spicebush Swallowtail
 d	Fieberstrauch-Schwalbenschwanz
 s2	Papilio
 i	Jasoniades
-a	appalachiensis
+w	appalachiensis
+e	Appalachian Tiger Swallowtail
+d	Appalachen-Tigerschwalbenschwanz
+s4	Papilio appalachiensis
+s	appalachiensis
+v	canadensis
+v2	glaucus
 r2	Pavulaan,Wright'02
 l	Pterourus appalachiensis (Papilionidae: Papilioninae), a new swallowtail from the Appalachian region of the United States
 p2	2643-4776,3(7)
-e	Appalachian Tiger Swallowtail
-d	Appalachen-Tigerschwalbenschwanz
-s2	Papilio
+r	Kunte'11
+l	Sex Chromosome Mosaicism and Hybrid Speciation among Tiger Swallowtail Butterflies
+p	10.1371/journal.pgen.1002274
 a	canadensis
 e	Canadian Tiger Swallowtail
 e	Northern Tiger Swallowtail
@@ -1065,6 +1090,9 @@ e	Victorine Swallowtail
 e	Crimson-spotted Swallowtail
 e	Menatius Swallowtail
 d	Victorinus-Schwalbenschwanz
+s4	Papilio aristeus
+s4	Papilio diazi
+s4	Papilio judicael
 s2	Papilio
 s4	Papilio victorinus
 m	cleotas
@@ -1145,12 +1173,12 @@ d	Kubanischer Königs-Schwalbenschwanz
 s2	Papilio
 s4	Papilio thoas oviedo
 a	rumiko
-r	Shiraiwa'14
-l	A new Heraclides swallowtail (Lepidoptera, Papilionidae) from North America is recognized by the pattern on its neck
-p	10.3897/zookeys.468.8565
 e	Western Giant Swallowtail
 d	Westlicher Riesenschwalbenschwanz
 s2	Papilio
+r	Shiraiwa'14
+l	A new Heraclides swallowtail (Lepidoptera, Papilionidae) from North America is recognized by the pattern on its neck
+p	10.3897/zookeys.468.8565
 a	thoas
 e	King Swallowtail
 e	Thoas Swallowtail
@@ -1227,6 +1255,7 @@ a	torquatus
 e	Torquatus Swallowtail
 e	Band-gapped Swallowtail
 d	Torquatus-Schwalbenschwanz
+s4	Papilio tasso
 s2	Papilio
 i	Priamides
 o	Anchisiades
@@ -1286,18 +1315,24 @@ s	gyas
 s	hercules
 s	lachinus
 t	Troidini
+e2	Birdwing-like Swallowtails
+d2	Vogelflüglerartige
 r2	Hancock'07
 l	Phylogeny of the troidine butterflies (Lepidoptera: Papilionidae) revisited - are the red-bodied swallowtails monophyletic?
 p2	1320-6133,34(2)
-e2	Birdwing-like Swallowtails
-d2	Vogelflüglerartige
 j	Troidina
+e2	Birdwings
+d2	Vogelflügler
 r	Condamine'15
 l	Deciphering the evolution of birdwing butterflies 150 years after Alfred Russel Wallace
 p	10.1038/srep11860
-e2	Birdwings
-d2	Vogelflügler
 g	Ornithoptera
+w	allotei
+e	Malaita Birdwing
+d	Malaita-Vogelflügler
+s	allotei
+v	priamus
+v2	victoriae
 i	Ornithoptera
 a	priamus
 e	Common Green Birdwing
@@ -2042,12 +2077,6 @@ a	sandawanum
 e	Apo Bluebottle
 d	Apo-Kolibrifalter
 c	sarpedon
-r2	Page,Treadaway'13
-l	Speciation in Graphium sarpedon (Linnaeus) and allies (Lepidoptera: Rhopalocera: Papilionidae)
-p2	0341-0145,6
-r	Cotton'22
-l	Graphium septentrionicolus Page & Treadaway, 2013 (Lepidoptera: Papilionidae) is a distinct species
-p	10.11646/zootaxa.5154.2.6
 e	Common Bluebottle
 e	Blue Triangle
 d	Kolibrifalter
@@ -2063,6 +2092,12 @@ m	monticolus
 m	sarpedon
 m	septentrionicolus
 m	teredon
+r2	Page,Treadaway'13
+l	Speciation in Graphium sarpedon (Linnaeus) and allies (Lepidoptera: Rhopalocera: Papilionidae)
+p2	0341-0145,6
+r	Cotton'22
+l	Graphium septentrionicolus Page & Treadaway, 2013 (Lepidoptera: Papilionidae) is a distinct species
+p	10.11646/zootaxa.5154.2.6
 o	Wallacei
 a	browni
 a	hicetaon
@@ -2268,17 +2303,17 @@ m	tamerlana
 m	timur
 g	Iphiclides
 a	feisthamelii
+e	Southern Scarce Swallowtail
+e	Iberian Scarce Swallowtail
+d	Iberischer Segelfalter
+s	feisthameli
+s3	podalirius
 r2	Wiemers,Gottsberger'10
 l	Discordant patterns of mitochondrial and nuclear differentiation in the Scarce Swallowtail Iphiclides podalirius feisthamelii (Duponchel, 1832) (Lepidoptera: Papilionidae)
 p2	0013-8843,120(3)
 r	Gaunet'19
 l	Two consecutive Wolbachia-mediated mitochondrial introgressions obscure taxonomy in Palearctic swallowtail butterflies (Lepidoptera, Papilionidae)
 p	10.1111/zsc.12355
-e	Southern Scarce Swallowtail
-e	Iberian Scarce Swallowtail
-d	Iberischer Segelfalter
-s	feisthameli
-s3	podalirius
 a	podalirinus
 e	Chinese Scarce Swallowtail
 d	Chinesischer Segelfalter
@@ -2305,15 +2340,15 @@ a	leosthenes
 e	Australian Swordtail
 d	Australischer Schwertschwanz
 y	Parnassiinae
+e2	Apollo Butterflies
+e2	Parnassians
+d2	Apollofalter
 r2	Sperling,Nazari'07
 l	Mitochondrial DNA divergence and phylogeography in western Palaearctic Parnassiinae (Lepidoptera: Papilionidae): How many species are there?
 p	10.1163/187631207788783996
 r	Omoto'09
 l	Molecular systematics and evolution of the recently discovered "Parnassian" butterfly (Parnassius davydovi Churkin, 2006) and its allied species (Lepidoptera, Papilionidae)
 p	10.1016/j.gene.2008.10.030
-e2	Apollo Butterflies
-e2	Parnassians
-d2	Apollofalter
 t	Parnassiini
 e2	Apollos
 d2	Apollos
@@ -2445,14 +2480,14 @@ s	stubbendorfii
 t	Luehdorfiini
 g	Archon
 c	apollinus
-r2	De Freina,Naderi'03
-l	Beschreibung einer neuen Unterart von Archon apollinaris (Staudinger, [1892]) aus dem südwestlichen Zentral-Zagros, bostanchii subspec. nov., mit ergänzenden Angaben zur Gesamtverbreitung der Art
-p2	0171-0079,34(3/4)
 e	False Apollo
 d	Falscher Apollo
 m	apollinaris
 m	apollinus
 m	bostanchii
+r2	De Freina,Naderi'03
+l	Beschreibung einer neuen Unterart von Archon apollinaris (Staudinger, [1892]) aus dem südwestlichen Zentral-Zagros, bostanchii subspec. nov., mit ergänzenden Angaben zur Gesamtverbreitung der Art
+p2	0171-0079,34(3/4)
 g	Luehdorfia
 a	chinensis
 e	Chinese Luehdorfia
@@ -2521,14 +2556,16 @@ a	brevicornis
 e	Short-horned Baronia
 xs	Hesperiiformes
 f	Hesperiidae
+e2	Skippers
+d2	Dickkopffalter
+sh	Hesperidae
 r	Li'19
 l	Genomes of skipper butterflies reveal extensive convergence of wing patterns
 p	10.1073/pnas.1821304116
-e2	Skippers
-d2	Dickkopffalter
 y	Hesperiinae
 e2	Grass Skippers
 d2	Echte Dickkopffalter
+sh	Hesperinae
 t	Hesperiini
 e2	Branded Grass Skippers
 j	Hesperiina
@@ -3222,9 +3259,6 @@ d	Gelbrand-Riesendickkopffalter
 a	itea
 g	Perichares
 c	philetes
-r	Burns'08
-l	DNA barcodes and cryptic species of skipper butterflies in the genus Perichares in Area de Conservación Guanacaste, Costa Rica
-p	10.1073/pnas.071218110
 e	Green-backed Ruby-eye
 d	Südamerikanischer Riesendickkopffalter
 s	philetes adela
@@ -3233,6 +3267,9 @@ m	geonomaphaga
 m	philetes
 m	poaceaphaga
 m	prestoeaphaga
+r	Burns'08
+l	DNA barcodes and cryptic species of skipper butterflies in the genus Perichares in Area de Conservación Guanacaste, Costa Rica
+p	10.1073/pnas.071218110
 t	Baorini
 g	Afrogegenes
 a	letterstedti
@@ -3697,6 +3734,7 @@ e	White Spurwing
 a	erosus
 e	Common Spurwing
 e	Dusted Spurwing
+d	Blattflügel-Dickkopffalter
 a	funebris
 e	West-Mexican Spurwing
 s2	Systaspes
@@ -4264,14 +4302,14 @@ a	aberrans
 a	sompa
 a	zelotes
 t	Pyrrhopygini
-r	Zhang'19
-l	Genomes reveal drastic and recurrent phenotypic divergence in firetip skipper butterflies (Hesperiidae: Pyrrhopyginae)
-p	10.1098/rspb.2019.0609
 e2	Firetips
 e2	Firetail Skippers
 e2	Firetails
 d2	Feuerschwänze
 sh	Pyrrhopyginae
+r	Zhang'19
+l	Genomes reveal drastic and recurrent phenotypic divergence in firetip skipper butterflies (Hesperiidae: Pyrrhopyginae)
+p	10.1098/rspb.2019.0609
 j	Pyrrhopygina
 h	Pyrrhopygiti
 g	Gunayan
@@ -5558,11 +5596,11 @@ e	Pied Policeman
 d	Madagassische Ahle
 d	Schwarzweiße Malagasy-Ahle
 f	Hedylidae
+e2	American Moth Butterflies
+d2	Neuwelt-Trugfalter
 r	Kawahara'18
 l	Phylogenetics of moth-like butterflies (Papilionoidea: Hedylidae) based on a new 13-locus target capture probe set
 p	10.1016/j.ympev.2018.06.002
-e2	American Moth Butterflies
-d2	Neuwelt-Trugfalter
 g	Macrosoma
 a	albida
 e	White Moth Butterfly
@@ -5578,7 +5616,7 @@ e	Black Moth Butterfly
 d	Schwarzer Trugfalter
 a	rubedinaria
 e	Leafwing Moth Butterfly
-d	Blattflügel-Trufalter
+d	Blattflügel-Trugfalter
 a	tipulata
 e	Greyish-white Moth Butterfly
 e	Cupuaçu Defoliator
@@ -5586,6 +5624,8 @@ d	Grauweißer Trugfalter
 d	Cupuaçufalter
 xs	Pieriformes
 f	Pieridae
+e2	Whites
+d2	Weißlinge
 r	Braby'06
 l	Molecular phylogeny and systematics of the Pieridae (Lepidoptera: Papilionoidea): higher classification and biogeography
 p	10.1111/j.1096-3642.2006.00218.x
@@ -5598,8 +5638,6 @@ p	10.1111/ele.13842
 r	Wei'23
 l	Spatio-Temporal Evolutionary Patterns of the Pieridae Butterflies (Lepidoptera: Papilionoidea) Inferred from Mitogenomic Data
 p	10.3390/genes14010072
-e2	Whites
-d2	Weißlinge
 y	Pierinae
 e2	True Whites
 d2	Echte Weißlinge
@@ -6388,9 +6426,6 @@ a	lanceolata
 e	Gray Marble
 d	Grauer Aurorafalter
 c	sara
-r2	Stout'18
-l	A review of three species-level taxa of the Anthocharis sara complex (Lepidoptera: Pieridae: Pierinae: Anthocharidini)
-p	10.5281/zenodo.3699337
 e	Sara Orange-tip
 e	Pacific Orange-tio
 e	Western Orange-tip
@@ -6401,6 +6436,9 @@ s	sara thoosa
 m	julia
 m	sara
 m	thoosa
+r2	Stout'18
+l	A review of three species-level taxa of the Anthocharis sara complex (Lepidoptera: Pieridae: Pierinae: Anthocharidini)
+p	10.5281/zenodo.3699337
 a	thibetana
 e	Tibetan Orange-tip
 d	Tibetischer Aurorafalter
@@ -7179,15 +7217,15 @@ g	Enantia
 a	citrinella
 a	clarissa
 c	jethys
-r	Jasso-Martínez'16
-l	The Enantia Jethys Complex: Insights from COI Confirm the Species Complex and Reveal a New Potential Cryptic Species
-p	10.3958/059.041.0401
 e	Jethys Mimic-White
 e	Bold Mimic-White
 d	Gelber Mimenweißling
 m	albania
 m	jethys
 m	mazai
+r	Jasso-Martínez'16
+l	The Enantia Jethys Complex: Insights from COI Confirm the Species Complex and Reveal a New Potential Cryptic Species
+p	10.3958/059.041.0401
 a	limnorina
 a	lina
 e	White Mimic-White
@@ -7239,18 +7277,21 @@ m	gola
 m	mabira
 m	paradoxa
 m	zambesi
+r	Mitter'10
+l	The butterfly subfamily Pseudopontiinae is not monobasic: marked genetic diversity and morphology reveal three new species of Pseudopontia (Lepidoptera: Pieridae)
+p	10.1111/j.1365-3113.2010.00549.x
 xs	Nymphaliformes
 f	Nymphalidae
+e2	Brush-footed Butterflies
+d2	Edelfalter
 r	Wahlberg'09
 l	Nymphalid butterflies diversify following near demise at the Cretaceous/Tertiary boundary
 p	10.1098/rspb.2009.1303
-e2	Brush-footed Butterflies
-d2	Edelfalter
 y	Nymphalinae
+d2	Fleckenfalter
 r	Su'17
 l	Dated phylogeny and dispersal history of the butterfly subfamily Nymphalinae (Lepidoptera: Nymphalidae)
 p	10.1038/s41598-017-08993-w
-d2	Fleckenfalter
 t	Nymphalini
 j	Nymphalina
 g	Antanartia
@@ -7620,20 +7661,33 @@ d	Jackson's Blattfalter
 s2	Kallima
 t	Victorinini
 g	Anartia
+r	Blum'03
+l	A molecular phylogeny of the neotropical butterfly genus Anartia (Lepidoptera: Nymphalidae)
+p	10.1016/S1055-7903(02)00291-9
+i	Anartia
 a	amathea
 e	Red Anartia
 e	Red Peacock
 e	Coolie
 d	Rote Anartia
-a	chrysopelea
-e	Cuban Peacock
-d	Kubanische Anartia
+w	blumi
+e	Blum's Hybrid Peacock
+d	Blum's Hybrid-Anartia
+v	amathea
+v2	fatima
+r	Dasmahapatra'02
+l	Inferences from a rapidly moving hybrid zone
+p	10.1111/j.0014-3820.2002.tb01385.x
 a	fatima
 e	Banded Peacock
 d	Schwarze Anartia
 a	jatrophae
 e	White Peacock
 d	Weiße Anartia
+i	Anartiella
+a	chrysopelea
+e	Cuban Peacock
+d	Kubanische Anartia
 a	lytrea
 e	Godart's Peacock
 d	Godart's Anartia
@@ -8467,14 +8521,14 @@ a	zerynthia
 e	Waiter Daggerwing
 d	Dunkler Dolchschwanz
 y	Apaturinae
+e2	Emperors
+d2	Schillerfalter
 r	Zhang'07
 l	Phylogeny of Apaturinae Butterflies (Lepidoptera: Nymphalidae) Based on Mitochondrial Cytochrome Oxidase I Gene
 p	10.1016/S1673-8527(07)60092-7
 r	Ohshima'10
 l	Phylogeny, biogeography, and host-plant association in the subfamily Apaturinae (Insecta: Lepidoptera: Nymphalidae) inferred from eight nuclear and seven mitochondrial genes
 p	10.1016/j.ympev.2010.09.018
-e2	Emperors
-d2	Schillerfalter
 t	Apaturini
 g	Apatura
 a	ilia
@@ -8702,6 +8756,7 @@ d	Weißbindiger Pfeifer
 g	Laringa
 a	castelnaui
 e	Common Dandy
+e	Blue Dandy
 d	Gewöhnlicher Dandy
 a	horsfieldii
 e	Banded Dandy
@@ -9157,11 +9212,11 @@ a	tithia
 e	Blue Sailor
 d	Blauer Matrose
 t	Callicorini
+e2	Eighty-eights
+d2	Achtundachtzigen
 r	Freitas'14
 l	Paulogramma hydarnis (n. comb.) (Nymphalidae: Biblidinae): Distribution, Systematic Position, and Conservation Status of a Rare and Endangered Butterfly
 p	10.1007/s13744-014-0200-6
-e2	Eighty-eights
-d2	Achtundachtzigen
 g	Callicore
 i	Callicore
 a	astarte
@@ -9535,13 +9590,13 @@ a	nicea
 e	Popinjay
 d	Lackaffe
 y	Limenitidinae
+d2	Eisvögel
 r2	Dhungel,Wahlberg'18
 l	Molecular systematics of the subfamily Limenitidinae (Lepidoptera: Nymphalidae)
 p	10.7717/peerj.4311
 r	Tseng'22
 l	Out of Asia: Intercontinental dispersals after the Eocene-Oligocene transition shaped the zoogeography of Limenitidinae butterflies (Lepidoptera: Nymphalidae)
 p	10.1016/j.ympev.2022.107444
-d2	Eisvögel
 t	Limenitidini
 r	Wu'18
 l	Unravelling relationships among the shared stripes of sailors: mitogenomic phylogeny of Limenitidini butterflies (Lepidoptera, Nymphalidae, Limenitidinae), focusing on the genera Athyma and Limenitis
@@ -11023,9 +11078,6 @@ a	opis
 e	Brillant Nymph
 d	Brillant-Nymphe
 g	Euriphene
-r	Wahlberg'20
-l	The phylogenetic positions of Bhagadatta Moore, 1898, Kumothales Overlaet, 1940 and Harmilla Aurivillius, 1892 (Lepidoptera, Nymphalidae, Limenitidinae) based on molecular data
-p	10.3897/nl.43.50307
 i	Euriphene
 o	Atossa
 a	ampedusa
@@ -11044,13 +11096,16 @@ e	Minke's Nymph
 a	romi
 e	Congo Green Nymph
 o	Elegans
+r	Wahlberg'20
+l	The phylogenetic positions of Bhagadatta Moore, 1898, Kumothales Overlaet, 1940 and Harmilla Aurivillius, 1892 (Lepidoptera, Nymphalidae, Limenitidinae) based on molecular data
+p	10.3897/nl.43.50307
 a	elegans
 e	Elegant Nymph
 d	Elegante Nymphe
 s2	Harmilla
 a	hawkeri
 e	Congo Elegant Nymph
-d	Kongo-Nymphe
+d	Kongonymphe
 s3	elegans
 s2	Harmilla elegans
 s2	Harmilla
@@ -11061,7 +11116,7 @@ d	Gambische Nymphe
 o	Veronica
 c	amaranta
 e	Kinshasa Nymph
-d	Kinshasa Nymph
+d	Kinshasa-Nymphe
 s	ernestibaumanni obsoleta
 s	ernestibaumanni rectangulata
 m	alberici
@@ -11207,9 +11262,6 @@ s2	Limenitis
 g	Cymothoe
 i	Cymothoe
 c	caenis
-r	Van Velzen'09
-l	A new hidden species of the Cymothoe caenis-complex (Lepidoptera: Nymphalidae) from western Africa
-p	10.5281/zenodo.189523
 e	Common White Glider
 d	Weißer Segler
 m	althea
@@ -11224,6 +11276,9 @@ m	consanguis
 m	eris
 m	howarthi
 m	isiro
+r	Van Velzen'09
+l	A new hidden species of the Cymothoe caenis-complex (Lepidoptera: Nymphalidae) from western Africa
+p	10.5281/zenodo.189523
 a	lambertoni
 e	Malagasy Glider
 d	Madagassischer Segler
@@ -11239,9 +11294,6 @@ a	alcimeda
 e	Battling Glider
 d	Kampfsegler
 c	aurivillii
-r	Van Velzen'16
-l	Description of a new Cymothoe Hübner, 1819 from northern Mozambique (Lepidoptera: Nymphalidae: Limenitidinae)
-p2	1018-6409,27
 e	Montane Battling Glider
 d	Bergsegler
 m	aurivillii
@@ -11255,6 +11307,9 @@ m	poppyana
 m	teita
 m	vumbui
 m	zombana
+r	Van Velzen'16
+l	Description of a new Cymothoe Hübner, 1819 from northern Mozambique (Lepidoptera: Nymphalidae: Limenitidinae)
+p2	1018-6409,27
 a	indamora
 e	Indamora Glider
 d	Indamora-Segler
@@ -11405,6 +11460,9 @@ sh	Heliconidae
 sh	Heliconiidae
 sh	Heliconinae
 t	Heliconiini
+e2	Passion Butterflies
+d2	Passionsfalter
+sh	Heliconini
 r	Beltrán'02
 l	Phylogenetic Discordance at the Species Boundary: Comparative Gene Genealogies Among Rapidly Radiating Heliconius Butterflies
 p	10.1093/oxfordjournals.molbev.a004042
@@ -11417,9 +11475,6 @@ p	10.1016/j.ympev.2014.09.018
 r	Kozak'15
 l	Multilocus Species Trees Show the Recent Adaptive Radiation of the Mimetic Heliconius Butterflies
 p	10.1093/sysbio/syv007
-e2	Passion Butterflies
-d2	Passionsfalter
-sh	Heliconini
 j	Heliconiina
 g	Eueides
 a	aliphera
@@ -11505,6 +11560,7 @@ u	amazona
 u	chestertonii
 u	cruentus
 u	cyrbia
+u	erato
 u	hydara
 u	lativitta
 u	luscombei
@@ -11521,6 +11577,9 @@ u	octavia
 a	hermathena
 e	Amazon Longwing
 d	Amazonas-Passionsfalter
+r	Massardo'20
+l	The roles of hybridization and habitat fragmentation in the evolution of Brazil’s enigmatic longwing butterflies, Heliconius nattereri and H. hermathena
+p	10.1186/s12915-020-00797-1
 a	himera
 e	Himera Longwing
 d	Anden-Passionsfalter
@@ -11608,11 +11667,21 @@ o	Melpomene
 a	cydno
 e	Cydno Longwing
 d	Blauer Passionsfalter
+u	cordula
 u	cydnides
 u	galanthus
-a	heurippa
+w	heurippa
 e	Colombian Hybrid Longwing
 d	Kolumbianischer Hybrid-Passionsfalter
+s	heurippa
+v	cydno cordula
+v2	melpomene melpomene
+r	Salazar'04
+l	Hybrid incompatibility is consistent with a hybrid origin of Heliconius heurippa Hewitson from its close relatives, Heliconius cydno Doubleday and Heliconius melpomene Linnaeus
+p	10.1111/j.1420-9101.2004.00839.x
+r	Mavárez'06
+l	Speciation by hybridization in Heliconius butterflies
+p	10.1038/nature04738
 a	melpomene
 e	Postman Butterfly
 e	Common Postman
@@ -11623,6 +11692,7 @@ u	aglaope
 u	cythera
 u	flagrans
 u	malleti
+u	melpomene
 u	plesseni
 u	rosina
 a	pachinus
@@ -11631,6 +11701,12 @@ d	Pachinus-Passionsfalter
 a	timareta
 e	Ecuadorian Postman
 d	Ecuadorianischer Kurier
+s	tristero
+u	thelxinoe
+u	tristero
+r	Mérot'13
+l	Genetic differentiation without mimicry shift in a pair of hybridizing Heliconius species (Lepidoptera: Nymphalidae)
+p	10.1111/bij.12091
 o	Wallacei
 a	burneyi
 e	Burney's Longwing
@@ -11657,9 +11733,6 @@ d	Juliafalter
 s	julia
 g	Philaethria
 c	dido
-r2	Constantino,Salazar'10
-l	A review of the Philaethria dido species complex (Lepidoptera: Nymphalidae: Heliconiinae) and description of three new sibling species from Colombia and Venezuela
-p	10.11646/zootaxa.2720.1.1
 e	Dido Longwing
 e	Green Longwing
 d	Pracht-Passionsfalter
@@ -11673,6 +11746,9 @@ m	ostara
 m	pygmalion
 m	romeroi
 m	wernickei
+r2	Constantino,Salazar'10
+l	A review of the Philaethria dido species complex (Lepidoptera: Nymphalidae: Heliconiinae) and description of three new sibling species from Colombia and Venezuela
+p	10.11646/zootaxa.2720.1.1
 g	Podotricha
 a	judith
 a	telesiphe
@@ -11694,10 +11770,10 @@ e	Mexican Silverspot
 d	Mexikanische Silberflamme
 i	Agraulis
 a	dodona
+s2	Agraulis
 r	Farfán'22
 l	A peculiar new species of Dione (Agraulis) Boisduval & Le Conte (Lepidoptera, Nymphalidae, Heliconiinae) associated with Malesherbia Ruiz & Pavón (Passifloraceae) in xeric western slopes of the Andes
 p	10.3897/zookeys.1113.85769
-s2	Agraulis
 c	vanillae
 e	Gulf Fritillary
 d	Golf-Perlmutterfalter
@@ -11712,6 +11788,10 @@ m	lucina
 m	maculosa
 m	vanillae
 t	Acraeini
+e2	Acraeas
+d2	Acräen
+sh	Acraeidae
+sh	Acraeinae
 r	Silva-Brandão'08
 l	Phylogenetic relationships of butterflies of the tribe Acraeini (Lepidoptera, Nymphalidae, Heliconiinae) and the evolution of host plant use
 p	10.1016/j.ympev.2007.11.024
@@ -11724,10 +11804,6 @@ p	10.1093/sysbio/syaa070
 r2	Williams,Henning'23
 l	Taxonomic revision of the tribe Acraeini Boisduval, 1833 (Papilionoidea: Nymphalidae: Heliconiinae)
 p	10.4314/met.v34i1.4
-e2	Acraeas
-d2	Acräen
-sh	Acraeidae
-sh	Acraeinae
 j	Acraeina
 g	Acraea
 i	Acraea
@@ -12726,6 +12802,8 @@ d	Rogers' Acräa
 s2	Acraea
 s2	Stephenia
 t	Vagrantini
+e2	Yeomen and Rustics
+d2	Flatterlinge und Kreuzer
 g	Algia
 a	fasciata
 e	Little Banded Yeoman
@@ -12822,11 +12900,11 @@ a	erota
 e	Common Cruiser
 d	Gewöhnlicher Kreuzer
 t	Argynnini
+e2	Fritillaries
+d2	Perlmutterfalter
 r	Simonsen'06
 l	Morphology, molecules and fritillaries: Approaching a stable phylogeny for Argynnini (Lepidoptera: Nymphalidae)
 p	10.1163/187631206788831407
-e2	Fritillaries
-d2	Perlmutterfalter
 j	Argynnina
 g	Argynnis
 i	Argynnis
@@ -13150,12 +13228,12 @@ d	Südindischer Netzflügler
 s	mahratta
 u	mahratta
 y	Satyrinae
-r	Peña'06
-l	Higher level phylogeny of Satyrinae butterflies (Lepidoptera: Nymphalidae) based on DNA sequence data
-p	10.1016/j.ympev.2006.02.007
 e2	Satyrs
 d2	Augenfalter
 sh	Satyridae
+r	Peña'06
+l	Higher level phylogeny of Satyrinae butterflies (Lepidoptera: Nymphalidae) based on DNA sequence data
+p	10.1016/j.ympev.2006.02.007
 t	Satyrini
 j	Satyrina
 h	Satyriti
@@ -13797,9 +13875,6 @@ d	Amur-Mohrenfalter
 g	Maniola
 i	Maniola
 c	jurtina
-r	Kreuzinger'14
-l	Tracing the radiation of Maniola (Nymphalidae) butterflies: new insights from phylogeography hint at one single incompletely differentiated species complex
-p	10.1002/ece3.1338
 e	Meadow Brown
 d	Großes Ochsenauge
 m	chia
@@ -13809,6 +13884,9 @@ m	jurtina
 m	megala
 m	nurag
 m	telmessia
+r	Kreuzinger'14
+l	Tracing the radiation of Maniola (Nymphalidae) butterflies: new insights from phylogeography hint at one single incompletely differentiated species complex
+p	10.1002/ece3.1338
 i	Pyronia
 a	janiroides
 e	False Meadow Brown
@@ -14949,15 +15027,15 @@ g	Pseudeuptychia
 h	Splendeuptychiiti
 g	Caeruleuptychia
 c	aegrota
-r	Nakahara'18
-l	Remarkable sexual dimorphism, rarity and cryptic species: a revision of the 'aegrota species group' of the Neotropical butterfly genus Caeruleuptychia Forster, 1964 with the description of three new species (Lepidoptera, Nymphalidae, Satyrinae)
-p	10.1163/1876312X-00002167
 m	aegrota
 m	aetherialis
 m	helios
 m	maryzenderae
 m	scripta
 m	trembathi
+r	Nakahara'18
+l	Remarkable sexual dimorphism, rarity and cryptic species: a revision of the 'aegrota species group' of the Neotropical butterfly genus Caeruleuptychia Forster, 1964 with the description of three new species (Lepidoptera, Nymphalidae, Satyrinae)
+p	10.1163/1876312X-00002167
 a	coelestis
 a	twalela
 a	urania
@@ -15041,6 +15119,9 @@ g	Pseudodebis
 a	valentina
 a	ypthima
 g	Sepona
+a	punctata
+s4	Euptychia griseola
+s4	Taygetis indecisa
 r	Freitas'16
 l	'Species' from two different butterfly genera combined into one: description of a new genus of Euptychiina (Nymphalidae: Satyrinae) with unusually variable wing pattern
 p	10.1016/j.rbe.2016.01.004
@@ -15424,11 +15505,11 @@ a	gerdrudtus
 e	False Antirrhea
 d	Blattflügel-Morpho
 t	Brassolini
+sh	Brassolidae
+sh	Brassolinae
 r	Matos-Maraví'21
 l	Mesoamerica is a cradle and the Atlantic Forest is a museum of Neotropical butterfly diversity: insights from the evolution and biogeography of Brassolini (Lepidoptera: Nymphalidae)
 p	10.1093/biolinnean/blab034
-sh	Brassolidae
-sh	Brassolinae
 j	Brassolina
 g	Blepolensis
 a	batea
@@ -15556,12 +15637,12 @@ r	Chacón'12
 l	A new species of Opsiphanes Doubleday [1849] from Costa Rica (Nymphalidae: Morphinae: Brassolini), as revealed by its DNA barcodes and habitus
 p2	0097-3211,166
 a	blythekitzmillerae
-r	Austin'07
-l	A new species of Opsiphanes Doubleday, [1849] from western Mexico (Nymphalidae: Morphinae: Brassolini)
-p2	0097-3211,150
 e	Minerva's Owlet
 e	Sonoran Owlet
 d	Minervas Palmenfalter
+r	Austin'07
+l	A new species of Opsiphanes Doubleday, [1849] from western Mexico (Nymphalidae: Morphinae: Brassolini)
+p2	0097-3211,150
 a	boisduvallii
 e	Orange Owlet
 d	Oranger Palmenfalter
@@ -15925,6 +16006,8 @@ y	Charaxinae
 e2	Leafwings
 d2	Blattflügler
 t	Charaxini
+e2	Charaxes
+d2	Charaxes
 g	Charaxes
 r	Aduse-Poku'09
 l	Out-of-Africa again: A phylogenetic hypothesis of the genus Charaxes (Lepidoptera: Nymphalidae) based on five gene regions
@@ -16510,6 +16593,8 @@ a	franck
 e	Blue Begum
 d	Blaue Begum
 t	Anaeini
+e2	New World Leafwings
+d2	Neuwelt-Blattflügler
 r	Toussaint'19
 l	Flight over the Proto-Caribbean seaway: Phylogeny and macroevolution of Neotropical Anaeini leafwing butterflies
 p	10.1016/j.ympev.2019.04.020
@@ -16779,6 +16864,8 @@ j	Anaeomorphina
 g	Anaeomorpha
 a	splendida
 t	Preponini
+e2	Preponas
+d2	Preponas
 r2	Ortiz-Acevedo,Willmott'13
 l	Molecular systematics of the butterfly tribe Preponini (Nymphalidae: Charaxinae)
 p	10.1111/syen.12008
@@ -16848,10 +16935,17 @@ d	Veränderliche Agrias
 s2	Agrias
 s2	Agrias narcissus
 s	narcissus
+u	lugens
 u	narcissus
 a	hewitsonius
 s2	Agrias
 a	praeneste
+u	abrupta
+u	buckleyana
+w	sarunami
+s	sarunami
+v	claudina lugens
+v2	praeneste abrupta
 o	Deiphile
 a	deiphile
 e	Orange-spotted Prepona
@@ -16872,9 +16966,6 @@ e2	Freaks
 d2	Sonderlinge
 g	Calinaga
 c	buddha
-r	Todisco'17
-l	Preliminary molecular phylogeny and biogeography of the monobasic subfamily Calinaginae (Lepidoptera, Nymphalidae)
-p	10.3897/zse.93.10744
 e	Freak
 d	Orangemarkierter Sonderling
 m	aborica
@@ -16889,17 +16980,20 @@ m	gautama
 m	genesteri
 m	lhatso
 m	sudassana
+r	Todisco'17
+l	Preliminary molecular phylogeny and biogeography of the monobasic subfamily Calinaginae (Lepidoptera, Nymphalidae)
+p	10.3897/zse.93.10744
 y	Danainae
 e2	Danaids
 d2	Danaiden
 sh	Danaidae
 t	Danaini
-r	Brower'10
-l	Phylogenetic relationships among genera of danaine butterflies (Lepidoptera: Nymphalidae) as implied by morphology and DNA sequences
-p	10.1080/14772001003626814
 e2	Tigers
 e2	Milkweed Butterflies
 d2	Tiger
+r	Brower'10
+l	Phylogenetic relationships among genera of danaine butterflies (Lepidoptera: Nymphalidae) as implied by morphology and DNA sequences
+p	10.1080/14772001003626814
 j	Danaina
 g	Danaus
 r	Lushai'03
@@ -17237,6 +17331,13 @@ a	zoilus
 e	Hamadryad
 d	Dryadenfalter
 t	Ithomiini
+e2	Clearwing Butterflies
+e2	Glasswing Butterflies
+d2	Glasflügelfalter
+sh	Ithomidae
+sh	Ithomiidae
+sh	Ithomiinae
+sh	Ithominae
 r	Brower'06
 l	Phylogenetic relationships among the Ithomiini (Lepidoptera: Nymphalidae) inferred from one mitochondrial and two nuclear gene regions
 p	10.1111/j.1365-3113.2005.00321.x
@@ -17246,13 +17347,6 @@ p	10.1111/j.1096-0031.2006.00108.x
 r	Brower'14
 l	Phylogenetic relationships of ithomiine butterflies (Lepidoptera: Nymphalidae: Danainae) as implied by combined morphological and molecular data
 p	10.1080/14772000.2014.899650
-e2	Clearwing Butterflies
-e2	Glasswing Butterflies
-d2	Glasflügelfalter
-sh	Ithomidae
-sh	Ithomiidae
-sh	Ithomiinae
-sh	Ithominae
 j	Ithomiina
 h	Ithomiiti
 g	Ithomia
@@ -17588,14 +17682,14 @@ d	Amerikanischer Schnauzenfalter
 s	bachmanii
 u	bachmanii
 f	Riodinidae
+e2	Metalmark Butterflies
+d2	Würfelfalter
 r	Espeland'15
 l	Ancient Neotropical origin and recent recolonisation: Phylogeny, biogeography and diversification of the Riodinidae (Lepidoptera: Papilionoidea)
 p	10.1016/j.ympev.2015.08.006
 r	Seraphim'18
 l	Molecular phylogeny and higher systematics of the metalmark butterflies (Lepidoptera: Riodinidae)
 p	10.1111/syen.12282
-e2	Metalmark Butterflies
-d2	Würfelfalter
 y	Riodininae
 e2	True Metalmarks
 d2	Prachtfalter
@@ -19165,11 +19259,11 @@ a	castanea
 s2	Callistium
 a	tenellus
 t	Eurybiini
+e2	Underleaf Butterflies
+d2	Blatthocker
 r	Rosa'23
 l	Eucorna sanarita (Schaus) (Riodinidae: Riodininae): Distribution, systematic position, and conservation of a threatened brazilian butterfly in the Atlantic Forest biodiversity hotspot
 p	10.1007/s10841-022-00435-x
-e2	Underleaf Butterflies
-d2	Blatthocker
 j	Eurybiina
 g	Alesa
 a	amesis
@@ -21216,6 +21310,12 @@ g	Trichonis
 j	Callophryidina
 h	Callophryiditi
 g	Callophrys
+w	austrosibirica
+v	frivaldszkyi
+v2	rubi
+r	Shapoval'21
+l	Identification of Natural Hybrids between Ahlbergia frivaldszkyi (Lederer, 1853) and Callophrys rubi (Linnaeus, 1758) (Lepidoptera, Lycaenidae) Using Mitochondrial and Nuclear Markers
+p	10.3390/insects12121124
 i	Callophrys
 a	avis
 e	Chapman's Green Hairstreak
@@ -21264,6 +21364,13 @@ a	spinetorum
 e	Thicket Hairstreak
 d	Strauch-Zipfelfalter
 i	Incisalia
+o	Frivaldszkyi
+a	ferrea
+s2	Ahlbergia
+a	frivaldszkyi
+s2	Ahlbergia
+a	nicevillei
+s2	Ahlbergia
 o	Mcfarlandi
 a	augustinus
 e	Brown Elfin
@@ -21901,12 +22008,12 @@ s2	Triclema
 g	Cupidesthes
 a	gabunica
 t	Polyommatini
-r2	Stradomsky'16
-l	A molecular phylogeny of the subfamily Polyommatinae (Lepidoptera: Lycaenidae)
-p	10.23885/1814-3326-2016-12-1-145-156
 e2	Typical Blues
 d2	Echte Bläulinge
 sh	Polyommatinae
+r2	Stradomsky'16
+l	A molecular phylogeny of the subfamily Polyommatinae (Lepidoptera: Lycaenidae)
+p	10.23885/1814-3326-2016-12-1-145-156
 j	Polyommatina
 h	Polyommatiti
 g	Agriades
@@ -22540,11 +22647,11 @@ h	Fameganiti
 g	Famegana
 a	alsulus
 a	nisa
+e	Black-spotted Grass Blue
+d	Schwarzpunkt-Grasbläuling
 r2	Hsu'20
 l	The identity of Alfred Wallace's mysterious butterfly taxon Lycaena nisa solved: Famegana nisa comb. nov., a senior synonym of F. alsulus (Lepidoptera, Lycaenidae, Polyommatinae)
 p	10.3897/zookeys.966.51921
-e	Black-spotted Grass Blue
-d	Schwarzpunkt-Grasbläuling
 j	Zizeeriina
 g	Pseudozizeeria
 a	maha
@@ -22803,12 +22910,12 @@ a	paphos
 e	Cypriot Blue
 d	Zypriotischer Bläuling
 ae	xerces
-r	Grewe'21
-l	Museum genomics reveals the Xerces blue butterfly (Glaucopsyche xerces) was a distinct species driven to extinction
-p	10.1098/rsbl.2021.0123
 e	Xerces Blue
 d	Xerces-Bläuling
 s3	lygdamus
+r	Grewe'21
+l	Museum genomics reveals the Xerces blue butterfly (Glaucopsyche xerces) was a distinct species driven to extinction
+p	10.1098/rsbl.2021.0123
 i	Apelles
 a	algerica
 e	Algerian Blue
@@ -23251,11 +23358,11 @@ e	South African Dwarf Blue
 d	Südafrikanischer Zwergbläuling
 t	Candalidini
 j	Candalidina
+e2	Ancient Blues
+d2	Urbläulinge
 r	Braby'20
 l	Molecular phylogeny of the tribe Candalidini (Lepidoptera: Lycaenidae): systematics, diversification and evolutionary history
 p	10.1111/syen.12432
-e2	Ancient Blues
-d2	Urbläulinge
 g	Candalides
 i	Candalides
 a	heathi
@@ -23394,13 +23501,13 @@ a	chlorinda
 e	Silky Hairstreak
 d	Tasmanischer Zipfelfalter
 y	Poritiinae
-r	Boyle'23
-l	Phylogeny of the Poritiinae (Lepidoptera: Lycaenidae), butterflies with ant associations and unusual lichenivorous diets
-p	10.1111/syen.12585
 e2	Lichen Blues
 e2	Gems
 d2	Flechtenbläulinge
 d2	Schmuckfalter
+r	Boyle'23
+l	Phylogeny of the Poritiinae (Lepidoptera: Lycaenidae), butterflies with ant associations and unusual lichenivorous diets
+p	10.1111/syen.12585
 t	Poritiini
 g	Cyaniriodes
 a	libna
@@ -23656,11 +23763,11 @@ a	saga
 e	Boland Rocksitter
 d	Boland-Steinwächter
 y	Miletinae
+e2	Harvesters
+d2	Karnivore Bläulinge
 r	Kaliszewska'15
 l	When caterpillars attack: Biogeography and life history evolution of the Miletinae (Lepidoptera: Lycaenidae)
 p	10.1111/evo.12599
-e2	Harvesters
-d2	Karnivore Bläulinge
 t	Miletini
 g	Allotinus
 a	horsfieldi
@@ -23755,11 +23862,11 @@ a	brassolis
 e	Carnivorous Moth Butterfly
 d	Karnivorer Trugfalter
 y	Aphnaeinae
+e2	Silverlines
+d2	Silberstreife
 r	Boyle'15
 l	Phylogeny of the Aphnaeinae: myrmecophilous African butterflies with carnivorous and herbivorous life histories
 p	10.1111/syen.12098
-e2	Silverlines
-d2	Silberstreife
 t	Aphnaeini
 j	Aphnaeina
 g	Aloeides
@@ -24148,6 +24255,8 @@ d2	Nachtfalter
 x3	Macroheterocera
 x2	Noctuina
 x	Noctuoidea
+e2	Owlet Moths
+d2	Eulen
 r	Mitchell'06
 l	Systematics and evolution of the cutworm moths (Lepidoptera: Noctuidae): evidence from two protein-coding nuclear genes
 p	10.1111/j.1365-3113.2005.00306.x
@@ -24157,20 +24266,18 @@ p	10.1111/j.1463-6409.2010.00459.x
 r	Regier'16
 l	Further progress on the phylogeny of Noctuoidea (Insecta: Lepidoptera) using an expanded gene sample
 p	10.1111/syen.12199
-e2	Owlet Moths
-d2	Eulen
 </div><div id="n"><h2 class="EN">"Owlet Moths"</h2><h2 class="DE">„Eulen”</h2>
 xs	Noctuiformes
 f	Noctuidae
+e2	True Owlet Moths
+e2	Noctuid Moths
+d2	Eulenfalter
 r	Zahiri'13
 l	Relationships among the basal lineages of Noctuidae (Lepidoptera, Noctuoidea) based on eight gene regions
 p	10.1111/zsc.12022
 r	Keegan'21
 l	Toward a Stable Global Noctuidae (Lepidoptera) Taxonomy
 p	10.1093/isd/ixabutterflepidoptera5
-e2	True Owlet Moths
-e2	Noctuid Moths
-d2	Eulenfalter
 y	Noctuinae
 e2	Cutworm Moths
 d2	Blättereulen
@@ -24667,11 +24774,11 @@ j	Phosphilina
 g	Acherdoa
 g	Cabralia
 a	trifasciata
+e	Cromobergia Moth
+s4	Cromobergia teichii
 r2	Becker'23
 l	The taxonomic position of Cabralia trifasciata Moore, 1882 (Lepidoptera: Noctuidae, Noctuinae, Phosphilini)
 p	10.57065/shilap.445
-e	Cromobergia Moth
-s4	Cromobergia teichii
 g	Phosphila
 g	Speocropia
 j	Dypterygiina
@@ -24971,10 +25078,10 @@ g	Sarbanissa
 g	Xerociris
 g	Zalissa
 y	Amphipyrinae
+d2	Glanzeulen
 r	Keegan'19
 l	Towards resolving and redefining Amphipyrinae (Lepidoptera, Noctuoidea, Noctuidae): a massively polyphyletic taxon
 p	10.1111/syen.12336
-d2	Glanzeulen
 t	Amphipyrini
 g	Amphipyra
 a	perflua
@@ -25050,11 +25157,11 @@ g	Nacna
 g	Paratrachea
 g	Viridemas
 y	Acronictinae
+e2	Daggers
+d2	Rindeneulen
 r	Rota'15
 l	Phylogenetic relationships of Acronictinae with discussion of the abdominal courtship brush in Noctuidae (Lepidoptera)
 p	10.1111/syen.12162
-e2	Daggers
-d2	Rindeneulen
 t	Acronictini
 j	Acronictina
 g	Acronicta
@@ -25703,11 +25810,11 @@ g	Lophoptera
 g	Odontodes
 g	Stictoptera
 f	Nolidae
+e2	Tuft Moths
+d2	Wicklereulchen
 r	Zahiri'12
 l	Major lineages of Nolidae (Lepidoptera, Noctuoidea) elucidated by molecular phylogenetics
 p	10.1111/cla.12001
-e2	Tuft Moths
-d2	Wicklereulchen
 y	Nolinae
 d2	Graueulchen
 g	Acatapaustus
@@ -25804,17 +25911,17 @@ d	Hieroglypheneule
 g	Lepidodes
 a	gallopavo
 f	Erebidae
+e2	Erebid Moths
+d2	Spinnereulen
 r	Zahiri'12
 l	Molecular phylogenetics of Erebidae (Lepidoptera, Noctuoidea)
 p	10.1111/j.1365-3113.2011.00607.x
-e2	Erebid Moths
-d2	Spinnereulen
 y	Erebinae
+e2	Underwing Moths
+d2	Ordensbänder
 r	Homziak'19
 l	Anchored hybrid enrichment phylogenomics resolves the backbone of erebine moths
 p	10.1016/j.ympev.2018.10.038
-e2	Underwing Moths
-d2	Ordensbänder
 t	Erebini
 j	Erebina
 g	Cyligramma
@@ -26004,11 +26111,11 @@ g	Cocytia
 a	durvillii
 g	Egybolis
 a	vaillantina
+e	African Peach Moth
+d	Afrikanische Pfirsicheule
 r	Zahiri'22
 l	The phylogenetic placement of an enigmatic moth Egybolis vaillantina based on museomics
 p	10.1101/2022.09.27.509790
-e	African Peach Moth
-d	Afrikanische Pfirsicheule
 g	Serrodes
 a	campana
 e	Soapberry Moth
@@ -26233,6 +26340,8 @@ t	Schrankiini
 g	Luceria
 g	Schrankia
 t	Micronoctuini
+e2	Micronoctuid Moths
+sh	Micronoctuidae
 r2	Fibiger'07
 l	Revision of the Micronoctuidae (Lepidoptera: Noctuoidea). Part 1, Taxonomy of the Pollexinae
 p	10.11646/zootaxa.1567.1.1
@@ -26245,8 +26354,6 @@ p	10.11646/zootaxa.2583.1.1
 r2	Fibiger'11
 l	Revision of the Micronoctuidae (Lepidoptera: Noctuoidea). Part 4, Taxonomy of the subfamilies Tentaxinae and Micronoctuinae
 p	10.11646/zootaxa.2842.1.1
-e2	Micronoctuid Moths
-sh	Micronoctuidae
 j	Micronoctuina
 sh	Micronoctuinae
 g	Medius
@@ -26405,12 +26512,12 @@ a	imperialis
 e	Imperial Fruit-sucking Moth
 d	Riesenfruchtstecher
 y	Lymantriinae
-r	Wang'15
-l	Molecular phylogeny of Lymantriinae (Lepidoptera, Noctuoidea, Erebidae) inferred from eight gene regions
-p	10.1111/cla.12108
 e2	Tussock Moths
 d2	Trägspinner
 sh	Lymantriidae
+r	Wang'15
+l	Molecular phylogeny of Lymantriinae (Lepidoptera, Noctuoidea, Erebidae) inferred from eight gene regions
+p	10.1111/cla.12108
 t	Lymantriini
 j	Lymantriina
 g	Caviria
@@ -26828,11 +26935,11 @@ e	Black and White Tiger Moth
 d	Tasmanischer Fleckleibbär
 g	Areas
 a	aquila
+e	Laotian Tiger Moth
+d	Laotischer Fleckleibbär
 r2	Nakao,Černý'13
 l	A new species of the genus Areas Walker, 1855 from Laos and Thailand (Noctuoidea, Erebidae, Arctiinae)
 p2	0723-9912,34(1/2)
-e	Laotian Tiger Moth
-d	Laotischer Fleckleibbär
 a	galactina
 e	Milky Tiger Moth
 d	Asiatischer Bergwald-Fleckleibbär
@@ -27766,11 +27873,11 @@ d	Hibiskus-Zackeneule
 s2	Anomis
 xs	Notodontiformes
 f	Notodontidae
+e2	Prominent Moths
+d2	Zahnspinner
 r2	Kobayashi,Nonaka'16
 l	Molecular phylogeny of the Notodontidae
 p2	0493-3168,23(1)
-e2	Prominent Moths
-d2	Zahnspinner
 y	Notodontinae
 d2	Echte Zahnspinner
 t	Notodontini
@@ -27986,13 +28093,13 @@ g	Nystalea
 g	Pentobesa
 g	Symmerista
 y	Dioptinae
+d2	Tagspinner
 r2	Miller'09
 l	Generic Revision of the Dioptinae (Lepidoptera: Noctuoidea: Notodontidae) Part 1: Dioptini
 p	10.1206/321.1
 r2	Miller'09
 l	Generic Revision of the Dioptinae (Lepidoptera: Noctuoidea: Notodontidae) Part 2: Josiini
 p	10.1206/321.1-1
-d2	Tagspinner
 t	Dioptini
 j	Dioptina
 g	Brachyglene
@@ -28117,11 +28224,11 @@ g	Oenosandra
 a	boisduvalii
 x2	Geometrina
 x	Geometroidea
+e2	Geometrid Moths
+d2	Spannerartige
 r	Murillo-Ramos'19
 l	A comprehensive molecular phylogeny of Geometridae (Lepidoptera) with a focus on enigmatic small subfamilies
 p	10.7717/peerj.7386
-e2	Geometrid Moths
-d2	Spannerartige
 </div><div id="g"><h2 class="EN">"Geometrid Moths"</h2><h2 class="DE">„Spannerartige”</h2>
 xs	Geometriformes
 f	Geometridae
@@ -28753,14 +28860,14 @@ a	parthenias
 e	Orange Underwing
 d	Birken-Jungfernkind
 y	Larentiinae
+e2	Carpet Moths
+d2	Blattspanner
 r	Õunap'16
 l	Phylogeny of the subfamily Larentiinae (Lepidoptera: Geometridae): integrating molecular data and traditional classifications
 p	10.1111/syen.12195
 r	Õunap'20
 l	Perizomini (Lepidoptera: Geometridae: Larentiinae) are polyphyletic
 p	10.1163/1876312X-00002301
-e2	Carpet Moths
-d2	Blattspanner
 t	Larentiini
 g	Anticlea
 g	Earophila
@@ -29107,10 +29214,10 @@ g	Heterophleps
 g	Paradetis
 a	porphyrias
 y	Sterrhinae
+d2	Kleinspanner
 r	Sihvonen'20
 l	Molecular phylogeny of Sterrhinae moths (Lepidoptera: Geometridae): towards a global classification
 p	10.1111/syen.12418
-d2	Kleinspanner
 t	Sterrhini
 g	Arcobara
 g	Euacidalia
@@ -29483,11 +29590,11 @@ a	discivitta
 x2	Bombycina
 </div><div id="b"><h2 class="EN">"Silkmoths"</h2><h2 class="DE">„Spinner”</h2>
 x	Bombycoidea
+e2	Silkmoths
+d2	Spinner
 r	Hamilton'19
 l	Phylogenomics resolves major relationships and reveals significant diversification rate shifts in the evolution of silk moths and relatives
 p	10.1186/s12862-019-1505-1
-e2	Silkmoths
-d2	Spinner
 xs	Bombyciformes
 f	Bombycidae
 e2	Silkworm Moths
@@ -29539,6 +29646,12 @@ g	Anticla
 a	antica
 g	Quentalia
 f	Saturniidae
+e2	Saturniids
+e2	Giant Silkmoths
+d2	Pfauenspinner
+d2	Augenspinner
+d2	Saturniiden
+sh	Saturnidae
 r	Friedlander'02
 l	Monophyly, composition, and relationships within Saturniinae (Lepidoptera: Saturniidae): Evidence from two nuclear genes
 p	10.1163/187631202X00028
@@ -29551,14 +29664,10 @@ p	10.1073/pnas.1421926112
 r	Rougerie'22
 l	Phylogenomics Illuminates the Evolutionary History of Wild Silkmoths in Space and Time (Lepidoptera: Saturniidae)
 p	10.1101/2022.03.29.486224
-e2	Saturniids
-e2	Giant Silkmoths
-d2	Pfauenspinner
-d2	Augenspinner
-d2	Saturniiden
 y	Saturniinae
 e2	True Emperor Moths
 d2	Echte Nachtpfauenaugen
+sh	Saturninae
 t	Saturniini
 j	Saturniina
 h	Saturniiti
@@ -29615,9 +29724,6 @@ m	paragrotei
 m	rosalata
 o	Simla
 c	boisduvali
-r	Kim'15
-l	Saturnia jonasii Butler, 1877 on Jejudo Island, a new saturnid moth of South Korea with DNA data and morphology (Lepidoptera: Saturniidae)
-p	10.11646/zootaxa.3946.3.5
 s2	Caligula
 s4	Caligula boisduvalii
 s4	Caligula fukudai
@@ -29639,6 +29745,9 @@ m	fukudai
 m	jonasi
 m	naumanni
 m	sinjaevi
+r	Kim'15
+l	Saturnia jonasii Butler, 1877 on Jejudo Island, a new saturnid moth of South Korea with DNA data and morphology (Lepidoptera: Saturniidae)
+p	10.11646/zootaxa.3946.3.5
 a	japonica
 e	Japanese Emperor Moth
 e	Camphor Silkmoth
@@ -29647,15 +29756,15 @@ s2	Caligula
 s2	Dictyoploca
 s2	Saturnia
 c	kitchingi
-r2	Brechlin'04
-l	Zwei neue Arten der Gattung Saturnia Schrank, 1802 aus China (Lepidoptera: Saturniidae)
-p2	0723-9912,25(1/2)
 s2	Caligula
 s4	Caligula nanlingensis
 s2	Saturnia
 s4	Saturnia nanlingensis
 m	kitchingi
 m	nanlingensis
+r2	Brechlin'04
+l	Zwei neue Arten der Gattung Saturnia Schrank, 1802 aus China (Lepidoptera: Saturniidae)
+p2	0723-9912,25(1/2)
 a	simla
 e	Chinese Emperor Moth
 e	Lower-himalayan Emperor Moth
@@ -29671,9 +29780,6 @@ s2	Caligula
 s2	Saturnia
 o	Zuleika
 c	zuleika
-r2	Naumann,Nässig'10
-l	Two species in Saturnia (Rinaca) zuleika Hope, 1843 (Lepidoptera: Saturniidae)
-p2	0723-9912,31(3)
 s4	Caligula lesoudieri
 s2	Caligula
 s4	Neoris lesoudieri
@@ -29682,6 +29788,9 @@ s4	Saturnia lesoudieri
 s2	Saturnia
 m	lesoudieri
 m	zuleika
+r2	Naumann,Nässig'10
+l	Two species in Saturnia (Rinaca) zuleika Hope, 1843 (Lepidoptera: Saturniidae)
+p2	0723-9912,31(3)
 i	Perisomena
 a	caecigena
 e	Autumn Emperor Moth
@@ -29767,17 +29876,14 @@ m	rufijaliscensis
 m	rufinans
 m	witti
 j	Actiina
-r	Ylla'05
-l	Cladistic analysis of moon moths using morphology, molecules, and behaviour: Actias Leach, 1815; Argema Wallengren, 1858; Graellsia Grote, 1896 (Lepidoptera: Saturniidae)
-p2	0300-5267,33(131)
 e2	Moon Moths
 d2	Mondspinner
 sh	Actiini
+r	Ylla'05
+l	Cladistic analysis of moon moths using morphology, molecules, and behaviour: Actias Leach, 1815; Argema Wallengren, 1858; Graellsia Grote, 1896 (Lepidoptera: Saturniidae)
+p2	0300-5267,33(131)
 g	Actias
 c	artemis
-r2	Zolotuhin'11
-l	The Actias Leach, 1815, in the Far East: how many species?
-p2	0722-3773,67
 e	Japanese Moon Moth
 e	Sweetheart Moon Moth
 d	Japanischer Mondspinner
@@ -29790,6 +29896,9 @@ m	artemis
 m	dulcinea
 m	gnoma
 m	xenia
+r2	Zolotuhin'11
+l	The Actias Leach, 1815, in the Far East: how many species?
+p2	0722-3773,67
 a	dubernardi
 e	Chinese Moon Moth
 d	Chinesischer Mondspinner
@@ -30028,6 +30137,12 @@ a	euryalus
 e	Ceanothus Silkmoth
 d	Kalifornischer Seidenspinner
 g	Samia
+w	coppensi
+e	Coppens’ Lesser Atlas Moth
+d	Coppens-Zwerg-Atlasspinner
+s	coppensi
+v	luzonica
+v2	ricini
 c	cynthia
 e	Ailanthus Silkmoth
 e	Eri Silkmoth
@@ -30533,9 +30648,6 @@ a	balachowskyi
 e	Falcate Bullseye Moth
 d	Braunes Sichelbullauge
 c	bilinea
-r	Decaëns'21
-l	Description of three new species of Automeris Hübner, 1819 from Colombia and Brazil (Lepidoptera, Saturniidae, Hemileucinae)
-p	10.3897/zookeys.1031.56035
 e	South American Bullseye Moth
 d	Südamerikanischer Bullaugenspinner
 m	belemensis
@@ -30550,6 +30662,9 @@ m	lemensis
 m	llaneros
 m	midea
 m	mineros
+r	Decaëns'21
+l	Description of three new species of Automeris Hübner, 1819 from Colombia and Brazil (Lepidoptera, Saturniidae, Hemileucinae)
+p	10.3897/zookeys.1031.56035
 a	coresus
 e	Buenos Aires Bullseye Moth
 d	Buenos-Aires-Bullaugenspinner
@@ -31010,11 +31125,11 @@ e	Tropical Oakworm Moth
 d	Südamerikansicher Eichenhornspinner
 a	winbrechlini
 y	Arsenurinae
+e2	Arsenura Moths
+d2	Tropenspinner
 r	Hamilton'22
 l	Hidden Phylogenomic Signal Helps Elucidate Arsenurine Silkmoth Phylogeny and the Evolution of Body Size and Wing Shape Trade-Offs
 p	10.1093/sysbio/syab090
-e2	Arsenura Moths
-d2	Tropenspinner
 t	Arsenurini
 g	Arsenura
 a	armida
@@ -31127,13 +31242,13 @@ s2	Asthenidia
 t	Homoeopterygini
 g	Homoeopteryx
 f	Sphingidae
-r	Kawahara'09
-l	Phylogeny and Biogeography of Hawkmoths (Lepidoptera: Sphingidae): Evidence from Five Nuclear Genes
-p	10.1371/journal.pone.0005719
 e2	Hawkmoths
 e2	Sphinx Moths
 e2	Hornworm Moths
 d2	Schwärmer
+r	Kawahara'09
+l	Phylogeny and Biogeography of Hawkmoths (Lepidoptera: Sphingidae): Evidence from Five Nuclear Genes
+p	10.1371/journal.pone.0005719
 y	Sphinginae
 e2	True Hawkmoths
 d2	Echte Schwärmer
@@ -31533,6 +31648,7 @@ d	Plutoschwärmer
 a	porcus
 e	Porcus Sphinx
 d	Porcusschwärmer
+u	continentalis
 a	tersa
 e	Tersa Sphinx
 d	Tersaschwärmer
@@ -31911,14 +32027,14 @@ a	verago
 x	Lasiocampoidea
 d2	Gluckenartige
 f	Lasiocampidae
+e2	Lappet Moths
+d2	Glucken
 r	Mitter'00
 l	Phylogenetic relationships in Lasiocampidae (Lepidoptera): Initial evidence from elongation factor-1α sequences
 p	10.1163/187631200X00372
 r	Zolotuhin'12
 l	Changes in the suprageneric classification of Lasiocampidae (Lepidoptera) based on the nucleotide sequence of gene EF-1α
 p	10.1134/S0013873812050065
-e2	Lappet Moths
-d2	Glucken
 y	Lasiocampinae
 e2	Eggars
 d2	Echte Glucken
@@ -32455,14 +32571,14 @@ y	Zaphantinae
 g	Zaphanta
 x3	Pyralina
 x	Pyraloidea
+e2	Pyraloid Moths
+d2	Zünslerfalter
 r	Regier'12
 l	A molecular phylogeny for the pyraloid moths (Lepidoptera: Pyraloidea) and its implications for higher-level classification
 p	10.1111/j.1365-3113.2012.00641.x
 r	Léger'20
 l	Refining the phylogeny of Crambidae with complete sampling of subfamilies (Lepidoptera, Pyraloidea)
 p	10.1111/zsc.12452
-e2	Pyraloid Moths
-d2	Zünslerfalter
 f	Pyralidae
 e2	Pyralid Moths
 e2	Pyralid Snout Moths
@@ -33517,17 +33633,17 @@ a	angularis
 e	Angular Snout Moth
 g	Siamusotima
 a	aranea
+e	Spider-mimic Lygodium Moth
+d	Spinnenmimen-Kletterfarn-Zünsler
 r	Solis'05
 l	Siamusotima aranea, a New Stem-Boring Musotimine (Lepidoptera: Crambidae) from Thailand Feeding on Lygodium flexuosum (Schizaeaceae)
 p	10.1603/0013-8746(2005)098[0887:SAANSM]2.0.CO;2
-e	Spider-mimic Lygodium Moth
-d	Spinnenmimen-Kletterfarn-Zünsler
 a	disrupta
+e	Hong Kong Lygodium Moth
+d	Hongkong-Kletterfarn-Zünsler
 r	Solis'17
 l	Another New Lygodium-Boring Species of the Musotimine Genus Siamusotima (Lepidoptera: Crambidae) from China
 p	10.4289/0013-8797.119.3.471
-e	Hong Kong Lygodium Moth
-d	Hongkong-Kletterfarn-Zünsler
 g	Thysanoidma
 g	Undulambia
 a	polystichalis
@@ -33724,10 +33840,10 @@ a	vulnerata
 g	Taurometopa
 g	Thesaurica
 y	Spilomelinae
+e2	Pearl Moths
 r	Mally'19
 l	The phylogenetic systematics of Spilomelinae and Pyraustinae (Lepidoptera: Pyraloidea: Crambidae) inferred from DNA and morphology
 p	10.26049/ASP77-1-2019-07
-e2	Pearl Moths
 t	Spilomelini
 j	Spilomelina
 g	Aethaloessa
@@ -35437,11 +35553,11 @@ e2	Australian Parasite Moths
 d2	Ameisen-Parasitenmotten
 g	Cyclotorna
 x	Zygaenoidea
+e2	Zygaenid Moths
+d2	Zygänenartige
 r	Niehuis'06
 l	Higher phylogeny of zygaenid moths (Insecta: Lepidoptera) inferred from nuclear and mitochondrial sequence data and the evolution of larval cuticular cavities for chemical defence
 p	10.1016/j.ympev.2006.01.007
-e2	Zygaenid Moths
-d2	Zygänenartige
 xs	Zygaeniformes
 f	Zygaenidae
 e2	Burnet Moths
@@ -35799,11 +35915,11 @@ a	penangae
 g	Turneriprocris
 a	dolens
 y	Chalcosiinae
+e2	Tropical Burnet Moths
+d2	Tropenwidderchen
 r	Yen'05
 l	The phylogenetic relationships of Chalcosiinae (Lepidoptera, Zygaenoidea, Zygaenidae)
 p	10.1111/j.1096-3642.2005.00139.x
-e2	Tropical Burnet Moths
-d2	Tropenwidderchen
 t	Chalcosiini
 g	Amesia
 a	sanguiflua
@@ -36029,17 +36145,17 @@ d	Kleiner Mottenspinner
 s	canalensis
 xs	Limacodiformes
 f	Limacodidae
+e2	Slug Moths
+e2	Cup Moths
+d2	Schneckenspinner
+d2	Asselspinner
+d2	Schildmotten
 r	Zaspel'15
 l	Origin of the hungry caterpillar: Evolution of fasting in slug moths (Insecta: Lepidoptera: Limacodidae)
 p	10.1016/j.ympev.2015.09.017
 r	Lin'16
 l	Evolution and losses of spines in slug caterpillars (Lepidoptera: Limacodidae)
 p	10.1002/ece3.5524
-e2	Slug Moths
-e2	Cup Moths
-d2	Schneckenspinner
-d2	Asselspinner
-d2	Schildmotten
 y	Limacodinae
 d2	Echte Schneckenspinner
 t	Limacodini
@@ -36446,10 +36562,10 @@ a	clarissa
 a	medora
 g	Scotinocerides
 y	Aidinae
+sh	Aididae
 r2	Volkova,Zolotuhin'21
 l	On the Status of Aididae (Lepidoptera, Zygaenoidea)
 p	10.1134/S0013873821070162
-sh	Aididae
 g	Aidos
 g	Brachycodilla
 g	Xenarchus
@@ -36610,6 +36726,9 @@ a	conjunctella
 </div><div id="m"><h2 class="EN">"Typical Micromoths"</h2><h2 class="DE">„Klassische Motten”</h2>
 x4	Gelechiina
 x	Gelechioidea
+e2	Gelechioid Moths
+e2	Curved-horn Moths
+d2	Palpenmottenartige
 r	Kaila'11
 l	Phylogeny of the mega-diverse Gelechioidea (Lepidoptera): Adaptations and determinants of success
 p	10.1016/j.ympev.2011.08.016
@@ -36619,9 +36738,6 @@ p	10.1111/cla.12064
 r2	Wang,Li'20
 l	Phylogeny of the superfamily Gelechioidea (Lepidoptera: Obtectomera), with an exploratory application on geometric morphometrics
 p	10.1111/zsc.12407
-e2	Gelechioid Moths
-e2	Curved-horn Moths
-d2	Palpenmottenartige
 xs	Gelechiiformes
 f	Gelechiidae
 e2	Twirler Moths
@@ -38630,15 +38746,15 @@ d2	Wicklerartige
 sh	Galacticoidea
 sh	Immoidea
 f	Tortricidae
+e2	Tortrix Moths
+e2	Leafroller Moths
+d2	Wickler
 r	Regier'12
 l	A Molecular Phylogeny for the Leaf-Roller Moths (Lepidoptera: Tortricidae) and Its Implications for Classification and Life History Evolution
 p	10.1371/journal.pone.0035574
 r	Huang'23
 l	Features and evolution of control regions in leafroller moths (Lepidoptera: Tortricidae) inferred from mitochondrial genomes and phylogeny
 p	10.1016/j.ijbiomac.2023.123928
-e2	Tortrix Moths
-e2	Leafroller Moths
-d2	Wickler
 y	Tortricinae
 t	Tortricini
 j	Tortricina
@@ -40632,11 +40748,11 @@ g	Pternidora
 g	Semnostola
 g	Tetramoera
 a	langmaidi
+e	Bamboo Tortrix
+d	Bambuswickler
 r2	Plant'14
 l	Tetramoera langmaidi sp. nov. (Lep.: Tortricidae, Olethreutinae, Enarmoniini): A new species of probably oriental Tortricid moth from England
 p2	0013-8916,126(5)
-e	Bamboo Tortrix
-d	Bambuswickler
 g	Thysanocrepis
 g	Toonavora
 t	Microcorsini
@@ -40741,11 +40857,11 @@ sh	Copromorphoidea
 sh	Epermenioidea
 xs	Pterophoriformes
 f	Pterophoridae
+e2	Plume Moths
+d2	Federmotten
 r2	Gielis'00
 l	Division of the Pterophoridae into tribes (Lepidoptera)
 p2	1028-6764,3
-e2	Plume Moths
-d2	Federmotten
 y	Pterophorinae
 t	Pterophorini
 g	Calyciphora
@@ -41347,10 +41463,10 @@ e	Strawberry Spear-wing
 d	Erdbeer-Wippflügelfalter
 x5	Gracillaria
 x	Yponomeutoidea
+d2	Gespinstmottenartige
 r	Sohn'13
 l	A Molecular Phylogeny for Yponomeutoidea (Insecta, Lepidoptera, Ditrysia) and Its Implications for Classification, Biogeography and the Evolution of Host Plant Use
 p	10.1371/journal.pone.0055066
-d2	Gespinstmottenartige
 xs	Yponomeutiformes
 f	Yponomeutidae
 e2	Lesser Ermine Moths
@@ -41827,14 +41943,14 @@ d	Helle Weißdorn-Gespinstmotte
 x	Gracillarioidea
 d2	Miniermottenartige
 f	Gracillariidae
+e2	Leafminers
+d2	Miniermotten
 r	Kawahara'11
 l	Increased gene sampling strengthens support for higher-level groups within leaf-mining mothspannerarelatives (Lepidoptera: Gracillariidae)
 p	10.1186/1471-2148-11-182
 r	Kawahara'16
 l	A molecular phylogeny and revised higher-level classification for the leaf-mining moth family Gracillariidae and its implications for larval host-use evolution
 p	10.1111/syen.12210
-e2	Leafminers
-d2	Miniermotten
 y	Gracillariinae
 t	Gracillariini
 g	Aristaea
@@ -42366,10 +42482,10 @@ d	Tītokimotte
 a	xenadelpha
 x5	Tineia
 x	Tineoidea
+sh	Psychoidea
 r	Regier'14
 l	A molecular phylogeny and revised classification for the oldest ditrysian moth lineages (Lepidoptera: Tineoidea), with implications for ancestral feeding habits of the mega-diverse Ditrysia
 p	10.1111/syen.12110
-sh	Psychoidea
 xs	Tineiformes
 f	Tineidae
 e2	Clothes Moths
@@ -43977,15 +44093,17 @@ while (sib) { // Loop for each SP
 $$('.g').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each GEN
-	if (sib.matches('.a,.ae,.c,.m,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
+	if (sib.matches('.a,.ae,.c,.m,.w,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
 	if (sib.matches('.g')) break // If next GEN reached, stop loop
 	sib = sib.nextElementSibling}});
 
 //6 Generate taxon IDs, prefix/suffix strings
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
+$$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
+$$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 $$('.ae,.ue').forEach(f=>{f.innerHTML += ' †'});
 $$('.r').forEach(f=>{f.innerHTML = f.innerHTML.replace("'"," et al., 20")});
 $$('.r2').forEach(f=>{f.innerHTML = f.innerHTML.replace(',',' & ').replace("'",", 20")});
