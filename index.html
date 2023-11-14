@@ -5,7 +5,6 @@
 <meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#000">
 <meta name="viewport" content="initial-scale=1">
-<meta name="google-site-verification" content="-IysjuyuagoksvXOgvJ2lBqIuQplmPbNLmFrGdo0lKs">
 <meta property="og:image" content="https://lepitaxa.github.io/lepitaxa.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
@@ -16,7 +15,7 @@
 @media screen and (max-width: 660px) {:root	{--z:2.424vw}}
 
 :root			{--m:Consolas, monospace; font-size:var(--z)}
-.hide,.p,.p2	{display:none}
+.hide,.v2,.p,.p2{display:none}
 body			{font-family:Verdana, sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
 a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
@@ -85,9 +84,9 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .g::before	{content:"▪ "; font-style:normal; color:#000}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c	{padding:0 0 0 6.5rem}
-:is(.a,.ae,.c)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
-.u,.ue,.m,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.a,.ae,.c,.w{padding:0 0 0 6.5rem}
+:is(.a,.ae,.c,.w)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
+.u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
@@ -261,6 +260,13 @@ i	Papilio
 r2	Dupuis,Sperling'20
 l	Phylogenomic test of mitochondrial clues to archaic ancestors in a group of hybridizing swallowtail butterflies
 p	10.1016/j.ympev.2020.106921
+w	hospitonoides
+s	hospitonoides
+v	hospiton
+v2	machaon
+r2	Nardelli'06
+l	Hybridisierungsversuche zwischen Papilio hospiton Géné, 1839 aus Sardinien und P. machaon Linnaeus, 1758 aus Sizilien (Lepidoptera: Papilionidae)
+p2	0723-9912,27(4)
 o	Indra
 a	indra
 e	Indra Swallowtail
@@ -343,6 +349,7 @@ p2	0123-3068,13(1)
 a	zelicaon
 e	Anise Swallowtail
 d	Anis-Schwalbenschwanz
+s	nitra
 i	Sinoprinceps
 a	benguetanus
 s	benguelana
@@ -362,6 +369,7 @@ o	Echerioides
 a	echerioides
 e	White-banded Swallowtail
 d	Weißgestreifter Schwalbenschwanz
+s	zoroastres
 u	joiceyi
 a	fuelleborni
 a	jacksoni
@@ -396,7 +404,9 @@ c	chrapkowskoides
 e	Broadly Green-banded Swallowtail
 d	Grüngestreifter Schwalbenschwanz
 s	bromius
+s	brontes
 s	interjecta
+s	magdae
 s	nireus chitondensis
 m	chitondensis
 m	chrapkowskii
@@ -581,6 +591,10 @@ i	Menelaides
 r2	Joshi,Kunte'22
 l	Polytypy and systematics: diversification of Papilio swallowtail butterflies in the biogeographically complex Indo-Australian Region
 p	10.1101/2022.03.23.485569
+w	nubilus
+s	nubilus
+v	nephelus
+v2	polytes
 o	Aegeus
 a	aegeus
 e	Orchard Swallowtail
@@ -733,6 +747,7 @@ e	Great Mormon
 d	Großer Mormone
 s3	memnon
 s	memnon heronus
+s	polymnestoroides
 u	heronus
 a	ascalaphus
 e	Ascalaphus Swallowtail
@@ -831,6 +846,7 @@ d	Kleiner Mormone
 d	Mormonenfalter
 s	javanus
 s	sakontala
+s	walkeri
 u	javanus
 a	protenor
 e	Spangle
@@ -885,16 +901,19 @@ e	Mocker Swallowtail
 e	Flying Handkerchief
 d	Afrikanischer Schwalbenschwanz
 d	Schein-Schwalbenschwanz
-s	nandina
-r	Thompson'11
-l	Hybrid Origins: DNA Techniques Confirm that Papilio nandina is a Species Hybrid (Papilionidae)
-p	10.18473/lepi.v65i3.a11
 a	humbloti
 s	dardanus humblodti
 s3	dardanus
 s	humblodti
 a	meriones
 s3	dardanus
+w	nandina
+s	nandina
+v	dardanus
+v2	phorcas
+r	Thompson'11
+l	Hybrid Origins: DNA Techniques Confirm that Papilio nandina is a Species Hybrid (Papilionidae)
+p	10.18473/lepi.v65i3.a11
 a	phorcas
 e	Apple-green Swallowtail
 d	Apfelgrüner Schwalbenschwanz
@@ -986,13 +1005,19 @@ e	Spicebush Swallowtail
 d	Fieberstrauch-Schwalbenschwanz
 s2	Papilio
 i	Jasoniades
-a	appalachiensis
+w	appalachiensis
 e	Appalachian Tiger Swallowtail
 d	Appalachen-Tigerschwalbenschwanz
-s2	Papilio
+s4	Papilio appalachiensis
+s	appalachiensis
+v	canadensis
+v2	glaucus
 r2	Pavulaan,Wright'02
 l	Pterourus appalachiensis (Papilionidae: Papilioninae), a new swallowtail from the Appalachian region of the United States
 p2	2643-4776,3(7)
+r	Kunte'11
+l	Sex Chromosome Mosaicism and Hybrid Speciation among Tiger Swallowtail Butterflies
+p	10.1371/journal.pgen.1002274
 a	canadensis
 e	Canadian Tiger Swallowtail
 e	Northern Tiger Swallowtail
@@ -1065,6 +1090,9 @@ e	Victorine Swallowtail
 e	Crimson-spotted Swallowtail
 e	Menatius Swallowtail
 d	Victorinus-Schwalbenschwanz
+s4	Papilio aristeus
+s4	Papilio diazi
+s4	Papilio judicael
 s2	Papilio
 s4	Papilio victorinus
 m	cleotas
@@ -1227,6 +1255,7 @@ a	torquatus
 e	Torquatus Swallowtail
 e	Band-gapped Swallowtail
 d	Torquatus-Schwalbenschwanz
+s4	Papilio tasso
 s2	Papilio
 i	Priamides
 o	Anchisiades
@@ -1298,6 +1327,12 @@ r	Condamine'15
 l	Deciphering the evolution of birdwing butterflies 150 years after Alfred Russel Wallace
 p	10.1038/srep11860
 g	Ornithoptera
+w	allotei
+e	Malaita Birdwing
+d	Malaita-Vogelflügler
+s	allotei
+v	priamus
+v2	victoriae
 i	Ornithoptera
 a	priamus
 e	Common Green Birdwing
@@ -3699,6 +3734,7 @@ e	White Spurwing
 a	erosus
 e	Common Spurwing
 e	Dusted Spurwing
+d	Blattflügel-Dickkopffalter
 a	funebris
 e	West-Mexican Spurwing
 s2	Systaspes
@@ -5580,7 +5616,7 @@ e	Black Moth Butterfly
 d	Schwarzer Trugfalter
 a	rubedinaria
 e	Leafwing Moth Butterfly
-d	Blattflügel-Trufalter
+d	Blattflügel-Trugfalter
 a	tipulata
 e	Greyish-white Moth Butterfly
 e	Cupuaçu Defoliator
@@ -7625,20 +7661,33 @@ d	Jackson's Blattfalter
 s2	Kallima
 t	Victorinini
 g	Anartia
+r	Blum'03
+l	A molecular phylogeny of the neotropical butterfly genus Anartia (Lepidoptera: Nymphalidae)
+p	10.1016/S1055-7903(02)00291-9
+i	Anartia
 a	amathea
 e	Red Anartia
 e	Red Peacock
 e	Coolie
 d	Rote Anartia
-a	chrysopelea
-e	Cuban Peacock
-d	Kubanische Anartia
+w	blumi
+e	Blum's Hybrid Peacock
+d	Blum's Hybrid-Anartia
+v	amathea
+v2	fatima
+r	Dasmahapatra'02
+l	Inferences from a rapidly moving hybrid zone
+p	10.1111/j.0014-3820.2002.tb01385.x
 a	fatima
 e	Banded Peacock
 d	Schwarze Anartia
 a	jatrophae
 e	White Peacock
 d	Weiße Anartia
+i	Anartiella
+a	chrysopelea
+e	Cuban Peacock
+d	Kubanische Anartia
 a	lytrea
 e	Godart's Peacock
 d	Godart's Anartia
@@ -8707,6 +8756,7 @@ d	Weißbindiger Pfeifer
 g	Laringa
 a	castelnaui
 e	Common Dandy
+e	Blue Dandy
 d	Gewöhnlicher Dandy
 a	horsfieldii
 e	Banded Dandy
@@ -11510,6 +11560,7 @@ u	amazona
 u	chestertonii
 u	cruentus
 u	cyrbia
+u	erato
 u	hydara
 u	lativitta
 u	luscombei
@@ -11526,6 +11577,9 @@ u	octavia
 a	hermathena
 e	Amazon Longwing
 d	Amazonas-Passionsfalter
+r	Massardo'20
+l	The roles of hybridization and habitat fragmentation in the evolution of Brazil’s enigmatic longwing butterflies, Heliconius nattereri and H. hermathena
+p	10.1186/s12915-020-00797-1
 a	himera
 e	Himera Longwing
 d	Anden-Passionsfalter
@@ -11613,11 +11667,21 @@ o	Melpomene
 a	cydno
 e	Cydno Longwing
 d	Blauer Passionsfalter
+u	cordula
 u	cydnides
 u	galanthus
-a	heurippa
+w	heurippa
 e	Colombian Hybrid Longwing
 d	Kolumbianischer Hybrid-Passionsfalter
+s	heurippa
+v	cydno cordula
+v2	melpomene melpomene
+r	Salazar'04
+l	Hybrid incompatibility is consistent with a hybrid origin of Heliconius heurippa Hewitson from its close relatives, Heliconius cydno Doubleday and Heliconius melpomene Linnaeus
+p	10.1111/j.1420-9101.2004.00839.x
+r	Mavárez'06
+l	Speciation by hybridization in Heliconius butterflies
+p	10.1038/nature04738
 a	melpomene
 e	Postman Butterfly
 e	Common Postman
@@ -11628,6 +11692,7 @@ u	aglaope
 u	cythera
 u	flagrans
 u	malleti
+u	melpomene
 u	plesseni
 u	rosina
 a	pachinus
@@ -11636,6 +11701,12 @@ d	Pachinus-Passionsfalter
 a	timareta
 e	Ecuadorian Postman
 d	Ecuadorianischer Kurier
+s	tristero
+u	thelxinoe
+u	tristero
+r	Mérot'13
+l	Genetic differentiation without mimicry shift in a pair of hybridizing Heliconius species (Lepidoptera: Nymphalidae)
+p	10.1111/bij.12091
 o	Wallacei
 a	burneyi
 e	Burney's Longwing
@@ -12731,6 +12802,8 @@ d	Rogers' Acräa
 s2	Acraea
 s2	Stephenia
 t	Vagrantini
+e2	Yeomen and Rustics
+d2	Flatterlinge und Kreuzer
 g	Algia
 a	fasciata
 e	Little Banded Yeoman
@@ -15933,6 +16006,8 @@ y	Charaxinae
 e2	Leafwings
 d2	Blattflügler
 t	Charaxini
+e2	Charaxes
+d2	Charaxes
 g	Charaxes
 r	Aduse-Poku'09
 l	Out-of-Africa again: A phylogenetic hypothesis of the genus Charaxes (Lepidoptera: Nymphalidae) based on five gene regions
@@ -16518,6 +16593,8 @@ a	franck
 e	Blue Begum
 d	Blaue Begum
 t	Anaeini
+e2	New World Leafwings
+d2	Neuwelt-Blattflügler
 r	Toussaint'19
 l	Flight over the Proto-Caribbean seaway: Phylogeny and macroevolution of Neotropical Anaeini leafwing butterflies
 p	10.1016/j.ympev.2019.04.020
@@ -16787,6 +16864,8 @@ j	Anaeomorphina
 g	Anaeomorpha
 a	splendida
 t	Preponini
+e2	Preponas
+d2	Preponas
 r2	Ortiz-Acevedo,Willmott'13
 l	Molecular systematics of the butterfly tribe Preponini (Nymphalidae: Charaxinae)
 p	10.1111/syen.12008
@@ -16856,10 +16935,17 @@ d	Veränderliche Agrias
 s2	Agrias
 s2	Agrias narcissus
 s	narcissus
+u	lugens
 u	narcissus
 a	hewitsonius
 s2	Agrias
 a	praeneste
+u	abrupta
+u	buckleyana
+w	sarunami
+s	sarunami
+v	claudina lugens
+v2	praeneste abrupta
 o	Deiphile
 a	deiphile
 e	Orange-spotted Prepona
@@ -21224,6 +21310,12 @@ g	Trichonis
 j	Callophryidina
 h	Callophryiditi
 g	Callophrys
+w	austrosibirica
+v	frivaldszkyi
+v2	rubi
+r	Shapoval'21
+l	Identification of Natural Hybrids between Ahlbergia frivaldszkyi (Lederer, 1853) and Callophrys rubi (Linnaeus, 1758) (Lepidoptera, Lycaenidae) Using Mitochondrial and Nuclear Markers
+p	10.3390/insects12121124
 i	Callophrys
 a	avis
 e	Chapman's Green Hairstreak
@@ -21272,6 +21364,13 @@ a	spinetorum
 e	Thicket Hairstreak
 d	Strauch-Zipfelfalter
 i	Incisalia
+o	Frivaldszkyi
+a	ferrea
+s2	Ahlbergia
+a	frivaldszkyi
+s2	Ahlbergia
+a	nicevillei
+s2	Ahlbergia
 o	Mcfarlandi
 a	augustinus
 e	Brown Elfin
@@ -30038,6 +30137,12 @@ a	euryalus
 e	Ceanothus Silkmoth
 d	Kalifornischer Seidenspinner
 g	Samia
+w	coppensi
+e	Coppens’ Lesser Atlas Moth
+d	Coppens-Zwerg-Atlasspinner
+s	coppensi
+v	luzonica
+v2	ricini
 c	cynthia
 e	Ailanthus Silkmoth
 e	Eri Silkmoth
@@ -31543,6 +31648,7 @@ d	Plutoschwärmer
 a	porcus
 e	Porcus Sphinx
 d	Porcusschwärmer
+u	continentalis
 a	tersa
 e	Tersa Sphinx
 d	Tersaschwärmer
@@ -43987,15 +44093,17 @@ while (sib) { // Loop for each SP
 $$('.g').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each GEN
-	if (sib.matches('.a,.ae,.c,.m,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
+	if (sib.matches('.a,.ae,.c,.m,.w,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
 	if (sib.matches('.g')) break // If next GEN reached, stop loop
 	sib = sib.nextElementSibling}});
 
 //6 Generate taxon IDs, prefix/suffix strings
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
+$$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
+$$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 $$('.ae,.ue').forEach(f=>{f.innerHTML += ' †'});
 $$('.r').forEach(f=>{f.innerHTML = f.innerHTML.replace("'"," et al., 20")});
 $$('.r2').forEach(f=>{f.innerHTML = f.innerHTML.replace(',',' & ').replace("'",", 20")});

@@ -113,6 +113,9 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`m`|SEG|$\color{#9BD}{\textsf{GEN }}$ **SP**|Segregate name<br>(microspecies epithet)|
 |`u`|SSP|$\color{#9BD}{\textsf{GEN SP }}$ **SSP**|Epithet of extant subspecies|
 |`ue`|SSP_EXT|$\color{#9BD}{\textsf{GEN SP }}$ **SSP** $\color{#9BD}{\textsf{ †}}$|Epithet of extinct subspecies|
+|`w`|HYBR|$\color{#9BD}{\textsf{GEN × }}$ **SP**|Epithet of species hybrid|
+|`v`|PARENT|$\color{#9BD}{\textsf{GEN }}$ SP **SP/SSP**|Epithet of 1<sup>st</sup> parent (sub)species|
+|`v2`|PARENT|$\color{#9BD}{\textsf{GEN }}$ SP **SP/SSP**|Epithet of 2<sup>nd</sup> parent (sub)species|
 |`e`|NAME_EN|**NAME**|English common name of a<br>species or species complex|
 |`e2`|NAME_EN|**NAME**|English common name of a<br>family/tribe-level taxon|
 |`d`|NAME_DE|**NAME**|German common name of a<br>species or species complex|
@@ -122,10 +125,10 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`s3`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
 |`s4`|SYN|**GEN SP** SSP|(Sub)species synonym with completely<br>different genus and species name|
 |`sh`|SYN_H|**NAME**|Synonym of higher taxon|
-|`r`|REF|**AUT1** $\color{#9BD}{\textsf{ et al., 20}}$ **'YY**|Scientific reference first author+year<br>when >2 authors|
-|`r2`|REF|**AUT1** $\color{#9BD}{\textsf{ ＆ }}$ ,AUT2 $\color{#9BD}{\textsf{, 20}}$ **'YY**|Scientific reference author(s)+year<br>when ≤2 authors|
+|`r`|REF|**AUT1** $\color{#9BD}{\textsf{ et al., 20}}$**'YY**|Scientific reference first author+year<br>when >2 authors|
+|`r2`|REF|**AUT1** $\color{#9BD}{\textsf{ ＆ }}$ ,AUT2 $\color{#9BD}{\textsf{, 20}}$**'YY**|Scientific reference author(s)+year<br>when ≤2 authors|
 |`l`|REF_TITLE|**TITLE**|Title of scientific reference|
-|`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$ **DOI**|ID of scientific reference via DOI|
+|`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$**DOI**|ID of scientific reference via DOI|
 |`p2`|REF_ID|$\color{#9BD}{\textsf{ISSN-L:}}$ **ISSN-L,VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
 $\color{#9BD}{\textsf{X}}$ Auto-generated data substring – added on page load via JavaScript<br>
@@ -301,89 +304,112 @@ The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and 
 - 17.4. Only prominent/important subspecies should be listed, it's also not wrong to list non at all when they're practically indistinguishable. Listing the nominate subspecies is not necessary either, but can be done if important.
 
 ---
-### 18 - NAME_EN, NAME_DE (`e`, `e2`, `d`, `d2`)
+### 18 - HYBR (`w`)
+The epithet of a species hybrid. The genus name and multiplication sign "×" is prepended automatically via JavaScript to form the full hybrid name.
+
+:point_right: **Guidelines:**
+- 18.1. Hybrids are only supported for different species within the same genus, as no real intergeneric hybrids have been proven within the Lepidoptera.
+- 18.2. If the parent species do not belong to the same subgenus or species group, the hybrid should be listed separately within the lowest common taxon. Introducing a new subgenus or species group for the hybrid alone is not required, instead it should be listed as a stand-alone name before all subgenera within a genus or before all species groups within a subgenus.
+- 18.3. If the parent species do belong to the same subgenus or species group, the hybrid should be listed alphabetically along with the other species. The the multiplication sign "×" should be ignored when sorting.
+- 18.3. The naming of hybrids follows Guidelines 14.2. and 14.3.
+- 18.4. Only prominent/important and proven hybrids should be listed. Ideally, theese occur naturally, or are at least seen somewhat reguarly amongst captive-bred species.
+- 18.5. For naturally occuring hybrid populations, the parent traits should still be clearly present, meaning the population has not yet evolved into a fully distinctive species.
+
+---
+### 19 - PARENT (`v`, `v2`)
+The epithet(s) of the first (`v`) and the second (`v2`) parent (sub)species of a species hybrid. The genus name is prepended automatically via JavaScript to form the full bi- or trinomial name of the (sub)species. Ultimately, both bi- or trinomial names are automatically combined via the multiplication sign "×" to form the complete hybrid designation.
+
+:point_right: **Guidelines:**
+- 19.1. The first (`v`) and the second (`v2`) parent are determined by the alphabetical order of their species epithet, meaning the parent species first in alphabet is defined as the first parent.
+- 19.2. Every species hybrid needs to have both parent species listed, with `v2` directly following `v`.
+- 19.3. Parent species must be grouped and sorted AFTER all common names and synonyms, but BEFORE all references within a species hybrid.
+- 19.4. The naming of epithets follows Guidelines 14.2. and 14.3.
+- 19.5. Adding a subspecies epithet is optional and should only be done if the subspecies important for the hybridization. Listing a microspecies as one of the parents is acceptable.
+
+---
+### 20 - NAME_EN, NAME_DE (`e`, `e2`, `d`, `d2`)
 The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species, species complex or certain higher-level taxa like families and tribes.
 
 :point_right: **Guidelines:**
-- 18.1. The addition of type 1 common names (`e`, `d`) is supported for species and species aggregates. These names must be written in SINGULAR.
-- 18.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
-- 18.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
-- 18.4. Common names must be grouped and sorted BEFORE all synonyms, microspecies or subspecies, and references.
-- 18.5. The common names of each language should be sorted relative to each other according to their importance/prominence in everyday use or according to their preference when a newer name is supposed to phase-out the use of an older one. More important/preferred names should be listed closer to the top.
-- 18.6. The allowed character sets are basic latin (A-Z), extended latin (äáéöüß etc.), apostrophes (U+0027), hyphens (U+002D) and spaces (U+0020).
-- 18.7. The words of a common name must always start with an upper-case letter, with the exception of conjunctions like "and", "of", "du", "und", "von", which should be lower-case only.
-- 18.8. Common names must follow English and German grammar and spelling rules respectively.
-- 18.9. Common names including obscene, vulgar, offensive or insulting terms are not accepted.
-- 18.10. Adding common names can sometimes lead to duplicates, which should be avoided. In such a case, one of the names should be changed or removed.
-- 18.11. Moth-like butterflies should be called "Moth Butterflies" (German "Trugfalter") instead of the older term "Butterfly Moths".
-- 18.12. The German term "Falter" should be avoided for Microlepidopterans if possible, as it can cause confusion of names and is more often used to refer to Macrolepidopterans. Instead, the term "Motten" is preferred for Microlepidopterans.
-- 18.13. The obsolescent German term "Gemein" is to be replaced with the more modern and easier to understand term "Gewöhnlich".
-- 18.14. Abbreviations like "&" for "and/und", "St." for "Saint/Sankt" or "Mt." for "Mount" should be avoided, common names should always contain full words.
+- 20.1. The addition of type 1 common names (`e`, `d`) is supported for species and species aggregates. These names must be written in SINGULAR.
+- 20.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
+- 20.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
+- 20.4. Common names must be grouped and sorted BEFORE all synonyms, microspecies or subspecies, and references.
+- 20.5. The common names of each language should be sorted relative to each other according to their importance/prominence in everyday use or according to their preference when a newer name is supposed to phase-out the use of an older one. More important/preferred names should be listed closer to the top.
+- 20.6. The allowed character sets are basic latin (A-Z), extended latin (äáéöüß etc.), apostrophes (U+0027), hyphens (U+002D) and spaces (U+0020).
+- 20.7. The words of a common name must always start with an upper-case letter, with the exception of conjunctions like "and", "of", "du", "und", "von", which should be lower-case only.
+- 20.8. Common names must follow English and German grammar and spelling rules respectively.
+- 20.9. Common names including obscene, vulgar, offensive or insulting terms are not accepted.
+- 20.10. Adding common names can sometimes lead to duplicates, which should be avoided. In such a case, one of the names should be changed or removed.
+- 20.11. Moth-like butterflies should be called "Moth Butterflies" (German "Trugfalter") instead of the older term "Butterfly Moths".
+- 20.12. The German term "Falter" should be avoided for Microlepidopterans if possible, as it can cause confusion of names and is more often used to refer to Macrolepidopterans. Instead, the term "Motten" is preferred for Microlepidopterans.
+- 20.13. The obsolescent German term "Gemein" is to be replaced with the more modern and easier to understand term "Gewöhnlich".
+- 20.14. Abbreviations like "&" for "and/und", "St." for "Saint/Sankt" or "Mt." for "Mount" should be avoided, common names should always contain full words.
 
 ---
-### 19 - SYN (`s`, `s2`, `s3`, `s4`)
+### 21 - SYN (`s`, `s2`, `s3`, `s4`)
 A binomial or trinomial synonym of a species, subspecies or microspecies. These synonyms can be listed within species and species aggregates to make obsolete scientific names available via the search function. Depending on which part of the species' or species aggregate's binomial name is retained in the synonym, different data point classes (`s`, `s2`, `s3`, `s4`) can be chosen to automatically generate the retained part via JavaScript.
 
 :point_right: **Guidelines:**
-- 19.1. Type 1 synonyms (`s`) should be used for synonyms with the same genus name, but a different species (+optional subspecies) epithet. The parent genus name is prepended automatically via JavaScript.
-- 19.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
-- 19.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
-- 19.4. Type 4 synonyms (`s4`) should be used if neither the genus name nor the species epithet of the parent matches. A different genus name and species epithet must be given (+an optional subspecies epithet).
-- 19.5. Synonyms must be grouped and sorted AFTER all common names, but BEFORE all microspecies or subspecies, and references.
-- 19.6. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
-- 19.7. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
-- 19.8. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
+- 21.1. Type 1 synonyms (`s`) should be used for synonyms with the same genus name, but a different species (+optional subspecies) epithet. The parent genus name is prepended automatically via JavaScript.
+- 21.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
+- 21.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
+- 21.4. Type 4 synonyms (`s4`) should be used if neither the genus name nor the species epithet of the parent matches. A different genus name and species epithet must be given (+an optional subspecies epithet).
+- 21.5. Synonyms must be grouped and sorted AFTER all common names, but BEFORE all microspecies or subspecies, and references.
+- 21.6. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
+- 21.7. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
+- 21.8. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
 
 ---
-### 20 - SYN_H (`sh`)
+### 22 - SYN_H (`sh`)
 The synonym of a higher taxon, especially family- and tribe-level taxa.
 
 :point_right: **Guidelines:**
-- 20.1. Higher taxon synonyms are supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
-- 20.2. Higher taxon synonyms must be sorted according to guidelines 19.5. and 19.6.
-- 20.3. The naming of section-level taxa follows Guidelines 1.2. and 1.3.
-- 20.4. Guideline 19.8. applies for higher taxon synonyms as well.
+- 22.1. Higher taxon synonyms are supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
+- 22.2. Higher taxon synonyms must be sorted according to guidelines 19.5. and 19.6.
+- 22.3. The naming of section-level taxa follows Guidelines 1.2. and 1.3.
+- 22.4. Guideline 19.8. applies for higher taxon synonyms as well.
 
 ---
-### 21 - REF (`r`, `r2`)
+### 23 - REF (`r`, `r2`)
 A reference to a scientific publication/dataset the phylogenetic data is based on. This data type forms the first element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 21.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
-- 21.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
-- 21.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
-- 21.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
-- 21.5. References must be grouped and sorted AFTER all common names, synonyms, microspecies or subspecies.
-- 21.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
-- 21.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
-- 21.8. The author names must be their last name only and follow Guideline 18.6.
-- 21.9. The publication year only supports 21<sup>st</sup> century values in _YY_ format. This restriction should limit references to the ones providing "modern phylogeny". Even though phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.
-- 21.10. The publication year _YY_ value must be separated by a single apostrophe (U+0027) from the author(s). The apostrophe is replaced with ", 20" automatically via JavaScript.
-- 21.11. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
-- 21.12. Referenced publications should preferentially be available in English, but are also accepted in German. If they're written in any other language, at least the abstract and data should be available in English.
-- 21.13. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
+- 23.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
+- 23.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
+- 23.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
+- 23.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
+- 23.5. References must be grouped and sorted AFTER all common names, synonyms, microspecies or subspecies.
+- 23.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
+- 23.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
+- 23.8. The author names must be their last name only and follow Guideline 18.6.
+- 23.9. The publication year only supports 21<sup>st</sup> century values in _YY_ format. This restriction should limit references to the ones providing "modern phylogeny". Even though phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.
+- 23.10. The publication year _YY_ value must be separated by a single apostrophe (U+0027) from the author(s). The apostrophe is replaced with ", 20" automatically via JavaScript.
+- 23.11. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
+- 23.12. Referenced publications should preferentially be available in English, but are also accepted in German. If they're written in any other language, at least the abstract and data should be available in English.
+- 23.13. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
 
 ---
-### 22 - REF_TITLE (`l`)
+### 24 - REF_TITLE (`l`)
 The title of a referenced scientific publication. This data type forms the second element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 22.1. The title should be taken straight from the publication, unmodified. If there's two or more titles in different languages available, English has priority 1 and should be used instead (if present), German has priority 2.
-- 22.2. Titles must always be the second element of a REF data triplet, therefore be prepended by a REF and appended by a REF_ID. These three data points belong together and should not be separated!
-- 22.3. The sorting follows Guideline 21.5.
+- 24.1. The title should be taken straight from the publication, unmodified. If there's two or more titles in different languages available, English has priority 1 and should be used instead (if present), German has priority 2.
+- 24.2. Titles must always be the second element of a REF data triplet, therefore be prepended by a REF and appended by a REF_ID. These three data points belong together and should not be separated!
+- 24.3. The sorting follows Guideline 21.5.
 
 ---
-### 23 - REF_ID (`p`, `p2`)
+### 25 - REF_ID (`p`, `p2`)
 The ID of a referenced scientific publication. This data type forms the last element of REF data triplets including REF, REF_TITLE and REF_ID.
 
 :point_right: **Guidelines:**
-- 23.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
-- 23.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
-- 23.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
-- 23.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. The ISSN-L will be turned into a link to the ISSN portal on the Lepitaxa webpage, offering more details on the publication source. Please make sure this link actually works!
-- 23.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and NO spaces. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
-- 23.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
-- 23.7. The sorting follows Guideline 21.5.
+- 25.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
+- 25.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
+- 25.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
+- 25.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. The ISSN-L will be turned into a link to the ISSN portal on the Lepitaxa webpage, offering more details on the publication source. Please make sure this link actually works!
+- 25.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and NO spaces. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
+- 25.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
+- 25.7. The sorting follows Guideline 21.5.
 
 ---
 
