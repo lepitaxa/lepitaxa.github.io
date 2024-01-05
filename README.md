@@ -308,7 +308,7 @@ The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and 
 The epithet of a species hybrid. The genus name and multiplication sign "×" is prepended automatically via JavaScript to form the full hybrid name.
 
 :point_right: **Guidelines:**
-- 18.1. Hybrids are only supported for different species within the same genus, as no real intergeneric hybrids have been proven within the Lepidoptera.
+- 18.1. Hybrids are only supported for different species within the same genus, as intergeneric hybrids are extremely rare within the Lepidoptera.
 - 18.2. If the parent species do not belong to the same subgenus or species group, the hybrid should be listed separately within the lowest common taxon. Introducing a new subgenus or species group for the hybrid alone is not required, instead it should be listed as a stand-alone name before all subgenera within a genus or before all species groups within a subgenus.
 - 18.3. If the parent species do belong to the same subgenus or species group, the hybrid should be listed alphabetically along with the other species. The the multiplication sign "×" should be ignored when sorting.
 - 18.3. The naming of hybrids follows Guidelines 14.2. and 14.3.
@@ -324,7 +324,7 @@ The epithet(s) of the first (`v`) and the second (`v2`) parent (sub)species of a
 - 19.2. Every species hybrid needs to have both parent species listed, with `v2` directly following `v`.
 - 19.3. Parent species must be grouped and sorted AFTER all common names and synonyms, but BEFORE all references within a species hybrid.
 - 19.4. The naming of epithets follows Guidelines 14.2. and 14.3.
-- 19.5. Adding a subspecies epithet is optional and should only be done if the subspecies important for the hybridization. Listing a microspecies as one of the parents is acceptable.
+- 19.5. Adding a subspecies epithet is optional and should only be done if the subspecies is important for the hybridization. Listing a microspecies as one of the parents is acceptable.
 
 ---
 ### 20 - NAME_EN, NAME_DE (`e`, `e2`, `d`, `d2`)
