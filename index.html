@@ -81,11 +81,9 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .j			{padding-left:2.8rem; font-size:1.5rem}
 .h			{padding-left:3.7rem; font-size:1.3rem}
 .g			{padding:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
-.g::before	{content:"▪ "; font-style:normal; color:#000}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c,.w{padding:0 0 0 6.5rem}
-:is(.a,.ae,.c,.w)::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
+.a,.ae,.c,.w	{padding:0 0 0 6.5rem}
 .u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
@@ -97,7 +95,11 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
-p>a			{color:#666}
+p>a:not(.link)		{color:#666}
+.link, .link:hover	{text-decoration:none}
+:is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
+.g>.link::before	{content:"▪ "; font-style:normal}
+
 
 /*Main - taxa*/
 .x9::before		{content:"Order "}
@@ -45035,9 +45037,10 @@ while (sib) { // Loop for each GEN
 	if (sib.matches('.g')) break // If next GEN reached, stop loop
 	sib = sib.nextElementSibling}});
 
-//6 Generate taxon IDs, prefix/suffix strings
+//6 Generate taxon IDs, ID links and prefix/suffix strings
 $$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
 $$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});

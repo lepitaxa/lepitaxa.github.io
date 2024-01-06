@@ -11,6 +11,9 @@ $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nu
 // Trim v datapoints back to only show one species name
 $$('.v').forEach(f=>{f.innerHTML = f.innerHTML.replace(/ ×.+/,'')});
 
+// Remove ID links
+$$('.link').forEach(f=>{f.remove()});
+
 
 
 ////2 Simple conditional batch checks
@@ -282,8 +285,9 @@ var results = '------------------------\nLepitest Log:\n------------------------
 console.log(results); alert(info1 + info2 + results);
 
 
-////7 Call the correct converter for the selected export format
+////7 Call the correct converter for the selected export format, rebuild the ID links afterwards
 if (format == 'xml') xml(); else dsv();
+$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 
 
 
