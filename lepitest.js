@@ -92,7 +92,7 @@ if (f.matches('.v2') && !(f.matches('p:is(.v)+p'))) {i++; log += '[#' + i + s4 +
 if (f.matches('.l') && !(f.matches('p:is(.r,.r2)+p')) || f.matches('.p,.p2') && !(f.matches('p.l+p'))) {i++; log += '[#' + i + s4 + 'Every REF must be followed by a proper REF_TITLE and REF_ID.\n'};
 
 // Data types
-if (f.matches('p:not(.x9,.x8,.x7,.x6,.x5,.x4,.x3,.x2,.x,.xs,.xp,.f,.y,.t,.j,.h,.g,.i,.o,.a,.ae,.c,.m,.u,.ue,.w,.v,.v2,.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.sh,.r,.r2,.l,.p,.p2)')) {i++; log += '[#' + i + s3 + 'Use a valid data type.\n'};
+if (f.matches('p:not(.x9,.x8,.x7,.x6,.x5,.x4,.x3,.x2,.x,.xs,.xp,.f,.y,.t,.j,.h,.g,.i,.o,.a,.ae,.c,.b,.k,.n,.m,.u,.ue,.w,.v,.v2,.e,.e2,.d,.d2,.s,.s2,.s3,.s4,.sh,.r,.r2,.l,.p,.p2)')) {i++; log += '[#' + i + s3 + 'Use a valid data type.\n'};
 });
 
 
@@ -347,6 +347,6 @@ file_link.click(); file_link.remove()};
 function convert(dt) {
 dt = dt.toString();
 dt = dt.replace(/(en|de|hide|open)/g,'');
-dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('ls','REF_TITLE').replace('sh','SYN_H').replace('w','HYBR');
-dt = dt.replace(/\d/g,'').replace('x','SUPERFAM').replace('f','FAM').replace('y','SUBFAM').replace('t','TRI').replace('j','SUBTRI').replace('h','INFRATRI').replace('g','GEN').replace('i','SUBGEN').replace('o','SPGR').replace('a','SP').replace('c','AGG').replace('m','SEG').replace('u','SSP').replace('v','PARENT').replace('r','REF').replace('l','REF_TITLE').replace('p','REF_ID').replace('e','NAME_EN').replace('d','NAME_DE').replace('s','SYN');
+dt = dt.replace(/ /g,'').replace('x9','ORD').replace('x8','SUBORD').replace('x7','INFRAORD').replace('x6','PARVORD').replace('x5','MICROORD').replace('x4','SECT').replace('x3','SUBSECT').replace('x2','INFRASECT').replace('xs','SERIES').replace('xp','PARAPHYLUM').replace('ae','SP_EXT').replace('ue','SSP_EXT').replace('bs','BAS').replace('ls','REF_TITLE').replace('sh','SYN_H').replace('w','HYBR');
+dt = dt.replace(/\d/g,'').replace('x','SUPERFAM').replace('f','FAM').replace('y','SUBFAM').replace('t','TRI').replace('j','SUBTRI').replace('h','INFRATRI').replace('g','GEN').replace('i','SUBGEN').replace('o','SPGR').replace('a','SP').replace('c','AGG').replace('k','BAS_AUT').replace('n','BAS_GBIF').replace('m','SEG').replace('u','SSP').replace('v','PARENT').replace('r','REF').replace('l','REF_TITLE').replace('p','REF_ID').replace('e','NAME_EN').replace('d','NAME_DE').replace('s','SYN');
 return dt};

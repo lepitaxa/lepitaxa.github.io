@@ -45037,10 +45037,9 @@ while (sib) { // Loop for each GEN
 	if (sib.matches('.g')) break // If next GEN reached, stop loop
 	sib = sib.nextElementSibling}});
 
-//6 Generate taxon IDs, ID links and prefix/suffix strings
+//6 Generate taxon IDs, prefix/suffix strings and ID links
 $$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
-$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
 $$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
@@ -45053,6 +45052,7 @@ $$('.p2').forEach(f=>{f.innerHTML = 'ISSN-L ' + f.innerHTML.replace(',',', ')});
 $$('.l').forEach(f=>{var sib = f.nextElementSibling.innerHTML; f.innerHTML = '<span class="ls">' + f.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
 if (f.nextElementSibling.matches('.p')) {f.innerHTML += '<a href="https://doi.org/' + sib.substring(4,sib.length) + '">' + sib + '</a>'}
 else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.substring(7,16) + '">' + sib.substring(0,16) + '</a>' + sib.substring(16,sib.length)}});
+$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 
 //7 Generate spoilers and their eventlisteners
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
