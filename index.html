@@ -15,7 +15,7 @@
 @media screen and (max-width: 660px) {:root	{--z:2.424vw}}
 
 :root			{--m:Consolas, monospace; font-size:var(--z)}
-.hide,.v2,.p,.p2{display:none}
+.hide,.v2,.n,.p,.p2	{display:none}
 body			{font-family:Verdana, sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
 a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
@@ -84,7 +84,7 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
 .a,.ae,.c,.w	{padding:0 0 0 6.5rem}
-.u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.b,.u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
@@ -95,11 +95,11 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
-p>a:not(.link)		{color:#666}
 .link, .link:hover	{text-decoration:none}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
-
+.b			{color:#448}
+.ns			{font-family:"Times New Roman", Times, serif; text-transform:uppercase}
 
 /*Main - taxa*/
 .x9::before		{content:"Order "}
@@ -254,7 +254,8 @@ e	Southern Swallowtail
 e	Alexanor Swallowtail
 d	Südlicher Schwalbenschwanz
 d	Alexanor-Schwalbenschwanz
-s2	Papilio
+b	Papilio
+n	Esper, 1800
 u	judaeus
 u	orientalis
 g	Papilio
@@ -275,6 +276,8 @@ e	Indra Swallowtail
 e	Short-tailed Black Swallowtail
 e	Cliff Swallowtail
 d	Indra-Schwalbenschwanz
+b	Papilio
+n	Reakirt, 1866
 u	calcicola
 u	fordi
 u	kaibabensis
@@ -301,9 +304,13 @@ u	oregonius
 a	brevicauda
 e	Short-tailed Swallowtail
 d	Kurzschwänziger Schwalbenschwanz
+b	Papilio
+n	Saunders, 1869
 a	joanae
 e	Ozark Swallowtail
 d	Ozark-Schwalbenschwanz
+b	Papilio
+n	Heitzman, 1974
 s3	polyxenes
 a	kahli
 s3	polyxenes
@@ -312,6 +319,8 @@ e	Swallowtail
 e	Old World Swallowtail
 e	Common Yellow Swallowtail
 d	Schwalbenschwanz
+b	Papilio
+n	Linnaeus, 1758
 s	hippocrates
 s	saharae
 u	aliaska
@@ -331,6 +340,8 @@ o	Polyxenes
 a	hospiton
 e	Corsican Swallowtail
 d	Korsischer Schwalbenschwanz
+b	Papilio
+n	Géné, 1839
 a	polyxenes
 e	Black Swallowtail
 e	American Swallowtail
@@ -338,6 +349,8 @@ e	Parsnip Swallowtail
 e	Parsley Swallowtail
 d	Schwarzer Schwalbenschwanz
 d	Amerikanischer Schwalbenschwanz
+b	Papilio
+n	Fabricius, 1775
 s	coloro
 s	rudkini
 u	americus
@@ -351,6 +364,8 @@ p2	0123-3068,13(1)
 a	zelicaon
 e	Anise Swallowtail
 d	Anis-Schwalbenschwanz
+b	Papilio
+n	Lucas, 1852
 s	nitra
 i	Sinoprinceps
 a	benguetanus
@@ -360,6 +375,8 @@ a	xuthus
 e	Asian Swallowtail
 e	Xuthus Swallowtail
 d	Asiatischer Schwalbenschwanz
+b	Papilio
+n	Linnaeus, 1767
 i	Nireopapilio
 o	Cynorta
 a	arnoldiana
@@ -876,10 +893,14 @@ e	Dainty Swallowtail
 e	Dingy Swallowtail
 e	Small Citrus Butterfly
 d	Kleiner Obstgarten-Schwalbenschwanz
+b	Papilio
+n	Macleay, 1826
 s2	Eleppone
 a	natewa
 e	Natewa Swallowtail
 d	Natewa-Schwalbenschwanz
+b	Papilio
+n	Tennent, Chandra & Müller, 2018
 r	Tennent'18
 l	A remarkable new swallowtail butterfly from Fiji (Lepidoptera, Papilionidae)
 p2	0723-9912,39(2)
@@ -1010,7 +1031,8 @@ i	Jasoniades
 w	appalachiensis
 e	Appalachian Tiger Swallowtail
 d	Appalachen-Tigerschwalbenschwanz
-s4	Papilio appalachiensis
+b	Papilio
+n	Pavulaan & D.Wright, 2002
 s	appalachiensis
 v	canadensis
 v2	glaucus
@@ -45020,13 +45042,13 @@ $('link').setAttribute('href',$('img').getAttribute('src'));
 //3 Convert raw data to HTML
 raw.innerHTML = raw.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>');
 
-//4 Add SP epithets to SSP and s2/s3 SYN
-$$('.a,.ae,.c').forEach(f=>{
+//4 Add SP epithets to BAS, SSP and s2/s3 SYN
+$$('.a,.ae,.c,.w').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) { // Loop for each SP
 	if (sib.matches('.u,.ue')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If SSP, add SP name before
-	if (sib.matches('.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML; // If s2/s3 SYN, add SP name after
-	if (sib.matches('.a,.ae,.c')) break // If next SP reached, stop loop
+	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML; // If BAS or s2/s3 SYN, add SP name after
+	if (sib.matches('.a,.ae,.c,.w')) break // If next SP reached, stop loop
 	sib = sib.nextElementSibling}});
 
 //5 Add GEN names to SP epithets
@@ -45038,13 +45060,14 @@ while (sib) { // Loop for each GEN
 	sib = sib.nextElementSibling}});
 
 //6 Generate taxon IDs, prefix/suffix strings and ID links
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
+$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh,.b').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
 $$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
 $$('.c').forEach(f=>{f.innerHTML += ' agg.'});
 $$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
 $$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 $$('.ae,.ue').forEach(f=>{f.innerHTML += ' †'});
+$$('.b').forEach(f=>{var sib = f.nextElementSibling; f.innerHTML = '<span class="bs">' + f.innerHTML + ' </span><span class="ns">' + sib.innerHTML + '</span>'});
 $$('.r').forEach(f=>{f.innerHTML = f.innerHTML.replace("'"," et al., 20")});
 $$('.r2').forEach(f=>{f.innerHTML = f.innerHTML.replace(',',' & ').replace("'",", 20")});
 $$('.p').forEach(f=>{f.innerHTML = 'doi:' + f.innerHTML});
