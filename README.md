@@ -381,11 +381,12 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 23.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
 - 23.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
 - 23.4. Type 4 synonyms (`s4`) should be used if neither the genus name nor the species epithet of the parent matches. A different genus name and species epithet must be given (+an optional subspecies epithet).
-- 24.5. The addition of binomial or trinomial synonyms is supported for all species-level taxa (`a`, `ae`, `c`).
-- 23.6. Synonyms must be grouped and sorted AFTER all common names and basionyms, but BEFORE all microspecies or subspecies, and references.
-- 23.7. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
-- 23.8. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
-- 23.9. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
+- 23.5. The addition of binomial or trinomial synonyms is supported for all species-level taxa (`a`, `ae`, `c`).
+- 23.6. The addition of a binomial synonym should be avoided or an existing one be deleted if there is an equal basionym present.
+- 23.7. Synonyms must be grouped and sorted AFTER all common names and basionyms, but BEFORE all microspecies or subspecies, and references.
+- 23.8. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
+- 23.9. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
+- 23.10. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There're excessive numbers of synonyms available for some taxa of which most can be safely ignored.
 
 ---
 ### 24 - SYN_H (`sh`)
