@@ -335,7 +335,7 @@ The epithet(s) of the first (`v`) and the second (`v2`) parent (sub)species of a
 The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species, species complex or certain higher-level taxa like families and tribes.
 
 :point_right: **Guidelines:**
-- 20.1. The addition of type 1 common names (`e`, `d`) is supported for all species-level taxa (`a`, `ae`, `c`). These names must be written in SINGULAR.
+- 20.1. The addition of type 1 common names (`e`, `d`) is supported for all species-level taxa (`a`, `ae`, `c`, `w`). These names must be written in SINGULAR.
 - 20.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
 - 20.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
 - 20.4. Common names must be grouped and sorted BEFORE all  basionyms, synonyms, microspecies or subspecies, and references.
@@ -355,7 +355,7 @@ The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species
 The genus of the basionym (original combination) of the species' or species aggregate's binomial name. The species epithet is prepended automatically via JavaScript to form the full binomial basionym, under which this species epithet was first published. This data type forms the first element of the BAS and BAS_AUT data pairs.
 
 :point_right: **Guidelines:**
-- 21.1. The addition of basionyms is supported for all species-level taxa (`a`, `ae`, `c`).
+- 21.1. The addition of basionyms is supported for all species-level taxa (`a`, `ae`, `c`, `w`).
 - 21.2. Basionyms must be placed AFTER all common names, but BEFORE all microspecies or subspecies, and references.
 - 21.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by a BAS_AUT. These two data points belong together and should not be separated!
 - 21.4. The naming of basionym genera follows Guidelines 1.2. and 1.3.
@@ -381,7 +381,7 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 23.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
 - 23.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
 - 23.4. Type 4 synonyms (`s4`) should be used if neither the genus name nor the species epithet of the parent matches. A different genus name and species epithet must be given (+an optional subspecies epithet).
-- 23.5. The addition of binomial or trinomial synonyms is supported for all species-level taxa (`a`, `ae`, `c`).
+- 23.5. The addition of binomial or trinomial synonyms is supported for all species-level taxa (`a`, `ae`, `c`, `w`).
 - 23.6. The addition of a binomial synonym should be avoided or an existing one be deleted if there is an equal basionym present.
 - 23.7. Synonyms must be grouped and sorted AFTER all common names and basionyms, but BEFORE all microspecies or subspecies, and references.
 - 23.8. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
@@ -405,7 +405,7 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 :point_right: **Guidelines:**
 - 25.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
 - 25.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated with a single comma (U+002C) and NO spaces. The comma is, if present, replaced with " & " automatically via JavaScript.
-- 25.3. References are supported for all species-level taxa (`a`, `ae`, `c`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
+- 25.3. References are supported for all species-level taxa (`a`, `ae`, `c`, `w`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
 - 25.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
 - 25.5. References must be grouped and sorted AFTER all common names, basionyms, synonyms, microspecies or subspecies.
 - 25.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the author (alphabetical).
