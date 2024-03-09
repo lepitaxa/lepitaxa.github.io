@@ -24,7 +24,7 @@ a,u				{color:#000; text-decoration:underline; cursor:pointer}
 
 /*Header+Footer*/
 @keyframes e	{from {visibility:hidden} to {visibility:visible}}
-b		{animation-name:e; animation-delay:5s; animation-fill-mode:both; color:red}
+b		{animation-name:e; animation-delay:7s; animation-fill-mode:both; color:red}
 img		{height:2rem}
 #v		{height:1.4rem; margin:1rem 12rem 0 0.2rem; vertical-align:0.22rem}
 .bH,.bF	{fill:#666; cursor:pointer; float:right}
@@ -85,7 +85,6 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .o			{font-size:0.9rem; color:#777}
 .a,.ae,.c,.w	{padding:0 0 0 6.5rem}
 .b,.u,.ue,.m,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
-p>a			{color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
@@ -96,6 +95,7 @@ p>a			{color:#666}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
+p.l>a		{color:#666}
 .link, .link:hover	{text-decoration:none}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
@@ -11457,9 +11457,10 @@ g	Pseudacraea
 a	boisduvali
 e	Boisduval's False Acraea
 d	Falsche Acräa
+s	boisduvalii
 a	dolomena
 e	Variable False Acraea
-d	Schein-Bematiste
+d	Unvollständige Bematiste
 a	eurytus
 e	False Wanderer
 e	Common False Acraea
@@ -11468,12 +11469,15 @@ a	lucretia
 e	False Chief
 e	False Diadem
 d	Falscher Mönch
+a	poggei
+e	False Monarch
+d	Falscher Monarch
 a	semire
 e	Green False Acraea
 d	Grüner Mischling
 a	warburgi
 e	Incipient False Acraea
-d	Oranger Mischling
+d	Unvollständige Acräa
 t	Adoliadini
 j	Adoliadina
 g	Bassarona
@@ -12605,17 +12609,21 @@ e	Clipper
 d	Segler
 b	Papilio
 n	Cramer, 1776
+s	apicalis
 s	aspila
+s	sylla apicalis
+s	sylvia apicalis
+s	sylvia gambrisius
+s	sylvia sylla
+s	sylvia violaceae
 s	tigrina
-u	apicalis
 u	aspila
 u	borneensis
-u	gambrisius
 u	lilacinus
 u	philippensis
 u	roepstorfii
+u	sylvia
 u	tigrina
-u	violaceae
 y	Heliconiinae
 e2	Longwings
 e2	Heliconians
@@ -16743,6 +16751,9 @@ e	Dusky Giant Owl
 e	Cane Mort Bleu
 d	Himmelblauer Bananenfalter
 a	oedipus
+e	Fruhstorfer's Giant Owl
+e	Boomerang Owl
+d	Bumerang-Bananenfalter
 a	oileus
 e	Oileus Giant Owl
 d	Gebänderter Bananenfalter
@@ -18149,7 +18160,9 @@ a	laertes
 e	Yellow-tufted Prepona
 e	Shaded-blue Leafwing
 d	Dunkelblauer Schuster
+s	octavia
 s	omphale
+u	octavia
 u	omphale
 i	Dexaprepona
 a	dexamenus
@@ -18453,6 +18466,11 @@ e	Common Crow
 d	Gewöhnliche Krähe
 b	Papilio
 n	Cramer, 1780
+s	godartii
+u	amymone
+u	distanti
+u	godartii
+u	grammifera
 a	corinna
 e	Australian Crow
 d	Australische Krähe
@@ -27387,6 +27405,7 @@ g	Egybolis
 a	vaillantina
 e	African Peach Moth
 d	Afrikanische Pfirsicheule
+s2	Eggybolis
 r	Zahiri'22
 l	The phylogenetic placement of an enigmatic moth Egybolis vaillantina based on museomics
 p	10.1101/2022.09.27.509790
@@ -31369,7 +31388,9 @@ g	Cricula
 a	trifenestrata
 e	Cricula Silkmoth
 d	Criculaspinner
+s	agria
 s	andrei
+u	agria
 g	Eosia
 h	Lemaireiiti
 g	Lemaireia
