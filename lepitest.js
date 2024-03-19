@@ -28,7 +28,7 @@ var sf = 'The suffix of this taxon type must be "'
 
 
 // Special characters and capitalization
-if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d) || f.matches('.n, .r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
 if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o,.bs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.a,.ae,.c,.m,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
@@ -71,10 +71,11 @@ if (f.matches('.h') && !(/iti$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iti
 if (f.matches('p:not(.c)') && (/ agg\.$/.test(d))) {i++; log += '[#' + i + s1 + 'Use the AGG datatype to add the "agg." suffix to a species complex.\n'};
 
 // BAS and REF errors
-if (f.matches('.n') && (!(/^\D+, (1|2)(7|8|9|0)\d\d$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the BAS_AUT ends with a valid date in , YYYY format, starting at 1758.\n"};
-if (f.matches('.r,.r2') && !(/, 20\d\d$/.test(d))) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in 'YY format.\n"};
-if (f.matches('.r') && (d.match(/,/g) || []).length > 1) {i++; log += '[#' + i + s1 + "Only list the first author when using the r data type.\n"};
-if (f.matches('.r2') && (d.match(/,/g) || []).length > 2) {i++; log += '[#' + i + s1 + "Don't list more than 2 authors when using the r2 data type.\n"};
+if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the BAS_AUT ends with a valid date in YYYY format, starting at 1758.\n"};
+if (f.matches('.r,.r2') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1998)) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in YYYY format, starting at 1998.\n"};
+if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > version.substring(9,13)) {i++; log += '[#' + i + s1 + "You cannot use a future date for anything already published.\n"};
+if (f.matches('.r') && (/&/.test(d) || (d.match(/,/g) || []).length > 1 || (d.match(/et al/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Only list the first author when using the r data type. The "et al." prefix is added automatically for this data type and therefore should not be present in the raw data.\n'};
+if (f.matches('.r2') && (/&/.test(d) && (d.match(/ /g) || []).length < 3 || (d.match(/&/g) || []).length > 1 || (d.match(/,/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Do not list more than 2 authors when using the r2 data type. If there are 2 authors listed, make sure they are properly separated by a space-separated "&" character.\n'};
 if (f.matches('.p') && !(/^doi:10./.test(d))) {i++; log += '[#' + i + s1 + 'Make sure this REF_ID is a proper DOI, without any additional "doi:" or URL suffix.\n'};
 if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log += '[#' + i + s1 + "Make sure this REF_ID is a proper ISSN + Volume designation.\n"};
 
