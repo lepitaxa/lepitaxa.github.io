@@ -64,7 +64,11 @@ If you want to use Lepitaxa data for your own research, you’re free to do so i
 
 ## Data types
 ### Basic data syntax
-All data points within the Lepitaxa dataset share the following simple syntax made of four elements: **_`class`_ `TAB` _`data`_ `BR`**. These elements are:
+All data points within the Lepitaxa dataset share the following simple syntax made of four elements:
+
+**_`class`_ `TAB` _`data`_ `BR`**
+
+These elements are:
 1.  ***`class`*** – The data point class, which is a short and easy to remember set of 1-2 characters. Each class is linked to a data type and defines how the data string is handled and displayed.
 2. **`TAB`** – A single tab (U+0009 TAB character, \t). Do NOT use spaces instead, no matter how many!
 3. ***`data`*** – The actual data string, its specific fine structure for each data point class is explained further below.

@@ -11,12 +11,12 @@
 <meta property="og:url" content="https://lepitaxa.github.io">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
 <style>
-@media screen and (min-width: 660px) {:root	{--z:16px}}
-@media screen and (max-width: 660px) {:root	{--z:2.424vw}}
+@media screen and (min-width:660px) {:root{--z:16px}}
+@media screen and (max-width:660px) {:root{--z:2.424vw}}
 
-:root			{--m:Consolas, monospace; font-size:var(--z)}
+:root			{--m:Consolas,monospace; font-size:var(--z)}
 .hide,.v2,.n,.p,.p2	{display:none}
-body			{font-family:Verdana, sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
+body			{font-family:Verdana,sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
 a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
 :is(a,u):active	{color:#88F}
@@ -98,7 +98,7 @@ p.l>a		{color:#666}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
 .b			{color:#448}
-.ns			{font-family:"Times New Roman", Times, serif; text-transform:uppercase}
+.ns			{font-family:"Times New Roman",Times,serif; text-transform:uppercase}
 
 /*main, taxa*/
 .x9::before		{content:"Order "}
@@ -45500,9 +45500,8 @@ const $$ = document.querySelectorAll.bind(document);
 
 // INITIALIZATION STEPS
 //1 Generate infostats, simple string mods, convert data to HTML
-var raw	= $('main'); 
-raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
-var count = $$('p').length; 
+var raw	= $('main'); raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
+var count = $$('p').length;
 var size = count * 0.0000164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
 $('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19)).replace('_y',version.substring(9,13));
@@ -45531,13 +45530,8 @@ var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
 spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
-while (sib) { // Loop for each div
-	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
-	else if (f.matches('.f') && sib.matches('p:not(.f,[class^="x"])')) div.appendChild(sib); // If spc is FAM & sib matches, move sib into div
-	else if (f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])')) div.appendChild(sib); // If spc is SUBFAM & sib matches, move sib into div
-	else if (f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])')) div.appendChild(sib); // If spc is TRI & sib matches, move sib into div
-	else if (f.matches('.j') && sib.matches('p:not(.f,.y,.t,.j,[class^="x"])')) div.appendChild(sib); // If spc is SUBTRI & sib matches, move sib into div
-	else if (f.matches('.h') && sib.matches('p:not(.f,.y,.t,.j,.h,[class^="x"])')) div.appendChild(sib); // If spc is INFRATRI & sib matches, move sib into div
+while (sib) { // Loop for each div: If spc and sib matches, move sib into div
+	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh') || f.matches('.f') && sib.matches('p:not(.f,[class^="x"])') || f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])') || f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])') || f.matches('.j') && sib.matches('p:not(.f,.y,.t,.j,[class^="x"])') || f.matches('.h') && sib.matches('p:not(.f,.y,.t,.j,.h,[class^="x"])')) div.appendChild(sib);
 	else break
 	sib = div.nextElementSibling}});
 
