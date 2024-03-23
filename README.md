@@ -408,7 +408,7 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 - 25.3. References are supported for all species-level taxa (`a`, `ae`, `c`, `w`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
 - 25.4. References must always be the first element of a REF data triplet, therefore be followed by a REF_TITLE and REF_ID. These three data points belong together and should not be separated!
 - 25.5. References must be grouped and sorted AFTER all common names, basionyms, synonyms, microspecies or subspecies.
-- 25.6. REF data triplets should be sorted relative to each other by the year of publication (ascending) and within the same year by the first author (alphabetical).
+- 25.6. REF data triplets should be sorted relative to each other by the year of publication (ascending), within the same year by the first author (alphabetical) and if still the same, by title (alphabetical).
 - 25.7. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
 - 25.8. The author names must be their last name only and follow Guideline 20.6.
 - 25.9. The publication year only supports values in _YYYY_ format, starting at 1998. This restriction should limit references to the ones providing "modern phylogeny". Even though older phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.

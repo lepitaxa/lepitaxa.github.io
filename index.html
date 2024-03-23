@@ -9,7 +9,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://lepitaxa.github.io">
-<link rel="icon">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
 <style>
 @media screen and (min-width: 660px) {:root	{--z:16px}}
 @media screen and (max-width: 660px) {:root	{--z:2.424vw}}
@@ -22,10 +22,8 @@ a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):active	{color:#88F}
 :is(main, footer)::before	{content:" "; display:block; border-top:0.13rem solid gray; transform:translateY(0.7rem)}
 
-/*Header+Footer*/
-@keyframes e	{from {visibility:hidden} to {visibility:visible}}
-b		{animation-name:e; animation-delay:7s; animation-fill-mode:both; color:red}
-img		{height:2rem}
+/*header+footer*/
+#lg		{height:2rem}
 #v		{height:1.4rem; margin:1rem 12rem 0 0.2rem; vertical-align:0.22rem}
 .bH,.bF	{fill:#666; cursor:pointer; float:right}
 .bH		{height:1.35rem; border:0; margin:1.1rem 0.35rem; position:sticky; top:0.7rem; z-index:1}
@@ -39,7 +37,7 @@ footer::before	{transform:translateY(-0.75rem)}
 :is(.bH,.bF):hover	{color:blue; fill:blue; border-color:#AAF}
 :is(.bH,.bF):active	{color:#88F; fill:#99F}
 
-/*Main - colors*/
+/*main, colors*/
 #p	{background:linear-gradient(to right,#FFF,#FF9)}
 #n	{background:linear-gradient(to right,#FFF,#FC6)}
 #g	{background:linear-gradient(to right,#FFF,#CFC)}
@@ -58,7 +56,7 @@ footer::before	{transform:translateY(-0.75rem)}
 #a :is(h2,.f,.g)	{color:#A85}
 [class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; padding-bottom:0.2rem}
 
-/*Main - data*/
+/*main, data*/
 p			{margin:0}
 :is(.x9,.x,.xp,.f,.y,.t,.j,.h,.open)::after	{content:">"; display:inline-block; font-family:var(--m); font-size:0.9em; font-weight:400; font-style:normal; line-height:0; rotate:90deg; scale:0.9 1.1; translate:0.5em}
 .open::after	{content:"\003c"}
@@ -102,7 +100,7 @@ p.l>a		{color:#666}
 .b			{color:#448}
 .ns			{font-family:"Times New Roman", Times, serif; text-transform:uppercase}
 
-/*Main - taxa*/
+/*main, taxa*/
 .x9::before		{content:"Order "}
 .de.x9::before	{content:"Ordnung "}
 .x8::before		{content:"Suborder "}
@@ -142,9 +140,8 @@ p.l>a		{color:#666}
 </head>
 
 <body onload="setT(); if (/#/.test(window.location.href)) sload()">
-<header><h1>LEPITAXA</h1>⌛ Initializing ... <br><b>[ERROR: Initialization failed! This problem could be caused by an outdated browser, faulty script execution or bad internet connection.]</b></header>
-
-<img itemprop="logo" alt="Lepitaxa Logo" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
+<header><h1>LEPITAXA</h1>⌛ Initializing ...</header>
+<svg id="lg" itemprop="logo" viewBox='0 0 200 200'><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>
 <svg id="v" fill="#AAA" viewBox="0 0 2820 389"><path d="M0 0v389h238v-61H69V0Zm371 0v389h248v-61H440V221h128v-58H440V62h179V0Zm376 0v389h69V241c43-1 88 1 127-19 36-18 58-56 60-96 4-36-7-78-39-98C928 4 884-1 843 0Zm131 63c22 4 46 15 53 39 9 27-6 61-34 69-26 10-54 8-81 9V60c21 1 42 0 62 3zm251-63v389h69V0Zm200 0v62h124v327h69V62h129V0Zm503 0-153 389h76l31-88h119l31 88h76L1858 0Zm14 125 39 122h-80zm244 264 114-201L2097 0h70l79 132 89-132h69l-123 189 130 200h-75l-90-140-85 140zM2640 0l-153 389h76l31-88h119l31 88h76L2666 0Zm14 125 39 122h-80z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
@@ -45489,14 +45486,12 @@ g	Zealandopterix
 <h3 id="i8"><span class="EN">Check & export dataset:          </span><span class="DE">Datensatz prüfen & exportieren:  </span><u onclick="lepitest('txt')">txt</u> <u onclick="lepitest('csv')">csv</u> <u onclick="lepitest('tsv')">tsv</u> <u onclick="lepitest('xml')">xml</u></h3>
 </section>
 
-<section id="footend">
 <h4 itemprop="name">LEPITAXA – Lepidopteran Classification Project</h4>
 <h4 itemprop="copyrightNotice">© 2020-_y – Georg Hammerschmid</h4>
 <button class="bF" onpointerdown="document.getElementById('infostats').classList.toggle('hide')">Stats & Infos</button>
 <svg id="r" class="bF" tabindex="0" onpointerdown="location.href='https://github.com/lepitaxa/lepitaxa.github.io#readme'" viewBox="0 0 385 99"><title>GitHub README</title><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/><text x="120" y="78" font-size="62">README</text></svg>
 <button class="EN bF" title="Deutsch" onpointerdown="togLn()">DE</button>
 <button class="DE bF" title="English" onpointerdown="togLn()">EN</button>
-</section>
 </footer>
 
 <script>
@@ -45504,56 +45499,34 @@ const $ = document.querySelector.bind(document); // querySelector shortcuts
 const $$ = document.querySelectorAll.bind(document);
 
 // INITIALIZATION STEPS
-//1 Generate infostats from unmodified source
-var raw	= $('main');
-var count = raw.innerHTML.match(/\t/g).length;
-var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
-var	size = count * 0.0000164;
+//1 Generate infostats, simple string mods, convert data to HTML
+var raw	= $('main'); 
+raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
+var count = $$('p').length; 
+var size = count * 0.0000164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
-$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19));
-$('#footend').innerHTML = $('#footend').innerHTML.replace('_y',version.substring(9,13));
+$('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19)).replace('_y',version.substring(9,13));
 
-//2 Get logo from img and feed to tab icon
-$('link').setAttribute('href',$('img').getAttribute('src'));
-
-//3 Convert raw data to HTML
-raw.innerHTML = raw.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>');
-
-//4 Add SP epithets to BAS, SSP and s2/s3 SYN
-$$('.a,.ae,.c,.w').forEach(f=>{
-var sib = f.nextElementSibling;
-while (sib) { // Loop for each SP
-	if (sib.matches('.u,.ue')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If SSP, add SP name before
-	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML; // If BAS or s2/s3 SYN, add SP name after
-	if (sib.matches('.a,.ae,.c,.w')) break // If next SP reached, stop loop
+//2 Finish string mods, generate taxon IDs + ID links
+$$('div').forEach(f=>{
+var sib = f.firstElementChild; var genera = []; var epithets = []; var ig = -1; var ie = -1;
+while (sib) { // Loop for each div
+	if (sib.matches('.g')) {ig++; genera.push(sib.innerHTML)};
+	if (sib.matches('.a,.ae,.c,.w')) {ie++; epithets.push(sib.innerHTML); sib.innerHTML = genera[ig] + ' ' + sib.innerHTML};
+	if (sib.matches('.u,.ue')) sib.innerHTML = epithets[ie] + ' ' + sib.innerHTML;
+	if (sib.matches('.m,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = genera[ig] + ' ' + sib.innerHTML;
+	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + epithets[ie];
+	if (sib.matches('p:not(.v,.v2,.e,.e2,.d,.d2,.n,.r,.r2,.l,.p,.p2)')) sib.id = sib.classList + '$' + sib.innerHTML.toLowerCase().replace(/ /g,'_');
+	if (sib.matches('.a,.ae,.c,.w,.g')) {var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + sib.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); sib.prepend(id_lnk)};
+	if (sib.matches('.c')) sib.innerHTML += ' agg.';
+	if (sib.matches('.v')) sib.innerHTML += ' × ' + genera[ig] + ' ' + sib.nextElementSibling.innerHTML;
+	if (sib.matches('.b')) sib.innerHTML = '<span class="bs">' + sib.innerHTML + ' </span><span class="ns">' + sib.nextElementSibling.innerHTML + '</span>';
+	if (sib.matches('.l')) {var sib2 = sib.nextElementSibling.innerHTML; sib.innerHTML = '<span class="ls">' + sib.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
+		if (sib.nextElementSibling.matches('.p')) {sib.innerHTML += '<a href="https://doi.org/' + sib2.substring(4,sib2.length) + '">' + sib2 + '</a>'}
+		else {sib.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib2.substring(7,16) + '">' + sib2.substring(0,16) + '</a>' + sib2.substring(16,sib2.length)}};
 	sib = sib.nextElementSibling}});
 
-//5 Add GEN names to SP epithets
-$$('.g').forEach(f=>{
-var sib = f.nextElementSibling;
-while (sib) { // Loop for each GEN
-	if (sib.matches('.a,.ae,.c,.m,.w,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
-	if (sib.matches('.g')) break // If next GEN reached, stop loop
-	sib = sib.nextElementSibling}});
-
-//6 Generate taxon IDs, prefix/suffix strings and ID links
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh,.b').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
-$$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
-$$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
-$$('.c').forEach(f=>{f.innerHTML += ' agg.'});
-$$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
-$$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
-$$('.ae,.ue').forEach(f=>{f.innerHTML += ' †'});
-$$('.b').forEach(f=>{var sib = f.nextElementSibling; f.innerHTML = '<span class="bs">' + f.innerHTML + ' </span><span class="ns">' + sib.innerHTML + '</span>'});
-$$('.r').forEach(f=>{f.innerHTML = f.innerHTML.replace(","," et al.,")});
-$$('.p').forEach(f=>{f.innerHTML = 'doi:' + f.innerHTML});
-$$('.p2').forEach(f=>{f.innerHTML = 'ISSN-L ' + f.innerHTML});
-$$('.l').forEach(f=>{var sib = f.nextElementSibling.innerHTML; f.innerHTML = '<span class="ls">' + f.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
-if (f.nextElementSibling.matches('.p')) {f.innerHTML += '<a href="https://doi.org/' + sib.substring(4,sib.length) + '">' + sib + '</a>'}
-else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.substring(7,16) + '">' + sib.substring(0,16) + '</a>' + sib.substring(16,sib.length)}});
-$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
-
-//7 Generate spoilers and their eventlisteners
+//3 Generate spoilers
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
 spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
@@ -45568,13 +45541,13 @@ while (sib) { // Loop for each div
 	else break
 	sib = div.nextElementSibling}});
 
-//8 Check if browserLns is de and preset this lang, else use en
+//4 Check if browserLns is de and preset this lang, else use en
 var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
-//9 Remove init+error message
+//5 Remove init+error message
 $('header').style.display = "none";	////INIT complete
 
 // MAIN FUNCTIONS
