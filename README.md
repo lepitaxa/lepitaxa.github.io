@@ -12,7 +12,7 @@
 ## Introduction
 This project aims to provide a modern, up-to-date phylogeny-based classification of the large insect order Lepidoptera (Butterflies & Moths) in a simple and lightweight format.
 
-It consists of a single, somewhat minimalist and easy to navigate webpage including the entire lepidopteran taxonomy, with varying degrees of detail between the groups depending on their importance and available research data. Taxonomic data and classification changes are based on proper scientific data (in most cases referenced directly below the affected taxon), preferably precise phylogenetic studies.
+It consists of a single, somewhat minimalist and easy to navigate webpage including the entire lepidopteran taxonomy, with varying degrees of detail between the groups depending on their importance and available research data. Taxonomic data and classification changes are based on proper scientific data (in most cases referenced directly below the affected taxon), preferably precise phylogenetic or phylogenomic studies.
 
 The simplicity and public access of the data via GitHub allows anyone, hobbyists, enthusiasts and researchers alike, to add, correct, modify or use the taxonomic data. Contributions to the project are very welcome! More details on how to work with Lepitaxa data and about data structure guidelines can be found below.
 
@@ -417,7 +417,7 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 - 25.8. The author names must be their last name only and follow Guideline 20.6.
 - 25.9. The publication year only supports values in _YYYY_ format, starting at 1998. This restriction should limit references to the ones providing "modern phylogeny". Even though older phylogenetic research from the 1980s and 1990s must be considered important pioneer work, the resulting data simply doesn't hold up to modern standards.
 - 25.10. The publication year _YYYY_ value follows Guideline 22.6.
-- 25.11. Only references to publications containing phylogenetic data are accepted, preferably based on as-precise-as-possible molecular data, ideally phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon. 
+- 25.11. Referenced publications should always be based on molecular data, preferably as-precise-as-possible phylogenetics or phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon.
 - 25.12. Referenced publications should preferentially be available in English, but are also accepted in German. If they are written in any other language, at least the abstract and results (including graphs/cladograms) should be available in English.
 - 25.13. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
 
