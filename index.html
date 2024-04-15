@@ -9,23 +9,21 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://lepitaxa.github.io">
-<link rel="icon">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
 <style>
-@media screen and (min-width: 660px) {:root	{--z:16px}}
-@media screen and (max-width: 660px) {:root	{--z:2.424vw}}
+@media screen and (min-width:660px) {:root{--z:16px}}
+@media screen and (max-width:660px) {:root{--z:2.424vw}}
 
-:root			{--m:Consolas, monospace; font-size:var(--z)}
+:root			{--m:Consolas,monospace; font-size:var(--z)}
 .hide,.v2,.n,.p,.p2	{display:none}
-body			{font-family:Verdana, sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
+body			{font-family:Verdana,sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
 a,u				{color:#000; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
 :is(a,u):active	{color:#88F}
 :is(main, footer)::before	{content:" "; display:block; border-top:0.13rem solid gray; transform:translateY(0.7rem)}
 
-/*Header+Footer*/
-@keyframes e	{from {visibility:hidden} to {visibility:visible}}
-b		{animation-name:e; animation-delay:7s; animation-fill-mode:both; color:red}
-img		{height:2rem}
+/*header+footer*/
+#lg		{height:2rem}
 #v		{height:1.4rem; margin:1rem 12rem 0 0.2rem; vertical-align:0.22rem}
 .bH,.bF	{fill:#666; cursor:pointer; float:right}
 .bH		{height:1.35rem; border:0; margin:1.1rem 0.35rem; position:sticky; top:0.7rem; z-index:1}
@@ -39,7 +37,7 @@ footer::before	{transform:translateY(-0.75rem)}
 :is(.bH,.bF):hover	{color:blue; fill:blue; border-color:#AAF}
 :is(.bH,.bF):active	{color:#88F; fill:#99F}
 
-/*Main - colors*/
+/*main, colors*/
 #p	{background:linear-gradient(to right,#FFF,#FF9)}
 #n	{background:linear-gradient(to right,#FFF,#FC6)}
 #g	{background:linear-gradient(to right,#FFF,#CFC)}
@@ -58,7 +56,7 @@ footer::before	{transform:translateY(-0.75rem)}
 #a :is(h2,.f,.g)	{color:#A85}
 [class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; padding-bottom:0.2rem}
 
-/*Main - data*/
+/*main, data*/
 p			{margin:0}
 :is(.x9,.x,.xp,.f,.y,.t,.j,.h,.open)::after	{content:">"; display:inline-block; font-family:var(--m); font-size:0.9em; font-weight:400; font-style:normal; line-height:0; rotate:90deg; scale:0.9 1.1; translate:0.5em}
 .open::after	{content:"\003c"}
@@ -100,9 +98,9 @@ p.l>a		{color:#666}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
 .b			{color:#448}
-.ns			{font-family:"Times New Roman", Times, serif; text-transform:uppercase}
+.ns			{font-family:"Times New Roman",Times,serif; text-transform:uppercase}
 
-/*Main - taxa*/
+/*main, taxa*/
 .x9::before		{content:"Order "}
 .de.x9::before	{content:"Ordnung "}
 .x8::before		{content:"Suborder "}
@@ -142,9 +140,8 @@ p.l>a		{color:#666}
 </head>
 
 <body onload="setT(); if (/#/.test(window.location.href)) sload()">
-<header><h1>LEPITAXA</h1>⌛ Initializing ... <br><b>[ERROR: Initialization failed! This problem could be caused by an outdated browser, faulty script execution or bad internet connection.]</b></header>
-
-<img itemprop="logo" alt="Lepitaxa Logo" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
+<header><h1>LEPITAXA</h1>⌛ Initializing ...</header>
+<svg id="lg" itemprop="logo" viewBox='0 0 200 200'><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>
 <svg id="v" fill="#AAA" viewBox="0 0 2820 389"><path d="M0 0v389h238v-61H69V0Zm371 0v389h248v-61H440V221h128v-58H440V62h179V0Zm376 0v389h69V241c43-1 88 1 127-19 36-18 58-56 60-96 4-36-7-78-39-98C928 4 884-1 843 0Zm131 63c22 4 46 15 53 39 9 27-6 61-34 69-26 10-54 8-81 9V60c21 1 42 0 62 3zm251-63v389h69V0Zm200 0v62h124v327h69V62h129V0Zm503 0-153 389h76l31-88h119l31 88h76L1858 0Zm14 125 39 122h-80zm244 264 114-201L2097 0h70l79 132 89-132h69l-123 189 130 200h-75l-90-140-85 140zM2640 0l-153 389h76l31-88h119l31 88h76L2666 0Zm14 125 39 122h-80z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
 <svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
@@ -226,6 +223,7 @@ xs	Papilioniformes
 f	Papilionidae
 e2	Swallowtail Butterflies
 d2	Ritterfalter
+sh	Papilioniidae
 r	Simonsen, 2011
 l	Phylogenetics and divergence times of Papilioninae (Lepidoptera) with special reference to the enigmatic genera Teinopalpus and Meandrusa
 p	10.1111/j.1096-0031.2010.00326.x
@@ -235,6 +233,12 @@ p	10.1111/j.1461-0248.2011.01737.x
 r	Condamine, 2018
 l	Mitochondrial phylogenomics, the origin of swallowtail butterflies, and the impact of the number of clocks in Bayesian molecular dating
 p	10.1111/syen.12284
+r	Condamine, 2020
+l	Data for Genome-wide macroevolutionary signatures of host-plant shifts
+p	10.6084/m9.figshare.12278402
+r	Allio, 2021
+l	Genome-wide macroevolutionary signatures of key innovations in butterflies colonizing new host plants
+p	10.1038/s41467-020-20507-3
 y	Papilioninae
 e2	Swallowtails
 d2	Schwalbenschwänze
@@ -242,6 +246,9 @@ t	Papilionini
 j	Papilionina
 e2	True Swallowtails
 d2	Echte Schwalbenschwänze
+r2	Caterino & Sperling, 1999
+l	Papilio Phylogeny Based on Mitochondrial Cytochrome Oxidase I and II Genes
+p	10.1006/mpev.1998.0549
 r	Zakharov, 2004
 l	Molecular Phylogeny, Historical Biogeography, and Divergence Time Estimates for Swallowtail Butterflies of the Genus Papilio (Lepidoptera: Papilionidae)
 p	10.1080/10635150490423403
@@ -323,20 +330,28 @@ d	Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1758
 s	hippocrates
+s	machaon gorganus
+s	machaon mauretanicus
 s	saharae
 u	aliaska
 u	britannicus
-u	gorganus
+u	centralis
 u	hippocrates
 u	hudsonianus
+u	kamtschadalus
 u	ladakensis
 u	lapponica
+u	machaon
 u	mauretanica
 u	melitensis
 u	pikei
 u	saharae
+u	sikkimensis
 u	syriacus
 u	verityi
+r2	Domagała & Lis, 2022
+l	One Species, Hundreds of Subspecies? New Insight into the Intraspecific Classification of the OldWorld Swallowtail (Papilio machaon Linnaeus, 1758) Based on Two Mitochondrial DNA Markers
+p	10.3390/insects13080752
 o	Polyxenes
 a	hospiton
 e	Corsican Swallowtail
@@ -358,7 +373,14 @@ u	americus
 u	asterius
 u	coloro
 u	costarum
+u	gerardi
+u	polyxenes
+u	rudkini
+u	sadalus
 u	stabilis
+r2	Bollino & Vitale, 2002
+l	Una nuova sottospecie di Papilio polyxenes Fabricius, 1775 del Perù (Sud America) (Lepidoptera: Papilionidae)
+p2	0774-2819, 102
 r2	Orellana, 2009
 l	Description of a new tropical subspecies of the black swallowtail butterfly, Papilio polyxenes (Lepidoptera: Papilionidae) from Venezuela
 p2	0123-3068, 13(1)
@@ -371,6 +393,7 @@ s	nitra
 i	Sinoprinceps
 a	benguetanus
 s	benguelana
+s	benguetana
 s3	xuthus
 a	xuthus
 e	Asian Swallowtail
@@ -508,20 +531,25 @@ d	Grüner Pfau
 a	buddha
 e	Malabar Banded Peacock
 d	Malabar-Pfau
+a	daedalus
+e	Philippine Banded Peacock
+d	Neon-Schwalbenschwanz
+b	Papilio
+n	C. & R. Felder, 1861
+s	palinurus angustatus
+s3	palinurus
+u	angustatus
 a	lorquinianus
-e	Sea Green Swallowtail
+e	Sea-green Swallowtail
 d	Meergrüner Schwalbenschwanz
 a	neumoegeni
 a	palinurus
 e	Emerald Swallowtail
 e	Emerald Peacock
 e	Green-banded Peacock
-d	Neon-Schwalbenschwanz
 d	Smaragd-Schwalbenschwanz
 b	Papilio
 n	Fabricius, 1787
-s	daedalus
-u	daedalus
 a	peranthus
 e	Swift Peacock
 d	Neon-Segler
@@ -530,6 +558,18 @@ o	Paris
 a	arcturus
 e	Blue Peacock
 d	Blauer Pfau
+a	arjuna
+e	False Jungle Jade
+d	Falsche Dschungeljade
+s3	paris
+s	paris battacorum
+s	paris detanii
+s	paris gedeensis
+s	paris tenggerensis
+u	battacorum
+u	detanii
+u	gedeensis
+u	tenggerensis
 a	bianor
 e	Common Peacock
 e	Chinese Peacock
@@ -537,8 +577,18 @@ d	Gewöhnlicher Pfau
 d	Chinesischer Pfau
 b	Papilio
 n	Cramer, 1777
-s	polyctor
-u	polyctor
+s	polyctor ganesa
+s	polyctor pinratanai
+s	polyctor significans
+s	polyctor stockleyi
+u	ganesa
+u	gladiator
+u	kotoensis
+u	okinawensis
+u	pinratanai
+u	significans
+u	stockleyi
+u	thrasymedes
 a	chikae
 e	Luzon Peacock
 d	Philippinischer Pfau
@@ -547,20 +597,38 @@ u	hermeli
 a	dehaanii
 e	Japanese Peacock
 d	Japanischer Pfau
+s	bianor amamiensis
 s3	bianor
 s	bianor ryukyuensis
+s	bianor tokaraensis
 s	ryukyuensis
+u	amamiensis
 u	ryukyuensis
+u	tokaraensis
 a	dialis
 e	Southern Chinese Peacock
 d	Südchinesischer Pfau
 s3	binaor
 a	elephenor
 e	Yellow-crested Spangle
+a	hermosanus
+e	Taiwanese Glazed Swallowtail
+d	Taiwanesischer Jade-Schwalbenschwanz
+s3	paris
+r2	Tsao & Yeh, 2008
+l	DNA-Based Discrimination of Subspecies of Swallowtail Butterflies (Lepidoptera: Papilioninae) from Taiwan
+p2	1021-5506, 47(5)
 a	hopponis
 e	Taiwanese Peacock
 d	Taiwanesischer Pfau
 s	hoppo
+a	karna
+e	Jungle Jade
+d	Dschungeljade
+b	Papilio
+n	C. & R. Felder, 1864
+u	carnatus
+u	irauana
 a	krishna
 e	Krishna Peacock
 d	Krishna-Pfau
@@ -568,27 +636,43 @@ a	maackii
 e	Maack's Peacock
 e	Alpine Black Swallowtail
 d	Maack's Pfau
-s	syfanius
-u	albosyfanius
 a	paris
 e	Paris Peacock
-e	Jungle Jade
 d	Paris-Pfau
-d	Dschungeljade
 b	Papilio
 n	Linnaeus, 1758
-s	arjuna
-s	hermosanus
-s	karna
 s	tamilana
-u	arjuna
-u	hermosanus
-u	karna
+u	chinensis
+u	nakaharai
 u	tamilana
+a	polyctor
+e	Kashmir Peacock
+d	Kaschmir-Pfau
+s3	bianor
+a	syfanius
+e	Yunnan Peacock
+d	Yunnan-Pfau
+s	maackii albosyfanius
+u	albosyfanius
+r2	Zhu & Wu, 2011
+l	Phylogenetic evaluation of the taxonomic status of Papilio maackii and P. syfanius (Lepidoptera: Papilionidae)
+p	10.3724/SP.J.1141.2011.03248
+r	Xiong, 2022
+l	Admixture of evolutionary rates across a butterfly hybrid zone
+p	10.7554/eLife.78135
 o	Ulysses
 a	montrouzieri
 e	Montrouzier's Ulysses
 d	Montrouzier's Odysseusfalter
+b	Papilio
+n	Boisduval, 1859
+a	telegonus
+e	Felder's Ulysses
+d	Felders Odysseusfalter
+b	Papilio
+n	C. & R. Felder, 1860
+s3	ulysses
+u	dohertius
 a	ulysses
 e	Odysseus Butterfly
 e	Ulysses Butterfly
@@ -598,9 +682,10 @@ d	Ulysses-Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1758
 s	orsippus
-s	telegonius
+s	orsippus ambiguus
+u	ambiguus
+u	josea
 u	orsippus
-u	telegonius
 i	Princeps
 a	demodocus
 e	Citrus Swallowtail
@@ -614,6 +699,7 @@ e	Lime Butterfly
 e	Lime Swallowtail
 e	Chequered Swallowtail
 d	Limetten-Schwalbenschwanz
+d	Karierter Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1758
 a	erithonioides
@@ -682,11 +768,11 @@ u	janaka
 a	forbesi
 e	Sumatra Mormon
 d	Sumatra-Mormone
-a	taiwanus
+a	thaiwanus
 e	Formosan Swallowtail
 e	Taiwanese Mormon
 d	Taiwanesischer Schwalbenschwanz
-s	thaiwanus
+s	taiwanus
 o	Fuscus
 a	albinus
 a	canopus
@@ -752,28 +838,22 @@ a	woodfordi
 s	ptolychus
 u	ptolychus
 o	Helenus
-a	helenus
+c	helenus
 e	Red Helen
 d	Rote Helene
 b	Papilio
 n	Linnaeus, 1758
-s	biseriatus
-s	daksha
-s	enganius
 s	fortunius
-s	hystaspes
-s	mangarinus
-s	palawanicus
-s	sataspes
-u	biseriatus
-u	daksha
-u	enganius
-u	fortunius
-u	hystaspes
-u	mangarinus
-u	nicconicolens
-u	palawanicus
-u	sataspes
+m	biseriatus
+m	daksha
+m	enganius
+m	mangarinus
+m	palawanicus
+m	sataspes
+a	hystaspes
+e	Philippine Helen
+d	Philippinische Helene
+s3	helenus
 a	iswara
 e	Great Helen
 d	Große Helene
@@ -1378,7 +1458,6 @@ n	Gray, 1853
 s3	astyalus
 s2	Papilio astyalus
 i	Troilides
-o	Hectorides
 a	hectorides
 e	Hector's Swallowtail
 d	Hektors Schwalbenschwanz
@@ -1390,10 +1469,6 @@ n	Hopffer, 1865
 a	lamarchei
 e	Bolivian Swallowtail
 d	Bolivianischer Schwalbenschwanz
-b	Papilio
-n	Staudinger, 1892
-o	Torquatus
-a	garleppi
 b	Papilio
 n	Staudinger, 1892
 a	torquatus
@@ -1430,6 +1505,10 @@ d	Pinkgetüpfelter Schwalbenschwanz
 b	Papilio
 n	Boisduval, 1836
 s4	Papilio pharnaces
+o	Garleppi
+a	garleppi
+b	Papilio
+n	Staudinger, 1892
 o	Isidorus
 a	chiansiades
 b	Papilio
@@ -2481,6 +2560,7 @@ m	paphus
 m	sichuanica
 a	mullah
 c	tamerlana
+s	tamerlanus
 m	incerta
 m	parus
 m	tamerlana
@@ -2683,6 +2763,8 @@ a	japonica
 e	Japanese Luehdorfia
 a	puziloi
 a	taibai
+s	longicaudata
+u	longicaudata
 t	Zerynthiini
 e2	Festoons
 d2	Osterluzeifalter
@@ -2752,6 +2834,9 @@ sh	Hesperidae
 r	Li, 2019
 l	Genomes of skipper butterflies reveal extensive convergence of wing patterns
 p	10.1073/pnas.1821304116
+r	Zhang, 2019
+l	Three new subfamilies of skipper butterflies (Lepidoptera, Hesperiidae)
+p	10.3897/zookeys.861.34686
 r	Zhang, 2022
 l	Taxonomic changes suggested by the genomic analysis of Hesperiidae (Lepidoptera)
 p2	0749-6737, 0921
@@ -4476,7 +4561,6 @@ g	Sovia
 g	Suada
 g	Thoressa
 y	Trapezitinae
-t	Trapezitini
 e2	Australian Skippers
 d2	Australische Dickkopffalter
 g	Anisynta
@@ -4513,8 +4597,8 @@ a	parvula
 g	Trapezites
 a	symmomus
 e	Splendid Ochre
-t	Barcini
-sh	Barcinae
+y	Barcinae
+sh	Barcini
 g	Apostictopterus
 g	Barca
 a	bicolor
@@ -4595,16 +4679,12 @@ g	Butleria
 y	Katreinae
 e2	False Flats
 d2	Falsche Wichte
-r	Zhang, 2019
-l	Three new subfamilies of skipper butterflies (Lepidoptera, Hesperiidae)
-p	10.3897/zookeys.861.34686
-t	Katreini
 g	Katreus
 a	johnstonii
 e	Giant Scarce Sprite
 g	Ortholexis
-t	Chamundini
-sh	Chamundinae
+y	Chamundinae
+sh	Chamundini
 g	Chamunda
 a	chamunda
 e	Crescent Spotted Flat
@@ -4615,6 +4695,9 @@ d2	Würfel-Dickkopffalter
 t	Pyrgini
 e2	Checkered Skippers
 d2	Echte Würfel-Dickkopffalter
+r	Zhang, 2023
+l	Genomics-based taxonomic rearrangement of Achlyodini and Carcharodini (Lepidoptera: Hesperiidae: Pyrginae)
+p	10.5281/zenodo.10621955
 j	Pyrgina
 g	Anisochoria
 a	extincta
@@ -4805,22 +4888,17 @@ i	Timochreon
 a	satyrus
 s2	Timochreon
 j	Carcharodina
+sh	Carcharodini
 h	Carcharoditi
 g	Agyllia
-g	Arteurotia
-a	tractipennis
-e	Starred Skipper
-g	Bolla
+a	asterodia
+e	Star Sandman
+d	Südafrikanischer Würfel-Dickkopffalter
+s2	Spialia
 g	Carcharodus
 a	alceae
 e	Mallow Skipper
 d	Malven-Dickkopffalter
-g	Clytius
-a	clytius
-e	Mottled Sootywing
-d	Marmorierter Ruß-Dickkopffalter
-a	shola
-s2	Staphylus
 g	Ernsta
 i	Ernsta
 a	colotes
@@ -4844,54 +4922,59 @@ s2	Spialia
 a	sataspes
 e	Boland Sandman
 s2	Spialia
-g	Gomalia
-a	elma
-e	African-marbled Skipper
-e	Green-marbled Skipper
-d	Afrikanischer Malven-Dickkopffalter
-g	Gorgopas
-a	chlorocephala
-e	Green-headed Sootywing
-d	Grünkopf-Ruß-Dickkopffalter
-a	extensa
-s2	Polyctor
-a	trochilus
-e	Green-shouldered Sootywing
-d	Grünsschulter-Ruß-Dickkopffalter
-g	Hesperopsis
-a	alpheus
-e	Saltbush Sootywing
-d	Melden-Ruß-Dickkopffalter
-a	gracielae
-e	MacNeill's Sootywing
-d	MacNeill's Ruß-Dickkopffalter
-a	libya
-e	Mojave Sootywing
-d	Mojave-Ruß-Dickkopffalter
-g	Iliana
-a	heros
-s4	Austinus heroica
-s2	Austinus
-s4	Austinus heros heroica
-u	heroica
-g	Incisus
-a	incisus
-g	Mictris
-a	crispus
-e	Crisp Skipper
-g	Muschampia
-a	baeticus
-e	Southern Marbled Skipper
-d	Andorn-Dickkopffalter
-s2	Carcharodus
+g	Favria
 a	cribrellum
 e	Spinose Skipper
 d	Steppen-Dickkopffalter
 d	Steppen-Würfel-Dickkopffalter
-s2	Favria
+s2	Muschampia
+g	Gomalia
+c	elma
+e	African-marbled Skipper
+e	Green-marbled Skipper
+d	Afrikanischer Malven-Dickkopffalter
+m	albofasciata
+m	elma
+m	jeanneli
+g	Muschampia
+i	Muschampia
+a	gigas
+a	leuzeae
+a	mohammed
+c	proto
+e	Sage Skipper
+d	Brandkraut-Dickkopffalter
+m	alta
+m	proteides
+m	proto
+a	tessellum
+e	Siberian Skipper
+d	Sibirischer Würfel-Dickkopffalter
+s	nomas
+s	tersa
+u	nomas
+u	tersa
+i	Sloperia
+a	lutulenta
+s	lutulenta
+a	poggei
+c	staudingeri
+m	proteus
+m	pseudoproteus
+m	staudingeri
+i	Warrenohesperia
+a	antonia
+e	Pamir Skipper
+d	Pamir-Würfel-Dickkopffalter
+i	Reverdinus
+a	baeticus
+e	Southern Marbled Skipper
+d	Andorn-Dickkopffalter
+s2	Carcharodus
 a	floccifera
 e	Tufted Marbled Skipper
 d	Heilziest-Dickkopffalter
+s2	Carcharodus
 a	lavatherae
 e	Marbled Skipper
 d	Loreley-Dickkopffalter
@@ -4899,61 +4982,34 @@ d	Ziest-Dickkopffalter
 d	Bergziest-Dickkopffalter
 d	Grünlicher Dickkopffalter
 s2	Carcharodus
-a	proto
-e	Sage Skipper
-d	Brandkraut-Dickkopffalter
-g	Nisoniades
-a	godma
-e	Godma Tufted-Skipper
-a	inca
-s	brunneata
-s2	Pellicia brunneata
-s2	Pellicia
-a	macarius
-e	Macarius Tufted-Skipper
-c	mimas
-e	Purplish Tufted-Skipper
-e	Mimas Skipper
-d	Mimas-Dickkopffalter
-m	bipuncta
-m	bromias
-m	ephora
-m	mimas
-g	Nymphaliana
-a	lactifera
+a	orientalis
+e	Oriental Skipper
+e	Oriental Marbled Skipper
+d	Orientalischer Dickkopffalter
+s2	Carcharodus
+a	stauderi
+e	Eastern Marbled Skipper
+s2	Carcharodus
+g	Noctuana
+a	brunneofusca
+e	Peruvian Grizzled Skipper
+d	Peruanischer Würfel-Dickkopffalter
+a	diurna
+e	Paraná Grizzled Skipper
+d	Paraná-Würfel-Dickkopffalter
+a	haematospila
+e	Blood-spot Skipper
+d	Blutfleck-Würfel-Dickkopffalter
+c	noctua
 e	Cryptic Skipper
+e	Noctua Skipper
+d	Kryptischer Würfel-Dickkopffalter
+m	bipuncta
+m	lactifera
+m	noctua
 a	stator
 e	Red-studded Skipper
-g	Ocella
-i	Ocella
-a	albata
-a	diophthalma
-i	Monoca
-a	monophthalma
-g	Pachyneuria
-a	licisca
-e	Immaculate Tufted-Skipper
-g	Pellicia
-a	arina
-e	Glazed Tufted-Skipper
-e	Glazed Pellicia
-g	Perus
-a	manx
-a	minor
-a	narycus
-s2	Ouleus
-a	parvus
-s2	Staphylus
-g	Pholisora
-a	catullus
-e	Common Sootywing
-d	Gewöhnlicher Ruß-Dickkopffalter
-a	litus
-s2	Bolla
-g	Polyctor
-a	polyctor
-e	Polyctor Tufted-Skipper
-g	Sophista
+d	Rotgespickter Würfel-Dickkopffalter
 g	Spialia
 i	Spialia
 a	galba
@@ -4990,35 +5046,378 @@ e	Ferax Grizzled Skipper
 a	phlomidis
 e	Persian Skipper
 d	Persischer Würfel-Dickkopffalter
+g	Windia
+a	windi
+e	Wind’s Skipper
+d	Wind's Würfel-Dickkopffalter
+h	Pholisoriti
+sh	Pholisorina
+g	Bolla
+i	Bolla
+o	Cupreiceps
+a	atahuallpai
+e	Atahualpa Sootywing
+d	Atahualpa-Ruß-Dickkopffalter
+a	cupreiceps
+e	Copper-headed Sootywing
+d	Kupferkopf-Ruß-Dickkopffalter
+a	imbras
+e	Rounded Sootywing
+d	Guatemaltekischer Ruß-Dickkopffalter
+s	pullata
+s	subapicatus
+a	mancoi
+a	morona
+a	phylo
+o	Nigerrima
+a	catharina
+a	nigerrima
+i	Bovaria
+o	Cyclops
+a	aplica
+s	eusebius
+a	cybele
+a	cyclops
+a	cylindus
+a	sodalis
+a	solitaria
+a	sonda
+o	Fenestra
+a	fenestra
+e	Oaxacan Sootywing
+d	Oaxaca-Ruß-Dickkopffalter
+a	saletas
+a	tepeca
+e	Grizzled Sootywing
+d	Graubrauner Ruß-Dickkopffalter
+s2	Staphylus
+i	Sebia
+o	Brennus
+a	boliviensis
+e	Bolivian Sootywing
+d	Bolivianischer Ruß-Dickkopffalter
+c	brennus
+e	Obscure Sootywing
+d	Unkenntlicher Ruß-Dickkopffalter
+m	antha
+m	brennus
+m	dorsolaciniae
+m	guerra
+m	oriza
+a	giselus
+o	Eusebius
+a	chilpancingo
+c	eusebius
+m	eusebius
+m	evippe
+m	orsines
+i	Stolla
+o	Chlorocephala
+a	astra
+s2	Staphylus
+a	balsa
+s2	Staphylus
+a	chlora
+s2	Staphylus
+a	chlorocephala
+s2	Staphylus
+a	esmeraldus
+s2	Staphylus
+a	incanus
+s2	Staphylus
+a	tridentis
+s2	Staphylus
+o	Zorilla
+a	evemerus
+s2	Staphylus
+c	zorilla
+e	Zorilla Sootywing
+d	Zorilla-Ruß-Dickkopffalter
+m	hazelae
+m	madrea
+m	vena
+m	zorilla
+g	Clytius
+a	clytius
+e	Mottled Sootywing
+d	Marmorierter Ruß-Dickkopffalter
+a	shola
+s2	Staphylus
+g	Gorgopas
+i	Gorgopas
+a	chlorocephala
+e	Green-headed Sootywing
+d	Grünkopf-Ruß-Dickkopffalter
+a	petale
+a	trochilus
+e	Green-shouldered Sootywing
+d	Grünsschulter-Ruß-Dickkopffalter
+i	Quadralis
+a	extensa
+s2	Polyctor
+g	Incisus
+a	incisus
+g	Perus
+i	Perus
+o	Coecatus
+a	coecatus
+a	manx
+a	minor
+a	parvus
+s2	Staphylus
+o	Cordillerae
+a	cordillerae
+i	Narycus
+a	narycus
+s2	Ouleus
+i	Menuda
+a	menuda
+g	Pholisora
+a	albicirrus
+e	White-tufted Sootywing
+d	Weißspitzen-Ruß-Dickkopffalter
+a	catullus
+e	Common Sootywing
+d	Gewöhnlicher Ruß-Dickkopffalter
+s	crestar
+u	crestar
+a	litus
+e	Many-spotted Sootywing
+d	Braunkopf-Ruß-Dickkopffalter
+s2	Bolla
+a	mejicanus
+e	Mexican Sootywing
+d	Mexikanischer Ruß-Dickkopffalter
 g	Staphylus
+i	Staphylus
+o	Hayhurstii
 a	ascalaphus
 e	Central American Sootywing
 e	Mauve Scallopwing
 d	Zentralamerikanischer Ruß-Dickkopffalter
-a	ceos
-e	Golden-headed Scallopwing
-d	Goldkopf-Ruß-Dickkopffalter
 a	hayhurstii
 e	Hayhurst's Scallopwing
 d	Hayhurst's Ruß-Dickkopffalter
+s	floridus
+u	floridus
+a	lenis
 a	mazans
 e	Mazans Scallopwing
 d	Mazans-Ruß-Dickkopffalter
-a	musculus
+a	perforata
 a	tierra
 e	West-Mexican Sootywing
 d	West-Mexikanischer Ruß-Dickkopffalter
+a	unicornis
+e	Unicorn Sootywing
+d	Einhorn-Ruß-Dickkopffalter
+o	Huigra
+a	huigra
+i	Vulga
+o	Azteca
+a	ascalon
+a	azteca
+e	Aztec Sootywing
+d	Azteken-Ruß-Dickkopffalter
+a	buena
+s	melius
+u	melius
+a	caribbea
+e	Panamanian Sootywing
+d	Panamaischer Ruß-Dickkopffalter
+a	corumba
+a	eryx
+a	imperspicua
+a	insignis
+a	lizeri
+a	melangon
+u	epicaste
+a	musculus
+a	perna
+a	tucumanus
+a	tyro
+o	Vulgata
+a	kayei
+a	oeta
+a	putumayo
+a	satrap
+s3	saxos
+a	saxos
+a	tingo
 a	vulgata
 e	Golden-snouted Scallopwing
 e	Golden-snouted Sootywing
 d	Goldschnauzen-Ruß-Dickkopffalter
+i	Scantilla
+a	cartagoa
+a	ceos
+e	Golden-headed Scallopwing
+d	Goldkopf-Ruß-Dickkopffalter
+s	ecos
+u	ecos
+a	opites
+a	vincula
+e	Mountain Sootywing
+d	Bergland-Ruß-Dickkopffalter
+s	iguala
+i	Hesperopsis
+a	alpheus
+e	Saltbush Sootywing
+d	Melden-Ruß-Dickkopffalter
+s2	Hesperopsis
+a	gracielae
+e	MacNeill's Sootywing
+d	MacNeill's Ruß-Dickkopffalter
+s2	Hesperopsis
+a	libya
+e	Mojave Sootywing
+d	Mojave-Ruß-Dickkopffalter
+s2	Hesperopsis
+h	Nisoniaditi
+sh	Nisoniadina
+g	Arteurotia
+a	tractipennis
+e	Starred Skipper
+g	Conognathus
+a	platon
+g	Nisoniades
+i	Nisoniades
+c	bessus
+e	Nightshade Skipper
+d	Nachtschatten-Dickkopffalter
+m	benda
+m	bessus
+m	brazia
+m	cauca
+m	coca
+m	godma
+m	guianae
+m	hecale
+m	lata
+m	montana
+m	panama
+m	remo
+m	suprapanama
+c	mimas
+e	Purplish Tufted-Skipper
+e	Mimas Skipper
+d	Mimas-Dickkopffalter
+s	brunneata
+s4	Pellicia brunneata
+s4	Pellicia inca
+m	bipuncta
+m	borra
+m	bromias
+m	ephora
+m	inca
+m	indistincta
+m	lutum
+m	mimas
+m	rubescens
+m	torta
+i	Macarius
+a	castolus
+e	Castolus Tufted-Skipper
+a	laurentina
+e	Dark Tufted-Skipper
+a	macarius
+e	Macarius Tufted-Skipper
+g	Ocella
+i	Ocella
+a	albata
+a	diophthalma
+i	Monoca
+a	monophthalma
+g	Pellicia
+i	Pellicia
+a	dimidiata
+e	Morning Glory Tufted-Skipper
+d	Prunkwinden-Dickkopffalter
+a	theon
+i	Hemipteris
+a	arina
+e	Glazed Tufted-Skipper
+e	Glazed Pellicia
+a	costimacula
+e	Frosted Tufted-Skipper
+a	hersilia
+a	tyana
+i	Mictris
+a	crispus
+e	Crisp Skipper
+s2	Mictris
+g	Polyctor
+i	Polyctor
+c	polyctor
+e	Polyctor Tufted-Skipper
+d	Amazonas-Würfel-Dickkopffalter
+m	cleta
+m	dagua
+m	polyctor
+i	Fenops
+a	enops
+e	Enops Tufted-Skipper
+a	fera
+a	tensa
+g	Sophista
+i	Sophista
+a	aristoteles
+a	latifasciata
+s	matto
+u	matto
+a	plinius
+i	Pachyneuria
+a	damon
+s2	Pachyneuria
+a	inops
+s2	Pachyneuria
+s4	Pachyneuria zita
+i	Austinus
+a	heros
+s4	Austinus heroica
+s2	Austinus
+s4	Austinus heros heroica
+u	heroica
 g	Viola
 a	minor
+g	Viuria
+c	licisca
+e	Immaculate Tufted-Skipper
+s2	Pachyneuria
+s2	Sophista
+m	herophile
+m	licisca
+m	lista
+h	Burciti
+sh	Burcina
+g	Burca
 h	Cyclosemiiti
-g	Cornuphallus
+sh	Cyclosemiina
 g	Cyclosemia
+a	anastomosis
+e	Northern Eyed-Skipper
+d	Nördlicher Augen-Dickkopffalter
+c	herennius
+e	Southern Eyed-Skipper
+d	Südlicher Augen-Dickkopffalter
+m	elelea
+m	herennius
+m	subcaerulea
+h	Ilianiti
+sh	Ilianina
+g	Cornuphallus
+a	onoribo
+g	Iliana
+i	Iliana
+a	peruvianus
+a	romulus
+i	Torgus
+a	gorgus
+s2	Eantis
 g	Tiana
 a	niger
+e	Colombian Skipper
+d	Kolumbianischer Dickkopffalter
 s2	Ebrietas
 j	Achlyodina
 h	Achlyoditi
@@ -5026,15 +5425,42 @@ g	Achlyodes
 a	busirus
 e	Giant Sicklewing
 d	Riesen-Sichel-Dickkopffalter
-a	pallida
-e	Pale Sicklewing
-d	Blasser Sichel-Dickkopffalter
-s2	Eantis
 g	Aethilla
+a	chiapa
 a	echina
+a	eleusinia
+a	epicra
+a	gigas
+a	lavochrea
+a	memmius
 g	Cabirus
 a	procas
+s	junta
+s	purda
+u	junta
+u	purda
+g	Doberes
+a	anticus
+e	Dark Doberes
+a	hewitsonius
+e	Pale Doberes
 g	Eantis
+i	Eantis
+o	Mithridates
+a	minor
+e	Lesser Sicklewing
+d	Kleiner Sichel-Dickkopffalter
+a	mithridates
+e	Jamaican Sicklewing
+d	Jamaikanischer Sichel-Dickkopffalter
+a	munroei
+e	Munroe's Sicklewing
+d	Munroe's Sichel-Dickkopffalter
+a	papinianus
+e	Cuban Sicklewing
+d	Kubanischer Sichel-Dickkopffalter
+s	sagra
+o	Tamenund
 a	tamenund
 e	Sickle-winged Skipper
 e	Northern Sicklewing
@@ -5042,62 +5468,278 @@ d	Gewöhnlicher Sichel-Dickkopffalter
 a	thraso
 e	Southern Sicklewing
 d	Südlicher Sichel-Dickkopffalter
+i	Liddia
+a	pallida
+e	Pale Sicklewing
+d	Blasser Sichel-Dickkopffalter
+s2	Achlyodes
+i	Tosta
+o	Haber
+a	haber
+s2	Aethilla
+a	later
+s2	Aethilla
+o	Minna
+a	minna
+o	Tosta
+a	tosta
+s2	Tosta
 g	Eracon
+a	asymmetrica
+a	biternata
+c	clinias
+e	Sarah's Skipper
+d	Sarahs Dickkopffalter
+m	clinias
+m	sarahburnsae
+a	lachesis
+a	paulinus
+e	Teardrop Skipper
+d	Glanzaugen-Dickkopffalter
 g	Grais
 a	stigmaticus
 e	Hermit Skipper
+d	Einsiedler-Dickkopffalter
 g	Mimia
+a	chiapaensis
+e	Chiapan Skipper
+d	Chiapas-Dickkopffalter
+a	pazana
+a	phidyle
+e	Phidyle Skipper
+d	Braunaugen-Dickkopffalter
+g	Morvina
+a	caecus
+e	Blind Cyclop Skipper
+d	Blinder Zyklopen-Dickkopffalter
+a	falisca
+e	Brown Cyclop Skipper
+d	Brauner Zyklopen-Dickkopffalter
+a	fissimacula
+e	Northern Cyclop Skipper
+d	Nördlicher Zyklopen-Dickkopffalter
+u	pelarge
+a	morvus
+e	Southern Cyclop Skipper
+d	Südlicher Zyklopen-Dickkopffalter
+u	cyclopa
+u	para
+g	Myrinia
+c	binoculus
+e	Two-eyed Skipper
+d	Zweiaugen-Dickkopffalter
+m	aragua
+m	binoculus
+m	catua
+m	laddeyi
+m	maculosa
+m	manchada
+m	myris
+m	orieca
+m	raymundo
+m	santa
 g	Pseudodrephalys
-a	sohni
+a	hypargus
 g	Spioniades
-g	Tosta
+a	abbreviata
+e	White-tipped Skipper
+a	artemides
+e	Artemides Skipper
+d	Artemides-Knick-Dickkopffalter
+a	libethra
+g	Xispia
+a	quadrata
+e	Square Skipper
+d	Quadratfleck-Dickkopffalter
+a	satyrus
+e	Eye-spotted Skipper
+d	Augenfleck-Dickkopffalter
 h	Pythoniditi
-g	Atarnes
+sh	Pythonidina
+g	Charidia
+a	lucaria
+g	Gindanes
+a	brebisson
+a	brontinus
+a	eminus
+s2	Pythonides
+a	hampa
+s2	Pythonides
+c	herennius
+e	Herennius Blue-Skipper
+e	Proxenus Blue-Skipper
+d	Annonen-Blau-Dickkopffalter
+s4	Pythonides braga
+s2	Pythonides
+s4	Pythonides parallelus
+s4	Pythonides proxenus
+m	braga
+m	herennius
+m	parallelus
+m	proxenus
+a	homer
+s2	Pythonides
+a	kelso
+a	maraca
+s2	Pythonides
+a	mundo
+s2	Pythonides
+a	neivai
+s2	Pythonides
+a	rosa
+s2	Pythonides
+a	tullia
+s2	Pythonides
+g	Haemactis
+c	sanguinalis
+e	Blood Red Skipper
+d	Blutroter Dickkopffalter
+m	albamarita
+m	pyrrhosphenus
+m	sanguinalis
+g	Lirra
+a	pteras
+e	Narrow-winged Blue-Skipper
+s2	Pythonides
+g	Livida
+a	assecla
+g	Milanion
+c	hemes
+e	Hemes Skipper
+d	Hemes-Dickkopffalter
+s	clito
+s	hemestinus
+m	alaricus
+m	cramba
+m	furvus
+m	hemes
+m	laricus
+m	latior
+m	leucaspis
+m	marciana
+m	pilta
+m	pilumnus
+m	virga
+a	hierax
+e	White-veined Tuskyhook
+s2	Eburuncus
 a	sallei
 e	Orange-spotted Skipper
 d	Orangepunktiger Dickkopffalter
-g	Charidia
-a	lucaria
-g	Doberes
-g	Eburuncus
+s2	Atarnes
 a	unifasciata
 e	Single-banded Tuskyhook
-g	Gindanes
-a	brebisson
-g	Haemactis
-a	sanguinalis
-e	Blood Red Skipper
-d	Blutroter Dickkopffalter
-g	Milanion
-a	leucaspis
-g	Morvina
-g	Myrinia
-g	Ouleus
-a	fridericus
+s2	Eburuncus
 g	Paramimus
 a	stigma
 g	Pythonides
 a	jovianus
 e	Variable Blue-Skipper
 e	Siparuna-Blau-Dickkopffalter
-a	lancea
+a	lerina
 g	Quadrus
+i	Quadrus
+o	Cerialis
 a	cerialis
 e	Common Blue-Skipper
 e	Peppered Blue-Skipper
 d	Gewöhnlicher Pfeffer-Dickkopffalter
 d	Gewöhnlicher Blau-Dickkopffalter
-a	contubernalis
-e	Striped Blue-Skipper
-d	Blauer Pfeffer-Dickkopffalter
-d	Gestreifter Blau-Dickkopffalter
+a	fanda
+a	tros
+a	u-lucida
+o	Lugubris
 a	lugubris
 e	Tanned Blue-Skipper
 d	Brauner Pfeffer-Dickkopffalter
 d	Brauner Blau-Dickkopffalter
-g	Zera
-a	hyacinthinus
+a	ophia
+s3	lugubris
+a	truncata
+i	Ouleus
+a	fridericus
+s2	Ouleus
+a	panna
+e	Panna Skipper
+d	Panna-Dickkopffalter
+s2	Ouleus
+a	salvina
+e	Salvin's Skipper
+d	Salvin's Dickkopffalter
+s2	Ouleus
+i	Ebona
+o	Eboneus
+a	eboneus
+s2	Zera
+a	negrus
+s2	Ouleus
+a	pescada
+s2	Phytonides
+o	Juxta
+a	juxta
+s2	Ouleus
+i	Cyrna
+o	Calavius
+a	bubaris
+s2	Ouleus
+a	calavius
+s2	Ouleus
+a	candidus
+s2	Ouleus
+o	Cyrna
+a	cyrna
+s2	Ouleus
+i	Noctis
+a	accedens
+s2	Ouleus
+a	dilla
+s2	Ouleus
+i	Zera
+a	belti
+s2	Zera
+c	tetrastigma
 e	Bruised Skipper
+s4	Achlyodes erisichthon
+s4	Zera erisichthon
+s4	Zera hosta
+s4	Zera hyacinthinus
+s4	Zera hyacinthinus gellius
+s4	Zera hyacinthinus servius
+s4	Zera nolckeni
+s4	Zera phila
+s4	Zera servius
+s2	Zera
+m	gellius
+m	hosta
+m	hyacinthinus
+m	menedemus
+m	nolckeni
+m	phila
+m	servius
+m	tetrastigma
+m	vivax
+c	zera
+e	Zera Skipper
+d	Zera-Dickkopffalter
+s4	Zera difficilis
+s4	Zera teresa
+s2	Zera
+m	difficilis
+m	teresa
+m	zera
+i	Tuberna
+o	Contubernalis
+a	contubernalis
+e	Striped Blue-Skipper
+d	Blauer Pfeffer-Dickkopffalter
+d	Gestreifter Blau-Dickkopffalter
+o	Deyrollei
+a	deyrollei
+a	lancea
+s2	Pythonides
+i	Trifa
+a	francesius
+a	jacobus
 j	Erynnina
 h	Erynniti
 g	Anastrus
@@ -8373,6 +9015,7 @@ r	Su, 2017
 l	Dated phylogeny and dispersal history of the butterfly subfamily Nymphalinae (Lepidoptera: Nymphalidae)
 p	10.1038/s41598-017-08993-w
 t	Nymphalini
+d2	Brennnesselfalter
 j	Nymphalina
 g	Antanartia
 a	delius
@@ -16712,6 +17355,7 @@ e	False Antirrhea
 d	Blattflügel-Morpho
 t	Brassolini
 sh	Brassolidae
+sh	Brassoliidae
 sh	Brassolinae
 r	Matos-Maraví, 2021
 l	Mesoamerica is a cradle and the Atlantic Forest is a museum of Neotropical butterfly diversity: insights from the evolution and biogeography of Brassolini (Lepidoptera: Nymphalidae)
@@ -27034,9 +27678,12 @@ g	Diachrysia
 c	chrysitis
 e	Burnished Brass
 d	Messingeule
+s	tutti
 m	chrysitis
 m	stenochrysis
-m	tutti
+r	Hille, 2005
+l	DNA sequence variation at the mitochondrial cytochrome oxidase I subunit among pheromotypes of the sibling taxa Diachrysia chrysitis and D. tutti (Lepidoptera: Noctuidae)
+p	10.1111/j.1463-6409.2005.00171.x
 a	chryson
 e	Scarce Burnished Brass
 d	Wasserdost-Goldeule
@@ -27091,16 +27738,230 @@ t	Homolagoini
 g	Homolagoa
 a	grotelliformis
 f	Euteliidae
-e2	Euteliid Moths
+e2	Eutelia Moths
+r	Zahiri, 2023
+l	Evolutionary history of Euteliidae (Lepidoptera, Noctuoidea)
+p	10.1111/syen.12587
 y	Euteliinae
+t	Euteliini
+g	Caligatus
+a	angasii
+e	Venus Turntail
+d	Venuseule
+g	Colpocheilopteryx
+e	Worker Turntail
+s4	Eurhipia rosea
 g	Eutelia
+a	adoratrix
+a	adulatrix
+e	Common Eutelia Moth
+b	Noctua
+n	Hübner, 1813
+a	amatrix
+s	exquisita
+a	callichroma
+e	Colourful Turntail
+a	geyeri
 g	Marathyssa
-g	Paectes
+a	basalis
+e	Light Marathyssa Moth
+a	furcata
+s2	Eutelia
+a	inficita
+e	Dark Marathyssa Moth
+a	pulcherrimus
+e	Beautiful Eutelia Moth
+s2	Eutelia
+a	pyrastis
+s2	Eutelia
+g	Penicillaria
+a	cuneades
+s2	Eutelia
+s2	Marathyssa
+a	dorsipuncta
+s2	Bombotelia
+a	jocosatrix
+e	Mango Shoot Borer
+d	Mango-Knospeneule
+b	Penicillaria
+n	Guenée, 1852
+s2	Bombotelia
+a	maculata
+s2	Bombotelia
+a	plusioides
+s4	Eutelia fulvipicta
+a	simplex
+s2	Bombotelia
+g	Phalga
+a	clarirena
+s2	Eutelia
+a	sinuosa
+s2	Eutelia viridinota
+g	Targallodes
+a	vittalba
+b	Penicillaria
+n	Semper, 1900
+s4	Eutelia furcicauda
+s4	Eutelia megacycla
+s2	Eutelia
+t	Targallini
+g	Anuga
+a	canescens
+s	rubristigma
+a	constricta
+s4	Cremnodes macrocera
+a	indigofera
+a	kobesi
+a	multiplicans
+g	Aplotelia
+a	diplographa
+s2	Eutelia
+a	tripartita
+s4	Targalla pratti
+g	Caedesa
+a	apicenigra
+g	Chlumetia
+a	diapera
+s2	Aplotelia
+s2	Eutelia
+a	transversa
+s	guangxiensis
+g	Pataeta
+a	carbo
+b	Phlegetonia
+n	Guenée, 1852
 g	Targalla
+a	atripars
+b	Phlegetonia
+n	Hampson, 1912
+a	delatrix
+e	Eugenia Moth
+d	Kirschmyrteneule
+b	Penicillaria
+n	Guenée, 1852
+s	ludatrix
+a	duplicilinea
+s2	Homoptera
+s2	Paectes
+a	palliatrix
+b	Penicillaria
+n	Guenée, 1852
+a	subocellata
+t	Paecteini
+g	Anigraea
+a	albomaculata
+s2	Eutelia
+a	cinctipalpis
+s4	Aegilia angulata
+s	olivata
+s4	Eutelia deletoides
+a	deleta
+s2	Anuga
+a	harmonica
+s2	Eutelia
+s2	Marathyssa
+a	incisa
+s2	Marathyssa
+a	mediifascia
+s2	Eutelia
+s4	Eutelia rufula
+a	rubida
+s4	Aegilia obscura
+a	serratilinea
+g	Atacira
+a	brunneata
+a	caesia
+s2	Bombotelia
+a	glauca
+s2	Eutelia
+a	josephinae
+s2	Eutelia
+a	melanephra
+s2	Eutelia
+a	rubrirena
+a	silvetissima
+s2	Eutelia
+g	Paectes
+a	abrostolella
+a	abrostoloides
+e	Large Paectes Moth
+e	Sweetgum Defoliator
+d	Amberbaumeule
+b	Ingura
+n	Guenée, 1852
+s	delineata
+a	cristatrix
+a	gertae
+s2	Callingura
+a	oculatrix
+e	Eyed Paectes Moth
+a	pygmaea
+e	Pygmy Paectes Moth
+a	nubifera
+e	Clouded Paectes Moth
+a	subapicalis
+s2	Callingura
+g	Pseudotargalla
+a	apicifascia
+s2	Eutelia
+s4	Eutelia dinawa
+s4	Eutelia mediofusca
+s2	Targalla
 y	Stictopterinae
-g	Lophoptera
-g	Odontodes
+t	Stictopterini
+g	Aegilia
+a	describens
+s2	Stictoptera
+g	Gyrtona
+a	huma
+s2	Lophoptera
+s2	Stictoptera
+a	semicarbonalis
+s4	Lophoptera angusta
+g	Nagara
 g	Stictoptera
+a	columba
+a	cucullioides
+a	grisea
+a	macromma
+a	signifera
+a	trajiciens
+t	Odontodini
+g	Lophoptera
+a	abbreviata
+a	acuda
+a	anthyalus
+s2	Stictoptera
+a	arcuata
+s2	Sadarsa
+s2	Sigmuncus
+a	brunnama
+a	brunnistis
+a	divitalis
+s2	Savoca
+s4	Savoca yucca
+a	flavina
+a	hayesi
+a	hemithyris
+s2	Stictoptera
+a	illucida
+a	leucostriga
+s2	Stictoptera
+a	litigiosa
+a	longipennis
+s2	Sadarsa
+a	nama
+a	phaeobasis
+s2	Stictoptera
+a	purpuriridis
+s	purpuridis
+a	squammigera
+a	stipata
+a	tripartita
+a	vittigera
+g	Odontodes
+a	pallidifimbria
+a	seranensis
 f	Nolidae
 e2	Tuft Moths
 d2	Wicklereulchen
@@ -27232,6 +28093,9 @@ s2	Eupatula
 u	walkeri
 g	Lygniodes
 g	Sphingomorpha
+a	chlorea
+e	Sundowner Moth
+d	Dämmerschoppeneule
 j	Melipotina
 g	Bulia
 g	Cissusa
@@ -27889,6 +28753,8 @@ g	Ilema
 g	Laelia
 g	Mylantria
 a	xanthospila
+e	Plushy Tussock Moth
+d	Plüsch-Trägspinner
 g	Neomardara
 a	africana
 g	Ocneria
@@ -28773,6 +29639,14 @@ a	sperbius
 e	Siamese Wasp Moth
 d	Siamesischer Wespenbär
 g	Balacra
+a	caeruleifascia
+s2	Metarctia
+a	herona
+a	preussi
+a	pulchra
+a	rubricincta
+a	rubrostriata
+s2	Metarctia
 g	Caeneressa
 g	Ceryx
 g	Dysauxes
@@ -31505,12 +32379,17 @@ a	euryalus
 e	Ceanothus Silkmoth
 d	Kalifornischer Seidenspinner
 g	Samia
+r	Huang, 2021
+l	DNA barcodes provide evidence for the independent origin of the cultivated silkworms Samia ricini and Samia cynthia
+p	10.3920/JIFF2021.0077
+i	Samia
 w	coppensi
 e	Coppens’ Lesser Atlas Moth
 d	Coppens-Zwerg-Atlasspinner
 s	coppensi
 v	luzonica
 v2	ricini
+o	Cynthia
 c	cynthia
 e	Ailanthus Silkmoth
 e	Eri Silkmoth
@@ -31518,13 +32397,31 @@ e	Lesser Atlas Moth
 d	Götterbaumspinner
 s2	Philosamia
 s4	Philosamia ricini
+s	kohlli
+s	walkeri
+m	abrerai
 m	canningi
 m	cynthia
+m	kalimantanensis
+m	naessigi
+m	naumanni
+m	pryeri
 m	ricini
 m	wangi
+m	yayukae
+o	Insularis
+a	insularis
 a	luzonica
 e	Luzon Lesser Atlas Moth
 d	Philippinischer Zwerg-Atlasspinner
+a	peigleri
+a	vandenberghi
+i	Archaeosamia
+a	watsoni
+e	Chinese Lesser Atlas Moth
+d	Chinesischer Zwerg-Atlasspinner
+s2	Archaeosamia
+s2	Desgodinsia
 j	Rothschildiina
 g	Eupackardia
 a	calleta
@@ -31607,6 +32504,9 @@ i	Gonimbrasia
 a	belina
 e	Mopane Worm
 d	Mopanewurm
+a	conradsi
+e	Ugandan Emperor Moth
+d	Ugandisches Nachtpfauenauge
 a	hecate
 e	Western Mopane Worm
 d	Westlicher Mopanewurm
@@ -32618,6 +33518,7 @@ e2	Hawkmoths
 e2	Sphinx Moths
 e2	Hornworm Moths
 d2	Schwärmer
+sh	Sphingiidae
 r	Kawahara, 2009
 l	Phylogeny and Biogeography of Hawkmoths (Lepidoptera: Sphingidae): Evidence from Five Nuclear Genes
 p	10.1371/journal.pone.0005719
@@ -32698,6 +33599,9 @@ d	Falscher Totenkopfschwärmer
 g	Megacorma
 h	Meganotiti
 g	Macropoliana
+a	natalensis
+e	Natal Sphinx
+d	Natalschwärmer
 g	Meganoton
 g	Psilogramma
 c	menephron
@@ -32821,6 +33725,9 @@ g	Neopolyptychus
 g	Polyptychoides
 g	Polyptychus
 g	Pseudoclanis
+a	postica
+e	Mulberry Hawkmoth
+d	Maulbeerschwärmer
 t	Ambulycini
 g	Adhemarius
 c	gannascus
@@ -33467,7 +34374,12 @@ a	obscura
 e	Hidden Lappet
 a	truncata
 e	Truncate Lappet
+g	Hapsimachogonia
+a	hapsimachus
 g	Leipoxais
+g	Mimopacha
+a	cinerascens
+e	Ragged Lappet
 g	Odonestis
 a	bheroba
 a	erectilinea
@@ -33594,6 +34506,7 @@ e	Rose Eggar
 d	Rosenspinner
 g	Sena
 g	Trabala
+a	charon
 a	pallida
 e	Crape-myrtle Lappet Moth
 d	Kräuselmyrtenglucke
@@ -35725,9 +36638,20 @@ e	Cotton Leafroller
 e	Cotton Pearl
 d	Baumwollzünsler
 g	Lygropia
+a	distorta
+a	fusalis
+s2	Lypotigris
 a	rivulalis
 e	Bog Lygropia Moth
+d	Amerikanischer Sumpfzünsler
+a	tripunctata
+e	Sweetpotato Leafroller
+d	Süßkartoffelzünsler
 g	Lypotigris
+a	reginalis
+e	Blue Tiger Snout Moth
+d	Blauer Tigerzünsler
+s2	Lypotygris
 g	Micromartinia
 g	Microthyris
 g	Nagiella
@@ -36993,6 +37917,7 @@ xs	Zygaeniformes
 f	Zygaenidae
 e2	Burnet Moths
 d2	Widderchen
+d2	Zygänen
 y	Zygaeninae
 e2	Burnets
 d2	Rotwidderchen
@@ -45216,6 +46141,9 @@ a	lupulina
 e	Common Swift Moth
 e	Lupulina Ghost Moth
 d	Kleiner Hopfen-Wurzelbohrer
+b	Phalaena
+n	Linnaeus, 1758
+s2	Pharmacis
 g	Leto
 a	venus
 e	Keurboom Ghost Moth
@@ -45386,7 +46314,7 @@ e	Small Hazel Purple
 d	Hainbuchen-Trugmotte
 s2	Eriocrania
 x	Neopseustoidea
-sh	Acanthopteroctetidae
+sh	Acanthopteroctetoidea
 sh	Aenigmatineoidea
 f	Neopseustidae
 g	Apoplania
@@ -45489,14 +46417,12 @@ g	Zealandopterix
 <h3 id="i8"><span class="EN">Check & export dataset:          </span><span class="DE">Datensatz prüfen & exportieren:  </span><u onclick="lepitest('txt')">txt</u> <u onclick="lepitest('csv')">csv</u> <u onclick="lepitest('tsv')">tsv</u> <u onclick="lepitest('xml')">xml</u></h3>
 </section>
 
-<section id="footend">
 <h4 itemprop="name">LEPITAXA – Lepidopteran Classification Project</h4>
 <h4 itemprop="copyrightNotice">© 2020-_y – Georg Hammerschmid</h4>
 <button class="bF" onpointerdown="document.getElementById('infostats').classList.toggle('hide')">Stats & Infos</button>
 <svg id="r" class="bF" tabindex="0" onpointerdown="location.href='https://github.com/lepitaxa/lepitaxa.github.io#readme'" viewBox="0 0 385 99"><title>GitHub README</title><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/><text x="120" y="78" font-size="62">README</text></svg>
 <button class="EN bF" title="Deutsch" onpointerdown="togLn()">DE</button>
 <button class="DE bF" title="English" onpointerdown="togLn()">EN</button>
-</section>
 </footer>
 
 <script>
@@ -45504,77 +46430,49 @@ const $ = document.querySelector.bind(document); // querySelector shortcuts
 const $$ = document.querySelectorAll.bind(document);
 
 // INITIALIZATION STEPS
-//1 Generate infostats from unmodified source
-var raw	= $('main');
-var count = raw.innerHTML.match(/\t/g).length;
-var empty = raw.innerHTML.match(/(\n\n|x9\t)/g).length - 1;
-var	size = count * 0.0000164;
+//1 Generate infostats, simple string mods, convert data to HTML
+var raw	= $('main'); raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
+var count = $$('p').length;
+var size = count * 0.0000164;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
-$('#infostats').innerHTML = $('#infostats').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19));
-$('#footend').innerHTML = $('#footend').innerHTML.replace('_y',version.substring(9,13));
+$('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19)).replace('_y',version.substring(9,13));
 
-//2 Get logo from img and feed to tab icon
-$('link').setAttribute('href',$('img').getAttribute('src'));
-
-//3 Convert raw data to HTML
-raw.innerHTML = raw.innerHTML.replace(/\n(\w+)\t(.+)/g,'\n<p class="$1">$2</p>');
-
-//4 Add SP epithets to BAS, SSP and s2/s3 SYN
-$$('.a,.ae,.c,.w').forEach(f=>{
-var sib = f.nextElementSibling;
-while (sib) { // Loop for each SP
-	if (sib.matches('.u,.ue')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If SSP, add SP name before
-	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + f.innerHTML; // If BAS or s2/s3 SYN, add SP name after
-	if (sib.matches('.a,.ae,.c,.w')) break // If next SP reached, stop loop
+//2 Finish string mods, generate taxon IDs + ID links
+$$('div').forEach(f=>{
+var sib = f.firstElementChild; var genera = []; var epithets = []; var ig = -1; var ie = -1;
+while (sib) { // Loop for each div
+	if (sib.matches('.g')) {ig++; genera.push(sib.innerHTML)};
+	if (sib.matches('.a,.ae,.c,.w')) {ie++; epithets.push(sib.innerHTML); sib.innerHTML = genera[ig] + ' ' + sib.innerHTML};
+	if (sib.matches('.u,.ue')) sib.innerHTML = epithets[ie] + ' ' + sib.innerHTML;
+	if (sib.matches('.m,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = genera[ig] + ' ' + sib.innerHTML;
+	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + epithets[ie];
+	if (sib.matches('p:not(.v,.v2,.e,.e2,.d,.d2,.n,.r,.r2,.l,.p,.p2)')) sib.id = sib.classList + '$' + sib.innerHTML.toLowerCase().replace(/ /g,'_');
+	if (sib.matches('.a,.ae,.c,.w,.g')) {var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + sib.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); sib.prepend(id_lnk)};
+	if (sib.matches('.c')) sib.innerHTML += ' agg.';
+	if (sib.matches('.v')) sib.innerHTML += ' × ' + genera[ig] + ' ' + sib.nextElementSibling.innerHTML;
+	if (sib.matches('.b')) sib.innerHTML = '<span class="bs">' + sib.innerHTML.replace('× ','') + ' </span><span class="ns">' + sib.nextElementSibling.innerHTML + '</span>';
+	if (sib.matches('.l')) {var sib2 = sib.nextElementSibling.innerHTML; sib.innerHTML = '<span class="ls">' + sib.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
+		if (sib.nextElementSibling.matches('.p')) {sib.innerHTML += '<a href="https://doi.org/' + sib2.substring(4,sib2.length) + '">' + sib2 + '</a>'}
+		else {sib.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib2.substring(7,16) + '">' + sib2.substring(0,16) + '</a>' + sib2.substring(16,sib2.length)}};
 	sib = sib.nextElementSibling}});
 
-//5 Add GEN names to SP epithets
-$$('.g').forEach(f=>{
-var sib = f.nextElementSibling;
-while (sib) { // Loop for each GEN
-	if (sib.matches('.a,.ae,.c,.m,.w,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = f.innerHTML + ' ' + sib.innerHTML; // If match, add GEN name
-	if (sib.matches('.g')) break // If next GEN reached, stop loop
-	sib = sib.nextElementSibling}});
-
-//6 Generate taxon IDs, prefix/suffix strings and ID links
-$$('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.o,.c,.w,.sh,.b').forEach(f=>{f.id = f.classList + '$' + f.innerHTML.toLowerCase().replace(/ /g,'_')});
-$$('.a,.ae,.m,.u,.ue,.s,.s2,.s3,.s4').forEach(f=>{f.id = f.innerHTML.toLowerCase().replace(/ /g,'_')});
-$$('.xp').forEach(f=>{f.innerHTML = '"' + f.innerHTML + '" '});
-$$('.c').forEach(f=>{f.innerHTML += ' agg.'});
-$$('.w').forEach(f=>{f.innerHTML = f.innerHTML.replace(' ',' × ')});
-$$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
-$$('.ae,.ue').forEach(f=>{f.innerHTML += ' †'});
-$$('.b').forEach(f=>{var sib = f.nextElementSibling; f.innerHTML = '<span class="bs">' + f.innerHTML + ' </span><span class="ns">' + sib.innerHTML + '</span>'});
-$$('.r').forEach(f=>{f.innerHTML = f.innerHTML.replace(","," et al.,")});
-$$('.p').forEach(f=>{f.innerHTML = 'doi:' + f.innerHTML});
-$$('.p2').forEach(f=>{f.innerHTML = 'ISSN-L ' + f.innerHTML});
-$$('.l').forEach(f=>{var sib = f.nextElementSibling.innerHTML; f.innerHTML = '<span class="ls">' + f.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
-if (f.nextElementSibling.matches('.p')) {f.innerHTML += '<a href="https://doi.org/' + sib.substring(4,sib.length) + '">' + sib + '</a>'}
-else {f.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib.substring(7,16) + '">' + sib.substring(0,16) + '</a>' + sib.substring(16,sib.length)}});
-$$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
-
-//7 Generate spoilers and their eventlisteners
+//3 Generate spoilers
 var spc = $$('.x9,.x,.xp,.f,.y,.t,.j,.h'); // Get spoiler clickables
 spc.forEach(f=>{
 var div = document.createElement('div'); div.classList.add('hide'); f.after(div); // Create new spoiler div after each spc
 var sib = div.nextElementSibling;
-while (sib) { // Loop for each div
-	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh')) div.appendChild(sib); // If spc is ORD, SUPERFAM or PARAPHYLUM & sib matches, move sib into div
-	else if (f.matches('.f') && sib.matches('p:not(.f,[class^="x"])')) div.appendChild(sib); // If spc is FAM & sib matches, move sib into div
-	else if (f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])')) div.appendChild(sib); // If spc is SUBFAM & sib matches, move sib into div
-	else if (f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])')) div.appendChild(sib); // If spc is TRI & sib matches, move sib into div
-	else if (f.matches('.j') && sib.matches('p:not(.f,.y,.t,.j,[class^="x"])')) div.appendChild(sib); // If spc is SUBTRI & sib matches, move sib into div
-	else if (f.matches('.h') && sib.matches('p:not(.f,.y,.t,.j,.h,[class^="x"])')) div.appendChild(sib); // If spc is INFRATRI & sib matches, move sib into div
+while (sib) { // Loop for each div: If spc and sib matches, move sib into div
+	if (f.matches('.x9,.x,.xp') && sib.matches('.r,.r2,.rs,.l,.p,.p2,.e2,.d2,.sh') || f.matches('.f') && sib.matches('p:not(.f,[class^="x"])') || f.matches('.y') && sib.matches('p:not(.f,.y,[class^="x"])') || f.matches('.t') && sib.matches('p:not(.f,.y,.t,[class^="x"])') || f.matches('.j') && sib.matches('p:not(.f,.y,.t,.j,[class^="x"])') || f.matches('.h') && sib.matches('p:not(.f,.y,.t,.j,.h,[class^="x"])')) div.appendChild(sib);
 	else break
 	sib = div.nextElementSibling}});
 
-//8 Check if browserLns is de and preset this lang, else use en
-var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS/JS content
+//4 Check if browserLns is de and preset this lang, else use en
+var Lns = $$('[class^="x"],.f,.y,.t,.j,.h,.i,.o'); // Get translatable CSS content
 var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); // Get browserLns and shorten array elements to xx
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
-//9 Remove init+error message
+//5 Remove init+error message
 $('header').style.display = "none";	////INIT complete
 
 // MAIN FUNCTIONS

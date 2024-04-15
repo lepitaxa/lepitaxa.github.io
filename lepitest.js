@@ -2,7 +2,7 @@
 var data = $$('p')
 
 ////1 Start data check results log
-console.log('Run lepitest data integrity check ...'); var log = ''; var i = 0;
+console.log('→ Run lepitest data integrity check ...'); var log = ''; var i = 0;
 
 // Add some padding to avoid loops slamming into NULL values when hitting the end of a div
 $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nuller)});
@@ -29,8 +29,8 @@ var sf = 'The suffix of this taxon type must be "'
 
 // Special characters and capitalization
 if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d) || f.matches('.n, .r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
-if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.o,.bs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
-if (f.matches('.a,.ae,.c,.m,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
+if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
+if (f.matches('.o,.a,.ae,.c,.m,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 
@@ -60,7 +60,7 @@ if (f.matches('.a,.ae,.c,.m,.u,.ue,.e,.e2,.d,.d2') && /( -|- )/g.test(d)) {i++; 
 
 // Taxon suffixes
 if (f.matches('.sh') && !(/(a|e|i)$/.test(d))) {i++; log += '[#' + i + s1 + 'The suffix of this synonym must match a valid higher level taxon.\n'};
-if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && !(/a$/.test(d)) || f.matches('.xp') && !(/a" $/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
+if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && !(/a$/.test(d)) || f.matches('.xp') && !(/a"$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
 if (f.matches('.x') && !(/oidea$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'oidea".\n'};
 if (f.matches('.xs') && !(/iformes$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iformes".\n'};
 if (f.matches('.f') && !(/idae$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'idae".\n'};
@@ -283,25 +283,25 @@ for (let t = 0; t < testArrayBS.length - 1; t++) {
 ////6 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var exSize; var info2;
+var exSize; var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
 
-if (/(txt|tsv)/.test(format)) exSize = size * 1.4;
-else if (format == 'csv') exSize = size * 1.5;
-else exSize = size * 3.4;
+if (/(txt|tsv)/.test(format)) exSize = size * 1.45;
+else if (format == 'csv') exSize = size * 1.55;
+else exSize = size * 3.35;
 
-var info1 = '- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
+var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
 
 if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the raw data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
 else info2 = "No data integrity issues found!\n\n";
 
-var results = '------------------------\nLepitest Log:\n------------------------\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
+var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nLepitest Log:\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
 console.log(results); alert(info1 + info2 + results);
 
 
 ////7 Call the correct converter for the selected export format, rebuild the ID links afterwards
+console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Convert data to ' + format + ' format ...');
 if (format == 'xml') xml(); else dsv();
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
-
 
 
 
@@ -320,7 +320,7 @@ if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
 var file_link = document.createElement('a'); // Generate, click and remove download link
 file_link.setAttribute('download',version + '.' + format);
 file_link.setAttribute('href','data:text/' + format + ';charset=utf-8,' + encodeURIComponent(file_cont));
-file_link.click(); file_link.remove()};
+file_link.click(); console.log('→ Download ready!'); file_link.remove()};
 
 //// XML converter
 function xml() {
@@ -353,7 +353,7 @@ function xml() {
 var file_link = document.createElement('a'); // Generate, click and remove download link
 file_link.setAttribute('download',version + '.xml');
 file_link.setAttribute('href','data:application/xml;charset=utf-8,' + encodeURIComponent(file_cont));
-file_link.click(); file_link.remove()};
+file_link.click(); console.log('→ Download ready!'); file_link.remove()};
 
 
 

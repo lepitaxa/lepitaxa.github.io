@@ -1,4 +1,11 @@
+*.txt
+*.csv
+*.tsv
+*.xml
 *.doc
+*.docx
+*.xls
+*.xlsx
 *.ico
 *.pdf
 *.zip
