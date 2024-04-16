@@ -226,7 +226,7 @@ Tribe taxa are used to further subdivide subfamilies in case they contain differ
 
 ---
 ### 9 - SUBTRI (`j`)
-Subtribe taxa are used to further subdivide very diverse tribes.
+Subtribe taxa are used to further subdivide very diverse and/or well-resolved tribes.
 
 :point_right: **Guidelines:**
 - 9.1. Subtribe taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
@@ -236,7 +236,7 @@ Subtribe taxa are used to further subdivide very diverse tribes.
 
 ---
 ### 10 - INFRATRI (`h`)
-Infratribe taxa are occasionally used to further subdivide very diverse subtribes.
+Infratribe taxa are occasionally used to further subdivide very diverse and/or well-resolved subtribes.
 
 :point_right: **Guidelines:**
 - 10.1. Infratribe taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
@@ -265,7 +265,7 @@ Subgenus taxa are often used to further subdivide genera into prominent evolutio
 
 ---
 ### 13 - SPGR (`o`)
-Species groups are occasionally used to further subdivide very large subgenera.
+Species groups are occasionally used to further subdivide very large and/or well-resolved subgenera.
 
 :point_right: **Guidelines:**
 - 13.1. Species groups must be sorted strictly alphabetical within a subgenus.
