@@ -46445,7 +46445,7 @@ while (sib) { // Loop for each div
 	if (sib.matches('.a,.ae,.c,.w')) {ie++; epithets.push(sib.innerHTML); sib.innerHTML = genera[ig] + ' ' + sib.innerHTML};
 	if (sib.matches('.u,.ue')) sib.innerHTML = epithets[ie] + ' ' + sib.innerHTML;
 	if (sib.matches('.m,.v,.v2,.u,.ue,.s,.s3')) sib.innerHTML = genera[ig] + ' ' + sib.innerHTML;
-	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + epithets[ie];
+	if (sib.matches('.b,.s2,.s3')) sib.innerHTML += ' ' + epithets[ie].replace(' †','');
 	if (sib.matches('p:not(.v,.v2,.e,.e2,.d,.d2,.n,.r,.r2,.l,.p,.p2)')) sib.id = sib.classList + '$' + sib.innerHTML.toLowerCase().replace(/ /g,'_');
 	if (sib.matches('.a,.ae,.c,.w,.g')) {var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + sib.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); sib.prepend(id_lnk)};
 	if (sib.matches('.c')) sib.innerHTML += ' agg.';
