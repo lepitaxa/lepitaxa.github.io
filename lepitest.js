@@ -227,7 +227,8 @@ if (testArray[0] == 'SPGR') {i++; log += '[#' + i + s7 + 'GEN ' + f.innerHTML + 
 
 ////5 Check for duplicate common names and taxa
 var s8 = ']  Duplicate name detected for ';
-var s9 = ']  Duplicate basionym/synonym detected for ';
+var s9 = ']  Duplicate basionym/synonym/synonymic (sub)species detected for ';
+var s10 = ']  Duplicate synonymic (sub)species detected for ';
 
 // Create test arrays
 var testArrayE = [];
@@ -236,6 +237,7 @@ var testArrayD = [];
 var testArrayD2 = [];
 var testArrayTX = [];
 var testArrayBS = [];
+var testArraySY = [];
 
 // Collect all names
 $$('p[id]:not(.o),.e,.e2,.d,.d2').forEach(f=>{
@@ -245,7 +247,8 @@ if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
 if (f.matches('p[id]')) testArrayTX.push(f.id.replace(/_/g,' '));
-if (f.matches('.b,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/b\$/g,''))});
+if (f.matches('.b,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
+if (f.matches('.a,.u,.m,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
 
 // Sort the names
 testArrayE.sort();
@@ -254,6 +257,7 @@ testArrayD.sort();
 testArrayD2.sort();
 testArrayTX.sort();
 testArrayBS.sort();
+testArraySY.sort();
 
 // Check the arrays for duplicates
 for (let t = 0; t < testArrayE.length - 1; t++) {
@@ -277,6 +281,11 @@ for (let t = 0; t < testArrayBS.length - 1; t++) {
 	if (testArrayBS[t].localeCompare(testArrayBS[t+1], 'en') == 0) {
 		testArrayBS[t] = testArrayBS[t].charAt(0).toUpperCase() + testArrayBS[t].slice(1);
 		i++; log += '[#' + i + s9 + 'taxon "' + testArrayBS[t] + '". One of them should be deleted.\n'};
+};
+for (let t = 0; t < testArraySY.length - 1; t++) {
+	if (testArraySY[t].localeCompare(testArraySY[t+1], 'en') == 0) {
+		testArraySY[t] = testArraySY[t].charAt(0).toUpperCase() + testArraySY[t].slice(1);
+		i++; log += '[#' + i + s10 + 'taxon "' + testArraySY[t] + '". Either the taxon or the synonym must be considered invalid.\n'};
 };
 
 
