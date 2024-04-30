@@ -227,7 +227,7 @@ if (testArray[0] == 'SPGR') {i++; log += '[#' + i + s7 + 'GEN ' + f.innerHTML + 
 
 ////5 Check for duplicate common names and taxa
 var s8 = ']  Duplicate name detected for ';
-var s9 = ']  Duplicate basionym/synonym/synonymic (sub)species detected for ';
+var s9 = ']  Duplicate basionym/synonym detected for ';
 var s10 = ']  Duplicate synonymic (sub)species detected for ';
 
 // Create test arrays
