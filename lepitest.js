@@ -110,7 +110,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.m') && sib.nextElementSibling.matches('.m') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + 'AGG ' + f.innerHTML + '". "SEG ' + sib.innerHTML + '" is listed twice within this AGG.\n'};
 	if (sib.matches('.m') && sib.nextElementSibling.matches('.m') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + 'AGG ' + f.innerHTML + '". Place "SEG ' + sib.innerHTML + '" in its correct alphabetical order within this AGG.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.s,.s2,.s3,.s4,.m)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.m)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SYN within SP/AGG/HYBR
@@ -119,7 +119,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "SYN ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "SYN ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.s,.s2,.s3,.s4)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SYN_H within higher taxons
@@ -137,7 +137,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.s,.s2,.s3,.s4,.u,.ue)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.u,.ue)')) break
 	sib = sib.nextElementSibling}});
 	
 // Order of PARENT within HYBR
@@ -146,7 +146,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.s,.s2,.s3,.s4,.v,.v2)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SP/AGG/HYBR within GEN/SUBGEN/SPGR
@@ -155,7 +155,7 @@ var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.a,.ae,.c')) testArray.push(sib.innerHTML);
 	if (sib.matches('.w')) testArray.push(sib.innerHTML.replace(' ×',''));
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.m,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.m,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". The species "' + testArray[t] + '" is listed twice within this this ' + convert(f.classList) + '.\n'};
@@ -167,7 +167,7 @@ $$('.i').forEach(f=>{
 var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.o')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.o,.a,.ae,.c,.s,.s2,.s3,.s4,.u,.ue,.m)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.m,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + 'SUBGEN ' + f.innerHTML + '". "SPGR ' + testArray[t] + '" is listed twice within this this SUBGEN.\n'};
@@ -179,7 +179,7 @@ $$('.f,.y,.t,.j,.h').forEach(f=>{
 var sib = f.nextElementSibling.firstElementChild; var testArray = [];
 while (sib) {
 	if (sib.matches('.g')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.g,.i,.o,.a,.ae,.c,.s,.s2,.s3,.s4,.u,.ue,.m)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.m,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "GEN ' + testArray[t] + '" is listed twice within this ' + convert(f.classList) + '.\n'};
