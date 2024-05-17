@@ -295,9 +295,9 @@ $$('p:not([class])').forEach(f=>{f.remove()});
 
 var exSize; var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
 
-if (/(txt|tsv)/.test(format)) exSize = size * 1.45;
-else if (format == 'csv') exSize = size * 1.55;
-else exSize = size * 3.35;
+if (/(txt|tsv)/.test(format)) exSize = size * 1.46;
+else if (format == 'csv') exSize = size * 1.58;
+else exSize = size * 3.34;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
 

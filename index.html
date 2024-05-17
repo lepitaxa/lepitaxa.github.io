@@ -98,7 +98,7 @@ p.l>a		{color:#666}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
 .b			{color:#448}
-.ns			{font-family:"Times New Roman",Times,serif}
+.ns			{font-family:"Times New Roman",Times,serif;letter-spacing:0.04rem}
 
 /*main, taxa*/
 .x9::before		{content:"Order "}
@@ -46900,7 +46900,7 @@ const $$ = document.querySelectorAll.bind(document);
 //1 Generate infostats, simple string mods, convert data to HTML
 var raw	= $('main'); raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
 var count = $$('p').length;
-var size = count * 0.0000164;
+var size = count * 0.0000162;
 var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
 $('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19)).replace('_y',version.substring(9,13));
 
