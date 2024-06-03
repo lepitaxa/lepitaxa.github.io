@@ -290,7 +290,11 @@ for (let t = 0; t < testArraySY.length - 1; t++) {
 };
 
 
-////6 Remove padding, calculate download size, finish log, show infos and results
+////6 Check for loose characters not being part of any data
+$$('div[id]').forEach(f=>{if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || /\/p\>(?!\n?\<)/g.test(f.outerHTML)) {i++; log += '[#' + i + ']  Loose characters detected within group ' + f.firstElementChild.innerHTML + '. These characters should either have a proper data type assigned to them or be deleted!\n'}});
+
+
+////7 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
 var exSize; var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
@@ -308,7 +312,7 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////7 Call the correct converter for the selected export format, rebuild the ID links afterwards
+////8 Call the correct converter for the selected export format, rebuild the ID links afterwards
 console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Convert data to ' + format + ' format ...');
 if (format == 'xml') xml(); else dsv();
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
