@@ -116,7 +116,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`a`|SP|$\color{#9BD}{\textsf{GEN }}$ **SP**|Epithet of extant species|
 |`ae`|SP_EXT|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ †}}$|Epithet of extinct species|
 |`c`|AGG|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ agg.}}$|Aggregate name<br>(species complex/superspecies epithet)|
-|`m`|SEG|$\color{#9BD}{\textsf{GEN }}$ **SP**|Segregate name<br>(microspecies epithet)|
+|`k`|SEG|$\color{#9BD}{\textsf{GEN }}$ **SP**|Segregate name<br>(microspecies epithet)|
 |`u`|SSP|$\color{#9BD}{\textsf{GEN SP }}$ **SSP**|Epithet of extant subspecies|
 |`ue`|SSP_EXT|$\color{#9BD}{\textsf{GEN SP }}$ **SSP** $\color{#9BD}{\textsf{ †}}$|Epithet of extinct subspecies|
 |`w`|HYBR|$\color{#9BD}{\textsf{GEN × }}$ **SP**|Epithet of species hybrid|
@@ -150,195 +150,254 @@ Here you can find guidelines and details for the individual data types, which sh
 ### 1 - ORD, SUBORD, INFRAORD, PARVORD, MICROORD (`x9`, `x8`, `x7`, `x6`, `x5`)
 The highest-level taxa, forming the backbone of the order Lepidoptera. These are not supposed to be changed, unless there is solid and undisputable phylogenetic proof to do so.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 1.1. Order-level taxa should be sorted roughly as they would appear in a cladogram, with crown group taxa closer to the top and more basal taxa further below.
 - 1.2. The allowed character set is basic latin (A-Z).
 - 1.3. The taxon name must start with an upper-case letter, followed by lower-case letters only.
 - 1.4. The taxon name must end with the suffix _-a_.
 - 1.5. The naming and arrangement are only to be changed if there's undisputable phylogenetic proof to do so.
-  
+</details>
+
 ---
 ### 2 - SECT, SUBSECT, INFRASECT (`x4`, `x3`, `x2`)
 The section-level taxa are used to further subdivide very diverse microorders in zoology. Note that this is different from botany, where sections are used to further subdivide large subgenera!
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 2.1. Section-level taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 2.2. The naming of section-level taxa follows Guidelines 1.2., 1.3. and 1.4.
+</details>
 
 ---
 ### 3 - SUPERFAM (`x`)
 Superfamily taxa are used to group closely related families together. Note that in Lepidopterology, every family is traditionally assigned to a superfamily, even isolated families that wouldn't even need to be placed in a superfamily!
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 3.1. Superfamily taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 3.2. Isolated families must be included in their own superfamily, as per tradition.
 - 3.3. The taxon name must be taken from the nominate family, but end with the suffix _-oidea_ instead.
-  
+</details>
+
 ---
 ### 4 - SERIES (`xs`)
 The series-level taxa are traditionally used to further subdivide diverse superfamilies in Lepidopterology. Note that this is different from botany, where series are used to further subdivide large sections within subgenera!
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 4.1. Series-level taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 4.2. The series containing the nominate family of its respective superfamily must be listed first.
 - 4.3. The taxon name must be taken from its most important or most typical family, but end with the suffix _-iformes_ instead.
-  
+</details>
+
 ---
 ### 5 - PARAPHYLUM (`xp`)
 Paraphylum data points are used to group subsequent data into a major, but nowadays obsolete taxon. These traditionally and historically very important backbone taxa turned out to be paraphyletic in more modern phylogenetic studies and therefore are no longer valid. They still find, to some degree, practical use in Lepidopterology though.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 5.1. Paraphyla should only be used for major, obsolete and proven-to-be paraphyletic taxa. These include all invalid order-level and section-level taxa. Anything below will be ignored due to sheer numbers and to keep the dataset clean and easy to navigate.
 - 5.2. The naming of paraphyla follows Guidelines 1.2., 1.3. and 1.4.
+</details>
 
 ---
 ### 6 - FAM (`f`)
 Families are a major and important taxonomic rank, used to group species with fundamental commonalities together. New families should only be added or existing ones only be modified if there is solid and undisputable phylogenetic proof to do so.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 6.1. Family taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 6.2. The nominate family should always be listed first within a series or superfamily.
 - 6.3. The naming of families follows Guidelines 1.2. and 1.3.
 - 6.4. The taxon name must be taken from its nominate genus, but be suffixed with _-idae_.
 - 6.5. The naming and set of existing families are only to be changed if there's undisputable phylogenetic proof to do so.
+</details>
 
 ---
 ### 7 - SUBFAM (`y`)
 Subfamilies are major subdivisions of families, representing their most prominent lines of evolution.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 7.1. Subfamily taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 7.2. The nominate subfamily should always be listed first within a family.
 - 7.3. The naming of subfamilies follows Guidelines 1.2. and 1.3.
 - 7.4. The taxon name must be taken from its nominate genus, but be suffixed with _-inae_.
 - 7.5. The number of subfamilies should be kept as small as possible and only encompass the most prominent branches within the cladogram of a family. Oversplitting families into more than a dozen subfamilies is questionable and will not be accepted, unless there's solid phylogenetic proof to do so.
+</details>
 
 ---
 ### 8 - TRI (`t`)
 Tribe taxa are used to further subdivide subfamilies in case they contain different, prominent lines of evolution.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 8.1. Tribe taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 8.2. The nominate tribe should always be listed first within a subfamily.
 - 8.3. The naming of tribes follows Guidelines 1.2. and 1.3.
 - 8.4. The taxon name must be taken from its nominate genus, but be suffixed with _-ini_.
 - 8.5. The number of tribes should be kept low and only encompass the most prominent branches within the cladogram of a subfamily. Oversplitting subfamilies into dozens of tribes is questionable and will not be accepted, lower-level taxa should be used instead to further fine-structure subfamilies.
+</details>
 
 ---
 ### 9 - SUBTRI (`j`)
 Subtribe taxa are used to further subdivide very diverse and/or well-resolved tribes.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 9.1. Subtribe taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 9.2. The nominate subtribe should always be listed first within a tribe.
 - 9.3. The naming of subtribes follows Guidelines 1.2. and 1.3.
 - 9.4. The taxon name must be taken from its nominate genus, but be suffixed with _-ina_.
+</details>
 
 ---
 ### 10 - INFRATRI (`h`)
 Infratribe taxa are occasionally used to further subdivide very diverse and/or well-resolved subtribes.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 10.1. Infratribe taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 10.2. The nominate infratribe should always be listed first within a subtribe.
 - 10.3. The naming of infratribes follows Guidelines 1.2. and 1.3.
 - 10.4. The taxon name must be taken from its nominate genus, but be suffixed with _-iti_.
+</details>
 
 ---
 ### 11 - GEN (`g`)
 A genus is a fundamental base taxon grouping closely related species together.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 11.1. Genus taxa must be sorted strictly alphabetical within any higher-level taxon.
 - 11.2. The naming of genera follows Guidelines 1.2. and 1.3.
+</details>
 
 ---
 ### 12 - SUBGEN (`i`)
 Subgenus taxa are often used to further subdivide genera into prominent evolutional branches.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 12.1. Subgenus taxa should be sorted roughly as they would appear in a cladogram, meaning closely related ones should be neighbors.
 - 12.2. The nominate subgenus should always be listed first within a genus and contain the type species of the genus.
 - 12.3. The name of the nominate subgenus must be identical to its parent genus.
 - 12.4. The naming of subgenera otherwise follows Guidelines 1.2. and 1.3.
 - 12.5. The number of subgenera should be kept low and only encompass the most prominent branches within the cladogram of a genus. Oversplitting genera into more than a dozen subgenera is questionable and will not be accepted, species groups should be used instead to further fine-structure genera.
+</details>
 
 ---
 ### 13 - SPGR (`o`)
 Species groups are occasionally used to further subdivide very large and/or well-resolved subgenera.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 13.1. Species groups must be sorted strictly alphabetical within a subgenus.
 - 13.3. The name of a species group should be identical to the species epithet of its most important species, but start with an upper-case letter. 
+</details>
 
 ---
 ### 14 - SP, SP_EXT (`a`, `ae`)
-The epithet of an extant (`a`) or extinct (`ae`) species. The genus name is prepended automatically via JavaScript to form the full binomial name of the species. Extinct species have, in addition, the "†" sign appended automatically after the epithet.
+The epithet of an extant (`a`) or extinct (`ae`) species (DE "Art"). The genus name is prepended automatically via JavaScript to form the full binomial name of the species. Extinct species have, in addition, the "†" sign appended automatically after the epithet.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 14.1. Species must be sorted strictly alphabetical within any higher-level taxon.
 - 14.2. The allowed character set is basic latin (A-Z), with the addition of at most one hyphen (U+002D HYPHEN-MINUS character) within the epithet.
 - 14.3. Epithets are made of lower-case letters only.
 - 14.4. Extinct species should only be listed if their phylogenetic position is known with some certainty, raw guesses are not accepted. 
+</details>
 
 ---
 ### 15 - AGG (`c`)
-A species aggregate (species complex, superspecies epithet). This kind of taxon is occasionally used to group superficially indistinguishable "microspecies" together. Apart from having the "agg." designation appended automatically after the epithet via JavaScript and containing microspecies instead of subspecies, species aggregates are treated like a real species in Lepitaxa. This principle of grouping microspecies into an aggregate/complex and treating them as "one big species" is a good practical compromise between professionals and hobbyists, with latter ones usually neither having the expertise nor the equipment to reliably separate the individual microspecies.
+A species aggregate (species complex, superspecies epithet, DE "Artenkomplex", "Sammelart"). This kind of taxon is occasionally used to group superficially indistinguishable "microspecies" together. Apart from having the "agg." designation appended automatically after the epithet via JavaScript and containing microspecies instead of subspecies, species aggregates are treated like a real species in Lepitaxa. This principle of grouping microspecies into an aggregate/complex and treating them as "one big species" is a good practical compromise between professionals and hobbyists, with latter ones usually neither having the expertise nor the equipment to reliably separate the individual microspecies.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 15.1. The sorting of species aggregates follows Guideline 14.1., due to them being treated like species internally.
 - 15.2. The aggregate's epithet is identical to its oldest (= first described) microspecies.
 - 15.3. Species aggregates must be strictly monophyletic, even when there are other superficially indistinguishable, but more distantly related species within the same genus, which could be tempting to be included in the aggregate.
 - 15.4. Species aggregates cannot contain subspecies, which would barely make sense anyway due to the encompassed microspecies often not being clearly separated themselves. Instead, species segregates should be used.
+</details>
 
 ---
-### 16 - SEG (`m`)
-A species segregate (microspecies epithet). The species-like subdivisions of an aggregate/species complex. These microspecies are either "good" species or genetically/morphologically not fully separated "cryptic" species, which can only be distinguished via microscopic details or minor differences in DNA.
+### 16 - SEG (`k`)
+A species segregate (microspecies epithet, DE "Kleinart"). The species-like subdivisions of an aggregate/species complex. These microspecies are either "good" species or genetically/morphologically not fully separated "cryptic" species (DE "Kryptische Arten"), which can only be distinguished via microscopic details or minor differences in DNA.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 16.1. Species segregates must be sorted strictly alphabetical relative to each other within a species aggregate.
 - 16.2. Species segregates must be grouped and sorted AFTER all common names, basionyms and synonyms, but BEFORE all references within a species aggregate.
 - 16.3. The naming of species segregates follows Guidelines 14.2. and 14.3.
 - 16.4. Species segregates cannot contain subspecies, due to them often not being clearly separated themselves and them being treated similar to subspecies internally.
+</details>
 
 ---
 ### 17 - SSP, SSP_EXT (`u`, `ue`)
-The epithet of an extant (`u`) or extinct (`ue`) subspecies. The genus name and species epithet is prepended automatically via JavaScript to form the full trinomial name of the subspecies. Extinct subspecies have, in addition, the "†" sign appended automatically after the epithet.
+The epithet of an extant (`u`) or extinct (`ue`) subspecies (DE "Unterart"). The genus name and species epithet is prepended automatically via JavaScript to form the full trinomial name of the subspecies. Extinct subspecies have, in addition, the "†" sign appended automatically after the epithet.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 17.1. Subspecies must be sorted strictly alphabetical relative to each other within a species.
 - 17.2. Subspecies must be grouped and sorted AFTER all common names, basionyms and synonyms, but BEFORE all references within a species.
 - 17.3. The naming of subspecies follows Guidelines 14.2. and 14.3.
 - 17.4. Only prominent/important subspecies should be listed, it's also not wrong to list non at all when they are practically indistinguishable. Listing the nominate subspecies is not necessary either, but can be done if important.
+</details>
 
 ---
 ### 18 - HYBR (`w`)
 The epithet of a species hybrid. The genus name and multiplication sign "×" is prepended automatically via JavaScript to form the full hybrid name.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 18.1. Hybrids are only supported for different species within the same genus, as intergeneric hybrids are extremely rare within the Lepidoptera.
 - 18.2. If the parent species do not belong to the same subgenus or species group, the hybrid should be listed separately within the lowest common taxon. Introducing a new subgenus or species group for the hybrid alone is not required, instead it should be listed as a stand-alone name before all subgenera within a genus or before all species groups within a subgenus.
 - 18.3. If the parent species do belong to the same subgenus or species group, the hybrid should be listed alphabetically along with the other species. The the multiplication sign "×" should be ignored when sorting.
 - 18.3. The naming of hybrids follows Guidelines 14.2. and 14.3.
 - 18.4. Only prominent/important and proven hybrids should be listed. Ideally, these occur naturally, or are at least seen somewhat reguarly amongst captive-bred species.
 - 18.5. For naturally occuring hybrid populations, the parent traits should still be clearly present, meaning the population has not yet evolved into a fully distinctive species.
+</details>
 
 ---
 ### 19 - PARENT (`v`, `v2`)
 The epithet(s) of the first (`v`) and the second (`v2`) parent (sub)species of a species hybrid. The genus name is prepended automatically via JavaScript to form the full bi- or trinomial name of the (sub)species. Ultimately, both bi- or trinomial names are automatically combined via the multiplication sign "×" to form the complete hybrid designation.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 19.1. The first (`v`) and the second (`v2`) parent are determined by the alphabetical order of their species epithet, meaning the parent species first in alphabet is defined as the first parent.
 - 19.2. Every species hybrid needs to have both parent species listed, with `v` directly followed by `v2`.
 - 19.3. Parent species must be grouped and sorted AFTER all common names, basionyms and synonyms, but BEFORE all references within a species hybrid.
 - 19.4. The naming of epithets follows Guidelines 14.2. and 14.3.
 - 19.5. Adding a subspecies epithet is optional and should only be done if the subspecies is important for the hybridization. Listing a microspecies as one of the parents is acceptable.
+</details>
 
 ---
 ### 20 - NAME_EN, NAME_DE (`e`, `e2`, `d`, `d2`)
 The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species, species complex or certain higher-level taxa like families and tribes.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 20.1. The addition of type 1 common names (`e`, `d`) is supported for all species-level taxa (`a`, `ae`, `c`, `w`). These names must be written in SINGULAR.
 - 20.2. The addition of type 2 common names (`e2`, `d2`) is supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`). These names must be written in PLURAL.
 - 20.3. Common names are supported for the English (`e`, `e2`) and German language (`d`, `d2`) only, with the English ones being listed first.
@@ -353,34 +412,43 @@ The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species
 - 20.12. The German term "Falter" should be avoided for Microlepidopterans if possible, as it can cause confusion of names and is more often used to refer to Macrolepidopterans. Instead, the term "Motten" is preferred for Microlepidopterans.
 - 20.13. The obsolescent German term "Gemein" is to be replaced with the more modern and easier to understand term "Gewöhnlich".
 - 20.14. Abbreviations like "&" for "and/und", "St." for "Saint/Sankt" or "Mt." for "Mount" should be avoided, common names should always contain full words.
+</details>
 
 ---
 ### 21 - BAS (`b`)
 The genus of the basionym (original combination) of the species' or species aggregate's binomial name. The species epithet is prepended automatically via JavaScript to form the full binomial basionym, under which this species epithet was first published. This data type forms the first element of the BAS and BAS_AUT data pairs.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 21.1. The addition of basionyms is supported for all species-level taxa (`a`, `ae`, `c`, `w`).
 - 21.2. Basionyms must be placed AFTER all common names, but BEFORE all microspecies or subspecies, and references.
 - 21.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by a BAS_AUT. These two data points belong together and should not be separated!
 - 21.4. The naming of basionym genera follows Guidelines 1.2. and 1.3.
+</details>
 
 ---
 ### 22 - BAS_AUT (`n`)
 The author(s) and the year of publication of the basionym.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 22.1. If there is more than one author, a maximum of three should be listed, in the formats "Author1 & Author2" or "Author1, Author2 & Author3" respectively. The format "Author1 et al." is not accepted for this data type.
 - 22.2. The basionym author(s) must always be the second element of a BAS data pair, therefore be prepended by a BAS. These two data points belong together and should not be separated!
 - 22.3. The order and prioritization of author names should be the same as in the publication (first author listed in publication = first author shown on Lepitaxa).
 - 22.4. The author names must be their last name only, start with an upper-case letter and follow Guideline 20.6.
 - 22.5. The publication year only supports values in _YYYY_ format, starting at 1758.
 - 22.6. The publication year _YYYY_ value must be separated by a single comma (U+002C) followed by exactly ONE space (U+0020) from the author(s). 
+</details>
 
 ---
 ### 23 - SYN (`s`, `s2`, `s3`, `s4`)
 A binomial or trinomial synonym of a species, subspecies or microspecies. These synonyms can be listed within species and species aggregates to make obsolete scientific names available via the search function. Depending on which part of the species' or species aggregate's binomial name is retained in the synonym, different data point classes (`s`, `s2`, `s3`, `s4`) can be chosen to automatically generate the retained part via JavaScript.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 23.1. Type 1 synonyms (`s`) should be used for synonyms with the same genus name, but a different species (+optional subspecies) epithet. The parent genus name is prepended automatically via JavaScript.
 - 23.2. Type 2 synonyms (`s2`) should be used for synonyms with the last epithet matching the parent, but the genus name (+optional first epithet) being different. The parent epithet is appended automatically via JavaScript.
 - 23.3. Type 3 synonyms (`s3`) should be used for synonyms with the genus name and last epithet matching the parent, but the first epithet being different (former subspecies of given species epithet). The parent genus name is prepended and the parent epithet appended automatically via JavaScript.
@@ -391,22 +459,28 @@ A binomial or trinomial synonym of a species, subspecies or microspecies. These 
 - 23.8. The synonyms should be sorted strictly alphabetical relative to each other, with ALL auto-generated parts taken into account (prepended genus names and appended epithets included in sorting!).
 - 23.9. The naming of epithets follows Guidelines 14.2. and 14.3., the naming of genera follows Guidelines 1.2. and 1.3., with single spaces (U+0020) separating them.
 - 23.10. Only important and somewhat commonly encountered or recent synonyms should be listed to keep the dataset from getting too bloated with obsolete names. There are excessive numbers of synonyms available for some taxa of which most can be safely ignored.
+</details>
 
 ---
 ### 24 - SYN_H (`sh`)
 The synonym of a higher taxon, especially family- and tribe-level taxa.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 24.1. Higher taxon synonyms are supported for all family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
 - 24.2. Higher taxon synonyms must be sorted according to guidelines 19.5. and 19.6.
 - 24.3. The naming of higher taxon synonyms follows Guidelines 1.2. and 1.3.
 - 24.4. Guideline 23.8. applies for higher taxon synonyms as well.
+</details>
 
 ---
 ### 25 - REF (`r`, `r2`)
 A reference to a scientific publication/dataset the phylogenetic data is based on. This data type forms the first element of REF data triplets including REF, REF_TITLE and REF_ID.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 25.1. Type 1 references (`r`) should be used for publications with more than two authors. Only the first author is to be mentioned, which has the string " et al." appended automatically via JavaScript.
 - 25.2. Type 2 references (`r2`) should be used for publications with only one or two authors. If there's two, both authors need to be mentioned, separated by a single ampersand character (&, U+0026) and exactly one space before and after the "&".
 - 25.3. References are supported for all species-level taxa (`a`, `ae`, `c`, `w`), genera, subgenera and species groups (`g`, `i`, `o`), family- and tribe-level taxa (`x`, `f`, `y`, `t`, `j`, `h`), paraphyla (`xp`) and orders (`x9`).
@@ -420,21 +494,27 @@ A reference to a scientific publication/dataset the phylogenetic data is based o
 - 25.11. Referenced publications should always be based on molecular data, preferably as-precise-as-possible phylogenetics or phylogenomics. Referencing research based solely on morphology is only acceptable if there's nothing else available for a specific taxon.
 - 25.12. Referenced publications should preferentially be available in English, but are also accepted in German. If they are written in any other language, at least the abstract and results (including graphs/cladograms) should be available in English.
 - 25.13. Referenced publications must be unambiguously identifiable, preferentially via DOI. If there's no DOI available, a combination of Title + ISSN-L + Volume should be sufficient for identification, otherwise it will not be accepted.
+</details>
 
 ---
 ### 26 - REF_TITLE (`l`)
 The title of a referenced scientific publication. This data type forms the second element of REF data triplets including REF, REF_TITLE and REF_ID.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 26.1. The title should be taken straight from the publication, unmodified. If there's two or more titles in different languages available, English has priority 1 and should be used instead (if present), German has priority 2.
 - 26.2. Titles must always be the second element of a REF data triplet, therefore be prepended by a REF and appended by a REF_ID. These three data points belong together and should not be separated!
 - 26.3. The sorting follows Guideline 25.5.
+</details>
 
 ---
 ### 27 - REF_ID (`p`, `p2`)
 The ID of a referenced scientific publication. This data type forms the last element of REF data triplets including REF, REF_TITLE and REF_ID.
 
-:point_right: **Guidelines:**
+<details>
+<summary>Guidelines</summary>
+
 - 27.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
 - 27.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
 - 27.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
@@ -442,6 +522,7 @@ The ID of a referenced scientific publication. This data type forms the last ele
 - 27.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and one space. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
 - 27.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
 - 27.7. The sorting follows Guideline 25.5.
+</details>
 
 ---
 
