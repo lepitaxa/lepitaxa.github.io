@@ -26,10 +26,10 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 ||_"Macrolepidopterans"_|_"Großschmetterlinge"_||
-|![#FFFF99,#FFC001](https://placehold.co/100x48/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
-|![#FFCC66,#FF0000](https://placehold.co/100x48/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
-|![#CCFFCC,#99CC00](https://placehold.co/100x48/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
-|![#CCCCFF,#5C01FF](https://placehold.co/100x48/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/100x48/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFCC66,#FF0000](https://placehold.co/100x48/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
+|![#CCFFCC,#99CC00](https://placehold.co/100x48/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
+|![#CCCCFF,#5C01FF](https://placehold.co/100x48/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 ||_"Microlepidopterans"_|_"Kleinschmetterlinge"_||
 |![#FFCCFF,#BB00FF](https://placehold.co/100x48/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
 |![#FFCCCC,#EE0099](https://placehold.co/100x48/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
@@ -139,7 +139,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$**DOI**|ID of scientific reference via DOI|
 |`p2`|REF_ID|$\color{#9BD}{\textsf{ISSN-L:}}$ **ISSN-L, VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-$\color{#9BD}{\textsf{X}}$ Auto-generated data substring – added on page load via JavaScript<br>
+$\color{#9BD}{\textsf{X }}$ Auto-generated data substring – added on page load via JavaScript<br>
 **X**&nbsp; Required data (sub)string – must always be present<br>
 X&nbsp; Optional data substring – can be added in addition to a required substring
 
