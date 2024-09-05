@@ -26,15 +26,15 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 ||_"Macrolepidopterans"_|_"Großschmetterlinge"_||
-|![#FFFF99](https://placehold.co/32x48/ff9/ff9.png)![#FFC001](https://placehold.co/16x48/ffc001/ffc001.png)![#FFFF99](https://placehold.co/32x48/ff9/ff9.png)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
-|![#FFCC66](https://placehold.co/32x48/fc6/fc6.png)![#FF0000](https://placehold.co/16x48/f00/f00.png)![#FFCC66](https://placehold.co/32x48/fc6/fc6.png)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
-|![#CCFFCC](https://placehold.co/32x48/cfc/cfc.png)![#99CC00](https://placehold.co/16x48/9c0/9c0.png)![#CCFFCC](https://placehold.co/32x48/cfc/cfc.png)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
-|![#CCCCFF](https://placehold.co/32x48/ccf/ccf.png)![#5C01FF](https://placehold.co/16x48/5c01ff/5c01ff.png)![#CCCCFF](https://placehold.co/32x48/ccf/ccf.png)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/100x48/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFCC66,#FF0000](https://placehold.co/100x48/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
+|![#CCFFCC,#99CC00](https://placehold.co/100x48/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
+|![#CCCCFF,#5C01FF](https://placehold.co/100x48/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 ||_"Microlepidopterans"_|_"Kleinschmetterlinge"_||
-|![#FFCCFF](https://placehold.co/32x48/fcf/fcf.png)![#BB00FF](https://placehold.co/16x48/bb00ff/bb00ff.png)![#FFCCFF](https://placehold.co/32x48/fcf/fcf.png)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|![#FFCCCC](https://placehold.co/32x48/fcc/fcc.png)![#EE0099](https://placehold.co/16x48/e09/e09.png)![#FFCCCC](https://placehold.co/32x48/fcc/fcc.png)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|![#BBFFFF](https://placehold.co/32x48/bff/bff.png)![#1EB9BC](https://placehold.co/16x48/1eb9bc/1eb9bc.png)![#BBFFFF](https://placehold.co/32x48/bff/bff.png)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
-|![#EEEECC](https://placehold.co/32x48/eec/eec.png)![#AA8855](https://placehold.co/16x48/a85/a85.png)![#EEEECC](https://placehold.co/32x48/eec/eec.png)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
+|![#FFCCFF,#BB00FF](https://placehold.co/100x48/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/100x48/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/100x48/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#EEEECC,#AA8855](https://placehold.co/100x48/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
 
 Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
