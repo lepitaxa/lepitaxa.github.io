@@ -28,7 +28,7 @@ var sf = 'The suffix of this taxon type must be "'
 
 
 // Special characters and capitalization
-if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d) || f.matches('.n, .r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
 if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};

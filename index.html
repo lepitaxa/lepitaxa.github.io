@@ -98,6 +98,7 @@ p.l>a		{color:#666}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
 .b			{color:#448}
+.b::before	{content:'BS '}
 .ns			{font-family:"Times New Roman",Times,serif;letter-spacing:0.04rem}
 
 /*main, taxa*/
@@ -17341,7 +17342,7 @@ d	Saphirnymphe
 c	veronica
 e	Common Nymph
 e	Veronica's Nymph
-d	Gewöhnlichee Nymphe
+d	Gewöhnliche Nymphe
 k	barombina
 k	incerta
 k	simplex
@@ -17438,8 +17439,8 @@ a	cyrili
 a	plutonica
 a	sibyllina
 t	Cymothoini
-e2	Segler
-d2	Gliders
+e2	Gliders
+d2	Segler
 j	Cymothoina
 h	Cymothoiti
 g	Cymothoe
@@ -17700,7 +17701,7 @@ d	Gewöhnlicher Flieger
 s2	Phaedyma
 c	vikasi
 e	Dingy Sailor
-e	Chocolate Sailer
+e	Chocolate Sailor
 d	Schokoladenmatrose
 k	celebica
 k	cymela
@@ -17721,7 +17722,7 @@ s2	Pantoporia
 i	Neptidomima
 o	Agouale
 a	agouale
-e	Common Club-dot Sailer
+e	Common Club-dot Sailor
 d	Akazienmatrose
 a	nicobule
 e	Scarce Clubbed Sailor
@@ -17771,7 +17772,7 @@ e	Original Club-dot Sailor
 o	Nemetes
 a	dumetorum
 a	metella
-e	Yellow-base Sailer
+e	Yellow-base Sailor
 a	nemetes
 e	Nemetes Sailor
 o	Saclava
@@ -17871,7 +17872,7 @@ e	Malayan Lascar
 d	Malaiischer Laskar
 s2	Lasippa
 a	viraja
-e	Yellowjack Sailer
+e	Yellowjack Sailor
 d	Gelber Laskar
 s2	Lasippa
 i	Stabrobates
@@ -17886,7 +17887,7 @@ a	anjana
 e	Rich Sailor
 d	Reicher Matrose
 a	radha
-e	Great 0 Sailor
+e	Great Yellow Sailor
 a	taiwana
 e	Taiwanese Sailor
 d	Taiwanesischer Matrose
@@ -17896,7 +17897,7 @@ e	Plain Sailor
 a	magadha
 a	meloria
 a	narayana
-e	Broadstick Sailer
+e	Broadstick Sailor
 a	nashona
 e	Less Rich Sailor
 d	Armer Matrose
@@ -64914,7 +64915,7 @@ var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); /
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
-//5 Remove init+error message
+//5 Remove init message
 $('header').style.display = "none";	////INIT complete
 
 // MAIN FUNCTIONS
