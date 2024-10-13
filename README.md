@@ -1,4 +1,4 @@
-# <picture><source media="(prefers-color-scheme: light)" srcset="lepitaxa.png"><source media="(prefers-color-scheme: dark)" srcset="lepitaxa2.png"><img src="lepitaxa.png" height="32"></picture> LEPITAXA – Lepidopteran Classification Project
+# <img src="favicon.svg" height="32"> LEPITAXA – Lepidopteran Classification Project
 #### Website: [lepitaxa.github.io](https://lepitaxa.github.io/)
 
 ## Overview
