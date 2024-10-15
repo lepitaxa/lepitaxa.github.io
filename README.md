@@ -26,15 +26,15 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 ||_"Macrolepidopterans"_|_"Großschmetterlinge"_||
-|${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$<br>${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
-|${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$<br>${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
-|${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$<br>${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
-|${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$<br>${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFCC66,#FF0000](https://placehold.co/110x50/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
+|![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
+|![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 ||_"Microlepidopterans"_|_"Kleinschmetterlinge"_||
-|${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$<br>${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$<br>${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$<br>${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
-|${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$<br>${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
+|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
 
 Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
@@ -139,7 +139,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$**DOI**|ID of scientific reference via DOI|
 |`p2`|REF_ID|$\color{#9BD}{\textsf{ISSN-L:}}$ **ISSN-L, VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-$\color{#9BD}{\textsf{X}}$ Auto-generated data substring – added on page load via JavaScript<br>
+$\color{#9BD}{\textsf{X }}$ Auto-generated data substring – added on page load via JavaScript<br>
 **X**&nbsp; Required data (sub)string – must always be present<br>
 X&nbsp; Optional data substring – can be added in addition to a required substring
 
