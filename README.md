@@ -1,13 +1,13 @@
 # <img src="favicon.svg" height="32"> LEPITAXA – Lepidopteran Classification Project
 #### Website: [lepitaxa.github.io](https://lepitaxa.github.io/)
+#### GitHub repository: [lepitaxa / lepitaxa.github.io](https://github.com/lepitaxa/lepitaxa.github.io)
 
 ## Overview
 - [Introduction](#introduction)
-- [Basic structure](#basic-structure)
 - [Workspace setup](#workspace-setup)
 - [Data types](#data-types)
 - [Guidelines](#guidelines)
-- [Project details](#project-details)
+- [Licencing](#licencing)
 
 ## Introduction
 This project aims to provide a modern, up-to-date phylogeny-based classification of the large insect order Lepidoptera (Butterflies & Moths) in a simple and lightweight format.
@@ -20,21 +20,27 @@ This GitHub repository also provides a place to discuss data, propose changes an
 
 -- _Georg Hammerschmid_
 
-## Basic structure
+### Project history
+- 07.07.2008 – Started experimenting with a first HTML-based tree for the superfamily Papilionoidea (butterflies).
+- 17.12.2013 - Complete technical overhaul of the still experimental "Papilionoidea" project, including the use of CSS and JavaScript.
+- 05.12.2020 – Formal creation of the Lepitaxa project with improved code and data structure, as well as a significantly expanded tree.
+- 17.09.2023 – The Lepitaxa project moved to GitHub and is now available to the public domain, now using GitHub Pages as a website host.
+
+### Basic structure
 Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or datapoints! An overview of the group structure can be found in the table below.
 
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 ||_"Macrolepidopterans"_|_"Großschmetterlinge"_||
-|${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$<br>${\color[RGB]{255,255,153}██\color[RGB]{255,192,1}█\color[RGB]{255,255,153}██}$|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera<br>(Superfamilies Papilionoidea + Thyridoidea)|
-|${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$<br>${\color[RGB]{255,204,102}██\color{red}█\color[RGB]{255,204,102}██}$|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Noctuina (Superfamily Noctuoidea)|
-|${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$<br>${\color[RGB]{204,255,204}██\color[RGB]{153,204,0}█\color[RGB]{204,255,204}██}$|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Geometrina (Superfamily Geometroidea)|
-|${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$<br>${\color[RGB]{204,204,255}██\color[RGB]{92,1,255}█\color[RGB]{204,204,255}██}$|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera<br>Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFCC66,#FF0000](https://placehold.co/110x50/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
+|![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
+|![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 ||_"Microlepidopterans"_|_"Kleinschmetterlinge"_||
-|${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$<br>${\color[RGB]{255,204,255}██\color[RGB]{187,0,255}█\color[RGB]{255,204,255}██}$|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$<br>${\color[RGB]{255,204,204}██\color[RGB]{238,0,153}█\color[RGB]{255,204,204}██}$|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$<br>${\color[RGB]{187,255,255}██\color[RGB]{30,185,188}█\color[RGB]{187,255,255}██}$|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
-|${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$<br>${\color[RGB]{238,238,204}██\color[RGB]{170,136,85}█\color[RGB]{238,238,204}██}$|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
+|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
 
 Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
@@ -139,7 +145,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$**DOI**|ID of scientific reference via DOI|
 |`p2`|REF_ID|$\color{#9BD}{\textsf{ISSN-L:}}$ **ISSN-L, VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-$\color{#9BD}{\textsf{X}}$ Auto-generated data substring – added on page load via JavaScript<br>
+$\color{#9BD}{\textsf{X }}$ Auto-generated data substring – added on page load via JavaScript<br>
 **X**&nbsp; Required data (sub)string – must always be present<br>
 X&nbsp; Optional data substring – can be added in addition to a required substring
 
@@ -524,15 +530,6 @@ The ID of a referenced scientific publication. This data type forms the last ele
 - 27.7. The sorting follows Guideline 25.5.
 </details>
 
----
-
-## Project details
-
-**LEPITAXA – Lepidopteran Classification Project**
-- Author: [Georg Hammerschmid](https://github.com/lepitaxa)
-- Creation date of base tree: 07.07.2008
-- Creation date of project: 05.12.2020
-- Webhost Lepitaxa site: [pages.github.com](https://pages.github.com/) since 17.09.2023
-- GitHub repository: [lepitaxa / lepitaxa.github.io](https://github.com/lepitaxa/lepitaxa.github.io)
-- Licencing Lepitaxa designs: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-- Licencing Lepitaxa dataset: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+## Licencing
+#### <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" height="45"> <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" height="45"> This work is licenced under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain)
+Author: [Georg Hammerschmid](https://github.com/lepitaxa)
