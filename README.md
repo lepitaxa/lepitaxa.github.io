@@ -21,10 +21,12 @@ This GitHub repository also provides a place to discuss data, propose changes an
 -- _Georg Hammerschmid_
 
 ### Project history
-- 07.07.2008 – Started experimenting with a first HTML-based tree for the superfamily Papilionoidea (butterflies).
-- 17.12.2013 - Complete technical overhaul of the still experimental "Papilionoidea" project, including the use of CSS and JavaScript.
-- 05.12.2020 – Formal creation of the Lepitaxa project with improved code and data structure, as well as a significantly expanded tree.
-- 17.09.2023 – The Lepitaxa project moved to GitHub and is now available to the public domain, now using GitHub Pages as a website host.
+|Date|Milestone|
+|---|---|
+|07.07.2008|Started experimenting with a first HTML-based tree for the superfamily Papilionoidea (butterflies).|
+|17.12.2013|Complete technical overhaul of the still experimental "Papilionoidea" project, including the use of CSS and JavaScript.|
+|05.12.2020|Formal creation of the Lepitaxa project with improved code and data structure, as well as a significantly expanded tree.|
+|17.09.2023|The Lepitaxa project moved to GitHub and is now available to the public domain, using GitHub Pages as a website host.|
 
 ### Basic structure
 Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or datapoints! An overview of the group structure can be found in the table below.
