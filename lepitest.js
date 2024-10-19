@@ -297,11 +297,12 @@ $$('div[id]').forEach(f=>{if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || /\/p\>(?!
 ////7 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
+var rawSize = count * 0.0000159
 var exSize; var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
 
-if (/(txt|tsv)/.test(format)) exSize = size * 1.46;
-else if (format == 'csv') exSize = size * 1.58;
-else exSize = size * 3.34;
+if (/(txt|tsv)/.test(format)) exSize = rawSize * 1.48;
+else if (format == 'csv') exSize = rawSize * 1.61;
+else exSize = rawSize * 3.37;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
 
