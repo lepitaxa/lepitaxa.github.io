@@ -74,7 +74,7 @@ if (f.matches('p:not(.c)') && (/ agg\.$/.test(d))) {i++; log += '[#' + i + s1 + 
 // BAS and REF errors
 if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the BAS_AUT ends with a valid date in YYYY format, starting at 1758.\n"};
 if (f.matches('.r,.r2') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1998)) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in YYYY format, starting at 1998.\n"};
-if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > version.substring(9,13)) {i++; log += '[#' + i + s1 + "You cannot use a future date for anything already published.\n"};
+if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > date.substring(0,4)) {i++; log += '[#' + i + s1 + "You cannot use a future date for anything already published.\n"};
 if (f.matches('.r') && (/&/.test(d) || (d.match(/,/g) || []).length > 1 || (d.match(/et al/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Only list the first author when using the r data type. The "et al." prefix is added automatically for this data type and therefore should not be present in the raw data.\n'};
 if (f.matches('.r2') && (/&/.test(d) && (d.match(/ /g) || []).length < 3 || (d.match(/&/g) || []).length > 1 || (d.match(/,/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Do not list more than 2 authors when using the r2 data type. If there are 2 authors listed, make sure they are properly separated by a space-separated "&" character.\n'};
 if (f.matches('.p') && !(/^doi:10./.test(d))) {i++; log += '[#' + i + s1 + 'Make sure this REF_ID is a proper DOI, without any additional "doi:" or URL suffix.\n'};
@@ -297,14 +297,10 @@ $$('div[id]').forEach(f=>{if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || /\/p\>(?!
 ////7 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var rawSize = count * 0.0000159
-var exSize; var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
+var size = count * 0.0000235
+var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
 
-if (/(txt|tsv)/.test(format)) exSize = rawSize * 1.48;
-else if (format == 'csv') exSize = rawSize * 1.61;
-else exSize = rawSize * 3.37;
-
-var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Selected export format: ' + format.toUpperCase() + '\n- Estimated download size: ' + exSize.toFixed(1) + ' MB\n\n';
+var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
 
 if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the raw data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
 else info2 = "No data integrity issues found!\n\n";
@@ -313,62 +309,21 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////8 Call the correct converter for the selected export format, rebuild the ID links afterwards
-console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Convert data to ' + format + ' format ...');
-if (format == 'xml') xml(); else dsv();
+////8 Run tsv converter, rebuild the ID links afterwards
+console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Converting data to TSV format ...');
+
+// TSV converter
+var file_cont = 'META_DATASET\tLepitaxa-' + version + '\nMETA_ORIGIN\thttps://lepitaxa.github.io';
+$$('p:not(.b,.l),.bs,.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + '\t' + f.innerHTML});
+
+// Generate, click and remove download link, rebuld IDs
+var file_link = document.createElement('a');
+file_link.setAttribute('download','Lepitaxa-' + version + '.tsv');
+file_link.setAttribute('href','data:text/tsv;charset=utf-8,' + encodeURIComponent(file_cont));
+file_link.click(); console.log('→ Download ready!'); file_link.remove();
+
+
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
-
-
-
-////// RAW DATA EXPORT
-//// DSV converter
-function dsv() {
-var del = ''; var q = '';
-if (format == 'txt') {var del = ";"}
-if (format == 'csv') {var del = ","; var q = '"'}
-if (format == 'tsv') {var del = "\t"}; // Delimiter assignment
-
-	//Build dsv content
-	var file_cont = 'META_DATASET' + del + q + version + q + "\n" + 'META_ORIGIN' + del + q + 'https://lepitaxa.github.io' + q;
-	$$('p:not(.b,.l),.bs,.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + del + q + f.innerHTML + q});
-
-var file_link = document.createElement('a'); // Generate, click and remove download link
-file_link.setAttribute('download',version + '.' + format);
-file_link.setAttribute('href','data:text/' + format + ';charset=utf-8,' + encodeURIComponent(file_cont));
-file_link.click(); console.log('→ Download ready!'); file_link.remove()};
-
-//// XML converter
-function xml() {
-	//1 xml start, add meta
-	var file_cont = '<lepitaxa>\n<meta dataset="' + version + '" origin="https://lepitaxa.github.io' + '" />\n\n<taxa>\n';
-
-	//2 xml main, add taxalist
-	$$('p:not(.e,.e2,.d,.d2,.b,.n,[class^="s"],.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)').forEach(f=>{
-		var sib = (f.matches('.h,.j,.t,.y,.f,.x,.x9')) ? f.nextElementSibling.firstElementChild : f.nextElementSibling;
-		var REF = ''; var RTI = ''; var RID = ''; var nEN = ''; var nDE = ''; var BAS = ''; var AUT = ''; var SYN = ''; var SUB = ''; var PAR = ''; // Start element lists
-		while (sib) { // Loop for each taxon
-		if (sib.matches('.e,.e2')) nEN += '\t\t<com_name lang="en">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nEN list
-		else if (sib.matches('.d,.d2')) nDE += '\t\t<com_name lang="de">' + sib.innerHTML + '</com_name>\n'; // If sib matches selector, add to nDE list
-		else if (sib.matches('.b')) BAS += '\t\t<bas>' + sib.firstElementChild.innerHTML + '</bas>\n'; // If sib matches selector, add to BAS list
-		else if (sib.matches('.n')) AUT += '\t\t<bas_aut>' + sib.innerHTML + '</bas_aut>\n'; // If sib matches selector, add to AUT list
-		else if (sib.matches('[class^="s"]')) SYN += '\t\t<syn>' + sib.innerHTML + '</syn>\n'; // If sib matches selector, add to SYN list
-		else if (sib.matches('.u,.ue,.k')) SUB += '\t\t<subtaxon type="' + convert(sib.classList) + '">' + sib.innerHTML + '</subtaxon>\n'; // If sib matches selector, add to SUB list
-		else if (sib.matches('.v,.v2')) PAR += '\t\t<parent>' + sib.innerHTML + '</parent>\n'; // If sib matches selector, add to PAR list
-		else if (sib.matches('.r,.r2')) REF += '\t\t<ref>' + sib.innerHTML + '</ref>\n'; // If sib matches selector, add to REF list
-		else if (sib.matches('.l')) RTI += '\t\t<ref_title>' + sib.firstElementChild.innerHTML + '</ref_title>\n'; // If sib matches selector, add innerHTML of first child to RTI list
-		else if (sib.matches('.p,.p2')) RID += '\t\t<ref_id>' + sib.innerHTML + '</ref_id>\n'; // If sib matches selector, add to RID list
-		else break
-		sib = sib.nextElementSibling};
-
-		file_cont += '\t<taxon type="' + convert(f.classList) + '">\n\t\t<name>' + f.innerHTML + '</name>\n' + nEN + nDE + BAS + AUT + SYN + SUB + PAR + REF + RTI + RID + '\t</taxon>\n'});
-
-	//3 xml end
-	file_cont += '</taxa>\n</lepitaxa>';
-
-var file_link = document.createElement('a'); // Generate, click and remove download link
-file_link.setAttribute('download',version + '.xml');
-file_link.setAttribute('href','data:application/xml;charset=utf-8,' + encodeURIComponent(file_cont));
-file_link.click(); console.log('→ Download ready!'); file_link.remove()};
 
 
 
