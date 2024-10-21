@@ -63,12 +63,12 @@ All Lepitaxa data is included within a single file, index.html. This file also c
 To get around faster within the large dataset, simply use your text editors search function to jump to whatever datapoint you’d like to modify.
 
 ### Checking data integrity
-To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, it is recommended to additionally run an automated data integrity check. To do this, open index.html in a web browser, navigate to "Stats & Infos" on the bottom and select one of the data export options. Every data export will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them, reload the page and repeat the lepitest for confirmation.
+To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, it is recommended to additionally run an automated data integrity check. To do this, open index.html in a web browser, navigate to the bottom and click the data download button. Every data export will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them, reload the page and repeat the lepitest for confirmation.
 
 Note that running a successfull lepitest does NOT guarantee full data integrity, as this simple script can by no means detect everything. Also keep in mind that sometimes a single mistake within the data can cause several error points in a lepitest log, don’t get confused by that. They will all resolve after fixing the mistake.
 
 ### Exporting the dataset
-If you want to use Lepitaxa data for your own research, you’re free to do so in any way you want at all times, no need to ask for permission. More details about the dataset, its licensing as well as a data export feature (supports txt, csv, tsv and xml formats) can be found by clicking the “Stats & Infos” button on the bottom of the Lepitaxa webpage.
+If you want to use Lepitaxa data for your own research, you’re free to do so in any way you want at all times, no need to ask for permission. More details about the dataset, its licensing as well as a data export feature can be found in the footer of the Lepitaxa webpage.
 
 ## Data types
 ### Basic data syntax
@@ -135,7 +135,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`d`|NAME_DE|**NAME**|German common name of a<br>species or species complex|
 |`d2`|NAME_DE|**NAME**|German common name of a<br>family/tribe-level taxon|
 |`b`|BAS|**GEN** $\color{#9BD}{\textsf{ SP}}$|Genus of the basionym/original combination|
-|`n`|BAS_AUT|**AUT, YYYY**|Author(s) and year of publication of the basionym/original combination|
+|`n`|AUT|**AUT, YYYY**|Author(s) and year of publication of the basionym/original combination|
 |`s`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** SSP|Species synonym with different<br>species (+ optional subspecies) epithet|
 |`s2`|SYN|**GEN** SP $\color{#9BD}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
 |`s3`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
@@ -436,7 +436,7 @@ The genus of the basionym (original combination) of the species' or species aggr
 </details>
 
 ---
-### 22 - BAS_AUT (`n`)
+### 22 - AUT (`n`)
 The author(s) and the year of publication of the basionym.
 
 <details>
