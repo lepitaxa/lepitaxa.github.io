@@ -302,7 +302,7 @@ var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
 
-if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the raw data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
+if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
 else info2 = "No data integrity issues found!\n\n";
 
 var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nLepitest Log:\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
