@@ -5,11 +5,11 @@
 <meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#000">
 <meta name="viewport" content="initial-scale=1">
-<meta property="og:image" content="https://lepitaxa.github.io/lepitaxa.png">
+<meta property="og:image" content="https://lepitaxa.github.io/favicon.png">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:url" content="https://lepitaxa.github.io">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><style>path{fill:black}@media(prefers-color-scheme:dark){path{fill:silver}}</style><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
 @media screen and (min-width:660px) {:root{--z:16px}}
 @media screen and (max-width:660px) {:root{--z:2.424vw}}
@@ -17,7 +17,7 @@
 :root			{--m:Consolas,monospace; font-size:var(--z)}
 .hide,.v2,.n,.p,.p2	{display:none}
 body			{font-family:Verdana,sans; -webkit-text-size-adjust:none; text-size-adjust:none; margin:auto; width:98%; max-width:640px}
-a,u				{color:#000; text-decoration:underline; cursor:pointer}
+a,u				{color:#666; text-decoration:underline; cursor:pointer}
 :is(a,u):hover	{color:blue; text-decoration:underline}
 :is(a,u):active	{color:#88F}
 :is(main, footer)::before	{content:" "; display:block; border-top:0.13rem solid gray; transform:translateY(0.7rem)}
@@ -26,14 +26,12 @@ a,u				{color:#000; text-decoration:underline; cursor:pointer}
 #lg		{height:2rem}
 #v		{height:1.4rem; margin:1rem 12rem 0 0.2rem; vertical-align:0.22rem}
 .bH,.bF	{fill:#666; cursor:pointer; float:right}
-.bH		{height:1.35rem; border:0; margin:1.1rem 0.35rem; position:sticky; top:0.7rem; z-index:1}
+.bH		{height:1.4rem; border:0; margin:1rem 0.4rem; position:sticky; top:0.7rem; z-index:1}
 .bF		{height:2rem; font-size:0.9rem; position:relative; bottom:2.3rem; margin:0 0 -1rem 0.5rem; padding:0.2rem 0.65rem; color:#666; border:0.06rem solid #CCC; border-radius:0.44rem; background:none}
-#r		{height:1.5rem}
-h3,h4	{font-size:0.94rem; font-weight:400}
-h3		{font-family:var(--m); white-space:pre; margin:0.13rem 0; padding:0.44rem; background:#EEEEE6}
-h4		{font-size:0.8rem; margin:0.3rem 0; color:#666; letter-spacing:0.03rem}
-footer	{margin:1rem 0}
-footer::before	{transform:translateY(-0.75rem)}
+.bB		{height:1.5rem}
+h3		{font-size:0.8rem; font-weight:400; margin:0.3rem 0; color:#666; letter-spacing:0.03rem}
+footer	{margin:0.9rem 0}
+footer::before	{transform:translateY(-0.65rem)}
 :is(.bH,.bF):hover	{color:blue; fill:blue; border-color:#AAF}
 :is(.bH,.bF):active	{color:#88F; fill:#99F}
 
@@ -52,7 +50,7 @@ footer::before	{transform:translateY(-0.75rem)}
 #b :is(h2,.f,.g)	{color:#5C01FF}
 #h :is(h2,.f,.g)	{color:#B0F}
 #c :is(h2,.f,.g)	{color:#E09}
-#m :is(h2,.f,.g)	{color:#1eb9bc}
+#m :is(h2,.f,.g)	{color:#1EB9BC}
 #a :is(h2,.f,.g)	{color:#A85}
 [class^="x"], :is(.x9,.x,.xp)+div	{color:#777; background:#F4F4F4; padding-bottom:0.2rem}
 
@@ -93,11 +91,11 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 :is(.r,.r2)::before	{content:"REF "; font-weight:700}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
-p.l>a		{color:#666}
 .link, .link:hover	{text-decoration:none}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
 .g>.link::before	{content:"▪ "; font-style:normal}
 .b			{color:#448}
+.b::before	{content:'BS '}
 .ns			{font-family:"Times New Roman",Times,serif;letter-spacing:0.04rem}
 
 /*main, taxa*/
@@ -140,11 +138,11 @@ p.l>a		{color:#666}
 </head>
 
 <body onload="setT(); if (/#/.test(window.location.href)) sload()">
-<header><h1>LEPITAXA</h1>⌛ Initializing ...</header>
+<header><h1>LEPITAXA</h1> - A modern, phylogeny-based classification of the large insect order Lepidoptera (Butterflies & Moths) in a simple and lightweight format.<br><br>⌛ Initializing ...<br> <br>...<br>...</header>
 <svg id="lg" itemprop="logo" viewBox='0 0 200 200'><path d='M39 1972c-27-24-33-37-37-85-6-77 11-140 68-241 78-140 99-221 120-464 11-128 24-175 57-205 36-32 146-69 223-76l75-7-55-8c-79-11-129-37-176-88-34-37-43-56-54-112-34-179 49-430 190-580C521 30 573 1 635 0c79 0 114 47 229 317l84 195 4-139c4-145 14-183 48-183s44 38 48 183l4 139 84-195C1251 47 1286 0 1365 0c62 1 114 30 185 106 141 150 224 401 190 580-21 112-100 181-230 200l-55 8 75 7c77 7 187 44 223 76 33 30 46 77 57 205 21 243 42 324 120 464 57 101 74 164 68 241-4 48-10 61-37 85-39 35-81 36-171 5-102-37-204-122-346-293-132-159-283-396-340-536-15-38-30-66-33-63-2 3-12 26-20 52-29 84-73 84-102 0-8-26-18-49-20-52-3-3-18 25-33 63-57 140-208 377-340 536-142 171-244 256-346 293-90 31-132 30-171-5z' transform='matrix(.1 0 0 -.1 0 200)'/></svg>
 <svg id="v" fill="#AAA" viewBox="0 0 2820 389"><path d="M0 0v389h238v-61H69V0Zm371 0v389h248v-61H440V221h128v-58H440V62h179V0Zm376 0v389h69V241c43-1 88 1 127-19 36-18 58-56 60-96 4-36-7-78-39-98C928 4 884-1 843 0Zm131 63c22 4 46 15 53 39 9 27-6 61-34 69-26 10-54 8-81 9V60c21 1 42 0 62 3zm251-63v389h69V0Zm200 0v62h124v327h69V62h129V0Zm503 0-153 389h76l31-88h119l31 88h76L1858 0Zm14 125 39 122h-80zm244 264 114-201L2097 0h70l79 132 89-132h69l-123 189 130 200h-75l-90-140-85 140zM2640 0l-153 389h76l31-88h119l31 88h76L2666 0Zm14 125 39 122h-80z"/></svg>
-<svg class="bH" tabindex="0" onpointerdown="rload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
-<svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="ex"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
+<svg class="bH" tabindex="0" onpointerdown="location.reload()" viewBox="0 0 474 389"><title id="re"></title><path d="M171 1A197 197 0 0 0 6 243c20 80 95 142 178 146 61 5 120-27 161-71l-32-27c-26 24-57 48-94 53A152 152 0 0 1 100 76c54-43 136-42 189 1 36 28 58 73 57 118l-41-40h-49c36 35 72 71 109 105 37-34 73-69 109-105h-48l-36 35A196 196 0 0 0 171 1Z"/></svg>
+<svg class="bH" tabindex="0" onpointerdown="sload()" viewBox="0 0 918 543"><title id="al"></title><path d="M179 1C92 10 21 74 3 159c-2 12-2 14-2 37-1 21 0 26 2 36 15 81 79 145 160 160 39 6 80 1 116-15l10-5c54 50 107 100 159 151 13 13 19 16 32 19 18 3 36-3 48-17 15-16 20-51 4-66L366 299l7-13A197 197 0 0 0 178 1Zm47 62c71 16 117 85 106 157a138 138 0 0 1-194 101c-48-22-78-70-78-123 0-25 3-41 15-63 28-56 90-85 151-72Zm385 265-33 29 170 166 170-167-34-29-137 135zm0-213-33 29 170 166 170-167-34-29-137 135z"/></svg>
 
 <main onmousedown="if (event.target.matches('.x9,.x,.xp,.f,.y,.t,.j,.h')) {event.target.classList.toggle('open'); event.target.nextElementSibling.classList.toggle('hide')}">
 <div id="l">
@@ -2758,7 +2756,7 @@ e	Caucasian Apollo
 d	Kaukasus-Apollo
 a	orleans
 a	stubbendorfi
-e	Sibirisk Apollo
+e	Amur Apollo
 d	Amur-Apollo
 s	stubbendorfii
 t	Luehdorfiini
@@ -2865,6 +2863,12 @@ p2	0749-6737, 1026
 r	Zhang, 2023
 l	Thirteen new species of butterflies (Lepidoptera: Hesperiidae) from Texas
 p	10.5281/zenodo.7710103
+r	Zhu, 2023
+l	Mitogenomic phylogenetic analyses provide novel insights into the taxonomic problems of several hesperiid taxa (Lepidoptera: Hesperiidae)
+p	10.1038/s41598-023-34608-8
+r	Huang, 2024
+l	Molecular phylogeny of Hesperiidae (Lepidoptera) with an emphasis on Asian and African genera
+p	10.1016/j.ympev.2024.108119
 y	Hesperiinae
 e2	Grass Skippers
 d2	Echte Dickkopffalter
@@ -5349,6 +5353,9 @@ a	vatinius
 g	Pseudorphe
 a	pyrex
 t	Baorini
+r	Fan, 2016
+l	Clarification of the Phylogenetic Framework of the Tribe Baorini (Lepidoptera: Hesperiidae: Hesperiinae) Inferred from Multiple Gene Sequences
+p	10.1371/journal.pone.0156861
 g	Baoris
 a	farri
 e	Paintbrush Swift
@@ -5489,7 +5496,40 @@ a	pellucida
 s2	Polytremis
 a	zina
 s2	Polytremis
-t	Psolosini
+t	Ismini
+sh	Ismaini
+j	Ismina
+g	Iambrix
+a	salsala
+e	Chestnut Bob
+d	Brauner Bob
+a	stellifer
+e	Starry Bob
+d	Sternchen-Bob
+g	Isma
+a	bononia
+e	Lesser Long-spot Flitter
+a	distanti
+e	Spotless Bob
+s2	Iambrix
+s2	Idmon
+a	iapis
+e	Ciliate Long-horned Flitter
+e	Plain Tufted Lancer
+a	obliquans
+e	Small Red Bob
+s2	Iambrix
+s2	Idmon
+a	protoclea
+e	Bicolour Long-horned Flitter
+s	bicolor
+s	bicolora
+s	obscura
+s	obscura bicolor
+a	umbrosa
+e	Large Long-banded Flitter
+j	Psolosina
+sh	Psolosini
 g	Koruthaialos
 i	Koruthaialos
 a	rubecula
@@ -5508,18 +5548,11 @@ s2	Stimula
 g	Psolos
 a	fuligo
 e	Dusky Partwing
-t	Ismini
-j	Ismina
-g	Iambrix
-a	salsala
-e	Chestnut Bob
-d	Brauner Bob
-g	Idmon
-g	Isma
 j	Eetionina
 sh	Eetionini
 g	Eetion
 t	Notocryptini
+sh	Ancistroidini
 g	Ancistroides
 i	Ancistroides
 a	longicornis
@@ -5556,6 +5589,7 @@ e	Chocolate Demon
 d	Schoko-Dämon
 s2	Ancistroides
 t	Erionotini
+j	Erionotina
 g	Acerbas
 a	anthea
 e	White Palmer
@@ -5590,8 +5624,30 @@ g	Gangara
 a	thyrsis
 e	Giant Redeye Skipper
 d	Großer Rotaugen-Dickkopffalter
-g	Ge
-a	geta
+g	Matapa
+a	aria
+e	Common Redeye Skipper
+d	Gewöhnlicher Rotaugen-Dickkopffalter
+g	Zela
+a	excellens
+e	White-club Yellow Palmer
+a	zeus
+e	Orange-ciliate Palmer
+b	Zela
+n	De Nicéville, 1895
+j	Unkanina
+sh	Unkanini
+g	Hyarotis
+a	adrastus
+e	Tree Flitter
+d	Baumhüpfer
+g	Hyarotoides
+a	quinquepunctatus
+b	Hyarotis
+n	Fan & Chiba, 2008
+r2	Fan & Chiba, 2008
+l	A new species of the genus Hyarotis Moore (Lepidoptera: Hesperiidae) from China
+p2	1001-411X, 29(2)
 g	Ilma
 a	irvina
 g	Lotongus
@@ -5607,32 +5663,75 @@ k	calathus
 k	shigeoi
 k	taprobanus
 k	zalates
-g	Matapa
-a	aria
-e	Common Redeye Skipper
-d	Gewöhnlicher Rotaugen-Dickkopffalter
+g	Pirdana
+a	distanti
+e	Plain Green Palmer
+e	Agava Skipper
+d	Agaven-Dickkopffalter
+a	hyela
+e	Green-striped Palmer
+e	Dracaena Skipper
+d	Drachenbaum-Dickkopffalter
+g	Ploetzia
+a	amygdalis
+g	Pudicitia
+a	pholus
+g	Quedara
+a	monteithi
+e	Dubious Flitter
+d	Dubioser Hüpfer
+g	Unkana
+a	ambasa
+e	Hoary Palmer
+s	batara
+g	Zea
+a	mytheca
+s2	Unkana
+j	Plastingina
+sh	Plastingini
+g	Ge
+a	geta
 g	Oerane
 a	microthyrus
 a	pugnans
 s2	Pemara
 g	Plastingia
+i	Plastingia
+a	flavescens
 a	naga
 e	Chequered Lancer
-d	Gescheckter Hüpfer
+d	Weißgescheckter Hüpfer
+a	pellonia
+e	Yellow Chequered Lancer
+d	Gelbgescheckter Hüpfer
+i	Salanoemia
+a	sala
+e	Maculate Lancer
+s2	Salanoemia
+a	tavoyana
+e	Yellow Streak Darter
+s2	Salanoemia
+g	Praescobura
+a	chrysomaculata
+b	Praescobura
+n	Devyatkin, 2002
+g	Scobura
+a	cephaloides
+e	Large Forest Bob
+a	isota
+e	Swinhoe's Forest Bob
+a	phiditia
+e	Malay Forest Bob
+a	woolletti
+e	Brown Forest Bob
+g	Suada
+a	swerga
+e	Grass Bob
+d	Gras-Bob
 g	Suastus
 a	gremius
 e	Palm Bob
 d	Palm-Bob
-g	Unkana
-a	ambasa
-e	Hoary Palmer
-g	Zela
-a	excellens
-e	White-club Yellow Palmer
-a	zeus
-e	Orange-ciliate Palmer
-b	Zela
-n	De Nicéville, 1895
 t	Taractrocerini
 e2	Orange Grass Skippers
 g	Arrhenes
@@ -5815,6 +5914,10 @@ a	lena
 e	Lesser Recluse
 s2	Caenides
 s2	Leona
+a	luehderi
+e	Lühder's Recluse
+s2	Caenides
+s2	Leona
 a	maracanda
 e	Scarce Large Recluse
 s2	Caenides
@@ -5829,6 +5932,9 @@ s2	Caenides
 a	lota
 e	Scarce Small Recluse
 s2	Lennia
+a	pruna
+e	Evans's Redeye Skipper
+s2	Pteroteinon
 a	reali
 s2	Pteroteinon
 a	stoehri
@@ -5908,6 +6014,77 @@ a	nobilior
 e	Noble Palm Nightfighter
 d	Ostafrikanischer Palmen-Dickkopffalter
 j	Cupithina
+g	Cupitha
+a	purreea
+e	Wax Dart
+d	Wachspfeil
+g	Gorgyra
+c	aburae
+e	Large Leaf Sitter
+k	aburae
+k	afikpo
+a	aretina
+e	Blotched Leaf Sitter
+a	bibulus
+e	Brown-furred Leaf Sitter
+a	bina
+e	Bina Leaf Sitter
+a	diva
+a	diversata
+e	Dark Leaf Sitter
+a	heterochrus
+e	White-tufted Leaf Sitter
+a	johnstoni
+e	Johnston's Leaf Sitter
+a	mocquerysii
+e	Mocquery's Leaf Sitter
+a	pali
+e	Pale Leaf Sitter
+a	rubescens
+e	Rufous Leaf Sitter
+a	sara
+e	Common Leaf Sitter
+a	stewarti
+e	Scorched Leaf Sitter
+b	Gorgyra
+n	Larsen, 2010
+a	subfacatus
+e	Ochreous Leaf Sitter
+a	subflavidus
+e	East African Leaf Sitter
+a	vosseleri
+e	Usambara Leaf Sitter
+g	Gyrogra
+a	subnotata
+e	Odd Leaf Sitter
+g	Melphina
+a	malthina
+e	White-patch Forest Swift
+a	melphis
+e	Peculiar Forest Swift
+g	Melphinyet
+a	flavina
+e	Yellow Forest Swift
+s2	Melphina
+a	tarace
+e	Scarce Forest Swift
+s2	Melphina
+g	Noctulana
+a	noctula
+e	Brown Forest Swift
+s2	Melphina
+g	Osphantes
+a	ogowena
+e	Lobed Skipper
+g	Parosmodes
+a	morantii
+e	Morant's Skipper
+d	Morant's Dickkopffalter
+g	Zographetus
+a	satwa
+e	Purple and Gold Flitter
+d	Goldvioletter Dickkopffalter
+j	Aclerosina
 g	Acada
 a	annulifer
 e	Dark Axehead Skipper
@@ -5955,16 +6132,6 @@ d	Wanderpfeil
 a	neander
 e	Nomad Dart
 d	Nomadenpfeil
-g	Caenides
-a	dacela
-a	sophia
-s2	Hypoleucis
-a	soritia
-s	xantho
-g	Cupitha
-a	purreea
-e	Wax Dart
-d	Wachspfeil
 g	Fresna
 i	Fresna
 a	carlo
@@ -5997,79 +6164,11 @@ k	leucophaea
 a	mabea
 e	Dark Brown Missile
 s2	Meza
-g	Gorgyra
-c	aburae
-e	Large Leaf Sitter
-k	aburae
-k	afikpo
-a	aretina
-e	Blotched Leaf Sitter
-a	bibulus
-e	Brown-furred Leaf Sitter
-a	bina
-e	Bina Leaf Sitter
-a	diva
-a	diversata
-e	Dark Leaf Sitter
-a	heterochrus
-e	White-tufted Leaf Sitter
-a	johnstoni
-e	Johnston's Leaf Sitter
-a	mocquerysii
-e	Mocquery's Leaf Sitter
-a	pali
-e	Pale Leaf Sitter
-a	rubescens
-e	Rufous Leaf Sitter
-a	sara
-e	Common Leaf Sitter
-a	stewarti
-e	Scorched Leaf Sitter
-b	Gorgyra
-n	Larsen, 2010
-a	subfacatus
-e	Ochreous Leaf Sitter
-a	subflavidus
-e	East African Leaf Sitter
-a	vosseleri
-e	Usambara Leaf Sitter
-g	Gyrogra
-a	subnotata
-e	Odd Leaf Sitter
-g	Hollandus
-a	xanthopeplus
-b	Pardaleodes
-n	Holland, 1892
-g	Hypoleucis
-a	dacena
-s2	Caenides
-a	ophiusa
-e	Common Costus Skipper
-d	Spiralingwer-Dickkopffalter
-g	Melphina
-a	malthina
-e	White-patch Forest Swift
-a	melphis
-e	Peculiar Forest Swift
-g	Melphinyet
-a	flavina
-e	Yellow Forest Swift
-s2	Melphina
-a	tarace
-e	Scarce Forest Swift
-s2	Melphina
-g	Noctulana
-a	noctula
-e	Brown Forest Swift
-s2	Melphina
 g	Osmodes
 a	laronia
 e	Large White-spots
 a	thora
 e	Common White-spots
-g	Osphantes
-a	ogowena
-e	Lobed Skipper
 g	Paronymus
 a	banda
 e	Dark Three-spot Missile
@@ -6114,10 +6213,6 @@ k	semilutea
 a	xanthias
 e	Yellow Large Dart
 d	Gelber Pfeil
-g	Parosmodes
-a	morantii
-e	Morant's Skipper
-d	Morant's Dickkopffalter
 g	Platylesches
 c	moritili
 e	Honey Hopper
@@ -6128,6 +6223,34 @@ k	moritili
 g	Rhabdomantis
 a	sosia
 e	Large Fox
+g	Teniorhinus
+a	harona
+e	Orange Small Fox
+s	haronus
+a	ignita
+e	Fiery Small Fox
+a	niger
+e	Black Small Fox
+s3	watsoni
+a	watsoni
+e	Watson's Small Fox
+j	Hypoleucina
+g	Caenides
+a	dacela
+a	sophia
+s2	Hypoleucis
+a	soritia
+s	xantho
+g	Hollandus
+a	xanthopeplus
+b	Pardaleodes
+n	Holland, 1892
+g	Hypoleucis
+a	dacena
+s2	Caenides
+a	ophiusa
+e	Common Costus Skipper
+d	Spiralingwer-Dickkopffalter
 g	Semalea
 a	arela
 e	Arela Dart
@@ -6137,6 +6260,7 @@ d	Ingwerpfeil
 a	atrio
 e	Small Silky Skipper
 a	corvinus
+a	kola
 a	pulvina
 e	Silky Dart
 e	Silky Skipper
@@ -6152,17 +6276,6 @@ s2	Xanthodisca
 k	malawi
 k	rega
 k	vibius
-g	Teniorhinus
-a	harona
-e	Orange Small Fox
-s	haronus
-a	ignita
-e	Fiery Small Fox
-a	niger
-e	Black Small Fox
-s3	watsoni
-a	watsoni
-e	Watson's Small Fox
 g	Xanthonymus
 a	astrape
 e	False Pathfinder Skipper
@@ -6173,10 +6286,6 @@ e	Littler Large Dart
 b	Pardaleodes
 n	Holland, 1892
 s2	Paronymus
-g	Zographetus
-a	satwa
-e	Purple and Gold Flitter
-d	Goldvioletter Dickkopffalter
 t	Ceratrichiini
 g	Argemma
 a	argyrosticta
@@ -6294,10 +6403,6 @@ a	albipectus
 e	Silver-breast Ace
 d	Silberass
 s2	Sovia
-g	Hyarotis
-a	adrastus
-e	Tree Flitter
-d	Baumhüpfer
 g	Lepella
 a	lepeletier
 e	Lepeletier's Skipper
@@ -6318,15 +6423,6 @@ a	submacula
 s2	Thoressa
 a	xiaoqingae
 s2	Thoressa
-g	Pirdana
-a	distanti
-e	Plain Green Palmer
-e	Agava Skipper
-d	Agaven-Dickkopffalter
-a	hyela
-e	Green-striped Palmer
-e	Dracaena Skipper
-d	Drachenbaum-Dickkopffalter
 g	Pithauria
 a	marsena
 e	Banded Straw Ace
@@ -6345,20 +6441,6 @@ g	Pyroneura
 a	latoia
 e	Yellow Vein Lancer
 d	Gelbader-Hüpfer
-g	Quedara
-a	monteithi
-e	Dubious Flitter
-d	Dubioser Hüpfer
-g	Salanoemia
-a	sala
-e	Maculate Lancer
-a	tavoyana
-e	Yellow Streak Darter
-g	Scobura
-a	isota
-e	Swinhoe's Forest Bob
-a	phiditia
-e	Malay Forest Bob
 g	Sebastonyma
 c	dolopia
 e	Tufted Ace
@@ -6375,15 +6457,12 @@ a	lucasii
 e	Lucas' Ace
 a	separata
 e	Chequered Ace
-g	Suada
-a	swerga
-e	Grass Bob
-d	Gras-Bob
 g	Thoressa
 a	masoni
 e	Golden Ace
 d	Goldenes Ass
 y	Trapezitinae
+t	Trapezitini
 e2	Australian Skippers
 d2	Australische Dickkopffalter
 g	Anisynta
@@ -6534,8 +6613,8 @@ a	symmomus
 e	Splendid Ochre
 a	taori
 e	Sandstone Ochre
-y	Barcinae
-sh	Barcini
+t	Barcini
+sh	Barcinae
 g	Apostictopterus
 a	fuliginosus
 g	Barca
@@ -7599,6 +7678,7 @@ e	Colombian Skipper
 d	Kolumbianischer Dickkopffalter
 s2	Ebrietas
 j	Achlyodina
+sh	Achlyodini
 h	Achlyoditi
 g	Achlyodes
 a	busirus
@@ -7977,6 +8057,7 @@ i	Trifa
 a	francesius
 a	jacobus
 j	Erynnina
+sh	Erynnini
 h	Erynniti
 g	Anastrus
 a	neaeris
@@ -8715,6 +8796,7 @@ a	angulata
 e	Chestnut Angle
 d	Siamesischer Knick-Dickkopffalter
 s2	Odontoptilum
+s4	Odontoptilum angulatum
 a	pygela
 e	Banded Angle
 d	Malaiischer Knick-Dickkopffalter
@@ -8723,6 +8805,8 @@ g	Abraximorpha
 a	davidii
 e	Magpie Flat
 d	Atzel-Wicht
+a	esta
+s3	davidii
 g	Calleagris
 a	jamesoni
 e	Jameson's Flat
@@ -8742,6 +8826,7 @@ g	Coladenia
 a	indrani
 e	Tricolour Pied Flat
 d	Gescheckter Wicht
+a	maeniata
 g	Darpa
 a	hanria
 e	Hairy Angle
@@ -8781,6 +8866,9 @@ e	Orange Flat
 d	Orange Schneeflocke
 a	tabrica
 i	Albiphasma
+r	Huang, 2016
+l	Establishment of a new genus for Abraximorpha heringi and A. pieridoides (Lepidoptera: Hesperiidae: Pyrginae: Tagiadini)
+p	10.11646/zootaxa.4173.2.5
 a	heringi
 s2	Abraximorpha
 s2	Albiphasma
@@ -8924,6 +9012,7 @@ a	repanda
 e	Bronze Flat
 d	Bronze-Wicht
 j	Celaenorrhina
+sh	Celaenorrhini
 g	Alenia
 a	namaqua
 e	Namaqua Dancer
@@ -9028,11 +9117,18 @@ e	Small Marbled Elf
 d	Kleine Elfe
 g	Kobelana
 g	Pseudocoladenia
-a	dan
+c	dan
 e	Fulvous Pied Flat
 d	Rotbrauner Wicht
-s	fabia
-u	fabia
+s	eacus dhyana
+s	eacus sumatrana
+s	fatih festa
+k	dan
+k	dea
+k	eacus
+k	fabia
+k	fatih
+k	festa
 g	Sape
 a	lucidella
 s2	Sarangesa
@@ -10009,6 +10105,7 @@ y	Euschemoninae
 g	Euschemon
 a	rafflesia
 e	Regent Skipper
+d	Königs-Dickkopffalter
 y	Coeliadinae
 e2	Awls
 d2	Ahlen
@@ -17242,7 +17339,7 @@ d	Saphirnymphe
 c	veronica
 e	Common Nymph
 e	Veronica's Nymph
-d	Gewöhnlichee Nymphe
+d	Gewöhnliche Nymphe
 k	barombina
 k	incerta
 k	simplex
@@ -17339,8 +17436,8 @@ a	cyrili
 a	plutonica
 a	sibyllina
 t	Cymothoini
-e2	Segler
-d2	Gliders
+e2	Gliders
+d2	Segler
 j	Cymothoina
 h	Cymothoiti
 g	Cymothoe
@@ -17601,7 +17698,7 @@ d	Gewöhnlicher Flieger
 s2	Phaedyma
 c	vikasi
 e	Dingy Sailor
-e	Chocolate Sailer
+e	Chocolate Sailor
 d	Schokoladenmatrose
 k	celebica
 k	cymela
@@ -17622,7 +17719,7 @@ s2	Pantoporia
 i	Neptidomima
 o	Agouale
 a	agouale
-e	Common Club-dot Sailer
+e	Common Club-dot Sailor
 d	Akazienmatrose
 a	nicobule
 e	Scarce Clubbed Sailor
@@ -17672,7 +17769,7 @@ e	Original Club-dot Sailor
 o	Nemetes
 a	dumetorum
 a	metella
-e	Yellow-base Sailer
+e	Yellow-base Sailor
 a	nemetes
 e	Nemetes Sailor
 o	Saclava
@@ -17772,7 +17869,7 @@ e	Malayan Lascar
 d	Malaiischer Laskar
 s2	Lasippa
 a	viraja
-e	Yellowjack Sailer
+e	Yellowjack Sailor
 d	Gelber Laskar
 s2	Lasippa
 i	Stabrobates
@@ -17787,7 +17884,7 @@ a	anjana
 e	Rich Sailor
 d	Reicher Matrose
 a	radha
-e	Great 0 Sailor
+e	Great Yellow Sailor
 a	taiwana
 e	Taiwanese Sailor
 d	Taiwanesischer Matrose
@@ -17797,7 +17894,7 @@ e	Plain Sailor
 a	magadha
 a	meloria
 a	narayana
-e	Broadstick Sailer
+e	Broadstick Sailor
 a	nashona
 e	Less Rich Sailor
 d	Armer Matrose
@@ -37025,9 +37122,13 @@ d	Schwalbenwurz-Höckereule
 a	tripartita
 e	Spectacle
 d	Silbergraue Nessel-Höckereule
+b	Phalaena
+n	Hufnagel, 1766
 a	triplasia
 e	Dark Spectacle
 d	Dunkelgraue Nessel-Höckereule
+b	Phalaena
+n	Linnaeus, 1758
 g	Mouralia
 a	tinctoides
 e	Commelina Looper
@@ -37600,6 +37701,8 @@ d2	Obsteulen
 g	Baroa
 a	siamica
 a	vatala
+g	Curoba
+a	sangarida
 g	Elaeognatha
 a	argentea
 a	argyritis
@@ -37824,10 +37927,22 @@ sh	Catocalinae
 j	Catocalina
 e2	True Underwing Moths
 d2	Echte Ordensbänder
+g	Agamana
+a	cavatalis
+a	conjungens
+s2	Parafodina
+a	sarmentosa
+s2	Fodina
 g	Alapadna
 a	pauropis
 g	Alophosoma
+a	emmelopis
+s2	Crioa
 g	Amphiongia
+a	chordophoides
+s	achroa
+s4	Dierna achroa
+s2	Zethes
 g	Arsacia
 a	rectalis
 g	Catocala
@@ -38279,12 +38394,21 @@ d	Flaumeichen-Ordensband
 a	separata
 a	streckeri
 s2	Ephesia
+g	Crioa
+a	hades
+s2	Gadirtha
+s2	Iscadia
 g	Ctenusa
 a	pallida
 e	Pallid Drab
 g	Ecphysis
 a	roboginosa
 g	Fodina
+a	contigua
+a	cuneigera
+a	ostorius
+s2	Anocala
+a	pallula
 g	Metopta
 a	rectifasciata
 g	Ocalaria
@@ -38293,6 +38417,13 @@ g	Orthozancla
 a	rhythmotypa
 g	Ramphia
 a	albizona
+g	Rhapsa
+a	eretmophora
+a	occidentalis
+a	scotosialis
+e	Common Rhapsa
+a	suscitatalis
+e	Wedged Rhapsa
 g	Spiloloma
 a	lunilinea
 e	Moon-lined Moth
@@ -38314,6 +38445,13 @@ g	Tachosa
 a	brunnescens
 j	Hypopyrina
 sh	Hypopyrini
+g	Calliodes
+a	appollina
+s	apollina
+s	appolina
+a	pretiosissima
+e	Wavy Owl Moth
+d	Wellenlinien-Laubeule
 g	Donuca
 a	castalia
 a	lanipes
@@ -38337,6 +38475,9 @@ e	Asian Redtail Moth
 d	Asiatische Akazien-Laubeule
 g	Spirama
 a	pyrula
+e	Faint Owl Moth
+e	Ying-yang Moth
+d	Ying-Yang-Laubeule
 s2	Cometaster
 c	retorta
 e	Spiral-eyed Owl Moth
@@ -38568,6 +38709,11 @@ s2	Eggybolis
 r	Zahiri, 2022
 l	The phylogenetic placement of an enigmatic moth Egybolis vaillantina based on museomics
 p	10.1101/2022.09.27.509790
+g	Ophyx
+a	eurrhoa
+s2	Avitta
+a	ochroptera
+s2	Thermesia
 g	Serrodes
 a	campana
 e	Soapberry Moth
@@ -38880,6 +39026,9 @@ g	Macaldenia
 a	palumba
 s2	Dysgonia
 s2	Parallelia
+g	Neophisma
+a	tropicalis
+s2	Ophisma
 g	Ophisma
 a	gravata
 a	pallescens
@@ -39184,7 +39333,7 @@ s4	Paranagia glabripars
 s2	Paranagia
 g	Heteranassa
 a	mima
-e Mexican Mesquite Looper
+e	Mexican Mesquite Looper
 d	Mexikanische Fruchteule
 b	Homoptera
 n	Harvey, 1876
@@ -39223,7 +39372,7 @@ a	metaxantha
 e	Mayan Moth
 d	Mayaeule
 g	Viettentia
-a	zethesoides	
+a	zethesoides
 t	Sypnini
 g	Daddala
 a	brevicauda
@@ -39245,7 +39394,7 @@ a	hercules
 s2	Sypna
 a	infernalis
 a	simplex
-s2	Sypna	
+s2	Sypna
 t	Acantholipini
 g	Acantholipes
 a	trajecta
@@ -39275,8 +39424,10 @@ a	purpurea
 g	Ugiodes
 a	cinerea
 y	Boletobiinae
-d2	Prachteulchen
+e2	Boletobiine Moths
+d2	Boletobiaeulen
 t	Boletobiini
+j	Boletobiina
 e2	Fungus Moths
 d2	Pilzeulen
 g	Alloscotia
@@ -39337,13 +39488,17 @@ g	Parascotia
 a	fuliginaria
 e	Waved Black
 d	Pilzeule
+b	Phalaena
+n	Linnaeus, 1761
+s4	Boletobia robiginosa
 a	nisseni
 g	Prosoparia
 a	anormalis
 a	floridana
 a	perfuscaria
-t	Trisatelini
+j	Trisatelina
 sh	Trisatelinae
+sh	Trisatelini
 g	Hypenagonia
 a	angulata
 g	Mataeomera
@@ -39358,8 +39513,10 @@ g	Trisateles
 a	emortualis
 e	Olive Crescent
 d	Gelblinien-Spannereule
-t	Eublemmini
+j	Eublemmina
+d2	Prachteulchen
 sh	Eublemminae
+sh	Eublemmini
 g	Calymma
 a	communimacula
 g	Cautatha
@@ -39462,15 +39619,17 @@ a	latiflavaria
 g	Tegiapa
 a	goateri
 a	virescens
-t	Araeopteronini
+j	Araeopteronina
 sh	Araeopteroninae
+sh	Araeopteronini
 g	Araeopteron
 a	amoena
 a	canescens
 a	ecphaea
 a	epiphracta
-t	Aventiini
+j	Aventiina
 sh	Aventiinae
+sh	Aventiini
 g	Arasada
 g	Aroana
 g	Ataboruza
@@ -39522,6 +39681,8 @@ s2	Corgatha
 a	flexula
 e	Beautiful Hook-tip
 d	Sicheleule
+b	Bombyx
+n	Denis & Schiffermüller, 1775
 a	olivata
 a	ruficeps
 e	Rufous Hook-tip
@@ -39560,8 +39721,9 @@ a	particolor
 s2	Oruza
 g	Zurobata
 a	vacillans
-t	Phytometrini
+j	Phytometrina
 sh	Phytometrinae
+sh	Phytometrini
 g	Corgatha
 a	dictaria
 a	dipyra
@@ -39668,7 +39830,8 @@ a	sexpunctata
 e	Six-spotted Gray
 g	Strongylosia
 a	congoensis
-t	Sarobini
+j	Sarobina
+sh	Sarobini
 g	Attonda
 a	adspersa
 a	trifasciata
@@ -39705,9 +39868,10 @@ g	Trichoblemma
 a	badia
 g	Tropidtamba
 a	lepraota
-y	Hypenodinae
-d2	Motteneulen
 t	Hypenodini
+d2	Motteneulen
+sh	Hypenodinae
+j	Hypenodina
 g	Anachrostis
 a	nigripunctalis
 g	Dyspyralis
@@ -39728,7 +39892,8 @@ d	Franclemont's Motteneule
 a	humidalis
 e	Marsh Oblique-barred
 d	Moor-Motteneule
-t	Schrankiini
+j	Schrankiina
+sh	Schrankiini
 g	Hypenopsis
 a	calusa
 a	macula
@@ -39744,9 +39909,10 @@ d	Schmalflügel-Motteneule
 a	taenialis
 e	White-line Snout
 d	Breitflügel-Motteneule
-t	Micronoctuini
+j	Micronoctuina
 e2	Micronoctuid Moths
 sh	Micronoctuidae
+sh	Micronoctuini
 r2	Fibiger, 2007
 l	Revision of the Micronoctuidae (Lepidoptera: Noctuoidea). Part 1, Taxonomy of the Pollexinae
 p	10.11646/zootaxa.1567.1.1
@@ -39759,14 +39925,15 @@ p	10.11646/zootaxa.2583.1.1
 r2	Fibiger, 2011
 l	Revision of the Micronoctuidae (Lepidoptera: Noctuoidea). Part 4, Taxonomy of the subfamilies Tentaxinae and Micronoctuinae
 p	10.11646/zootaxa.2842.1.1
-j	Micronoctuina
+h	Micronoctuiti
 sh	Micronoctuinae
 g	Medius
 g	Micronoctua
 a	karsholti
 g	Micronola
 g	Sternitta
-j	Tentaxina
+h	Tentaxiti
+sh	Tentaxina
 sh	Tentaxinae
 g	Acusa
 a	acus
@@ -39782,66 +39949,68 @@ g	Tentasetae
 a	cambodiana
 g	Tentaspina
 g	Tentax
-j	Tactusina
-sh	Tactusinae
 h	Tactusiti
-g	Bruma
-g	Conspica
-g	Costasensora
-g	Dignius
-g	Fustius
-g	Longiantrum
-g	Nilgerides
-g	Tactusa
-g	Tumula
-g	Vas
-h	Obscurioriti
 sh	Obscuriorini
+sh	Tactusina
+sh	Tactusinae
 g	Abes
 g	Asylemissa
 g	Asyprocessa
 g	Asytegumen
+g	Bruma
 g	Clarior
+g	Conspica
+g	Costasensora
 g	Dextella
+g	Dignius
 g	Dorsum
 g	Editum
+g	Fustius
+g	Longiantrum
+g	Nilgerides
 g	Obscurior
 g	Paradoxica
+g	Tactusa
 g	Tantulius
-j	Belluliina
-sh	Belluliinae
+g	Tumula
+g	Vas
 h	Belluliiti
+sh	Belluliina
+sh	Belluliinae
+sh	Belluliini
+sh	Medialini
 g	Bellulia
 a	galsworthyi
-h	Medialiti
 g	Mediala
 g	Melaleucia
-j	Magnina
-sh	Magninae
 h	Magniti
+sh	Faeculini
+sh	Faeculoidini
+sh	Magnina
+sh	Magninae
+sh	Magnini
 g	Basalia
 g	Bilinea
 g	Brevis
-g	Magna
-g	Palnissa
-h	Faeculoiditi
-sh	Faeculoidini
 g	Faeculoides
 g	Indieditum
+g	Magna
+g	Palnissa
 g	Rustica
-j	Parachrostiina
-sh	Parachrostiinae
 h	Parachrostiiti
+sh	Duplexini
+sh	Parachrostiina
+sh	Parachrostiinae
+sh	Parachrostiini
 g	Anellus
 g	Digita
+g	Duplex
 g	Mimachrostia
 g	Parachrostia
-g	Taiwani
-h	Duplexiti
-sh	Duplexini
-g	Duplex
 g	Sinochrostia
-j	Pollexina
+g	Taiwani
+h	Pollexiti
+sh	Pollexina
 sh	Pollexinae
 g	Disca
 g	Pollex
@@ -39850,7 +40019,8 @@ a	conscitulana
 a	myops
 g	Tolpiodes
 a	oligolasia
-y	Scolecocampinae
+t	Scolecocampini
+sh	Scolecocampinae
 g	Abablemma
 a	brimleyana
 a	duomaculata
@@ -39889,6 +40059,55 @@ e	Wavy False Pug
 a	brauneata
 e	Brown False Pug
 a	penumbrata
+y	Tinoliinae
+e2	Dice Moths
+d2	Würfeleulen
+g	Calesia
+a	dasyptera
+e	White Tittle
+d	Weißpünktchen
+s	dasypterus
+a	fuscicorpus
+a	haemorrhoa
+a	rhodotela
+a	stillifera
+a	xanthognatha
+a	zambesita
+e	White Chain
+d	Weißkettchen
+s	sambesita
+g	Poeta
+a	denotalis
+a	quadrinotata
+g	Rhanidophora
+a	agrippa
+e	Dark Dice Moth
+d	Dunkle Würfeleule
+a	aurantiaca
+e	Orange Dice Moth
+d	Orange Würfeleule
+a	cinctigutta
+e	Common Dice Moth
+d	Gewöhnliche Würfeleule
+a	odontophora
+a	phedonia
+e	Shortsnout Dice Moth
+d	Blasse Würfeleule
+a	ridens
+e	Laughing Dice Moth
+d	Gelbpunkt-Würfeleule
+g	Tamsia
+a	hieroglyphica
+s2	Oxaenanus
+g	Tinolius
+a	eburneigutta
+e	Red-bodied Dice Moth
+e	Asian Dice Moth
+d	Rotleib-Würfeleule
+d	Asiatische Würfeleule
+a	hypsana
+e	Yellow-bodied Dice Moth
+d	Gelbleib-Würfeleule
 y	Toxocampinae
 e2	Blackneck Moths
 d2	Wickeneulen
@@ -39965,6 +40184,15 @@ a	mistura
 a	variegata
 g	Gonodonta
 a	bidens
+a	fulvangula
+a	immacula
+a	incurva
+s	elaborans
+s	teretimacula
+a	latimacula
+a	lincus
+s	superba
+a	nitidimacula
 a	nutrix
 e	Citrus Fruit-piercer
 d	Amerikanischer Zitrus-Fruchtstecher
@@ -39974,6 +40202,8 @@ d	Schwarzer Fruchtstecher
 a	sinaldus
 e	Moonseed Fruit-piercer
 d	Mondsamen-Fruchtstecher
+a	uxor
+s	marmorata
 g	Gonodontodes
 a	chionosticta
 a	dispar
@@ -40655,10 +40885,16 @@ sh	Arctiidae
 r	Zaspel, 2014
 l	Phylogeny and Evolution of Pharmacophagy in Tiger Moths (Lepidoptera: Erebidae: Arctiinae)
 p	10.1371/journal.pone.0101975
+r	Zenker, 2016
+l	Systematics and origin of moths in the subfamily Arctiinae (Lepidoptera, Erebidae) in the Neotropical region
+p	10.1111/zsc.12202
 t	Arctiini
 e2	True Tiger Moths
 d2	Echte Bärenspinner
 j	Arctiina
+h	Arctiiti
+sh	Micrarctiina
+sh	Micrarctiini
 r	Rönkä, 2016
 l	Putting Parasemia in its phylogenetic place: a molecular analysis of the subtribe Arctiina (Lepidoptera)
 p	10.1111/syen.12194
@@ -40813,9 +41049,27 @@ d	Tigerbär
 s2	Atlantarctia
 a	ungemachi
 s2	Atlantarctia
-a	vilica
+c	villica
 e	Cream-spot Tiger Moth
 d	Schwarzer Bär
+b	Phalaena
+n	Linnaeus, 1758
+s4	Epicallia confluens
+s4	Epicallia marchandi
+s2	Epicallia
+k	angelica
+k	confluens
+k	konewkaii
+k	marchandi
+k	villica
+r	Ortiz, 2023
+l	DNA barcoding and morphology reveal European and western Asian Arctia villica (Linnaeus, 1758) as a complex of species (Lepidoptera, Erebidae, Arctiinae)
+p	10.3897/zookeys.1159.95225
+g	Caribarctia
+a	bertrandae
+a	cardinalis
+e	Cardinal Tiger Moth
+d	Kardinalbär
 g	Chelis
 a	arragonensis
 s3	maculosa
@@ -40870,26 +41124,95 @@ d	Rotrandbär
 g	Micrarctia
 a	trigona
 s2	Phragmatobia
-j	Spilosomina
+g	Sonorarctia
+a	fervida
+h	Spilosomiti
 e2	True Ermine Moths
 d2	Fleckleibbären
+sh	Spilosomina
 sh	Spilosomini
+g	Acantharctia
+a	latifasciata
+a	mundata
+s2	Spilosoma
+g	Aethalida
+a	borneana
+g	Afraloa
+a	bifurca
+s2	Spilosoma
 g	Afromurzinia
 a	lutescens
 e	Translucent Ermine
 d	Afrikanischer Fleckleibbär
+s2	Radiarctia
+s2	Spilosoma
+g	Afrospilarctia
+a	dissimilis
+s2	Estigmene
+s2	Spilosoma
+g	Afrowatsonius
+a	marginalis
+s2	Creatonotus
+g	Alexicles
+a	aspersa
+s2	Hyphantria
+g	Allanwatsonia
+a	hodeva
+s2	Holarctia
+s2	Hoplarctia
+s2	Pericallia
+s2	Phragmatobia
 g	Aloa
+a	costalis
 a	lactinea
 e	Red Costate Tiger Moth
 d	Rotgesäumter Fleckleibbär
+a	marginata
+e	Donovan's Tiger Moth
+d	Donovan's Fleckleibbär
+a	moloneyi
+s2	Areas
 g	Alpenus
+a	investigatorum
+s2	Spilosoma
+a	maculosa
+s	maculosus
+s2	Spilosoma
+a	nigropunctata
+s	nigropunctatus
+g	Alphaea
+a	imbuta
+a	impleta
+s2	Spilosoma
+g	Amsacta
+a	grammiphlebia
+a	senegalensis
+g	Amsactarctia
 g	Amsactoides
+a	solitaria
+s	solitarius
+s2	Spilarctia
+s2	Spilosoma
 g	Amurrhyparia
 a	leopardinula
 s2	Diacrisia
 s4	Phragmatobia leopardina
 s4	Rhyparia leopardina
+g	Andala
+a	transversa
+s4	Alphaea puella
+s2	Nebrarctia
+s4	Pericallia puella
+s2	Pericallia
+s4	Phragmatobia puella
+s4	Spilosoma puella
+g	Andesobia
+a	boliviana
 g	Arachnis
+a	aulaea
+a	citra
+s3	picta
+a	dilecta
 a	picta
 e	Painted Tiger Moth
 d	Girlandenbär
@@ -40897,12 +41220,15 @@ g	Ardices
 a	canescens
 e	Light Ermine
 d	Victoria-Fleckleibbär
+s2	Spilosoma
 a	curvata
 e	Crimson Tiger Moth
 d	Australischer Fleckleibbär
+s2	Spilosoma
 a	glatignyi
 e	Black and White Tiger Moth
 d	Tasmanischer Fleckleibbär
+s2	Spilosoma
 g	Areas
 a	aquila
 e	Laotian Tiger Moth
@@ -40918,17 +41244,41 @@ a	imperialis
 e	Himalayan Tiger Moth
 d	Himalaya-Fleckleibbär
 s2	Pericallia
+g	Argyarctia
+a	fuscobasalis
+s2	Spilosoma
 g	Artimelia
 a	latreillii
+b	Chelonia
+n	Godart, 1823
 g	Canararctia
 a	rufescens
+e	Canary Tiger Moth
+d	Kanarenbär
+s2	Spilosoma
+g	Carcinarctia
+g	Cheliosea
+a	cosmeta
+s2	Estigmene
+s2	Spilosoma
 g	Chilesia
 a	rudis
 s2	Antarctia
 s2	Paracles
 g	Chionarctia
 a	nivea
+s	niveus
 s2	Diacrisia
+s2	Spilosoma
+s4	Spilosoma niveus
+g	Chlorhoda
+a	metamelaena
+a	superba
+a	thoracica
+a	viridis
+g	Cladarctia
+a	quadriramosa
+s2	Estigmene
 g	Creatonotos
 a	gangis
 e	Red Baphomet Moth
@@ -40937,27 +41287,83 @@ s	interrupta
 a	transiens
 e	Yellow Baphomet Moth
 d	Gelber Tentakelbär
+g	Cymaroa
+a	grisea
+g	Detoulgoetia
+a	virginalis
+s4	Spilosoma aspersa
 g	Diaphora
 a	luctuosa
 e	Brown Muslin Moth
 d	Brauner Fleckenbär
+s2	Spilosoma
 a	mendica
 e	Muslin Moth
 d	Grauer Fleckleibbär
 d	Graubär
 b	Phalaena
 n	Clerck, 1759
+s2	Spilosoma
 a	sordida
 e	Alpine Muslin Moth
 d	Alpen-Fleckleibbär
+s2	Spilosoma
+g	Dionychoscelis
+a	venata
+g	Dubatolovia
+a	atrivena
+s2	Amerila
+s2	Creatonotos
+s2	Rhodogastria
 g	Eospilarctia
+a	formosana
+e	Taiwanese Ermine
+d	Taiwanesischer Fleckleibbär
+s2	Spilosoma
+a	lewisii
+s	lewisi
+s2	Seirarctia
+s2	Spilarctia
+a	nehallenia
+s2	Spilarctia
+s2	Spilosoma
+a	neurographa
+s2	Spilosoma
 g	Epatolmis
 a	luctifera
+e	Mourning Ermine
 d	Kaiserbär
+d	Trauerbär
+s2	Phragmatobia
+g	Epilacydes
+a	scita
+s2	Estigmene
 g	Estigmene
 a	acrea
 e	Salt Marsh Moth
 d	Salzwiesen-Fleckleibbär
+b	Phalaena
+n	Drury, 1773
+s2	Leucarctia
+g	Eyralpenus
+a	diplosticta
+s	diplostictus
+a	subluteus
+s	sublutea
+s4	Spilosoma sublutea
+a	testaceus
+s	testacea
+g	Grammarctia
+a	bilinea
+e	Frowning Tigerlet
+g	Hollowaya
+r2	Dubatolov, 2010
+l	Hollowaya - a new tiger-moth genus from New Caledonia
+p2	0171-0079, 41(3/4)
+a	lateritica
+s2	Spilosoma
+a	lifuensis
+s2	Spilosoma
 g	Hypercompe
 c	scribonia
 e	Giant Leopard Moth
@@ -40971,12 +41377,129 @@ g	Hyphantria
 a	cunea
 e	Fall Webworm
 d	Amerikanischer Webebär
+b	Phalaena
+n	Drury, 1773
+g	Hypomolis
+a	aeruginosa
+a	evippus
+a	roseicincta
+a	thiaucourti
+g	Isia
+a	alcumena
+s2	Spilosoma
+a	intricata
+g	Juxtarctia
+a	multiguttata
+s2	Spilarctia
+s2	Spilosoma
+g	Kenyarctia
+g	Kiriakoffalia
+a	costimacula
+s2	Pericallia
+a	lemairei
+s2	Pericallia
+g	Kishidarctia
+a	klapperichi
+s2	Eospilarctia
+s2	Paraspilarctia
+s2	Pericallia
+g	Lacydes
+a	spectabilis
+s2	Spilosoma
+g	Leichosila
+a	talamanca
 g	Lemyra
+a	alikangensis
+s2	Spilosoma
+a	imparilis
+e	Japanese Ermine
+d	Japanischer Fleckleibbär
+s2	Spilosoma
+a	maculifascia
+s2	Maenas
+a	stigmata
+s2	Spilosoma
+a	ypsilon
+e	Upsilon Tiger Moth
+d	Ypsilonbär
+s2	Maenas
+s2	Paralacydes
+s2	Spilosoma
 g	Leptarctia
+a	californiae
+e	Californian Tiger Moth
+d	Kalifornischer Bär
 g	Leucaloa
+a	eugraphica
+e	Graphic Ermine
+d	Wellenlinien-Fleckleibbär
+g	Logunovium
+a	nigricosta
+s2	Aloa
+s	nigricostum
+s2	Spilosoma
+g	Madagascarctia
+a	cellularis
+s2	Spilosoma
+a	madagascariensis
+e	Madagascan Ermine
+d	Madagassischer Fleckleibbär
+s2	Euchaetes
+s2	Spilosoma
+g	Mallocephala
+a	rubripes
+s4	Antarctia rhodosoma
 g	Metacrias
+a	erichrysa
+a	huttonii
+s	huttoni
+a	strategica
+g	Micralarctia
+a	punctulatum
+s	punctulata
+s4	Spilosoma punctulata
+g	Micraloa
+a	lineola
+s2	Aloa
+g	Monstruncusarctia
+a	anikini
+b	Monstruncusarctia
+n	Dubatolov, 2017
+a	aurantiaca
+b	Alpenus
+n	Holland, 1893
+s2	Diacrisia
+s2	Spilosoma
+a	decemmaculata
+b	Diacrisia
+n	Rothschild, 1916
+s2	Maenas
+s2	Paralacydes
 g	Nannoarctia
+a	conjuncta
+s2	Estigmene
+s2	Pericallia
+a	dentata
+s2	Pericallia
+a	obliquifascia
+s2	Alphaea
+s2	Creatonotos
+s2	Estigmene
+s2	Pericallia
+s2	Phragmatobia
 a	tripartita
+s2	Estigmene
+s2	Pericallia
+g	Nicetosoma
+a	niceta
+s2	Diacrisia
+s2	Spilarctia
+s2	Spilosoma
+a	papuana
+e	Papuan Ermine
+d	Papua-Fleckleibbär
+s2	Diacrisia niceta
+s3	niceta
 g	Ocnogyna
 a	boeticum
 e	Rambur's Pellicle
@@ -40987,69 +41510,1231 @@ a	loewii
 s	loewi
 a	parasita
 d	Parasitierter Bär
+s2	Somatrichia
 g	Olepa
 a	ricini
 e	Castor Tiger Moth
 d	Rizinusbär
 s2	Pericallia
+g	Orhantarctia
+a	cymbalophoroides
+s2	Spilosoma
+g	Palaeomolis
+a	metarhoda
+s2	Hypomolis
+a	purpurascens
+s2	Hypomolis
+a	rothschildi
+s2	Hypomolis
+a	rubescens
 g	Pangora
+a	coorgensis
+s2	Pericallia
+a	erosa
+s2	Pericallia
+a	matherana
+e	Matheran Moth
+d	Matheranbär
+s2	Pericallia
 g	Paracles
+a	azollae
+s2	Maenas
+s2	Palustra
+a	contraria
+a	deserticola
+s2	Mallocephala
+a	fusca
+s2	Antarctia
+a	phaeocera
+s2	Antarctia
+a	severa
+a	variegata
+s2	Antarctia
+s2	Motada
 g	Paralacydes
+a	arborifera
+e	Branched Ermine
+d	Ostafrikanischer Zebra-Fleckleibbär
+s2	Maenas
 a	vocula
 e	Zebra Ermine
-d	Zebra-Fleckleibbär
+d	Südafrikanischer Zebra-Fleckleibbär
+s2	Maenas
+g	Paralpenus
+a	atripes
+s2	Hyphantria
+s2	Paralacydes
+a	flavizonata
+s2	Amsacta
+s2	Paralacydes
+s	flavizonatus
+a	strigulosa
+s2	Hyphantria
+s2	Paralacydes
+s	strigulosus
+a	wintgensi
+s2	Acantharctia
+s2	Paralacydes
+g	Paramaenas
+a	strigosus
+g	Paraspilarctia
+a	magna
+s2	Pericallia
+g	Patagobia
+a	thursbyi
+s2	Phragmatobia
+s2	Turruptiana
+s2	Turuptiana
+g	Phaos
+a	aglaophara
+a	interfixa
+s2	Estigmene
+g	Phlyctaenogastra
+a	rangei
 g	Phragmatobia
 a	fuliginosa
 e	Ruby Tiger
 d	Zimtbär
 d	Rostflügelbär
+b	Phalaena
+n	Linnaeus, 1758
+s2	Spilosoma
+g	Poecilarctia
+a	venata
+s	rubricosta
+s4	Spilosoma rubricosta
 g	Popoudina
+a	linea
+s4	Estigmene lemniscata
+s2	Estigmene
+s	lemniscata
+s4	Spilosoma lemniscata
+g	Pseudophragmatobia
+a	perpunctata
+g	Pseudoradiarctia
+a	rhodesiana
+s2	Radiarctia
+s2	Spilosoma
+a	scita
+s2	Spilosoma
 g	Pyrrharctia
 a	isabella
 e	Isabella Tiger Moth
 e	Woolly Bear
 e	Woolly Worm
 d	Isabellabär
+b	Phalaena
+n	Smith, 1797
+g	Radiarctia
+a	jacksoni
+s2	Spilosoma
+a	screabile
+s	screabilis
+s2	Spilosoma
 g	Rajendra
+a	biguttata
+s2	Estigmene
 g	Rhodogastria
 a	amasis
 e	Tricolour Tiger Moth
 d	Südafrikanischer Fleckleibbär
+s2	Dionychopus
 a	similis
 e	Pretoria Tiger Moth
 d	Pretoria-Fleckleibbär
+s2	Dionychopus
 g	Saenura
+a	flava
+e	Yellow Ermine
+d	Südafrikanischer Gelber Fleckleibbär
+s2	Spilosoma
+g	Satara
+a	everetti
+s2	Pericallia
 g	Seirarctia
 a	echo
 e	Echo Moth
 d	Echobär
+g	Seydelia
+a	ellioti
+s2	Callarctia
+s2	Pericallia
 g	Sinowatsonia
 a	hoenei
 s4	Micrarctia heonei
 s2	Micrarctia
 s	heonei
+g	Spilaethalida
+a	turbida
+s2	Spilarctia
+s2	Spilosoma
 g	Spilarctia
+a	alba
+s2	Chelonia
+s	album
+s4	Spilarctia robusta
+s2	Spilosoma
+s4	Spilosoma album
+s4	Spilosoma robusta
+a	bifasciata
+s2	Spilosoma
+a	bisecta
+e	Chinese Ermine
+d	Chinesischer Fleckleibbär
+s	bisectum
+s2	Spilosoma
+a	clava
+s2	Spilosoma
+a	comma
+s2	Spilosoma
+a	hypogopa
+s2	Spilosoma
 a	lutea
 e	Buff Ermine
 d	Gelber Fleckleibbär
+b	Phalaena
+n	Hufnagel, 1766
+s2	Spilosoma
+s4	Spilosoma luteum
+a	melanostigma
+s2	Spilosoma
+a	murzini
+s2	Murzinarctia
+a	nydia
+s4	Spilarctia tienmushanica
+s2	Spilosoma
+s4	Spilosoma tienmushanica
+a	obliquizonata
+s	obliquizonatum
+s2	Spilosoma
+s4	Spilosoma obliquizonatum
+a	postrubida
+s2	Aloa
+s	postrubidum
+s2	Spilosoma
+a	rubilinea
+s2	Spilosoma
+a	seriatopunctata
+s	seriatopunctatum
+s2	Spilosoma
+a	strigatula
+s2	Spilosoma
+a	subcarnea
+e	Asian Ermine
+d	Asiatischer Fleckleibbär
+s	subcarneum
+s2	Spilosoma
+a	taiwanensis
+s2	Spilosoma
+a	tienmushana
+s2	Spilosoma
+a	wilemani
 s2	Spilosoma
 g	Spilosoma
+a	accensa
+a	arctichroa
+a	biagi
+s2	Spilarctia
+a	cervina
+a	congrua
+e	Agreeable Tiger Moth
+e	Yellow-legged Tiger Moth
+d	Gelbfuß-Fleckleibbär
+a	costata
+s2	Spilarctia
+a	curvilinea
+a	dubia
+e	Dubious Tiger Moth
+d	Dubioser Fleckleibbär
+a	eldorado
+a	elmagna
+a	ericsoni
+a	erythrastis
+a	euryphlebia
+a	fumida
+s2	Spilarctia
+a	griseabrunnea
+a	groganae
+a	irina
+a	kebea
+s2	Spilarctia
+a	latipennis
+e	Pink-legged Tiger Moth
+d	Pinkfuß-Fleckleibbär
 a	lubricipeda
 e	White Ermine
 d	Weißer Fleckleibbär
 d	Breitflügeliger Fleckleibbär
+b	Phalaena
+n	Linnaeus, 1758
+a	melanopsis
+s2	Areas
+s2	Pericallia
+s2	Rhodareas
+s2	Spilarctia
+a	obliqua
+e	Jute Tiger Moth
+d	Jutebär
+s2	Spilarctia
+a	owgarra
+s2	Spilarctia
+a	pelopea
+a	pteridis
+e	Brown Tiger Moth
+d	Oregon-Braunbär
+a	punctaria
+s2	Spilarctia
+s	punctarium
+a	styx
+a	ummera
+a	urticae
+e	Water Ermine
+d	Schmalflügeliger Fleckleibbär
+d	Nesselbär
+b	Phalaena
+n	Esper, 1789
+a	vagans
+e	Wandering Tiger Moth
+d	Amerikanischer Wanderbär
+a	vandepolli
+s2	Spilarctia
+a	vestalis
+e	Vestal Tiger Moth
+e	Red-legged Tiger Moth
+d	Rotfuß-Fleckleibbär
+s2	Maenas
+s4	Spilosoma echo
 a	virginica
 e	Virginian Tiger Moth
 d	Amerikanischer Fleckleibbär
+b	Bombyx
+n	Fabricius, 1798
+a	vulgaris
+s2	Spilarctia
+g	Stenucha
+a	dolens
+g	Tatargina
+a	ceylonensis
+s2	Estigmene
+a	erythromelaena
+a	pannosa
+s2	Pericallia
+a	picta
+s2	Deiopeia
+s2	Pericallia
+s2	Taragina
+a	sipahi
+s2	Pericallia
 g	Teracotona
+a	euprepia
+a	metaxantha
+e	Redspot Tiger Moth
+d	Rotpunktbär
+s2	Seirarctia
+a	rhodophaea
+a	senegalensis
+a	submacula
+g	Toulgarctia
+a	griveaudi
+s2	Spilarctia
+s2	Spilosoma
+a	luteoradians
+s2	Diacrisia madagascariensis
+s2	Spilosoma
+s2	Spilosoma malagasicum
+g	Ustjuzhania
+a	lineata
+s2	Spilosoma
 g	Virbia
 a	aurantiaca
 e	Orange Virbia Moth
 d	Oranger Bär
+b	Eubaphe
+n	Hübner, 1831
+s2	Holomelina
+a	costata
+s2	Crocota
+s2	Eubaphe
+s2	Holomelina
+a	ferruginosa
+e	Rusty Virbia Moth
+d	Rostbär
+s2	Eubaphe
+s2	Holomelina
+a	immaculata
+e	Plain-winged Virbia Moth
+e	Immaculate Virbia Moth
+s2	Holomelina
+a	laeta
+e	Joyful Virbia Moth
+d	Schwarzer Fleckleibbär
+s2	Holomelina
+a	medarda
+a	opella
+e	Tawny Virbia Moth
+s2	Crocota
+s2	Holomelina
+a	ostenta
+e	Showy Virbia Moth
+s2	Crocota
+s2	Holomelina
+a	pamphylia
+s2	Holomelina
+s2	Ptychoglene
+a	polyphron
+s2	Holomelina
+a	rosenbergi
+a	rubicundaria
+e	Ruddy Virbia Moth
+s2	Holomelina
+a	semirosea
+s2	Brycea
+s2	Holomelina
+a	thersites
+a	underwoodi
+a	zonata
+s2	Terna
 g	Watsonarctia
 a	deserta
 e	Chaste Pellicle
 d	Labkrautbär
+d	Waldmeisterbär
+s4	Arctia casta
+s4	Eucharia casta
+s2	Eucharia
+s4	Phragmatobia casta
+s	casta
+j	Nyctemerina
+e2	Nyctemera Moths
+d2	Nyctemerabären
+sh	Nyctemerini
+g	Afronyctemera
+a	itokina
+s2	Deilemera
+s2	Nyctemera
+g	Afrocoscinia
+a	aethiopica
+b	Coscinia
+n	Kühne, 2010
+g	Chiromachla
+a	chalcosidia
+s2	Deilemera
+s2	Nyctemera
+a	insulare
+s2	Nyctemera
+a	leuconoe
+e	African White Bear
+d	Afrikanischer Nyctemerabär
+s2	Deilemera
+s2	Nyctemera
+a	perspicua
+s2	Nyctemera
+a	torbeni
+s2	Nyctemera
+g	Neuroxena
+a	ansorgei
+g	Nyctemera
+i	Nyctemera
+a	amicus
+e	Australian Magpie Moth
+e	Senecio Moth
+e	Cineraria Moth
+d	Schwarzer Nyctemerabär
+d	Greiskrautbär
+b	Agagles
+n	White, 1841
+a	annulatum
+e	New Zealand Magpie Moth
+d	Neuseeländischer Nyctemerabär
+b	Leptosoma
+n	Boisduval, 1832
+s	annulata
+a	baulus
+e	Confused Nyctemera
+e	Asian Magpie Moth
+d	Ähnlicher Nyctemerabär
+b	Leptosoma
+n	Boisduval, 1832
+c	clathratum
+s	clathrata
+k	clathratum
+k	dauila
+k	giloloensis
+k	latimargo
+k	leopoldi
+k	mesolychna
+k	oninica
+a	lacticinia
+e	Common Nyctemera
+d	Nyctemerabär
+b	Phalaena
+n	Cramer, 1777
+i	Orphanos
+a	adversata
+e	Marbled White Moth
+d	Gefleckter Nyctemerabär
+b	Phalaena
+n	Schaller, 1788
+a	tripunctaria
+e	Malayan Nyctemera
+d	Malaiischer Nyctemerabär
+b	Phalaena
+n	Linnaeus, 1758
+i	Dondera
+o	Arctata
+a	alba
+s2	Dondera
+s2	Migoplastis
+a	arctata
+s2	Arctata
+s2	Deilemera
+a	zerenoides
+s3	arctata
+o	Browni
+a	browni
+s2	Deilemera
+s3	arctata
+o	Hyalina
+a	hyalina
+s2	Deilemera
+a	kinabaluensis
+e	Kinabalu Nyctemera
+d	Kinabalu-Nyctemerabär
+s3	arctata
+o	Luzonensis
+a	luzonensis
+i	Deilemera
+a	carissima
+s2	Arctata
+s2	Deilemera
+s4	Deilemera formosana
+s	formosana
+u	formosana
+a	correcta
+s2	Migoplastis
+a	evergista
+s4	Deilemera aeres
+s	aeres
+a	hampsoni
+s2	Migoplastis
+s2	Paraplastis
+a	muelleri
+i	Coleta
+a	coleta
+e	White Tiger Moth
+d	Weißer Nyctemerabär
+b	Phalaena
+n	Stoll, 1781
+s2	Coleta
+s2	Deilemera
+i	Luctuosana
+a	luctuosa
+s2	Deilemera
+s2	Deilemera perissa
+s	perissa
+a	ludekingii
+a	simulatrix
+i	Tritomera
+a	trita
+g	Podomachla
+a	chromis
+s2	Deilemera
+s2	Nyctemera
+g	Secusio
+a	strigata
+e	African Orange Bear
+d	Oranger Nyctemerabär
+g	Xylecata
+a	biformis
+s2	Nyctemera
+a	crassiantennata
+s2	Nyctemera
+a	druna
+s2	Nyctemera
+a	glauce
+s2	Deilemera
+s2	Nyctemera
+a	hemixantha
+s2	Deilemera
+s2	Nyctemera
+a	rattrayi
+s2	Deilemera
+s2	Nyctemera
+a	ugandicola
+s2	Deilemera
+s2	Nyctemera
+a	uniformis
+s2	Deilemera
+s2	Nyctemera
+a	xanthura
+s4	Deilemera simplex
+s4	Nyctemera simplex
+s2	Nyctemera
+j	Callimorphina
+sh	Callimorphini
+g	Aglaomorpha
+a	histrio
+e	Chinese Giant Tiger Moth
+d	Chinesischer Riesenbär
+s2	Callimorpha
+s2	Euplagia
+s2	Panaxia
+a	plagiata
+s2	Callimorpha
+s2	Panaxia
+g	Axiopoena
+a	karelini
+g	Callimorpha
+a	dominula
+e	Scarlet Tiger Moth
+d	Schönbär
+b	Phalaena
+n	Linnaeus, 1758
+g	Callindra
+a	equitalis
+s2	Callimorpha
+s2	Euplagia
+s2	Panaxia
+a	nyctemerata
+s2	Callimorpha
+s2	Panaxia
+a	principalis
+s2	Callimorpha
+s2	Eucallimorpha
+s2	Panaxia
+g	Calpenia
+a	saundersi
+g	Carcinopyga
+a	lichenigera
+s2	Euarctia
+a	lindti
+a	proserpina
+s2	Euarctia
+g	Coscinia
+a	chrysocephala
+e	Portuguese Chaperon
+d	Portugiesischer Grasbär
+a	cribraria
+e	Speckled Chaperon
+e	Speckled Footman
+d	Weißer Grasbär
+s2	Euprepia
+g	Cymbalophora
+a	oertzeni
+s2	Euprepia
+a	pudica
+e	Discrete Chaperon
+d	Südlicher Grasbär
+s2	Euprepia
+a	rivularis
+s2	Euprepia
+g	Diota
+a	rostrata
+e	Cape Ivy Moth
+d	Kapefeu-Bär
+s2	Galtara
+g	Dodia
+a	tarandus
+e	Woodland Tiger Moth
+d	Kanadischer Waldbär
+g	Epimydia
+a	dialampa
+s2	Epimedia
+g	Euleechia
+a	arisana
+s	arisanus
+s2	Nikaea
+a	bieti
+s2	Chelonia
+s2	Neochelonia
+a	miranda
+s2	Callimorpha
+s2	Chelonia
+s2	Coscinia
+s2	Panaxia
+g	Euplagia
+a	quadripunctaria
+e	Jersey Tiger
+e	Spanish Flag
+d	Russischer Bär
+d	Spanische Flagge
+s2	Callimorpha
+s4	Callimorpha splendidior
+s	splendidior
+s2	Panaxia
+s4	Panaxia quadripunctaria splendidior
+u	splendidior
+g	Galtara
+a	doriae
+s2	Pseudocallimorpha
+a	extensa
+e	Madagascan Fireweed Moth
+d	Madagassischer Greiskrautbär
+s2	Secusio
+s2	Sommeria
+a	nepheloptera
+s2	Digama
+a	pulverata
+s2	Secusio
+a	reticulata
+s2	Diota
+g	Haploa
+a	clymene
+e	Clymene Moth
+d	Klymenebär
+b	Phalaena
+n	Brown, 1776
+a	colona
+e	Colona Moth
+d	Colonabär
+b	Bombyx
+n	Hübner, 1803
+a	confusa
+e	Lyman's Tiger Moth
+d	Lyman's Bär
+b	Callimorpha
+n	Lyman, 1887
+a	contigua
+e	Neighbor
+d	Haselbär
+b	Hypercompa
+n	Walker, 1855
+a	lecontei
+e	Leconte's Tiger Moth
+d	Leconte's Bär
+b	Callimorpha
+n	Boisduval, 1829
+a	reversa
+e	Reversed Tiger Moth
+d	Veränderlicher Bär
+b	Callimorpha
+n	Stretch, 1885
+s3	colona
+g	Ilemodes
+a	astriga
+e	Buttered False Footman
+a	heterogyna
+g	Kishidaria
+a	khasiana
+s2	Calpenia
+a	takamukui
+s2	Calpenia
+a	zerenaria
+s2	Calpenia
+s2	Euprepia
+g	Lerautia
+a	bifasciata
+s2	Coscinia
+g	Nikaea
+a	longipennis
+s	formosana
+s	matsumurai
+u	matsumurai
+g	Pseudogaltara
+a	inexpectata
+g	Sebastia
+a	argus
+s2	Calpenia
+g	Spiris
+a	slovenica
+e	Slovenian Chaperon
+e	Slovenian Footman
+d	Slowenischer Grasbär
+a	striata
+e	Feathered Chaperon
+e	Feathered Footnman
+d	Gestreifter Grasbär
+s2	Euprepia
+g	Taicallimorpha
+a	albipuncta
+s2	Callimorpha
+s2	Eucallimorpha
+s2	Panaxia
+g	Tinoliodes
+a	dehanna
+s2	Niasana
+g	Tyria
+a	jacobaeae
+e	Cinnabar Moth
+d	Jakobskrautbär
+d	Blutbär
+j	Pericopina
+sh	Pericopinae
+sh	Pericopini
+r	De Souza Moraes, 2021
+l	Evolution of sexual dimorphism and polychromatism in a lineage of tiger moths (Lepidoptera: Erebidae): advancing knowledge of a taxonomically chaotic group
+p	10.1111/cla.12458
+g	Acribia
+a	maculifrons
+s	melanchroia
+s2	Calodesma
+s4	Calodesma melanchroia
+g	Antiotricha
+a	integra
+g	Calodesma
+r	Cock, 2023
+l	Using DNA barcodes to test the association of sexes and morphs in Calodesma spp. (Lepidoptera, Erebidae, Arctiinae, Arctiini, Pericopina) of Trinidad, West Indies, with an overview of the genus, taxonomic changes and a new species
+p	10.11646/zootaxa.5270.2.4
+a	amica
+s	occidentalis
+c	collaris
+k	collaris
+k	pseudocollaris
+a	dioptis
+a	exposita
+a	jordani
+a	militta
+b	Phalaena
+n	Stoll, 1781
+s2	Thyrgis
+a	quadrimaculata
+a	uraneides
+g	Chetone
+a	angulosa
+s	heliconides
+s2	Pericopis
+a	conjuncta
+s2	Pericopis
+a	histrio
+s	hydra
+s2	Netoche
+s2	Pericopis
+s4	Pericopis hydra
+a	ithomia
+s2	Pericopis
+s4	Pericopis lycorea
+a	ithrana
+s4	Pericopis intersecta
+a	kenara
+s2	Pericopis
+a	mimica
+a	salvini
+s2	Netoche
+s2	Pericopis
+a	suprema
+s2	Pericopis
+g	Composia
+a	credula
+e	Caribbean Beatuy
+d	Karibischer Prachtbär
+a	fidelissima
+e	Faithful Beauty
+e	Uncle Sam Moth
+d	Oleander-Prachtbär
+a	utowana
+g	Ctenuchidia
+a	subcyanea
+a	virgo
+g	Cyanarctia
+a	dama
+s2	Eupyra
+a	flavinigra
+g	Didaphne
+a	cyanomela
+b	Daphne
+n	Neumoegen, 1894
+g	Dysschema
+i	Dysschema
+a	amphissa
+s	fenestrata
+a	arema
+s2	Pericopis
+a	boisduvallii
+e	Boisduval's Tiger Moth
+d	Boisduvals Bär
+s	boisduvali
+s	regalis
+s4	Pericopis regalis
+a	centenaria
+e	Argentinian Flag Moth
+d	Argentinischer Bär
+a	cerialis
+s2	Pericopis
+a	damon
+s	grassator
+s2	Pericopis
+s4	Pericopis grassator
+a	eurocilia
+s	flavimedia
+s	heliconissa
+s	hodeva
+s	irene
+s	parviplaga
+s	rhea
+s	unifascia
+s	unxia
+s2	Pericopis
+s4	Pericopis flavimedia
+s4	Pericopis heliconissa
+s4	Pericopis hodeva
+s4	Pericopis irene
+s4	Pericopis parviplaga
+s4	Pericopis rhea
+s4	Pericopis unifascia
+s4	Pericopis unxia
+a	fanatica
+s2	Pericopis
+a	gaumeri
+s2	Pericopis
+a	hilara
+s	hilarina
+s	hilarum
+s2	Pericopis
+s4	Pericopis hilarina
+s2	Thebrone
+a	innominatum
+a	jansonis
+s	flavopennis
+s	salome
+s4	Pericopis flavopennis
+s2	Pericopis
+s4	Pericopis salome
+a	leda
+s	paracelsus
+s2	Pericopis
+s4	Pericopis paracelsus
+a	leucophaea
+e	Guatemalan Flag Moth
+d	Guatemaltekischer Bär
+s2	Pericopis
+a	lycaste
+s	cydon
+s	praetides
+s	tibesis
+s4	Pericopis cydon
+s2	Pericopis
+s4	Pericopis praetides
+s4	Pericopis tibesis
+a	lygdamis
+s	fortis
+s	tibesina
+s	ultima
+s4	Pericopis fortis
+s2	Pericopis
+s4	Pericopis marginalis tibesina
+s4	Pericopis ultima
+a	magdala
+e	Panamanian Flag Moth
+d	Panamaischer Bär
+s	panamensis
+s4	Pericopis marginalis panamensis
+a	marginalis
+e	Glassy Cloud Forest Tiger Moth
+d	Gläserner Nebelwaldbär
+s2	Pericopis
+a	marginata
+s2	Pericopis
+a	molesta
+s2	Pericopis
+a	neda
+s2	Pericopis
+a	palmeri
+s	hyalinipennis
+s4	Pericopis hyalinipennis
+s2	Pericopis
+a	perplexa
+s4	Chetone guapa
+s	perplexum
+s4	Pericopis guapa
+s2	Pericopis
+a	picta
+s	indecisa
+s	lucifer
+s	pictum
+s4	Pericopis indecisa
+s4	Pericopis lucifer
+s2	Pericopis
+a	porioni
+s2	Pericopis
+a	practides
+s2	Pericopis
+a	practidoides
+s2	Pericopis
+a	sacrifica
+e	Common Flag Moth
+d	Südamerikanischer Bär
+b	Eucharia
+n	Hübner, 1831
+s2	Pericopis
+a	subapicalis
+s	pagasa
+s4	Pericopis pagasa
+s2	Pericopis
+a	terminata
+s	on
+s4	Pericopis on
+s2	Pericopis
+a	thetis
+e	Giant Flag Moth
+d	Mexikanischer Riesenbär
+b	Euprepia
+n	Klug, 1836
+s	howardi
+s	mariamne
+s4	Pericopis fenestrata
+s4	Pericopis howardi
+s2	Pericopis
+a	tricolora
+s	buckleyi
+s	evanescens
+s	tricolor
+s4	Pericopis buckleyi
+s4	Pericopis evanescens
+s2	Pericopis
+s4	Tetrisia tricolor
+s2	Tetrisia
+a	viuda
+s2	Pericopis
+i	Are
+a	druryi
+s2	Are
+g	Ephestris
+a	melaxantha
+g	Euchlaenidia
+a	transcisa
+g	Gnophaela
+a	aequinoctialis
+a	clappiana
+a	latipennis
+e	Wild Forget-me-not Moth
+d	Vergissmeinnicht-Bär
+b	Glaucopsis
+n	Boisduval, 1852
+a	vermiculata
+e	Police Car Moth
+d	Polizeibär
+b	Omoiala
+n	Grote, 1864
+g	Heliactinidia
+a	flavivena
+s2	Didaphne
+a	nigrilinea
+s2	Didaphne
+a	sitia
+s2	Didaphne
+g	Hyalurga
+a	chthonophyle
+s2	Laurona
+a	dorsilinea
+a	fenestra
+e	Glassy Beatuy
+d	Gläserner Prachtbär
+a	fenestrata
+a	lauronoides
+a	leucophaea
+a	leucophlebia
+a	modesta
+a	mysis
+a	osiba
+s2	Lauron
+a	padua
+s2	Lauron
+a	partita
+a	sixola
+a	sora
+s	soroides
+a	subnormalis
+a	syma
+s2	Laurona
+a	urioides
+a	vinosa
+e	Harlequin Moth
+d	Harlekin-Prachtbär
+g	Hypocrita
+a	albimacula
+s2	Eucyane
+a	aletta
+s2	Esthema
+s2	Eucyane
+a	ambigua
+s2	Eucyane
+a	arcaei
+s2	Eucyane
+a	celadon
+s2	Eucyane
+a	celina
+s2	Eucyane
+s4	Eucyane escuintla
+s	escuintla
+a	confluens
+s2	Eucyane
+a	crocata
+s2	Esthema
+s4	Eucyane strigifera
+s	strigifera
+a	drucei
+s2	Centronia
+s2	Eucyane
+a	eulalia
+s2	Esthema
+s2	Eucyane
+a	excellens
+s2	Eucyane
+a	fenestraria
+s4	Esthema bicolora
+s2	Eucyane
+s	bicolora
+a	glauca
+s4	Eucyane rubrifascia
+s	rubrifascia
+a	hystaspes
+s2	Eucyane
+a	phanoptoides
+s2	Eucyane
+s4	Eucyane toulgoetae
+s	toulgoetae
+s2	Netoche
+a	plagifera
+s2	Eucyane
+a	reedia
+s2	Centronia
+a	rhea
+s2	Centronia
+a	simulata
+s2	Eucyane
+a	speciosa
+s2	Eucyane
+a	temperata
+s2	Eucyane
+g	Isostola
+a	divisa
+a	philomela
+s2	Eucyane
+g	Josiomorpha
+a	penetrata
+g	Josiomorphoides
+a	gigantea
+s4	Josiomorpha flammata
+g	Mesenochroa
+a	albolineata
+s2	Crocomela
+s2	Josiomorpha
+a	colorata
+s2	Crocomela
+a	erectistria
+s2	Crocomela
+s2	Josia
+a	extravagans
+s2	Crocomela
+s2	Episcea
+a	flammifera
+s2	Crocomela
+s2	Darna
+a	guatemalteca
+a	regia
+s2	Crocomela
+s2	Darna
+a	rogersi
+a	thirmida
+s2	Crocomela
+s	thermidoides
+s2	Thermidarctia
+g	Myserla
+a	transversa
+s2	Sermyla
+g	Notophyson
+a	catilina
+s2	Chetone
+s2	Pericopis
+a	heliconides
+s2	Dysschema
+a	phaeba
+s2	Chetone
+s2	Pericopis
+a	tiresias
+s2	Dysschema
+g	Phaloe
+a	cruenta
+a	cubana
+s2	Sphaeromachia
+a	vogli
+s3	cruenta
+g	Phaloesia
+a	saucia
+e	Saucy Beauty
+d	Dunkler Prachtbär
+g	Pseudophaloe
+a	cerealia
+s2	Phaloe
+a	helotes
+s2	Phaloe
+a	ninonia
+s2	Eucyane
+s4	Pericopis cotta
+s	cotta
+a	schausii
+s2	Pericopis
+s4	Phaloe schausi
+s4	Phaloe verania
+s	schausi
+s	verania
+s	veranioides
+a	troetschi
+s2	Phaloe
+g	Pteroodes
+a	clitus
+s2	Elysius
+s4	Pygoctenucha clita
+s2	Pygoctenucha
+g	Sagaropsis
+a	horae
+s2	Euchlaenidia
+s2	Sagaris
+a	rhombifera
+s2	Crocomela
+s2	Euchlaenidia
+g	Scearctia
+a	figulina
+g	Seileria
+a	angustifascia
+s2	Thyrgis
+a	basipunctata
+s2	Thyrgis
+a	constrictifascia
+s2	Eucyane
+s2	Thyrgis
+a	eucyaniformis
+s2	Thyrgis
+a	investigatorum
+b	Eucyanoides
+n	Toulgoët, 1988
+s2	Thyrgis
+a	marginata
+s2	Calodesma
+s2	Thyrgis
+a	meres
+s2	Eucyane
+s2	Hypocrita
+s2	Thyrgis
+a	phlegon
+s2	Thyrgis
+g	Sthenognatha
+a	flinti
+a	gentilis
+g	Syntomidopsis
+a	variegata
+g	Xanthocrita
+a	childon
+s2	Eucyana
+s2	Hypocrita
+s2	Thyrgis
+a	wingerteri
+s2	Hypocrita
+g	Xenosoma
+a	bryki
+a	dubia
+s2	Cyphopora
+a	flaviceps
+a	flavisedes
+a	geometrina
+s2	Eloria
+s	geometrinum
+a	nicander
+a	nigromarginatum
+a	oratesina
+s2	Eloria
+g	Zigira
+a	quadrata
 j	Phaegopterina
 e2	American Tiger Moths
 d2	Amerikanische Bärenspinner
@@ -41058,76 +42743,1735 @@ r	DaCosta, 2006
 l	Phylogeny of Milkweed Tussocks (Arctiidae: Arctiinae: Phaegopterini) and Its Implications for Evolution of Ultrasound Communication
 p	10.1603/0013-8746(2006)99[723:POMTAA]2.0.CO;2
 g	Aemilia
+a	crassa
+a	mincosa
+s2	Halisidota
+a	rubriplaga
 g	Agaraea
+a	inconspicua
+a	longicornis
+a	minuta
+a	schausi
+a	semivitrea
 g	Amastus
+a	aconia
+s2	Phaegoptera
+a	alba
+a	aloniae
+a	antonio
+a	coccinator
+s2	Phaegoptera
+a	episcotosia
+a	flavicauda
+a	helops
+a	hyalina
+s2	Hemihyalea
+s2	Phaegoptera
+a	ochraceator
+s2	Phaegoptera
+a	rubridorsata
+s	rubidorsata
+a	suffusa
+s2	Phaegoptera
+a	thalassina
+s2	Hemihyalea
+s2	Opharus
 g	Amaxia
+a	apyga
+a	bella
+s2	Neaxia
+a	carinosa
+a	chaon
+s2	Zatrephes
+a	consistens
+a	flavicollis
+s2	Neaxia
+s2	Prumala
+a	flavipuncta
+a	hebe
+a	lepida
+a	pandama
+s2	Halisidota
+s2	Idalus
+c	pardalis
+k	brendacasperae
+k	osmophora
+k	pardalis
+a	pseudodyuna
+a	pulchra
+a	reticulata
+s2	Automolis
+s2	Idalus
+a	violacea
 g	Ammalo
 a	helops
 e	American Fig Tiger Moth
 d	Amerikanischer Feigenbär
+g	Amphelarctia
+a	priscilla
+s2	Automolis
 g	Anaxita
+a	decorata
+a	sannionis
+a	suprema
+g	Aphyarctia
+a	surinamensis
+s2	Automolis
+g	Aphyle
+a	abdominalis
+s2	Antaxia
+s2	Symphlebia
+a	cuneata
+a	margaritaceus
+s	margaritacea
+g	Apiconoma
+a	opposita
+s2	Automolis
+g	Apocrisias
+a	thaumasta
+g	Apyre
+a	separata
+s2	Automolis
+g	Araeomolis
+a	albipicta
+s2	Aphyle
+a	rhodographa
+a	rubens
+s2	Idalus
+g	Arctiarpia
+a	melanopasta
+s2	Idalus
+g	Astralarctia
+a	pulverosa
+s4	Automolis amazonica
+s2	Automolis
+a	venatorum
+g	Azatrephes
+a	argyrotis
+a	discalis
+s	paradisea
+s4	Zatrephes paradisea
+g	Baritius
+a	eleuthera
+s2	Pseudeuceron
+a	eleutheroides
+a	grandis
+s3	sannionis
+s2	Halisidota
+s2	Halysidota
+a	nigridorsipeltatus
+a	sannionis
+s2	Halisidota
+s2	Halysidota
+g	Bernathonomus
+a	piperita
+s2	Halisidota
+s2	Opharus
 g	Bertholdia
+a	albipuncta
+a	almeidai
+a	crocea
+a	detracta
+a	flavidorsata
+a	fumida
+a	grisescens
+a	myosticta
+a	ockendeni
+a	philotera
+a	schausiana
+a	specularis
+s2	Pelochyta
+a	trigona
+a	yashoquintela
+g	Biturix
+a	pellucida
+s2	Agaraea
+a	rectilinea
+s2	Agaraea
+a	venosata
+g	Calidota
+a	obscurata
+s	obscurator
+s2	Carales
+s4	Carales obscurator
+a	strigosa
 g	Carales
+a	astur
+e	Astur Moth
+d	Asturbär
+s	arizonensis
+s2	Opharus
+s4	Opharus astur arizonensis
+u	arizonensis
+u	cubensis
+g	Carathis
+a	australis
+a	septentrionalis
+g	Castrica
+a	phalaenoides
 g	Cissura
+a	decora
+a	plumbea
+a	unilineata
+g	Coiffaitarctia
+a	henrici
+a	steniptera
+s2	Neritos
 g	Cratoplastis
+a	diluta
+b	Cratoplastis
+n	Felder & Rogenhofer, 1874
+s2	Automolis
 g	Cresera
+a	annulata
+s2	Automolis
+a	espiritosantensis
+a	hieroglyphica
+s2	Prumala
+a	ilioides
+s2	Automolis
+a	ilus
+s2	Automolis
+a	optimus
+s	optima
+s2	Prumala
+a	silvestrii
+a	similis
+s2	Prumala
 g	Cycnia
+a	collaris
+s	inopinatus
+s4	Euchaetes inopinatus
+a	oregonensis
+s2	Euchaetes
 a	tenera
 e	Dogbane Tiger Moth
 d	Hundsgiftbär
+s2	Ammalo
+g	Demolis
+a	albicostata
+a	albitegula
+s2	Evius
+g	Dialeucias
+a	pallidistriata
+a	violascens
+g	Diaphanophora
+a	albiscripta
+s2	Evius
+a	kindlii
+g	Disconeura
+a	linaza
+s2	Automolis
+s2	Idalus
+g	Echeta
+a	grandis
+e	White-barred Tiger Moth
+s2	Automolis
+s2	Zatrephes
+a	minerva
+s2	Neonerita
+s2	Pseudalus
+a	trinotata
+s2	Automolis
 g	Ectypia
+a	bivittata
+a	clio
+e	Clio Tiger Moth
+d	Kliobär
+s2	Euverna
+s2	Seirarctia
+a	mexicana
+s2	Euverna
 g	Elysius
+a	atrata
+a	aurantiacus
+s2	Amastus
+s2	Opharus
+a	cingulata
+a	conjunctus
+s	conjuncta
+a	conspersus
+s	conspersa
+a	disciplaga
+a	discoplaga
+a	gladysia
+a	hermia
+a	melaleuca
+s2	Halisidota
+s2	Halysidota
+s2	Lophocampa
+a	melanoplaga
+a	polystrigata
+s2	Amastus
+a	pyrosticta
+a	sebrus
+s2	Phaegoptera
+a	superba
+s	hampsoni
+u	hampsoni
+a	terra
+a	thrailkilli
+s2	Ammalo
+s	thraikilli
+g	Emurena
+a	fernandezi
+a	lurida
+s2	Automolis
+a	luridoides
+s2	Automolis
+a	quinquepunctata
+s2	Automolis
+a	tripunctata
+s2	Automolis
+s2	Sutonocrea
+g	Epimolis
+a	creon
+a	zatrephica
+g	Eriostepta
+a	bacchans
+a	fulvescens
+b	Chrysomallos
+n	Rothschild, 1909
+a	haematora
+b	Toulgoetarctia
+n	Coenen & Gibeaux, 2014
+a	melanogrammica
+b	Toulgoetarctia
+n	Coenen & Gibeaux, 2014
+a	nigripuncta
+s2	Araeomolis
+s2	Toulgoetarctia
+a	roseireta
+a	sanguinea
+s2	Araeomolis
+s2	Toulgoetarctia
+g	Ernassa
+a	cruenta
+s2	Automolis
+a	sanguinolenta
+s2	Automolis
 g	Euchaetes
+a	antica
+a	bolteri
 a	egle
 e	Milkweed Tiger Moth
 d	Seidenpflanzenbär
+b	Phalaena
+n	Drury, 1773
+a	elegans
+s2	Pygarctia
+a	fusca
+s2	Pygarctia
+a	helena
+a	polingi
+a	rizoma
+s2	Phaegoptera
+a	terminalis
+s2	Apistosia
+s2	Protosia
+s2	Pygoctenucha
+g	Eucyrta
+a	albicollis
+s2	Prumala
 g	Euerythra
+a	phasma
+e	Red-tailed Specter Moth
+d	Dunkler Phantombär
+a	trimaculata
+e	Three-spot Specter Moth
+d	Heller Phantombär
+g	Euplesia
+a	sphingidea
+s2	Automolis
+s2	Ormetica
 g	Eupseudosoma
+a	aberrans
+a	involuta
+s	involutum
 g	Evius
+a	albicoxae
+s4	Demolis flavithorax
+s	albaecoxae
+s2	Idalus
+s4	Premolis flavithorax
+a	aurococcinea
+a	cochenouri
+a	hippia
+s2	Idalus
+a	lobata
+s2	Parevia
+g	Fasslia
+a	hampsoni
+g	Glaucostola
+a	binotata
+a	guttipalpis
+g	Gonotrephes
+a	friga
+s2	Thyrarctia
+g	Gorgonidia
+a	buckleyi
+s2	Automolis
+s4	Automolis buckleyi whitfordi
+s4	Automolis buckleyi withfordi
+s	helenae
+s	whitfordi
+s	withfordi
+s2	Zatrephes
+u	helenae
+u	whitfordi
+a	cubotaensis
+s2	Automolis
+s2	Automolis garleppi
+s3	garleppi
+a	garleppi
+s2	Automolis
+s2	Zatrephes
+a	inversa
+s2	Automolis garleppi
+s3	garleppi
+a	maronensis
+s2	Automolis garleppi
+s3	garleppi
+a	vulcania
+g	Graphea
+a	marmorea
+s2	Baritius
+a	pseudomarmorea
+g	Haemanota
+a	abdominalis
+s2	Neritos
+a	affinis
+s2	Neritos
+s2	Parevia
+a	alboapicalis
+s2	Araeomolis
+s2	Paranerita
+a	chrysozona
+s2	Neritos
+a	concelata
+s	concelana
+a	fereunicolor
+s2	Neritos
+a	flavipurpurea
+s2	Neritos
+a	gibeauxi
+s2	Neritos
+a	haemabasis
+s2	Paranerita
+a	improvisa
+s2	Neritos
+a	kindli
+a	maculosa
+s2	Neritos
+a	prophaea
+s2	Neritos
+s2	Trichromia
+a	rosacea
+s2	Neritos
+s2	Paranerita
+a	rubriceps
+a	sanguidorsia
+s	cubana
+a	senecauxi
+a	syntomoides
+s2	Neritos
+s2	Parevia
+a	vicinula
+g	Haemaphlebiella
+a	strigata
+s2	Automolis
+s2	Baritius
+s2	Haemaphlebia
 g	Halysidota
+a	atra
+s2	Halisidota
+a	cinctipes
+e	Florida Tiger Moth
+d	Floridabär
+s2	Halisidota
+a	davisii
+e	Davis's Tiger Moth
+d	Davis-Bär
+s2	Halesidota
+s4	Halisidota davisi
+s2	Halisidota
+s	davisi
 a	harrisii
 e	Sycamore Tiger Moth
 d	Platanenbär
+b	Halesidota
+n	Walsh, 1864
+s2	Halisidota
+s2	Halisidota tessellaris
+s3	tessellaris
+a	leda
+s2	Euphalisidota
+s2	Halisidota
+s2	Phaegoptera
+a	masoni
+s2	Halisidota
+s2	Phaegoptera
+a	roseofasciata
+s2	Automolis
+s2	Halisidota
+a	ruscheweyhi
+s2	Halisidota
+s2	Halisidota schausi
+s3	schausi
+a	schausi
+e	Schaus's Tiger Moth
+d	Schaus-Bär
+s2	Halisidota
+a	semibrunnea
+s2	Automolis
+s2	Halisidota
+a	steinbachi
+s2	Halisidota
 a	tessellaris
 e	Pale Tiger Moth
 d	Amerikanischer Graubär
+b	Phalaena
+n	Smith, 1797
+s2	Halisidota
+s	tesselaris
+s	tessellarus
+s	tessellata
+a	underwoodi
+s4	Halisidota meridensis
+s2	Halisidota
+g	Hemihyalea
+a	cornea
+g	Himerarctia
+a	docis
+s2	Automolis
+a	griseipennis
+s2	Automolis
+s2	Prumala
+a	laeta
+s2	Automolis docis
+g	Hyalarctia
+a	bertrandi
+g	Hyperandra
+a	appendiculata
+s	appendiculatus
 g	Hyperthaema
+a	hoffmannsi
+a	orbicularis
+s2	Neritos
+a	sanguineata
+g	Hypidalia
+a	enervis
+s2	Idalus
+a	sanguirena
 g	Hypocrisias
+a	minima
+g	Hyponerita
+a	ishima
+a	lavinia
+s2	Idalus
+a	persimilis
+a	similis
+a	tipolis
+s2	Neritos
 g	Idalus
+a	admirabilis
+a	agastus
+s	agasta
+a	albitornus
+a	aleteria
+a	bolivianus
+a	carinosa
+s2	Automolis
+a	citrina
+s2	Automolis
+a	coacta
+a	crinis
+s2	Automolis
 a	critheis
+s2	Automolis
+a	daga
+s2	Empusa
+s	dares
+u	dares
+a	delicata
+s2	Automolis
+a	dorsalis
+s2	Automolis
+s2	Automolis ochracea
+s3	ochracea
+a	erythronota
+s2	Automolis
+s4	Automolis erythronotus
+a	fasciipuncta
+s2	Automolis
+a	flavicostalis
+s2	Automolis
 a	herois
+s2	Automolis
+a	intermedia
+s2	Automolis
+a	larissa
+s2	Automolis
+s4	Eupseudosoma albescens
+s2	Eupseudosoma
+s	albescens
+a	lineosus
+s4	Automolis lineosa
+s	lineosa
+a	lucaii
+a	maesi
+a	monostidza
+a	mossi
+s2	Eupseudosoma
+a	multicolor
+s2	Automolis
+a	nigropunctata
+s2	Automolis
+s2	Eupseudosoma
+a	occidentalis
+s4	Automolis vitreoides
+s	vitreoides
+a	ochracea
+s2	Automolis
+a	ochreata
+s2	Automolis
+a	paulae
+a	perlineosa
+s2	Automolis
+a	septentrionalis
+a	sublineata
+s2	Automolis
+a	tuisana
+s2	Automolis
+a	tybris
+s2	Automolis
+s2	Empusa
+a	vitrea
+s2	Automolis
+s2	Empusa
+g	Ischnocampa
+a	achrosis
+a	admeta
+a	albiceps
+a	birchelli
+a	brunneitincta
+a	celer
+a	discopuncta
+a	ferrea
+a	floccosa
+a	griseola
+a	hemihyala
+a	ignava
+a	lithosioides
+a	lugubris
+a	mamona
+a	mundator
+s2	Opharus
+a	nubilosa
+a	obscurata
+a	perirrorata
+a	remissa
+a	rubrosignata
+a	sordida
+a	sordidior
+a	styx
+a	tolimensis
+a	tristis
+s2	Opharus
+g	Ischnognatha
+a	leucapera
+s2	Automolis
+a	semiopalina
+s2	Automolis
+g	Kirrostola
+a	maroniensis
+s2	Glaucostola
+c	metaxantha
+s2	Glaucostola
+s4	Glaucostola stevearonsoni
+k	metaxantha
+k	stevearonsoni
+g	Kodiosoma
+a	fulva
+s2	Codiosoma
+s4	Codiosoma otero
+s	fulvum
+s	otero
+g	Lepidokirbyia
+a	boreas
+a	lauroi
+a	venigera
+a	vittipes
+s2	Arara
+s2	Automolis
+s2	Lepidokirbya
+s2	Rhipha
+g	Lepidolutzia
+a	baucis
+s2	Amastus
+s2	Charidea
+s	baucia
+g	Lepidozikania
+a	cinerascens
+s2	Tessellarctia
 g	Lerina
+a	incarnata
+s4	Ctenucha robinsonii
 g	Leucanopsis
+a	acuta
+s2	Halisidota
+s4	Halisidota grota
+s	grota
+a	apicepunctata
+s2	Halisidota
+a	aurantiaca
+s2	Halisidota
+a	biedala
+s2	Halisidota
+a	bipartita
+s2	Halisidota
+a	boliviana
+s2	Halisidota
+a	calvona
+s2	Halisidota
+a	cedon
+s2	Halisidota
+a	cirphis
+s2	Halisidota
+a	coniota
+s2	Halisidota
+a	dallipa
+s2	Halisidota
+s	dalipa
+a	flavorufa
+s2	Halisidota
+a	jonesi
+s2	Halisidota
+a	leucanina
+s2	Halisidota
+s4	Halisidota phellia
+a	lineata
+s2	Halisidota
+a	loisona
+s2	Halisidota
+s	loisana
+a	longa
+e	Long-streaked Tiger Moth
+d	Florida-Sumpfbär
+s2	Euphalisidota
+s2	Halisidota
+a	lurida
+s2	Euphalisidota
+s2	Halisidota
+a	luridioides
+s2	Halisidota
+a	malodonta
+s2	Halisidota
+a	mandus
+s2	Halisidota
+a	martona
+a	moeschleri
+a	nubilosus
+s4	Halisidota nubilosa
+s2	Halisidota
+a	orooca
+s2	Halisidota
+a	oruba
+s2	Halisidota
+a	oruboides
+s2	Halisidota
+a	pagana
+s2	Aemilia
+s2	Halisidota
+a	perdentata
+s2	Halisidota
+a	rhomboidea
+s2	Halisidota
+a	sablona
+s2	Euphalisidota
+s2	Halisidota
+a	squalida
+s2	Halisidota
+a	stipulata
+s2	Halisidota
+a	strigulosa
+s2	Halisidota
+a	suavina
+s2	Halisidota
+a	tabernilla
+s2	Halisidota
+a	taperana
+s2	Halisidota
+a	turrialba
+s2	Halisidota
+a	umbrosa
+s2	Halisidota
+a	valentina
+s2	Halisidota
 g	Lophocampa
+a	albitegula
+a	alternata
+s2	Halisidota
 a	annulosa
 e	Santa Ana Tiger Moth
 d	Santa-Ana-Bär
+s2	Halisidota
 a	argentata
 e	Silver-spotted Tiger Moth
-d	Silberfleck-Bär
+d	Silberfleckbär
+s2	Halisidota
+a	atomosa
+s2	Halisidota
+a	atriceps
+s2	Elysius
+a	atrimaculata
+s2	Halisidota
+a	bicolor
+s2	Halisidota
 a	caryae
 e	Hickory Tiger Moth
 d	Hickorybär
+b	Lophocampa
+n	Harris, 1841
+s2	Halisidota
+a	catenulata
+s2	Halisidota
+a	citrina
+s2	Leucanopsis
+s2	Thalesa
+a	debilis
+s2	Thalesa
+a	desotoi
+a	dinora
+s2	Halisidota
+a	distincta
+s2	Halisidota
+a	dognini
+s2	Halisidota
+a	flavoabdominalis
+a	hispaniola
+a	indistincta
+s2	Halisidota
+a	ingens
+s2	Halisidota
+a	labaca
+s2	Halisidota
+a	laroipa
+s2	Halisidota
+a	lesieuri
 a	maculata
 e	Yellow-spotted Tiger Moth
 d	Gelbmarmorierter Bär
+b	Lophocampa
+n	Harris, 1841
+s2	Halisidota
+a	maroniensis
+s2	Halisidota
+a	mixta
+s2	Halisidota caryae
+s2	Halisidota
+s4	Halisidota pseudocarye
+a	modesta
+s4	Halisidota sobrina
+s4	Halisidota sobrinella
+a	montana
+s2	Halisidota
+a	niveigutta
+s2	Halisidota
+a	propinqua
+s2	Halisidota caryae
+s2	Halisidota
+a	pura
+s2	Euhalesidota
+s2	Halisidota
+a	roseata
+e	Rosy Aemilia
+d	Roter Douglasienbär
+s2	Aemilia
+s2	Halisidota
+a	seruba
+s2	Halisidota
+s2	Thalesa
+a	significans
+s2	Aemilia roseata
+s2	Halisidota
+a	sobrina
+s2	Halisidota argentata
+a	subannula
+s2	Halisidota
+a	walkeri
+s2	Halisidota
+g	Machadoia
+a	diminuta
+s2	Hemihyalea
+a	xanthosticta
+s2	Hemihyalea
+g	Machaeraptenus
+a	crocopera
+s2	Automolis
+a	ventralis
+s2	Automolis
+g	Mazaeras
+a	francki
+s2	Elysius
+a	janeira
+s4	Elysius distincta
+s	distincta
+s2	Sychesia
+a	melanopyga
+s2	Eucerea
+a	soteria
+s2	Elysius
+a	yungasensis
 g	Melese
+a	albogrisea
+a	amastris
+s2	Neritos
+a	asana
+s2	Neritos
+a	babosa
+s2	Neritos
+a	castrena
+a	chiriquensis
+a	chozeba
+s2	Neritos
+a	costimacula
+a	dorothea
+s2	Elysius
+a	drucei
+a	endopyra
+a	flavimaculata
+a	hampsoni
+a	hebetis
+a	incertus
+s	incerta
+a	intensa
+s3	chozeba
+a	laodamia
+s2	Neritos
+a	levequei
+a	monima
+a	nebulosa
+a	ocellata
+a	paranensis
+a	peruviana
+a	punctata
+a	signata
+a	sixola
+a	underwoodi
+a	veneta
+s2	Idalus
+g	Mellamastus
+a	nero
+s2	Halisidota
+g	Metaxanthia
+a	vespiformis
+g	Munona
+c	iridescens
+s2	Halisidota
+k	carolinepalmerae
+k	iridescens
+k	robpuschendorfi
+g	Nannodota
+a	minuta
+s2	Halisidota
+g	Neidalia
+a	bifasciata
+s2	Eupseudosoma
+a	dulcicula
+a	orientalis
+a	villacresi
+s2	Idalus
+g	Neonerita
+a	bernardoespinozai
+a	dorsipuncta
+a	pulchra
+g	Neoplynes
+a	eudora
+s2	Pagara
+g	Neozatrephes
+a	schausi
+s2	Baritius
+a	telesilla
+g	Nezula
+a	grisea
+g	Nyearctia
+a	leucoptera
+s4	Automolis albescens
+s2	Automolis
+s	albescens
+g	Ochrodota
+a	atra
+a	marina
+a	pronapides
+s2	Zatrephes
+g	Onythes
+a	colombiana
+s2	Elysius
+s2	Halisidota
+a	pallidicosta
+s2	Elysius
+a	roseidorsata
+g	Oodoptera
+a	guianensis
+b	Oodoptera
+n	Laguerre, 2019
 g	Opharus
+a	basalis
+a	belus
+a	bimaculata
+a	bipunctatus
+a	calosoma
+s2	Calidota
+a	consimilis
+a	flavimaculata
+a	interposita
+a	laudia
+s2	Phaegoptera
+a	muricolor
+s2	Calidota
+s2	Pygarctia
+a	notata
+s2	Halisidota
+s2	Phaegoptera
+a	polystrigata
+a	procroides
+a	rema
+s2	Calidota
+s2	Pseudapistosia
+a	rhodosoma
+a	roseistriga
+a	rudis
+s2	Calidota
+a	subflavus
+g	Ordishia
+a	godmani
+s2	Automolis
+s2	Ischnognatha
+a	rutilus
+s4	Automolis rutila
+s2	Automolis
+s2	Ischnognatha
+s	rutila
 g	Ormetica
+a	albimaculifera
+s2	Automolis
+a	ameoides
+s2	Prumala
+a	ataenia
+s2	Automolis
+a	chrysomelas
+s2	Automolis
+a	codasi
+s2	Automolis
+a	collateralis
+s2	Automolis
+a	contraria
+s2	Automolis
+a	flavobasalis
+s2	Automolis
+a	gerhilda
+s2	Automolis
+a	guapisa
+s2	Automolis
+s4	Automolis metallica
+s	metallica
+a	iheringi
+s2	Automolis
+a	maura
+s2	Automolis
+a	melea
+s2	Automolis
+a	neira
+s2	Automolis
+a	packardi
+s2	Automolis
+a	pauperis
+s2	Automolis
+s2	Idalus
+a	postradiata
+s2	Automolis
+a	pratti
+s2	Automolis
+a	pseudoguapisa
+s2	Automolis
+a	rosenbergi
+s2	Automolis
+a	sicilia
+s2	Automolis
+a	sypilus
+s2	Automolis
+a	taeniata
+s2	Automolis
+a	taniala
+s2	Automolis
+a	temperata
+s2	Automolis
+a	triangularis
+s2	Automolis
+a	underwoodi
+s2	Automolis
+a	zenzeroides
+s2	Automolis
 g	Pachydota
+a	drucei
+a	iodea
+a	punctata
 g	Pagara
+a	simplex
+e	Mouse-colored Tiger Moth
+d	Mausgrauer Bär
+s2	Comacla
+g	Paranerita
+a	gaedei
+g	Parathyris
+a	cedonulli
+s	cedo-nulli
+s	griseata
+s4	Thyrarctia cedo-nulli
+u	griseata
+a	semivitrea
+s2	Thyrarctia
 g	Pareuchaetes
+a	aurata
+a	bipunctata
+s2	Ammalo
+a	insulata
+e	Yellow-winged Pareuchaetes
+d	Ageratum Defoliator
+d	Leberbalsambär
+b	Halesidota
+n	Walker, 1855
+s2	Ammalo
+a	pseudoinsulata
+e	Siam Weed Defoliator
+d	Siamkrautbär
+b	Pareuchaetes
+n	Rego Barros, 1956
+s2	Paraeuchaetes
 g	Pelochyta
+a	affinis
+s2	Affinis
+a	arontes
+a	cinerea
+s2	Pseudapistosia
+a	pallida
+s2	Halisidota
+s4	Opharus ochracea
+s2	Opharus
+s4	Phaegoptera ochracea
+a	ruficollis
+s2	Opharus
 g	Phaegoptera
+a	chorima
+s2	Opharus
+a	decrepida
+s2	Opharus
+a	depicta
+s2	Opharus
+a	fusca
+a	granifera
+s2	Opharus
+a	histrionica
+s2	Opharus
+a	nexa
+s2	Opharus
+a	punctularis
+s2	Opharus
+a	sestia
+s2	Opharus
+g	Phaeomolis
+a	lineatus
+s2	Evius
+s4	Idalus lineata
+s2	Idalus
+a	polystria
+s2	Automolis
+a	vampa
+s2	Automolis
+g	Pitane
+a	fervens
+g	Pithea
+a	ferruginea
+s2	Opharus
 g	Praeamastus
+a	albicinctus
+s2	Amastus
+a	albipuncta
+s2	Amastus
+a	minerva
+s2	Amastus
+s4	Amastus watkinsi
+s2	Hemihyalea
+s4	Hemihyalea watkinsi
+s2	Phaegoptera
+s	watkinsi
+a	roseicorpus
+s2	Amastus
+s2	Hemihyalea
+g	Premolis
+a	semirufa
+s2	Halisidota
+g	Prosopidia
+a	morosa
+b	Hyaleucerea
+n	Schaus, 1910
+g	Pryteria
+a	alboatra
+s2	Automolis
+a	hamifera
+s2	Automolis
+a	unifascia
+s2	Automolis
+s2	Sallaea
+g	Pseudaclytia
+a	opponens
+a	umbrica
+a	unimacula
+g	Pseudalus
+a	limona
+s	limonia
+a	luteoradiatus
+a	salmonaceus
+s2	Idalus
+s4	Pseudalus salmonacea
+a	strigatus
+s	strigata
+g	Pseudamastus
+a	alsa
+s2	Amastus
+s2	Phaegoptera
+g	Pseudapistosia
+a	leucocorypha
+s2	Calidota
+a	similis
+s2	Calidota
+a	umber
+s4	Calidota gigas
+s2	Elysius
+s4	Opharus gigas
+s	gigas
+g	Pseudepimolis
+a	arcifera
+s2	Epimolis
+s2	Neonerita
+a	haemasticta
+s2	Epimolis
+s2	Neonerita
+a	incarnata
+s2	Aphyle
+s2	Epimolis
+s2	Neonerita
+a	incisa
+s2	Aphyle
+s4	Aphyle intorta
+s4	Epimolis intorta
+s4	Eupseudosoma parapessa
+s2	Neonerita
+s4	Neonerita intorta
+s4	Neonerita parapessa
+s2	Prumala
+s	parapessa
+a	marpessa
+s2	Eupseudosoma
+s2	Idalus
+s2	Neonerita
 g	Pseudischnocampa
+a	affinis
+a	humosa
+s2	Halisidota
+s2	Halysidota
+s2	Lophocampa
+a	nervosa
+e	Black-veined Yellow Tiger Moth
+s2	Pachydota
+a	nigridorsata
+s2	Ischnocampa
+a	striata
+s2	Lophocampa
+s2	Pachydota
 g	Pseudohemihyalea
+a	ambigua
+e	Red-banded Aemilia
+d	Roter Ponderosabär
+s2	Aemilia
+s4	Aemilia bolteri
+s2	Halesidota
+s2	Halisidota
+s4	Seirarctia bolteri
+a	asignata
+s2	Hemihyalea
+a	celsicola
+s2	Hemihyalea
+a	daraba
+s2	Hemihyalea
+s2	Phaegoptera
+a	edwardsii
+e	Edwards's Glassy-wing Moth
+d	Edwards' Glasbär
+b	Halisidota
+n	Packard, 1864
+s4	Hemihyalea edwardsi
+s2	Hemihyalea
+a	fallaciosa
+s2	Aemilia
+a	labecula
+e	Freckled Glassy-wing Moth
+d	Gesprenkelter Glasbär
+s2	Halesidota
+s2	Halysidota
+s2	Hemihyalea
+a	ochracea
+s2	Hemihyalea
+a	rhoda
+s2	Hemihyalea
+s2	Phaegoptera
+a	splendens
+s2	Hemihyalea
+a	syracosia
+s2	Aemilia
+s2	Halesidota
+a	testacea
+s2	Hemihyalea
+a	utica
+s2	Carales
+s2	Hemihyalea
+g	Pseudopharus
+a	amata
+s2	Opharus
+a	domingona
+s2	Opharus
+a	hades
+g	Pseudotessellarctia
+a	ursina
+s2	Phaegoptera
+s2	Tessellarctia
+g	Psychophasma
+a	erosa
+g	Purius
+a	superpulverea
+s2	Spodarctia
 g	Pygarctia
+i	Pygarctia
+a	abdominalis
+e	Yellow-edged Tiger Moth
+d	Gelbrandbär
+a	flavidorsalis
+a	lorula
+a	murina
+s2	Euchaetias
+a	neomexicana
+a	pterygostigma
+a	roseicapitis
+e	Red-headed Tiger Moth
+d	Rotkopfbär
+s2	Cycnia
+a	spraguei
+e	Sprague's Tiger Moth
+d	Sprague's Bär
+i	Pseudeuchaetes
+a	cressida
+s2	Euchaetes
+a	expressa
+s2	Antarctia
+s2	Euchaetes
+a	perlevis
+s2	Euchaetes
+a	zella
+s2	Calidota
+s2	Euchaetes
+g	Regobarrosia
+a	flavescens
+s4	Automolis asara
+s2	Automolis
+s	asara
+a	villiersi
+g	Rhipha
+a	albiplaga
+s2	Automolis
+s4	Automolis uniformis
+s	uniformis
+a	flavithorax
+s2	Idalus
+a	flavoplaga
+s2	Idalus
+a	flavoplagiata
+s2	Automolis
+s2	Prumala
+a	leucoplaga
+s2	Automolis
+a	luteoplaga
+s2	Automolis
+a	niveomaculata
+s2	Automolis
+a	persimilis
+s2	Automolis
+a	strigosa
+s2	Automolis
+s4	Automolis subulifera
+s4	Eucyrta subulifera
+s	subulifera
+g	Rhodorhipha
+a	flammans
+s2	Automolis
+s2	Rhipha
+a	flammula
+s2	Automolis
+s2	Rhipha
+a	fulminans
+s2	Automolis
+s2	Rhipha
+a	gagarini
+s2	Rhipha
+a	mathildae
+s2	Automolis
+s2	Rhipha
+a	perflammans
+s2	Automolis
+s2	Rhipha
+a	pulcherrima
+s2	Automolis
+s2	Rhipha
+a	subflammans
+s2	Automolis
+s2	Rhipha
+a	vivia
+s2	Rhipha
 g	Robinsonia
+a	bartolana
+a	boliviana
+a	catasticta
+a	deiopea
+a	dewitzi
+a	flavomarginata
+a	fogra
+s2	Prumala
+a	formula
+a	klagesi
+a	lefaivrei
+a	longimacula
+a	marginata
+a	mera
+s2	Phaeomolis
+a	morula
+a	mossi
+a	multimaculata
+a	polyplagia
+a	praphaea
+a	rockstonia
+a	sabata
+a	sanea
+a	similis
+a	simulans
+g	Romualdia
+a	elongata
+s2	Amastus
+g	Scaptius
+a	asteroides
+s2	Automolis
+a	chrysopera
+s2	Automolis
+s4	Automolis sanguistrigata
+s	sanguistrigata
+a	chrysoperina
+s2	Automolis
+a	obscurata
+s2	Automolis
+a	pseudoprumala
+s2	Automolis
+a	sordida
+s2	Automolis
+s2	Prumala
+a	submarginalis
+s2	Automolis
+s2	Prumala
+a	vinasia
+s2	Automolis
+g	Schalotomis
+a	roseothorax
+s2	Diarhabdosia
+g	Selenarctia
+a	elissa
+s2	Automolis
+s2	Euplesia
+a	elissoides
+s2	Automolis
+a	flavidorsata
+a	pseudelissa
+s2	Automolis
+a	schausi
+s2	Automolis
+g	Senecauxia
+a	coraliae
+b	Senecauxia
+n	Toulgoët, 1990
+g	Stidzaeras
+a	strigifera
+g	Sutonocrea
+a	lobifer
+s2	Automolis
+a	reducta
+s2	Automolis
+g	Sychesia
+a	dryas
+s2	Elysius
+a	naias
 g	Symphlebia
+a	alinda
+s2	Prumala
+a	aryllis
+s2	Prumala
+a	catenata
+s2	Idalus
+a	citrarius
+s4	Idalus citraria
+s2	Idalus
+a	distincta
+s2	Prumala
+a	fulminans
+s2	Prumala
+a	haenkei
+s2	Prumala
+a	hyalina
+s2	Antaxia
+s2	Automolis
+a	indistincta
+s2	Prumala
+a	ipsea
+s2	Mazaeras
+a	jamaicensis
+s2	Prumala
+a	janecheverriae
+a	lophocampoides
+s2	Prumala
+a	meridionalis
+s2	Antaxia
+a	muscosa
+s2	Prumala
+a	neja
+s2	Idalus
+a	obliquefasciatus
+s2	Idalus
+a	palmeri
+s2	Prumala
+a	perflua
+s2	Automolis
+a	punctata
+s2	Amaxia
+s2	Halisidota
+s2	Idalus
+s2	Lampruna
+a	pyrgion
+s2	Amaxia
+a	similis
+s2	Amaxia
+a	suanoides
+s2	Prumala
+a	suanus
+s2	Idalus
+s2	Prumala
+a	tessellata
+s2	Prumala
+a	tetrodonta
+s2	Idalus
+a	tolimensis
+s2	Prumala
+a	underwoodi
+s2	Diacrisia
+s4	Prumala herbosa
+s	herbosa
+a	venusta
+s4	Prumala foliosa
+s2	Prumala
+s	foliosa
+g	Tessella
+a	flavescens
+s2	Ochrodota
+s	grandis
+a	jorgenseni
+s2	Tessellota
+a	sertata
+s2	Halysidota
+s2	Tessellota
+g	Tessellarctia
+a	semivaria
+s2	Tesselarctia
+a	walterei
+g	Tessellota
+a	cancellata
+a	trifasciata
+s2	Sellota
+g	Thyromolis
+a	pythia
+s2	Idalus
+g	Thysanoprymna
+a	cepiana
+s2	Baritius
+a	haemorrhoides
+s2	Baritius
+a	morio
+s2	Baritius
+a	pyrrhopyga
+s2	Baritius
+a	superba
+s2	Aclytia
+s2	Baritius
 g	Trichromia
+a	albicollis
+s2	Neritos
+s4	Neritos hampsoni
+s4	Paranerita hampsoni
+s	hampsoni
+a	androconiata
+s2	Neritos
+s2	Paranerita
+a	atta
+s2	Neritos
+a	aurantiipennis
+s2	Paranerita
+a	brueckneri
+s2	Hyponerita
+a	cardinalis
+s2	Neritos
+a	coccinea
+s2	Neritos
+a	coccineata
+a	complicata
+s2	Paranerita
+a	cotes
+s2	Neritos
+a	cucufas
+s2	Neritos
+a	cyclopera
+s2	Neritos
+a	declivis
+s2	Hyponerita
+a	discophora
+s2	Neritos
+a	flavoroseus
+s2	Evius
+s2	Neritos
+a	gaudialis
+s2	Neritos
+s2	Paranerita
+a	granatina
+s2	Neritos
+a	grandis
+s2	Hyponerita
+s2	Paranerita
+a	interna
+s2	Hyponerita
+a	klagesi
+a	leucoplaga
+s2	Neritos
+a	lophosticta
+s2	Paranerita
+a	lucens
+s2	Hyponerita
+a	maculata
+s2	Paranerita
+s2	Parevia
+a	mathani
+s2	Parevia
+a	metachryseis
+s2	Parevia
+a	metapyria
+s2	Paranerita
+a	metapyrioides
+s2	Paranerita
+a	onytes
+s2	Neritos
+a	orbifer
+s2	Paranerita
+a	parnelli
+s2	Parevia
+a	patara
+s2	Neritos
+s4	Paranerita klagesi
+s2	Paranerita
+a	pectinata
+s2	Neritos
+a	persimilis
+s2	Neritos
+s2	Paranerita
+a	peruviana
+s2	Paranerita
+a	phaeocrota
+s2	Paranerita
+a	polyxenoides
+s2	Paranerita
+a	postflavida
+s2	Neritos
+s2	Paranerita
+a	purpureotincta
+s2	Hyponerita
+s2	Neritos
+a	quadricolor
+a	repanda
+s2	Neritos
+a	rhodocraspis
+s2	Hyponerita
+a	rubrosignata
+s2	Paranerita
+a	sardanapalus
+s2	Hyponerita
+s2	Neritos
+a	similis
+a	sisenna
+s2	Evius
+s2	Parevia
+a	sorex
+s2	Neritos
+a	supracoccinea
+a	tremula
+s2	Neritos
+a	viola
+s2	Hyponerita
+a	vulmaria
+s2	Parevia
+g	Tricypha
+a	imperialis
+s2	Romanoffia
+a	nigrescens
+g	Trocodima
+a	lenistriata
+s2	Microdota
 g	Turuptiana
+a	lacipea
+s2	Sallaea
+c	obliqua
+k	annesmithae
+k	obliqua
 g	Viviennea
+a	ardesiaca
+s2	Automolis
+a	dolens
+s2	Automolis
+a	flavicincta
+s	flavicinctus
+a	griseonitens
+s2	Automolis
+a	moma
+s2	Automolis
+a	salma
+s2	Automolis
+a	superba
+s2	Automolis
+a	tegyra
+s2	Automolis
+a	zonana
+s2	Automolis
+g	Watsonidia
+a	fulgida
+b	Watsonidia
+n	Grados, 2019
+r2	Grados, 2019
+l	A new species of the genus Watsonidia Toulgoët, 1981 (Lepidoptera, Erebidae, Arctiini): example of polymorphism in the Amazon of Peru
+p	10.11646/zootaxa.4691.1.2
+a	pardea
+s2	Glaucostola
+a	reimona
+s2	Glaucostola
 g	Westindia
 a	haxairei
 e	Constanza Clown Moth
@@ -41137,63 +44481,1772 @@ n	Vincent, 2014
 r	Vincent, 2014
 l	A striking new genus and species of tiger-moth (Lepidoptera: Erebidae, Arctiinae, Arctiini) from the Caribbean, with molecular and morphological analysis of its systematic placement
 p	10.11646/zootaxa.3760.2.8
-j	Nyctemerina
-e2	Nyctemera Moth
-d2	Nyctemerabären
-sh	Nyctemerini
-g	Chiromachla
-a	chalcosidia
-s2	Nyctemera
-a	leuconoe
-s2	Nyctemera
-a	perspicua
-s2	Nyctemera
-a	restrictum
-s2	Nyctemera
-a	torbeni
-s2	Nyctemera
-g	Neuroxena
-g	Nyctemera
-a	adversata
-e	Marbled White Moth
-d	Gefleckter Nyctemerabär
-a	amicus
-e	Australian Magpie Moth
-e	Senecio Moth
-e	Cineraria Moth
-d	Schwarzer Nyctemerabär
-d	Greiskrautbär
-a	baulus
-e	Confused Nyctemera
-e	Asian Magpie Moth
-d	Ähnlicher Nyctemerabär
-a	coleta
-e	White Tiger Moth
-d	Weißer Nyctemerabär
-a	lacticinia
-e	Common Nyctemera
-d	Nyctemerabär
-g	Podomachla
-a	chromis
-s2	Nyctemera
-g	Xylecata
-a	druna
-s2	Nyctemera
-a	glauce
-s2	Nyctemera
-a	hemixantha
-s2	Nyctemera
-a	rattrayi
-s2	Nyctemera
+g	Xanthoarctia
+a	pseudameoides
+s2	Automolis
+s2	Idalus
+g	Xanthophaeina
+a	levis
+s2	Phaegoptera
+g	Zaevius
+a	calocore
+g	Zatrephes
+a	crocos
+s2	Automolis
+a	fallax
+a	flavida
+a	flavipuncta
+a	haxairei
+a	miniata
+s4	Automolis pseudidalus
+s2	Ennomomima
+s4	Pseudalus pseudidalus
+a	mirabilis
+s2	Lalanneia
+a	modesta
+a	trailii
+s4	Automolis traili
+s2	Automolis
+s	trailli
+a	trilineata
+s2	Ennomomima
+j	Ctenuchina
+e2	New World Handmaiden Moths
+d2	Ctenucha-Wespenbären
+sh	Ctenuchinae
+sh	Ctenuchini
+g	Aclytia
+a	albistriga
+a	heber
+e	Banded Ctenucha
+d	Gebänderter Ctenucha-Wespenbär
+b	Sphinx
+n	Cramer, 1780
+a	punctata
+a	terra
+g	Aethria
+a	haemorrhoidalis
+s2	Mesolasia
+a	melanobasis
+s2	Haematerion
+s2	Mesolasia
+a	paula
+s2	Mesolasia
+g	Agyrta
+a	auxo
+a	dux
+s	superba
+a	lacrimata
+a	micilia
+a	porphyria
+g	Antichloris
+a	chloroplegia
+a	eriphia
+e	Blue-green Wasp Moth
+e	Banana Stowaway
+d	Bananen-Wespenbär
+b	Zygaena
+n	Fabricius, 1777
+a	viridis
+g	Anycles
+a	adusta
+a	anthracina
+s2	Antichloris
+s	affinis
+a	dolosa
+s	dolosus
+s2	Ceramidia
+g	Argyroeides
+a	augiades
+s2	Trichura
+a	braco
+b	Haematerion
+n	Herrich-Schäffer, 1855
+a	minuta
+a	notha
+a	ophion
+a	sanguinea
+s2	Haematerion
+g	Atyphopsis
+a	modesta
+g	Belemnia
+a	eryx
+a	inaurata
+g	Belemniastis
+a	troetschi
+s2	Belemnia
+s4	Belemnia trotschi
+s	trotschi
+a	whiteleyi
+s2	Belemnia
+g	Cacostatia
+a	flaviventralis
+a	saphira
+s2	Metastatia
+g	Callopepla
+a	emarginata
+a	grandis
+a	inachia
+s2	Charidea
+s2	Cyanopepla
+g	Ceramidia
+a	fumipennis
+g	Cercopimorpha
+a	dolens
+s2	Heluira
+a	hoffmanni
+a	homopteridia
+a	sylva
+g	Cisseps
+a	fulvicollis
+e	Yellow-collared Scape Moth
+e	Common Ctenucha
+d	Gewöhnlicher Ctenucha-Wespenbär
+b	Glaucopis
+n	Hübner, 1818
+s2	Scepsis
+g	Clystea
+a	carnicauda
+s2	Aethria
+a	leucaspis
+s2	Aethria
+a	rubipectus
+s2	Aethria
+g	Corematura
+a	aliaria
+s2	Riccia
+s2	Trichura
+a	chrysogastra
+g	Coreura
+a	eion
+s2	Pseudocharidea
+a	euchromoides
+a	fida
+a	simsoni
+s2	Eucyane
+g	Correbia
+a	affinis
+s2	Correbidia
+s2	Pionia
+a	lycoides
+s2	Pionia
+a	oberthuri
+s2	Pionia
+a	obtusa
+s2	Pionia
+a	undulata
+s2	Pionia
+g	Correbidia
+a	assimilis
+s4	Correbia similis
+a	calopteridia
+s2	Pionia
+a	costinotata
+a	elegans
+s2	Pionia
+a	terminalis
+s	steinbachi
+g	Ctenucha
+a	braganza
+s2	Leucopsumis
+s2	Melanchroia
+a	brunnea
+e	Brown Ctenucha
+d	Brauner Ctenucha-Wespenbär
+b	Ctenucha
+n	Stretch, 1872
+a	cressonana
+s	sanguinaria
+a	cyaniris
+a	divisa
+s	divisum
+a	editha
+a	multifaria
+e	White-margined Ctenucha
+d	Weißrandiger Ctenucha-Wespenbär
+b	Apistosia
+n	Walker, 1854
+a	rubriceps
+e	Black Ctenucha
+d	Schwarzer Ctenucha-Wespenbär
+b	Ctenucha
+n	Walker, 1854
+a	rubroscapus
+e	Red-shouldered Ctenucha
+d	Rotschulter-Ctenucha-Wespenbär
+b	Claucopis
+n	Ménétriés, 1857
+a	ruficeps
+e	Mexican Ctenucha
+d	Mexikanischer Ctenucha-Wespenbär
+b	Ctenucha
+n	Walker, 1854
+s2	Philorus
+a	venosa
+e	Veined Ctenucha
+d	Geäderter Ctenucha-Wespenbär
+b	Ctenucha
+n	Walker, 1854
+a	virginica
+e	Virginia Ctenucha
+e	Northern Ctenucha
+d	Virginischer Ctenucha-Wespenbär
+d	Nördlicher Ctenucha-Wespenbär
+b	Sphinx
+n	Esper, 1794
+s	latreillana
+a	vittigerum
+e	Zebra Ctenucha
+e	Patagonian Ctenucha
+d	Zebra-Ctenucha-Wespenbär
+d	Patagonischer Ctenucha-Wespenbär
+b	Compsoprium
+n	Blanchard, 1852
+s	vittigera
+g	Cyanopepla
+a	alonzo
+e	Alonzo Wasp Moth
+d	Alonzo-Wespenbär
+a	arrogans
+e	Orange-spotted Ctenucha
+d	Orangefleckiger Ctenucha-Wespenbär
+s2	Charidea
+a	bella
+e	Red-banded Ctenucha
+d	Rotbindiger Ctenucha-Wespenbär
+s2	Charidea
+s	cruenta
+a	cinctipennis
+a	egregia
+a	fastuosa
+a	fulgens
+a	girardi
+a	glaucopoides
+a	griseldis
+e	Black and Red Ctenucha
+d	Rotschwarzer Ctenucha-Wespenbär
+s2	Charidea
+a	hurama
+a	imperialis
+s2	Charidea
+a	jucunda
+e	São Paulo Ctenucha
+d	São-Paulo-Ctenucha-Wespenbär
+a	julia
+s2	Charidea
+a	lystra
+s2	Charidea
+a	micans
+e	Colombian Ctenucha
+d	Kolumbianischer Ctenucha-Wespenbär
+a	panamensis
+e	Panamanian Ctenucha
+d	Panamaischer Ctenucha-Wespenbär
+s2	Charidea
+a	phoenicia
+a	pretiosa
+s2	Charidea
+a	quadricolor
+a	samarca
+a	scintillans
+e	Costa-rican Ctenucha
+d	Costa-ricanischer Ctenucha-Wespenbär
+s2	Charidea
+a	similis
+e	Santa Catarina Wasp Moth
+d	Santa-Catarina-Wespenbär
+s4	Charidea orbona
+s2	Charidea
+s	orbona
+a	submacula
+e	Fiery Ctenucha
+d	Feuriger Ctenucha-Wespenbär
+g	Dahana
+e	Black-winged Dahana
+e	Dahana Wasp Moth
+d	Dahana-Wespenbär
+g	Delphyre
+a	discalis
+s2	Neacerea
+a	dizona
+s2	Neacerea
+a	hampsoni
+s3	rufiventris
+a	maculosa
+s2	Neacerea
+a	pyroperas
+a	roseiceps
+s4	Eucereon integrum
+a	rufiventris
+s2	Aclytia
+s2	Neacerea
+a	testacea
+s2	Heliura
+s2	Neacerea
+a	tetilla
+s2	Neacerea
+g	Diaxanthia
+a	lucinia
+g	Dinia
+a	eagrus
+e	Scarlet-tipped Wasp Moth
+d	Purpurschwanz-Wespenbär
+b	Sphinx
+n	Cramer, 1779
+a	invittata
+a	mena
+a	subapicalis
+g	Diospage
+a	chrysobasis
+a	cleasa
+s2	Charidea
+a	engelkei
+a	rhebus
+a	semimarginata
+a	splendens
+s2	Belemnia
+a	steinbachi
+a	violitincta
+g	Diptilon
+a	aterea
+a	doeri
+s2	Syntrichura
+a	halterata
+a	telamonophorum
+g	Ecdemus
+a	hypoleucus
+s	hypoleuca
+a	rubeojugulus
+g	Epanycles
+a	imperialis
+g	Epidesma
+a	obliqua
+s2	Desmotricha
+s2	Trichodesma
+a	ursula
+s2	Desmotricha
+s2	Trichodesma
+g	Episcepsis
+a	capysca
+s2	Epidesma
+a	capyscoides
+s2	Epidesma
+a	demonis
+s2	Epidesma
+s2	Eucereon
+a	dominicensis
+s2	Epidesma
+a	endodasia
+s2	Epidesma
+a	gnoma
+s2	Epidesma
+a	gnomoides
+s2	Epidesma
+a	hypoleuca
+s2	Epidesma
+a	inornata
+s4	Centronia dodaba
+s2	Centronia
+s2	Epidesma
+s	dodaba
+a	lamia
+s2	Epidesma
+s2	Heliura
+a	lenaeus
+s2	Centronia
+s2	Epidesma
+s2	Heliura
+a	melanoneura
+s2	Epidesma
+a	moloneyi
+s2	Aclytia
+s2	Epidesma
+a	scintillans
+a	thetis
+s2	Epidesma
+a	venata
+s2	Centronia
+s2	Epidesma
+s2	Heliura
+a	vinasia
+s2	Epidesma
+g	Eriphioides
+a	ecuadoriensis
+e	Ecuadorian Wasp Moth
+d	Ecuadorianiascher Pracht-Wespenbär
+a	fastidiosa
+a	tractipennis
+s2	Eriphia
+a	ustulata
+g	Euagra
+a	azurea
+a	cerymica
+a	coelestina
+a	haemanthus
+a	splendida
+g	Eucereon
+a	aeolum
+a	albinota
+a	amadis
+a	aoris
+a	apicalis
+a	archias
+a	argutum
+a	aroa
+a	atriguttum
+s	atrigutta
+a	casca
+a	centrale
+a	chalcodon
+a	chloraenoma
+s	rothschildi
+a	cimonis
+a	cinctum
+s	cincta
+a	coenobita
+s2	Galethalia
+a	coeruleocaput
+a	compositum
+a	consorta
+s	consortum
+a	conspicuum
+s	conspicua
+a	costinotata
+a	costulata
+s	costulatum
+a	dentatum
+s	dentata
+a	discolor
+a	dorsipuncta
+a	erythrolepsis
+a	facundum
+a	formosum
+s	formosa
+a	imprimata
+a	ladas
+a	latifascia
+s	latifascium
+a	lychnis
+a	maia
+s	maja
+a	marcata
+s	marcatum
+a	marmoratum
+a	metoidesis
+a	mitigata
+s	mitigatum
+s	punctatum
+s	ruficollis
+a	myrina
+a	myrtusa
+a	obscura
+s2	Epanycles
+s	obscurum
+a	ockendeni
+a	pagina
+a	pallada
+s2	Euceriodes
+a	patrona
+a	phaeoprocta
+s	phaeoproctum
+a	pilatii
+s	pilati
+a	pittieri
+a	plumbicollum
+a	pometina
+s	pometinum
+a	pseudarchias
+a	punctata
+s	quadricolor
+s4	Theages quadricolor
+a	rosa
+s	rosadora
+s	rosum
+a	rosina
+s	rosinum
+a	sarisa
+a	sordidescens
+a	striata
+s	striatum
+s2	Theages
+a	sylvius
+a	taperinhae
+a	tarona
+a	testaceum
+a	tigrata
+a	tigrisoma
+a	tripunctatum
+a	varia
+s	pyrozona
+a	venosa
+a	vestalis
+s2	Theages
+a	wernickei
+s2	Euceriodes
+a	xanthoperas
+a	zizana
+g	Euclera
+a	diversipennis
+s2	Androcharta
+a	hoffmannsi
+s2	Androcharta
+a	meones
+s2	Androcharta
+a	rubricincta
+s2	Androcharta
+a	stretchii
+s4	Androcharta stretchi
+s2	Androcharta
+g	Eumenogaster
+a	eumenes
+a	haemacera
+g	Eupyra
+a	consors
+a	ducalis
+s3	imperialis
+a	imperialis
+a	sages
+g	Galethalea
+a	davidi
+s2	Eucereon
+a	pica
+s2	Eucereon
+a	portoricensis
+a	wolfei
+g	Gloora
+a	alba
+s2	Eucereon
+s2	Idalus
+a	mundula
+s2	Halysidota
+s2	Hyaleucerea
+g	Heliura
+a	banoca
+a	excavata
+s2	Eucereon
+a	flavopunctatum
+s2	Eucereon
+s	flavopunctata
+a	giganteum
+s2	Eucereon
+s	gigantea
+a	marica
+s4	Eucereon maricum
+s	maricum
+a	perexcavatum
+s2	Eucereon
+s	perexcavata
+a	phaeosoma
+a	rhodophila
+s2	Eucereon
+a	suffusa
+s2	Neacerea
+a	thysbodes
+a	zonata
+g	Herea
+a	metaxanthus
+a	prittwitzi
+b	Desmidocnemis
+n	Möschler, 1872
+s	xanthogaster
+g	Horamella
+a	fassli
+g	Hyaleucerea
+a	costinotatum
+s2	Eucereon
+a	gigantea
+s2	Epanycles
+a	leucosticta
+a	morosa
+a	panacea
+s2	Antichloris
+g	Hyalomis
+a	hypochryseis
+b	Desmidocnemis
+n	Hampson, 1898
+a	thyria
+b	Desmidocnemis
+n	Druce, 1898
+g	Leucopleura
+a	ciarana
+a	viridis
+g	Lymire
+a	albipedalis
+s2	Symire
+a	albipennis
+a	candida
+a	edwardsii
+e	Edwards's Wasp Moth
+d	Edwards' Wespenbär
+s	edwardsi
+s2	Scepsis
+a	melanocephala
+g	Marecidia
+a	achrysa
+a	sanguipuncta
+g	Metastatia
+a	azurea
+a	pyrrhorhoea
+g	Mevania
+a	basalis
+g	Mydromera
+a	notochloris
+s	isthmia
+g	Napata
+a	terminalis
+s2	Uranophora
+g	Nelphe
+a	carolina
+e	Little Carol's Wasp Moth
+d	Carol's Wespenbär
+s2	Eucereon
+a	confinis
+s2	Eucereon
+s2	Galethalea
+a	relegatum
+s4	Eucereon relegata
+s2	Eucereon
+s	relegata
+a	rogersi
+s2	Eucereon
+g	Neotrichura
+a	nigripes
+s2	Laemocharis
+g	Orcynia
+a	calcarata
+g	Osmocneme
+a	bracata
+g	Paradinia
+a	chrysogastrides
+g	Paraethria
+a	flavosignata
+a	triseriata
+g	Parastatia
+a	parnassia
+g	Philoros
+a	opaca
+g	Procalypta
+a	subcyanea
+s	victorina
+u	victorina
+g	Pseudopompilia
+a	mimica
+g	Ptychotricos
+a	elongata
+s	elongatus
+a	zeus
+g	Sauritinia
+a	dubiosa
+g	Sciopsyche
+a	tropica
+g	Syntrichura
+a	reba
+a	virens
+g	Telioneura
+a	glaucopis
+s2	Teucer
+g	Theages
+a	bricenoi
+s2	Eucereon
+a	decorum
+s4	Eucereon decora
+s2	Eucereon
+s	decora
+a	flavicaput
+s2	Eucereon
+a	griseata
+s2	Eucereon
+s4	Eucereon griseatum
+a	hoffmani
+a	leucophaea
+s4	Eucereon leucophaeum
 a	xanthura
-s2	Nyctemera
-j	Callimorphina
-sh	Callimorphina
-g	Aglaomorpha
+s4	Eucereon schausi
+s2	Eucereon
+g	Timalus
+a	caeruleus
+s2	Pterygopterus
+a	clavipennis
+s2	Pterygopterus
+a	leucomela
+s2	Pterygopterus leucomelas
+s	leucomelas
+g	Tipulodes
+a	annae
+a	ima
+a	rubriceps
+g	Trichura
+a	aurifera
+a	cerberus
+a	dixanthia
+a	esmeralda
+a	fasciata
+a	jauffreti
+a	latifascia
+a	melanosoma
+g	Uraga
+a	haemorrhoa
+g	Uranophora
+a	albimaculata
+s2	Napata
+a	albiplaga
+s2	Napata
+a	alterata
+s4	Flavinia choana
+s2	Napata
+a	atricincta
+s2	Napata
+a	castra
+s2	Napata
+a	chalybea
+s2	Napata
+a	cincticollis
+s2	Napata
+a	jynx
+s2	Napata
+a	lelex
+s2	Heliura
+s2	Napata
+a	leucotelus
+e	Cyan Wasp Moth
+d	Dunkler Cyan-Wespenbär
+b	Napata
+n	Butler, 1876
+s4	Napata leucotela
+s	leucotela
+a	lisita
+s2	Napata
+a	maranhaonis
+s2	Napata
+a	munda
+s2	Ardonea
+s2	Napata
+a	quadrimaculata
+s2	Napata
+a	quadristrigata
+s2	Napata
+a	rabdonota
+s2	Napata
+a	splendida
+s2	Cyanopepla
+s2	Napata
+s	argentiflua
+a	superba
+s2	Napata
+a	walkeri
+s2	Evius
+s2	Napata
+g	Vanewrightia
+a	kiesela
+b	Vanewrightia
+n	Boppré, 2020
+r	Boppré, 2020
+l	Vanewrightia gen. nov.—A Highly Variable Taxon of Neotropical Ctenuchina (Lepidoptera: Erebidae: Arctiinae: Arctiini) Revealed by Behavioral Traits
+p	10.1093/isd/ixaa012
+a	patawaensis
+b	Loxozona
+n	Cerda, 2017
+a	subflavescens
+b	Napata
+n	Kaye, 1911
+g	Xanthomis
+a	grandis
+g	Xanthopleura
+a	perspicua
+s4	Calonotos sandion
+j	Euchromiina
+e2	New World Wasp Moths
+d2	Neuwelt-Wespenbären
+sh	Euchromiini
+g	Agyrtiola
+a	niepelti
+g	Apeplopoda
+a	mecrida
+s2	Gymnopoda
+s2	Pseudomya
+s2	Saurita
+g	Apu
+r2	Grados, 2021
+l	Apu, a new genus of Euchromiina (Lepidoptera: Erebidae: Arctiinae: Arctiini), and a new species from the montane forests of southeastern Peru
+p	10.35249/rche.47.3.21.22
+a	flavicornis
+b	Calonotos
+n	Druce, 1883
+s2	Cosmosoma
+s2	Gymnelia
+a	mooreorum
+b	Apu
+n	Grados, 2021
+g	Autochloris
+a	almon
+b	Sphinx
+n	Cramer, 1779
+a	caunus
+s2	Bombiliodes
+a	cincta
+s2	Bombiliodes
+a	collocata
+s2	Bombiliodes
+a	cuma
+s2	Bombiliodes
+s2	Gymnelia
+a	flavipes
+a	jansonis
+e	Costa-rican Wasp Moth
+d	Costa-ricanischer Pracht-Wespenbär
+s2	Bombiliodes
+s2	Gymnelia
+s2	Homoeocera
+a	mathani
+a	proterva
+a	serra
+s2	Bombiliodes
+s2	Gymnelia
+a	vetusta
+a	whitelyi
+s2	Bombiliodes
+s2	Gymnelia
+a	xanthogastroides
+s2	Bombiliodes
+a	xenodorus
+s2	Bombiliodes
+s2	Gymnelia
+g	Calonotos
+a	aequimaculatus
+a	helymus
+a	metallicus
+a	tiburtus
+g	Chrostosoma
+a	chrysiridia
+a	destricta
+a	echemus
+a	trimaculatum
+g	Chrysocale
+a	ferens
+s2	Eupyra
+a	gigantea
+s2	Eupyra
+a	gigas
+a	ignita
+e	Ignita Wasp Moth
+d	Ignita-Pracht-Wespenbär
+a	pava
+s2	Poliopastea
+s2	Thysanoprymna
+a	principalis
+e	Princely Tiger Moth
+d	Mexikanischer Pracht-Wespenbär
+s2	Eupyra
+a	regalis
+e	Regal Wasp Moth
+d	Anden-Pracht-Wespenbär
+s2	Eupyra
+a	splendens
+s2	Eupyra
+a	uniformis
+g	Contortivalva
+a	coeruleonigra
+s2	Phaio
+g	Cosmosoma
+a	achemon
+a	achemonides
+a	advena
+s2	Chrostosoma
+s	advenum
+a	analicincta
+s	analicinctum
+a	angustimargo
+a	annexa
+s	annexum
+a	anoxanthia
+c	auge
+e	Scarlet-bodied Wasp Moth
+d	Purpur-Wespenbär
+b	Sphinx
+n	Linnaeus, 1767
+s4	Chrostosoma sectinota
+k	auge
+k	myrodora
+k	sectinota
+a	basistiba
+a	biseriatum
+s	biseriata
+a	bogotensis
+a	bolivari
+a	brinkleyi
+a	centralis
+a	contracta
+s	contractum
+a	demantria
+a	diplosticta
+a	dorsimacula
+a	durca
+a	elegans
+a	entella
+a	fenestrata
+a	festiva
+s4	Chrostosoma festivum
+s	festivum
+a	flavothoracides
+s2	Chrostosoma
+a	flavothorax
+a	galatea
+a	galbana
+a	garleppi
+a	gemmata
+s	gemmatum
+s2	Pheia
+c	gigantea
+e	Red-legged Bumblebee Moth
+d	Rotfuß-Hummelbär
+b	Gymnelia
+n	Druce, 1884
+s4	Homoeocera georginas
+s2	Homoeocera
+s4	Homoeocera papalo
+k	georginas
+k	gigantea
+k	maishei
+k	papalo
+r2	Laguerre, 2010
+l	Description of two new Homoeocera Felder from Guatemala and Mexico (Lepidoptera, Arctiidae, Arctiinae, Euchromiini)
+p	10.3897/zookeys.33.275
+a	hector
+a	hercyna
+s2	Chrostosoma
+s2	Laemocharis
+a	ignidorsia
+s	ignidorsium
+a	impar
+s2	Chrostosoma
+a	impudica
+s	impudicum
+a	intensa
+a	joavana
+s2	Chrostosoma
+a	klagesi
+a	leuconoton
+s	leuconotum
+a	mathani
+a	melanopera
+a	melathoracia
+s	melathoracium
+a	metallescens
+s2	Chrostosoma
+a	ockendeni
+a	odilae
+b	Cosmosoma
+n	Laguerre, 2014
+r2	Laguerre, 2014
+l	Description of a new species of Euchromiina from Dominican Republic (Lepidoptera Erebidae Arctiinae Ctenuchini)
+p2	2275-9298, 1(1)
+a	orathidia
+a	oroyana
+s	oroyanum
+a	pudica
+s	pudicum
+a	regia
+s2	Marissa
+a	remota
+s	remotum
+a	restrictum
+a	rubriscapulae
+a	saron
+s	meres
+a	semifulva
+s2	Chrostosoma
+s2	Dycladia
+a	stictinota
+a	subflamma
+a	thia
+a	thiacia
+s	pseudothia
+a	thoracica
+s	thoracicum
+a	tigris
+a	venatum
+s	venata
+a	xanthistis
+a	xanthosticta
+b	Cosmosoma
+n	Hampson, 1898
+s2	Chrostosoma
+s	xanthostictum
+s2	Xanthyda
+s4	Xanthydia xanthostictum
+a	zurcheri
+g	Dasysphinx
+a	baroni
+s2	Gymnelia
+a	bombiformis
+s2	Homoeocera
+a	buckleyi
+s2	Gymnelia
+s2	Homoeocera
+a	garleppi
+s2	Homoeocera
+a	mucescens
+a	ozora
+s2	Homoeocera
+s2	Sarosa
+a	pilosa
+s2	Gymnelia
+a	semicincta
+a	torquatus
+s	torquata
+s4	Gymnelia torquata
+s2	Gymnelia
+a	volatilis
+e	Amber Wasp Moth
+d	Bernstein-Wespenbär
+g	Didasys
+a	belae
+e	Double-tufted Wasp Moth
+d	Girlanden-Wespenbär
+g	Dixophlebia
+a	quadristrigata
+g	Dycladia
+a	basimacula
+a	correbioides
+a	emerita
+a	lucetius
+a	lydia
+a	transacta
+a	vitrina
+g	Empyreuma
+a	anassa
+a	pugione
+e	Spotted Oleander Caterpillar Moth
+d	Roter Oleander-Wespenbär
+b	Sphinx
+n	Linnaeus, 1767
+g	Erruca
+a	cardinalis
+s2	Cosmosoma
+a	consors
+s2	Mallodeta
+a	cruenta
+s2	Cosmosoma
+a	deyrolii
+s2	Cosmosoma
+s2	Glaucopis
+s2	Laemocharis
+a	erythrarchos
+s2	Cosmosoma
+a	hanga
+s4	Aristodaema arauna
+s2	Aristodaema
+s2	Cosmosoma
+a	sanguipuncta
+s2	Mallodeta
+g	Euchromia
+a	aemulina
+a	amoena
+e	Pleasant Hornet Moth
+d	Ostafrikanischer Pracht-Wespenbär
+a	creusa
+e	Papuan Wasp Moth
+e	Sulawesi Tiger Moth
+d	Papua-Pracht-Wespenbär
+b	Sphinx
+n	Linnaeus, 1758
+a	dohertyi
+a	dubia
+s	brilliantina
+s	dubia fulgens
+s	fulgens
+s	pratti
+a	folletii
+e	African Wasp Moth
+e	Splendorous Hornet
+d	Afrikanischer Pracht-Wespenbär
+b	Glaucopis
+n	Guérin-Méneville, 1832
+a	guineensis
+e	Guinean Wasp Moth
+d	Guineischer Pracht-Wespenbär
+b	Zygaeena
+n	Fabricius, 1775
+s	sperchia
+s	splendens
+a	horsfieldi
+e	Horsfield's Wasp Moth
+d	Horsfield's Pracht-Wespenbär
+a	irius
+s	iria
+a	isis
+a	lethe
+e	Shimmering Hornet Moth
+d	Westafrikanischer Pracht-Wespenbär
+b	Zygaeena
+n	Fabricius, 1775
+a	lurlina
+a	madagascariensis
+a	magna
+a	mathewi
+a	oenone
+a	polymena
+e	Asian Wasp Moth
+d	Asiatischer Pracht-Wespenbär
+b	Sphinx
+n	Linnaeus, 1758
+s	elegantissima
+a	rubricollis
+a	schoutedeni
+a	walkeri
+g	Eunomia
+a	colombina
+a	rubripunctata
+g	Eurata
+a	elegans
+a	hermione
+e	Argentinian Wasp Moth
+d	Argentinischer Wespenbär
+s	hermione paraguayensis
+s	paraguayensis
+a	hilaris
+s	herrickii
 a	histrio
-e	Chinese Giant Tiger Moth
-d	Chinesischer Riesenbär
-a	plagiata
+a	igniventris
+a	maritana
+a	patagiata
+a	picta
+a	schausi
+a	semiluna
+a	sericaria
+a	strigiventris
+s	marcia
+a	vulcanus
+e	Vulcan Tiger Moth
+d	Vulkan-Wespenbär
+g	Gymnelia
+a	carabayana
+s4	Cosmosoma carabayanum
+s	carabayanum
+a	colona
+s2	Cosmosoma
+a	ethodaea
+s2	Andrenimorpha
+s2	Cosmosoma
+a	eusebia
+s2	Andrenimorpha
+s2	Isanthrene
+s2	Poecilosoma
+a	frutera
+a	gemmifera
+a	guapila
+s2	Cosmosoma
+a	jordani
+s2	Andrenimorpha
+s2	Autochloris
+a	laennus
+s2	Autochloris
+s2	Bombiliodes
+a	latimarginata
+a	lucens
+s2	Cosmosoma
+a	nobilis
+s2	Cosmosoma
+a	paranapanema
+a	pavo
+a	peratea
+a	salvini
+s2	Cosmosoma
+s2	Homoeocera
+a	scita
+s2	Cosmosoma
+s4	Cosmosoma scitum
+a	taos
+a	tarapotensis
+s2	Cosmosoma
+s2	Homoeocera
+a	villia
+s2	Andrenimorpha
+s2	Cosmosoma
+a	viridicingulatum
+s2	Cosmosoma
+s	viridicingulata
+a	xanthogastra
+s2	Andrenimorpha
+g	Heterodontia
+a	cardinale
+s2	Chrostosoma
+a	fenestrina
+s2	Chrostosoma
+a	haematica
+s2	Chrostosoma
+s2	Saurita
+g	Histioea
+a	amazonica
+e	Amazon Wasp Moth
+d	Amazonas-Pracht-Wespenbär
+a	aucta
+a	bellatrix
+e	Bellatrix Wasp Moth
+d	Bellatrix-Pracht-Wespenbär
+a	cepheus
+e	Cepheus Wasp Moth
+d	Dunkler Pracht-Wespenbär
+a	imaon
+a	meldolae
+e	Venezuelan Wasp Moth
+d	Venezuelanischer Pracht-Wespenbär
+a	paulina
+a	proserpina
+e	Peruvian Wasp Moth
+d	Peruanischer Pracht-Wespenbär
+g	Holophaea
+a	caerulea
+a	endoleuca
+a	erharda
+a	ruatana
+s2	Thrinacia
+a	vesta
+g	Homoeocera
+r2	Laguerre, 2014
+l	Partial revision of the genus Homoeocera Felder, 1874, and description of three new species (Lepidoptera Erebidae Arctiinae Ctenuchini)
+p2	2275-9298, 1(2)
+a	acuminata
+a	crassa
+a	duronia
+a	magnolimbata
+a	rodriguezi
+a	stictosoma
+a	trizona
+g	Horama
+a	grotei
+a	oedippus
+e	Yellow Tuft-legged Wasp Moth
+d	Gelber Büschelfuß-Wespenbär
+s2	Mastigocera
+a	panthalon
+e	Texas Wasp Moth
+d	Amerikanischer Wespenbär
+a	plumipes
+e	White Tuft-legged Wasp Moth
+d	Weißer Büschelfuß-Wespenbär
+s2	Callicarus
+a	pretus
+g	Hyda
+a	basilutea
+s2	Hyalomis
+g	Hypatia
+a	melaleuca
+g	Hypocharis
+a	clusia
+s2	Hyperphara
+s2	Laemocharis
+g	Ichoria
+a	chalcomedusa
+a	demona
+s2	Dycladia
+a	quadrigutta
+a	tricincta
+g	Ilipa
+a	batesii
+s4	Cosmosoma batesi
+s2	Cosmosoma
+s	batesi
+a	braconoides
+s2	Chrostosoma
+s2	Cosmosoma
+a	determinata
+s2	Cosmosoma
+s4	Cosmosoma determinatum
+a	harpalyce
+b	Cosmosoma
+n	Schaus, 1892
+s4	Cosmosoma albipuncta
+s2	Mirandisca
+a	stilbosticta
+b	Ilipa
+n	Butler, 1876
+s4	Cosmosoma stibosticta
+s4	Cosmosoma stibostictum
+s2	Cosmosoma
+s	stibosticta
+a	tengyra
+s2	Cosmosoma
+a	unxa
+b	Ilipa
+n	Druce, 1897
+s2	Chrostosoma
+g	Isanthrene
+a	azia
+s2	Erruca
+s2	Homoeocera
+s2	Sarosa
+a	basifera
+a	cazador
+a	championi
+a	crabroniformis
+a	echemon
+a	felderi
+s2	Dycladia
+a	incendiaria
+a	melas
+a	monticola
+a	perboscii
+s	perbosci
+a	porphyria
+s	porphyrius
+a	pyrocera
+a	thyestes
+a	ustrina
+a	vespiformis
+g	Ixylasia
+a	schausi
+s2	Eupyra
+a	trogon
+a	trogonoides
+g	Lepidoneiva
+a	caecum
+s2	Cosmosoma
+a	parambae
+s2	Cosmosoma
+a	telephus
+s2	Cosmosoma
+a	teuthras
+e	Dark Scarlet Wasp Moth
+d	Dunkler Purpur-Wespenbär
+b	Glaucopis
+n	Walker, 1854
+s4	Cosmosoma cingulatum
+s4	Cosmosoma erubescens
+s4	Cosmosoma rubrigutta
+s2	Cosmosoma
+s	cingulatum
+s	erubescens
+s	rubrigutta
+u	cingulatum
+u	erubescens
+g	Leucotmemis
+a	climacina
+a	dorsalis
+a	hemileuca
+a	intersecta
+a	nexa
+e	Nexa Wasp Moth
+d	Nexa-Wespenbär
+s2	Calonotos
+a	ornatula
+a	pardalimacula
+a	pleuraemata
+a	tenthredoides
+a	torrida
+a	varipes
+g	Loxophlebia
+a	aurantiaca
+a	austera
+s	austeria
+a	bisigna
+a	broteas
+s2	Dycladia
+a	crocata
+a	diaphana
+a	fininigra
+a	flavinigra
+a	flavipicta
+a	geminata
+a	imitata
+s2	Dycladia
+a	omalesia
+a	peralta
+a	picta
+a	splendens
+a	triangulifera
+g	Macrocneme
+a	caerulescens
+a	chrysitis
+e	Southern Cyan Tiger Moth
+d	Cyan-Wespenbär
+s	affinis
+s	iole
+a	cyanea
+a	lades
+a	leucostigma
+s	ferrea
+a	nordina
+a	thyra
+g	Mallodeta
+a	clavata
+g	Mesothen
+a	aurata
+a	bisexualis
+a	caeruleicorpus
+a	dorsimacula
+a	erythaema
+a	ethela
+a	flavicostata
+a	ignea
+a	montana
+a	nomia
+s2	Loxophlebia
+a	ockendeni
+a	roseifemur
+a	samina
+s2	Homoeocera
+a	temperata
+g	Metaloba
+a	argante
+s2	Calanotos
+a	nana
+s2	Calanotos
+g	Methysia
+a	aenetus
+s2	Chloropsinus
+s2	Metamya
+s2	Paramya
+s2	Sphecosoma
+a	notabilis
+s2	Saurita
+g	Myrmecopsis
+a	hyalozona
+s2	Pseudosphex
+s4	Pseudosphex hyalozonus
+a	kenedyae
+s2	Pseudosphex
+a	polistes
+e	Yellow Paper Wasp Moth
+d	Gelber Feldwespenbär
+s2	Pseudosphex
+a	polybioides
+s2	Pseudosphex
+a	strigosa
+e	Black Paper Wasp Moth
+d	Schwarzer Feldwespenbär
+s2	Amycles
+s2	Pseudosphex
+s4	Pseudosphex strigosus
+g	Nyridela
+a	acroxantha
+a	chalciope
+a	xanthocera
+g	Phaenarete
+a	diana
+g	Phaio
+a	acquiguttata
+a	albicincta
+s2	Eupyra
+s2	Mydropastea
+a	cephalena
+s2	Eupyra
+s2	Mydropastea
+a	salmoni
+s2	Eupyra
+s2	Mydropastea
+a	stratiotes
+s2	Pheia
+a	sylva
+s2	Eupyra
+s2	Mydropastea
+g	Pheia
+a	albisigna
+s2	Glaucopis
+a	catherina
+a	daphaena
+a	drucei
+a	flavicincta
+a	haemapleura
+a	haematosticta
+a	lateralis
+a	mathona
+s2	Phacusa
+a	toulgoeti
+a	utica
+s2	Dycladia
+g	Phoenicoprocta
+a	analis
+a	baeri
+a	biformata
+a	capistrata
+s2	Autochloris
+s2	Bombiliodes
+s	cubana
+a	eximia
+a	hampsonii
+e	Hampson's Wasp Moth
+d	Hampson's Wespenbär
+s2	Syntomeida
+a	ignicauda
+a	insperata
+s2	Leucotmemis
+a	lydia
+s4	Dycladia thera
+s	thera
+a	mexicana
+s2	Dycladia
+a	partheni
+s2	Mallodeta
+a	sanguinea
+e	Costa-rican Scarlet Wasp Moth
+d	Costa-ricanischer Purpur-Wespenbär
+s2	Hyela
+a	teda
+s4	Leucotmemis pleuraemata paranensis
+a	vacillans
+s4	Leucotmemis albigutta
+s4	Leucotmemis thoracica
+s	metachrysea
+g	Phoeniostacta
+a	haematabasis
+g	Poecilosoma
+a	chrysis
+a	eone
+g	Poliopastea
+a	auripes
+s2	Macrocneme
+a	chrysotarsia
+s2	Macrocneme
+a	clavipes
+s2	Drucea
+s2	Horama
+s2	Mastigocera
+a	cyllarus
+s2	Macrocneme
+a	laciades
+s2	Callicarus
+s4	Callicarus misitra
+s2	Macrocneme
+s4	Macrocneme misitra
+a	nigritarsia
+s2	Macrocneme
+a	plumbea
+s4	Macrocneme albitarsia
+a	vittata
+s2	Macrocneme
+g	Pompiliodes
+a	albomarginata
+s2	Amycles
+a	aliena
+a	postica
+s2	Amycles
+g	Pseudocharis
+a	minima
+e	Lesser Wasp Moth
+d	Weißpunkt-Wespenbär
+s2	Pseudohyaleucerea
+s2	Pseudomya
+a	splendens
+s2	Mastigocera
+s2	Pseudohyaleucerea
+s2	Pseudomya
+g	Pseudohyaleucerea
+a	nigrozonum
+s	nigrozona
+s4	Pseudomya nigrozona
+s2	Pseudomya
+a	vulnerata
+s2	Hyaleucerea
+g	Pseudomya
+a	afflicta
+a	melanthoides
+s2	Pseudohyaleucerea
+a	melanthus
+s2	Pseudocharis
+s2	Pseudohyaleucerea
+a	picta
+s2	Pseudocharis
+s2	Pseudohyaleucerea
+a	tipulina
+s	obscura
+s2	Saurita
+s4	Saurita venezuelensis obscura
+g	Pseudosphex
+a	aequalis
+s2	Abrochia
+s2	Chrysostola
+a	dycladioides
+s2	Abrochia
+s2	Chrysostola
+s2	Haematerion
+a	fulvisphex
+s2	Abrochia
+s2	Chrysostola
+a	ichneumonea
+s4	Myrmecopsis crabronis
+s2	Myrmecopsis
+s	crabronis
+s	ichneumoneus
+a	laticincta
+s2	Myrmecopsis
+s	laticinctus
+a	leovazquezae
+s2	Abrochia
+a	melanogen
+a	mellita
+s2	Abrochia
+s2	Chrysostola
+a	moza
+s2	Abrochia
+s2	Argyroeides
+s2	Chrysostola
+a	sodalis
+s2	Abrochia
+g	Psilopleura
+a	albipes
+a	minax
+a	pentheri
+a	polia
+a	sanguipuncta
+a	vittata
+s2	Dycladia
+s	vittatum
+g	Psoloptera
+a	leucosticta
+a	thoracica
+g	Rhynchopyga
+a	bifasciata
+a	braconida
+a	elongatus
+s2	Chloropsinus
+s4	Correbia elongata
+s	elongata
+a	flavicollis
+s2	Amycles
+a	meisteri
+s2	Psoloptera
+a	semirufa
+a	subflamma
+s2	Gymnopoda
+g	Sarosa
+a	acutior
+a	annotata
+a	connotata
+a	flavicostalis
+a	helotes
+a	lutibasis
+a	mora
+a	notata
+a	xanthobasis
+g	Saurita
+a	absona
+s2	Pseudomya
+a	anselma
+a	arimensis
+a	astyoche
+a	bipuncta
+a	cassandra
+e	Black Wasp Moth
+d	Schwarzer Wespenbär
+b	Sphinx
+n	Linnaeus, 1758
+s2	Glaucopis
+s2	Pseudomya
+a	clandestina
+s2	Pseudomya
+a	coccinea
+a	cryptoleuca
+a	diffusa
+a	erythroguia
+a	hilda
+s2	Methysia
+a	incerta
+s4	Thrinacia intermedia
+a	lacteata
+s2	Dycladia
+s2	Pseudomya
+a	lacteipars
+a	mora
+s2	Dycladia
+a	mosca
+s2	Laemocharis
+a	myrrha
+s2	Cosmosoma
+a	nigripalpia
+s2	Pseudomya
+a	phoenicosticta
+s2	Pseudomya
+a	rubripuncta
+a	sanguinea
+s2	Thrinacia
+a	sericea
+s2	Calonotos
+s4	Pseudosphenoptera demoanassa
+a	stryma
+s2	Cosmosoma
+s2	Laemocharis
+s2	Pseudomya
+a	submacula
+a	temenus
+s	afflicta
+s	venezuelensis
+s4	Thrinacia afflicta
+a	tenuis
+s2	Echoneura
+a	vindonissa
+s2	Dycladia
+s2	Pseudomya
+a	watsoni
+g	Scelilasia
+a	erythrozonata
+s2	Lasiosceles
+g	Scena
+a	potentia
+s2	Chloropsinus
+s2	Contortivalva
+a	propylea
+s	styx
+g	Sesiura
+a	smaragdina
+g	Sphecops
+a	arctata
+s4	Sphecosoma arctatum
+g	Sphecosoma
+a	abdominalis
+a	cognata
+s	cognatum
+a	simile
+s	similis
+a	surrentum
+s	surrenta
+a	testacea
+s	testaceum
+a	trinitatis
+g	Syntomeida
+a	austera
+a	epilais
+e	Polka-dot Wasp Moth
+e	Oleander Moth
+d	Gewöhnlicher Oleander-Wespenbär
+b	Euchromia
+n	Walker, 1854
+a	ipomoeae
+e	Yellow-banded Wasp Moth
+d	Prunkwinden-Wespenbär
+b	Glaucopis
+n	Harris, 1839
+a	melanthus
+e	Black-banded Wasp Moth
+d	Gebänderter Wespenbär
+b	Sphinx
+n	Cramer, 1779
+a	syntomoides
+b	Glaucopis
+n	Boisduval, 1836
+g	Tigridania
+a	quadricincta
+g	Treanna
+a	bleuzeni
+g	Valvaminor
+a	davisi
+s2	Loxophlebia
+a	desperata
+s2	Mesothen
+a	jacerda
+a	masa
+s2	Laemocharis
+s2	Loxophlebia
+a	pyrrha
+s2	Dycladia
+s2	Mesothen
+a	pyrrhina
+s2	Mesothen
+g	Xanthyda
+a	drucei
+j	Utetheisina
+e2	Crotalaria Moths
+d2	Rasselschotenbären
 g	Amphicallia
 a	bellatrix
 e	Beautiful Tiger Moth
@@ -41213,72 +46266,24 @@ s2	Mangina
 a	astrea
 e	Yellow Crotalaria Podborer
 d	Gelber Rasselschotenbär
+s2	Mangina
+s2	Pelochyta
 a	leonina
 e	White Crotalaria Podborer
 d	Weißer Rasselschotenbär
 s2	Alytarchia
-g	Callimorpha
-a	dominula
-e	Scarlet Tiger Moth
-d	Schönbär
-g	Chlorhoda
-g	Coscinia
-a	chrysocephala
-e	Portuguese Chaperon
-d	Portugiesischer Grasbär
-a	cribraria
-e	Speckled Chaperon
-e	Speckled Footman
-d	Weißer Grasbär
-g	Cymbalophora
-a	pudica
-e	Discrete Chaperon
-d	Südlicher Grasbär
-g	Euplagia
-a	quadripunctaria
-e	Jersey Tiger
-e	Spanish Flag
-d	Russischer Bär
-d	Spanische Flagge
-s	splendidior
-u	splendidior
-g	Galtara
-g	Haploa
-a	clymene
-e	Clymene Moth
-d	Klymenebär
-a	confusa
-e	Lyman's Tiger Moth
-d	Lyman's Bär
-a	contigua
-e	Neighbor
-d	Haselbär
-a	lecontei
-e	Leconte's Tiger Moth
-d	Leconte's Bär
-a	reversa
-e	Reversed Tiger Moth
-d	Veränderlicher Bär
-g	Spiris
-a	slovenica
-e	Slovenian Chaperon
-e	Slovenian Footman
-d	Slowenischer Grasbär
-a	striata
-e	Feathered Chaperon
-e	Feathered Footnman
-d	Gestreifter Grasbär
-g	Tyria
-a	jacobaeae
-e	Cinnabar Moth
-d	Jakobskrautbär
-d	Blutbär
+a	syringa
+s2	Mangina
 g	Utetheisa
+i	Utetheisa
+a	elata
 a	ornatrix
 e	Bella Moth
 e	Ornate Footman
 e	Beautiful Utetheisa
 d	Amerikanischer Harlekinbär
+b	Phalaena
+n	Linnaeus, 1758
 s	bella
 u	bella
 c	pulchella
@@ -41287,178 +46292,35 @@ e	Heliotrope Moth
 e	Crotalaria Moth
 d	Harlekinbär
 d	Punktbär
+b	Phalaena
+n	Linnaeus, 1758
+s	pulchelloides salomonis
 k	lotrix
 k	pectinata
 k	pulchella
 k	pulchelloides
-j	Pericopina
-r	De Souza Moraes, 2021
-l	Evolution of sexual dimorphism and polychromatism in a lineage of tiger moths (Lepidoptera: Erebidae): advancing knowledge of a taxonomically chaotic group
-p	10.1111/cla.12458
-sh	Pericopini
-g	Calodesma
-g	Chetone
-g	Composia
-a	credula
-a	fidelissima
-e	Faithful Beauty
-e	Uncle Sam Moth
-d	Oleander-Prachtbär
-g	Dysschema
-a	centenaria
-e	Argentinian Flag Moth
-d	Argentinischer Bär
-a	eurocilia
-a	jansonis
-a	leucophaea
-e	Guatemalan Flag Moth
-d	Guatemaltekischer Bär
-a	magdala
-e	Panaman Flag Moth
-d	Panamaischer Bär
-s	panamensis
-a	marginalis
-e	Glassy Cloud Forest Tiger Moth
-d	Gläserner Nebelwaldbär
-a	neda
-a	picta
-s	lucifer
-a	sacrifica
-e	Common Flag Moth
-d	Südamerikanischer Bär
-a	thetis
-e	Giant Flag Moth
-d	Mexikanischer Riesenbär
-s	howardi
-s	mariamne
-a	tricolora
-s	tricolor
-s4	Tetrisia tricolor
-s2	Tetrisia
-g	Gnophaela
-a	latipennis
-e	Wild Forget-me-not Moth
-d	Vergissmeinnicht-Bär
-a	vermiculata
-e	Police Car Moth
-d	Polizeibär
-g	Hyalurga
-g	Hypocrita
-g	Phaloe
-g	Phaloesia
-g	Xenosoma
-j	Ctenuchina
-e2	New World Handmaiden Moths
-sh	Ctenuchini
-g	Aclytia
-g	Antichloris
-a	eriphia
-e	Blue-green Wasp Moth
-d	Bananen-Wespenbär
-g	Anycles
-g	Argyroeides
-g	Cisseps
-g	Correbia
-g	Correbidia
-g	Ctenucha
-a	rubriceps
-e	Black Ctenucha
-d	Schwarzer Ctenucha-Wespenbär
-a	venosa
-e	Veined Ctenucha
-d	Geäderter Ctenucha-Wespenbär
-g	Cyanopepla
-a	submacula
-e	Yellow-reddish Wasp Moth
-d	Gelbroter Ctenucha-Wespenbär
-g	Dahana
-g	Dinia
-a	eagrus
-e	Scarlet-tipped Wasp Moth
-d	Purpurschwanz-Wespenbär
-g	Episcepsis
-g	Eucereon
-g	Hyaleucerea
-g	Isia
-g	Theages
-g	Tipulodes
-g	Trichura
-g	Uranophora
-j	Euchromiina
-e2	New World Wasp Moths
-d2	Neuwelt-Wespenbären
-sh	Euchromiini
-g	Autochloris
-g	Calonotos
-g	Chrysocale
-g	Cosmosoma
-c	auge
-e	Scarlet-bodied Wasp Moth
-d	Purpur-Wespenbär
-k	auge
-k	myrodora
-k	sectinota
-a	teuthras
-e	Dark Scarlet Wasp Moth
-d	Dunkler Purpur-Wespenbär
-g	Dycladia
-g	Empyreuma
-a	pugione
-e	Spotted Oleander Caterpillar Moth
-d	Roter Oleander-Wespenbär
-g	Erruca
-g	Euchromia
-a	amoena
-e	Pleasant Hornet Moth
-d	Ostafrikanischer Pracht-Wespenbär
-a	creusa
-e	Australian Wasp Moth
-e	Sulawesi Tiger Moth
-d	Australischer Pracht-Wespenbär
-a	folletii
-e	African Wasp Moth
-e	Splendorous Hornet
-d	Afrikanischer Pracht-Wespenbär
-a	polymena
-e	Asian Wasp Moth
-d	Asiatischer Pracht-Wespenbär
-g	Eurata
-g	Gymnelia
-g	Histioea
-g	Horama
-a	panthalon
-e	Texas Wasp Moth
-d	Amerikanischer Wespenbär
-g	Isanthrene
-g	Leucotmemis
-g	Loxophlebia
-g	Lymire
-g	Macrocneme
-a	chrysitis
-e	Southern Cyan Tiger Moth
-d	Cyan-Wespenbär
-g	Mesothen
-g	Myrmecopsis
-g	Nelphe
-g	Nyridela
-g	Phaio
-g	Pheia
-g	Phoenicoprocta
-g	Poecilosoma
-g	Poliopastea
-g	Pseudosphex
-g	Psilopleura
-g	Rhynchopyga
-g	Sarosa
-g	Saurita
-g	Syntomeida
-a	epilais
-e	Polka-dot Wasp Moth
-e	Oleander Moth
-d	Gewöhnlicher Oleander-Wespenbär
-a	imaon
-e	Handmaiden Moth
-d	Asiatischer Wespenbär
+k	salomonis
+i	Pitasila
+a	abraxoides
+s2	Nyctemera
+a	disrupta
+s2	Pitasila
+a	inconstans
+s2	Nyctemera
+s2	Pitasila
+a	varians
+s2	Nyctemera
+i	Atasca
+a	aegrotum
+s2	Leptosoma
+s2	Nyctemera
+a	pellex
+s2	Deilemera
+s2	Nyctemera
+i	Raanya
+a	albipuncta
+s2	Deilemera
+s2	Nyctemera pellex
 t	Syntomini
 e2	Old World Wasp Moths
 e2	Old World Handmaiden Moths
@@ -41467,6 +46329,7 @@ sh	Syntominae
 r	Przybyłowicz, 2019
 l	Molecular systematics of the arctiine tribe Syntomini (Lepidoptera, Erebidae)
 p	10.1111/syen.12343
+j	Syntomina
 g	Agaphthora
 a	albimacula
 s2	Ceryx
@@ -41481,6 +46344,9 @@ g	Amata
 a	aperta
 e	Australian Wasp Moth
 d	Australischer Wespenbär
+s2	Hydrusa
+s2	Syntomis
+a	bicolor
 s2	Hydrusa
 s2	Syntomis
 c	cerbera
@@ -41498,8 +46364,7 @@ k	francisca
 k	mogadorensis
 a	cyssea
 e	Seven-spotted Handmaiden Moth
-e	Indian Wasp Moth
-d	Indischer Wespenbär
+d	Indisches Weißfleck-Widderchen
 a	fortunei
 e	Japanese Nine-spotted Handmaiden Moth
 e	Japanese White-spotted Wasp Moth
@@ -41518,15 +46383,17 @@ e	Cool Maiden
 d	Blauschimmernder Wespenbär
 s	kuhlweini
 s2	Syntomis
+a	marella
+s2	Syntomis
 a	marjana
-e	Nine-spotted Handmaiden Moth
+e	Ragusa's Nine-spotted Handmaiden Moth
 d	Ähnliches Weißfleck-Widderchen
 s	kruegeri
 s4	Syntomis kruegeri
 s2	Syntomis
-s4	Syntomis quercii
 s4	Syntomis phegea kruegeri
 s4	Syntomis phegea marjana
+s4	Syntomis quercii
 u	quercii
 a	passalis
 e	Sandalwood Defoliator
@@ -41556,17 +46423,8 @@ a	sperbius
 e	Siamese Wasp Moth
 d	Siamesischer Wespenbär
 s2	Syntomis
-g	Anapisa
-a	histrio
-a	melaleuca
-a	metarctiodes
-a	monotica
-a	parachoria
-g	Apisa
-a	canescens
-e	Greyling
-d	Grauer Wespenbär
-g	Arctiananna
+a	tigrina
+s2	Trichaeta
 g	Asinusca
 a	atricornis
 e	Devil's Maiden
@@ -41579,29 +46437,9 @@ a	pterodactyliformis
 s2	Ceryx
 a	transitiva
 s2	Ceryx
-g	Automolis
-a	bicolora
-s2	Metarctia
-a	meteus
-e	Orange-fronted Matron
-d	Matronenbärchen
-s2	Metarctia
-g	Balacra
-a	caeruleifascia
-s2	Metarctia
-a	flavimacula
-s	testacea
-a	herona
-a	preussi
-a	pulchra
-a	rubricincta
-a	rubrostriata
-s2	Metarctia
-g	Bergeria
 g	Cacoethes
 a	polidamon
 s2	Amata
-g	Cacosoma
 g	Caeneressa
 a	diaphana
 s2	Syntomis
@@ -41610,17 +46448,96 @@ e	Fouquet's Wasp Moth
 d	Fouquet's Wespenbär
 s2	Amata
 s	foqueti
-s2	Trichaetoides
 s4	Trichaetoides foqueti
-g	Cameroonia
-a	nigriceps
-s2	Automolis
-s2	Metarctia nigriceps
+s2	Trichaetoides
 g	Ceryx
 a	fulvescens
 e	Yellow-sleeved Maiden
-g	Desmidocnemis
-a	hypochryseis
+g	Epitoxis
+a	amazoula
+a	myopsychoides
+g	Eressa
+a	angustipenna
+a	confinis
+e	Indian Wasp Moth
+d	Indischer Wespenbär
+a	geographica
+g	Eutomis
+a	minceus
+b	Sphinx
+n	Stoll, 1781
+g	Fletcherinia
+a	decaryi
+g	Hampsonata
+a	phoenicia
+s2	Amata
+s2	Syntomis
+g	Leucamata
+a	rubicunda
+b	Syntomis
+n	Mabille, 1892
+s4	Amata leucerythra
+s2	Amata
+s	leucerythra
+s4	Syntomis leucerythra
+g	Metamicroptera
+a	rotundata
+s4	Balacra paradoxa
+s	paradoxa
+s4	Neobalacra paradoxa
+g	Paralaethia
+a	subformicina
+s2	Ceryx
+g	Pseudodiptera
+a	musiforme
+g	Pseudonaclia
+a	bifasciata
+s2	Ceryx
+a	puella
+g	Psichotoe
+a	duvaucelii
+e	Bangkok Maiden
+d	Bangkok-Wespenbär
+g	Streptophlebia
+a	obliquistria
+g	Syntomoides
+a	imaon
+e	Handmaiden Moth
+d	Asiatischer Wespenbär
+b	Sphinx
+n	Cramer & Stoll, 1780
+s2	Ceryx
+g	Trichaeta
+a	teneiformis
+g	Trichaetoides
+a	apicalis
+s2	Trichaeta
+a	chloroleuca
+s2	Trichaeta
+j	Thyretina
+g	Pseudothyretes
+a	carnea
+s2	Meganaclia
+a	obscurus
+a	perpusilla
+s2	Meganaclia
+s2	Metarctia
+g	Thyretes
+a	caffra
+e	Bar Maiden
+d	Südafrikanischer Wespenbär
+a	hippotes
+e	Equine Maiden
+d	Kap-Wespenbär
+a	negus
+e	Ethiopian Maiden
+d	Äthiopischer Wespenbär
+j	Dysauxetina
+g	Cacosoma
+a	gnatula
+b	Naclia
+n	Boisduval, 1847
+s2	Psichotoe
 g	Dubianaclia
 a	contigua
 s2	Dysauxes
@@ -41636,133 +46553,196 @@ a	famula
 d	Hyalines Braunwidderchen
 a	punctata
 d	Kleines Braunwidderchen
-g	Epitoxis
-a	amazoula
-g	Eressa
-a	angustipenna
-a	confinis
-e	Indian Wasp Moth
-d	Indischer Wespenbär
-a	geographica
-g	Eutomis
-a	minceus
-g	Hampsonata
-a	phoenicia
-s2	Amata
-s2	Syntomis
-a	Hippurarctia
-g	Maculonaclia
+g	Micronaclia
+i	Micronaclia
+o	Muscella
 a	agatha
+s2	Maculonaclia
 a	buntzae
+s2	Maculonaclia
 a	lokoba
+s2	Maculonaclia
 a	muscella
+s2	Maculonaclia
 s2	Syntomis
-g	Meganaclia
-a	sippia
-s2	Naclia
-g	Melisa
-a	croceipes
-g	Melisoides
-g	Metacrocea
-a	postflava
-g	Metamicroptera
-a	rotundata
-s	paradoxa
-g	Metarctia
-a	burra
-s2	Automolis
-s4	Automolis hector
-s	hector
-a	flavivena
-e	Veined Matron
-d	Orangeaderbärchen
-s2	Automolis
-s4	Automolis rothschildi
-s	rothschildi
-a	jansei
-s2	Automolis
-a	lateritia
-e	Laterite Matron
-d	Lateritbärchen
-s4	Automolis abyssinibia
-s2	Automolis
-s	abyssinibia
-g	Microbergeria
-a	luctuosa
-g	Nacliodes
-a	microsippia
-s2	Meganaclia
-g	Neophemula
-a	vitrina
-s2	Apisa
-g	Owambarctia
-a	owamboensis
-g	Paralaethia
-a	subformicina
-s2	Ceryx
-g	Paramelisa
-a	lophura
-g	Pseudmelisa
-g	Pseudodiptera
-g	Pseudonaclia
-a	bifasciata
-s2	Ceryx
-a	puella
-g	Pseudothyretes
-a	carnea
-s2	Meganaclia
-a	perpusilla
-s2	Meganaclia
-s2	Metarctia
-g	Rhipidarctia
-a	crameri
-g	Sesiura
-a	smaragdina
-g	Sphecops
-a	arctata
-s4	Sphecosoma arctatum
-g	Stictonaclia
-g	Streptophlebia
-a	obliquistria
-g	Syntomoides
-a	imaon
-e	Handmaiden Moth
-d	Asiatischer Wespenbär
-b	Sphinx
-n	Cramer & Stoll, 1780
-s2	Ceryx
-g	Tenuinaclia
+o	Simplex
+a	imaitsia
+a	rubrivittata
+a	simplex
+i	Tenuinaclia
 a	andapa
-g	Thyretes
-a	caffra
-e	Bar Maiden
-d	Südafrikanischer Wespenbär
-a	hippotes
-e	Equine Maiden
-d	Kap-Wespenbär
-a	negus
-e	Ethiopian Maiden
-d	Äthiopischer Wespenbär
-g	Thyrogonia
+b	Tenuinaclia
+n	Griveaud, 1964
+a	melancholica
+b	Thyrosticta
+n	Le Cerf, 1921
+s2	Tenuinaclia
+a	oberthueri
+b	Micronaclia
+n	Rothschild, 1911
+s2	Tenuinaclia
 g	Thyrosticta
 a	dilata
 a	minuta
-g	Tigridania
-a	quadricincta
+a	sylvicolens
+s	quadrimacula
 g	Toulgoetinaclia
 a	obliquipuncta
 s2	Thyrosticta
-g	Trichaeta
-a	teneiformis
-g	Trichaetoides
-a	apicalis
-s2	Trichaeta
-a	chloroleuca
-s2	Trichaeta
-g	Vitronaclia
+g	Tritonaclia
+a	melania
+s2	Naclia
+a	subflava
+s2	Stictonaclia
 a	veronica
 s2	Naclia
 s2	Syntomis
+s2	Vitronaclia
+j	Automolina
+h	Automoliti
+g	Anapisa
+a	histrio
+a	melaleuca
+a	metarctiodes
+a	monotica
+a	parachoria
+g	Apisa
+a	canescens
+e	Greyling
+d	Grauer Wespenbär
+g	Automolis
+i	Automolis
+o	Meteus
+a	bicolora
+s2	Metarctia
+a	crassa
+s2	Metarctia
+a	meteus
+e	Orange-fronted Matron
+d	Matronenbärchen
+b	Sphinx
+n	Stoll, 1782
+s2	Metarctia
+o	Sarcosoma
+a	sarcosoma
+s2	Metarctia
+i	Rhipidarctia
+o	Flaviceps
+a	crameri
+s2	Rhipidarctia
+a	flaviceps
+s2	Metarctia
+s2	Rhipidarctia
+a	forsteri
+s2	Rhipidarctia
+o	Rubrilineata
+a	rubrilineata
+s2	Metarctia
+s2	Rhabdomarctia
+i	Metarctia
+a	burra
+s	hector
+s2	Metarctia
+s4	Metarctia hector
+a	cinnamomea
+s2	Metarctia
+a	flavivena
+e	Veined Matron
+d	Orangeaderbärchen
+s	rothschildi
+s2	Metarctia
+s4	Metarctia rothschildi
+a	haematoessa
+s2	Mecistorhabdia
+s2	Metarctia
+a	jansei
+s2	Metarctia
+a	lateritia
+e	Laterite Matron
+d	Lateritbärchen
+s	abyssinibia
+s4	Metarctia abyssinibia
+s2	Metarctia
+a	rufescens
+s2	Metarctia
+i	Hippurarctia
+a	ferrigera
+s2	Hippurarctia
+g	Balacra
+a	caeruleifascia
+b	Balacra
+n	Walker, 1856
+s2	Metarctia
+a	flavimacula
+s	testacea
+a	herona
+a	preussi
+a	pulchra
+a	rubricincta
+g	Bergeria
+a	haematochrysia
+b	Bergeria
+n	Kiriakoff, 1952
+g	Callobalacra
+a	rubrostriata
+s2	Balacra
+s2	Metarctia
+g	Daphaenisca
+a	affinis
+s2	Balacra
+s2	Pseudapiconoma
+a	daphaena
+s2	Balacra
+s2	Pseudapiconoma
+g	Lempkeella
+a	vanoyei
+s2	Anapisa
+s2	Apisa
+g	Melisa
+a	croceipes
+g	Melisoides
+a	lobata
+g	Microbergeria
+a	luctuosa
+b	Microbergeria
+n	Kiriakoff, 1972
+g	Owambarctia
+a	owamboensis
+b	Owambarctia
+n	Kiriakoff, 1957
+g	Paramelisa
+a	lophura
+g	Pseudmelisa
+a	demiavis
+s2	Pseudomelisa
+a	vitrina
+s2	Apisa
+s2	Neophemula
+g	Tervurenia
+a	eloumdeni
+b	Tervurenia
+n	Przybyłowicz & Ochse, 2017
+r2	Przybyłowicz & Ochse, 2017
+l	A New, Peculiar Genus and Species of Thyretina (Erebidae: Arctiinae, Syntomini) and a Review of African Syntomini Bearing a Pointed Abdominal Tuft
+p	10.1093/aesa/saw065
+g	Thyretarctia
+a	haematica
+s2	Metarctia
+a	nigriceps
+b	Metarctia
+n	Aurivillius, 1904
+s2	Automolis
+s2	Cameroonia
+h	Thyrogoniiti
+g	Thyrogonia
+a	efulensis
+j	Meganacliina
+g	Meganaclia
+a	sippia
+s2	Naclia
+g	Nacliodes
+a	microsippia
+s2	Meganaclia
 t	Caryatini
 g	Caryatis
 a	phileta
@@ -41793,12 +46773,29 @@ e2	Lichen Moths
 e2	Footmen
 d2	Flechtenbären
 sh	Lithosiinae
+r	Scott Chialvo, 2018
+l	A phylogenomic analysis of lichen-feeding tiger moths uncovers evolutionary origins of host chemical sequestration
+p	10.1016/j.ympev.2017.12.015
+r2	Palting & Moore, 2022
+l	Molecular phylogeny of Lichen Tiger Moths (Lepidoptera, Erebidae, Arctiinae, Lithosiini): a contribution toward classifying Western Hemisphere genera
+p	10.3897/zookeys.1108.80783
+r2	Palting & Moore, 2022
+l	Molecular phylogeny of Lichen Tiger Moths (Lepidoptera, Erebidae, Arctiinae, Lithosiini): a contribution toward classifying Western Hemisphere genera - Supplementary material 1
+p	10.3897/zookeys.1108.80783.suppl1
 j	Lithosiina
 g	Agylla
 g	Apistosia
 a	judas
 e	Judas Footman
 d	Judas-Flechtenbärchen
+g	Arctiananna
+r2	De Prins, 2021
+l	A replacement name for the genus-group name Nanna Birket-Smith, 1965 (Erebidae: Arctiinae: Syntomini)
+p	10.11646/zootaxa.5071.2.10
+a	diplisticta
+b	Ilema
+n	Bethune-Baker, 1911
+s2	Nanna
 g	Atolmis
 a	rubricollis
 e	Red-necked Footman
@@ -41837,6 +46834,8 @@ d	Dottergelbes Flechtenbärchen
 g	Gampola
 g	Gardinia
 g	Gnamptonychia
+g	Hiera
+a	gyge
 g	Lambula
 g	Lithosia
 a	quadra
@@ -41866,6 +46865,11 @@ a	irrorella
 e	Dew Moth
 d	Trockenrasen-Flechtenbärchen
 d	Steinflechtenbär
+g	Sidyma
+a	albifinis
+s2	Agylla
+a	apicalis
+s2	Agylla
 g	Sozusa
 g	Teulisna
 g	Thysanoptyx
@@ -42714,6 +47718,8 @@ d	Nessel-Schnabeleule
 d	Nessel-Zünslereule
 d	Gewöhnliche Schnabeleule
 d	Gewöhnliche Zünslereule
+b	Phalaena
+n	Linnaeus, 1758
 a	rostralis
 e	Buttoned Snout Moth
 d	Hopfen-Schnabeleule
@@ -42903,6 +47909,8 @@ a	linearis
 y	Scoliopteryginae
 d2	Zackeneulen
 t	Scoliopterygini
+g	Falana
+a	sordida
 g	Ossonoba
 a	torpida
 g	Savara
@@ -45348,6 +50356,8 @@ e	Cricula Silkmoth
 d	Criculaspinner
 s	agria
 s	andrei
+s	andrei jordani
+s	jordani
 u	agria
 g	Eosia
 h	Lemaireiiti
@@ -46718,13 +51728,34 @@ d2	Echte Schwärmer
 t	Sphingini
 j	Sphingina
 g	Ceratomia
+a	amyntor
+e	Elm Sphinx
+e	Four-horned Sphinx
+d	Ulmenschwärmer
+b	Agrius
+n	Geyer, 1835
+s	quadricornis
 a	catalpae
 e	Catalpa Sphinx
 d	Trompetenbaumschwärmer
+b	Sphinx
+n	Boisduval, 1875
+a	hageni
+e	Hagen's Sphinx
+d	Hagen's Schwärmer
+b	Ceratomia
+n	Grote, 1874
+a	sonorensis
+e	Sonoran Sphinx
+d	Sonoraschwärmer
+b	Ceratomia
+n	Hodges, 1971
 a	undulosa
 e	Waved Sphinx
 e	Scorpion Moth
 d	Skorpionschwärmer
+b	Daremma
+n	Walker, 1856
 g	Dolba
 a	hyloeus
 g	Euryglottis
@@ -46753,13 +51784,19 @@ a	quinquemaculata
 e	Five-spotted Hawkmoth
 e	Tomato Hornworm
 d	Tomatenschwärmer
+b	Sphinx
+n	Haworth, 1803
 a	rustica
 e	Rustic Hawkmoth
 d	Jasminschwärmer
+b	Sphinx
+n	Fabricius, 1775
 a	sexta
 e	Carolina Sphinx
 e	Tobacco Hornworm
 d	Tabakschwärmer
+b	Sphinx
+n	Linnaeus, 1763
 g	Neogene
 a	dynaeus
 g	Paratrea
@@ -46823,21 +51860,31 @@ g	Acherontia
 a	atropos
 e	Death's-head Hawkmoth
 d	Totenkopfschwärmer
+b	Sphinx
+n	Linnaeus, 1758
 a	lachesis
 e	Greater Death's-head Hawkmoth
 e	Bee Robber
 d	Dunkler Totenkopfschwärmer
+b	Sphinx
+n	Fabricius, 1798
 a	styx
 e	Eastern Death's-head Hawkmoth
 d	Östlicher Totenkopfschwärmer
+b	Sphinx
+n	Westwood, 1847
 g	Agrius
 a	cingulata
 e	Pink-spotted Hawkmoth
 e	Sweetpotato Hornworm
 d	Süßkartoffelschwärmer
+b	Sphinx
+n	Fabricius, 1775
 a	convolvuli
 e	Convolvulus Hawkmoth
 d	Windenschwärmer
+b	Sphinx
+n	Linnaeus, 1758
 g	Coelonia
 a	fulvinotata
 e	Fulvous Hawkmoth
@@ -46857,6 +51904,8 @@ e	Large Brown Hawkmoth
 e	Plain Grey Hawkmoth
 e	Asian Privet Hawkmoth
 d	Asiatischer Ligusterschwärmer
+b	Sphinx
+n	Cramer, 1780
 k	casuarinae
 k	discistriga
 k	increta
@@ -46919,6 +51968,8 @@ a	populi
 e	Poplar Hawkmoth
 e	Eurasian Poplar Sphinx
 d	Pappelschwärmer
+b	Sphinx
+n	Linnaeus, 1758
 g	Leucophlebia
 a	lineata
 e	Large Candy-striped Hawkmoth
@@ -46963,6 +52014,8 @@ d	Südliches Abendpfauenauge
 a	ocellata
 e	Eyed Hawkmoth
 d	Abendpfauenauge
+b	Sphinx
+n	Linnaeus, 1758
 a	planus
 e	Oriental Eyed Hawkmoth
 d	Östliches Abendpfauenauge
@@ -46977,6 +52030,8 @@ g	Mimas
 a	tiliae
 e	Lime Hawkmoth
 d	Lindenschwärmer
+b	Sphinx
+n	Linnaeus, 1758
 g	Phyllosphingia
 a	dissimilis
 h	Sataspediti
@@ -46999,6 +52054,8 @@ d	Hibiskusschwärmer
 a	quercus
 e	Oak Hawkmoth
 d	Eichenschwärmer
+b	Sphinx
+n	Denis & Schiffermüller, 1775
 g	Neopolyptychus
 a	compar
 g	Polyptychus
@@ -47067,6 +52124,8 @@ a	zenzeroides
 e	Apple Hawkmoth
 e	Apple Sphinx
 d	Apfelschwärmer
+b	Langia
+n	Moore, 1872
 y	Macroglossinae
 e2	Hummingbird Hawkmoths
 d2	Kolibrischwärmer
@@ -47094,6 +52153,8 @@ a	stellatarum
 e	Hummingbird Hawkmoth
 d	Taubenschwänzchen
 d	Kolibrischwärmer
+b	Sphinx
+n	Linnaeus, 1758
 a	trochilus
 e	African Hummingbird Hawkmoth
 d	Afrikanisches Taubenschwänzchen
@@ -47394,6 +52455,8 @@ j	Angonygina
 g	Angonyx
 a	testacea
 j	Neogurelcina
+e2	Dwarf Hawkmoths
+d2	Zwergschwärmer
 g	Neogurelca
 a	himachala
 a	hyas
@@ -47613,6 +52676,8 @@ d	Schneebeerenschwärmer
 a	fuciformis
 e	Broad-bordered Bee Hawkmoth
 d	Hummelschwärmer
+b	Sphinx
+n	Linnaeus, 1758
 a	thetis
 e	Rocky Mountain Clearwing Moth
 d	Rocky-Mountain-Hummelschwärmer
@@ -48919,7 +53984,7 @@ e	Stored Nut Moth
 d	Samenzünsler
 a	sociella
 e	Bee Moth
-e	Bumble Bee Wax Moth
+e	Bumblebee Wax Moth
 d	Hummel-Wachsmotte
 d	Hummelmotte
 d	Hummelnestmotte
@@ -56820,6 +61885,8 @@ d	Gewöhnliche Federmotte
 d	Weiße Winden-Federmotte
 d	Schlehengeistchen
 d	Schlehen-Federgeistchen
+b	Alucita
+n	Linnaeus, 1758
 g	Singularia
 a	alternaria
 g	Tabulaephorus
@@ -56839,6 +61906,8 @@ e	Morning-glory Plume Moth
 e	T-Moth
 d	Ackerwinden-Federmotte
 d	Windengeistchen
+b	Alucita
+n	Linnaeus, 1758
 g	Hellinsia
 a	balanotes
 e	Baccharis Borer
@@ -57865,6 +62934,7 @@ e	Morning-glory Leafminer
 e	Sweetpotato Leafminer
 d	Prunkwinden-Miniermotte
 y	Scythropiinae
+sh	Scythropiidae
 g	Scythropia
 a	crataegella
 e	Light Hawthorn Ermel
@@ -60045,21 +65115,13 @@ d	Neuseeländische Urmotte
 </main>
 
 <footer>
-<section id="infostats" class="hide">
-<h3 id="i1"><span class="EN">Data points total count:         </span><span class="DE">Gesamtzahl Datenpunkte:          </span>_c</h3>
-<h3 id="i2"><span class="EN">Dataset total size:              </span><span class="DE">Gesamtgröße Datensatz:           </span>_s MB</h3>
-<h3 id="i3"><span class="EN">Date of last update:             </span><span class="DE">Letzte Aktualisierung am:        </span>_v</h3>
-<h3 id="i4"><span class="EN">Project started on:              </span><span class="DE">Projekt gestartet am:            </span>2020-12-05</h3>
-<h3 id="i5"><span class="EN">Github repository:               </span><span class="DE">Github-Repository:               </span><a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h3>
-<h3 id="i6"><span class="EN">Licensing Lepitaxa designs:      </span><span class="DE">Lizenz Lepitaxa-Designs:         </span><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></h3>
-<h3 id="i7"><span class="EN">Licensing Lepitaxa dataset:      </span><span class="DE">Lizenz Lepitaxa-Datensatz:       </span><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></h3>
-<h3 id="i8"><span class="EN">Check & export dataset:          </span><span class="DE">Datensatz prüfen & exportieren:  </span><u onclick="lepitest('txt')">txt</u> <u onclick="lepitest('csv')">csv</u> <u onclick="lepitest('tsv')">tsv</u> <u onclick="lepitest('xml')">xml</u></h3>
-</section>
-
-<h4 itemprop="name">LEPITAXA – Lepidopteran Classification Project</h4>
-<h4 itemprop="copyrightNotice">© 2020-_y – Georg Hammerschmid</h4>
-<button class="bF" onpointerdown="document.getElementById('infostats').classList.toggle('hide')">Stats & Infos</button>
-<svg id="r" class="bF" tabindex="0" onpointerdown="location.href='https://github.com/lepitaxa/lepitaxa.github.io#readme'" viewBox="0 0 385 99"><title>GitHub README</title><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/><text x="120" y="78" font-size="62">README</text></svg>
+<h3 itemprop="name"><b>LEPITAXA – Lepidopteran Classification Project</b></h4>
+<h3 itemprop="version">Dataset version _v @ _c data points</h4>
+<h3 itemprop="codeRepository">GitHub repository @ <a href="https://github.com/lepitaxa/lepitaxa.github.io">lepitaxa / lepitaxa.github.io</a></h4>
+<h3 itemprop="license">This work is licenced under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> (public domain)</h4>
+<h3 itemprop="copyrightNotice"><s>©</s> 2008-_y – Georg Hammerschmid</h4>
+<svg class="bF bB" tabindex="0" onpointerdown="var script = document.createElement('script'); script.src = 'lepitest.js'; document.body.appendChild(script)" viewBox="0 0 16 16"><title id="ex"></title><path d="M2.8 14A1.8 1.8 0 0 1 1 12.2v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .14.1.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.8 1.8 0 0 1 13 14Z"/><path d="M7.3 7.7V2a.75.75 0 0 1 1.5 0v5.7l2-2a.75.75 0 1 1 1.1 1.1l-3.3 3.3a.75.75 0 0 1-1.1 0L4.2 6.8a.75.75 0 1 1 1.1-1.1l2 2Z"/></svg>
+<svg class="bF bB" tabindex="0" onpointerdown="location.href='https://github.com/lepitaxa/lepitaxa.github.io#readme'" viewBox="0 0 385 99"><title>GitHub README</title><path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/><text x="120" y="78" font-size="62">README</text></svg>
 <button class="EN bF" title="Deutsch" onpointerdown="togLn()">DE</button>
 <button class="DE bF" title="English" onpointerdown="togLn()">EN</button>
 </footer>
@@ -60072,9 +65134,9 @@ const $$ = document.querySelectorAll.bind(document);
 //1 Generate infostats, simple string mods, convert data to HTML
 var raw	= $('main'); raw.innerHTML = raw.innerHTML.replace(/xp\t(.+)/g,'xp\t"$1"').replace(/w\t(.+)/g,'w\t× $1').replace(/(a|u)e\t(.+)/g,'$1e\t$2 †').replace(/r\t(.+),/g,'r\t$1 et al.,').replace(/\np\t(.+)/g,'\np\tdoi:$1').replace(/p2\t(.+)/g,'p2\tISSN-L $1').replace(/\n(\w+)\t(.+)/g,'<p class="$1">$2</p>');
 var count = $$('p').length;
-var size = count * 0.0000162;
-var version = 'Lepitaxa-' + new Date(document.lastModified).toISOString();
-$('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_s',size.toFixed(2)).replace('_v',version.substring(9,19)).replace('_y',version.substring(9,13));
+var date = new Date(document.lastModified).toISOString();
+var version = date.substring(0,10) + '_' + date.substring(10,19);
+$('footer').innerHTML = $('footer').innerHTML.replace('_c',count).replace('_v',version.substring(0,20)).replace('_y',date.substring(0,4));
 
 //2 Finish string mods, generate taxon IDs + ID links
 $$('div').forEach(f=>{
@@ -60111,18 +65173,16 @@ var browserLns = window.navigator.languages.map(f=>{return f.substring(0,2)}); /
 if (browserLns[0] == 'de') {Lns.forEach(f=>{f.classList.add('de')}); $$('.EN').forEach(f=>{f.classList.add('hide')})}
 else {$$('.DE').forEach(f=>{f.classList.add('hide')})};
 
-//5 Remove init+error message
+//5 Remove init message
 $('header').style.display = "none";	////INIT complete
 
 // MAIN FUNCTIONS
-var format;
 function sload() {spc.forEach(f=>{f.classList.add('open'); f.nextElementSibling.classList.remove('hide')})}; // Open all spoilers
-function rload() {spc.forEach(f=>{f.classList.remove('open'); f.nextElementSibling.classList.add('hide')})}; // Close all spoilers
-function lepitest(xxx) {var script = document.createElement('script'); script.src = 'lepitest.js'; document.body.appendChild(script); format = xxx};
 function togLn() {Lns.forEach(f=>{f.classList.toggle('de')}); $$('.EN,.DE').forEach(f=>{f.classList.toggle('hide')}); setT()}; // Toggle lang
 function setT() {var m = $('.x9').matches('.de');
-$('#ex').innerHTML = (m) ? 'Alle Taxa zeigen und durchsuchen' : 'Show and search all taxa';
-$('#re').innerHTML = (m) ? 'Seite zurücksetzen' : 'Reset page'}; // Set header tooltips
+$('#al').innerHTML = (m) ? 'Alle Taxa zeigen und durchsuchen' : 'Show and search all taxa';
+$('#re').innerHTML = (m) ? 'Seite zurücksetzen' : 'Reset page';
+$('#ex').innerHTML = (m) ? 'Datensatz prüfen & exportieren' : 'Check & export dataset'}; // Set header tooltips
 </script>
 </body>
 </html>
