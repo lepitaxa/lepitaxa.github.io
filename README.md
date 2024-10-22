@@ -424,14 +424,14 @@ The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species
 
 ---
 ### 21 - BAS (`b`)
-The genus of the basionym (original combination) of the species' or species aggregate's binomial name. The species epithet is prepended automatically via JavaScript to form the full binomial basionym, under which this species epithet was first published. This data type forms the first element of the BAS and BAS_AUT data pairs.
+The genus of the basionym (original combination) of the species' or species aggregate's binomial name. The species epithet is prepended automatically via JavaScript to form the full binomial basionym, under which this species epithet was first published. This data type forms the first element of the BAS and AUT data pairs.
 
 <details>
 <summary>Guidelines</summary>
 
 - 21.1. The addition of basionyms is supported for all species-level taxa (`a`, `ae`, `c`, `w`).
 - 21.2. Basionyms must be placed AFTER all common names, but BEFORE all microspecies or subspecies, and references.
-- 21.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by a BAS_AUT. These two data points belong together and should not be separated!
+- 21.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by an AUT. These two data points belong together and should not be separated!
 - 21.4. The naming of basionym genera follows Guidelines 1.2. and 1.3.
 </details>
 
