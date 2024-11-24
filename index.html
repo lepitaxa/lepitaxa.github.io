@@ -92,8 +92,8 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
 .link, .link:hover	{text-decoration:none}
-:is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem}
-.g>.link::before	{content:"▪ "; font-style:normal}
+:is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem; color:#000}
+.g>.link::before	{content:"▪ "; font-style:normal; color:#000}
 .b			{color:#448}
 .b::before	{content:'BS '}
 .ns			{font-family:"Times New Roman",Times,serif;letter-spacing:0.04rem}
@@ -175,6 +175,9 @@ p	10.1111/syen.12481
 r	Rota, 2022
 l	The unresolved phylogenomic tree of butterflies and moths (Lepidoptera): assessing the potential causes and consequences
 p	10.1111/syen.12545
+r	Chen, 2024
+l	Phylogenomic data exploration with increased sampling provides new insights into the higher-level relationships of butterflies and moths (Lepidoptera)
+p	10.1016/j.ympev.2024.108113
 x8	Glossata
 x7	Heteroneura
 x6	Ditrysia
@@ -376,6 +379,7 @@ b	Papilio
 n	Fabricius, 1775
 s	coloro
 s	rudkini
+s	stabilis
 u	americus
 u	asterius
 u	coloro
@@ -690,8 +694,9 @@ b	Papilio
 n	Linnaeus, 1758
 s	orsippus
 s	orsippus ambiguus
+s	ulysses josea
 u	ambiguus
-u	josea
+u	joesa
 u	orsippus
 i	Princeps
 a	demodocus
@@ -2202,6 +2207,7 @@ e	Zebra Swallowtail
 d	Zebraschwalbenschwanz
 b	Papilio
 n	Cramer, 1777
+s2	Graphium
 s2	Neographium
 s2	Protographium
 i	Hyalaus
@@ -2465,7 +2471,7 @@ e	Small White Lady
 d	Morania-Schwertschwanz
 a	ridleyanus
 e	Acraea Swordtail
-d	Acäa-Schwertschwanz
+d	Acräen-Schwertschwanz
 a	taboranus
 e	Tabora Lady
 d	Tabora-Schwertschwanz
@@ -2565,6 +2571,7 @@ e	Six-bar Swordtail
 d	Sechsstrich-Schwertschwanz
 c	mandarinus
 e	Spectacle Swordtail
+d	Mandarin-Schwertschwanz
 k	confucius
 k	garhwalica
 k	glycerion
@@ -2834,10 +2841,17 @@ a	deyrollei
 s2	Allancastria
 a	louristana
 s2	Allancastria
+y	Praepapilioninae
+g	Praepapilio
+ae	colorado
+b	Praepapilio
+n	Durden & Rose, 1978
+s	gracilis
 y	Baroniinae
 g	Baronia
 a	brevicornis
 e	Short-horned Baronia
+d	Mexikanische Baronia
 b	Baronia
 n	Salvin, 1893
 xs	Hesperiiformes
@@ -7080,6 +7094,7 @@ n	Lindsey, 1925
 g	Systasea
 a	pulverulenta
 e	Texas Powdered-Skipper
+s	pulverulente
 a	zampa
 e	Arizona Powdered-Skipper
 g	Systaspes
@@ -7940,7 +7955,10 @@ d	Orangepunktiger Dickkopffalter
 s2	Atarnes
 a	unifasciata
 e	Single-banded Tuskyhook
+s2	Carrhenes
 s2	Eburuncus
+s	marica
+s2	Potamanaxas
 g	Paramimus
 a	stigma
 g	Pythonides
@@ -8049,6 +8067,11 @@ a	contubernalis
 e	Striped Blue-Skipper
 d	Blauer Pfeffer-Dickkopffalter
 d	Gestreifter Blau-Dickkopffalter
+b	Pythonides
+n	Mabille, 1883
+s4	Pythonides anicius
+s	anicius
+u	anicius
 o	Deyrollei
 a	deyrollei
 a	lancea
@@ -10399,6 +10422,7 @@ a	napi
 e	Green-veined White
 d	Grünader-Weißling
 d	Rapsweißling
+d	Heckenweißling
 b	Papilio
 n	Linnaeus, 1758
 s2	Artogeia
@@ -12637,11 +12661,13 @@ e	Common Vagrant
 d	Afrikanischer Wandergelbling
 b	Papilio
 n	Fabricius, 1775
+s2	Catopsila
 a	gorgophone
 e	Yellow Migrant
 d	Australischer Wandergelbling
 b	Callidryas
 n	Boisduval, 1836
+s2	Catopsila
 s	hinda
 s3	scylla
 a	pomona
@@ -12650,17 +12676,22 @@ e	Common Emigrant
 d	Asiatischer Wandergelbling
 b	Papilio
 n	Fabricius, 1775
+s4	Catopsila crocale
+s2	Catopsila
+s	crocale
 a	pyranthe
 e	Mottled Emigrant
 d	Marmorierter Wandergelbling
 b	Papilio
 n	Linnaeus, 1758
+s2	Catopsila
 a	scylla
 e	Orange Migrant
 e	Orange Emigrant
 d	Oranger Wandergelbling
 b	Papilio
 n	Linnaeus, 1763
+s2	Catopsila
 a	thauruma
 e	Madagascan Migrant
 d	Madagassischer Wandergelbling
@@ -12795,10 +12826,12 @@ n	Esper, 1781
 a	croceus
 e	Clouded Yellow
 d	Postillon
+d	Postillion
 d	Wandergelbling
 d	Posthörnchen
 b	Papilio
 n	Geoffroy, 1785
+s	crocea
 a	electo
 e	African Clouded Yellow
 d	Afrikanischer Gelbling
@@ -12962,6 +12995,8 @@ e	Red-splashed Sulphur
 d	Roter Schwefelfalter
 b	Callidryas
 n	Herrich-Schäffer, 1865
+s4	Callidryas solstitia
+s4	Catopsilla solstitia
 a	philea
 e	Orange-barred Sulphur
 d	Orangegetüpfelter Schwefelfalter
@@ -13271,6 +13306,7 @@ e	Lined Grass Yellow
 d	Kassiengelbling
 s2	Eurema
 s4	Eurema venata
+s	jaegeri
 s	venata
 a	mandarinula
 s2	Eurema
@@ -14235,7 +14271,6 @@ e	Red Mother-of-Pearl
 d	Roter Perlmuttfalter
 a	cacta
 e	Lilac Mother-of-Pearl
-e	Lilac Beauty
 d	Lilafarbener Perlmuttfalter
 g	Yoma
 a	algina
@@ -14247,65 +14282,144 @@ e	Australian Lurcher
 d	Australischer Lurcher
 j	Precina
 g	Hypolimnas
-a	alimena
-e	Blue-banded Eggfly
-d	Blaugestreifte Eierfliege
-a	anomala
+r	Sahoo, 2018
+l	Evolution of Hypolimnas butterflies (Nymphalidae): Out-of-Africa origin and Wolbachia-mediated introgression
+p	10.1016/j.ympev.2018.02.001
+i	Hypolimnas
+o	Antilope
+a	antilope
 e	Malayan Eggfly
 e	Crow Eggfly
 d	Malaiische Eierfliege
-a	antevorta
-e	Tanzanian Diadem
-d	Große Eierfliege
-a	anthedon
-e	Variable Eggfly
-e	Variable Diadem
-d	Variable Eierfliege
-a	antilope
-e	Spotted Crow Eggfly
 d	Krähen-Eierfliege
+b	Papilio
+n	Cramer, 1777
+s	anomala
+s	anomala intersticta
+s	anomala stellata
+s	anomala truentus
+s	anomala wallaceana
 s	shortlandica
+s	wallaceana
+u	anomala
+u	antilope
+u	lutescens
+u	mela
+u	stellata
+u	truentus
+u	wallaceana
+o	Bolina
+a	alimena
+e	Blue-banded Eggfly
+d	Blaugestreifte Eierfliege
+b	Papilio
+n	Linnaeus, 1758
 a	bolina
 e	Common Eggfly
 e	Great Eggfly
 d	Gewöhnliche Eierfliege
 b	Papilio
 n	Linnaeus, 1758
-a	deceptor
-e	Deceptive Eggfly
-e	Deceptive Diadem
-d	Ähnliche Eierfliege
-a	deois
-e	Gaudy Eggfly
-d	Pracht-Eierfliege
-a	dexithea
-e	Madagascan Diadem
-d	Madagassische Eierfliege
-a	dinarcha
-e	Large Variable Eggfly
-e	Large Variable Diadem
-d	Dunkle Eierfliege
-a	diomea
-e	Sulawesi Eggfly
-d	Sulawesische Eierfliege
+a	inopinata
+e	Fijian Eggfly
+d	Fidschi-Eierfliege
+b	Hypolimnas
+n	Waterhouse, 1920
+o	Misippus
 a	misippus
 e	Danaid Eggfly
 e	Diadem
 d	Samtfalter
-a	monteironis
-e	Scarce Blue Diadem
-e	Black-tipped Diadem
-d	Hellblaue Eierfliege
+b	Papilio
+n	Linnaeus, 1764
+o	Pandarus
+a	deois
+e	Gaudy Eggfly
+d	Pracht-Eierfliege
+b	Diadema
+n	Hewitson, 1858
+a	diomea
+e	Sulawesi Eggfly
+d	Sulawesische Eierfliege
+b	Diadema
+n	Hewitson, 1861
 a	octocula
 e	Eight-Spot Butterfly
 d	Achtaugenfalter
-a	salmacis
-e	Blue Diadem
-d	Blaue Eierfliege
+b	Diadema
+n	Butler, 1869
+s	pallas
+s	pithoeca
+s	pithoeka
+u	elsina
+u	perryi
+u	pithoeka
+a	pandarus
+e	Indonesian Eggfly
+d	Indonesische Eierfliege
+b	Papilio
+n	Linnaeus, 1758
+a	saundersi
+b	Diadema
+n	Wallace, 1869
+s	saundersii
+a	sumbawana
+e	Sumbawa Eggfly
+d	Sumbawa-Eierfliege
+b	Hypolimnas
+n	Pagenstecher, 1898
+s3	anomala
+s3	antilope
+i	Euralia
+a	anthedon
+e	Variable Eggfly
+e	Variable Diadem
+d	Variable Eierfliege
+b	Diadema
+n	Doubleday, 1845
+s	dubius
+a	deceptor
+e	Deceptive Eggfly
+e	Deceptive Diadem
+d	Ähnliche Eierfliege
+b	Diadema
+n	Trimen, 1873
+i	Prodiadema
+o	Dexithea
+a	dexithea
+e	Madagascan Diadem
+d	Madagassische Eierfliege
+b	Diadema
+n	Hewitson, 1863
 a	usambara
 e	Red-spot Diadem
 e	Usambara Diadem
 d	Usambarafalter
+b	Diadema
+n	Ward, 1872
+o	Salmacis
+a	antevorta
+e	Tanzanian Diadem
+d	Große Eierfliege
+b	Diadema
+n	Distant, 1880
+a	dinarcha
+e	Large Variable Eggfly
+e	Large Variable Diadem
+d	Dunkle Eierfliege
+b	Diadema
+n	Hewitson, 1865
+a	monteironis
+e	Scarce Blue Diadem
+e	Black-tipped Diadem
+d	Hellblaue Eierfliege
+b	Diadema
+n	Druce, 1874
+a	salmacis
+e	Blue Diadem
+d	Blaue Eierfliege
+b	Papilio
+n	Drury, 1773
 g	Precis
 a	andremiaja
 e	Banded Commodore
@@ -14829,6 +14943,8 @@ d	Spanischer Scheckenfalter
 a	editha
 e	Edith's Checkerspot
 e	Edith's Scheckenfalter
+s4	Melitaea augusta
+s4	Phyciodes augusta
 a	iduna
 e	Lapland Fritillary
 d	Lappland-Scheckenfalter
@@ -15112,17 +15228,25 @@ g	Asterocampa
 a	celtis
 e	Hackberry Emperor
 d	Graubrauner Schillerfalter
+b	Apatura
+n	Boisduval & Le Conte, 1837
 a	clyton
 e	Tawny Emperor
 d	Rotbrauner Schillerfalter
+b	Apatura
+n	Boisduval & Le Conte, 1835
 a	idyja
 e	Dusky Emperor
 e	Banded Emperor
 d	Gebänderter Schillerfalter
+b	Doxocopa
+n	Geyer, 1828
 a	leilia
 e	Empress Leilia
 e	Desert Emperor
 d	Wüstenschillerfalter
+b	Apatura
+n	Edwards, 1874
 g	Chitoria
 a	chrysolora
 g	Dilipa
@@ -15531,6 +15655,7 @@ d	Guatemaltekischer Mosaikfalter
 a	iphthime
 e	Brownish Cracker
 d	Bräunlicher Mosaikfalter
+s	iphtime
 a	julitta
 e	Yucatán Cracker
 d	Yucatán Mosaikfalter
@@ -16107,6 +16232,9 @@ a	cocala
 e	Cocala Sister
 e	Orange-washed Sister
 d	Cocala-Schwester
+b	Papilio
+n	Cramer, 1779
+s2	Limenitis
 a	irmina
 a	leucophthalma
 e	White-spot Sister
@@ -16135,6 +16263,11 @@ a	justina
 a	lycorias
 e	Pink-banded Sister
 d	Pinkgebänderte Schwester
+b	Nymphalis
+n	Godart, 1824
+s	lara
+s4	Limenitis lara
+u	lara
 a	malea
 e	Felder's Sister
 d	Felders Schwester
@@ -16142,6 +16275,10 @@ u	aethalia
 a	melanthe
 e	Rayed Sister
 d	Orangegebänderte Schwester
+b	Heterochroa
+n	Bates, 1864
+s3	lycorias
+s2	Limenitis
 a	mesentina
 e	Mesentina Sister
 d	Mesentina-Schwester
@@ -16149,6 +16286,9 @@ a	naxia
 e	Naxia Sister
 e	Three-part Sister
 d	Naxia-Schwester
+b	Heterochroa
+n	C. & R. Felder, 1867
+s2	Limenitis
 a	olynthia
 a	phylaca
 e	Phylaca Sister
@@ -16163,6 +16303,9 @@ o	Cytherea
 a	cytherea
 e	Smooth-banded Sister
 d	Orange Schwester
+b	Papilio
+n	Linnaeus, 1758
+s2	Limenitis
 a	salmoneus
 e	Golden-banded Sister
 d	Goldband-Schwester
@@ -16176,6 +16319,8 @@ a	fessonia
 e	Band-celled Sister
 e	Mexican Sister
 d	Mexikanische Schwester
+b	Heterochroa
+n	Hewitson, 1847
 a	gelania
 e	Antillean Sister
 d	Karibische Schwester
@@ -16188,26 +16333,36 @@ o	Iphiclus
 a	epione
 e	White-barred Sister
 d	Weißband-Schwester
+b	Nymphalis
+n	Godart, 1824
+s2	Limenitis
 a	ethelda
 e	Ethelda Sister
 a	iphiclus
 e	Common Sister
 d	Gewöhnliche Schwester
+b	Papilio
+n	Linnaeus, 1758
 s	iphicla
 s	iphicleola
+s2	Limenitis
 u	iphicleola
 a	thessalia
 o	Melona
 a	melona
 i	Heterochroa
-a	bredowii
-e	California Sister
+c	bredowii
+e	Californian Sister
 e	Bredow's Sister
 d	Kalifornische Schwester
-s	californica
-s	eulalia
-u	californica
-u	eulalia
+b	Adelpha
+n	Geyer, 1837
+k	bredowii
+k	californica
+k	eulalia
+r	Prudic, 2008
+l	Molecular and morphological evidence reveals three species within the California sister butterfly, Adelpha bredowii (Lepidoptera: Nymphalidae: Limenitidinae)
+p	10.11646/zootaxa.1819.1.1
 a	diocles
 e	Short-tailed Sister
 e	Tailed Sister
@@ -16224,6 +16379,8 @@ a	serpa
 e	Celerio Sister
 e	Celadon Sister
 d	Celerio-Schwester
+b	Heterochroa
+n	Boisduval, 1836
 s	celerio
 s	radiata
 u	celerio
@@ -19394,6 +19551,8 @@ e	Indian Fritillary
 e	Tropical Fritillary
 e	Laced Fritillary
 d	Indischer Perlmutterfalter
+b	Papilio
+n	Linnaeus, 1763
 s2	Argyreus
 a	laodice
 e	Pallas' Fritillary
@@ -19402,6 +19561,9 @@ d	Grünlicher Perlmutterfalter
 a	pandora
 e	Cardinal
 d	Kardinal
+b	Papilio
+n	Schiffermüller, 1775
+s2	Damora
 a	paphia
 e	Silver-washed Fritillary
 d	Kaisermantel
@@ -19444,10 +19606,25 @@ u	clemencei
 a	aglaja
 e	Dark Green Fritillary
 d	Großer Perlmutterfalter
+b	Papilio
+n	Linnaeus, 1758
+s	aglaia
+s4	Fabriciana alexandra
+s4	Mesoacidalia aglaia
+s2	Mesoacidalia
+s4	Mesoacidalia alexandra
+s4	Speyeria aglaia
+s4	Speyeria aglaia alexandra
 s2	Speyeria
+s4	Speyeria aglaja alexandra
+s4	Speyeria alexandra
+u	aglaja
+u	alexandra
 a	aphrodite
 e	Aphrodite Fritillary
 d	Aphroditenfalter
+b	Papilio
+n	Fabricius, 1787
 s2	Speyeria
 c	atlantis
 e	Atlantis Fritillary
@@ -19466,6 +19643,12 @@ k	nausicaa
 a	callippe
 e	Callippe Fritillary
 d	Kalifornischer Perlmutterfalter
+a	clara
+e	Silverstreak
+e	Tibetan Fritillary
+d	Tibetanischer Perlmutterfalter
+s4	Mesoacidalia
+s2	Speyeria
 a	coronis
 e	Crown Fritillary
 d	Kronen-Perlmutterfalter
@@ -19483,6 +19666,9 @@ k	leto
 a	diana
 e	Diana Fritillary
 d	Dianafalter
+b	Papilio
+n	Cramer, 1777
+s4	Semnopsyche
 s2	Speyeria
 c	edwardsii
 e	Edwards' Fritillary
@@ -22400,9 +22586,17 @@ a	timora
 e	Great Duffer
 d	Siamesischer Bambusfalter
 g	Enispe
-a	duranius
+a	cycnus
+e	Blue Caliph
+d	Blauer Kalif
+c	euthymius
 e	Red Caliph
 d	Roter Kalif
+s	duranius intermedia
+s	intermedia duranius
+k	duranius
+k	euthymius
+k	intermedia
 g	Faunis
 a	canens
 e	Common Faun
@@ -24347,6 +24541,9 @@ e	European Beak
 e	Nettle Tree Butterfly
 d	Zürgelbaum-Schnauzenfalter
 d	Zürgelbaumfalter
+ae	cinyras
+e	Mauritius Snout
+d	Mauritius-Schnauzenfalter
 a	geoffroy
 e	Purple Beak
 d	Violetter Schnauzenfalter
@@ -27441,9 +27638,11 @@ o	Hippothoe
 a	candens
 e	Balkan Copper
 d	Balkan-Feuerfalter
+s2	Heodes
 a	hippothoe
 e	Purple-edged Copper
 d	Lilagold-Feuerfalter
+s2	Heodes
 s	eurydame
 u	eurydame
 o	Kasyapa
@@ -27460,6 +27659,7 @@ a	ochimus
 a	ottomanus
 e	Grecian Copper
 d	Griechischer Feuerfalter
+s2	Heodes
 s	ottomana
 a	thersamon
 e	Lesser Fiery Copper
@@ -27475,21 +27675,26 @@ e	Sooty Copper
 d	Brauner Feuerfalter
 b	Papilio
 n	Poda, 1761
+s2	Heodes
+s2	Loweia
 a	virgaureae
 e	Scarce Copper
 d	Dukatenfalter
 d	Dukaten-Feuerfalter
 b	Papilio
 n	Linnaeus, 1758
+s2	Heodes
 i	Thersamolycaena
 a	dispar
 e	Large Copper
 d	Großer Feuerfalter
 b	Papilio
 n	Haworth, 1802
+s	dispar rutila
+s2	Thersamolycaena
 u	batava
 ue	dispar
-u	rutila
+u	rutilus
 a	splendens
 a	violacea
 e	Mongolian Copper
@@ -27813,7 +28018,73 @@ e	Tailed Cycadian
 d	Geschwänzter Cycadenfalter
 h	Micandriti
 g	Brevianta
+a	bathoryon
+e	Báthory Hairstreak
+d	Báthory-Zipfelfalter
+b	Brevianta
+n	Bálint & Wojtusiak, 2011
+a	busa
+e	White-scalloped Hairstreak
+b	Thecla
+n	Godman & Salvin, 1887
+s2	Busa
+s2	Bussa
+a	celelata
+b	Thecla
+n	Hewitson, 1874
+s2	Micandra
+a	ematheon
+b	Papilio
+n	Cramer, 1777
+s2	Thecla
+a	hyas
+e	Hyas Hairstreak
+d	Hyas-Zipfelfalter
+b	Thecla
+n	Godman & Salvin, 1887
+a	magnifica
+b	Brevianta
+n	Salazar & Constantino, 2010
+a	perpenna
+e	Perpenna Hairstreak
+d	Perpenna-Zipfelfalter
+b	Thecla
+n	Godman & Salvin, 1887
+a	tolmides
+e	White-frosted Hairstreak
+b	Pseudolycaena
+n	C. & R. Felder, 1865
+s2	Egides
+s2	Thecla
+a	undulata
+b	Thecla
+n	Hewitson, 1867
+a	undulella
 g	Micandra
+a	aegides
+b	Pseudolycaena
+n	C. & R. Felder, 1865
+s2	Thecla
+a	comae
+b	Thecla
+n	Druce, 1907
+a	cyda
+e	Cyda Hairstreak
+b	Thecla
+n	Godman & Salvin, 1887
+s4	Thecla furina
+a	platyptera
+e	Platyptera Hairstreak
+d	Platyptera-Zipfelfalter
+b	Pseudolycaena
+n	C. & R. Felder, 1865
+s2	Egides
+s2	Thecla
+a	tongida
+e	Tongida Hairstreak
+d	Tongida-Zipfelfalter
+b	Micandra
+n	Clench, 1971
 j	Timaetina
 sh	Hypostrymonina
 h	Hypostrymoniti
@@ -29533,6 +29804,7 @@ e	Western Tailed Blue
 d	Westlicher Kurzschwänziger Bläuling
 b	Lycaena
 n	Boisduval, 1852
+s2	Elkalyce
 s2	Everes
 a	argiades
 e	Short-tailed Blue
@@ -29540,7 +29812,15 @@ e	Tailed Cupid
 d	Kurzschwänziger Bläuling
 b	Papilio
 n	Pallas, 1771
+s	hellotia
+s2	Elkalyce
 s2	Everes
+s4	Everes argiades diporides
+s4	Everes argiades hellotia
+s4	Everes diporides
+s4	Everes hellotia
+u	diporides
+u	hellotia
 a	comyntas
 e	Eastern Tailed Blue
 e	American Tailed Cupid
@@ -30190,6 +30470,11 @@ e	Koa Butterfly
 d	Hawaianischer Bläuling
 d	Koafalter
 s2	Vaga
+a	cardia
+e	Australian Hedge Blue
+e	Delicate Blue
+s	tenella
+u	tenella
 a	dilecta
 e	Pale Hedge Blue
 s	dilectus
@@ -36257,6 +36542,7 @@ d	Kanadische Rindeneule
 a	leporina
 e	Miller
 d	Woll-Rindeneule
+d	Pudel
 a	lepusculina
 e	Cottonwood Dagger
 d	Pappel-Rindeneule
@@ -36563,6 +36849,9 @@ n	Linnaeus, 1758
 s2	Meganephria
 g	Austramathes
 g	Cucullia
+a	argentea
+e	Green Silver-spangled Shark
+d	Silbermönch
 a	asteris
 e	Star-wort
 d	Asternmönch
@@ -36606,6 +36895,9 @@ a	aprilina
 e	Merveille du Jour
 d	Grüne Eicheneule
 d	Aprileule
+b	Phalaena
+n	Linnaeus, 1758
+s2	Dichonia
 g	Klugeana
 a	philoxalis
 e	Suring Moth
@@ -36956,7 +37248,6 @@ k	alias
 k	cryptica
 a	celsa
 e	Plain Silver Y
-e	Western Conifer Looper
 d	Westliche Nadelwald-Silbereule
 a	devergens
 a	epigaea
@@ -40696,7 +40987,7 @@ a	abietis
 d	Tannen-Streckfuß
 a	horsfieldii
 e	Horsfield's Tussock Moth
-d	Horsfields Streckfuß
+d	Horsfield's Streckfuß
 a	pudibunda
 e	Pale Tussock Moth
 d	Buchen-Streckfuß
@@ -40860,6 +41151,9 @@ a	similis
 e	Yellow-Tail
 e	Swan Moth
 d	Schwan
+b	Phalaena
+n	Fuessly, 1775
+s2	Euproctis
 g	Toxoproctis
 t	Arctornithini
 g	Arctornis
@@ -42234,7 +42528,10 @@ g	Pseudogaltara
 a	inexpectata
 g	Sebastia
 a	argus
+b	Hypercompe
+n	Walker, 1862
 s2	Calpenia
+s2	Moorea
 g	Spiris
 a	slovenica
 e	Slovenian Chaperon
@@ -46284,7 +46581,11 @@ e	Beautiful Utetheisa
 d	Amerikanischer Harlekinbär
 b	Phalaena
 n	Linnaeus, 1758
+s4	Uteheisa bella
+s2	Uteheisa
 s	bella
+s4	Utheteisa bella
+s2	Utheteisa
 u	bella
 c	pulchella
 e	Crimson-speckled Footman
@@ -46294,7 +46595,12 @@ d	Harlekinbär
 d	Punktbär
 b	Phalaena
 n	Linnaeus, 1758
+s4	Uteheisa lothrix
+s4	Uteheisa lotrix
+s2	Uteheisa
+s	lothrix
 s	pulchelloides salomonis
+s2	Utheteisa
 k	lotrix
 k	pectinata
 k	pulchella
@@ -46663,6 +46969,7 @@ d	Lateritbärchen
 s	abyssinibia
 s4	Metarctia abyssinibia
 s2	Metarctia
+s4	Metarctia latertitia
 a	rufescens
 s2	Metarctia
 i	Hippurarctia
@@ -46783,11 +47090,60 @@ r2	Palting & Moore, 2022
 l	Molecular phylogeny of Lichen Tiger Moths (Lepidoptera, Erebidae, Arctiinae, Lithosiini): a contribution toward classifying Western Hemisphere genera - Supplementary material 1
 p	10.3897/zookeys.1108.80783.suppl1
 j	Lithosiina
+sh	Eilemina
 g	Agylla
+a	argentea
+s4	Salopola vestalis
+a	argentifera
+s2	Crambomorpha
+a	asra
+a	auraria
+a	braziliensis
+b	Mintopola
+n	Schaus, 1899
+a	fusciceps
+a	hermanilla
+s2	Crambomorpha
+a	nitidalis
+s2	Hydrocampa
+a	nivea
+s4	Crambomorpha argentea
+s4	Crambomorpha virginia
+a	ovifera
+b	Agkonia
+n	Dognin, 1906
+a	separata
+a	septentrionalis
+s2	Choria
+a	subvoluta
+a	tobera
+s2	Crambomorpha
+g	Anaphosia
+r2	Volynkin & Takano, 2024
+l	Taxonomic review of the Afrotropical genus Anaphosia Hampson with description of a new species (Lepidoptera: Erebidae: Arctiinae: Lithosiini: Lithosiina)
+p	10.37828/em.2024.73.24
+a	cyanogramma
+e	Braced Footman
+b	Anaphosia
+n	Hampson, 1903
+a	majori
+b	Anaphosia
+n	Ströhle, 2018
+r2	Ströhle, 2018
+l	Eine neue Art der Gattung Anaphosia haMpson, 1903 aus Äthiopien (Lepidoptera, Arctiidae Arctiinae, Lithosiini)
+p2	0722-3773, 75
+a	smithi
+b	Anaphosia
+n	Volynkin & Takano, 2024
 g	Apistosia
 a	judas
 e	Judas Footman
 d	Judas-Flechtenbärchen
+b	Apistosia
+n	Hübner, 1819
+g	Archithosia
+a	angulifascia
+a	costimacula
 g	Arctiananna
 r2	De Prins, 2021
 l	A replacement name for the genus-group name Nanna Birket-Smith, 1965 (Erebidae: Arctiinae: Syntomini)
@@ -46796,159 +47152,4872 @@ a	diplisticta
 b	Ilema
 n	Bethune-Baker, 1911
 s2	Nanna
+a	griseata
+s2	Nanna
+g	Areva
+a	subfulgens
+s2	Illice
+a	trigemmis
 g	Atolmis
 a	rubricollis
 e	Red-necked Footman
 d	Rotkragen-Flechtenbärchen
-g	Brunia
+b	Phalaena
+n	Linnaeus, 1758
+g	Blavia
+a	caliginosa
+a	scoteola
+s2	Neoblavia
+g	Blaviodes
+g	Blavipelosia
 g	Calamidia
-g	Crambidia
-a	pallida
-e	Pale Lichen Moth
-d	Fahles Flechtenbärchen
+a	hirta
+e	Wedge Footman
+d	Keil-Flechtenbärchen
+g	Campter
+g	Campteropsis
+g	Carcinopodia
+a	furcifasciata
+g	Chrysaeglia
+a	magnifica
+b	Lithosia
+n	Walker, 1862
+a	perpendicularis
+g	Chrysorabdia
+a	bivitta
+a	vilemani
+g	Chrysoscota
+a	brunnea
+s2	Phaeosia
+g	Churinga
+a	beema
+s2	Agylla
+a	metaxantha
+s2	Agylla
+s2	Macrobrochis
+a	rufifrons
+s2	Agylla
+a	virago
+s2	Agylla
+g	Conilepia
+a	cao
+a	nigricosta
+s2	Oeonistis
+g	Crocosia
+r2	Volynkin, 2024
+l	On the taxonomy of the Afrotropical genus Crocosia Hampson with descriptions of a new genus and a new species (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2024.78.6
+i	Crocosia
+c	mesosticta
+s2	Cragiosia
+s4	Cragiosia smithi
+s2	Eilema
+s2	Ilema
+k	mesosticta
+k	smithi
+c	phaeocraspis
+s2	Eilema
+s4	Ilema divisa
+k	divisa
+k	phaeocraspis
+i	Cragia
+a	distigmata
+s2	Eilema
+s2	Ilema
 g	Cybosia
 a	mesomella
 e	Four-dotted Footman
 d	Elfenbein-Flechtenbärchen
+b	Phalaena
+n	Linnaeus, 1758
 g	Danielithosia
+a	aureolata
+s2	Tigrioides
+a	immaculata
+e	Taiwanese Footman
+d	Taiwanesisches Flechtenbärchen
+b	Katha
+n	Butler, 1880
+s2	Lexis
+s2	Pelosia
+s2	Tigrioides
+s4	Tigrioides immaculatus
+g	Dolgoma
+a	angulifera
+a	cribrata
+s2	Eilema
+s2	Lithosia
+a	recta
+a	reticulata
+s2	Eilema
+g	Dubatolova
+a	prabana
+s2	Eilema
+g	Dubatoloviana
+a	pahanga
 g	Eilema
+r	Macià, 2022
+l	The species of Eilema Hübner, [1819] sensu lato present in Europe and North Africa (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.5191.1.1
+i	Eilema
+o	Caniola
 a	caniola
 e	Hoary Footman
 d	Weißgraues Flechtenbärchen
+b	Bombyx
+n	Hübner, 1808
+s	caniolum
+s	torstenii
+s2	Lithosia
+u	torstenii
+o	Complana
 a	complana
 e	Scarce Footman
 d	Gelbleib-Flechtenbärchen
+d	Gewöhnlicher Flechtenbär
+b	Phalaena
+n	Linnaeus, 1758
+s	complanum
+s	iberica
+s2	Lithosia
+s2	Manulea
+s4	Manulea iberica
+u	iberica
+a	costalis
+s2	Chinasa
+s2	Manulea
+s2	Prabhasa
+s2	Zadadra
+a	palliatella
+e	Ochre Footman
+d	Ockergelbes Flechtenbärchen
+b	Phalaena
+n	Scopoli, 1763
+s	palliatellum
+s	sericeoalba
+s2	Manulea
+s4	Manulea palliatellum
+u	sericeoalba
+a	pseudocomplana
+d	Felsflur-Flechtenbärchen
+d	Ähnliches Flechtenbärchen
+s	pseudocomplanum
+s2	Lithosia
+s2	Manulea
+o	Costipuncta
+c	costipuncta
+s2	Lithosia
+s4	Manulea hokopo
+k	costipuncta
+k	hokopo
+r2	Volynkin, 2021
+l	Manulea hokopo, a new species from Taiwan (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2021.47.6
+o	Lurideola
+a	lurideola
+e	Common Footman
+d	Grauleib-Flechtenbärchen
+d	Laubholz-Flechtenbär
+b	Lithosia
+n	Zincken, 1817
+s	lurideolum
+s2	Manulea
+s2	Nyea
+a	marcida
+s2	Indalia
+s2	Lithosia
+a	predotae
+s2	Indalia
+s2	Lithosia
+o	Lutarella
+a	albicosta
+s2	Indalia
+s2	Lithosia
+a	bicolor
+e	Bicolored Lichen Moth
+e	Canadian Footman
+d	Kanadisches Flechtenbärchen
+s2	Lexis
+s2	Manulea
+s2	Setema
+s2	Tigrioides
+a	cereola
+e	Alpine Footman
+d	Alpenwiesen-Flechtenbärchen
+d	Alpen-Flechtenbärchen
+s	cereolum
+s2	Manulea
+s2	Setema
+a	debilis
+s2	Lithosia
+s2	Manulea
+s2	Setema
+a	interposita
+b	Ilema
+n	Rothschild, 1914
+s	interpositella
+s2	Indalia
+a	lutarella
+e	Yellow Footman
+d	Dunkelstirniges Flechtenbärchen
+d	Dotterbär
+b	Phalaena
+n	Linnaeus, 1758
+s	lutarellum
+s2	Indalia
+s2	Lithosia
+s2	Manulea
+s4	Manulea lutarellum
+a	pygmaeola
+e	Pigmy Footman
+d	Blassstirniges Flechtenbärchen
+s	pygmaeolum
+s2	Indalia
+s2	Lithosia
+s2	Manulea
+a	uniola
+s2	Indalia
+o	Muscula
+a	muscula
+s2	Ilema
+s2	Lithosia
+s2	Muscula
+o	Pallida
+a	casta
+e	Pearly-winged Lichen Moth
+d	Weißglanz-Flechenbärchen
+s2	Crambidia
+a	cephalica
+e	Yellow-headed Lichen Moth
+d	Gelbkopf-Flechtenbärchen
+s2	Crambidia
+a	dusca
+s2	Crambidia
+a	impura
+s2	Crambidia
+a	lithosioides
+e	Dark Gray Lichen Moth
+d	Dunkelgraues Flechtenbärchen
+s2	Crambidia
+a	myrlosea
+s2	Crambidia
+a	pallida
+e	Pale Lichen Moth
+d	Fahles Flechtenbärchen
+b	Crambidia
+n	Packard, 1864
+a	uniformis
+e	Uniform Lichen Moth
+d	Carolina-Flechtenbärchen
+s2	Crambidia
+a	xanthocorpa
+e	Yellow-bodied Lichen Moth
+d	Amerikanisches Gelbleib-Flechtenbärchen
+s2	Crambidia
+i	Collita
+o	Griseola
+a	griseola
+e	Dingy Footman
+d	Bleigraues Flechtenbärchen
+d	Erlen-Flechtenbär
+b	Bombyx
+n	Hübner, 1803
+s2	Brunia
+s2	Collita
+s4	Collita griseola sachalinensis
+s4	Collita griseola submontana
+s	griseolum
+s	submontana
+s2	Lithosia
+s4	Lithosia sachalinensis
+u	sachalinensis
+u	submontana
+a	vetusta
+s2	Collita
+s4	Collita vetusta aegrota
+s	aegrota
+s	aegrotum
+s3	griseola
+s3	griseolum
+s4	Lithosia aegrota
+s4	Lithosia griseola aegrota
+s2	Lithosia
+u	aegrota
+o	Japonica
+a	japonica
+e	Japanese Footman
+d	Japanisches Flechtenbärchen
+s	japonicum
+s2	Lithosia
+s2	Manulea
+a	ussurica
+s	ussuricum
+s2	Lithosia
+s2	Manulea
+i	Wittia
+o	Rungsi
+a	rungsi
+s2	Katha
+s2	Pseudokatha
+o	Sororcula
+a	klapperichi
+s2	Systropha
+s2	Teulisna
+s2	Wittia
+a	sororcula
+e	Orange Footman
+d	Dottergelbes Flechtenbärchen
+d	Frühlings-Flechtenbär
+b	Phalaena
+n	Hufnagel, 1766
+s	sororculum
+s2	Ilema
+s2	Systropha
+s2	Wittia
+i	Katha
+o	Antica
+a	antica
+e	Asian Footman
+d	Asiatisches Flechtenbärchen
+b	Lithosia
+n	Walker, 1854
+s2	Brunia
+s4	Brunia brevipennis
+s	brevipennis
+s	intermixta
+s2	Katha
+s4	Kathaintermixta
+s4	Lithosia brevipennis
+a	dorsalis
+s2	Brunia
+s4	Brunia harpophora
+s	auriflua
+s	harpophora
+s4	Lithosia auriflua
+s2	Lithosia
+s2	Manulea
+a	gibonica
+s2	Brunia
+a	kishidai
+s2	Brunia
+a	lacrima
+s2	Brunia
+s2	Manulea
+a	replana
+e	Australian Footman
+d	Australisches Flechtenbärchen
+s2	Brunia
+s2	Manulea
+a	sarawaca
+s2	Brunia
+s4	Brunia terminalis
+s	terminalis
+a	testacea
+s2	Brunia
+a	vicaria
+e	Ubiquitous Footman
+d	Afrikanisches Flechtenbärchen
+b	Lithosia
+n	Walker, 1854
+s2	Brunia
+o	Arizana
+c	arizana
+b	Ilema
+n	Wileman, 1910
+s2	Cernyia
+s4	Cernyia furcatus
+s4	Cernyia kosterini
+s4	Cernyia pseudocretacea
+k	arizana
+k	furcatus
+k	kosterini
+k	pseudocretacea
+a	cretacea
+s2	Cernyia
+s2	Cernyia neocretacea
+s2	Denteilema
+a	longpala
+s2	Cernyia
+a	unicolora
+s2	Denteilema
+o	Depressa
+c	conformis
+s	nigrifrons
+s2	Ilema
+s2	Katha
+s4	Katha emberifera
+s4	Katha nigrifrons
+s4	Katha volynkini
+s2	Lithosia
+k	conformis
+k	emberifera
+k	volynkini
+r	Joshi, 2018
+l	Description of a new Katha species from India, with a key to the Oriental species (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646zootaxa.4407.3.10
 a	depressa
 e	Buff Footman
 d	Nadelwald-Flechtenbärchen
 d	Nadelwald-Gelbsaumflechtenbär
-a	griseola
-e	Dingy Footman
-d	Bleigraues Flechtenbärchen
-a	lurideola
-e	Common Footman
-d	Grauleib-Flechtenbärchen
-a	sororcula
-e	Orange Footman
-d	Dottergelbes Flechtenbärchen
+b	Noctua
+n	Esper, 1787
+s	deplana
+s	deplanum
+s	depressum
+s4	Katha deplana
+s2	Katha
+s4	Lithosia deplana
+a	magnata
+s2	Katha
+s2	Lithosia
+a	nigropoda
+s2	Ilema
+s2	Katha
+s2	Lithosia
+c	pulvereola
+s4	Cernyia pseudobrevivalva
+s4	Katha brevivalva
+s4	Katha pseudobrevivalva
+s2	Katha
+k	brevivalva
+k	pseudobrevivalva
+k	pulvereola
+a	suffusa
+s	chekiangica
+s2	Ilema
+s4	Katha chekiangica
+s2	Katha
+s4	Lithosia chekiangica
+o	Plana
+a	costalboides
+a	plana
+b	Lithosia
+n	Boisduval, 1832
+s4	Brunia repleta
+s	costistrigata
+s4	Ilema costistrigata
+s4	Ilema repleta
+s2	Symmetrodes
+i	Pseudonishada
+a	fasciculosa
+b	Lithosia
+n	Walker, 1862
+s2	Ilema
+s2	Nishada
+i	Zobida
+o	Sanguicosta
+a	sanguicosta
+b	Ilema
+n	Hampson, 1901
+s4	Birketsmithiola nyassana
+s2	Birketsmithiola
+a	transvaalensis
+b	Birketsmithiola
+n	Krüger, 2015
+o	Similipuncta
+a	bipuncta
+s2	Ilema
+s2	Zobida
+a	colon
+s2	Ilema
+s2	Zobida
+a	similipuncta
+e	Twin-buttoned Footman
+d	Doppelpunkt-Flechtenbärchen
+s2	Ilema
+s2	Zobida
+a	trinitas
+s4	Ilema jacobsi
+s4	Zobida jacobsi
+s2	Zobida
+g	Enargeiosia
+a	elegans
+s2	Eilema
+s2	Ilema
+g	Euconosia
+a	obscuriventris
+s2	Conosia aspersa
+g	Eugopelosia
 g	Gampola
-g	Gardinia
+a	fasciata
+a	sinica
+g	Ghoria
+a	collitoides
+s2	Agylla
+s4	Agylla subpurpurea
+a	gigantea
+s2	Agylla
+a	tecta
+s2	Agylla
+s2	Eilema
+s2	Ilema
 g	Gnamptonychia
+a	ventralis
+e	Mexican Lichen Moth
+d	Mexikanisches Flechtenbärchen
+g	Graphosia
+a	stenopepla
+g	Habrosynilema
+a	caloxantha
+s2	Anaphosia
+a	eurygrapha
+s2	Anaphosia
+a	extranea
+s2	Anaphosia
+a	mirabilis
+b	Teracotona
+n	Bartel, 1903
+s2	Anaphosia
+a	pectinata
+s2	Anaphosia
+g	Hesudra
+a	bisecta
+s2	Agylla
+a	divisa
+s2	Agylla
+a	haighti
+s2	Agylla
+a	mjobergi
+s2	Agylla
+g	Hesychopa
+a	chionora
+e	White Footman
+d	Weißes Flechtenbärchen
+b	Lithosia
+n	Meyrick, 1886
+s2	Apistosia
 g	Hiera
 a	gyge
+g	Hypareva
+a	pogonoda
+g	Inopsis
+a	modulata
+s2	Ctenucha
 g	Lambula
+a	malayana
+a	obliquilinea
+a	phyllodes
+s2	Palaexera
+a	pleuroptycha
+a	pristina
+s	iridescens
+a	transcripta
+s2	Tigriodes
+g	Lambulodes
+a	sericea
+s2	Lambula
+s4	Lambula sericeoides
+s	sericeoides
+g	Lamprostola
+a	unifascia
+g	Lepista
+a	pandula
+g	Ligulosia
+a	costimaculata
+s2	Eilema
 g	Lithosia
 a	quadra
 e	Four-spotted Footman
 d	Vierpunkt-Flechtenbärchen
+d	Großer Flechtenbär
+b	Phalaena
+n	Linnaeus, 1758
+s2	Eilema
+g	Longpesa
+a	longpesa
+g	Lysceia
+a	flava
+g	Macohasa
+a	orientalis
+s4	Eilema pentaspila
+s2	Macotasa
+s2	Phaeosia
+a	tetraspila
 g	Macotasa
+a	nubecula
+a	nubeculoides
+s2	Eilema
+a	tortricoides
+s2	Eilema
+s2	Ilema
+s2	Systropha
 g	Macrobrochis
+a	albifascia
+s2	Atolmis
+a	albovenosa
+a	borneensis
+a	fukiensis
+s2	Paraona
 a	gigas
-e	Asian Footman
-d	Asiatischer Flechtenbär
-g	Manulea
+e	Giant Footman
+d	Riesenflechtenbär
+b	Lithosia
+n	Walker, 1854
+a	notabilis
+a	prasena
+s2	Agylla
+a	splendens
+a	staudingeri
+s2	Paraona
+a	volzi
+g	Mantala
+a	tineoides
+g	Microlithosia
+a	decreta
+b	Lithosia
+n	Butler, 1877
+s2	Aedoea
+s2	Eilema
+s2	Ilema
+s2	Paralithosia
+a	shaowuica
+b	Microlithosia
+n	Daniel, 1954
+s2	Paralithosia
+a	umbripuncta
+b	Ilema
+n	De Joannis, 1928
+s2	Eilema
+s2	Paralithosia
+g	Mithuna
+a	arizana
+a	quadriplaga
+g	Monosyntaxis
+a	affinis
+a	holmanhunti
+a	montanus
+a	radiifera
+a	sulawesiensis
+a	trimaculata
+g	Muxta
+a	xanthopa
+s2	Ilema
+s2	Lepista
+s2	Tigrioides
+g	Neosyntaxis
+a	warringtonella
+s2	Calamidia
+s2	Ilema
+g	Nephelosia
+a	caecina
+s2	Lithosia
+g	Nishada
+a	cameronensis
+a	flabrifera
+a	impervia
+a	rotundipennis
+s	nodicornis
+a	sambara
+s	flavens
+a	syntomioides
+s4	Eutane brevis
+g	Oeonistis
+a	altica
+s	imitaria
+a	bicolora
+a	bistrigata
+a	entella
+s	delia
+s	entelleola
+u	delia
+a	lifuensis
+g	Oeonosia
+a	longistriga
+s2	Palaeosia
+g	Orieosia
 g	Palaeosia
+a	bicosta
+e	Two-ribbed Footman
+d	Victoria-Flechtenbärchen
+g	Papuasyntaxis
+a	metallescens
+s2	Monosyntaxis
+s2	Oeonistis
+g	Parainesis
+a	restricta
+g	Paraona
+a	interjecta
+a	micans
+a	splendens
+s2	Macrobrocha
+g	Paraonagylla
+a	zavattarii
+g	Parapelosia
+a	grisescens
+s2	Tigrioides
+g	Pasteosia
+a	irrorata
+a	swartbergensis
 g	Pelosia
 a	muscerda
 e	Dotted Footman
 d	Erlenmoor-Flechtenbärchen
 d	Mausgraues Flechtenbärchen
+b	Phalaena
+n	Hufnagel, 1766
 a	obtusa
 e	Small Dotted Footman
 d	Schilf-Flechtenbärchen
-g	Setina
-a	aurita
-d	Kleines Flechtenbärchen
-d	Kleiner Flechtenbär
-d	Alpen-Flechtenbärchen
-a	irrorella
-e	Dew Moth
-d	Trockenrasen-Flechtenbärchen
-d	Steinflechtenbär
+d	Schilfbärchen
+a	plumosa
+g	Phaeophlebosia
+a	furcifera
+e	Forked Footman
+d	Gabelflechtenbärchen
+g	Poliosia
+a	binotata
+a	concolora
+a	cubitifera
+a	muricolor
+g	Prabhasa
+a	distorta
+g	Pseudochromatosia
+a	nigrapex
+g	Pseudocragia
+a	quadrinotata
+e	Sun Footman
+d	Sonnen-Flechtenbärchen
+s2	Eilema
+g	Pseudophanes
+a	melanoptera
+g	Pseudoscaptia
+a	rothschildi
+s4	Scaptesyle integra
+s2	Scaptesyle
+g	Pusiola
+a	cinerella
+s2	Phryganopsis
+a	flavicosta
+a	interstiteola
+s2	Phryganopsis
+a	leiodes
+s2	Eilema
+g	Pusiolania
+a	minima
+a	occidentalis
+s2	Pusiola
+g	Ranghana
+a	punctata
+s2	Rhanghana
+g	Scoliacma
+a	adrasta
+s2	Threnosia
+a	bicolora
+a	brunnea
+s2	Nishada
+a	nana
+s2	Pusiola
+s	spilarcha
+a	pactolias
+a	pasteophara
+a	xuthopis
+g	Setema
 g	Sidyma
 a	albifinis
 s2	Agylla
 a	apicalis
 s2	Agylla
 g	Sozusa
+a	scutellata
+e	Plated Footman
+d	Schild-Flechtenbärchen
+g	Symmetrodes
+a	sciocosma
+b	Symmetrodes
+n	Meyrick, 1888
+s2	Asura
+g	Tarika
+a	varana
+b	Lithosia
+n	Moore, 1866
+s2	Eilema
+s2	Ilema
 g	Teulisna
+a	bipunctata
+s2	Eilema
+s4	Eilema dinawa
+s2	Ilema
+s4	Ilema dinawa
+a	chiloides
+s2	Ilema
+a	curviplaga
+s2	Eilema
+s2	Ilema
+a	diastropha
+s2	Bitecta
+s2	Eilema
+a	inducta
+s2	Eilema
+s2	Ilema
+a	karena
+a	mithunoides
+a	obliquistria
+s2	Eilema
+s2	Ilema
+a	plagiata
+s2	Eilema
+s2	Ilema
+a	reflexa
+a	tumida
+e	Double-eyed Footman
+d	Doppelaugen-Flechtenbärchen
+b	Tegulata
+n	Walker, 1862
+s2	Eilema
+s2	Ilema
+s2	Lithosia
+s4	Tegulata basistriga
+a	uniplaga
+s2	Eilema
+s2	Ilema
+g	Teuloma
+a	montanebula
+s2	Teulisna
+a	nebulosa
+s4	Dolgoma perdentata
+s2	Eilema
+s4	Eilema perdentata
+s2	Ilema
+s4	Ilema perdentata
+s2	Lithosia
+s4	Lithosia perdentata
+s2	Systropha
+s4	Systropha perdentata
+s2	Teulisna
+s4	Wittia perdantata
+a	tainebula
+g	Thermeola
+a	tasmanica
+e	Tasmanian Footman
+d	Tasmanisches Flechtenbärchen
+b	Thermeola
+n	Hampson, 1900
+s4	Hestiarcha atala
+s	atala
+g	Threnosia
+a	heminephes
+s2	Tigrioides
+a	myochroa
+g	Thysanoplisna
+a	brevimacula
+s2	Eilema
+s2	Eilema signata
+s2	Lithosia signata
+s2	Thysanoptyx
+a	signata
+s2	Eilema
+s2	Ilema
+s2	Lithosia
+s2	Teulisna
+s2	Thysanoptyx
 g	Thysanoptyx
+a	incurvata
+s2	Eilema
+s2	Ilema
+a	oblonga
+a	sordida
+s2	Eilema
+s2	Teulisna
+a	tetragona
+s2	Eilema
+s2	Lithosia
+s2	Teulisna
 g	Tigrioides
+a	alterna
+e	Australian Tiger Footman
+d	Australisches Tiger-Flechtenbärchen
+b	Setina
+n	Walker, 1854
+s2	Lexis
+a	euchana
+s2	Lexis
+s2	Pelosia
+a	leucanioides
+s2	Lexis
+a	puncticollis
+s2	Lexis
+s2	Tigricollis
+g	Vamuna
+a	alboluteola
+b	Agylla
+n	Rothschild, 1912
+a	bipars
+s2	Agylla
+a	maculata
+s2	Agylla
+a	remelana
+b	Lithosia
+n	Moore, 1866
+s2	Agylla
+a	virilis
+s2	Agylla
+s2	Ghoria
+j	Ascalina
+sh	Ascaliina
+g	Acsala
+a	anomala
+e	Rockslide Lichen Moth
+d	Felshalden-Flechtenbärchen
+j	Endrosina
+sh	Eugoina
+g	Anestia
+a	ombrophanes
+e	Clouded Footman
+d	Südaustralisches Flechtenbärchen
+b	Anestia
+n	Meyrick, 1886
+s	fuscogrisea
+s4	Thallarcha fuscogrisea
+s2	Thallarcha
+s2	Xanthodule
+a	semiochrea
+b	Xanthodule
+n	Butler, 1886
+s2	Philenore
+g	Barsaurea
+r	Volynkin, 2020
+l	A review of the genus Barsaurea Volynkin & Huang, 2019, with a description of new species (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4779.4.4
+c	phaeoxanthia
+b	Miltochrista
+n	Hampson, 1900
+s2	Barsine
+s4	Lyclene diehli
+k	apatani
+k	diehli
+k	ketiga
+k	phaeoxanthia
+r	Singh, 2023
+l	A new species and two species records of genus Barsaurea from India (Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.5315.4.5
+g	Castulo
+a	doubledayi
+a	plagiata
+s	struthias
+s4	Cluaca struthias
+g	Cyclosiella
+a	dulcicula
+s2	Hemonia
+a	dulciculoides
+a	forcipula
+a	pulchrina
+a	spiralis
+s2	Trischalis
+g	Eugoa
+a	aequalis
+a	africana
+a	basipuncta
+s2	Padenia
+a	bipuncta
+s2	Paidia
+a	bipunctalis
+a	bipunctata
+a	brunnea
+a	cernyi
+a	crassa
+a	cyclota
+a	formosicola
+s3	bipunctata
+a	gabrielae
+a	grisea
+a	holocraspedon
+a	humerana
+s2	Neoeugoa
+a	inconspicua
+a	indeclaratana
+a	leucomelaena
+a	malayicola
+a	mangle
+a	muluana
+a	nata
+a	obliquipuncta
+a	simonae
+s	hainanensis
+a	sordida
+s	sordidata
+a	submontana
+a	tessellata
+a	tineoides
+a	translineata
+a	tricolora
+a	trifascia
+s3	aequalis
+a	trifasciata
+s2	Lithosia
+a	trifasciella
+a	turbida
+a	vasta
+s2	Philenora
+a	vittata
+g	Hemonia
+a	micrommata
+s2	Eurodes
+a	monochroa
+a	orbiferana
+a	rotundata
+a	simillima
+g	Holocraspedon
+a	bilineata
+s2	Eugoa
+a	erkunin
+a	nigripuncta
+s	nigropunctum
+a	parallelum
+a	vaneeckei
+g	Katmeteugoa
+a	hampsonia
+b	Katmeteugoa
+n	Van Eecke, 1920
+g	Malesia
+a	eugoana
+g	Meteugoa
+a	japonica
+a	melanoleuca
+a	obliquiata
+a	ochrivena
+s2	Eugoa
+g	Notata
+a	modicus
+s2	Diphtheraspis
+s	modica
+s4	Philenora modica
+a	parva
+s2	Philenora
+g	Parelictis
+a	saleuta
+g	Pareugoa
+a	multistrigata
+s2	Eugoa
+s2	Paremonia
+g	Philenora
+a	aspectalella
+e	Little Mask Footman
+d	Masken-Flechtenbär
+b	Oecophora
+n	Walker, 1864
+s2	Comarcha
+a	chionastis
+s2	Scaeodora
+a	elegans
+a	irregularis
+s2	Comarchis
+s2	Thallarcha
+a	latifasciata
+a	malthaca
+a	mimetica
+a	omophanes
+s2	Scaeodora
+a	undulosa
+g	Setina
+a	aurita
+d	Kleines Flechtenbärchen
+d	Kleiner Flechtenbär
+b	Noctua
+n	Esper, 1787
+s2	Endrosa
+a	cantabrica
+a	flavicans
+a	irrorella
+e	Dew Moth
+d	Trockenrasen-Flechtenbärchen
+d	Steinflechtenbär
+b	Phalaena
+n	Linnaeus, 1758
+s2	Endrosa
+a	roscida
+d	Felsenflechtenbär
+s2	Endrosa
+g	Stigmatophora
+a	flava
+a	flavogrisea
+b	Hypeugoa
+n	Leech, 1899
+r2	Volynkin & Černý, 2021
+l	On the taxonomic status of the genus Hypeugoa Leech with description of a new species of Miltochrista Hbner from Thailand (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.5023.3.6
+a	hainanensis
+a	inanis
+s	palliduspalmata
+a	karenkonis
+s2	Miltochrista
+a	leacrita
+s2	Setina
+s3	flava
+a	micans
+a	obraztsovi
+a	palmata
+s2	Miltochrista
+a	ranruna
+a	rhodophila
+s2	Barsine
+a	roseivena
+b	Eugoa
+n	Hampson, 1894
+s2	Planovalvata
+a	strigivenata
+s2	Eugoa
+a	zolotuhini
+g	Termessa
+a	amorpha
+s2	Castulo
+a	catocalina
+s2	Castulo
+a	congrua
+s2	Castulo
+a	conographa
+s2	Castulo
+a	discrepans
+s2	Castulo
+a	gratiosa
+e	Favoured Footman
+s2	Castulo
+a	laeta
+s2	Castulo
+a	nivosa
+e	Snowy Footman
+s2	Castulo
+a	orthocrossa
+a	shepherdi
+s2	Castulo
+a	xanthomelas
+s4	Castulo terpnodes
+s	terpnodes
+a	zonophanes
+e	Double Yellow-patched Footman
+s2	Castulo
+g	Thallarcha
+a	albicollis
+s2	Comarchis
+a	catasticta
+a	chrysochares
+b	Thallarcha
+n	Meyrick, 1886
+s4	Comarchis cosmia
+a	chrysochoa
+s2	Comarchis
+a	cosmodes
+a	epicela
+a	epigypsa
+s2	Comarchis
+a	epileuca
+a	epiostola
+a	eremicola
+a	erotis
+a	fusa
+a	isophragma
+s2	Comarchis
+s4	Comarchis pallida
+s	pallida
+a	jocularis
+s2	Mosoda
+a	lechrioleuca
+a	leptographa
+a	levis
+a	lochaga
+s2	Comarchis
+a	macilenta
+a	oblita
+a	partita
+a	pellax
+a	phalarota
+b	Thallarcha
+n	Meyrick, 1886
+a	polystigma
+a	rhaptophora
+e	Australian Desert Footman
+d	Australisches Wüsten-Flechtenbärchen
+b	Thallarcha
+n	Lower, 1915
+a	sparsana
+s	sparsanella
+s	sparsanoides
+a	staurocola
+s2	Comarchis
+a	trissomochla
+g	Tospitis
+a	abstractus
+a	aurantimaculus
+a	diversus
+a	imonigra
+a	variabilis
+g	Trischalis
+a	aerugo
+a	aureoplagiata
+s2	Eugoa
+a	iridescens
+a	stomata
+a	subaurana
+a	zahrae
+g	Tropacme
+a	cupreimargo
 j	Nudariina
-g	Aberrasine
-g	Adites
+r	Huang, 2021
+l	Molecular phylogeny and classification of Nudariina (Lepidoptera: Erebidae) with emphasis on the genera Barsine Walker, Ammatho Walker and Ovipennis Hampson
+p	10.1111/syen.12509
+h	Nudariiti
+g	Acco
+a	albicosta
+s2	Meteura
 g	Afrasura
+a	discocellularis
+s2	Asura
+a	ichorina
+s2	Asura
+s2	Xanthetis
+a	indecisa
+s2	Asura
+a	rivulosa
+s2	Asura
+s2	Miltochrista
+c	submarmorata
+k	amaniensis
+k	discreta
+k	submarmorata
+k	violacea
+g	Amalodeta
+a	electraula
+a	tineoides
 g	Ammatho
+i	Ammatho
+a	bornescripta
+s2	Barsine
+a	carbonisata
+s2	Miltochrista
+a	collivolans
+s2	Barsine
+s2	Miltochrista
+a	cuneonotatus
+e	Cambodian Rosy Footman
+d	Kambodschanisches Rosen-Flechtenbärchen
+b	Ammatho
+n	Walker, 1855
+s	cuneorotatus
+s2	Barsine
+s4	Barsine cuneorotatus
+s2	Miltochrista
+s4	Miltochrista cuneorotatus
+a	dohertyi
+s2	Barsine
+s2	Miltochrista
+a	roseororatus
+b	Ammatho
+n	Butler, 1877
+s2	Barsine
+a	scripta
+s2	Barsine
+s2	Miltochrista
+i	Rugosine
+a	salakia
+b	Miltochrista
+n	Schaus, 1922
+s2	Barsine
+g	Amphisine
+c	asaphes
+s2	Asura
+s2	Lyclene
+s2	Miltochrista
+k	asaphes
+k	cursiva
+k	latigrapha
+a	perpusilla
+s2	Asura
+s2	Barsine
 g	Apaidia
+c	mesogona
+s3	rufeola barbarica
+k	barbarica
+k	mesogona
+k	rufeola
+g	Arctelene
+r2	Kirti & Gill, 2008
+l	A new genus and two new species of Lithosiinae (Lepidoptera: Arctiidae) from India
+p	10.1080/00305316.2008.10417561
+a	arcuata
+e	Indian Rosy Footman
+d	Indisches Rosen-Flechtenbärchen
+b	Lyclene
+n	Moore, 1882
+s2	Asura
+s2	Miltochrista
+a	rubricosa
+b	Lyclene
+n	Moore, 1878
+s4	Arctelene uncodes
+s2	Asura
+s2	Miltochrista
+a	rufescens
+b	Arctelene
+n	Kirti & Gill, 2008
+a	varians
+b	Lyclene
+n	Hampson, 1893
+s2	Asura
+g	Argentosine
+a	proleuca
+s2	Miltochrista
 g	Asura
+i	Asura
+a	bipars
+a	catameces
+a	cervicalis
+e	Spotted Lichen Moth
+d	Orangegeflecktes Flechtenbärchen
+b	Asura
+n	Walker, 1854
+a	lydia
+e	Lydia Lichen Moth
+d	Lydia-Flechtenbärchen
+b	Bombyx
+n	Donovan, 1805
+a	monospila
+a	ochreomaculata
+s	biplagiata
+s4	Miltochrista biplagiata
+a	phaeobasis
+a	polyspila
+a	semivitrea
+s2	Eutane
+a	toxodes
+s2	Lyclene
+s2	Miltochrista
+a	zebrina
+s2	Chiretolpis
+s2	Trichocerosia
+i	Floridasura
+a	tricolor
+b	Miltochrista
+n	Wileman, 1910
+s	magica
+s4	Barsine coccinea
+s2	Floridasura
+s4	Miltochrista coccinea
+i	Nanarsine
+o	Porphyrea
+a	porphyrea
+b	Hypocrita
+n	Snellen, 1880
+s	subcruciata
+s2	Barsine
+s2	Nanarsine
+a	sullia
+b	Miltochrista
+n	Swinhoe, 1901
+s2	Barsine
+s2	Nanarsine
+o	Semilutea
+a	semilutea
+b	Nudaria
+n	Wileman, 1911
+s2	Gymnasura
+s2	Nanarsine
+o	Senara
+a	emiks
+b	Lyclene
+n	Černý, 2009
+s2	Barsine
+s2	Miltochrista
+s2	Nanarsine
+a	senara
+b	Barsine
+n	Moore, 1860
+s2	Nanarsine
+i	Gynmnasura
+a	fulguritis
+a	rhodina
+s4	Gymnasura bella
+s2	Gymnasura
+a	saginaea
+s	eldola
+s2	Calligenia
+s2	Gymnasura
+s4	Lyclene eldola
+i	Eutane
+a	terminalis
+s4	Comarchis gradata
+s2	Eutane
+s4	Thallarcha gradata
+g	Asuridia
+a	carnipicta
+s2	Ammatho
+a	inouei
+a	nigrubra
+b	Asuridia
+n	Huang, Volynkin & Wang, 2020
+r	Huang, 2020
+l	A remarkable new species of Asuridia Hampson, 1900 from China (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4816.2.6
+a	rubripennis
+a	yuennanica
+g	Barsilene
+a	pallinflexa
+b	Barsine
+n	Holloway, 2001
 g	Barsine
+r	Volynkin, 2019
+l	A review of the Barsine perpallida-B. yuennanensis species-group, with descriptions of six new species (Lepidoptera: Erebidae: Arctiinae)
+p	10.2478/aemnp-2019-0022
+a	andromeda
+b	Barsine
+n	Volynkin, Černý & Huang, 2019
+a	atypicobarsine
+b	Barsine
+n	Singh, Kirti & Joshi, 2016
+a	biformis
+b	Barsine
+n	Volynkin & Černý, 2019
+a	cacharensis
+b	Barsine
+n	Singh & Kirti, 2016
+a	callorufa
+b	Barsine
+n	Wu, Fu & Chang, 2013
+a	cornicornutata
+s2	Miltochrista
+a	defecta
+b	Barsine
+n	Walker, 1854
+s2	Miltochrista
+a	delicia
+s2	Miltochrista
+a	deliciosa
+b	Barsine
+n	Volynkin & Černý, 2016
+r2	Volynkin & Černý, 2016
+l	Barsine deliciosa, a new species from China (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4200.1.9
+a	euprepia
+s2	Miltochrista
+a	eurydice
+b	Barsine
+n	Volynkin & Černý, 2019
+c	flammealis
+s2	Miltochrista
+s4	Miltochrista pretiosa
+k	fangchenglaiae
+k	flammealis
+k	pretiosa
+k	pseudomactans
+a	flavicollis
+b	Mahavira
+n	Moore, 1878
+a	fossi
+b	Barsine
+n	Volynkin & Černý, 2017
+a	fuscozonata
+b	Miltochrista
+n	Inoue, 1980
+a	germana
+s	thomasi
+s	valvalis
+s2	Miltochrista
+a	gilveola
+b	Miltochrista
+n	Daniel, 1952
+a	gratiosa
+b	Euchelia
+n	Guérin-Méneville, 1843
+s2	Miltochrista
+a	gratissima
+b	Miltochrista
+n	De Joannis, 1930
+a	guangxiensis
+a	hausmanni
+b	Barsine
+n	Volynkin & Černý, 2019
+a	hololeuca
+b	Miltochrista
+n	Hampson, 1895
+a	kirata
+b	Barsine
+n	Volynkin & Singh, 2020
+r	Volynkin, 2020
+l	Description of a new Barsine Walker, 1854 from India and Nepal (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.3897/zookeys.941.51344
+a	kulingensis
+b	Miltochrista
+n	Daniel, 1952
+a	laszloi
+b	Barsine
+n	Volynkin & Černý, 2019
+a	linga
+b	Barsine
+n	Moore, 1859
+s2	Lyclene
+s2	Miltochrista
+a	lucibilis
+s2	Miltochrista
+a	nigrovena
+b	Miltochrista
+n	Fang, 2000
+a	obsoleta
+b	Miltochrista
+n	Reich, 1937
+c	orientalis
+b	Miltochrista
+n	Daniel, 1951
+s	kampoli
+s	orientalis bigamica
+k	bigamica
+k	orientalis
+k	tongi
+r	Huang, 2020
+l	Taxonomic problems surrounding Barsine orientalis bigamica Černý & Pinratana, 2009 with description of a new species (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4894.4.4
+a	perlucidula
+b	Barsine
+n	Bucsek, 2012
+a	perpallida
+b	Miltochrista
+n	Hampson, 1900
+s2	Korawa
+a	ponlai
+a	pulchra
+b	Miltochrista
+n	Butler, 1877
+a	roseata
+b	Castabala
+n	Walker, 1865
+s2	Miltochrista
+a	rosistriata
+b	Miltochrista
+n	Holloway, 1976
+a	rubrata
+b	Castabala
+n	Walker, 1865
+s2	Miltochrista
+a	rubricostata
+b	Hypocrita
+n	Herrich-Schäffer, 1855
+s2	Miltochrista
+a	ruficollis
+b	Miltochrista
+n	Fang, 1991
+a	sauteri
+b	Miltochrista
+n	Strand, 1917
+a	striata
+e	Red-striped Footman
+d	Rotstrich-Flechtenbärchen
+b	Lithosia
+n	Bremer & Grey, 1852
+s2	Miltochrista
+a	ustrina
+b	Barsine
+n	Černý, 2009
+a	wangi
+b	Barsine
+n	Volynkin, Huang & Dubatolov, 2019
+r	Volynkin, 2019
+l	Barsine wangi, a new species from Guangdong, southern China (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4664.3.12
+c	yuennanensis
+b	Miltochrista
+n	Daniel, 1952
+k	dao
+k	yuennanensis
+g	Barsipennis
+a	arrigera
+s2	Barsine
+s2	Ovipennis
+a	joshii
+s2	Barsine
+s2	Ovipennis
+a	phaeodonta
+s2	Barsine
+s2	Miltochrista
+s2	Ovipennis
+g	Barsochrista
+a	kishidai
+s2	Lyclene
+a	ocellata
+s2	Miltochrista
+g	Barsura
+a	albidorsalis
+s2	Asura
+s2	Tenebrasura
+a	nubifascia
+s2	Asura
+s2	Miltochrista
+a	umbrosa
+s2	Ammatho
+s2	Asura
+s2	Barsine
+s2	Miltochrista
+s2	Striatella
+g	Boadicea
+a	flavimacula
+g	Cabarda
+i	Cabarda
+o	Hilaris
+a	hilaris
+s2	Adites
+s2	Asura
+s2	Lyclene
+s2	Miltochrista
+a	luangensis
+s2	Adites
+s2	Lyclene
+s2	Miltochrista
+a	paraimpilia
+s2	Adites
+a	pisina
+s2	Adites
+a	pseudohilaris
+s2	Adites
+a	vagilinea
+s2	Adites
+s2	Miltochrista
+o	Sequens
+a	nigripuncta
+b	Miltochrista
+n	Wileman & South, 1919
+s2	Asura
+a	sequens
+b	Lyclene
+n	Walker, 1862
+s2	Miltochrista
+i	Cabardites
+r2	Volynkin & Černý, 2021
+l	Cabardites, a new genus for the “Adites” maculata (Poujade, 1886) species-group, with descriptions of five new species from northern Indochina and eastern China (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4915.4.4
+a	limbata
+b	Asura
+n	Wileman, 1911
+s2	Adites
+s2	Cabardites
+s2	Miltochrista
+c	maculata
+b	Nudaria
+n	Poujade, 1886
+s2	Adites
+s4	Cabardites auco
+s4	Cabardites guanyin
+s2	Cabardites
+s2	Miltochrista
+s4	Parasiccia limbata
+s2	Parasiccia
+k	auco
+k	guanyin
+k	maculata
+a	phifa
+b	Cabardites
+n	Volynkin & Černý, 2021
+a	pica
+b	Asura
+n	Wileman, 1911
+s2	Adites
+s2	Cabardites
+s2	Miltochrista
+c	tiendung
+b	Cabardites
+n	Volynkin & Černý, 2021
+s4	Cabardites varanagara
+k	tiendung
+k	varanagara
+g	Callidarsine
+a	callida
+b	Miltochrista
+n	Fang, 1991
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+g	Caulocera
+a	crassicornis
+g	Celamodes
+a	rufotincta
+s2	Manoba
+g	Cernysura
+a	crucipuncta
+b	Miltochrista
+n	Černý, 1995
+a	lenticulata
+b	Miltochrista
+n	Černý, 1995
+a	obscura
+b	Miltochrista
+n	Semper, 1899
+a	orbis
+b	Miltochrista
+n	Černý, 1995
 g	Chamaita
-g	Cyana
+a	barnardi
+s2	Nudaria
+a	hirta
+a	nudapicalis
+a	nympha
+s2	Homopsyche
+a	sundanympha
+a	trichopteroides
+g	Chiretolpis
+a	erubescens
+s2	Tricholepis
+g	Chrysallactis
+a	aureorubra
+g	Chrysasura
+a	metahyala
+s2	Asura
+g	Chrysomesia
+a	lophoptera
+s2	Heterallactis
+g	Cincinasura
+r2	Volynkin & Černý, 2021
+l	Cincinasura, a new genus for Miltochrista synestramena Hampson (Lepidoptera: Erebidae: Arctiinae) with a new species from Indonesia
+p	10.11646/zootaxa.4999.2.7
+a	cyclophora
+b	Cincinasura
+n	Volynkin & Černý, 2021
+a	synestramena
+b	Asura
+n	Hampson, 1900
+s2	Lyclene
+s2	Miltochrista
+g	Coccinigripennis
+i	Coccinigripennis
+c	anomala
+s2	Asura
+s2	Barsine
+s4	Barsine fansipana
+s2	Lithosia
+s2	Ovipennis
+s4	Ovipennis fansipana
+k	anomala
+k	fansipana
+k	lisu
+r2	Huang & Volynkin, 2020
+l	Ovipennis (Coccinigripennis) lisu, a new species from China (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2020.38.21
+c	incompletostriga
+s2	Barsine
+s4	Barsine rawanga
+s2	Ovipennis
+s4	Ovipennis rawanga
+k	incompletostriga
+k	rawanga
+a	miloslavae
+b	Barsine
+n	Černý, 2016
+s2	Ovipennis
+a	nangkwak
+b	Barsine
+n	Volynkin & Černý, 2017
+s2	Ovipennis
+i	Conicornuta
+c	convexa
+b	Miltochrista
+n	Wileman, 1910
+s2	Ammatho
+s4	Ammatho mangae
+s4	Ammatho sinocontinentalis
+s2	Conicornuta
+s4	Conicornuta mangae
+s4	Conicornuta sinocontinentalis
+k	convexa
+k	mangae
+k	sinocontinentalis
+r2	Huang, 2020
+l	Two new species of the subgenus Conicornuta Volynkin, 2019 of the genus Ammatho Walker, 1855 from China and northern Vietnam (Lepidoptera, Erebidae Arctiinae)
+p	10.11646/zootaxa.4878.1.9
+i	Fangclia
+a	compar
+s2	Ammatho
+s2	Barsine
+s2	Fangclia
+s2	Miltochrista
+s2	Striatella
+g	Composine
+a	complicata
+s2	Ammatho
+s2	Barsine
+s2	Miltochrista
+g	Crocodeta
+a	erecta
+g	Cyclomilta
+a	cambodiaca
+b	Cyclomilta
+n	Dubatolov & Bucsek, 2013
+a	fangchenglaiae
+b	Cyclomilta
+n	Dubatolov, Kishida & Wang, 2012
+a	melanolepia
+b	Miltochrista
+n	Dudgeon & Hampson, 1899
 g	Cyme
-g	Floridasura
+a	aroa
+s2	Asura
+s4	Asura fasciolata
+s	fasciolata
+a	euprepioides
+b	Hypoprepia
+n	Walker, 1862
+s2	Asura
+s2	Barsine
+s2	Lyclene
+s2	Miltochrista
+a	laeta
+b	Cyme
+n	Looijenga, 2021
+r2	Looijenga, 2021
+l	The discovery of a sibling species next to Cyme reticulata Felder, 1861 in New Guinea and a review of some allied taxa (Lepidoptera: Erebidae, Arctiinae, Lithosiini)
+p	10.19269/SUGAPA2021.13(2).01
+a	phryctopa
+b	Calligenia
+n	Meyrick, 1889
+s2	Asura
+a	pyraula
+b	Calligenia
+n	Meyrick, 1886
+s2	Asura
+s2	Lyclene
+s2	Miltochrista
+a	quadrilineata
+b	Calligenia
+n	Pagenstecher, 1886
+s2	Asura
+s2	Lyclene
+s2	Miltochrista
+a	reticulata
+b	Cyme
+n	Felder, 1861
+s2	Asura
+s2	Barsine
+s2	Lyclene
+s2	Miltochrista
+a	structa
+e	Banded Lichen Moth
+d	Wellbindiges Flechtenbärchen
+b	Pallene
+n	Walker, 1854
+s2	Lyclene
+s2	Miltochrista
+a	wandammenensae
+b	Asura
+n	Joicey & Talbot, 1916
+a	xantherythra
+b	Asura
+n	Hampson, 1900
+g	Darantasia
+a	apicata
+a	caerulescens
+a	cuneiplena
+a	cyanifera
+a	nigrifimbria
+a	phamvuongae
+a	semiclusa
+b	Coutha
+n	Walker, 1865
+a	xenodora
+b	Peronetis
+n	Meyrick, 1886
+g	Delineatia
+c	delineata
+s2	Ammatho
+s4	Ammatho tairadiata
+s2	Barsine
+s4	Barsine dimidiata
+s2	Miltochrista
+s4	Miltochrista dimidiata
+k	delineata
+k	tairadiata
+a	inexpecta
+s2	Ammatho
+s2	Striatella
+a	mesortha
+b	Miltochrista
+n	Hampson, 1898
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	pseudocardinalis
+s2	Ammatho
+s2	Barsine
+s2	Rubrindiania
+s2	Striatella
+c	sublucana
+s2	Ammatho
+s4	Ammatho trangchim
+s2	Barsine
+k	sublucana
+k	trangchim
+g	Diduga
+a	amoenusa
+a	annulata
+a	dorsolobata
+a	flavicostata
+b	Pitane
+n	Snellen, 1879
+a	nantouensis
+a	spinosusa
+a	taiwana
+a	trichophora
+g	Disasuridia
+a	fangae
+a	rubida
+g	Disparsine
+a	crustata
+s2	Asura
+s2	Barsine
+g	Eriomastyx
+a	griseobasis
+g	Esmasura
+a	esmia
+s2	Asura
+s2	Miltochrista
+g	Eucyclopera
+a	plagidisca
+g	Exilisia
+i	Exilisia
+c	bipuncta
+e	Uncertain Footman
+b	Philenora
+n	Hampson, 1900
+k	bipuncta
+k	ngai
+k	prominentia
+k	smithi
+r2	Volynkin, 2020
+l	Two new Exilisia Toulgoët, 1958 from mainland Africa (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4768.4.11
+a	marmorea
+s2	Eugoa
+s2	Philenora
+a	pseudomarmorea
+a	punctata
+s2	Philenora
+i	Mimulosia
+a	pseudotortrix
+s2	Mimulosia
+a	quadripunctaria
+a	suberythroea
+i	Parexilisia
+a	bipunctoides
+s2	Parexilisia
+i	Metexilisia
+a	citrago
+s2	Metexilisia
+g	Graptasura
+a	polygrapha
+a	trilacunata
+g	Gurna
+a	indica
+b	Dysauxes
+n	Moore, 1879
+s2	Miltochrista
+g	Hemipsilia
+a	coavestis
+b	Nudaria
+n	Hampson, 1894
+g	Heterallactis
+a	chrysopera
+a	euchrysa
+a	microchrysa
+a	phlogozona
+s2	Stenoscaptia
+a	stenochrysa
 g	Huangilene
+r2	Volynkin & Černý, 2020
+l	Huangilene, a new genus for the Miltochrista alikangiae (Strand, 1917) species-group, with descriptions of three new species from Indochina, continental China and Taiwan (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4869.1.4
+a	alikangiae
+s2	Asura
+s2	Asura obsoleta
+s2	Lyclene
+s2	Miltochrista
+a	apoklinousa
+b	Huangilene
+n	Volynkin & Černý, 2020
+c	pseudolutara
+b	Miltochrista
+n	Singh & Kirti, 2016
+s4	Lyclene kepica
+s4	Miltochrista kepica
+k	kepica
+k	kutzscheri
+k	odontotilepida
+k	pseudolutara
+g	Idopterum
+i	Idopterum
+o	Eccentropis
+a	auriflucta
+s2	Barsine
+s2	Indiania
+s2	Miltochrista
+a	citrona
+s2	Barsine
+s2	Indiania
+s2	Miltochrista
+a	eccentropis
+s2	Barsine
+s2	Indiania
+s2	Miltochrista
+o	Ovale
+a	ovale
+b	Idopterum
+n	Hampson, 1894
+s2	Ammatho
+i	Striatella
+r	Volynkin, 2019
+l	A review of the Barsine hypoprepioides (Walker, 1862) species-group, with descriptions of fifteen new species and a new subspecies (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4618.1.1
+a	amaculata
+b	Barsine
+n	Volynkin & Černý, 2016
+s2	Ammatho
+s2	Striatella
+a	amoenissima
+b	Barsine
+n	Volynkin & Černý, 2019
+a	asotoida
+b	Barsine
+n	Volynkin & Černý, 2018
+s2	Ammatho
+s2	Striatella
+a	cao
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Ammatho
+s2	Striatella
+a	cernyi
+b	Barsine
+n	Volynkin, 2018
+s2	Ammatho
+s2	Striatella
+a	chi
+b	Miltochrista
+n	Roepke, 1946
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	dentata
+b	Miltochrista
+n	Wileman, 1910
+s2	Aberrasine
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	euryphaessa
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Ammatho
+s2	Striatella
+a	fasciata
+b	Miltochrista
+n	Leech, 1899
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	helenae
+b	Barsine
+n	Černý, 2016
+s2	Ammatho
+s2	Striatella
+a	hypoprepioides
+b	Lithosia
+n	Walker, 1862
+s2	Ammatho
+s2	Barsine
+s2	Miltochrista
+s2	Striatella
+a	ivanovamariae
+b	Barsine
+n	Volynkin, Černý & Huang, 2019
+s2	Ammatho
+s2	Striatella
+a	karenkensis
+b	Miltochrista
+n	Matsumura, 1930
+s2	Ammatho
+s4	Ammatho karenkensis wushipheri
+s2	Barsine
+s4	Barsine karenkensis wushipheri
+s2	Striatella
+s4	Striatella karenkensis wushipheri
+u	karenkensis
+u	wushipheri
+a	maculifasciata
+b	Miltochrista
+n	Hampson, 1894
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	melanovena
+b	Barsine
+n	Černý, 2016
+s2	Ammatho
+s2	Striatella
+a	mesomene
+b	Barsine
+n	Volynkin, Černý & Huang, 2019
+s2	Ammatho
+s2	Striatella
+c	multistriata
+b	Miltochrista
+n	Hampson, 1894
+s4	Ammatho conformis
+s4	Ammatho eos
+s2	Ammatho
+s4	Ammatho terminifusca
+s4	Barsine conformis
+s4	Barsine eos
+s2	Barsine
+s4	Barsine terminifusca
+s4	Miltochrista conformis
+s4	Miltochrista terminifusca
+s4	Striatella conformis
+s4	Striatella eos
+s2	Striatella
+s4	Striatella terminifusca
+k	conformis
+k	eos
+k	multistriata
+k	terminifusca
+a	nigralba
+b	Miltochrista
+n	Hampson, 1894
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	pandeia
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Ammatho
+s2	Striatella
+a	parameia
+b	Miltochrista
+n	Rothschild, 1913
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	paraprominens
+b	Barsine
+n	Huang & Wang, 2018
+s2	Ammatho
+s2	Striatella
+r	Huang, 2018
+l	Barsine paraprominens sp. nov. (Lepidoptera, Erebidae, Arctiinae, Lithosiini) from China, with notes on four new records
+p	10.11646/zootaxa.4457.1.11
+a	persephone
+b	Barsine
+n	Volynkin & Černý, 2018
+s2	Ammatho
+s2	Striatella
+a	prominens
+b	Lyclene
+n	Moore, 1878
+s2	Ammatho
+s2	Barsine
+s2	Miltochrista
+s2	Striatella
+c	radians
+b	Lyclene
+n	Moore, 1878
+s4	Ammatho pseudoradians
+s2	Ammatho
+s4	Barsine pseudoradians
+s2	Barsine
+s2	Miltochrista
+s4	Striatella pseudoradians
+s2	Striatella
+k	pseudoradians
+k	radians
+c	rhipiptera
+b	Miltochrista
+n	Wileman & West, 1928
+s4	Ammatho kishidai
+s4	Ammatho nemea
+s2	Ammatho
+s4	Ammatho visaya
+s4	Barsine kishidai
+s4	Barsine nemea
+s2	Barsine
+s4	Barsine visaya
+s4	Striatella kishidai
+s4	Striatella nemea
+s2	Striatella
+s4	Striatella visaya
+k	kishidai
+k	nemea
+k	rhipiptera
+k	visaya
+a	salamandra
+b	Barsine
+n	Černý, 2009
+s2	Ammatho
+s2	Striatella
+a	selene
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Ammatho
+s2	Striatella
+a	specialis
+b	Miltochrista
+n	Fang, 1991
+s2	Ammatho
+s2	Barsine
+s2	Striatella
+a	speideli
+b	Barsine
+n	Černý & Huang, 2019
+s2	Ammatho
+s2	Striatella
+c	syntypica
+b	Barsine
+n	Swinhoe, 1906
+s4	Ammatho dubatolovi
+s4	Ammatho mene
+s2	Ammatho
+s4	Ammatho syntypicoida
+s4	Barsine dubatolovi
+s4	Barsine mene
+s4	Barsine syntypicoida
+s2	Miltochrista
+s4	Striatella dubatolovi
+s4	Striatella mene
+s2	Striatella
+s4	Striatella syntypicoida
+k	dubatolovi
+k	mene
+k	syntypica
+k	syntypicoida
+c	takamukui
+b	Miltochrista
+n	Matsumura, 1927
+s4	Ammatho kuatunensis
+s2	Ammatho
+s4	Barsine kuatunensis
+s2	Barsine
+s4	Miltochrista kuatunensis
+s4	Striatella kuatunensis
+s2	Striatella
+k	kuatunensis
+k	takamukui
+a	wernerthomasi
+b	Barsine
+n	Volynkin, 2018
+s2	Ammatho
+s2	Striatella
+c	zebrina
+b	Lyclene
+n	Moore, 1878
+s4	Ammatho navneetsinghi
+s4	Ammatho pluma
+s4	Ammatho subzebrina
+s2	Ammatho
+s4	Barsine bucseki
+s4	Barsine navneetsinghi
+s4	Barsine pluma
+s4	Barsine subzebrina
+s2	Barsine
+s2	Miltochrista
+s4	Striatella bucseki
+s4	Striatella navneetsinghi
+s4	Striatella pluma
+s4	Striatella subzebrina
+s2	Striatella
+k	bucseki
+k	navneetsinghi
+k	pluma
+k	subzebrina
+k	zebrina
+i	Aberrasine
+o	Aberrans
+a	aberrans
+e	Japanese Rosy Footman
+d	Japanisches Rosen-Flechtenbärchen
+b	Miltochrista
+n	Butler, 1877
+s2	Aberrasine
+s2	Barsine
+a	dingjiai
+s2	Aberrasine
+s2	Barsine
+a	expressa
+s2	Aberrasine
+s2	Barsine
+s2	Miltochrista
+a	lichenshihi
+s2	Aberrasine
+a	shiou
+s2	Aberrasine
+s2	Ammatho
+a	strigivenata
+s2	Aberrasine
+s2	Miltochrista
+o	Marginis
+a	marginis
+s2	Aberrasine
+s2	Ammatho
+s2	Barsine
+s2	Miltochrista
+s2	Striatella
+g	Integrivalvia
+i	Integrivalvia
+a	decussa
+b	Asura
+n	Bethune-Baker, 1910
+s2	Asuridia
+a	exclusa
+b	Barsine
+n	Butler, 1877
+s2	Miltochrista
+a	rutila
+b	Barsine
+n	Walker, 1865
+s2	Miltochrista
+i	Wittasura
+a	lineatus
+b	Ammatho
+n	Walker, 1855
+s2	Barsine
+s4	Miltochrista lineata
+s2	Wittasura
+g	Karolia
+a	stefaniae
+s2	Barsine
+g	Lambulosia
+a	gemmata
+g	Licnoptera
+a	crocodora
+s2	Monotropia
+g	Longarista
+r2	Volynkin, 2019
+l	Description of the new genus Longarista Volynkin, gen. nov., with a new species from northern Indochina (Lepidoptera, Erebidae, Arctiinae)
+p	10.37828/em.2019.20.8
+c	longaria
+b	Miltochrista
+n	Daniel, 1951
+k	kareli
+k	longaria
+g	Matsumursine
+a	horishanella
+s2	Asura
+s2	Barsine
+g	Melanaema
+a	venata
+g	Micrarsine
+a	flavivenosa
+s2	Asura
+s2	Barsine
+s2	Ovipennis
+a	y-nigrum
+s2	Barsine
+s2	Ovipennis
 g	Miltochrista
+r	Joshi, 2017
+l	Two new species of Miltochrista from India (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4238.3.12
+r2	Volynkin & Huang, 2021
+l	Three new peculiar species of the genus Miltochrista Hübner, [1819] from China (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4970.3.8
+r2	Volynkin & Huang, 2022
+l	On the taxonomy of the genus Miltochrista Hübner with descriptions of five new species from India and China and notes on the genus Arctelene Kirti & Gill (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2022.58.9
+r	Volynkin, 2023
+l	Thirteen new species of the genus Miltochrista Hübner from Indochina, China, Myanmar and India (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2023.68.3
+a	acteola
+e	Siamese Rosy Footman
+d	Siamesisches Rosen-Flechtenbärchen
+b	Asura
+n	Swinhoe, 1903
+s2	Lyclene
+a	acutiseriata
+b	Lyclene
+n	Holloway, 2001
+a	angulifera
+b	Lyclene
+n	Holloway, 2001
+a	aquila
+b	Miltochrista
+n	Černý, 2009
+c	areolifera
+b	Lyclene
+n	Holloway, 2001
+k	areolifera
+k	lavides
+a	ashleigera
+b	Lyclene
+n	Holloway, 2001
+c	aurora
+b	Lyclene
+n	Hampson, 1891
+s2	Asura
+s4	Lyclene rosea
+k	aurora
+k	kerala
+k	monoklina
+a	bachma
+b	Miltochrista
+n	Volynkin & Derzhinsky, 2020
+r2	Volynkin & Derzhinsky, 2020
+l	Miltochrista bachma, a new species from southern Vietnam (Lepidoptera, Erebidae, Arctiinae)
+p	10.37828/em.2020.35.9
+a	biseriata
+s2	Asura
+s2	Lyclene
+c	calamaria
+b	Setina
+n	Moore, 1888
+s2	Asura
+s2	Lyclene
+s	dagmarae anaptigmena
+k	anaptigmena
+k	calamaria
+k	dagmarae
+k	diasticta
+r2	Volynkin & Černý, 2022
+l	On the taxonomy of Miltochrista dagmarae Černý with descriptions of a new species and a new subspecies (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.60.4
+a	calamina
+a	calcicola
+b	Miltochrista
+n	Černý, 2016
+a	carnea
+b	Calligenia
+n	Poujade, 1886
+s2	Asura
+s2	Lyclene
+a	cataplictica
+b	Miltochrista
+n	Volynkin, Černý & Huang, 2023
+a	cepheus
+b	Asura
+n	Černý, 2009
+a	chromatica
+s2	Barsine
+a	cingula
+a	circumdata
+s2	Lyclene
+a	classeigera
+b	Lyclene
+n	Holloway, 2001
+a	congerens
+s2	Asura
+s2	Lyclene
+a	conjunctana
+s2	Asura
+s4	Barsine eschara
+s2	Lyclene
+s	eschara
+s	tessellata
+a	corrigera
+a	cuneifera
+s2	Asura
+s2	Lyclene
+a	cuneigera
+s2	Asura
+s2	Lyclene
+c	curvifascia
+b	Lyclene
+n	Hampson, 1891
+k	curvifascia
+k	goaensis
+k	hollowai
+k	kumarkaustubhi
+k	madathumala
+a	dentinebula
+b	Lyclene
+n	Černý, 2009
+a	dharma
+s2	Asura
+s2	Lyclene
+a	discisigna
+s2	Asura
+s2	Setina
+a	distributa
+s2	Asura
+s2	Lyclene
+a	dongi
+b	Miltochrista
+n	Volynkin & Huang, 2021
+a	duopunctata
+s2	Ammatho
+a	eugoana
+b	Miltochrista
+n	Volynkin & Černý, 2021
+a	excaviseriata
+b	Lyclene
+n	Holloway, 2001
+a	falciseriata
+b	Lyclene
+n	Holloway, 2001
+a	flavorosea
+b	Miltochrista
+n	Bucsek, 2020
+a	flexuosa
+a	floccosa
+s2	Asura
+a	fusciramorum
+b	Lyclene
+n	Holloway, 2001
+a	hogani
+b	Miltochrista
+n	Volynkin & Huang, 2022
+a	huashen
+b	Miltochrista
+n	Volynkin & Huang, 2021
+a	humilis
+b	Cyllene
+n	Walker, 1859
+s2	Asura
+s2	Lyclene
+a	hyphenovirgula
+b	Miltochrista
+n	Volynkin, Černý & Huang, 2022
+a	ila
+s2	Asura
+s2	Lyclene
+a	inconspicua
+s2	Asura
+s2	Lyclene
+a	irregularis
+s2	Asura
+s4	Asura pudibunda
+s2	Lyclene
+s4	Lyclene pudibunda
+s	pudibunda
+s4	Setina pudibunda
+a	jarawa
+b	Miltochrista
+n	Singh, Volynkin & Kirti, 2020
+r	Singh, 2020
+l	Miltochrista jarawa (Lepidoptera, Erebidae, Arctiinae, Lithosiini), a new species from the Andaman Islands, India
+p	10.11646/zootaxa.4895.3.10
+a	kosterini
+b	Lyclene
+n	Dubatolov & Bucsek, 2013
+a	kravchenkoi
+b	Miltochrista
+n	Volynkin, Saldaitis & Müller, 2022
+a	lampra
+b	Miltochrista
+n	Volynkin, Černý & Huang, 2023
+a	lateritia
+s2	Asura
+s2	Lyclene
+a	lineidistincta
+b	Lyclene
+n	Bucsek, 2012
+a	lutara
+s2	Asura
+s2	Lyclene
+a	lyclenoides
+b	Miltochrista
+n	Černý, 2016
+a	mesilaulinea
+b	Lyclene
+n	Holloway, 2001
 a	miniata
 e	Rosy Footman
 d	Rosen-Flechtenbärchen
+b	Phalaena
+n	Forster, 1771
+s	rosaria
+u	rosaria
+a	miraculosa
+b	Miltochrista
+n	Volynkin & Huang, 2022
+c	modesta
+b	Setina
+n	Leech, 1899
+s2	Asura
+s2	Lyclene
+k	auritiformis
+k	cornutia
+k	modesta
+k	pseudomodesta
+r	Volynkin, 2022
+l	Two new species of the Miltochrista modesta (Leech) species group from Northern Vietnam and South China (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.59.6
+a	nataliae
+b	Miltochrista
+n	Černý, 2016
+c	neoseriata
+b	Miltochrista
+n	Singh & Kirti, 2016
+k	asphida
+k	conthytera
+k	ehyrosta
+k	ekliptika
+k	neoseriata
+k	pachia
+k	paraseriata
+k	primaria
+k	qingchenga
+k	swanni
+k	tenuiprocessa
+k	tinsukia
+k	tsimphida
+k	tumida
+k	velona
+r	Volynkin, 2022
+l	Five new species of the genus Miltochrista Hübner from Indochina, India and China (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.59.2
+a	nigrococcinea
+b	Miltochrista
+n	Bayarsaikhan, Volynkin & Bae, 2019
+a	nubilalis
+s2	Asura
+s2	Lyclene
+a	obliqua
+b	Lyclene
+n	Hampson, 1891
+s4	Asura fuscalis
+s4	Lyclene fuscalis
+s	fuscalis
+c	obliquilinea
+b	Lyclene
+n	Swinhoe, 1901
+s2	Asura
+k	adelfika
+k	konta
+k	kontumica
+k	obliquilinea
+k	stenovalva
+r	Volynkin, 2020
+l	Revision of the Miltochrista obliquilinea species-group, with descriptions of four new species (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4780.3.2
+a	obsoleta
+s2	Asura
+s2	Lyclene
+a	ochracea
+b	Lyclene
+n	Hampson, 1891
+a	orsova
+s2	Asura
+s2	Lyclene
+a	pallida
+s	formosana
+a	paraarcuata
+b	Miltochrista
+n	Singh & Kirti, 2016
+a	parallelina
+s2	Asura
+s2	Lyclene
+a	peloa
+s2	Asura
+s2	Lyclene
+a	perihaemia
+s2	Asura
+s2	Lyclene
+a	phantasma
+b	Asura
+n	Hampson, 1907
+c	pingera
+b	Lyclene
+n	Bucsek, 2012
+k	nuiba
+k	parallelinaformis
+k	pingera
+k	soloma
+a	postbicolor
+s2	Asura
+a	producta
+c	pseudobunda
+b	Lyclene
+n	Holloway, 2001
+k	berdepsebunda
+k	minibunda
+k	pseudobunda
+r	Volynkin, 2021
+l	Taxonomic review of the Miltochrista pudibunda (Snellen) species-group (Lepidoptera: Erebidae: Arctiinae) with description of a new species
+p	10.11646/zootaxa.4995.3.9
+a	punctata
+s2	Lyclene
+s2	Setina
+a	quadra
+b	Miltochrista
+n	Joshi, Singh & Volynkin, 2017
+a	quadrata
+b	Lyclene
+n	Holloway, 2001
+a	radaricola
+b	Hypeugoa
+n	Černý, 2009
+a	rubricans
+b	Setina
+n	Leech, 1890
+a	semifascia
+s4	Asura metamelas
+s2	Asura
+s4	Lyclene metamelas
+s2	Lyclene
+a	simonka
+b	Lyclene
+n	Bucsek, 2014
+c	straminea
+b	Miltochrista
+n	Walker, 1856
+k	dankana
+k	etalina
+k	fluctuata
+k	idiomorfa
+k	megalytera
+k	nujiangia
+k	setozia
+k	straminea
+r	Volynkin, 2022
+l	Four new species of the genus Miltochrista Hübner from northern Indochina and Southwest China (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.59.5
+r	Volynkin, 2022
+l	Three new species of Miltochrista Hübner from India, Myanmar, Nepal and China (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.5168.3.4
+a	strigatula
+s2	Asura
+a	strigipennis
+a	szetschwanica
+b	Lyclene
+n	Daniel, 1952
+s2	Asura unipuncta
+a	taiwania
+b	Miltochrista
+n	Volynkin, 2024
+r2	Volynkin, 2024
+l	Miltochrista taiwania, a new species from Taiwan Island (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2024.78.7
+a	taragmena
+b	Miltochrista
+n	Volynkin & Huang, 2022
+a	tenera
+b	Miltochrista
+n	Bucsek, 2020
+c	terminata
+b	Lyclene
+n	Moore, 1878
+s4	Lyclene malayproducta
+s4	Lyclene postseriata
+s	jeremyhollowayi
+k	malayproducta
+k	postseriata
+k	terminata
+k	vidlickai
+a	terminospota
+b	Lyclene
+n	Singh, Kirti & Joshi, 2015
+a	testata
+b	Lyclene
+n	Černý, 2016
+a	tsinglingensis
+b	Miltochrista
+n	Daniel, 1951
+a	uncalis
+b	Lyclene
+n	Kirti & Gill, 2009
+a	undulata
+s2	Asura
+s2	Lyclene
+c	undulosa
+s4	Asura kangrana
+s2	Asura
+s2	Lyclene
+k	tenella
+k	undulosa
+a	unguifera
+b	Lyclene
+n	Holloway, 2001
+a	unipuncta
+b	Setina
+n	Leech, 1890
+s2	Asura
+s2	Lyclene
+a	valdenigra
+b	Lyclene
+n	Bucsek, 2012
+a	weidenhofferi
+b	Lyclene
+n	Černý, 2012
+a	wenchiyehi
+b	Miltochrista
+n	Wu, Fu & Chang, 2013
+a	xanthopera
+b	Tricholepis
+n	Hampson, 1907
+s2	Chiretolpis
+s2	Lyclene
+a	xihe
+b	Miltochrista
+n	Volynkin & Huang, 2021
+a	yueh
+b	Miltochrista
+n	Wu & Kishida, 2020
+c	ziczac
+e	Zigzag Footman
+d	Chinesisches Zickzack-Flechtenbärchen
+b	Hypoprepia
+n	Walker, 1856
+s	rivalis
+k	wangmini
+k	ziczac
+r	Volynkin, 2018
+l	Miltochrista wangmini, a new species from China (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4394.1.12
+g	Narosodes
+a	punctana
+s2	Narasodes
+g	Neasura
+a	apicalis
+s2	Miltochrista
+s2	Nudaria
+a	melanopyga
+s2	Asura
+s2	Miltochrista
+g	Nebulene
+a	monocornuta
+s2	Ovipennis
+a	nebulosa
+s2	Arsura
+s2	Lyclene
+s2	Miltochrista
 g	Nepita
 a	conferta
 e	Indian Footman
 d	Indischer Flechtenbär
+b	Pitane
+n	Walker, 1854
+s2	Asura
+g	Niveutane
+a	virginalis
+s2	Eutane
 g	Nudaria
+a	albipunctella
+s2	Palaeopsis
+a	diaphanella
+s2	Palaeopsis
+a	fulvipicta
+s2	Gymnochroma
+a	fumidisca
+a	margaritacea
+s2	Psilopelpa
+a	mollis
+s2	Psilopelpa
 a	mundana
 e	Muslin Footman
 d	Blankflügel-Flechtenbärchen
+b	Phalaena
+n	Linnaeus, 1761
+a	phallustortens
+a	ranruna
+s2	Chamaita
+a	squamifera
+s2	Palaeopsis
+a	suffusa
+s2	Palaeopsis
+g	Nudariphleps
+a	gauldi
+g	Nudina
+a	artaxidia
+b	Miltochrista
+n	Butler, 1881
+s2	Nudinia
+g	Ovipennis
+a	binghami
+a	connexa
+s2	Asura
+s2	Miltochrista
+a	dudgeoni
+s2	Nudaria
+a	insolita
+s2	Barsine
+a	milani
+s2	Barsine
+s2	Nanarsine
+a	mixta
+a	postalba
+s2	Gymnasura
+s2	Nanarsine
+a	thomasi
+g	Padenodes
+a	cuprizona
 g	Paidia
+a	cinerascens
+a	moabitica
 a	rica
 d	Mauer-Flechtenbärchen
+b	Lithosia
+n	Freyer, 1855
+s	murina
+g	Paradohertya
+a	trifascia
+s2	Ctenosia
+g	Parafrasura
+a	pectinella
+b	Asura
+n	Strand, 1922
+g	Paraheliosia
+a	elegans
+s2	Asura
+s2	Heliosia
+a	rufa
+s2	Heliosia
+s2	Miltochrista
+g	Paranudina
+a	xizangensis
+b	Nudina
+n	Fang, 2000
+r	Huang, 2019
+l	Establishment of a new genus for Nudina xizangensis Fang, 2000 (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4683.2.5
+g	Parvuspina
+a	tawaghatensis
+g	Paurophleps
+a	minuta
+a	reducta
+s2	Cycloptera
+g	Pseudoadites
+a	frigida
+b	Doliche
+n	Walker, 1854
+s2	Adites
+s2	Asura
+s2	Miltochrista
+a	trusmadi
+b	Adites
+n	Holloway, 2001
+g	Pseudobarsine
+a	auritiformis
+b	Miltochrista
+n	Černý, 2009
+a	bombdilensis
+g	Pseudomiltochrista
+a	zolotuhini
+g	Quadrasura
+a	ktimuna
+s2	Asura
+g	Rubrindiania
+a	cardinalis
+s2	Barsine
+s2	Miltochrista
+g	Sarbine
+r2	Volynkin & Černý, 2019
+l	A review of the Barsine inflexa Moore, 1878 and the B. flavodiscalis (Talbot, 1926) species-groups, with descriptions of six new species from Indochina, India and China (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4668.4.7
+i	Sarbine
+o	Flavodiscalis
+a	flavodiscalis
+b	Miltochrista
+n	Talbot, 1926
+s2	Barsine
+a	hreblayi
+b	Barsine
+n	Volynkin & Černý, 2019
+o	Gloriosa
+a	dejeani
+b	Barsine
+n	Volynkin & Černý, 2019
+a	gloriosa
+b	Barsine
+n	Moore, 1878
+s2	Moorasura
+a	inflexa
+b	Barsine
+n	Moore, 1878
+s2	Miltochrista
+s2	Moorasura
+a	kanchenjunga
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Moorasura
+a	thagyamin
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Moorasura
+a	victoria
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Moorasura
+i	Ammathella
+a	garo
+b	Barsine
+n	Volynkin, 2018
+s2	Ammathella
+s2	Ammatho
+a	midzhan
+b	Barsine
+n	Volynkin, 2018
+s2	Ammathella
+s2	Ammatho
+i	Fossia
+r	Volynkin, 2018
+l	Revision of the Barsine punicea Moore, 1878 species-group, with descriptions of two new species and two new subspecies (Lepidoptera, Erebidae, Arctiinae)
+p	10.1016/j.aspen.2018.07.020
+a	bachma
+b	Barsine
+n	Volynkin & Černý, 2018
+s2	Fossia
+a	elongata
+b	Barsine
+n	Černý, 2016
+s2	Fossia
+a	melanandra
+b	Barsine
+n	Černý, 2009
+s2	Barsine punicea
+s2	Fossia
+a	punicea
+b	Barsine
+n	Moore, 1878
+s4	Barsine punicea kachina
+s2	Fossia
+s4	Fossia punicea kachina
+s4	Fossia punicea rothschildi
+s2	Miltochrista
+s4	Miltochrista rothschildi
+u	kachina
+u	rothschildi
+a	sirikitae
+b	Barsine
+n	Volynkin & Černý, 2018
+s2	Fossia
+i	Processine
+a	cruciata
+b	Hypoprepia
+n	Walker, 1862
+s2	Barsine
+s2	Miltochrista
+s2	Processine
+a	siberuta
+b	Barsine
+n	Volynkin & Černý, 2019
+s2	Processine
 g	Schistophleps
-g	Stigmatophora
+a	albida
+b	Nudaria
+n	Walker, 1865
+a	bipuncta
+b	Schistophleps
+n	Hampson, 1891
+a	flavia
+a	fulvioides
+a	kendricki
+a	obducta
+s2	Nudaria
+a	pentoveinlata
+a	pyrifulvia
+g	Sesapa
+i	Sesapa
+r2	Volynkin, 2017
+l	On the Taxonomy of the Genera Sesapa and Nipponasura (Lepidoptera, Erebidae, Arctiinae)
+p	10.1515/vzoo-2017-0044
+r2	Wu, 2019
+l	Reassessment of the generic definition of Sesapa Walker, 1854, with descriptions of two new species of Taiwan (Erebidae, Arctiinae, Lithosiini)
+p2	0493-3168, 25(1)
+o	Dentifascia
+r2	Volynkin & Černý, 2021
+l	Restoration of the genus Hampsonascia Volynkin (Lepidoptera: Erebidae: Arctiinae: Lithosiini) with descriptions of five new species
+p	10.11646/zootaxa.5067.1.4
+a	aulaca
+b	Hampsonascia
+n	Volynkin & Černý, 2021
+a	dentifascia
+b	Miltochrista
+n	Hampson, 1894
+s2	Hampsonascia
+a	phukha
+b	Hampsonascia
+n	Volynkin & Černý, 2021
+a	saldaitisi
+b	Hampsonascia
+n	Volynkin & Černý, 2021
+a	thaifascia
+b	Hampsonascia
+n	Volynkin & Černý, 2021
+a	vanlanga
+b	Hampsonascia
+n	Volynkin & Černý, 2021
+o	Honbaensis
+a	honbaensis
+b	Barsine
+n	Dubatolov & Bucsek, 2013
+s2	Ammatho
+o	Inouei
+a	inouei
+b	Sesapa
+n	Volynkin, 2017
+s2	Nipponasura
+s4	Nipponasura sanguinea
+a	kishidai
+b	Sesapa
+n	Wu, 2019
+o	Inscripta
+a	inscripta
+b	Sesapa
+n	Walker, 1854
+s4	Miltochrista erubescens
+s2	Miltochrista
+s	erubescens
+a	koshunica
+b	Miltochrista
+n	Strand, 1917
+a	sanguinea
+b	Setinochroa
+n	Moore, 1877
+s2	Miltochrista
+a	strandiana
+b	Sesapa
+n	Volynkin, 2019
+r2	Volynkin, 2019
+l	A new Sesapa Walker, 1854 from Taiwan (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2019.20.7
+a	taiflamma
+b	Sesapa
+n	Wu, 2019
+i	Longarsine
+a	griseirufa
+s2	Longarsine
+s2	Miltochrista
+a	longstriga
+s2	Ammatho
+s2	Barsine
+s2	Longarsine
+s2	Miltochrista
+s2	Striatella
+g	Setteleia
+r2	Volynkin & Černý, 2021
+l	Setteleia, a New Genus for Four New Species from the Philippines (Insecta: Lepidoptera: Erebidae: Arctiinae)
+p	10.6620/ZS.2021.60-27
+a	bakunawa
+b	Setteleia
+n	Volynkin & Černý, 2021
+a	carota
+b	Setteleia
+n	Volynkin & Černý, 2021
+a	lourensi
+b	Setteleia
+n	Volynkin & Černý, 2021
+a	witti
+b	Setteleia
+n	Volynkin & Černý, 2021
+g	Siccasura
+a	numida
+s2	Afrasura
+s2	Asura
+s2	Miltochrista
+g	Stictane
+a	apicalis
+s2	Manoba
+s2	Nola
+a	bokorensis
+a	elegans
+a	filiformis
+a	fractilinea
+s2	Manoba
+s2	Pitane
+a	gemina
+a	imorod
+a	khmerensis
+a	obscura
+s2	Manoba
+a	pectenicorniculum
+a	rectilinea
+s2	Manoba
+a	serrata
+a	tornalis
+s2	Manoba
+s2	Nola
+g	Tampea
+a	reversa
+b	Lithosia
+n	Walker, 1862
+s4	Narasodes lithosioides
+s2	Ocrosia
+s	lithosioides
+g	Teinomastyx
+a	goliathina
+a	griseobasis
+s2	Chamaita
+g	Thermograpta
+a	rufizonata
 g	Thumatha
+a	fuscescens
+s4	Scaeodora rava
+a	ochracea
+s2	Nudaridia
+a	orientalis
 a	senex
 e	Round-winged Muslin Moth
 d	Rundflügel-Flechtenbärchen
-j	Eugoina
-g	Eugoa
-g	Philenora
-j	Eudesmina
-g	Eudesmia
-a	menea
-e	Lunar Eudesmia Moth
-d	Mond-Flechtenbär
+b	Bombyx
+n	Hübner, 1808
+s2	Comacla
+s2	Thumata
+g	Trichocerosia
+a	truncata
+s2	Asura
+s2	Zygaenosia
+a	variabilis
+s2	Asura
+s2	Zygaenosia
+g	Tumicla
+r2	Volynkin & László, 2018
+l	On the taxonomy of the genus Tumicla Wallengren, 1863 with description of two new species from Mozambique (Lepidoptera: Erebidae: Arctiinae)
+p	10.11646/zootaxa.4442.2.6
+r2	Volynkin & László, 2019
+l	Four new species of the genus Tumicla Wallengren, 1863 (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4668.3.7
+r2	Durante & Apinda-Legnouo, 2020
+l	Report on species of the genus Tumicla Wallengren, 1863 in Gabon (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4868.1.5
+r2	Volynkin & László, 2020
+l	Six new species of the genus Tumicla Wallengren, 1863 (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2020.38.6
+a	admiranda
+b	Tumicla
+n	Volynkin & László, 2019
+a	arktos
+b	Tumicla
+n	Volynkin & László, 2018
+a	bongorum
+b	Tumicla
+n	Durante, 2020
+a	doa
+b	Asura
+n	Kühne, 2007
+a	eala
+b	Asura
+n	Kühne, 2007
+a	elephantina
+b	Tumicla
+n	Volynkin & László, 2019
+a	fisheri
+b	Tumicla
+n	Volynkin & László, 2020
+c	globosa
+b	Tumicla
+n	Durante, 2020
+k	falcata
+k	globosa
+k	latipunctata
+c	mbeghai
+b	Tumicla
+n	Volynkin & László, 2019
+k	mbeghai
+k	usa
+a	minima
+b	Tumicla
+n	Durante, 2020
+a	mutinondo
+b	Tumicla
+n	Volynkin & László, 2020
+a	pallida
+b	Tumicla
+n	Durante, 2020
+a	parvipunctata
+b	Tumicla
+n	Durante, 2020
+a	pringlei
+b	Tumicla
+n	Volynkin & László, 2020
+a	sagenaria
+e	Crossed Footman
+d	Natal-Flechtenbärchen
+b	Setina
+n	Wallengren, 1860
+s2	Asura
+s2	Asuroides
+a	similis
+b	Asuroides
+n	Durante, 2008
+a	smithi
+b	Tumicla
+n	Volynkin & László, 2019
+a	tsonga
+b	Tumicla
+n	Volynkin & László, 2018
+a	whitensis
+b	Tumicla
+n	Durante, 2020
+g	Viettesia
+g	Xanthetis
+a	luzonica
+h	Cyaniti
+g	Cyana
+r2	De Vos, 2017
+l	The Cyana Walker, 1854 species of New Guinea, with description of a new subgenus, eight new species and one new subspecies (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p2	2255-9728, 3
+i	Cyana
+r2	Černý, 2016
+l	A Contribution to the Knowledge of the Genus Cyana Walker in the South East Asia (LEPIDOPTERA: Erebidae, Arctiinae, Lithosiinae)
+p2	0250-4413, 37(26)
+r2	Volynkin, 2019
+l	Two new ‘Asura-like’ Cyana Walker, 1854 from Africa (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4576.2.13
+r2	Volynkin & László, 2019
+l	On the taxonomy of the subgenera Cyabarda Karisch, 2013, Idiovulpecula Karisch, 2013 and Paravulpeculella Karisch, 2013 of the genus Cyana Walker, 1854, with descriptions of three new species from africa (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4664.3.5
+r	Singh, 2020
+l	A review of the genus Cyana Walker, 1854 from India, with descriptions of five new species and three new subspecies (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.11646/zootaxa.4738.1.1
+o	Adelina
+r	Volynkin, 2023
+l	Taxonomic review of the Cyana adelina (Staudinger) species-group (Lepidoptera: Erebidae: Arctiinae) with descriptions of three new species and one new subspecies from Laos, Thailand and China
+p	10.11646/zootaxa.5323.4.2
+a	adelina
+b	Bizone
+n	Staudinger, 1887
+s2	Chionaema
+a	bacilla
+b	Cyana
+n	Fang, 1992
+a	dubernardi
+b	Cyana
+n	Volynkin, Černý & Huang, 2023
+a	griseilinea
+b	Cyana
+n	De Joannis, 1930
+s	succincta
+a	karsticola
+b	Cyana
+n	Volynkin, Černý & Huang, 2023
+a	khami
+b	Cyana
+n	Volynkin, Černý & Huang, 2023
+a	pratti
+b	Bizone
+n	Elwes, 1890
+s2	Chionaema
+a	yunnanensis
+b	Chionaema
+n	Hampson, 1903
+s4	Chionaema hoenei
+u	regia
+o	Arama
+a	adita
+b	Bizone
+n	Moore, 1859
+s2	Chionaema
+a	arama
+b	Bizone
+n	Moore, 1859
+s4	Bizone triguttata
+s2	Chionaema
+u	metis
+a	bellissima
+b	Bizone
+n	Moore, 1878
+s2	Chionaema
+a	candida
+b	Chionaema
+n	Felder, 1874
+a	distincta
+b	Chionaema
+n	Rothschild, 1912
+a	dryope
+b	Cyana
+n	Volynkin & Singh, 2020
+a	khasiana
+b	Cyana
+n	Hampson, 1897
+s2	Chionaema
+s	hampsoni
+a	propinqua
+b	Chionaema
+n	Wileman, 1910
+s4	Chionaema tristigmalis
+s	tristigmalis
+a	signa
+b	Bizone
+n	Walker, 1854
+s2	Chionaema
+a	trilobata
+b	Cyana
+n	Fang, 1992
+o	Basisticta
+a	basisticta
+s2	Chionaema
+a	loloana
+s2	Chionaema
+a	rubritermina
+s2	Chionaema
+a	ueleana
+o	Delicata
+a	delicata
+b	Bizone
+n	Walker, 1854
+s2	Chionaema
+a	ethiopica
+b	Cyana
+n	Karisch, 2013
+a	flammeostrigata
+b	Cyana
+n	Karisch, 2003
+o	Determinata
+r2	Lourens, 2017
+l	The Cyana insularis-group (Arctiidae, Lithosiinae, Cyana Walker 1854) with fifteen Insular and Mainland SE Asian taxa (seven nov.sp./two nov.ssp.) and seven habitus look-alikes (two nov.sp.) from likely parallel developing lineage(s)
+p2	0250-4413, 38(12)
+r2	Volynkin & Černý, 2019
+l	On the correct identification of Cyana bianca (Walker, 1856), with description of a new species and notes on the taxonomy of the Cyana insularis (Draudt, 1914) species-group (Lepidoptera, Erebidae, Arctiinae)
+p	10.37828/em.2019.21.6
+a	arorai
+b	Cyana
+n	Volynkin, Singh & Kirti, 2020
+s	tripunctata
+c	bianca
+b	Bizone
+n	Walker, 1856
+s2	Chionaema
+s4	Chionaema carmina
+s	carmina malacca
+s4	Doliche carmina
+k	bianca
+k	carmina
+k	juliettae
+k	kasperi
+k	malacca
+a	cara
+b	Cyana
+n	Kishida, 1991
+s2	Chionaema
+s2	Doliche
+c	clama
+b	Cyana
+n	Bucsek, 2012
+k	barlowi
+k	clama
+c	coccinea
+b	Bizone
+n	Moore, 1878
+s2	Chionaema
+k	coccinea
+k	weerawoothi
+a	crasizona
+s2	Chionaema
+s2	Doliche
+a	cruentata
+b	Chionaema
+n	Talbot, 1926
+c	determinata
+b	Bizone
+n	Walker, 1862
+s	insularis
+k	determinata
+k	paukstadti
+k	sausae
+a	euryxantha
+b	Chionaema
+n	Hampson, 1914
+s2	Doliche
+a	gabika
+b	Cyana
+n	Bucsek, 2012
+a	jakli
+b	Cyana
+n	Černý, 2016
+a	janinae
+b	Cyana
+n	Lourens, 2009
+c	libulae
+b	Doliche
+n	Černý, 1993
+s2	Chionaema
+k	johani
+k	libulae
+a	lunulata
+b	Bizone
+n	Swinhoe, 1891
+s2	Chionaema
+s2	Doliche
+c	malayana
+b	Cyana
+n	Bucsek, 2012
+s3	bianca
+k	abrupta
+k	indosinica
+k	malayana
+a	martinii
+b	Cyana
+n	Lourens, 2017
+a	quadripartita
+b	Chionaema
+n	Wileman, 1910
+a	ridleyi
+b	Chionaema
+n	Hampson, 1900
+o	Detrita
+a	detrita
+b	Cyana
+n	Walker, 1854
+s2	Chionaema
+o	Dohertyi
+r2	Volynkin & Černý, 2019
+l	Three new species of Cyana Walker, 1854 from Indochina and China (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.11646/zootaxa.4586.2.8
+a	ariadne
+s2	Bizone
+s2	Chionaema
+c	atlanteia
+b	Cyana
+n	Singh, Volynkin & Kirti, 2020
+k	atlanteia
+k	chrysopeleia
+a	butyracea
+b	Cyana
+n	Volynkin & Černý, 2019
+a	centripuncta
+b	Cyana
+n	Černý, 2016
+c	divakara
+b	Bizone
+n	Moore, 1865
+s2	Chionaema
+k	britomartis
+k	divakara
+k	meiomena
+k	shirakawai
+k	triapotamia
+r	Volynkin, 2021
+l	Cyana shirakawai, a new species from south-eastern Xizang, China (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2021.48.5
+r	Volynkin, 2022
+l	Two new species of the genus Cyana Walker from Myanmar, China and Vietnam (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.59.1
+c	dohertyi
+s2	Bizone
+s2	Chionaema
+k	aurantifascia
+k	dohertyi
+k	lada
+k	mertsana
+k	titovi
+r	Volynkin, 2017
+l	A new Cyana Walker, 1854 from Vietnam (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4269.3.7
+r	Volynkin, 2019
+l	On the correct identification of ‘Cyana dohertyi (Elwes, 1890)’ from northern Indochina and China, with descriptions of two new species and a new subspecies (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4658.1.7
+a	formosana
+b	Chionaema
+n	Hampson, 1909
+s4	Chionaema suisharyonis
+s	suisharyonis
+a	gazella
+s2	Bizone
+s2	Chionaema
+a	gelida
+b	Doliche
+n	Walker, 1854
+s4	Chionaema alborosea
+s2	Chionaema
+s4	Lithosia alborosea
+a	guttifera
+b	Bizone
+n	Walker, 1856
+s2	Chionaema
+c	harterti
+b	Bizone
+n	Elwes, 1890
+s4	Chionaema flavalba
+s2	Chionaema
+k	flavalba
+k	harterti
+a	intercomma
+b	Cyana
+n	Černy & Pinratana, 2009
+a	interrogationis
+b	Bizone
+n	Poujade, 1886
+s2	Chionaema
+a	kubani
+b	Cyana
+n	Černý, 2016
+a	kucheri
+b	Cyana
+n	Volynkin & Černý, 2019
+c	moelleri
+b	Bizone
+n	Elwes, 1890
+s2	Chionaema
+s	molleri
+k	artemis
+k	moelleri
+k	watsoni
+a	phaedra
+s2	Bizone
+s2	Chionaema
+a	sikkimensis
+s2	Bizone
+s2	Chionaema
+o	Fasciola
+r	Volynkin, 2021
+l	Two new species of the genus Cyana Walker, 1854 from China (Lepidoptera: Erebidae: Arctiinae)
+p	10.11646/zootaxa.5047.5.6
+a	fasciola
+b	Bizone
+n	Elwes, 1890
+s2	Chionaema
+a	fascioloides
+b	Cyana
+n	Volynkin, Huang & Saldaitis, 2021
+a	fukiensis
+b	Chionaema
+n	Daniel, 1953
+a	longmena
+b	Cyana
+n	Volynkin, Huang & Saldaitis, 2021
+o	Geminipuncta
+a	aurifinis
+s2	Chionaema
+s2	Doliche
+a	aurorae
+b	Cyana
+n	Lourens, 2011
+a	costifimbria
+s2	Bizone
+s2	Chionaema
+s4	Chionaema rhadota
+s2	Doliche
+a	geminipuncta
+s2	Chionaema
+s2	Doliche
+a	inconclusa
+s2	Bizone
+s2	Chionaema
+s2	Doliche
+a	lutipes
+s2	Chionaema
+s2	Doliche
+a	phycomata
+b	Cyana
+n	Wileman & West, 1928
+s2	Chionaema
+s2	Doliche
+a	pudens
+s2	Bizone
+s2	Chionaema
+s2	Doliche
+a	rubrifinis
+a	v-nigrum
+b	Doliche
+n	Černý, 1993
+s2	Chionaema
+u	visayana
+o	Margarethae
+a	ellipsis
+b	Cyana
+n	Karisch & Dall'Asta, 2010
+a	margarethae
+b	Chionaema
+n	Kiriakoff, 1958
+a	natalensis
+b	Cyana
+n	Karisch, 2013
+o	Marshalli
+a	marshalli
+e	Marshall's Brown Lines
+s2	Chionaema
+a	rhodostriata
+s2	Chionaema
+o	Pallidilinea
+a	pallidilinea
+b	Cyana
+n	Karisch, 2003
+o	Pretoriae
+a	foya
+b	Cyana
+n	Volynkin & László, 2019
+a	lowa
+b	Cyana
+n	Volynkin & László, 2019
+a	maculata
+a	magnitrigutta
+b	Cyana
+n	Karisch, 2013
+a	pretoriae
+e	Pretoria Red Lines
+d	Pretoria-Flechtenbärchen
+b	Bizone
+n	Distant, 1897
+s2	Chionaema
+o	Puella
+a	amabilis
+b	Bizone
+n	Moore, 1877
+s2	Chionaema
+a	bhatejai
+b	Cyana
+n	Singh & Kirti, 2015
+a	boetonensis
+b	Chionaema
+n	Jurriaanse & Lindemans, 1920
+a	celebensis
+b	Cyana
+n	Roepke, 1946
+s2	Chionaema
+c	conclusa
+b	Bizone
+n	Walker, 1862
+s4	Bizone javanica
+s2	Chionaema
+s4	Chionaema javanica
+s4	Chionaema javanica sumatrensis
+s4	Chionaema sumatrensis
+s	javanica sumatrensis
+s	sumatrensis
+k	conclusa
+k	javanica
+k	nicobara
+k	pseudojavanica
+r2	Spitsyn, 2020
+l	Cyana pseudojavanica sp. nov. from Thailand and Cambodia (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2020.31.2
+a	dudgeoni
+b	Cyana
+n	Hampson, 1895
+s2	Chionaema
+a	hamata
+b	Bizone
+n	Walker, 1854
+s2	Chionaema
+a	horsfieldi
+b	Cyana
+n	Roepke, 1946
+s2	Chionaema
+s4	Chionaema indonesia
+s	indonesia
+s4	Doliche indonesia
+a	hsui
+b	Cyana
+n	Buchsbaum, Chen & Chen, 2018
+r	Buchsbaum, 2018
+l	Cyana hsui sp. n. from Lanyu Island (Taiwan) (Insecta, Lepidoptera: Erebidae, Arctiinae, Lithosiini) Contribution to the moths of Taiwan
+p2	0340-4943, 108
+a	inthanonica
+b	Cyana
+n	Černý, 2009
+a	linatula
+b	Bizone
+n	Swinhoe, 1891
+a	malayensis
+b	Chionaema
+n	Hampson, 1914
+s4	Chionaema malayensis palawanensis
+u	palawanensis
+a	nigrilineata
+b	Chionaema
+n	Hampson, 1900
+s2	Chionamea
+a	obliquilineata
+b	Chionaema
+n	Hampson, 1900
+s	baolini
+c	peregrina
+b	Bizone
+n	Walker, 1854
+s4	Chionaema catorhoda
+s2	Chionaema
+k	catorhoda
+k	peregrina
+a	perornata
+b	Bizone
+n	Walker, 1854
+s2	Chionaema
+a	puella
+b	Phalaena
+n	Drury, 1773
+s2	Bizone
+s2	Chionaema
+a	quadrinotata
+b	Bizone
+n	Walker, 1869
+s2	Chionaema
+s	alborosea
+a	rudloffi
+b	Cyana
+n	Volynkin & Singh, 2020
+a	rufifrons
+b	Chionaema
+n	Rothschild, 1912
+a	sanguinea
+b	Calligenia
+n	Bremer & Grey, 1852
+s4	Bizone cruenta
+s2	Bizone
+s2	Chionaema
+a	saulia
+b	Chionaema
+n	Swinhoe, 1901
+a	selangorica
+b	Chionaema
+n	Hampson, 1903
+s	paeninsulana
+u	paeninsulana
+a	subalba
+b	Chionaema
+n	Wileman, 1910
+a	subornata
+b	Bizone
+n	Walker, 1854
+s2	Chionaema
+a	unipunctata
+b	Bizone
+n	Elwes, 1890
+s2	Chionaema
+o	Puer
+a	flavicincta
+b	Chionaema
+n	Hampson, 1903
+a	luxuriosa
+b	Cyana
+n	Volynkin & Saldaitis, 2022
+r2	Volynkin & Saldaitis, 2022
+l	Cyana luxuriosa, a new species from Xizang, China (Lepidoptera: Erebidae: Arctiinae)
+p	10.37828/em.2022.53.1
+c	puer
+b	Bizone
+n	Elwes, 1890
+s2	Chionaema
+k	neopuer
+k	puer
+r	Singh, 2019
+l	A new species of genus Cyana Walker, 1854 (Lepidoptera: Erebidae: Arctiinae)
+p	10.11646/zootaxa.4603.2.9
+o	Quentini
+c	quentini
+b	Cyana
+n	Karisch, 2003
+k	quentini
+k	smithi
+k	yaseminae
+r2	Volynkin & László, 2019
+l	Cyana smithi, a new species from Liberia (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2019.20.18
+o	Rejecta
+a	innocua
+b	Cyana
+n	Karisch, 2013
+a	klohsi
+b	Cyana
+n	Karisch, 2003
+a	nussi
+b	Cyana
+n	Karisch, 2013
+a	nyasica
+b	Chionaema
+n	Hampson, 1918
+a	nyika
+b	Cyana
+n	Volynkin, 2019
+a	rejecta
+b	Setina
+n	Walker, 1854
+s2	Chionaema
+o	Rufeola
+a	amatura
+s2	Bizone
+s2	Chionaema
+a	capensis
+s2	Chionaema
+a	ebigane
+b	Cyana
+n	Volynkin, Karisch & Durante, 2021
+r	Volynkin, 2021
+l	Cyana ebigane, a new species from Gabon (Lepidoptera: Erebidae: Arctiinae)
+p	10.11646/zootaxa.5068.3.8
+a	fasciata
+b	Cyana
+n	Karisch, 2013
+a	klausruedigerbecki
+b	Cyana
+n	Karisch, 2005
+a	lobata
+c	naumanni
+b	Asura
+n	Kühne, 2005
+k	naumanni
+k	turlini
+a	nemasisha
+b	Cyana
+n	Roesler, 1990
+a	rufeola
+b	Cyana
+n	Karisch & Dall'Asta, 2010
+o	Torrida
+a	nambi
+b	Cyana
+n	Volynkin & László, 2019
+a	suessmuthi
+a	torrida
+b	Cabarda
+n	Holland, 1893
+s2	Chionaema
+o	Transfasciata
+a	transfasciata
+b	Ilema
+n	Rothschild, 1912
+s2	Chionaema
+o	Trigutta
+a	africana
+s2	Bizone
+s2	Chionaema
+a	ignifera
+e	Flaming Red Lines
+b	Cyana
+n	Karisch, 2013
+a	rubristriga
+s2	Bizone
+s2	Chionaema
+a	trigutta
+s2	Chionaema
+i	Clerckia
+o	Fulvia
+a	dentimarginata
+b	Cyana
+n	De Vos, 2017
+a	flaviplaga
+b	Gnophrioides
+n	Heylaerts, 1891
+s2	Chionaema
+a	fulvia
+b	Phalaena
+n	Linnaeus, 1758
+s2	Chionaema
+a	metamelas
+s2	Chionaema
+a	posthyalina
+b	Cyana
+n	De Vos, 2017
+a	tegyra
+b	Exotrocha
+n	Druce, 1899
+s2	Chionaema
+a	tettigonioides
+b	Leptothrix
+n	Heylaerts, 1892
+s4	Chionaema haemacta
+s2	Doliche
+s4	Exotrocha haemacta
+a	thoracica
+b	Clerckia
+n	Rothschild & Jordan, 1901
+s2	Chionaema
+a	tricolora
+s2	Chionamea fulvia
+a	trigona
+o	Meyricki
+a	meyricki
+b	Clerckia
+n	Rothschild & Jordan, 1901
+s2	Chionaema
+o	Miles
+a	miles
+s2	Chionaema
+s2	Clerckia
+s2	Sphragidium
+i	Cryptanaema
+r	Volynkin, 2022
+l	Two new species of the subgenus Cryptanaema de Vos of the genus Cyana Walker from eastern Indonesia (Lepidoptera: Erebidae: Arctiinae: Lithosiini: Nudariina)
+p	10.11646/zootaxa.5178.1.5
+o	Brunnea
+a	brunnea
+b	Chionaema
+n	Bethune-Baker, 1904
+o	Fumea
+a	aroa
+s2	Chionaema
+a	charybdis
+s2	Chionaema
+s4	Chionaema nigrescens
+a	fumea
+s2	Chionaema
+a	halmahera
+b	Cyana
+n	Volynkin, 2021
+r2	Volynkin, 2021
+l	Cyana (Cryptanaema) halmahera, a new species from the Maluku Islands (Lepidoptera: Erebidae: Arctiinae: Lithosiini)
+p	10.37828/em.2021.48.7
+a	sibela
+b	Cyana
+n	Volynkin, Černý & Vos, 2022
+o	Nigroplagata
+a	albimarginalis
+b	Cyana
+n	De Vos, 2017
+a	basialba
+s2	Chionaema
+a	inusitata
+s2	Chionaema
+a	melanoplagia
+s2	Chionaema
+a	molbakon
+b	Cyana
+n	De Vos, 2017
+a	nigroplagata
+s2	Chionaema
+a	zwieri
+b	Cyana
+n	De Vos, 2017
+o	Punctistrigosa
+a	devriesi
+b	Cyana
+n	De Vos, 2018
+r2	De Vos, 2018
+l	Cyana devriesi spec. nov., a new species from southern Papua (Erebidae, Arctiinae, Lithosiini), 2018
+p	10.19269/sugapa2018.11(1).02
+a	gracilis
+b	Cyana
+n	De Vos, 2017
+a	ngata
+b	Cyana
+n	Volynkin, Černý & Vos, 2022
+a	punctistrigosa
+s2	Chionaema
+g	Hectobrocha
+a	adoxa
+s2	Neobrocha
+a	multilinea
+a	pentacyma
+s	pentacnyma
+a	subnigra
+s2	Eutane
+g	Lexis
+a	bipunctigera
+g	Neobrocha
+a	obscura
+s2	Chionaema
+s2	Cyana
+s	phaeocyma
+g	Nephelomilta
+r2	Volynkin & Černý, 2018
+l	Revision of the genus Nephelomilta Hampson, 1900, with descriptions of twelve new species and two new subspecies (Lepidoptera, Erebidae, Arctiinae)
+p	10.11646/zootaxa.4472.3.1
+i	Nephelomilta
+a	suffusa
+b	Lyclene
+n	Hampson, 1891
+s4	Barsine fuscobarsine
+a	taprobana
+b	Gymnasura
+n	Hampson, 1901
+i	Kailasha
+o	Chalcedona
+a	chalcedona
+b	Cyana
+n	Černý, 2009
+a	diehli
+b	Nephelomilta
+n	Volynkin & Černý, 2018
+a	ferruginea
+b	Nephelomilta
+n	Volynkin & Černý, 2018
+o	Effracta
+c	effracta
+b	Barsine
+n	Walker, 1854
+s2	Chionaema
+s4	Chionaema effracta sumatrana
+s4	Chionaema karenkonis
+s4	Chionaema pusilla
+s4	Cyana angkorensis
+s2	Cyana
+s4	Cyana karenkonis
+s4	Cyana pseudoeffracta
+s4	Kailasha angkorensis
+s4	Kailasha babensis
+s2	Kailasha
+s4	Kailasha gulmargensis
+s4	Kailasha karenkonis
+s	hortensis fansipana
+k	admiranda
+k	angkorensis
+k	babensis
+k	bana
+k	effracta
+k	effractoida
+k	fangae
+k	fansipana
+k	gulmargensis
+k	hortensis
+k	kanchenjunga
+k	karenkonis
+k	klapperichi
+k	martini
+k	medogensis
+k	melli
+k	nu
+k	pseudoeffracta
+k	pusilla
+k	ranau
+k	sumatrana
+k	thomaswitti
+k	wangmini
+r	Volynkin, 2021
+l	Two new species of the genus Nephelomilta Hampson (Lepidoptera: Erebidae: Arctiinae) from China and Indonesia
+p	10.11646/zootaxa.5004.1.2
+r	Huang, 2023
+l	Contribution to the knowledge of the genus Nephelomilta Hampson, 1900 (Lepidoptera, Erebidae, Arctiinae) from China with descriptions of two new species
+p	10.11646/zootaxa.5351.5.2
+a	pellucida
+b	Chionaema
+n	Rothschild, 1936
+a	wolfgangspeideli
+b	Nephelomilta
+n	Volynkin & Černý, 2018
+a	yasunorikishidai
+b	Nephelomilta
+n	Huang & Wang, 2019
+r2	Huang & Wang, 2019
+l	A new species of the genus Nephelomilta Hampson, 1900 from Yunnan, China (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p2	0493-3168, 25(1)
 j	Cisthenina
-g	Aemene
+sh	Cisthenini
+sh	Eudesmiina
+sh	Eudesmiini
+sh	Eudesmina
+g	Abrochocis
+a	esperanza
+s2	Talara
+a	mona
+s2	Talara
+g	Antona
+a	diffinis
+a	dissimilipennis
+s2	Marsypophora
+a	myrrha
+a	repleta
+s2	Josiodes
+a	subluna
+a	toxaridia
+s2	Josiodes
+g	Ardonea
+a	dorsisigna
+s2	Balbura
+a	fasciata
+s2	Balbura
+a	intervenata
+s2	Balbura
+a	morio
+s4	Doracis coracina
+a	tenebrosa
+s2	Dipaenae
+g	Barsinella
+a	mirabilis
+g	Bruceia
+a	hubbardi
+a	laudamia
+b	Lithosia
+n	Druce, 1885
+s	peruviana
+s	pusa
+s2	Crambidia
+s4	Crambidia pusa
+s2	Diarhabdosia
+s4	Lithosia peruviana
+s4	Lithosia pusa
+a	pulverina
+g	Callisthenia
+a	angusta
+a	plicata
+a	ruberrima
+a	truncata
+a	variegata
+g	Chrysochlorosia
+a	callistia
+a	magnifica
+a	splendida
+s2	Ptychoglene
+a	superba
+g	Chrysozana
+a	croesus
 g	Cisthene
+a	abala
+s2	Illice
+a	angelus
+e	Angel Lichen Moth
+d	Engels-Flechtenbärchen
+b	Illice
+n	Dyar, 1904
+a	barnesii
+e	Barnes's Lichen Moth
+d	Barnes' Flechtenbärchen
+b	Illice
+n	Dyar, 1904
+s	barnesi
+a	blanda
+s2	Illice
+a	citrina
+s2	Illice
+a	conjuncta
+e	White-streaked Lichen Moth
+s2	Illice
+a	croesus
+s2	Illice
+a	deserta
+s4	Illice nexa
+a	dorsimacula
+s2	Illice
+a	endoxantha
+s2	Illice
+a	faustinula
+s2	Illice
+a	flagrans
+s2	Illice
+a	intacta
+s2	Illice citrina
+a	juanita
+e	Juanita's Lichen Moth
+d	Juanita's Flechtenbärchen
+b	Cisthene
+n	Barnes & Benjamin, 1925
+a	kentuckiensis
+e	Kentucky Lichen Moth
+d	Kentucky-Flechtenbärchen
+b	Illice
+n	Dyar, 1904
+a	liberomacula
+b	Illice
+n	Dyar, 1904
+a	lincea
+s2	Illice
+s2	Jorgensenia
+a	martini
+e	Martin's Lichen Moth
+d	Martins Flechtenbärchen
+b	Cisthene
+n	Knowlton, 1967
+s2	Eudesmia
 a	packardii
 e	Packard's Lichen Moth
 d	Packard's Flechtenbärchen
+b	Hypoprepia
+n	Grote, 1863
+s2	Illice
+a	perrosea
+s2	Illice
+a	persimilis
+s2	Illice
+a	picta
+s2	Illice
 a	plumbea
 e	Lead-colored Lichen Moth
 d	Amerikanisches Bleigraues Flechtenbärchen
+b	Cisthene
+n	Stretch, 1885
+s2	Illice
+a	polyzona
+s2	Illice
+a	striata
+s2	Illice
+a	subjecta
+s2	Illice
+a	subrufa
+e	Tamaulipan Lichen Moth
+d	Tamaulipan-Flechtenbärchen
+b	Ozodania
+n	Barnes & McDunnough, 1913
+s2	Illice
 a	tenuifascia
 e	Thin-banded Lichen Moth
 d	Gelbstrich-Flechtenbärchen
-g	Clemensia
-g	Damias
-g	Garudinia
+b	Cisthene
+n	Harvey, 1875
+s	schwarziorum
+s4	Illice schwarziorum
+s4	Ozodania schwarziorum
+u	schwarziorum
+a	tessellata
+s2	Illice
+a	triplaga
+s2	Illice
+a	unifascia
+e	Texan Lichen Moth
+e	Texanisches Lichen Moth
+g	Cloesia
+a	digna
+a	parthia
+g	Euthyone
+a	celenna
+s2	Thyone
+s2	Trichomelia
+a	dremma
+s2	Thyonaea
+s2	Thyone
+a	grisescens
+s2	Thyone
+a	perbella
+s2	Thyone
+a	purpurea
+s2	Thyone
+a	simplex
+s4	Lithosia alba
+s2	Thyone
+a	theodula
+s2	Thyone
+g	Dipaenae
+a	contenta
+s4	Zygaenopsis squamicornis
+a	ferruginosa
+b	Euchromia
+n	Walker, 1854
+g	Epitalara
+a	commixta
+b	Paratalara
+n	Schaus, 1911
+a	reversa
+b	Epitalara
+n	Schaus, 1905
+g	Eudesmia
+a	argentinensis
+e	Argentinian Lichen Moth
+s2	Cisthene
+s2	Eucyclopera
+s2	Vianania
+a	arida
+e	Arid Lichen Moth
+d	Dornbusch-Flechtenbär
+b	Ruscino
+n	Skinner, 1906
+s2	Eucyclopera
+a	australis
+s2	Cisthene
+s2	Vianania
+a	cypris
+a	lunaris
+s2	Cisthene
+s2	Ruscino
+a	menea
+e	Lunar Lichen Moth
+d	Mond-Flechtenbär
+b	Phalaena
+n	Drury, 1782
+s2	Cisthene
+s	laetifera
+s2	Ruscino
+a	quadrifasciata
+b	Gerba
+n	Walker, 1865
+s2	Cisthene
+a	ruficollis
+s2	Cisthene
+a	unicincta
+s2	Cisthene
+g	Gardinia
+a	anopla
+a	magnifica
+s2	Chrysocale
+g	Geriojennsa
+a	cunegunda
+b	Jorgensenia
+n	Schaus, 1924
+g	Haematomis
+a	mexicana
 g	Hypoprepia
+a	cadaverosa
+e	Cadaver Lichen Moth
+d	Kadaver-Flechtenbärchen
+b	Hypoprepia
+n	Strecker, 1878
 a	fucosa
 e	Painted Lichen Moth
 d	Buntes Flechtenbärchen
+b	Hypoprepia
+n	Hübner, 1831
+a	inculta
+s4	Cincia muelleri
+s	muelleri
+a	lampyroides
+b	Hyppoprepia
+n	Palting & Ferguson, 2018
+r	Palting, 2018
+l	A new species of Hypoprepia from the mountains of central Arizona (Lepidoptera, Erebidae, Arctiinae, Lithosiini)
+p	10.3897/zookeys.788.26885
 a	miniata
 e	Scarlet-winged Lichen Moth
 d	Purpur-Flechtenbärchen
+b	Lithosia
+n	Kirby, 1837
 g	Lycomorpha
+i	Lycomorpha
+a	fulgens
+b	Anatolmis
+n	Edwards, 1881
+s4	Ptychoglene tenuimargo
+a	grotei
+b	Anatolmis
+n	Packard, 1864
 a	pholus
 e	Black-and-yellow Lichen Moth
 d	Gelbschwarzes Flechtenbärchen
+b	Sphinx
+n	Drury, 1773
+a	regulus
+b	Anatolmis
+n	Grinnell, 1903
+a	splendens
+b	Lycomorpha
+n	Barnes & McDunnough, 1912
+i	Meterythrosia
+a	sangala
+b	Tuina
+n	Druce, 1885
+s2	Meterythrosia
 g	Lycomorphodes
-g	Macaduma
-g	Oxacme
-g	Padenia
+a	aurobrunnea
+s2	Nodozana
+a	bicolor
+a	correbioides
+a	flavipars
+a	reducta
+a	sordida
+s2	Leptidule
+a	strigosa
+a	suspecta
+a	tortricina
+g	Metallosia
+a	chrysotis
+a	nitens
+g	Metalobosia
+a	cuprea
+s2	Odozana
+a	subvarda
+s2	Arhabdosia
+a	varda
+s2	Odozana
+g	Neotalara
+a	metamelaena
+g	Neozana
+a	germana
+b	Odozana
+n	Rothschild, 1913
+g	Nodozana
+a	boudinoti
+a	coresa
+s4	Callisthenia prepielloides
+s	prepielloides
+a	endoxantha
+s2	Odozana
+a	fifi
+s2	Odozana
+a	flavicaput
+a	granvillei
+a	hieroglyphica
+s2	Odozana
+a	picturata
+a	rhodosticta
+s2	Prepiella
+a	thricophora
+a	toulgoeti
+g	Nudur
+a	fractivittarum
+g	Odozana
+a	floccosa
+a	methaemata
+a	sixola
+g	Palaeozana
+a	mida
+g	Paratalara
+a	inversa
+g	Paratype
+a	ira
+s2	Euryptidia
+s2	Ptychoglene
+a	trifera
+s2	Euryptidia
+a	univitta
+s2	Euryptidia
+g	Prepiella
+a	aurea
+a	auroides
+a	pexicera
+a	radicans
+a	sesapina
+a	strigipennis
+a	strigivenia
+g	Propyria
+a	atroxantha
+a	criton
+s2	Cisthene
+a	morelosia
+a	schausi
+s2	Lycomorpha
+g	Prototalara
+a	semiflava
 g	Ptychoglene
+a	aequalis
+s	haematodes
+a	coccinea
+s2	Lycomorpha
+a	erythropohora
+a	phrada
+s	flammans
+a	sanguineola
+a	xylophila
 g	Rhabdatomis
+a	cora
+s2	Diarhabdosia
+s4	Diarhabdosia coroides
+s	cora coroides
+a	draudti
+a	mandana
+s2	Diarhabdosia
+a	melinda
+s2	Diarhabdosia
+a	pusa
+a	zaba
+g	Rhodographa
+a	phaeoplaga
+g	Saozana
+a	leucota
+b	Odozana
+n	Hampson, 1901
+g	Talara
+a	albipars
+a	cara
+a	coccinea
+a	ditis
+a	falsimonia
+s2	Dolichesia
+a	ignibasis
+a	maroniensis
+s2	Hypermaepha
+s4	Talara roseata
+a	megaspila
+a	phaeella
+a	rubida
+a	rugipennis
+a	sanguinea
+s2	Hypermaepha
+a	togata
+g	Tuina
+a	cingulata
+b	Ituna
+n	Walker, 1854
+g	Urozana
+a	cordatula
+b	Odozana
+n	Druce, 1885
+g	Xantholopha
+a	purpurascens
+b	Xantholopha
+n	Schaus, 1899
+j	Sicciina
+h	Sicciiti
+g	Byrsia
+a	aurantiaca
+s2	Hypocrita
+a	dotata
+g	Damias
+a	albata
+a	androconiata
+a	elegans
+a	leptosema
+s2	Caprimima
+s2	Chiriphe
+a	mixta
+s2	Caprima
+s2	Caprimima
+a	pelochroa
+e	Elusive Footman
+s2	Caprimima
+s2	Chiriphe
+a	peraffinis
+s2	Caprimima
+a	procrena
+s2	Caprima
+s2	Chiriphe
+a	pseudogelida
+s2	Caprimima
+a	sicciodes
+s2	Caprimima
+s2	Chiriphe
+g	Garudinia
+a	bimaculata
+a	biplagiata
+a	latana
+a	macrolatana
+a	simulana
+a	taioana
+g	Garudinistis
+a	cumcuneusa
+a	eburneana
+g	Garudinodes
+a	bilineata
+s2	Garudinistis
+a	trizona
+g	Halone
+a	ariadna
+a	bifornica
+a	consolatrix
+b	Mosoda
+n	Rosenstock, 1885
+a	coryphoea
+a	dissimulata
+a	ebaea
+a	prosenes
+a	pteridaula
+b	Eurypepla
+n	Turner, 1922
+a	sejuncta
+e	Bird Dropping Lichen Moth
+d	Vogelschmeiß-Flechtenbärchen
+b	Pitane
+n	Felder & Rogenhofer, 1875
+a	servilis
+b	Mosoda
+n	Meyrick, 1886
+a	sinuata
+e	Rock Lichen Moth
+d	Australisches Felsen-Flechtenbärchen
+b	Setina
+n	Wallengren, 1860
+s4	Mosoda anartioides
+g	Lobobasis
+a	niveimaculata
+b	Lobobasis
+n	Hampson, 1896
+g	Macaduma
+a	borneana
+a	costimacula
+s2	Nacaduba
+a	macrosema
+a	malayana
+a	pallicosta
+s4	Nacaduma nigricans
+a	rufoumbrata
+a	striata
+a	strongyla
+s2	Neoduma
+a	tortricella
+a	toxophora
+s2	Psapharacis
+g	Neoduma
+a	ectozona
+a	kuangtungensis
+s2	Siccia
+g	Neoscaptia
+a	collateralis
+a	fascionitens
+g	Neosiccia
+a	accurata
+g	Oxacme
+a	commotoides
+a	cretacea
+s2	Macaduma
+a	dissimilis
+a	marginata
+a	umbrodorsum
+g	Padenia
+a	duplicana
+s4	Garudinia bifasciata
+s4	Garudinia bizonata
+a	obliquifascia
+a	transversa
+b	Cyllene
+n	Walker, 1854
+g	Palaeosiccia
+g	Parascaptia
+a	biplagata
+s	trifasciata
+g	Prosiccia
+a	albescens
+a	trifasciata
+g	Pseudoblabes
+a	nigrisquamata
+s4	Melastrota dona
+s2	Melastrota
+s	dona
+a	oophora
+g	Scaphidriotis
+a	camptopleura
+s2	Halone
+s2	Neoduma
+s2	Psapharacis
+a	xylogramma
+s2	Halone
 g	Scaptesyle
+a	aurigena
+a	bicolor
+s4	Dichromia nietneri
+a	buergersi
+a	dichotoma
+e	Reticulated Footman
+d	Netz-Flechtenbärchen
+b	Chiriphe
+n	Meyrick, 1886
+a	dictyota
+b	Chiriphe
+n	Meyrick, 1886
+a	equidistans
+b	Comarchis
+n	Lucas, 1890
+s2	Chiriphe
+a	mirabilis
+a	monogrammaria
+s2	Chiriphe
+a	tetramita
+s2	Chiriphe
+g	Siccia
+a	adiaphora
+a	agitata
+s2	Aemene
+a	alba
+s2	Aemene
+s2	Darantasia
+s2	Heliosia
+s2	Poliosia
+a	altaica
+s2	Aemene
+s2	Parasiccia
+a	anserina
+a	atriguttata
+a	bicolorata
+a	caffra
+e	Speckled Grey Footman
+d	Getüpfeltes Flechtenbärchen
+b	Siccia
+n	Walker, 1854
+a	carinata
+a	clarimaculata
+s2	Aemene
+a	coniuncta
+s2	Aemene
+a	copaeninsulana
+s2	Aemene
+a	cretata
+a	dentata
+s2	Aemene
+s2	Hyposiccia
+s2	Parasiccia
+a	duodecimpunctata
+a	eberti
+a	exilisioides
+a	faucaria
+a	foya
+a	fukudai
+s2	Aemene
+a	glaerea
+s2	Aemene
+a	guttulosana
+s2	Aemene
+a	gypsia
+a	laszloi
+s2	Aemene
+a	malfakassa
+a	margopuncta
+a	marmorosa
+s2	Aemene
+a	mayombe
+a	melanospila
+a	mesozonata
+s2	Aemene
+s2	Hyposiccia
+a	micromesozona
+s2	Aemene
+a	microsticta
+a	minuta
+s2	Aemene
+a	mokanshanensis
+s2	Aemene
+s2	Parasiccia
+a	nilgirica
+s2	Aemene
+a	nzame
+a	obscura
+s2	Aemene
+s2	Eugoa
+a	overlaeti
+a	pallidata
+a	punctigera
+s2	Aemene
+s2	Hyposiccia
+a	punctilinea
+s2	Aemene
+s2	Parasiccia
+a	punctipennis
+s4	Autoceras nigropunctana
+s	nigropunctana
+a	pyralina
+s2	Chionaema
+a	quinquefascia
+s2	Aemene
+s3	sordida
+a	sagittifera
+s2	Aemene
+a	seriata
+s2	Aemene
+a	setis
+a	shikatai
+s2	Aemene
+a	somodyi
+s2	Aemene
+a	sordida
+s2	Aemene
+a	spotoptera
+s2	Aemene
+a	stellatus
+s2	Aemene
+a	taiwana
+s2	Aemene
+s2	Hyposiccia
+a	takahashii
+s2	Aemene
+a	taprobanis
+s4	Aemene nigropunctana
+s2	Aemene
+a	tau
+s2	Aemene
+a	tenebrosa
+s2	Aemene
+a	tripunctata
+s2	Aemene
+a	usambara
+g	Sicciaemorpha
+a	ivyalba
+g	Stenoscaptia
+a	aroa
+s2	Garudinistis
+a	fovealis
+a	venusta
+s2	Mosoda
+g	Stictosia
+a	crocea
+a	flava
+s2	Siccia
+a	flexilisana
+a	montana
+g	Tortricosia
+a	blanda
+s2	Mellona
+a	classeyi
+a	excisa
+a	pallidexcisa
+g	Utriculofera
+a	endaurompinata
+a	fuscapex
+a	tenebrarum
+a	variegata
+h	Clemensiiti
+g	Clemensia
+c	albata
+e	Little White Lichen Moth
+d	Amerikanisches Flechtenbärchen
+b	Clemensia
+n	Packard, 1864
+k	albata
+k	ochreata
+k	umbrata
+r2	Schmidt & Sullian, 2018
+l	Three species in one: a revision of Clemensia albata Packard (Erebidae, Arctiinae, Lithosiini)
+p	10.3897/zookeys.788.26048
+a	cernitis
+a	cincinnata
+a	donuca
+s	domica
+s4	Eudule domica
+s2	Eudule
+a	leopardina
+a	marmorata
+s2	Calligenia
+a	panthera
+a	quinqueferana
+g	Pronola
+a	ectrocta
+a	magniplaga
+a	perdiffusa
+j	Phryganopterygiina
+g	Phryganopteryx
+a	strigilata
+j	Heliosiina
+g	Heliosia
+a	jucunda
+a	micra
 y	Herminiinae
 e2	Litter Moths
 d2	Spannereulen
@@ -48120,6 +53189,7 @@ a	milhauseri
 e	Tawny Prominent
 d	Pergament-Zahnspinner
 d	Pergamentspinner
+s2	Harpya
 g	Kamalia
 a	australis
 e	Australian Puss Moth
@@ -48182,6 +53252,8 @@ a	bucephala
 e	Buff-tip
 d	Mondvogel
 d	Mondfleck
+b	Phalaena
+n	Linnaeus, 1758
 a	bucephaloides
 e	Eastern Buff-tip
 d	Östlicher Mondvogel
@@ -48266,6 +53338,8 @@ g	Brachyglene
 g	Chrysoglossa
 g	Dioptis
 g	Euchontha
+g	Hadesina
+a	caerulescens
 g	Isostyla
 g	Monocreaga
 g	Nebulosa
@@ -48279,6 +53353,7 @@ g	Phanoptis
 a	cyanomelas
 e	Glassy Day-flying Moth
 d	Gläserner Tagspinner
+a	vitrina
 g	Phryganidia
 a	californica
 e	California Oak Moth
@@ -48466,20 +53541,67 @@ g	Geometra
 a	papilionaria
 e	Large Emerald
 d	Grünes Blatt
+b	Phalaena
+n	Linnaeus, 1758
+s2	Hipparchus
+s4	Hipparchus papilionarius
 g	Mixochlora
 t	Nemoriini
 j	Nemoriina
+g	Chlorocoma
+a	vertumnaria
+e	Australian Red-fringed Emerald
 g	Dichorda
 a	iridaria
 e	Showy Emerald
 d	Prächtiger Grünspanner
 g	Hydata
 g	Nemoria
+a	bistriaria
+e	American Red-fringed Emerald
+d	Amerikanischer Grünspanner
+a	darwiniata
+e	Columbian Emerald
+e	Darwin's Green
+d	Darwin's Grünspanner
+a	elfa
+e	Cypress Emerald
+d	Zypressen-Grünspanner
+a	lixaria
+e	Red-bordered Emerald
+d	Rotrandiger Grünspanner
+a	mimosaria
+e	White-fringed Emerald
+a	saturiba
+e	Braided Emerald
+a	zygotaria
+e	Texas Emerald
+d	Texanischer Grünspanner
 g	Phrudocentra
 g	Rhodochlora
 g	Synchlora
+a	aerata
+e	Wavy-lined Emerald
+e	Camouflaged Looper
+d	Nordamerikanischer Grünspanner
+a	frondaria
+e	Southern Emerald
+d	Südamerikanischer Grünspanner
+a	gerularia
+e	Baccharis Emerald
+d	Baccharis-Grünspanner
 j	Eucyclodina
 g	Eucyclodes
+a	insperata
+e	Lacy Emerald
+a	metaspila
+e	Inscribed Emerald
+e	Gumtree Bizarre Looper
+d	Eukalyptus-Grünspanner
+a	pieroides
+e	Bizarre Looper
+d	Australischer Grünspanner
+a	semialba
 t	Comibaenini
 g	Comibaena
 a	bajularia
@@ -48492,9 +53614,15 @@ e	Essex Emerald
 d	Smaragd-Grünspanner
 d	Smaragdspanner
 t	Archaeobalbini
+sh	Terpnini
 g	Dindica
 g	Herochroma
+a	cristata
+s2	Actenochroma
+s2	Archaeobalbis
 g	Lophophelma
+a	calaurops
+s2	Terpna
 g	Metallolophia
 t	Dysphaniini
 e2	False Tiger Moths
@@ -48531,77 +53659,416 @@ a	transducta
 e	Smaller Blue Day Moth
 d	Kleiner Tigerspanner
 t	Pseudoterpnini
+sh	Pingasini
+g	Aeolochroma
+g	Hypobapta
+a	tachyhalotaria
+g	Hypodoxa
 g	Pingasa
+a	chlora
+e	White Looper
+a	ruginaria
 g	Pseudoterpna
+a	coronillaria
+e	Jersey Emerald
+e	Gorse Emerald
+d	Grauer Grünspanner
+b	Geometra
+n	Hübner, 1817
+a	pruinata
+e	Grass Emerald
+d	Ginster-Grünspanner
+b	Phalaena
+n	Hufnagel, 1767
+g	Tanaorhinus
 t	Hemitheini
 j	Hemitheina
 g	Chlorissa
+c	viridata
+e	Small Grass Emerald
+d	Steppenheiden-Grünspanner
+b	Phalaena
+n	Linnaeus, 1758
+k	cloraria
+k	viridata
+g	Chlorochlamys
+a	chloroleucaria
+e	Blackberry Looper
+d	Brombeer-Grünspanner
+a	phyllinaria
+e	Thin-lined Emerald
 g	Chloropteryx
+a	opalaria
+e	Mottled Opal
+a	tepperaria
+e	Angle-winged Emerald
 g	Hemithea
+a	aestivaria
+e	Common Emerald
+d	Gebüsch-Grünspanner
+b	Phalaena
+n	Hübner, 1789
+c	neptunaria
+s	vivida
+k	insularia
+k	neptunaria
+k	tritonaria
+g	Mesothea
+a	incertata
+e	Day Emerald
+d	Tag-Grünspanner
 g	Microloxia
+a	herbaria
 g	Mixocera
+a	latilineata
+e	Side-lined Emerald
 g	Petovia
 g	Prasinocyma
 g	Thalera
+a	fimbrialis
+e	Sussex Emerald
+d	Magerrasen-Grünspanner
+a	pistasciaria
+e	Pistachio Emerald
+d	Pistazien-Grünspanner
 g	Xerochlora
 j	Jodiina
 g	Berta
 g	Comostola
+a	chlorargyra
+a	laesaria
+a	leucomerata
+a	meritaria
+a	pyrrhogona
+a	subtiliaria
 g	Comostolopsis
+a	stillata
+e	Pink-laced Emerald
+d	Afrikanischer Punkt-Grünspanner
 g	Hemistola
+a	chrysoprasaria
+e	Small Emerald
+d	Waldreben-Grünspanner
+d	Grüner Waldrebenspanner
 g	Jodis
 a	lactearia
 e	Little Emerald
 d	Laubwald-Grünspanner
+a	putata
+e	Bilberry Emerald
+d	Heidelbeer-Grünspanner
+d	Blassgrüner Heidelbeerspanner
 g	Maxates
+a	centrophylla
+a	coelataria
+a	dysides
+a	korintjiensis
+a	multitincta
+a	orthodesma
+a	protrusa
+a	tanygona
+a	thetydaria
 g	Orothalassodes
 g	Pelagodes
+a	antiquadraria
 g	Thalassodes
 j	Crypsiphonina
 g	Crypsiphona
+a	ocultaria
+e	Red-lined Looper
 t	Agathiini
 g	Agathia
+a	carissima
+a	codina
+a	hemithearia
+a	laetata
+a	lycaenaria
+a	pisina
+a	prasinaspis
+a	visenda
 y	Eumeleinae
 sh	Eumeleini
 g	Eumelea
+a	biflavata
+a	florinata
+a	ludovicata
+a	obesata
+a	rosalia
+a	rubrifusa
 y	Oenochrominae
 d2	Australische Spanner
 t	Oenochromini
 g	Dinophalus
+a	serpentaria
 g	Hypographa
+a	epiodes
+a	postcarneata
+s2	Oenochroma
 g	Lissomma
 g	Oenochroma
+a	alpina
+a	barcodificata
+e	Mountain Wine Moth
+a	celidophora
+a	cerasiplaga
+e	Green Wine Moth
+d	Grüner Silbereichenspanner
+a	cycnoptera
+e	Dry-country Wine Moth
+s2	Monoctenia
+a	decolorata
+a	infantilis
+a	lissoscia
+a	ochripennata
+a	orthodesma
+s2	Monoctenia
+a	pallida
+e	Pale Wine Moth
+d	Blasser Silbereichenspanner
+s4	Monoctenia pallidula
+a	phyllomorpha
+s2	Monoctenia
+a	polyspila
+s2	Monoctenia
+a	privata
+a	quardrigramma
+s2	Galanageia
+a	subustaria
+e	Grey Wine Moth
+d	Grauer Silbereichenspanner
+a	turneri
+e	Turner's Wine Moth
+d	Turner's Macadamiaspanner
+a	vetustaria
+e	Ribbed Wine Moth
 a	vinaria
+e	Hakea Wine Moth
 e	Pink-Bellied Moth
 e	Grevillea Looper
 e	Hakea Moth
 d	Silbereichenspanner
+g	Phallaria
+a	ophiusaria
+e	Large Leaf Moth
+d	Großer Nadelkissenspanner
 g	Sarcinodes
+g	Xyridacma
+a	alectoraria
+e	Five-Finger Looper
+a	ustaria
+e	Tarata Looper
+a	veronicae
+e	Large Hebe Looper
+g	Zeuctophlebia
+a	squalidata
+e	Forest Heath Moth
 t	Gastrophorini
+d2	Eukalyptusspanner
 g	Antictenia
+a	punctunculus
 g	Arhodia
+a	lasiocamparia
+e	Pink Arhodia
+d	Rosafarbener Eukalyptusspanner
+g	Cernia
+a	amyclaria
+g	Circopetes
+a	obtusata
+e	Broken Leaf Moth
+d	Blattflügel-Eukalyptusspanner
+s4	Arhodia modesta
 g	Gastrophora
 a	henricaria
 e	Fallen Bark Looper
 e	Beautiful Leaf Moth
 d	Prächtiger Eukalyptusspanner
+g	Homospora
+a	rhodoscopa
 g	Monoctenia
+a	falernaria
+e	Patched Leaf Moth
+d	Gefleckter Eukalyptusspanner
+s	fraternaria
+a	smerintharia
+e	Dark Leaf Moth
+d	Dunkler Eukalyptusspanner
+g	Nearcha
+a	dasyzona
+s2	Taxeotis
 g	Onycodes
+a	rubra
+a	traumataria
+e	Small Twisted Moth
 g	Parepisparis
+a	brevidactyla
+a	crenulata
+a	excusata
+e	Marbled Twisted Moth
+d	Marmorierter Eukalyptusspanner
+a	lutosaria
+e	Bright Twisted Moth
+d	Variabler Eukalyptusspanner
+a	multicolora
+s2	Onychodes
+a	pallidus
+a	rutila
+s2	Peratodactyla
+a	virgatus
+e	Brown Twisted Moth
+d	Brauner Eukalyptusspanner
+g	Tapinogyna
+a	perichroa
+e	Tan Heath Moth
+s2	Darantasia
+g	Taxeotis
+a	adelia
+a	adelpha
+a	celidora
+e	Black-band Taxeotis
+a	didymosticha
+e	Twins' Taxeotis
+a	egenata
+a	endela
+a	epigaea
+a	exsectaria
+e	Ochre-headed Taxeotis
+a	intermixtaria
+e	Dark-edged Taxeotis
+a	intextata
+e	Grey Taxeotis
+a	mimela
+e	Brown Taxeotis
+a	perlinearia
+e	Spring Taxeotis
+a	philodora
+a	pleurostigma
+a	reserata
+e	Neat Taxeotis
+a	stereospila
+e	Oval-spot Taxeotis
+a	xanthogramma
+e	Orange-spotted Taxeotis
+g	Thaumatographe
+a	singularis
 y	Ennominae
+e2	Thorn Moths
 d2	Zackenspanner
 t	Ennomini
+g	Acronyctodes
+a	mexicanaria
+e	Tepozán Moth
+d	Mexikanischer Zackenspanner
+g	Antepione
+a	thisoaria
+e	Variable Antepione
+d	Variabler Zackenspanner
 g	Besma
+a	endropiaria
+e	Straw Besma
+d	Strohfarbener Besmaspanner
+a	quercivoraria
+e	Oak Besma
+d	Eichen-Besmaspanner
 g	Caripeta
+a	aequaliaria
+e	Western Conifer Looper
+e	Red Girdle
+d	Westlicher Kiefernspanner
+a	divisata
+e	Gray Spruce Looper
+d	Grauer Fichtenspanner
+a	piniata
+e	Northern Pine Looper
+d	Neuengland-Kiefernspanner
+g	Cingilia
+a	catenaria
 g	Crocallis
+a	elinguaria
+e	Scalloped Oak Moth
+d	Heller Schmuckspanner
+a	tusciaria
+d	Schlehen-Schmuckspanner
+d	Dunkler Schmuckspanner
+d	Waldreben-Schmuckspanner
 g	Ennomos
+a	alniaria
+e	Canary-shouldered Thorn
+d	Erlen-Zackenrandspanner
+b	Phalaena
+n	Linnaeus, 1758
+a	autumnaria
+e	Large Thorn
+d	Herbst-Zackenrandspanner
+d	Herbstlaubspanner
+a	erosaria
+e	September Thorn
+d	Birken-Zackenrandspanner
+d	Birken-Zackenspanner
+a	fuscantaria
+e	Dusky Thorn
+d	Eschen-Zackenrandspanner
+a	magnaria
+e	Maple Spanworm Moth
+d	Ahorn-Zackenrandspanner
+a	quercinaria
+e	August Thorn
+d	Eichen-Zackenrandspanner
+a	subsignaria
+e	Elm Spanworm Moth
+d	Ulmen-Zackenrandspanner
 g	Eugonobapta
+a	nivosaria
+e	Snowy Thorn
+d	Schneeweißer Zackenspanner
 g	Eusarca
+a	confusaria
+e	Confused Eusarca
+d	Amerikanischer Zackenspanner
 g	Eutrapela
+a	clemataria
+e	Curve-toothed Thorn
+d	Wellenrand-Zackenspanner
+g	Isochromodes
 g	Lambdina
+a	fervidaria
+e	Curved-lined Looper
+d	Rundflügel-Zackenspanner
+a	fiscellaria
+e	Hemlock Looper
+e	Mournful Thorn
+d	Hemlock-Zackenspanner
+g	Lychnosea
+a	intermicata
+e	Speckled Lamplighter
+g	Nematocampa
+a	resistaria
+e	Horned Spanworm Moth
+e	Filament Bearer
+e	Bordered Chequer
+g	Neoterpes
+a	edwardsata
+a	trianguliferata
+e	Canary Thorn
+d	Blassgelber Zackenspanner
+g	Nepheloleuca
+a	politia
 g	Nepytia
+a	canosaria
+e	False Hemlock Looper
+d	Falscher Hemlock-Zackenspanner
+a	phantasmaria
+e	Phantom Hemlock Looper
+d	Phantom-Hemlock-Zackenspanner
 g	Ourapteryx
+a	sambucaria
+e	Swallow-tailed Moth
+d	Nachtschwalbenschwanz
+d	Holunderspanner
+b	Phalaena
+n	Linnaeus, 1758
 g	Oxydia
+a	trychiata
+a	vesulia
 g	Pantherodes
 c	pardalaria
 e	Blotched Leopard
@@ -48613,63 +54080,244 @@ k	unciaria
 g	Paragonia
 a	cruraria
 g	Patalene
+a	aenetusaria
+a	olyzonaria
+e	Juniper Thorn
+d	Wacholder-Zackenspanner
+g	Plataea
 g	Prochoerodes
+a	lineola
+e	Large Maple Spanworm Moth
+d	Großer Ahorn-Zackenspanner
+g	Sabulodes
+a	aegrotata
+e	Omnivorous Looper
 g	Selenia
+a	alciphearia
+e	Brown-tipped Thorn
+d	Kanadischer Mondfleckspanner
+a	dentaria
+e	Early Thorn
+d	Dreistreifiger Mondfleckspanner
+a	kentaria
+e	Kent's Thorn
+d	Kent's Mondfleckspanner
+a	lunularia
+e	Lunar Thorn
+d	Zweistreifiger Mondfleckspanner
+a	tetralunaria
+e	Purple Thorn
+d	Violettbrauner Mondfleckspanner
+g	Sericoptera
+a	mahometaria
+g	Sicya
+a	macularia
 g	Tetracis
+a	cachexiata
+e	White Slant-line
+a	cervinaria
+a	crocallata
+e	Yellow Slant-line
+a	jubararia
+e	October Thorn
+d	Kalifornischer Zackenspanner
 t	Nacophorini
 j	Nacophorina
 g	Chlenias
+a	banksiaria
 g	Dysbatus
+a	singularis
+a	stenodesma
 g	Melanodes
+a	anthracitaria
+e	Black Geometrid
+d	Australischer Schwarzspanner
 g	Phaeoura
+a	quernaria
+e	American Oak Beauty
+d	Amerikanischer Eichenspanner
 g	Thyrinteina
 a	arnobia
 j	Perina
 g	Pero
+a	amanda
+a	ancetaria
+e	Hübner's Pero
+d	Hübner's Perospanner
+a	behrensaria
+e	Behr's Pero
+d	Behr's Perospanner
+a	circumflexata
+a	clana
+a	clysiaria
+a	honestaria
+e	Honest Pero
+d	Gewöhnlicher Perospanner
+a	melissa
+a	meskaria
+e	Meske's Pero
+d	Meske's Perospanner
+a	mizon
+e	Californian Pero
+d	Kalifornischer Perospanner
+a	morrisonaria
+e	Morrison's Pero
+d	Morrison's Perospanner
+a	odonaria
+a	poaphilaria
+a	polygonaria
+a	saturata
+a	vera
+a	xylinaria
 g	Praeantarctia
 t	Gnophini
 j	Gnophina
 g	Angerona
+a	prunaria
+e	Orange Moth
+d	Schlehenspanner
+d	Pflaumenspanner
+b	Phalaena
+n	Linnaeus, 1758
 g	Charissa
+a	ambiguata
+d	Ungebänderter Steinspanner
+s2	Gnophos
+s2	Kemtrognophos
+a	glaucinaria
+d	Grüngraugebänderter Felsen-Steinspanner
+d	Fetthennen-Steinspanner
+s2	Gnophos
+a	mucidaria
+s2	Euchrognophos
+a	obscurata
+e	Annulet
+d	Trockenrasen-Steinspanner
+s2	Gnophos
+a	predotae
+s2	Gnophos
+s2	Kemtrognophos
+a	pullata
+e	Lmestone Annulet
+d	Hellgebänderter Steinspanner
+s2	Costignophos
+s2	Gnophos
 g	Euchlaena
+a	amoenaria
+e	Deep Yellow Euchlaena
+a	irraria
+e	Least-marked Euchlaena
+a	johnsonaria
+e	Johnson's Euchlaena
+a	marginaria
+e	Ochre Euchlaena
+a	muzaria
+a	obtusaria
+e	Obtuse Euchlaena
+a	serrata
+e	Saw-wing Moth
+d	Sägezahnspanner
+a	tigrinaria
+e	Mottled Euchlaena
 g	Gnophos
+a	furvata
+d	Großer Steinspanner
+d	Aschgrauer Steinspanner
+a	obfuscata
+e	Scotch Annulet
+d	Heidelbeer-Steinspanner
 g	Lytrosis
+a	permagnaria
+a	unitaria
+e	Common Lytrosis
+d	Lytrosis-Spanner
 g	Menophra
 g	Phthonandria
 g	Psyra
 g	Siona
+a	lineata
+e	Black-veined Moth
+d	Hartheuspanner
+d	Schwarzaderspanner
 g	Synopsia
+g	Xanthotype
+a	sospeta
+e	Crocus Geometer Moth
+d	Safranspanner
+s	urticaria
 j	Gonodontina
+sh	Gonodontini
 g	Gonodontis
+a	clelia
+a	pallida
 g	Odontopera
+a	bidentata
+e	Scalloped Hazel
+d	Doppelzahnspanner
+d	Zahnrandspanner
+s2	Gonodontis
 g	Xenimpia
+a	erosa
+e	Ragged Thorn
+e	Ragged Wisp Wing
 g	Xylinophylla
 j	Aspitatina
+sh	Aspitatini
 g	Aspitates
+a	gilvaria
+e	Straw Belle
+d	Einstreifiger Trockenrasenspanner
+a	ochrearia
+e	Yellow Belle
+d	Gelber Küstenspanner
 g	Dyscia
+a	fagaria
+e	Grey Scalloped Bar
+d	Heidekraut-Fleckenspanner
+a	penulataria
 t	Campaeini
 j	Campaeina
 g	Adalbertia
+a	castiliaria
 g	Campaea
 a	margaritaria
 e	Light Emerald
 d	Silberblatt
 d	Perlglanzspanner
+b	Phalaena
+n	Linnaeus, 1761
 a	perlata
 e	American Light Emerald
 e	Pale Beauty
 d	Amerikanisches Silberblatt
+b	Metrocampa
+n	Guenée, 1858
 g	Gerinia
+a	honoraria
+e	Embellished Thorn
+d	Rötlichbrauner Eichenspanner
 g	Hylaea
+a	fasciaria
+e	Barred Red
+d	Zweibindiger Nadelwaldspanner
 g	Pungeleria
+a	capreolaria
+d	Brauner Nadelwaldspanner
 j	Prosopolophina
+sh	Prosopolophini
 g	Alsophila
 g	Colotois
 g	Compsoptera
+a	jourdanaria
+a	opacaria
 g	Himeromima
+a	aulis
 g	Wilemania
 t	Declanini
 g	Declana
+a	floccosa
+e	Forest Semilooper
+d	Neuseeländischer Waldspanner
 t	Diptychini
 g	Amelora
 g	Archephanes
@@ -48677,10 +54325,15 @@ a	zalosema
 g	Argyrophora
 g	Callioratis
 g	Capusa
+a	senilis
 g	Furcatrox
 g	Hebdomophruda
 g	Homochlodes
+a	fritillaria
 g	Idiodes
+a	apicata
+e	Australian Bracken Moth
+d	Australischer Adlerfarnspanner
 g	Ischalis
 g	Loxaspilates
 g	Mictodoca
@@ -48688,12 +54341,35 @@ g	Niceteria
 a	macrocosma
 g	Pachycnemia
 g	Pareclipsis
+g	Perigune
+a	convergata
+a	narbonea
 g	Petrophora
+a	chlorosata
+e	Brown Silver-line
+d	Common Bracken Moth
+d	Moorwald-Adlerfarnspanner
+d	Adlerfarnspanner
+a	subaequaria
+e	Canadian Bracken Moth
+d	Kanadischer Adlerfarnspanner
 g	Psilaspilates
 g	Sestra
 g	Tacparia
+a	detersata
+e	Pale Alder Moth
 g	Thalaina
+a	angulosa
+e	Angled Satin Moth
+d	Gezackter Satinspanner
+a	clara
+e	Clara's Satin Moth
+d	Clara's Satinspanner
+a	selenaea
+e	Orange-rimmed Satin Moth
+d	Orangerandiger Satinspanner
 g	Thallophaga
+a	hyperborea
 g	Veniliodes
 g	Zerenopsis
 t	Theriini
@@ -48712,75 +54388,350 @@ a	vestaliata
 e	White Spring Moth
 d	Silberweißer Weißspanner
 g	Theria
+a	primaria
+e	Early Moth
+d	Früher Schlehenbusch-Winterspanner
+a	rupicapraria
+d	Später Schlehenbusch-Winterspanner
 j	Oenoptilina
+sh	Oenoptilini
 g	Oenoptila
 j	Erastriina
 g	Erastria
+a	cruentaria
+e	Thin-Lined Erastria
+a	decrepitaria
 g	Metarranthis
+a	amyrisaria
+a	angularia
+e	Angled Metarranthis
+a	duaria
+e	Ruddy Metarranthis
+a	homuraria
+e	Purplish Metarranthis
+a	hypochraria
+e	Common Metarranthis
+a	indeclinata
+e	Pale Metarranthis
+a	obfirmaria
+e	Yellow-washed Metarranthis
+a	refractaria
+e	Refracted Metarranthis
 j	Plutodina
+sh	Plutodini
+g	Microplutodes
+a	hilaropa
+s2	Plutodes
+a	iridaria
+s2	Plutodes
 g	Plutodes
+a	argentilauta
+a	costatus
+a	cyclaria
+a	evaginata
+a	exquisita
+a	flavescens
+a	lamisca
+a	malaysiana
+e	Dog's Paw Moth
+d	Pfotenspanner
+a	moultoni
+a	pseudocyclaria
+a	subcaudata
+a	transmutata
+a	unidentata
 j	Palyadina
+sh	Palyadini
 g	Argyrotome
 a	muricolor
 a	prospectata
+g	Ophthalmoblysis
+a	plutus
 g	Opisthoxia
+a	amabilis
+s2	Ophthalmophora
+a	archidiaria
+s2	Ophthalmophora
+a	asopis
+s2	Ophthalmophora
+a	bella
+s2	Ophthalmophora
+a	bolivari
+s2	Ophthalmophora
+a	branickiaria
+s2	Ophthalmophora
+a	claudiaria
+a	cluana
+s2	Ophthalmophora
+a	corinnaria
+a	descimoni
+s2	Ophthalmophora
+a	eusiraria
+s2	Ophthalmophora
+a	formosante
+a	haemon
+s2	Ophthalmophora
+a	hybridata
+s2	Ophthalmophora
+a	laticlava
+a	metargyria
+s2	Phrygionis
+a	miletia
+s2	Byssodes
+a	molpadia
+s2	Ophthalmophora
+a	phrynearia
+s2	Ophthalmophora
+a	salubaea
+a	saturniaria
+s2	Byssodes
+s2	Phrygionis
+s2	Ratiaria
+a	trimaculata
+s2	Ophthalmophora
+a	uncinata
+s2	Ophthalmophora
 g	Palyas
+a	divitaria
+a	leprosa
+a	micacearia
+a	pallicosta
+s2	Ophthalmophora
 g	Phrygionis
+a	paradoxata
+e	Jeweled Satyr Moth
+e	Silvery Phrygionis
+a	platinata
+s2	Byssodes
+s2	Ratiaria
+a	polita
+a	privignaria
 g	Pityeja
+a	histrionaria
+a	nazada
+s2	Aplorama
+s2	Byssodes
 g	Rindgeria
+a	ornata
+s2	Pityeja
 t	Epionini
 j	Epionina
 g	Apeira
+a	syringaria
+e	Lilac Beauty
+d	Fliederspanner
 g	Epione
 a	repandaria
+e	Bordered Beauty
+d	Weiden-Saumbandspanner
 a	vespertaria
+e	Dark Bordered Beauty
+d	Espen-Saumbandspanner
 g	Metanema
+a	determinata
+e	Dark Metanema
+a	inatomaria
+e	Pale Metanema
+d	Yellow-lined Thorn
 g	Opisthograptis
 a	luteolata
 e	Brimstone Moth
 d	Gelbspanner
 d	Zitronenspanner
+b	Phalaena
+n	Linnaeus, 1758
 g	Pseudopanthera
 a	macularia
 e	Speckled Yellow
 d	Pantherspanner
 d	Gelber Fleckenspanner
+b	Phalaena
+n	Linnaeus, 1758
 j	Sericosemina
 g	Ithysia
 a	pravata
 g	Sericosema
 a	juturnaria
+e	Bordered Fawn Moth
 j	Anagogina
+sh	Anagogini
 g	Plagodis
+a	alcoolaria
+e	Hollow-spotted Plagodis
 a	dolabraria
 e	Scorched Wing
 d	Hobelspanner
+a	fervidaria
+e	Fervid Plagodis
+a	kuetzingi
+e	Purple Plagodis
+a	phlogosaria
+e	Straight-lined Plagodis
 a	pulveraria
 e	Barred Umber
 d	Pulverspanner
+s2	Anagoga
+a	serinaria
+e	Lemon Plagodis
 g	Probole
 a	amicaria
+e	Friendly Probole
 j	Hypochrosina
+sh	Hypochrosini
 g	Achrosis
+a	costimaculata
+a	incitata
+a	intexta
+a	pulchricolor
+a	rondelaria
+a	rufescens
 g	Celenna
+a	festivaria
+s2	Hypochrosis
+g	Capasa
+a	recensata
 g	Corymica
+a	arnearia
+a	deducta
+a	pryeri
+a	spatiosa
 g	Epigynopteryx
 g	Fascellina
+a	chromataria
+a	clausaria
+a	plagiata
 g	Garaeus
+a	apicata
+s	apicatus
+a	colorata
+a	conspicienda
+a	cruentatus
+s	sikkima
+a	mirandus
+a	specularis
 g	Genusa
+a	bigutta
+a	simplex
 g	Heterolocha
+a	aristonaria
+a	coccinea
+a	patalata
+s2	Apoheterolocha
+a	polymorphoides
+s	polymorpha
+a	pyreniata
+a	satoi
 g	Hypochrosis
+a	abstractaria
+a	baenzigeri
+a	binexata
+s	ocellata
+a	cryptopyrrhata
+a	flavifusata
+a	hyadaria
+s2	Omiza
+a	iris
+s2	Phoenix
+a	meridionalis
+a	pyrrhophaeata
+a	sternaria
 g	Loxotephria
 g	Omiza
+a	herois
+s2	Hypochrosis
+a	lycoraria
+s2	Hypochrosis
+a	miliaria
+s2	Hypochrosis
+a	pachiaria
+s2	Hypochrosis
 g	Omizodes
+a	complanata
+e	Flattened Thorn
+a	ocellata
+e	Ocellate Thorn
 g	Phoenicocampa
+a	terinata
+e	Flame Line
+d	Rotstrich-Spanner
+s4	Omizodes rubrifasciata
+s	rubrifasciata
+u	rubrifasciata
 g	Pitthea
+a	trifasciata
 g	Plegapteryx
+a	anomalus
+e	Hooked Thorn
+e	Swift Elegant
+d	Sichelspanner
+g	Polyscia
+a	viridispurca
 g	Pseudeuchromia
+a	maculifera
+s2	Bursada
 g	Terina
+a	charmione
+a	circumcincta
+a	doleris
+a	internata
+s2	Pitthea
+a	wardi
 j	Drepanogynina
+sh	Drepanogynini
+g	Apleroneura
+a	chromatina
+s2	Drepanogynis
+a	tripartita
+e	Partitian Elegant
+g	Aspilatopsis
+g	Axiodes
+g	Derriodes
+a	cnephaeogramma
+e	Banded Thorn
+e	Punctuated Elegant
+a	miltophyris
+e	Ochre Ground Elegant
 g	Drepanogynis
+a	admiranda
+e	Marble Elegant
+a	bifasciata
+e	Sargasso Emerald
+a	determinata
+e	Robust Elegant
+a	incondita
+e	Incomplete Thorn
+a	insolens
+a	mixtaria
+e	Mixed Thorn
+e	Leaf Emerald
+e	Mixed Elegant
+d	Südafrikanischer Zackenspanner
+a	pero
+a	sinuata
+e	Mustache Elegant
+d	Schnauzbartspanner
+a	valida
+e	Fourspot Elegant
+g	Euexia
+a	percnopus
+e	Variegated Elegant
+g	Sicyodes
+a	cambogiaria
+e	Gamboge Thorn
+e	Dimorphic Tent Elegant
+d	Gambogespanner
+s2	Drepanogynis
+a	olivescens
+s2	Drepanogynis
+g	Sphingomima
 t	Caberini
+g	Apodrepanulatrix
+a	liberaria
+e	Barrens Carpet
+e	New Jersey Tea Inchworm
+a	litaria
+e	Large Banded Wave Moth
+g	Astygisa
 g	Cabera
 a	erythemaria
 e	Yellow-dusted Cream Moth
@@ -48789,112 +54740,616 @@ a	exanthemata
 e	Common Wave
 e	Northern Wave
 d	Braunstirn-Weißspanner
+b	Phalaena
+n	Scopoli, 1763
 a	pusaria
 e	Common White Wave
 d	Weißstirn-Weißspanner
+b	Phalaena
+n	Linnaeus, 1758
+a	variolaria
+e	Vestal Moth
+e	Pink-striped Willow Spanworm
+d	Amerikanischer Weißspanner
+g	Cyclomia
 g	Drepanulatrix
+a	bifilata
+a	monicaria
+a	unicalcararia
+e	Spurred Wave Moth
 g	Episemasia
+a	cervinaria
+e	Fawn Ruddy
+a	solitaria
 g	Eudrepanulatrix
+a	rectifascia
 g	Ilexia
+a	intractata
+e	Black-dotted Ruddy
+g	Lhommeia
+g	Myrteta
+a	angelica
+a	punctata
 g	Numia
+a	bicoloraria
+s2	Chloraspilates
+g	Parilexia
+a	cermala
+s2	Thysanopyga
+a	nicetaria
+s2	Thysanopyga
+g	Perissopteryx
 g	Petelia
+a	medardaria
 g	Sphacelodes
+a	vulneraria
+e	Hübner's Olive
 g	Thysanopyga
+a	abdominaria
+a	amarantha
+a	casperia
 t	Macariini
 j	Macariina
 g	Acanthovalva
+a	focularia
+e	Speckle Orange
+e	Orange Thornyvalve
+a	inconspicuaria
+e	Inconspicuous Thornyvalve
 g	Chiasmia
 a	aestimaria
 e	Tamarisk Peacock
 d	Tamariskenspanner
+b	Geometra
+n	Hübner, 1809
+a	cinerearia
+s2	Semiothisa
 a	clathrata
 e	Latticed Heath
 d	Gitterspanner
 d	Kleespanner
+b	Phalaena
+n	Linnaeus, 1758
 a	emersaria
+e	Indian Angle
+d	Indischer Eckflügelspanner
+b	Macaria
+n	Walker, 1861
+s2	Godonela
+s2	Semiothisa
+c	nora
+e	White-banded Acacia Moth
+d	Weißbindiger Akazienspanner
+b	Macaria
+n	Walker, 1861
+s2	Godonela
+s4	Semiothisa eleonora
+s2	Semiothisa
+k	eleonora
+k	nora
+a	xanthonora
+e	Yellow-banded Acacia Moth
+d	Gelbbindiger Akazienspanner
+s2	Godonela
+s2	Semiothisa
+g	Dasyfidonia
+a	avuncularia
+e	Red-winged Wave Moth
 g	Digrammia
-g	Epelis
+a	atrofasciata
+e	Broad-lined Angle
+a	californiaria
+e	Californian Granite
+a	colorata
+e	Creosote Moth
+d	Kreosotspanner
+a	continuata
+e	Curved-lined Angle
+a	curvata
+e	Shaded Granite
+a	decorata
+e	Decorated Granite
+a	denticulata
+a	equivocata
+a	eremiata
+e	Three-lined Angle
+a	gnophosaria
+e	Hollow-spotted Angle
+a	irrorata
+e	Pale-lined Angle
+a	mellistrigata
+e	Yellow-lined Angle
+a	muscariata
+a	nubiculata
+a	ocellinata
+e	Faint-spotted Angle
+e	Locust Looper
+d	Robinienspanner
+b	Macaria
+n	Guenée, 1857
+a	ordinata
+e	Ordered Angle
+e	Amorpha Angle
+a	pallidata
+a	pallorata
+e	Faded Angle
+a	pictipennata
+a	rippertaria
+e	Northern Granite
+a	subminiata
+e	Vermilion Granite
+e	Dark-waved Angle
+a	yavapai
+e	New Mexico Locust Angle
+g	Euaspilates
+a	spinataria
 g	Eumacaria
-g	Fernaldella
+a	madopata
+e	Brown-bordered Angle
+d	Braungesäumter Eckflügelspanner
 g	Frederickia
+r	Rajaei, 2022
+l	Frederickia nom. n., a new replacement name for the moth genus Rindgea Ferguson, 2008 (Lepidoptera: Geometridae)
+p	10.18476/2022.310840
+a	flaviterminata
+s2	Digrammia
+s2	Macaria
+s2	Rindgea
+a	hypaethrata
+d	Dunkler Mesquitenspanner
+s2	Digrammia
+s2	Phasiane
+s2	Rindgea
+s2	Semiothisa
+a	maricopa
+s2	Rindgea
+s2	Semiothisa
+a	nigricomma
+s2	Digrammia
+s2	Rindgea
+s2	Semiothisa
+c	s-signata
+e	Signate Looper Moth
+e	Mesquite Looper Moth
+d	Mesquitenspanner
+b	Macaria
+n	Packard, 1873
+s4	Eubolia cyda
+s	indeterminata
+s4	Phasiane ballandrata
+s2	Phasiane s-signata
+s4	Rindgea ballandrata
+s4	Rindgea cyda
+s4	Rindgea indeterminata
+s2	Rindgea
+s4	Semiothisa ballandrata
+s4	Semiothisa cyda
+s2	Semiothisa
+k	ballandrata
+k	cyda
+k	s-signata
+a	subterminata
+s2	Macaria
+s2	Rindgea
+s2	Semiothisa
 g	Gnopharmia
+a	stevenaria
+s2	Neognopharmia
 g	Heliomata
+a	cycladata
+e	Common Spring Moth
+d	Amerikanischer Frühlingsspanner
+a	glarearia
+d	Steppenheiden-Gitterspanner
+s2	Chiasmia
+s2	Semiothisa
 g	Isturgia
+a	arenacearia
+d	Gelblicher Luzernespanner
+s2	Eubolia
+s2	Tephrina
+a	deerraria
+e	Peahen Moth
+e	African Acacia Moth
+d	Afrikanischer Akazienspanner
+b	Tephrina
+n	Walker, 1861
+s3	pulinda
+a	dislocaria
+e	Pale-veined Isturgia
+d	Amerikanischer Zürgelbaumspanner
+s2	Enconista
+s2	Phasiane
+s2	Semiothisa
+a	famula
+d	Gebänderter Besenginsterspanner
+s2	Bichroma
+a	limbaria
+e	Frosted Yellow Moth
+d	Schwarzgesäumter Besenginsterspanner
+d	Gelber Ginsterkrautspanner
+d	Gelber Besenginsterspanner
+a	miniosaria
+d	Spanischer Besenginsterspanner
+s2	Enconista
+a	murinaria
+d	Mausgrauer Esparsettenspanner
+s2	Tephrina
+a	penthearia
+e	Australian Acacia Moth
+d	Australischer Akazienspanner
+b	Selidosema
+n	Guenée, 1858
+s2	Hypomecis
+a	pulinda
+e	Asian Acacia Moth
+d	Asiatischer Akazienspanner
+b	Cleora
+n	Walker, 1860
+s2	Tephrina
+a	roraria
+e	Besenginster-Saumbindenspanner
 g	Itame
+a	vincularia
+s2	Tephrina
 g	Macaria
+a	abruptata
+e	Eastern Ninebark Angle
+d	Östlicher Blasenspierenspanner
+a	adonis
+e	Californian Angle
+d	Kalifornischer Eckflügelspanner
 a	aemulataria
 e	Common Angle
 d	Gewöhnlicher Eckflügelspanner
+b	Macaria
+n	Walker, 1861
+s2	Semiothisa
+a	aequiferaria
+e	Woody Angle
+d	Sumpfzypressen-Eckflügelspanner
 a	alternata
 e	Sharp-angled Peacock
 d	Dunkelgrauer Eckflügelspanner
+b	Geometra
+n	Denis & Schiffermüller, 1775
+s	alternaria
+s4	Semiothisa alternaria
+a	arenisca
+s2	Semiothisa
+a	argillacearia
+e	Mousy Angle
+d	Mausgrauer Eckflügelspanner
+s2	Itame
+s2	Speranza
+a	artesiaria
+d	Auen-Eckflügelspanner
+s2	Diastictis
+s2	Speranza
+a	austrinata
+s2	Speranza
 a	bicolorata
 e	Bicolored Angle
 d	Zweifarbiger Eckflügelspanner
 a	bisignata
 e	Red-headed Inchworm Moth
 d	Rotkopf-Eckflügelspanner
+b	Macaria
+n	Walker, 1866
+s2	Semiothisa
+a	bitactata
+e	Split-lined Angle
+d	Kanadischer Eckflügelspanner
+s2	Itame
+s2	Speranza
 a	brunneata
 e	Rannoch Looper Moth
+e	Rusty Angle
 d	Waldmoorspanner
+b	Geometra
+n	Thunberg, 1784
+s2	Itame
+s2	Speranza
+a	carbonaria
+e	Netted Mountain Moth
+d	Bärentrauben-Bänderspanner
+b	Phalaena
+n	Clerck, 1759
+a	carpo
+a	colata
+e	Desert Angle
+d	Wüsten-Eckflügelspanner
+a	coortaria
+e	Four-spotted Granite
+d	Vierfleck-Eckflügelspanner
+s2	Itame
+s2	Speranza
+s2	Thamnonoma
+a	distribuaria
+e	Southern Chocolate Angle
+d	Südstaaten-Eckflügelspanner
+a	divergentata
+s2	Semiothisa
+a	evagaria
+e	Drab Angle
+d	Fahler Eckflügelspanner
+s2	Cymatophora
+s2	Itame
+s2	Speranza
+a	exauspicata
+e	Pale Four-spotted Granite
+d	Blasser Vierfleck-Eckflügelspanner
+s2	Speranza
+a	festivata
+s2	Semiothisa
+a	fissinotata
+e	Hemlock Angle
+d	Hemlock-Eckflügelspanner
+s2	Semiothisa
+a	fusca
+d	Braungraues Alpenspannerchen
+b	Geometra
+n	Thunberg, 1782
+a	gambarina
+e	Tropical Angle
+d	Tropischer Eckflügelspanner
+a	goniota
+s2	Diastictis
+s2	Semiothisa
+a	granitata
+e	Granite Angle
+e	Granite Moth
+d	Granitspanner
+b	Macaria
+n	Guenée, 1857
 a	graphidaria
 e	Bold-marked Granite
-d	Granit-Eckflügelspanner
+d	Granitmuster-Eckflügelspanner
+s2	Itame
+s2	Semiothisa
+s2	Speranza
+a	guenearia
+s2	Speranza
 a	liturata
 e	Tawny-barred Angle
 d	Violettgrauer Eckflügelspanner
+b	Phalaena
+n	Clerck, 1759
+s2	Semiothisa
+a	loricaria
+e	False Bruce Spanworm Moth
+e	Eversmann's Peacock Moth
+d	Pappel-Eckflügelspanner
+s2	Itame
+s2	Speranza
+a	lorquinaria
+e	Lorquin's Angle
+d	Lorquin's Eckflügelspanner
+s2	Speranza
+a	marcescaria
+s2	Speranza
 a	minorata
 e	Minor Angle
 d	Kleiner Eckflügelspanner
+b	Macaria
+n	Packard, 1873
 a	multilineata
 e	Many-lined Angle
 d	Gestreifter Eckflügelspanner
+s2	Semiothisa
 a	notata
 e	Birch Angle
+e	Peacock Moth
 d	Hellgrauer Eckflügelspanner
+d	Birken-Eckflügelspanner
+b	Phalaena
+n	Linnaeus, 1758
+s	ulsterata
+s2	Semiothisa
+a	occiduaria
+s2	Itame
+s2	Speranza
+a	oweni
+e	Owen's Angle
+d	Owen's Eckflügelspanner
+s2	Semiothisa
+a	pallipennata
+s2	Speranza
 a	pinistrobata
 e	White Pine Angle
 d	Kiefern-Eckflügelspanner
+b	Semiothisa
+n	Ferguson, 1972
+a	promiscuata
+e	Promiscuous Angle
+d	Judasbaum-Eckflügelspanner
 a	pustularia
 e	Lesser Maple Spanworm Moth
 d	Ahorn-Eckflügelspanner
+b	Stegania
+n	Guenée, 1857
+s2	Itame
+s2	Speranza
+a	quadrilinearia
+s2	Speranza
+a	regulata
+s2	Semiothisa
+a	ribearia
+e	Currant Spanworm Moth
+d	Johannisbeer-Eckflügelspanner
+s2	Itame
+s2	Speranza
+a	sexmaculata
+e	Six-spotted Angle
+d	Sechsfleckiger Eckflügelspanner
 a	signaria
 e	Pale-marked Angle
 d	Braungrauer Eckflügelspanner
+b	Geometra
+n	Hübner, 1809
+s2	Semiothisa
+a	simplex
+s2	Speranza
+a	subcessaria
+e	Barred Angle
+e	Barred Granite
+d	Kurzstrich-Eckflügelspanner
+s2	Itame
+s2	Speranza
+a	sulphurea
+e	Sulphur Angle
+d	Gelber Eckflügelspanner
+s2	Itame
+s2	Speranza
+a	transitaria
+e	Blurry Chocolate Angle
+d	Brauner Eckflügelspanner
+s2	Semiothisa
+a	truncataria
+e	Black-banded Orange
+d	Gestreifter Tagspanner
+b	Fidonia
+n	Walker, 1862
+s2	Epelis
+a	umbriferata
+e	Pacific Ninebark Angle
+e	Western Ninebark Angle
+d	Westlicher Blasenspierenspanner
+a	valmonaria
+s2	Semiothisa
+a	varadaria
+e	Southern Angle
+d	Florida-Eckflügelspanner
+s4	Diastictis florida
+s2	Itame
+s2	Speranza
 a	wauaria
 e	V-Moth
 d	Vauzeichen-Eckflügelspanner
+d	Johannisbeerspanner
+d	Braunes V
+b	Phalaena
+n	Linnaeus, 1758
+s2	Itame
+s2	Speranza
 g	Mellilla
+a	xanthometata
+e	Orange Wing
+d	Oranger Gleditschienspanner
+b	Fidonia
+n	Walker, 1862
 g	Narraga
+a	fasciolaria
+d	Gebänderter Beifußspanner
+a	fimetaria
+e	Green Broomweed Looper
+b	Fidonia
+n	Grote & Robinson, 1870
+s2	Fernaldella
+a	georgiana
+e	Ohoopee Inchworm Moth
+s2	Fernaldella
+a	stalachtaria
+s2	Fernaldella
+a	tessularia
 g	Ortaliella
+a	perspersata
+s2	Gnophos
 g	Oxymacaria
+a	odontias
+s2	Chiasmia
+s2	Diastictis
+a	temeraria
+s2	Heterocallia
+s2	Macaria
+s2	Semiothisa
 g	Parosteodes
+a	fictiliaria
+e	Dodonaea Moth
+d	Hopfenbuschspanner
 g	Plateoplia
+a	acrobelia
 g	Psamatodes
+a	abydata
+e	Dot-lined Angle
+e	Soybean Angle
+d	Sojaspanner
+d	Soja-Eckflügelspanner
+b	Macaria
+n	Guenée, 1857
+a	everiata
+s2	Macaria
+s2	Semiothisa
+a	pallidata
+s2	Macaria
+s2	Semiothisa
+a	rimosata
+b	Psamatodes
+n	Guenée, 1857
+s2	Semiothisa
 g	Rhoptria
-g	Semiothisa
-g	Speranza
+a	asperaria
 g	Trigrammia
+a	quadrinotaria
+e	Four-spotted Angle
+d	Vierpunktiger Eckflügelspanner
+b	Trigrammia
+n	Herrich-Schäffer, 1855
 j	Odontognophina
 g	Ballantiophora
+a	gibbiferata
+s2	Berberodes
 g	Berberodes
+a	cassiteris
+a	conchylata
 g	Dorsifulcrum
 g	Hemiphricta
 a	albicostata
 g	Odontognophos
 a	dumetata
+e	Irish Annulet
+d	Kreuzdorn-Steinspanner
 j	Eutoeina
+sh	Eutoeini
 g	Calletaera
+a	obliquata
+s2	Luxiaria
+a	subexpressa
 g	Eutoea
+a	heteroneurata
+s2	Luxiaria
 g	Luxiaria
+a	amasa
+a	emphatica
+a	mitorrhaphes
+a	ochrophara
+s2	Nadagarodes
+a	phyllosaria
+a	subrasata
 g	Zeheba
+a	aureata
+a	aureatoides
+a	lucidata
+a	spectabilis
 j	Abraxina
+sh	Abraxini
 g	Abraxas
 a	grossulariata
 e	Magpie Moth
 e	European Currant Moth
 d	Stachelbeerspanner
 d	Stachelbeer-Harlekin
+b	Phalaena
+n	Linnaeus, 1758
+s	grossulariatus
+a	illuminata
+a	miranda
+a	niphonibia
+a	pantaria
+e	Light Magpie Moth
+d	Eschenspanner
+b	Phalaena
+n	Linnaeus, 1767
 a	sylvata
 e	Clouded Magpie Moth
 d	Ulmen-Fleckenspanner
@@ -48902,39 +55357,196 @@ d	Ulmen-Harlekin
 d	Traubenkirschenspanner
 d	Traubenkirschen-Harlekin
 d	Vogeldreck
+b	Phalaena
+n	Scopoli, 1763
+s	sylvatus
+s	ulmata
 g	Cassephyra
+a	lamprosticta
+s2	Hypephyra
 g	Hypomecis
+a	agoraea
+d	Australischer Rindenspanner
+a	cineracea
+d	Chinesischer Rindenspanner
+a	costaria
+d	Malaiischer Rindenspanner
 a	punctinalis
 e	Pale Oak Beauty
 d	Aschgrauer Rindenspanner
+b	Phalaena
+n	Scopoli, 1763
 a	roboraria
 e	Great Oak Beauty
 d	Großer Eichenspanner
 d	Großer Rindenspanner
+b	Geometra
+n	Denis & Schiffermüller, 1775
+a	separata
+a	transcissa
+d	Indischer Rindenspanner
+a	umbrosaria
+e	Umber Moth
+d	Amerikanischer Rindenspanner
 g	Ligdia
+a	adustata
+e	Scorched Carpet
+d	Pfaffenhütchen-Harlekin
+d	Spindelbaumspanner
+d	Pfaffenspanner
+d	Kleiner Pfaffenhütchenspanner
+b	Geometra
+n	Denis & Schiffermüller, 1775
+g	Mimaletis
+a	postica
+g	Narthecusa
+a	perplexata
+a	tenuiorata
 g	Nassinia
+a	caffraria
+a	pretoria
 g	Obolcola
+a	petronaria
 g	Rhodophthitus
+a	castus
+a	commaculata
+s2	Nothabraxas
+a	formosus
+a	roseovittata
+s2	Heterabraxas
+a	simplex
+a	tricoloraria
+s2	Zerene
+j	Scardamiina
+sh	Scardamiini
+g	Aplochlora
+a	dentisignata
+a	grata
+a	vivilaca
+g	Scardamia
+a	aurantiacaria
+a	auricincta
+s2	Oaracta
+a	chrysolina
+a	iographa
+a	maculata
+s2	Oaracta
+a	metallaria
 j	Cassymina
+sh	Cassymini
 g	Cassyma
+a	chrotadelpha
+a	sciticincta
 g	Dicrognophos
+a	sartata
+g	Gyostega
+a	floccosa
 g	Heterostegane
+a	insulata
+a	subtessellata
+a	tritocampsis
+a	urbica
+a	warreni
 g	Hydatocapnia
+a	gemina
 g	Leuciris
+a	fimbriaria
 g	Lomaspilis
 a	marginata
 e	Clouded Border
 d	Vogelschmeiß-Spanner
 d	Schwarzrand-Harlekin
+d	Schwarzrandspanner
+b	Phalaena
+n	Linnaeus, 1758
+a	opis
+d	Birken-Harlekin
 g	Orbamia
+a	octomaculata
 g	Orthocabera
+a	sericea
+a	tinagmaria
 g	Peratophyga
+a	crista
+g	Peratostega
+a	deletaria
+s2	Asthena
+s2	Cassyma
+s2	Lomographa
+s2	Macaria
+g	Pigiopsis
 g	Protitame
+a	subalbaria
+a	virginalis
+e	Virgin Moth
+d	Jungfernspanner
 g	Pycnostega
+a	stilbia
 g	Serratophyga
+a	subangulata
+s2	Hypephyra
 g	Stegania
+a	cararia
+e	Ringed Border
+d	Gesprenkelter Pappelspanner
+s2	Heterostegane
+s2	Lomographa
+a	dilectaria
+d	Hain-Pappelspanner
+s2	Lomographa
+a	trimaculata
+e	Dorset Cream Wave
+d	Dreifleck-Pappelspanner
+s2	Lomographa
 g	Taeniogramma
+a	octolineata
+s2	Macaria
+s2	Semiothisa
+a	tenebrosata
+s2	Macaria
+s2	Semiothisa
+g	Xenostega
 g	Zamarada
+a	adiposata
+a	amymone
+a	antimima
+a	ascaphes
+a	baliata
+a	bathyscaphes
+a	consecuta
+a	deceptrix
+a	denticincta
+a	denticulata
+a	dentigera
+a	differens
+a	dilata
+a	dilucida
+a	eogenaria
+a	erugata
+a	euphrosyne
+a	excisa
+a	flavicaput
+a	glareosa
+a	lima
+a	metallicata
+e	Metallic Zamarada
+a	metrioscaphes
+a	minimaria
+a	nasuta
+a	ndogo
+a	oxybeles
+a	phrontisaria
+a	pinheyi
+a	prolata
+a	pulverosa
+e	Dusty Zamarada
+a	rufilinearia
+a	scintillans
+a	scotozona
+a	terpsichore
+a	torrida
+a	transvisaria
+a	undimarginata
 t	Boarmiini
 j	Boarmiina
 g	Adactylotis
@@ -48970,6 +55582,13 @@ e	Common Heath
 d	Heidespanner
 b	Phalaena
 n	Linnaeus, 1758
+g	Eogeometer
+ae	vadens
+b	Eogeometer
+n	Fischer, Michalski & Hausmann, 2019
+r2	Fischer, 2019
+l	Geometrid caterpillar in eocene Baltic amber (Lepidoptera, Geometridae)
+p	10.1038/s41598-019-53734-w
 g	Epimecis
 g	Eurranthis
 g	Eutomopepla
@@ -49058,6 +55677,15 @@ g	Biston
 a	betularia
 e	Peppered Moth
 d	Birkenspanner
+b	Phalaena
+n	Linnaeus, 1758
+s	betularius
+a	strataria
+e	Oak Beauty
+d	Pappelspanner
+d	Pappel-Dickleibspanner
+b	Phalaena
+n	Hufnagel, 1767
 g	Chemerina
 g	Cochisea
 g	Lycia
@@ -49081,7 +55709,6 @@ g	Ozola
 g	Zanclopteryx
 t	Conolophiini
 g	Conolophia
-g	Nearcha
 g	Noreia
 g	Racasta
 y	Archiearinae
@@ -49282,12 +55909,88 @@ d	Trauerspanner
 g	Solitanea
 j	Rheumapterina
 h	Rheumapteriti
+g	Hospitalia
+a	flavolineata
 g	Hydria
+a	cervinalis
+e	Scarce Tissue
+d	Großer Berberitzenspanner
+b	Phalaena
+n	Scopoli, 1763
+s2	Calocalpe
+s2	Eucosmia
+s2	Rheumaptera
+a	montivagata
+c	undulata
+e	Scallop Shell
+d	Wellenspanner
+b	Phalaena
+n	Linnaeus, 1758
+s4	Rheumaptera prunivorata
+s2	Rheumaptera
+k	prunivorata
+k	undulata
 g	Pareulype
+a	berberata
+e	Barberry Carpet
+d	Kleiner Berberitzenspanner
+b	Geometra
+n	Denis & Schiffermüller, 1775
+s2	Larentia
 g	Rheumaptera
+c	hastata
+e	Spear-marked Black Moth
+e	White-banded Black Moth
+e	Argent and Sable
+d	Großer Speerspanner
+d	Speerspanner
+b	Phalaena
+n	Linnaeus, 1758
+k	hastata
+k	subhastata
+a	meadii
+e	Barberry Geometer
+e	Barberry Looper
+d	Amerikanischer Berberitzenspanner
+b	Scotosia
+n	Packard, 1874
+s2	Coryphista
 h	Phileremiti
 g	Philereme
+a	transversata
+e	Dark Umber
+d	Großer Kreuzdornspanner
+b	Phalaena
+n	Hufnagel, 1767
+s4	Geometra rhamnata
+a	vetulata
+e	Brown Scallop
+d	Kleiner Kreuzdornspanner
+b	Geometra
+n	Denis & Schiffermüller, 1775
+s	vetustata
 g	Triphosa
+a	californiata
+e	Californian Tissue
+d	Kalifornischer Höhlenspanner
+a	dubitata
+e	Tissue
+d	Olivbrauner Höhlenspanner
+d	Höhlenspanner
+b	Phalaena
+n	Linnaeus, 1758
+a	haesitata
+e	American Tissue
+d	Amerikanischer Höhlenspanner
+s	affirmaria
+u	affirmaria
+a	sabaudiata
+d	Gelblichgrauer Höhlenspanner
+a	tauteli
+e	Tautel's Tissue
+d	Tautels Höhlenspanner
+b	Triphosa
+n	Leraut, 2008
 j	Pterocyphina
 g	Archirhoe
 g	Obila
@@ -49685,14 +56388,20 @@ g	Alcides
 a	aurora
 e	Auroa Moth
 d	Aurora-Regenbogenfalter
+s2	Alcidis
 s2	Lyssa
 a	cydnus
+s2	Alcidis
 c	metaurus
 e	Zodiac Moth
 d	Zodiakfalter
 b	Nyctalemon
 n	Hopffer, 1856
 s	metaurus zodiaca
+s4	Alcidis agathyrsus
+s4	Alcidis aruus
+s2	Alcidis
+s4	Alcidis zodiaca
 s4	Lyssa agathyrsus
 s4	Lyssa aruus
 s4	Nyctalemon zodiaca
@@ -49704,6 +56413,10 @@ e	Maluku Swallowtail Moth
 d	Molukken-Regenbogenfalter
 b	Papilio
 n	Linnaeus, 1763
+s	liris
+s	orontes liris
+s4	Alcidis liris
+s2	Alcidis
 g	Chrysiridia
 a	croesus
 e	East African Sunset Moth
@@ -49730,14 +56443,14 @@ a	marcoi
 a	maxima
 a	multistrigaria
 a	semiobsoleta
-s2	Urapteroides
 s	swinhoei
+s2	Urapteroides
 s4	Urapteroides swinhoei
 a	urapteroides
 g	Lyssa
 a	macleayi
 e	Macleay's Swallowtail Moth
-	Macleay's Giant Urania
+e	Macleay's Giant Urania
 d	Macleay's Nachtschwalbenschwanz
 b	Urania
 n	Montrouzier, 1856
@@ -49764,20 +56477,61 @@ d	Riesenurania
 b	Nyctalemon
 n	Butler, 1869
 g	Urania
+r	Nazari, 2016
+l	Century-Old DNA Barcodes Reveal Phylogenetic Placement of the Extinct Jamaican Sunset Moth, Urania sloanus Cramer (Lepidoptera: Uraniidae)
+p	10.1371/journal.pone.0164405
+a	boisduvalii
+e	Boisduval's Urania
+d	Kubanischer Regenbogenfalter
+b	Cydimon
+n	Guérin-Méneville, 1829
 a	fulgens
 e	Urania Swallowtail Moth
 e	Green Page Moth
+e	Shining Urania
 d	Grüner Regenbogenfalter
+b	Urania
+n	Walker, 1854
+s4	Cydimon cacica
+s4	Cydimon poeyi
+s	cacica
+s	poeyi
+u	fulgens
+u	poeyi
 a	leilus
 e	Green-banded Urania
 d	Gewöhnlicher Regenbogenfalter
+b	Papilio
+n	Linnaeus, 1758
+s4	Leilus brasiliensis
+s	amphiclus
+s	brasiliensis
+s	elegans
+s	leilaria
+s	surinamensis
+u	brasiliensis
+u	leilus
+ae	sloanus
+e	Sloane's Urania
+e	Jamaican Sunset Moth
+d	Jamaikanischer Regenbogenfalter
+b	Papilio
+n	Cramer, 1779
+s	occidentalis
+s	sloanaria
 g	Urapteritra
 a	falcifera
+b	Strophidia
+n	Weymer, 1892
 s2	Urapteroides
 g	Urapteroides
 a	astheniata
 e	White Urania
 d	Weiße Urania
+b	Micronia
+n	Guenée, 1857
+a	recurvata
+s2	Urapteritra
 y	Microniinae
 g	Acropteris
 a	ciniferaria
@@ -49803,8 +56557,8 @@ e	Grey Swallowtail Moth
 d	Silbergraue Urania
 b	Micronia
 n	Guenée, 1857
-b	Pseudomicronia
-n	advocataria
+g	Pseudomicronia
+a	advocataria
 a	bundutuhan
 g	Stesichora
 a	quadripunctata
@@ -49815,21 +56569,20 @@ a	directaria
 y	Epipleminae
 e2	Scoopwing Moths
 d2	Rollflügler
+g	Antiplecta
+a	triangularis
+g	Aorista
+a	alodia
 g	Calledapteryx
 a	dryopterata
 e	Brown Scoopwing
 d	Brauner Rollflügler
 b	Calledapteryx
 n	Packard, 1876
-g	Antiplecta
-a	triangularis
-g	Aorista
-a	alodia
 g	Callizzia
 a	amorata
 e	Gray Scoopwing
 d	Grauer Rollflügler
-s2	Epiplema
 b	Callizzia
 n	Packard, 1876
 s2	Epiplema
@@ -49901,7 +56654,7 @@ a	prunaria
 s2	Dirades
 s2	Gathynia
 s	oribates
-s4	Phazaca oribates  
+s4	Phazaca oribates
 s2	Phazaca
 g	Monoplema
 a	fumigera
@@ -49977,7 +56730,7 @@ s2	Erosia
 g	Schidax
 a	coronaria
 a	squammaria
-a	squamaria
+s	squamaria
 g	Syngria
 a	druidaria
 g	Thysanocraspeda
@@ -50035,17 +56788,24 @@ e	Common Moontail
 e	Moon Eyetail Moth
 e	Corkscrew Moth
 d	Gewöhnlicher Mondschwanz
+b	Phalaena
+n	Linnaeus, 1758
 s2	Nothus
 s4	Sematura luna
 s2	Sematura
-b	Phalaena
-n	Linnaeus, 1758
 y	Apoprogoninae
 g	Apoprogones
 a	hesperistis
+s2	Apoprogenes
 f	Epicopeiidae
 e2	Oriental Swallowtail Moths
 d2	Tagfaltermimen
+r	Zhang, 2020
+l	A multilocus analysis of Epicopeiidae (Lepidoptera, Geometroidea) provides new insights into their relationships and the evolutionary history of mimicry
+p	10.1016/j.ympev.2020.106847
+r	Call, 2021
+l	Museomics: Phylogenomics of the Moth Family Epicopeiidae (Lepidoptera) Using Target Enrichment
+p	10.1093/isd/ixaa021
 g	Amana
 a	angulifera
 g	Burmeia
@@ -50057,12 +56817,21 @@ a	banghaasi
 g	Epicopeia
 a	hainesii
 a	mencia
+a	moorei
+s2	Nossa
+a	palaearctica
+s2	Nossa
 a	polydora
 g	Mimaporia
-g	Nossa
-a	moorei
-a	palaearctica
+a	hmong
+b	Mimaporia
+n	Wei & Yen, 2017
+r2	Wei & Yen, 2017
+l	Mimaporia, a new genus of Epicopeiidae (Lepidoptera), with description of a new species from Vietnam
+p	10.11646/zootaxa.4254.5.3
 g	Parabraxas
+a	davidi
+a	nigromacularia
 g	Psychostrophia
 a	endoi
 a	melanargia
@@ -50089,6 +56858,7 @@ x2	Bombycina
 x	Bombycoidea
 e2	Silkmoths
 d2	Spinner
+sh	Sphingoidea
 r	Hamilton, 2019
 l	Phylogenomics resolves major relationships and reveals significant diversification rate shifts in the evolution of silk moths and relatives
 p	10.1186/s12862-019-1505-1
@@ -50119,6 +56889,7 @@ d	Gewöhnlicher Seidenspinner
 d	Maulbeerspinner
 b	Bombyx
 n	Linnaeus, 1758
+s	morii
 g	Rotunda
 a	rotundapex
 t	Trilochini
@@ -50868,6 +57639,7 @@ c	aratus
 e	Cat-eyed Emperor Moth
 d	Katzenaugenspinner
 k	aratus
+k	drumonti
 k	fuscus
 k	triramis
 g	Bunaea
@@ -50962,6 +57734,11 @@ g	Imbrasia
 a	epimethea
 e	West African Emperor Moth
 d	Westafrikanisches Nachtpfauenauge
+a	ertli
+e	Diverse Emperor Moth
+d	Veränderliches Nachtpfauenauge
+a	obscura
+a	truncata
 g	Leucopteryx
 a	ansorgei
 g	Lobobunaea
@@ -51040,6 +57817,7 @@ d	Apollospinner
 t	Eochroini
 g	Eochroa
 a	trimenii
+s	trimeni
 g	Parusta
 g	Usta
 a	terpsichore
@@ -52275,6 +59053,7 @@ e	Eyed Hawkmoth
 d	Abendpfauenauge
 b	Sphinx
 n	Linnaeus, 1758
+s	ocellatus
 a	planus
 e	Oriental Eyed Hawkmoth
 d	Östliches Abendpfauenauge
@@ -52920,13 +59699,58 @@ t	Hemarini
 e2	Bee Hawkmoths
 d2	Hummelschwärmer
 g	Cephonodes
+a	armatus
+e	Fijian Bee Hawkmoth
+d	Fidschi-Hummelschwärmer
+a	banksi
+e	Philippine Bee Hawkmoth
+d	Philippinischer Hummelschwärmer
 a	hylas
 e	Coffee Bee Hawkmoth
 e	Pellucid Hawkmoth
 d	Kaffee-Hummelschwärmer
+b	Sphinx
+n	Linnaeus, 1771
+s	australis
+s	melanogaster
+s	santome
+s	virescens
+u	australis
+u	melanogaster
+u	virescens
+a	janus
 a	kingii
 e	Gardenia Bee Hawkmoth
 d	Gardenien-Hummelschwärmer
+b	Macroglossum
+n	Macleay, 1826
+a	picus
+e	Green Bumble-bee Hawkmoth
+d	Grüner Hummelschwärmer
+b	Sphinx
+n	Cramer, 1777
+s	cunninghami
+a	rufescens
+e	Madagascan Bee Hawkmoth
+d	Madagassischer Hummelschwärmer
+a	sanshaensis
+e	Xisha Bee Hawkmoth
+d	Xisha-Hummelschwärmer
+b	Cephonodes
+n	Deng & Huang, 2023
+r	Deng, 2023
+l	The genus Cephonodes from Xisha islands, Hainan Province, China, with description of a new species Cephonodes sanshaensis Deng & Huang, 2023 sp. nov. (Lepidoptera: Sphingidae)
+p	10.1016/j.japb.2023.08.001
+a	tamsi
+e	Seychelles Bee Hawkmoth
+d	Seychellen-Hummelschwärmer
+a	titan
+e	Ambon Bee Hawkmoth
+d	Ambon-Hummelschwärmer
+b	Cephanodes
+n	Rothschild, 1899
+a	trochilus
+a	xanthus
 g	Hemaris
 a	diffinis
 e	Snowberry Bee Hawkmoth
@@ -52953,16 +59777,70 @@ e2	Anthelid Lappet Moths
 d2	Nesselglucken
 y	Anthelinae
 g	Anthela
+a	achromata
 a	acuta
 e	Common Anthelid
 d	Gewöhnliche Nesselglucke
+b	Darala
+n	Walker, 1855
+a	addita
+a	adriana
+a	asciscens
+a	astata
+a	asterias
+a	basigera
+a	callispila
+a	callixantha
+a	canescens
+a	cinerascens
+e	Tasmanian Anthelid
+d	Tasmanische Nesselglucke
+b	Darala
+n	Walker, 1855
+s	rufifascia
+a	clementi
+a	cnecias
+a	connexa
+a	decolor
+a	deficiens
+a	denticulata
+e	Toothed Anthelid
+d	Zahnbinden-Nesselglucke
+a	directa
+a	euryphrica
+a	excellens
+e	Grey-headed Anthelid
+d	Graukopf-Nesselglucke
+a	exoleta
+a	ferruginosa
+e	Rusty Anthelid
+d	Rostfarbene Nesselglucke
+a	guenei
+a	habroptila
+a	inornata
+a	limonea
+a	neurospasta
 a	nicothoe
 e	Urticating Anthelid
 d	Akazien-Nesselglucke
 a	ocellata
 e	Eyespot Anthelid
 d	Augenfleck-Nesselglucke
+a	ochroptera
+a	oressarcha
+a	phaeodesma
+a	phoenicias
+a	reltoni
 a	repleta
+e	Replete Anthelid
+d	Braune Nesselglucke
+a	rubeola
+a	stygiana
+a	tetraphrica
+a	virescens
+e	Green Anthelid
+d	Grüne Nesselglucke
+a	xantharcha
 g	Chelepteryx
 a	chalepteryx
 e	White-stemmed Acacia Moth
@@ -52983,6 +59861,8 @@ g	Darala
 a	varia
 e	Variable Anthelid
 d	Variable Nesselglucke
+b	Darala
+n	Walker, 1855
 g	Nataxa
 a	flavescens
 e	Yellow-headed Anthelid
@@ -53272,6 +60152,7 @@ a	pruni
 e	Plum Lappet
 d	Pflaumenglucke
 d	Feuerglucke
+d	Pflaumenspinner
 g	Radhica
 g	Rhinobombyx
 j	Gastropachina
@@ -53505,6 +60386,7 @@ d2	Sichelflüglerartige
 y	Drepaninae
 e2	Hooktips
 d2	Sichelflügler
+d2	Sichelspinner
 t	Drepanini
 g	Agnidra
 g	Auzata
@@ -53527,9 +60409,13 @@ d	Kanadischer Sichelflügler
 a	curvatula
 e	Dusky Hooktip
 d	Erlen-Sichelflügler
+d	Erlensichler
 a	falcataria
 e	Pebble Hooktip
+e	Common Hooktip
 d	Heller Sichelflügler
+d	Gewöhnlicher Sichelflügler
+d	Sichelspinner
 g	Eudeilinia
 a	herminiata
 e	Northern Eudeilinia Moth
@@ -53539,6 +60425,7 @@ g	Falcaria
 a	lacertinaria
 e	Scalloped Hooktip
 d	Birken-Sichelflügler
+d	Birkensichler
 g	Leucoblepsis
 g	Leucodrepana
 a	serratilinea
@@ -53554,6 +60441,7 @@ g	Sabra
 a	harpagula
 e	Scarce Hooktip
 d	Linden-Sichelflügler
+d	Lindensichler
 g	Strepsigonia
 g	Teldenia
 g	Tridrepana
@@ -53561,14 +60449,18 @@ g	Watsonalla
 a	binaria
 e	Oak Hooktip
 d	Eichen-Sichelflügler
+d	Zweipunkt-Sichelflügler
+d	Eichensichler
 s2	Drepana
 a	cultraria
 e	Barred Hooktip
 d	Buchen-Sichelflügler
+d	Buchensichler
 s2	Drepana
 a	uncinula
 e	Spiny Hooktip
 d	Spanischer Sichelflügler
+d	Blauglänzender Eichensichler
 s2	Drepana
 t	Oretini
 g	Amphitorna
@@ -56299,59 +63191,327 @@ g	Meharia
 f	Castniidae
 d2	Palmbohrer
 y	Castniinae
+r2	Moraes & Duarte, 2014
+l	Phylogeny of Neotropical Castniinae (Lepidoptera: Cossoidea: Castniidae): testing the hypothesis of the mimics as a monophyletic group and implications for the arrangement of the genera
+p	10.1111/zoj.12102
 t	Castniini
-g	Amauta
-a	cacica
-e	Sugarcane Borer
-d	Gewöhnlicher Zuckerrohrbohrer
+sh	Gazerini
 g	Athis
+i	Athis
+a	palatinus
+b	Papilio
+n	Cramer, 1777
+s2	Aciloa
+s2	Castnia
+i	Pseudimara
+a	analibiae
+b	Imara
+n	Espinoza & González, 2005
+i	Aciloa
+a	flavimaculata
+b	Castnia
+n	Miller, 1972
+a	hechtiae
+b	Castnia
+n	Dyar, 1910
+a	inca
+b	Castnia
+n	Walker, 1854
+s2	Aciloa
 g	Castnia
+a	invaria
+b	Castnia
+n	Walker, 1854
+s	icarus
+s2	Elina
+g	Castnius
+a	marcus
+b	Castnia
+n	Jordan, 1908
+a	pelasgus
+b	Papilio
+n	Cramer, 1779
+s2	Nasca
+g	Ceretes
+i	Ceretes
+a	marcelserres
+b	Castnia
+n	Godart, 1824
+a	thais
+b	Papilio
+n	Drury, 1782
+s2	Castnia
+i	Ceretelina
 a	eudesmia
+b	Castnia
+n	Gray, 1838
+s2	Elina
 g	Corybantes
+a	dolopia
+b	Castnia
+n	Druce, 1907
+a	mathani
+b	Castnia
+n	Oberthür, 1881
+a	pylades
+b	Papilio
+n	Stoll, 1782
+a	veraguana
+b	Castnia
+n	Westwood, 1877
+g	Escalantiana
+r	González, 2019
+l	A new genus of Castniinae (Lepidoptera Castniidae) with comments on comparative morphology and bionomics of its assigned species
+p	10.11646/zootaxa.4668.1.5
+r2	García-Díaz & Turrent-Carriles, 2022
+l	Descripción de una nueva subespecie de Escalantiana chelone (Hopffer, 1856) y un nuevo género de Castniinae (Lepidoptera: Castniidae)
+p2	0187-022X, 9(2)
+i	Escalantiana
+a	chelone
+b	Castnia
+n	Hopffer, 1856
+s2	Synpalamides
+a	escalantei
+b	Castnia
+n	Miller, 1976
+s2	Synpalamides
+i	Mexicastnia
+a	estherae
+b	Castnia
+n	Miller, 1976
+s2	Mexicastnia
 g	Eupalamides
 a	cyparissias
 e	Amazonian Palm Borer
 d	Amazonas-Palmbohrer
-g	Feschaeria
+b	Papilio
+n	Fabricius, 1777
 g	Geyeria
-g	Haemonides
-g	Hista
+i	Geyeria
+a	decussata
+b	Castnia
+n	Godart, 1824
+s2	Ypanema
+a	strigata
+b	Castnia
+n	Walker, 1854
+i	Spilopastes
+a	galinthias
+b	Castnia
+n	Hopffer, 1856
+s2	Spilopastes
 g	Imara
+i	Imara
+a	acraeoides
+b	Castnia
+n	Guérin-Méneville, 1832
+s2	Herrichia
+s2	Riechia
+a	pallasia
+b	Castnia
+n	Eschscholtz, 1821
+a	satrapes
+b	Castnia
+n	Kollar, 1839
+a	therapon
+s2	Athis
+i	Haemonides
+a	cronida
+b	Castnia
+n	Herrich-Schäffer, 1854
+s2	Haemonides
+a	cronis
+b	Papilio
+n	Cramer, 1775
+s2	Haemonides
+g	Insigniocastnia
+a	taisae
+b	Insigniocastnia
+n	Miller, 2007
 g	Ircila
-g	Lapaeumides
+a	hecate
+b	Castnia
+n	Herrich-Schäffer, 1854
+g	Mirocastnia
+a	canis
+b	Schaefferia
+n	Lathy, 1923
+a	pyrrhopygoides
+b	Castnia
+n	Houlbert, 1917
+a	smalli
+b	Mirocastnia
+n	Miller, 1980
+g	Oiticicastnia
+a	erycina
+b	Castnia
+n	Westwood, 1881
+g	Paysandisia
+a	archon
+e	Palm Moth
+d	Palmenmotte
+b	Castnia
+n	Burmeister, 1879
+a	uruguayana
+b	Castnia
+n	Burmeister, 1879
+s2	Geyeria
+g	Prometheus
+a	cochrus
+b	Papilio
+n	Fabricius, 1787
+s	casmilus
+a	cononia
+b	Castnia
+n	Westwood, 1877
+s2	Duboisvalia
+a	ecuadoria
+b	Castnia
+n	Westwood, 1877
+s2	Duboisvalia
+a	heliconioides
+b	Castnia
+n	Herrich-Schäffer, 1853
+s2	Gazera
+a	mimica
+b	Castnia
+n	Felder, 1874
+s2	Tosxampila
+a	personata
+b	Gazera
+n	Walker, 1865
+s2	Zegara
+a	simulans
+b	Gazera
+n	Boisduval, 1875
+s2	Duboisvalia
+a	zagraea
+b	Castnia
+n	Felder, 1874
+s2	Gazera
+s2	Zegara
 g	Synpalamides
+i	Synpalamides
+a	amycus
+b	Papilio
+n	Cramer, 1779
+s2	Feschaeria
+s2	Schaefferia
+a	orestes
+b	Castnia
+n	Walker, 1854
+a	phalaris
+b	apilio
+n	Fabricius, 1793
+s	argus
+s	mimon
+s	mygdon
+s	phalaris mimon
+s	phalaris mygdon
+s	phalaris sora
+s	signata
+s	sora
+s	subvaria
+i	Hista
+a	fabricii
+b	Castnia
+n	Swainson, 1823
+s2	Hista
+a	hegemon
+b	Castnia
+n	Kollar, 1839
+s2	Athis
+s2	Hista
+i	Lapaeumides
+a	actor
+b	Castnia
+n	Dalman, 1824
+s2	Lapaeumides
+a	ctesiphon
+b	Eupalamides
+n	Hübner, 1820
+s2	Castnia
+s2	Lapaeumides
+a	zerynthia
+b	Castnia
+n	Gray, 1838
+s2	Lapaeumides
 g	Telchin
+i	Telchin
+o	Hubneri
+a	hubneri
+s2	Geyeria
+o	Licus
 a	atymnius
 e	Giant Butterfly Moth
 d	Großer Bananenbohrer
+b	Castnia
+n	Dalman, 1824
 s2	Castniomera
 a	licus
 e	Banana Stem Borer
 e	Giant Sugarcane Borer
 d	Großer Zuckerrohrbohrer
-g	Yagra
-t	Gazerini
-g	Castnius
-g	Ceretes
-g	Divana
+b	Papilio
+n	Drury, 1773
+s2	Castnia
+a	syphax
+b	Papilio
+n	Fabricius, 1775
+s2	Erythrocastnia
+i	Amauta
+a	cacica
+e	Sugarcane Borer
+d	Gewöhnlicher Zuckerrohrbohrer
+b	Castnia
+n	Herrich-Schäffer, 1854
+s4	Amauta angusta
+s2	Amauta
+s4	Amauta cacica angusta
+s4	Amauta cacica procera
+s4	Amauta procera
+u	angusta
+u	procera
+a	papilionaris
+b	Castnia
+n	Walker, 1865
+s2	Amauta
+i	Divana
 a	diva
-g	Gazera
-g	Paysandisia
-a	archon
-e	Palm Moth
-d	Palmenmotte
-g	Prometheus
-a	cochrus
-a	cononia
-s2	Duboisvalia
-a	ecuadoria
-s2	Duboisvalia
-a	heliconioides
-s2	Gazera
-a	simulans
-s2	Duboisvalia
-a	zagraea
-g	Zegara
+b	Castnia
+n	Butler, 1870
+s2	Divana
+a	hodeei
+b	Castnia
+n	Oberthür, 1881
+s2	Amauta
+s4	Amauta hodeei kruegeri
+s2	Vadina
+u	kruegeri
+i	Xanthocastnia
+a	evalthe
+e	Giant Bromelia Borer
+d	Großer Bromelienbohrer
+b	Papilio
+n	Fabricius, 1775
+s2	Xanthocastnia
+i	Frostetola
+a	gramivora
+s2	Frostetola
+s2	Tephrostola
+g	Yagra
+i	Yagra
+a	dalmannii
+b	Castnia
+n	Gray, 1838
+a	fonscolombe
+b	Castnia
+n	Godart, 1824
+i	Pseudathis
+a	superba
+b	Castnia
+n	Strand, 1912
+s2	Athis
 t	Synemonini
 g	Synemon
 a	gratiosa
@@ -56365,6 +63525,9 @@ a	plana
 e	Golden Sun Moth
 y	Tascininae
 g	Tascina
+a	metallica
+a	nicevillei
+a	orientalis
 f	Metarbelidae
 g	Arbelodes
 g	Encaumaptera
@@ -57202,6 +64365,11 @@ g	Erasmia
 a	pulchella
 e	Magnificent Burnet
 d	Pracht-Widderchen
+b	Erasmia
+n	Hope, 1841
+s	chinensis
+s	pulchella chinensis
+s	pulchella hobsoni
 g	Erasmiphlebohecta
 a	picturata
 e	Taiwanese Jewel

@@ -31,7 +31,7 @@ var sf = 'The suffix of this taxon type must be "'
 if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,p:not(.b,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
 if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
-if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 
 // Common typos, spelling and grammar mistakes
@@ -72,7 +72,7 @@ if (f.matches('.h') && !(/iti$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iti
 if (f.matches('p:not(.c)') && (/ agg\.$/.test(d))) {i++; log += '[#' + i + s1 + 'Use the AGG datatype to add the "agg." suffix to a species complex.\n'};
 
 // BAS and REF errors
-if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the BAS_AUT ends with a valid date in YYYY format, starting at 1758.\n"};
+if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the AUT ends with a valid date in YYYY format, starting at 1758.\n"};
 if (f.matches('.r,.r2') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1998)) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in YYYY format, starting at 1998.\n"};
 if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > date.substring(0,4)) {i++; log += '[#' + i + s1 + "You cannot use a future date for anything already published.\n"};
 if (f.matches('.r') && (/&/.test(d) || (d.match(/,/g) || []).length > 1 || (d.match(/et al/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Only list the first author when using the r data type. The "et al." prefix is added automatically for this data type and therefore should not be present in the raw data.\n'};
@@ -87,12 +87,12 @@ if (f.matches('.e2,.d2') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'Th
 if (f.matches('.sh') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'This synonym must be located below a ORD, PARAPHYLUM, SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
 if (f.matches('.e,.d,.s,.b,.n,.s2,.s3,.s4') && !(f.matches(':is(p.a,p.ae,p.c,.w)~p'))) {i++; log += '[#' + i + s4 + 'Type 1 common names, BAS and SYN must be located below a SP/AGG/HYBR taxon.\n'};
 if (f.matches('.e') && f.matches('p.d+p') || f.matches('.e2') && f.matches('p.d2+p')) {i++; log += '[#' + i + s4 + 'German common names should be placed after english common names.\n'};
-if (f.matches('.e,.d') && f.matches('p:is(.b,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p') || f.matches('.e2,.d2') && f.matches('p.sh+p')) {i++; log += '[#' + i + s4 + 'BAS, BAS_AUT, SYN, SYN_H, SSP, SEG and PARENT should be placed after common names.\n'};
+if (f.matches('.e,.d') && f.matches('p:is(.b,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p') || f.matches('.e2,.d2') && f.matches('p.sh+p')) {i++; log += '[#' + i + s4 + 'BAS, AUT, SYN, SYN_H, SSP, SEG and PARENT should be placed after common names.\n'};
 if (f.matches('.b,.n') && f.matches('p:is(.s,.s2,.s3,.s4)+p')) {i++; log += '[#' + i + s4 + 'Synonyms should be placed after basionyms.\n'};
 if (f.matches('.s,.s2,.s3,.s4') && f.matches('p:is(.u,.ue,.k,.v,.v2)+p')) {i++; log += '[#' + i + s4 + 'SSP, SEG and PARENT should be placed after synonyms.\n'};
 if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.n,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, synonyms, SSP, SEG and PARENT.\n'};
 if (f.matches('.v,.v2') && !(f.matches(':is(.w)~p'))) {i++; log += '[#' + i + s4 + 'PARENT taxons must be located below a HYBR taxon.\n'};
-if (f.matches('.n') && !(f.matches(':is(.b)+p')) || f.matches('.b') && !(/, \d\d\d\d<\/span>/.test(d))) {i++; log += '[#' + i + s4 + 'Every BAS name must be directly followed by a proper BAS_AUT.\n'};
+if (f.matches('.n') && !(f.matches(':is(.b)+p')) || f.matches('.b') && !(/, \d\d\d\d<\/span>/.test(d))) {i++; log += '[#' + i + s4 + 'Every BAS name must be directly followed by a proper AUT.\n'};
 if (f.matches('.v2') && !(f.matches('p:is(.v)+p'))) {i++; log += '[#' + i + s4 + 'A hybrid PARENT taxon must be directly followed by the second PARENT.\n'};
 if (f.matches('.l') && !(f.matches('p:is(.r,.r2)+p')) || f.matches('.p,.p2') && !(f.matches('p.l+p'))) {i++; log += '[#' + i + s4 + 'Every REF must be followed by a proper REF_TITLE and REF_ID.\n'};
 
