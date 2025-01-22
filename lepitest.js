@@ -183,7 +183,7 @@ $$('.f,.y,.t,.j,.h').forEach(f=>{
 var sib = f.nextElementSibling.firstElementChild; var testArray = [];
 while (sib) {
 	if (sib.matches('.g')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.sh,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "GEN ' + testArray[t] + '" is listed twice within this ' + convert(f.classList) + '.\n'};
