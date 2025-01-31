@@ -79,7 +79,7 @@ All data points within the Lepitaxa dataset share the following simple syntax ma
 These elements are:
 1.  ***`class`*** – The data point class, which is a short and easy to remember set of 1-2 characters. Each class is linked to a data type and defines how the data string is handled and displayed.
 2. **`TAB`** – A single tab (U+0009 TAB character, \t). Do NOT use spaces instead, no matter how many!
-3. ***`data`*** – The actual data string, its specific fine structure for each data point class is explained further below.
+3. ***`data`*** – The actual data string. Its specific fine structure for each data point class is explained further below.
 4. **`BR`** – A single line break (U+000A NEWLINE character, \n). Unneeded carriage return characters (U+000D CR character, \r) should be removed automatically by Git.
 
 Example of some data points:
@@ -499,7 +499,7 @@ The ID of a referenced scientific publication. This data type forms the last ele
 - 25.1. Type 1 IDs (`p`) are used if there is a DOI available for a publication. This always has priority!
 - 25.2. Type 2 IDs (`p2`) are used if there is no DOI available for a publication. Instead, the ISSN-L and Volume+Issue designation is specified.
 - 25.3. The DOI (Digital Object Identifier) must be taken straight from the publication source, unmodified. Do NOT add any _doi:_-prefix (will be added automatically via JavaScript), the raw ID should be used. The DOI will be turned into a link to the publication source on the Lepitaxa webpage, appended to REF_TITLE. Please make sure this link actually works!
-- 25.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. The ISSN-L will be turned into a link to the ISSN portal on the Lepitaxa webpage, offering more details on the publication source. Please make sure this link actually works!
+- 25.4. The ISSN-L (Linking International Standard Serial Number) must be taken straight from the publication source, unmodified, using the _NNNN-NNNC_ syntax. Do NOT add the _ISSN-L_-prefix (will be added automatically via JavaScript), the raw ID should be used. On the Lepitaxa webpage, the ISSN-L will be turned into a link to the ISSN portal, offering more details on the publication source. Please make sure this link actually works!
 - 25.5. Any ISSN-L must be followed by a Volume (+optional Issue) designation. The volume number is added directly after the ISSN-L, separated by a single comma (U+002C) and one space. The issue number, in case one exists, is added within parentheses directly after the volume number, with NO spaces separating them.
 - 25.6. IDs must always be the last element of a REF data triplet, therefore be prepended by a REF and REF_TITLE. These three data points belong together and should not be separated!
 - 25.7. The sorting follows Guideline 23.5.
