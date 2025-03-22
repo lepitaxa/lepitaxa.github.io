@@ -33,6 +33,7 @@ if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.sh') && /[^A-z]/g
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('.d,.d2,.e,.e2') && /\d/g.test(d)) {i++; log += '[#' + i + s1 + 'No numeric characters allowed in common names, use words instead.\n'};
 
 // Common typos, spelling and grammar mistakes
 if (f.matches('.e,.e2') && /Acrea/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Acraea" for typos.\n'};
