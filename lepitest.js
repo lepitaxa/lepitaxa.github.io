@@ -24,6 +24,7 @@ var s1 = ']  Invalid name' + sd;
 var s2 = ']  Stray taxon' + sd;
 var s3 = ']  Invalid data type' + sd;
 var s4 = ']  Invalid data order' + sd;
+var s5 = ']  Invalid data point' + sd;
 var sf = 'The suffix of this taxon type must be "'
 
 
@@ -33,6 +34,7 @@ if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.sh') && /[^A-z]/g
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
 if (f.matches('.bs,p:not(.b,.n,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,p:not(.xp,.b,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('.d,.d2,.e,.e2') && /\d/g.test(d)) {i++; log += '[#' + i + s1 + 'No numeric characters allowed in common names, use words instead.\n'};
 
 // Common typos, spelling and grammar mistakes
 if (f.matches('.e,.e2') && /Acrea/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Acraea" for typos.\n'};
@@ -75,13 +77,14 @@ if (f.matches('.h') && !(/iti$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iti
 if (f.matches('p:not(.c)') && (/ agg\.$/.test(d))) {i++; log += '[#' + i + s1 + 'Use the AGG datatype to add the "agg." suffix to a species complex.\n'};
 
 // BAS and REF errors
-if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s1 + "Make sure the AUT ends with a valid date in YYYY format, starting at 1758.\n"};
-if (f.matches('.r,.r2') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1998)) {i++; log += '[#' + i + s1 + "Make sure the REF ends with a valid date in YYYY format, starting at 1998.\n"};
-if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > date.substring(0,4)) {i++; log += '[#' + i + s1 + "You cannot use a future date for anything already published.\n"};
-if (f.matches('.r') && (/&/.test(d) || (d.match(/,/g) || []).length > 1 || (d.match(/et al/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Only list the first author when using the r data type. The "et al." prefix is added automatically for this data type and therefore should not be present in the raw data.\n'};
-if (f.matches('.r2') && (/&/.test(d) && (d.match(/ /g) || []).length < 3 || (d.match(/&/g) || []).length > 1 || (d.match(/,/g) || []).length > 1)) {i++; log += '[#' + i + s1 + 'Do not list more than 2 authors when using the r2 data type. If there are 2 authors listed, make sure they are properly separated by a space-separated "&" character.\n'};
-if (f.matches('.p') && !(/^doi:10./.test(d))) {i++; log += '[#' + i + s1 + 'Make sure this REF_ID is a proper DOI, without any additional "doi:" or URL suffix.\n'};
-if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log += '[#' + i + s1 + "Make sure this REF_ID is a proper ISSN + Volume designation.\n"};
+if (f.matches('.n') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1758)) {i++; log += '[#' + i + s5 + "Make sure the AUT ends with a valid date in YYYY format, starting at 1758.\n"};
+if (f.matches('.r,.r2') && (!(/^\D+, \d{4}$/.test(d)) || d.substring(d.length-4,d.length) < 1998)) {i++; log += '[#' + i + s5 + "Make sure the REF ends with a valid date in YYYY format, starting at 1998.\n"};
+if (f.matches('.n,.r,.r2') && d.substring(d.length-4,d.length) > date.substring(0,4)) {i++; log += '[#' + i + s5 + "You cannot use a future date for anything already published.\n"};
+if (f.matches('.r') && (/&/.test(d) || (d.match(/,/g) || []).length > 1 || (d.match(/et al/g) || []).length > 1)) {i++; log += '[#' + i + s5 + 'Only list the first author when using the r data type. The "et al." prefix is added automatically for this data type and therefore should not be present in the raw data.\n'};
+if (f.matches('.r2') && (/&/.test(d) && (d.match(/\W /g) || []).length < 2 || (d.match(/&/g) || []).length > 1 || (d.match(/,/g) || []).length > 1) || /(\S&|&\S|,\S)g/.test(d)) {i++; log += '[#' + i + s5 + 'Do not list more than 2 authors when using the r2 data type. If there are 2 authors listed, make sure they are properly separated by a space-separated "&" character.\n'};
+if (f.matches('.n') && ((d.match(/&/g) || []).length > 1 || (d.match(/,/g) || []).length > 2) || /(\S&|&\S|,\S)g/.test(d)) {i++; log += '[#' + i + s5 + 'Do not list more than 3 authors when using the n data type. If there is more than one author listed, make sure the last one is properly separated by a space-separated "&" character.\n'};
+if (f.matches('.p') && !(/^doi:10./.test(d))) {i++; log += '[#' + i + s5 + 'Make sure this REF_ID is a proper DOI, without any additional "doi:" or URL suffix.\n'};
+if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log += '[#' + i + s5 + "Make sure this REF_ID is a proper ISSN + Volume designation.\n"};
 
 // Data order
 if (f.matches('.x9') && !(f.matches('p:first-of-type'))) {i += 1; log += '[#' + i + s2 + 'There must be a single one located at the top of taxa section.\n'};
