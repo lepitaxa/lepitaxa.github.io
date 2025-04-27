@@ -1,5 +1,5 @@
 ////// LEPITEST DATA INTEGRITY CHECK
-var data = $$('p')
+var data = $$('p');
 
 ////1 Start data check results log
 console.log('→ Run lepitest data integrity check ...'); var log = ''; var i = 0;
@@ -25,7 +25,7 @@ var s2 = ']  Stray taxon' + sd;
 var s3 = ']  Invalid data type' + sd;
 var s4 = ']  Invalid data order' + sd;
 var s5 = ']  Invalid data point' + sd;
-var sf = 'The suffix of this taxon type must be "'
+var sf = 'The suffix of this taxon type must be "';
 
 
 // Special characters and capitalization
@@ -297,21 +297,21 @@ for (let t = 0; t < testArraySY.length - 1; t++) {
 
 
 ////6 Check for loose characters not being part of any data
-$$('div[id]').forEach(f=>{if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || /\/p\>(?!\n?\<)/g.test(f.outerHTML)) {i++; log += '[#' + i + ']  Loose characters detected within group ' + f.firstElementChild.innerHTML + '. These characters should either have a proper data type assigned to them or be deleted!\n'}});
+$$('div[id]').forEach(f=>{	if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || f.innerHTML.match(/(\n)/g).length > 1) {i++; log += '[#' + i + ']  Loose characters or empty lines detected within group ' + f.firstElementChild.innerHTML + '. These characters should either be turned into proper data points or be deleted!\n'}});
 
 
 ////7 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var size = count * 0.0000236
-var info2; var empty = raw.innerHTML.match(/(\n)/g).length - 11;
+var size = count * 0.0000237;
+var info2;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
 
 if (i > 0) info2 = "WARNING: Data integrity issues found! Keep this in mind when using the data!\n- If you're a contributor, please fix the issues before opening a pull request.\n- If you're a visitor, please report this problem at https://github.com/lepitaxa/lepitaxa.github.io/issues.\n\n";
 else info2 = "No data integrity issues found!\n\n";
 
-var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nLepitest Log:\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '. Empty lines skipped: ' + empty + '.\n' + log;
+var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nLepitest Log:\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n[#0]  Data points checked: ' + data.length + '. Issues found: ' + i + '.\n' + log;
 console.log(results); alert(info1 + info2 + results);
 
 
