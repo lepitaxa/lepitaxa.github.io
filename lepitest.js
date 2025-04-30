@@ -54,6 +54,7 @@ if (f.matches('.d,.d2') && /(ikansche|ikanisce|ikanishe)/.test(d)) {i++; log += 
 if (f.matches('.d,.d2') && /(P|p)auenauge/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Pfauenauge" for typos.\n'};
 if (f.matches('.d,.d2') && /(Scwalben|Shwalben)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Schwalben" for typos.\n'};
 if (f.matches('.d,.d2') && /(scwanz|shwanz)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "schwanz" for typos.\n'};
+if (f.matches('.d,.d2') && /Tibetanisch/.test(d)) {i++; log += '[#' + i + s1 + '"Tibetanisch" is an incorrect spelling of "Tibetisch".\n'};
 if (f.matches('.d,.d2') && /(W|w)eiss/.test(d)) {i++; log += '[#' + i + s1 + '"Weiss" is an outdated spelling of "Weiß".\n'};
 if (f.matches('.e,.e2,.d,.d2') && /&/.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "and/und" instead of the "&" character as an abbreviation.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /St\./.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "Sankt/Saint" instead of the "St." abbreviation.\n'};
