@@ -81,7 +81,7 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
 .a,.ae,.c,.w	{padding:0 0 0 6.5rem}
-.b,.u,.ue,.k,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
+.b,.z,.u,.ue,.k,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
 :is(.e,.e2)::before	{content:'EN "'}
@@ -95,8 +95,9 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .link, .link:hover	{text-decoration:none}
 :is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem; color:#000}
 .g>.link::before	{content:"▪ "; font-style:normal; color:#000}
-.b			{color:#448}
+.b,.z		{color:#448}
 .b::before	{content:'BS '}
+.z::before	{content:'TS '}
 .ns			{font-family:"Times New Roman",Times,serif;letter-spacing:0.04rem}
 
 /*main, taxa*/
@@ -342,6 +343,8 @@ e	Old World Swallowtail
 e	Common Yellow Swallowtail
 d	Schwalbenschwanz
 b	Papilio
+n	Linnaeus, 1758
+z	Papilio
 n	Linnaeus, 1758
 s	hippocrates
 s	machaon gorganus
@@ -33935,11 +33938,11 @@ a	pareruta
 c	tritici
 e	White-line Dart
 d	Weizeneule
+b	Phalaena
+n	Linnaeus, 1761
 k	eruta
 k	nigrofusca
 k	tritici
-b	Phalaena
-n	Linnaeus, 1761
 a	vitta
 d	Steppenrasen-Erdeule
 o	Decorans
@@ -62117,8 +62120,6 @@ n	Guenée, 1858
 a	vellivolata
 e	Large Purplish Gray
 d	Großer Violettgrauer Rindenspanner
-b	Boarmia
-n	Guenée, 1857
 b	Macaria
 n	Hulst, 1887
 s2	Anacamptodes
@@ -87698,7 +87699,9 @@ while (sib) { // Loop for each div
 	if (sib.matches('.a,.ae,.c,.w,.g')) {var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + sib.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); sib.prepend(id_lnk)};
 	if (sib.matches('.c')) sib.innerHTML += ' agg.';
 	if (sib.matches('.v')) sib.innerHTML += ' × ' + genera[ig] + ' ' + sib.nextElementSibling.innerHTML;
-	if (sib.matches('.b')) sib.innerHTML = '<span class="bs">' + sib.innerHTML.replace('× ','') + ' </span><span class="ns">' + sib.nextElementSibling.innerHTML + '</span>';
+	if (sib.matches('.b')) sib.innerHTML = '<span class="bs">' + sib.innerHTML.replace('× ','') + '</span> ';
+	if (sib.matches('.z')) sib.innerHTML = '<span class="zs">' + sib.innerHTML + '</span> ';
+	if (sib.matches('.b,.z')) sib.innerHTML += '<span class="ns">' + sib.nextElementSibling.innerHTML + '</span>';
 	if (sib.matches('.l')) {var sib2 = sib.nextElementSibling.innerHTML; sib.innerHTML = '<span class="ls">' + sib.innerHTML.replace(';',',').replace('"','“') + '</span>, ';
 		if (sib.nextElementSibling.matches('.p')) {sib.innerHTML += '<a href="https://doi.org/' + sib2.substring(4,sib2.length) + '">' + sib2 + '</a>'}
 		else {sib.innerHTML += '<a href="https://portal.issn.org/resource/ISSN-L/' + sib2.substring(7,16) + '">' + sib2.substring(0,16) + '</a>' + sib2.substring(16,sib2.length)}};
