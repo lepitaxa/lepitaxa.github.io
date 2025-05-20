@@ -29,10 +29,10 @@ var sf = 'The suffix of this taxon type must be "';
 
 
 // Special characters and capitalization
-if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('.bs,.zs,p:not(.b,.z,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
-if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.bs,.zs,.sh') && /[^A-z]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
+if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.b,.z,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.sh') && /[^A-z]/g.test(d) || f.matches('.b') && /[^A-z -]/g.test(f.firstElementChild.innerHTML) || f.matches('.z') && /[^A-z]/g.test(f.firstElementChild.innerHTML)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
-if (f.matches('.bs,.zs,p:not(.b,.z,.n,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.bs,.zs,p:not(.xp,.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('p:not(.b,.z,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.b,.z') && /[^A-Z]/.test(f.firstElementChild.innerHTML.substring(0,1)) || f.matches('p:not(.xp,.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2)) || f.matches('.b,.z') && /[^a-z -]/.test(f.firstElementChild.innerHTML.substring(1,f.firstElementChild.innerHTML.length))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && /\d/g.test(d)) {i++; log += '[#' + i + s1 + 'No numeric characters allowed in common names, use words instead.\n'};
 
@@ -126,8 +126,8 @@ while (sib) {
 $$('.a,.ae,.c,.w').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) {
-	if (sib.matches('.z') && sib.nextElementSibling.nextElementSibling.matches('.z') && sib.innerHTML.localeCompare(sib.nextElementSibling.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "TS ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
-	if (sib.matches('.z') && sib.nextElementSibling.nextElementSibling.matches('.z') && sib.innerHTML.localeCompare(sib.nextElementSibling.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "TS ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
+	if (sib.matches('.z') && sib.nextElementSibling.nextElementSibling.matches('.z') && sib.firstElementChild.innerHTML.localeCompare(sib.nextElementSibling.nextElementSibling.firstElementChild.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "TS ' + sib.firstElementChild.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
+	if (sib.matches('.z') && sib.nextElementSibling.nextElementSibling.matches('.z') && sib.firstElementChild.innerHTML.localeCompare(sib.nextElementSibling.nextElementSibling.firstElementChild.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "TS ' + sib.firstElementChild.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
 	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n)')) break
 	sib = sib.nextElementSibling}});
 	
