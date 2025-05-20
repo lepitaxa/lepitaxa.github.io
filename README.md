@@ -136,7 +136,7 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`d2`|NAME_DE|**NAME**|German common name of a<br>family/tribe-level taxon|
 |`b`|BAS|**GEN** $\color{#9BD}{\textsf{ SP}}$|Genus of the basionym/original combination|
 |`z`|TS|**GEN**|Type species designation for genus/subgenus/genus synonym|
-|`n`|AUT|**AUT, YYYY**|Author(s) and year of publication of the basionym/original combination|
+|`n`|AUT|**AUT, YYYY**|Author(s) and year of publication of the basionym/original combination or genus/subgenus|
 |`s`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** SSP|Species synonym with different<br>species (+ optional subspecies) epithet|
 |`s2`|SYN|**GEN** SP $\color{#9BD}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
 |`s3`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
