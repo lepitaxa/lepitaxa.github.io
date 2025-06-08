@@ -102,55 +102,57 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 ### Overview of supported data point classes and data types
 |Data point class|Data type|Data string fine structure|Short description|
 |---|---|---|---|
-|`x9`|ORD|**NAME**|Order name|
-|`x8`|SUBORD|**NAME**|Suborder name|
-|`x7`|INFRAORD|**NAME**|Infraorder name|
-|`x6`|PARVORD|**NAME**|Parvorder name|
-|`x5`|MICROORD|**NAME**|Microorder name|
-|`x4`|SECT|**NAME**|Section name|
-|`x3`|SUBSECT|**NAME**|Subsection name|
-|`x2`|INFRASECT|**NAME**|Infrasection name|
-|`x`|SUPERFAM|**NAME**|Superfamily name|
-|`xs`|SERIES|**NAME**|Series name|
-|`xp`|PARAPHYLUM|**NAME**|Paraphylum name|
-|`f`|FAM|**NAME**|Family name|
-|`y`|SUBFAM|**NAME**|Subfamily name|
-|`t`|TRI|**NAME**|Tribe name|
-|`j`|SUBTRI|**NAME**|Subtribe name|
-|`h`|INFRATRI|**NAME**|Infratribe name|
-|`g`|GEN|**GEN**|Genus name|
-|`i`|SUBGEN|**NAME**|Subgenus name|
-|`o`|SPGR|**NAME**|Species group name|
-|`a`|SP|$\color{#9BD}{\textsf{GEN }}$ **SP**|Epithet of extant species|
-|`ae`|SP_EXT|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ †}}$|Epithet of extinct species|
-|`c`|AGG|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ agg.}}$|Aggregate name<br>(species complex/superspecies epithet)|
-|`k`|SEG|$\color{#9BD}{\textsf{GEN }}$ **SP**|Segregate name<br>(microspecies epithet)|
-|`u`|SSP|$\color{#9BD}{\textsf{GEN SP }}$ **SSP**|Epithet of extant subspecies|
-|`ue`|SSP_EXT|$\color{#9BD}{\textsf{GEN SP }}$ **SSP** $\color{#9BD}{\textsf{ †}}$|Epithet of extinct subspecies|
-|`w`|HYBR|$\color{#9BD}{\textsf{GEN × }}$ **SP**|Epithet of species hybrid|
-|`v`|PARENT|$\color{#9BD}{\textsf{GEN }}$ SP **SP/SSP**|Epithet of 1<sup>st</sup> parent (sub)species|
-|`v2`|PARENT|$\color{#9BD}{\textsf{GEN }}$ SP **SP/SSP**|Epithet of 2<sup>nd</sup> parent (sub)species|
-|`e`|NAME_EN|**NAME**|English common name of a<br>species or species complex|
-|`e2`|NAME_EN|**NAME**|English common name of a<br>family/tribe-level taxon|
-|`d`|NAME_DE|**NAME**|German common name of a<br>species or species complex|
-|`d2`|NAME_DE|**NAME**|German common name of a<br>family/tribe-level taxon|
-|`b`|BAS|**GEN** $\color{#9BD}{\textsf{ SP}}$|Genus of the basionym/original combination|
-|`z`|TS|**GEN**|Type species designation for genus/subgenus/genus synonym|
-|`n`|AUT|**AUT, YYYY**|Author(s) and year of publication of the basionym/original combination or genus/subgenus|
-|`s`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** SSP|Species synonym with different<br>species (+ optional subspecies) epithet|
-|`s2`|SYN|**GEN** SP $\color{#9BD}{\textsf{ SP/SSP}}$|(Sub)species synonym with different<br>genus (+optional species) name|
-|`s3`|SYN|$\color{#9BD}{\textsf{GEN }}$ **SP** $\color{#9BD}{\textsf{ SSP}}$|Species synonym of former subspecies<br>of the given species epithet|
-|`s4`|SYN|**GEN SP** SSP|(Sub)species synonym with completely<br>different genus and species name|
-|`sh`|SYN_H|**NAME**|Synonym of higher taxon|
-|`r`|REF|**AUT1** $\color{#9BD}{\textsf{ et al.}}$ **, YYYY**|Scientific reference first author+year<br>when >2 authors|
-|`r2`|REF|**AUT1** & AUT2 **, YYYY**|Scientific reference author(s)+year<br>when ≤2 authors|
-|`l`|REF_TITLE|**TITLE**|Title of scientific reference|
-|`p`|REF_ID|$\color{#9BD}{\textsf{doi:}}$**DOI**|ID of scientific reference via DOI|
-|`p2`|REF_ID|$\color{#9BD}{\textsf{ISSN-L:}}$ **ISSN-L, VOL**(ISSUE)|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
+|`x9`|ORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Order name|
+|`x8`|SUBORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Suborder name|
+|`x7`|INFRAORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Infraorder name|
+|`x6`|PARVORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Parvorder name|
+|`x5`|MICROORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Microorder name|
+|`x4`|SECT|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Section name|
+|`x3`|SUBSECT|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Subsection name|
+|`x2`|INFRASECT|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Infrasection name|
+|`x`|SUPERFAM|![Name*oidea](https://placehold.co/120x32/EEE/000?text=Name*oidea)|Superfamily name|
+|`xs`|SERIES|![Name*iformes](https://placehold.co/120x32/EEE/000?text=Name*iformes)|Series name|
+|`xp`|PARAPHYLUM|!["](https://placehold.co/16x32/FDD/F00?text=") ![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a) !["](https://placehold.co/16x32/FDD/F00?text=")|Paraphylum name|
+|`f`|FAM|![Name*idae](https://placehold.co/120x32/EEE/000?text=Name*idae)|Family name|
+|`y`|SUBFAM|![Name*inae](https://placehold.co/120x32/EEE/000?text=Name*inae)|Subfamily name|
+|`t`|TRI|![Name*ini](https://placehold.co/96x32/EEE/000?text=Name*ini)|Tribe name|
+|`j`|SUBTRI|![Name*ina](https://placehold.co/96x32/EEE/000?text=Name*ina)|Subtribe name|
+|`h`|INFRATRI|![Name*iti](https://placehold.co/96x32/EEE/000?text=Name*iti)|Infratribe name|
+|`g`|GEN|![Gen](https://placehold.co/48x32/EEE/000?text=Gen)|Genus name|
+|`i`|SUBGEN|![Gen](https://placehold.co/48x32/EEE/000?text=Gen)|Subgenus name|
+|`o`|SPGR|![Sp](https://placehold.co/32/EEE/000?text=Sp) ![·Group](https://placehold.co/64x32/FDD/F00?text=·Group)|Species group name|
+|`a`|SP|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Epithet of extant species|
+|`ae`|SP_EXT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·†](https://placehold.co/32/FDD/F00?text=·†)|Epithet of extinct species|
+|`c`|AGG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·agg.](https://placehold.co/48x32/FDD/F00?text=·agg.)|Aggregate name<br>(species complex/superspecies epithet)|
+|`k`|SEG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Segregate name<br>(microspecies epithet)|
+|`u`|SSP|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp·](https://placehold.co/32/FDD/F00?text=sp·) ![ssp](https://placehold.co/48x32/EEE/000?text=ssp)|Epithet of extant subspecies|
+|`ue`|SSP_EXT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp·](https://placehold.co/32/FDD/F00?text=sp·) ![ssp](https://placehold.co/48x32/EEE/000?text=ssp) ![·†](https://placehold.co/32/FDD/F00?text=·†)|Epithet of extinct subspecies|
+|`w`|HYBR|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![×·](https://placehold.co/32/FDD/F00?text=×·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Epithet of species hybrid|
+|`v`|PARENT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Epithet of 1<sup>st</sup> parent (sub)species|
+|`v2`|PARENT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Epithet of 2<sup>nd</sup> parent (sub)species|
+|`e`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a<br>species or species complex|
+|`e2`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a<br>family/tribe-level taxon|
+|`d`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a<br>species or species complex|
+|`d2`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a<br>family/tribe-level taxon|
+|`b`|BAS|![Gen](https://placehold.co/48x32/EEE/000?text=Gen) ![·sp](https://placehold.co/32/FDD/F00?text=·sp)|Genus of the basionym/original combination|
+|`z`|TS|![Gen](https://placehold.co/48x32/EEE/000?text=Gen)|Type species designation for genus/subgenus/genus synonym|
+|`n`|AUT|![Auts,·YYYY](https://placehold.co/128x32/EEE/000?text=Auts,·YYYY)|Author(s) and year of publication of the basionym/original combination or genus/subgenus|
+|`s`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Species synonym with different<br>species (+ optional subspecies) epithet|
+|`s2`|SYN|![Gen](https://placehold.co/48x32/EEE/000?text=Gen) ![·sp](https://placehold.co/32/F5F5F5/AAA?text=·sp) ![·(s)sp](https://placehold.co/64x32/FDD/F00?text=·(s)sp)|(Sub)species synonym with different<br>genus (+optional species) name|
+|`s3`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/FDD/F00?text=·ssp)|Species synonym of former subspecies<br>of the given species epithet|
+|`s4`|SYN|![Gen·](https://placehold.co/48x32/EEE/000?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|(Sub)species synonym with completely<br>different genus and species name|
+|`sh`|SYN_H|![Name](https://placehold.co/64x32/EEE/000?text=Name)|Synonym of higher taxon|
+|`r`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·et·al.](https://placehold.co/64x32/FDD/F00?text=·et·al.) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference first author+year<br>when >2 authors|
+|`r2`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·&·Aut2](https://placehold.co/64x32/F5F5F5/AAA?text=·%26·Aut2) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference author(s)+year<br>when ≤2 authors|
+|`l`|REF_TITLE|![Title](https://placehold.co/64x32/EEE/000?text=Title)|Title of scientific reference|
+|`p`|REF_ID|![doi:](https://placehold.co/64x32/FDD/F00?text=doi:) ![10.XXXX/ID](https://placehold.co/132x32/EEE/000?text=10.XXXX/ID)|ID of scientific reference via DOI|
+|`p2`|REF_ID|![ISSN-L:·](https://placehold.co/64x32/FDD/F00?text=ISSN-L:·) ![NNNN-NNNC](https://placehold.co/132x32/EEE/000?text=NNNN-NNNC) ![,·Vol](https://placehold.co/64x32/EEE/000?text=,·Vol) ![(Issue)](https://placehold.co/64x32/F5F5F5/AAA?text=(Issue))|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
 
-$\color{#9BD}{\textsf{X }}$ Auto-generated data substring – added on page load via JavaScript<br>
-**X**&nbsp; Required data (sub)string – must always be present<br>
-X&nbsp; Optional data substring – can be added in addition to a required substring
+![X](https://placehold.co/32/FDD/F00?text=X) Auto-generated data substring – added on page load via JavaScript<br>
+![X](https://placehold.co/32/EEE/000?text=X) Required data (sub)string – must always be present<br>
+![X](https://placehold.co/32/F5F5F5/AAA?text=X) Optional data substring – can be added in addition to a required substring<br>
+![·](https://placehold.co/32/FFF/000?text=·) Space character (U+0020)<br>
+![*](https://placehold.co/32/FFF/000?text=*) Mandatory suffix
 
 ## Guidelines
 Here you can find guidelines and details for the individual data types, which should be followed when modifying the dataset. This is to ensure that all data points are displayed in their correct position and format on the Lepitaxa webpage. Only data points fulfilling these guidelines will be accepted and merged into the main branch. Running a lepitest before opening a pull request can help knock out many common mistakes when it comes to the data fine structure and sorting.
