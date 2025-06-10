@@ -33,16 +33,16 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
-|----------------|_"Macrolepidopterans"_|_"Großschmetterlinge"_|------------------------------------------------|
+|----------------|_"Macrolepidopterans"_|_"Großschmetterlinge"_|-----------------------------------------------------|
 |![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
 |![#FFCC66,#FF0000](https://placehold.co/110x50/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
 |![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
 |![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
-|----------------|_"Microlepidopterans"_|_"Kleinschmetterlinge"_|------------------------------------------------|
-|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa<br>(Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina<br>(Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa<br>(Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
-|![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera<br>(Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
+|----------------|_"Microlepidopterans"_|_"Kleinschmetterlinge"_|-----------------------------------------------------|
+|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa (Superfamilies Drepanoidea, Pyraloidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea, Zygaenoidea and relatives)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera (Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
 
 Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
@@ -100,7 +100,7 @@ u	hippocrates
 These datapoints form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
 
 ### Overview of supported data point classes and data types
-|Data point class|Data type|Data string fine structure|Short description|
+|Data point class|----------------<br>Data type<br>----------------|-------------------------------------------------------<br>Data string fine structure<br>-------------------------------------------------------|----------------------------------------<br>Short description<br>----------------------------------------|
 |---|---|---|---|
 |`x9`|ORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Order name|
 |`x8`|SUBORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Suborder name|
@@ -123,30 +123,30 @@ These datapoints form a very long, but simple list, resulting in a strictly line
 |`o`|SPGR|![Sp](https://placehold.co/32/EEE/000?text=Sp) ![·Group](https://placehold.co/64x32/FDD/F00?text=·Group)|Species group name|
 |`a`|SP|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Epithet of extant species|
 |`ae`|SP_EXT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·†](https://placehold.co/32/FDD/F00?text=·†)|Epithet of extinct species|
-|`c`|AGG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·agg.](https://placehold.co/48x32/FDD/F00?text=·agg.)|Aggregate name<br>(species complex/superspecies epithet)|
-|`k`|SEG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Segregate name<br>(microspecies epithet)|
+|`c`|AGG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·agg.](https://placehold.co/48x32/FDD/F00?text=·agg.)|Aggregate name (species complex/superspecies epithet)|
+|`k`|SEG|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Segregate name (microspecies epithet)|
 |`u`|SSP|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp·](https://placehold.co/32/FDD/F00?text=sp·) ![ssp](https://placehold.co/48x32/EEE/000?text=ssp)|Epithet of extant subspecies|
 |`ue`|SSP_EXT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp·](https://placehold.co/32/FDD/F00?text=sp·) ![ssp](https://placehold.co/48x32/EEE/000?text=ssp) ![·†](https://placehold.co/32/FDD/F00?text=·†)|Epithet of extinct subspecies|
 |`w`|HYBR|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![×·](https://placehold.co/32/FDD/F00?text=×·) ![sp](https://placehold.co/32/EEE/000?text=sp)|Epithet of species hybrid|
 |`v`|PARENT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Epithet of 1<sup>st</sup> parent (sub)species|
 |`v2`|PARENT|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Epithet of 2<sup>nd</sup> parent (sub)species|
-|`e`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a<br>species or species complex|
-|`e2`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a<br>family/tribe-level taxon|
-|`d`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a<br>species or species complex|
-|`d2`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a<br>family/tribe-level taxon|
+|`e`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a species or species complex|
+|`e2`|NAME_EN|![Name](https://placehold.co/64x32/EEE/000?text=Name)|English common name of a family/tribe-level taxon|
+|`d`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a species or species complex|
+|`d2`|NAME_DE|![Name](https://placehold.co/64x32/EEE/000?text=Name)|German common name of a family/tribe-level taxon|
 |`b`|BAS|![Gen](https://placehold.co/48x32/EEE/000?text=Gen) ![·sp](https://placehold.co/32/FDD/F00?text=·sp)|Genus of the basionym/original combination|
 |`z`|TS|![Gen](https://placehold.co/48x32/EEE/000?text=Gen)|Type species designation for genus/subgenus/genus synonym|
 |`n`|AUT|![Auts,·YYYY](https://placehold.co/128x32/EEE/000?text=Auts,·YYYY)|Author(s) and year of publication of the basionym/original combination or genus/subgenus|
-|`s`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Species synonym with different<br>species (+ optional subspecies) epithet|
-|`s2`|SYN|![Gen](https://placehold.co/48x32/EEE/000?text=Gen) ![·sp](https://placehold.co/32/F5F5F5/AAA?text=·sp) ![·(s)sp](https://placehold.co/64x32/FDD/F00?text=·(s)sp)|(Sub)species synonym with different<br>genus (+optional species) name|
-|`s3`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/FDD/F00?text=·ssp)|Species synonym of former subspecies<br>of the given species epithet|
-|`s4`|SYN|![Gen·](https://placehold.co/48x32/EEE/000?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|(Sub)species synonym with completely<br>different genus and species name|
+|`s`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|Species synonym with different species (+ optional subspecies) epithet|
+|`s2`|SYN|![Gen](https://placehold.co/48x32/EEE/000?text=Gen) ![·sp](https://placehold.co/32/F5F5F5/AAA?text=·sp) ![·(s)sp](https://placehold.co/64x32/FDD/F00?text=·(s)sp)|(Sub)species synonym with different genus (+optional species) name|
+|`s3`|SYN|![Gen·](https://placehold.co/48x32/FDD/F00?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/FDD/F00?text=·ssp)|Species synonym of former subspecies of the given species epithet|
+|`s4`|SYN|![Gen·](https://placehold.co/48x32/EEE/000?text=Gen·) ![sp](https://placehold.co/32/EEE/000?text=sp) ![·ssp](https://placehold.co/48x32/F5F5F5/AAA?text=·ssp)|(Sub)species synonym with completely different genus and species name|
 |`sh`|SYN_H|![Name](https://placehold.co/64x32/EEE/000?text=Name)|Synonym of higher taxon|
-|`r`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·et·al.](https://placehold.co/64x32/FDD/F00?text=·et·al.) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference first author+year<br>when >2 authors|
-|`r2`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·&·Aut2](https://placehold.co/64x32/F5F5F5/AAA?text=·%26·Aut2) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference author(s)+year<br>when ≤2 authors|
+|`r`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·et·al.](https://placehold.co/64x32/FDD/F00?text=·et·al.) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference first author+year when >2 authors|
+|`r2`|REF|![Aut1](https://placehold.co/64x32/EEE/000?text=Aut1) ![·&·Aut2](https://placehold.co/64x32/F5F5F5/AAA?text=·%26·Aut2) ![,·YYYY](https://placehold.co/64x32/EEE/000?text=,·YYYY)|Scientific reference author(s)+year when ≤2 authors|
 |`l`|REF_TITLE|![Title](https://placehold.co/64x32/EEE/000?text=Title)|Title of scientific reference|
 |`p`|REF_ID|![doi:](https://placehold.co/64x32/FDD/F00?text=doi:) ![10.XXXX/ID](https://placehold.co/132x32/EEE/000?text=10.XXXX/ID)|ID of scientific reference via DOI|
-|`p2`|REF_ID|![ISSN-L:·](https://placehold.co/64x32/FDD/F00?text=ISSN-L:·) ![NNNN-NNNC](https://placehold.co/132x32/EEE/000?text=NNNN-NNNC) ![,·Vol](https://placehold.co/64x32/EEE/000?text=,·Vol) ![(Issue)](https://placehold.co/64x32/F5F5F5/AAA?text=(Issue))|ID of scientific reference via<br>ISSN-L and Volume+Issue designation|
+|`p2`|REF_ID|![ISSN-L:·](https://placehold.co/64x32/FDD/F00?text=ISSN-L:·) ![NNNN-NNNC](https://placehold.co/132x32/EEE/000?text=NNNN-NNNC) ![,·Vol](https://placehold.co/64x32/EEE/000?text=,·Vol) ![(Issue)](https://placehold.co/64x32/F5F5F5/AAA?text=(Issue))|ID of scientific reference via ISSN-L and Volume+Issue designation|
 
 ![X](https://placehold.co/32/FDD/F00?text=X) Auto-generated data substring – added on page load via JavaScript<br>
 ![X](https://placehold.co/32/EEE/000?text=X) Required data (sub)string – must always be present<br>
