@@ -100,7 +100,7 @@ u	hippocrates
 These datapoints form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
 
 ### Overview of supported data point classes and data types
-|Data point class|----------------<br>Data type<br>----------------|-------------------------------------------------------<br>Data string fine structure<br>-------------------------------------------------------|----------------------------------------<br>Short description<br>----------------------------------------|
+|Data point class|---------------<br>Data type<br>---------------|-------------------------------------------------------<br>Data string fine structure<br>-------------------------------------------------------|----------------------------------------<br>Short description<br>----------------------------------------|
 |---|---|---|---|
 |`x9`|ORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Order name|
 |`x8`|SUBORD|![Name*a](https://placehold.co/80x32/EEE/000?text=Name*a)|Suborder name|
