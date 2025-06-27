@@ -314,7 +314,7 @@ $$('div[id]').forEach(f=>{	if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || f.innerH
 ////7 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var size = count * 0.0000237;
+var size = count * 0.0000236;
 var info2;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
