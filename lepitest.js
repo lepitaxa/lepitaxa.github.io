@@ -257,7 +257,45 @@ for (let t = 0; t < testArray.length - 1; t++) {
 if (c == 0) {i++; log += '[#' + i + ']  Invalid name detected for SPGR "' + f.innerHTML + '" within GEN "' + gen[1] + '". Its name does not match its eponymous species.\n'};
 });
 
-// Also add checks for g that only contain a single i, and for i that only contain a single o.
+// Check for GEN and its first SUBGEN not having equal names
+$$('.g').forEach(f=>{
+var testArray = []; testArray.push(f.innerHTML);
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.i')) testArray.push(sib.innerHTML); break;
+	if (sib.matches('p:not(.w,.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (testArray.length == 2 && testArray[0] !== testArray[1]) {i++; log += '[#' + i + ']  Invalid name detected for first SUBGEN of GEN "' + f.innerHTML + '". Both should have equal names.\n'};
+});
+
+// Check for GEN containing only a single SUBGEN
+$$('.g').forEach(f=>{
+var c = 0;
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.i')) c++;
+	if (sib.matches('p:not(.i,.o,.a,.ae,.c,.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (c == 1) {i++; log += '[#' + i + ']  Invalid number of SUBGEN detected for GEN "' + f.innerHTML + '". There should be none or more than one present.\n'};
+});
+
+
+// Check for SUBGEN containing only a single SPGR
+$$('.i').forEach(f=>{
+var c = 0;
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.o')) c++;
+	if (sib.matches('p:not(.o,.a,.ae,.c,.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (c == 1) {i++; log += '[#' + i + ']  Invalid number of SPGR detected for SUBGEN "' + f.innerHTML + '". There should be none or more than one present.\n'};
+});
 
 
 ////6 Check for duplicate common names and taxa
