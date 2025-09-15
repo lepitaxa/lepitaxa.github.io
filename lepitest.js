@@ -90,14 +90,15 @@ if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log +=
 // Data order
 if (f.matches('.x9') && !(f.matches('p:first-of-type'))) {i += 1; log += '[#' + i + s2 + 'Only a single taxon of this type can exist at the very top of the list.\n'};
 if (f.matches('.f,.i,.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2') && f.matches('p:first-of-type') || f.matches('.k,.u,.ue') && f.matches('p:nth-of-type(2)')) {i++; log += '[#' + i + s2 + 'It must be located within a valid parent taxon.\n'};
-if (f.matches('.e2,.d2') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'This type 2 common name must be located below a SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
-if (f.matches('.sh') && f.matches('p.g~p')) {i++; log += '[#' + i + s4 + 'This synonym must be located below a ORD, PARAPHYLUM, SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
-if (f.matches('.e,.d,.s,.b,.z,.n,.s2,.s3,.s4') && !(f.matches(':is(p.a,p.ae,p.c,.w)~p'))) {i++; log += '[#' + i + s4 + 'Type 1 common names, BAS, TS and SYN must be located below a SP/AGG/HYBR taxon.\n'};
-if (f.matches('.e') && f.matches('p.d+p') || f.matches('.e2') && f.matches('p.d2+p')) {i++; log += '[#' + i + s4 + 'German common names should be placed after english common names.\n'};
-if (f.matches('.e,.d') && f.matches('p:is(.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p') || f.matches('.e2,.d2') && f.matches('p.sh+p')) {i++; log += '[#' + i + s4 + 'BAS, TS, AUT, SYN, SYN_H, SSP, SEG and PARENT should be placed after common names.\n'};
-if (f.matches('.b,.z,.n') && f.matches('p:is(.s,.s2,.s3,.s4)+p')) {i++; log += '[#' + i + s4 + 'Synonyms should be placed after basionyms and type species designations.\n'};
-if (f.matches('.b') && f.matches('p:is(.z,.n)+p')) {i++; log += '[#' + i + s4 + 'Type species designations should be placed after basionyms. There can also be only one basionym listed per species-type taxon.\n'};
-if (f.matches('.b,.z,.n,.s,.s2,.s3,.s4') && f.matches('p:is(.u,.ue,.k,.v,.v2)+p')) {i++; log += '[#' + i + s4 + 'SSP, SEG and PARENT should be placed after basionyms, type species designations and synonyms.\n'};
+if (f.matches('.g') && f.nextElementSibling.matches('.o,.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2') || f.matches('.i,.o') && f.nextElementSibling.matches('.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2')) {i++; log += '[#' + i + s2 + 'There is at least one misplaced datapoint at the beginning of this GEN/SUBGEN/SPGR, e.g. SP subdata lacking its SP datapoint or a SPGR not located within a SUBGEN. The correct hierarchy is: GEN > SUBGEN > SPGR > SP > SP subdata.\n'};
+if (f.matches('p.g~p:is(.e2,.d2)')) {i++; log += '[#' + i + s4 + 'This type 2 common name must be located below a SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
+if (f.matches('p.g~p.sh')) {i++; log += '[#' + i + s4 + 'This synonym must be located below a ORD, PARAPHYLUM, SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
+if (f.matches('.e,.d,.s,.b,.z,.n,.s2,.s3,.s4') && !(f.matches('p:is(.a,.ae,.c,.w)~p'))) {i++; log += '[#' + i + s4 + 'Type 1 common names, BAS, TS and SYN must be located below a SP/AGG/HYBR taxon.\n'};
+if (f.matches('p.d+p.e') || f.matches('p.d2+p.e2')) {i++; log += '[#' + i + s4 + 'German common names should be placed after english common names.\n'};
+if (f.matches('p:is(.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p:is(.e,.d)') || f.matches('p.sh+p:is(.e2,.d2)')) {i++; log += '[#' + i + s4 + 'BAS, TS, AUT, SYN, SYN_H, SSP, SEG and PARENT should be placed after common names.\n'};
+if (f.matches('p:is(.s,.s2,.s3,.s4)+p:is(.b,.z,.n)')) {i++; log += '[#' + i + s4 + 'Synonyms should be placed after basionyms and type species designations.\n'};
+if (f.matches('p:is(.z,.n)+p.b')) {i++; log += '[#' + i + s4 + 'Type species designations should be placed after basionyms. There can also be only one basionym listed per species-type taxon.\n'};
+if (f.matches('p:is(.u,.ue,.k,.v,.v2)+p:is(.b,.z,.n,.s,.s2,.s3,.s4)')) {i++; log += '[#' + i + s4 + 'SSP, SEG and PARENT should be placed after basionyms, type species designations and synonyms.\n'};
 if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.n,.z,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, type species designations, synonyms, SSP, SEG and PARENT.\n'};
 if (f.matches('.v,.v2') && !(f.matches(':is(.w)~p'))) {i++; log += '[#' + i + s4 + 'PARENT taxons must be located below a HYBR taxon.\n'};
 if (f.matches('.n') && !(f.matches(':is(.b,.z)+p')) || f.matches('.b,.z') && !(/, \d\d\d\d<\/span>/.test(d))) {i++; log += '[#' + i + s4 + 'Every BAS and TS must be directly followed by a proper AUT.\n'};
@@ -232,18 +233,72 @@ while (sib) {
 	if (sib.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
 	sib = sib.nextElementSibling}});
 
-// SPGR before SUBGEN within GEN
-$$('.g').forEach(f=>{
-var sib = f.nextElementSibling; var testArray = [];
+
+////5 SUBGEN and SPGR specific checks
+
+// Check for incorrect SPGR names
+$$('.o').forEach(f=>{
+var testArray = []; testArray.push(f.innerHTML.toLowerCase());
+
+var sib = f.nextElementSibling;
 while (sib) {
-	if (sib.matches('.i,.o')) testArray.push(convert(sib.classList));
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.i,.o)')) break
+	if (sib.matches('.a,.ae,.c')) testArray.push(sib.innerHTML.replace(' agg.','').replace(' †',''));
+	if (sib.matches('p:not(.a,.ae,.c,.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
 	sib = sib.nextElementSibling};
-if (testArray[0] == 'SPGR') {i++; log += '[#' + i + s7 + 'GEN ' + f.innerHTML + '". Any SPGR must be located within a SUBGEN. The correct hierarchy therefore is: GEN > SUBGEN > SPGR.\n'};
+
+var gen = testArray.toString().replace(',',' ').split(' ');
+testArray[0] = gen[1] + ' ' + testArray[0];
+
+var c = 0;
+for (let t = 0; t < testArray.length - 1; t++) {
+	if (testArray[0].localeCompare(testArray[t+1], 'en') == 0) c++
+};
+
+if (c == 0) {i++; log += '[#' + i + ']  Invalid name detected for SPGR "' + f.innerHTML + '" within GEN "' + gen[1] + '". Its name does not match its eponymous species.\n'};
+});
+
+// Check for GEN and its first SUBGEN not having equal names
+$$('.g').forEach(f=>{
+var testArray = []; testArray.push(f.innerHTML);
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.i')) testArray.push(sib.innerHTML); break;
+	if (sib.matches('p:not(.w,.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (testArray.length == 2 && testArray[0] !== testArray[1]) {i++; log += '[#' + i + ']  Invalid name detected for first SUBGEN of GEN "' + f.innerHTML + '". Both should have equal names.\n'};
+});
+
+// Check for GEN containing only a single SUBGEN
+$$('.g').forEach(f=>{
+var c = 0;
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.i')) c++;
+	if (sib.matches('p:not(.i,.o,.a,.ae,.c,.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (c == 1) {i++; log += '[#' + i + ']  Invalid number of SUBGEN detected for GEN "' + f.innerHTML + '". There should be none or more than one present.\n'};
 });
 
 
-////5 Check for duplicate common names and taxa
+// Check for SUBGEN containing only a single SPGR
+$$('.i').forEach(f=>{
+var c = 0;
+
+var sib = f.nextElementSibling;
+while (sib) {
+	if (sib.matches('.o')) c++;
+	if (sib.matches('p:not(.o,.a,.ae,.c,.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	sib = sib.nextElementSibling};
+
+if (c == 1) {i++; log += '[#' + i + ']  Invalid number of SPGR detected for SUBGEN "' + f.innerHTML + '". There should be none or more than one present.\n'};
+});
+
+
+////6 Check for duplicate common names and taxa
 var s8 = ']  Duplicate name detected for ';
 var s9 = ']  Duplicate basionym, synonym or TS designation detected for ';
 var s10 = ']  Duplicate synonymic (sub)species detected for ';
@@ -307,11 +362,11 @@ for (let t = 0; t < testArraySY.length - 1; t++) {
 };
 
 
-////6 Check for loose characters not being part of any data
+////7 Check for loose characters not being part of any data
 $$('div[id]').forEach(f=>{	if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || f.innerHTML.match(/(\n)/g).length > 1) {i++; log += '[#' + i + ']  Loose characters or empty lines detected within group ' + f.firstElementChild.innerHTML + '. These characters should either be turned into proper data points or be deleted!\n'}});
 
 
-////7 Remove padding, calculate download size, finish log, show infos and results
+////8 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
 var size = count * 0.0000236;
@@ -326,7 +381,7 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////8 Run tsv converter, rebuild the ID links afterwards
+////9 Run tsv converter, rebuild the ID links afterwards
 console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Converting data to TSV format ...');
 
 // TSV converter
