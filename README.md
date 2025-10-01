@@ -395,7 +395,7 @@ The English (`e`, `e2`) and German (`d`, `d2`) common/trivial names of a species
 - 18.10. Adding common names can sometimes lead to duplicates, which should be avoided. In such a case, one of the names should be changed or removed.
 - 18.11. Moth-like butterflies should be called "Moth Butterflies" (German "Trugfalter") instead of the older term "Butterfly Moths".
 - 18.12. The German term "Falter" should be avoided for Microlepidopterans if possible, as it can cause confusion of names and is more often used to refer to Macrolepidopterans. Instead, the term "Motten" is preferred for Microlepidopterans.
-- 18.13. The obsolescent German term "Gemein" is to be replaced with the more modern and easier to understand term "Gewöhnlich".
+- 18.13. The obsolescent German terms "Gemein", "Perlmutter" and "Passionsblumenfalter" are to be replaced with the more modern terms "Gewöhnlich", "Perlmutt" and "Passionsfalter" respectively.
 - 18.14. Abbreviations like "&" for "and/und", "St." for "Saint/Sankt" or "Mt." for "Mount" should be avoided, common names should always contain full words.
 </details>
 

@@ -74,13 +74,13 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .xp			{padding-left:0.3rem; font-style:italic}
 .f			{padding:0.31rem 0 0 0.31rem; font-size:2.25rem; font-weight:700}
 .y			{padding:0.31rem 0 0.31rem 0.94rem; font-size:2rem}
-.t,.j,.h	{padding:0.75rem 0 0 1.88rem; font-size:1.69rem}
-.j			{padding-left:2.8rem; font-size:1.5rem}
-.h			{padding-left:3.7rem; font-size:1.3rem}
-.g			{padding:0.63rem 0 0.1rem 3.75rem; font-size:2rem; font-weight:700; font-style:italic}
+.t,.j,.h	{padding:0.75rem 0 0 1.8rem; font-size:1.69rem}
+.j			{padding-left:2.65rem; font-size:1.5rem}
+.h			{padding-left:3.5rem; font-size:1.3rem}
+.g			{padding:0.63rem 0 0.1rem 2.75rem; font-size:2rem; font-weight:700; font-style:italic}
 .i,.o		{padding:0.7rem 0 0 5.8rem; font-size:1.25rem; font-style:italic; text-decoration:underline}
 .o			{font-size:0.9rem; color:#777}
-.a,.ae,.c,.w	{padding:0 0 0 6.5rem}
+.a,.ae,.c,.w	{padding:0 0 0 6rem}
 .b,.z,.u,.ue,.k,.v,.v2,.e,.e2,.d,.d2,[class^="s"],.r,.r2,.l	{padding:0 0 0 7.25rem; font-size:0.7rem; color:#666}
 .e,.d		{color:#585}
 .e2,.d2,.sh	{color:#000; font-size:0.85rem}
@@ -93,8 +93,8 @@ h2			{margin:0.4rem; font-size:2.7rem; font-weight:400; letter-spacing:0.25rem}
 .r,.r2		{padding:0.25rem 0 0 7.25rem; color:#33A}
 .l			{padding:0 0.5rem 0.15rem 7.25rem}
 .link, .link:hover	{text-decoration:none}
-:is(.a,.ae,.c,.w)>.link::before	{content:"• "; font-size:0.8rem; vertical-align:0.08rem; color:#000}
-.g>.link::before	{content:"▪ "; font-style:normal; color:#000}
+:is(.a,.ae,.c,.w)>.link::before	{content:" • "; white-space:pre; color:#000}
+.g>.link::before	{content:"  ■  "; font-size:1.2rem; font-style:normal; vertical-align:0.4rem; white-space:pre; color:#000}
 .b,.z		{color:#448}
 .b::before	{content:'BS '}
 .z::before	{content:'TS '}
@@ -425,6 +425,8 @@ e	Xuthus Swallowtail
 d	Asiatischer Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1767
+z	Sinoprinceps
+n	Hancock, 1983
 i	Nireopapilio
 o	Cynorta
 a	arnoldiana
@@ -543,6 +545,10 @@ o	Zalmoxis
 a	zalmoxis
 e	Blue Giant Swallowtail
 d	Blauer Riesenschwalbenschwanz
+b	Papilio
+n	Hewitson, 1864
+z	Iterus
+n	Donitz, 1899
 o	Zenobia
 a	bacelarae
 b	Princeps
@@ -575,6 +581,10 @@ o	Crino
 a	crino
 e	Common Banded Peacock
 d	Gebänderter Pfau
+b	Papilio
+n	Fabricius, 1793
+z	Harimala
+n	Moore, 1881
 o	Palinurus
 a	blumei
 e	Green Peacock
@@ -662,6 +672,10 @@ d	Südchinesischer Pfau
 s3	binaor
 a	elephenor
 e	Yellow-crested Spangle
+b	Papilio
+n	Doubleday, 1845
+z	Pangeranopsis
+n	Wood-Mason & De Nicéville, 1887
 a	hermosanus
 e	Taiwanese Glazed Swallowtail
 d	Taiwanesischer Jade-Schwalbenschwanz
@@ -692,6 +706,8 @@ e	Paris Peacock
 d	Paris-Pfau
 b	Papilio
 n	Linnaeus, 1758
+z	Achillides
+n	Hübner, 1819
 s	tamilana
 u	chinensis
 u	nakaharai
@@ -699,6 +715,10 @@ u	tamilana
 a	polyctor
 e	Kashmir Peacock
 d	Kaschmir-Pfau
+b	Papilio
+n	Boisduval, 1836
+z	Sarbaria
+n	Moore, 1882
 s3	bianor
 a	syfanius
 e	Yunnan Peacock
@@ -748,6 +768,8 @@ b	Papilio
 n	Esper, 1798
 z	Orpheides
 n	Hübner, 1819
+z	Princeps
+n	Hübner, 1807
 a	demoleus
 e	Lime Butterfly
 e	Lime Swallowtail
@@ -793,6 +815,10 @@ a	bridgei
 s	erskinei
 u	erskinei
 a	gambrisius
+b	Papilio
+n	Cramer, 1777
+z	Nestorides
+n	Hübner, 1819
 a	godeffroyi
 e	Godeffroy's Swallowtail
 e	Samoan Swallowtail
@@ -896,6 +922,8 @@ e	Red Helen
 d	Rote Helene
 b	Papilio
 n	Linnaeus, 1758
+z	Charus
+n	Moore, 1881
 s	fortunius
 k	biseriatus
 k	daksha
@@ -960,6 +988,8 @@ e	Indonesian Mormon
 d	Indonesischer Mormone
 b	Papilio
 n	Linnaeus, 1758
+z	Iliades
+n	Hübner, 1819
 u	anceus
 u	coeruleus
 a	merapu
@@ -997,6 +1027,8 @@ e	Common Raven
 d	Gewöhnlicher Rabe
 b	Papilio
 n	Westwood, 1842
+z	Tamera
+n	Moore, 1888
 s	mahadeva
 u	formosanus
 u	mahadeva
@@ -1018,6 +1050,8 @@ e	Black and White Helen
 d	Schwarzweiße Helene
 b	Papilio
 n	Boisduval, 1836
+z	Sadengia
+n	Moore, 1902
 u	sunatus
 o	Polytes
 r	Zhang, 2017
@@ -1044,6 +1078,8 @@ d	Kleiner Mormone
 d	Mormonenfalter
 b	Papilio
 n	Linnaeus, 1758
+z	Menelaides
+n	Hübner, 1819
 s	javanus
 s	sakontala
 s	walkeri
@@ -1054,6 +1090,8 @@ d	Flitter
 d	Falsche Fledermaus
 b	Papilio
 n	Cramer, 1775
+z	Sainia
+n	Moore, 1882
 s	demetrius
 u	demetrius
 i	Araminta
@@ -1063,6 +1101,8 @@ e	Banded Swallowtail
 d	Gebänderter Schwalbenschwanz
 b	Papilio
 n	Cramer, 1776
+z	Araminta
+n	Moore, 1886
 a	gigon
 e	Sulawesi Banded Swallowtail
 d	Sulawesischer Gebänderter Schwalbenschwanz
@@ -1080,6 +1120,8 @@ e	Small Citrus Butterfly
 d	Kleiner Obstgarten-Schwalbenschwanz
 b	Papilio
 n	Macleay, 1826
+z	Eleppone
+n	Hancock, 1979
 s2	Eleppone
 a	natewa
 e	Natewa Swallowtail
@@ -1180,45 +1222,77 @@ e	Common Mime
 d	Gewöhnlicher Mime
 b	Papilio
 n	Linnaeus, 1758
+z	Chilasa
+n	Moore, 1881
 s	palephates
+s4	Papilio dissimilis
 s4	Papilio palephates
 u	palephates
 a	paradoxa
 e	Great Mime
 e	Great Blue Mime
 d	Großer Mime
+b	Zelima
+n	Zinken, 1831
+z	Euploeopsis
+n	De Nicéville, 1887
+z	Isamiopsis
+n	Moore, 1888
+s4	Papilio aenigma
 s2	Papilio
-i	Menamopsis
+s4	Papilio paradoxus
+s4	Papilio paradoxus telesicles
+s4	Papilio telearchus
+s4	Papilio telesicles
+u	aenigma
+u	melanostoma
+u	telearchus
+u	telesicles
+i	Cadugoides
 o	Agestor
 a	agestor
 e	Tawny Mime
 d	Rotbrauner Mime
-s2	Papilio
+b	Papilio
+n	Gray, 1831
+z	Cadugoides
+n	Moore, 1882
 o	Laglaizei
 a	laglaizei
 e	Zodiac Mime
 d	Zodiak-Mime
-s2	Papilio
+b	Papilio
+n	Depuiset, 1877
 a	moerneri
-s2	Papilio
+b	Papilio
+n	Aurivillius, 1919
 a	toboroi
-s2	Papilio
+b	Papilio
+n	Ribbe, 1907
 o	Slateri
 a	epycides
 e	Lesser Mime
 d	Kleiner Mime
-s2	Papilio
+b	Papilio
+n	Hewitson, 1864
 a	slateri
 e	Blue-striped Mime
-d	Bluegestreifter Mime
-s2	Papilio
+d	Blaugestreifter Mime
+b	Papilio
+n	Hewitson, 1859
+z	Menamopsis
+n	De Nicéville, 1887
+s4	Papilio tavoyanus
 o	Veiovis
 a	carolinensis
-s2	Papilio
+b	Papilio
+n	Jumalon, 1967
 a	osmana
-s2	Papilio
+b	Papilio
+n	Jumalon, 1967
 a	veiovis
-s2	Papilio
+b	Papilio
+n	Hewitson, 1865
 g	Pterourus
 i	Pterourus
 o	Esperanza
@@ -1228,6 +1302,8 @@ e	Esperanza Swallowtail
 d	Oaxaca-Schwalbenschwanz
 b	Papilio
 n	Beutelspacher, 1975
+z	Esperourus
+n	Grishin, 2021
 o	Troilus
 a	palamedes
 e	Palamedes Swallowtail
@@ -1245,6 +1321,8 @@ e	Spicebush Swallowtail
 d	Fieberstrauch-Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1758
+z	Pterourus
+n	Scopoli, 1777
 i	Jasoniades
 r	Vernygora, 2022
 l	Gauging ages of tiger swallowtail butterflies using alternate SNP analyses
@@ -1323,6 +1401,8 @@ e	Broad-tailed Swallowtail
 d	Breitschwänziger Schwalbenschwanz
 b	Papilio
 n	Shiraki & Sonan, 1934
+z	Agehana
+n	Matsumura, 1936
 s2	Agehana
 s2	Chilasa
 i	Pyrrhosticta
@@ -1361,9 +1441,11 @@ e	Menatius Swallowtail
 d	Victorinus-Schwalbenschwanz
 b	Papilio
 n	Fabricius, 1793
-s4	Papilio aristeus
+z	Pyrrhosticta
+n	Butler, 1872
 s4	Papilio diazi
 s4	Papilio judicael
+s4	Papilio laetitia
 s4	Papilio victorinus
 k	cleotas
 k	coroebus
@@ -1390,6 +1472,8 @@ e	Mimic Swallowtail
 d	Großer Tigermime
 b	Papilio
 n	Doubleday, 1847
+z	Motasiona
+n	Niculescu, 1979
 s4	Papilio ascolius
 s4	Papilio bachus
 s4	Papilio neyi
@@ -1470,6 +1554,10 @@ d	Königs-Schwalbenschwanz
 d	Königs-Page
 b	Papilio
 n	Linnaeus, 1771
+z	Heraclides
+n	Hübner, 1819
+z	Thoas
+n	Swainson, 1833
 i	Hyppasonia
 a	hyppason
 e	Hyppason Swallowtail
@@ -1486,6 +1574,8 @@ e	Queen Swallowtail
 d	Androgeus-Schwalbenschwanz
 b	Papilio
 n	Cramer, 1775
+z	Calaides
+n	Hübner, 1819
 a	thersites
 e	False Androgeus Swallowtail
 e	Thersites Swallowtail
@@ -1557,6 +1647,8 @@ e	Band-gapped Swallowtail
 d	Torquatus-Schwalbenschwanz
 b	Papilio
 n	Cramer, 1777
+z	Troilides
+n	Hübner, 1825
 s4	Papilio tasso
 i	Priamides
 o	Anchisiades
@@ -1566,6 +1658,8 @@ e	Ruby-spotted Swallowtail
 d	Rotgetüpfelter Schwalbenschwanz
 b	Papilio
 n	Esper, 1788
+z	Priamides
+n	Hübner, 1819
 s	matusiki
 a	epenetus
 b	Papilio
@@ -1615,18 +1709,26 @@ j	Meandrusina
 e2	Sickletails
 d2	Sichelschwänze
 g	Meandrusa
+a	gyas
+e	Brown Gorgon
+e	Brown Sickletail
+d	Brauner Sichelschwanz
+b	Papilio
+n	Westwood, 1841
+z	Dabasa
+n	Moore, 1888
+s	hercules
+s	lachinus
+s	sciron
 a	payeni
 e	Yellow Gorgon
 e	Yellow Sickletail
 e	Sickle Butterfly
 d	Gelber Sichelschwanz
-a	sciron
-e	Brown Gorgon
-e	Brown Sickletail
-d	Brauner Sichelschwanz
-s	gyas
-s	hercules
-s	lachinus
+b	Papilio payeni
+n	Boisduval, 1836
+z	Meandrusa
+n	Moore, 1888
 t	Troidini
 e2	Birdwing-like Swallowtails
 d2	Vogelflüglerartige
@@ -1656,6 +1758,8 @@ b	Papilio
 n	Linnaeus, 1758
 z	Ornithoptera
 n	Boisduval, 1832
+z	Priamoptera
+n	Rippon, 1890
 s	aesacus
 s	croesus
 s	euphorion
@@ -1689,7 +1793,10 @@ s	paradisea arfakensis
 a	chimaera
 e	Chimaera Birdwing
 d	Chimära-Vogelflügler
-s2	Troides
+b	Troides
+n	Rothschild, 1904
+z	Phalaenosoma
+n	Rippon, 1906
 a	meridionalis
 e	Southern Paradise Birdwing
 d	Südlicher Paradies-Vogelflügler
@@ -1707,6 +1814,8 @@ o	Tithonus
 a	tithonus
 e	Tithonus Birdwing
 d	Tithonus-Vogelflügler
+b	Ornithoptera
+n	De Haan, 1840
 s2	Troides
 i	Aetheoptera
 a	alexandrae
@@ -1780,6 +1889,8 @@ e	Common Birdwing
 d	Gewöhnlicher Vogelflügler
 b	Papilio
 n	Linnaeus, 1758
+z	Pompeoptera
+n	Rippon, 1890
 z	Troides
 n	Hübner, 1819
 a	minos
@@ -1830,21 +1941,32 @@ n	Doubleday, 1845
 a	dixoni
 e	Sulawesi Batwing
 d	Sulawesi-Fledermaus
-a	horishana
+a	horishanus
 e	Aurora Swallowtail
 d	Aurora-Schwalbenschwanz
+b	Papilio
+n	Matsumura, 1910
+s	horishana
 a	kuehni
 a	nox
 e	Malayan Batwing
 d	Malaiische Fledermaus
+b	Papilio
+n	Swainson, 1822
+z	Karanga
+n	Moore, 1902
 a	semperi
 e	Semper's Batwing
 d	Semper's Fledermaus
 b	Ornithoptera
 n	C. & R. Felder, 1861
+z	Atrophaneura
+n	Reakirt, 1865
 c	sycorax
 e	Whitehead Batwing
 d	Weißkopf-Fledermaus
+b	Papilio
+n	Grose-Smith, 1885
 k	luchti
 k	priapus
 k	sycorax
@@ -1853,9 +1975,13 @@ e	Common Batwing
 d	Gewöhnliche Fledermaus
 b	Papilio
 n	White, 1842
+z	Pangerana
+n	Moore, 1886
 a	zaleucus
 e	Burmese Batwing
 d	Burmesische Fledermaus
+b	Papilio
+n	Hewitson, 1865
 g	Byasa
 a	adamsoni
 e	Adamson's Rose
@@ -1886,6 +2012,8 @@ e	Great Windmill
 d	Großes Windrad
 b	Papilio
 n	Moore, 1857
+z	Panosmia
+n	Wood-Mason & De Nicéville, 1886
 s2	Atrophaneura
 s4	Atrophaneura hedistus
 s	hedistus
@@ -1927,6 +2055,8 @@ e	Common Windmill
 d	Gewöhnliches Windrad
 b	Papilio
 n	Doubleday, 1842
+z	Byasa
+n	Moore, 1882
 s4	Atrophaneura lama
 s4	Atrophaneura philoxenus
 s4	Atrophaneura polyceutes
@@ -1946,6 +2076,8 @@ e	Common Clubtail
 d	Gewöhnlicher Keulenschwanz
 b	Papilio
 n	Fabricius, 1793
+z	Losaria
+n	Moore, 1902
 s2	Atrophaneura
 s2	Pachliopta
 a	neptunus
@@ -1954,6 +2086,8 @@ e	Yellow-bodied Clubtail
 d	Gelber Keulenschwanz
 b	Papilio
 n	Guérin-Méneville, 1840
+z	Balignina
+n	Moore, 1902
 s2	Atrophaneura
 s2	Pachliopta
 a	palu
@@ -1973,6 +2107,8 @@ a	antiphus
 e	Black Rose
 e	Borneo Rose
 d	Schwarze Rose
+b	Papilio
+n	Fabricius, 1793
 s2	Atrophaneura
 s3	aristolochiae
 a	aristolochiae
@@ -1980,6 +2116,8 @@ e	Common Rose
 d	Gewöhnliche Rose
 b	Papilio
 n	Fabricius, 1775
+z	Pachliopta
+n	Reakirt, 1865
 s2	Atrophaneura
 u	adamas
 a	atropos
@@ -1989,6 +2127,8 @@ e	Crimson Rose
 d	Purpur-Rose
 b	Papilio
 n	Linnaeus, 1758
+z	Tros
+n	Kirby, 1896
 s2	Atrophaneura
 a	jophon
 e	Ceylon Rose
@@ -2047,13 +2187,22 @@ g	Euryades
 a	corethrus
 e	Pampas Swallowtail
 d	Pampas-Schwalbenschwanz
+b	Papilio
+n	Boisduval, 1836
+z	Euryades
+n	C. & R. Felder, 1864
 a	duponchelii
 e	Tailed Pampas Swallowtail
 d	Geschwänzter Pampas-Schwalbenschwanz
+b	Papilio
+n	Lucas, 1839
 g	Parides
 r	Silva-Brandão, 2005
 l	Phylogenetic relationships of the New World Troidini swallowtails (Lepidoptera: Papilionidae) based on COI, COII, and EF-1α genes
 p	10.1016/j.ympev.2005.04.007
+r	Condamine, 2008
+l	Biogeographic and diversification patterns of Neotropical Troidini butterflies (Papilionidae) support a museum model of diversity dynamics for Amazonia
+p	10.1186/1471-2148-12-82
 i	Parides
 o	Aeneas
 a	aeneas
@@ -2061,11 +2210,6 @@ e	White-checked Cattleheart
 d	Weißrandiger Parides
 b	Papilio
 n	Linnaeus, 1758
-a	aglaope
-a	burchellanus
-e	Burchell's Cattleheart
-d	Burchell's Parides
-u	panthonus
 a	echemon
 b	Princeps
 n	Hübner, 1813
@@ -2091,12 +2235,33 @@ a	neophilus
 e	Spear-winged Cattleheart
 d	Spitzflügel-Parides
 a	orellana
+a	panthonus
+e	Panthonus Cattleheart
+e	Burchell's Cattleheart
+d	Burchell's Parides
+b	Papilio
+n	Cramer, 1780
+s	aglaope
+s	aglaope callicles
+s	aglaope castilhoi
+s	aglaope lysimachus
+s	burchellanus
+s	burchellanus jaguarae
+u	aglaope
+u	burchellanus
+u	callicles
+u	castilhoi
+u	jaguarae
+u	lysimachus
+u	panthonus
+r	Silva-Brandão, 2008
+l	New evidence on the systematic and phylogenetic position of Parides burchellanus (Lepidoptera: Papilionidae)
+p	10.1111/j.1471-8286.2007.02022.x
 a	tros
+b	Papilio
+n	Fabricius, 1793
 a	zacynthus
 o	Anchises
-a	alopius
-e	White-dotted Cattleheart
-d	Weißgefleckter Parides
 c	anchises
 e	Anchises Cattleheart
 e	Variable Cattleheart
@@ -2119,12 +2284,6 @@ e	Green-celled Cattleheart
 d	Grüner Parides
 b	Papilio
 n	Gray, 1832
-a	gundlachianus
-e	Cuban Cattleheart
-d	Kubanischer Parides
-a	montezuma
-e	Montezuma's Cattleheart
-d	Montezumas Parides
 a	photinus
 e	Pink-spotted Cattleheart
 d	Rotgefleckter Parides
@@ -2135,19 +2294,31 @@ e	Emerald-patched Cattleheart
 d	Smaragd-Parides
 b	Papilio
 n	Cramer, 1779
+z	Endopogon
+n	Lacordaire, 1833
 o	Chabrias
 a	chabrias
+b	Papilio
+n	Hewitson, 1852
+z	Ascanides
+n	Geyer, 1837
+s	triopas
 a	hahneli
 e	Hahnel's Amazonian Swallowtail
 d	Amazonas-Schwalbenschwanz
+b	Papilio
+n	Staudinger, 1882
 a	mithras
 a	pizarro
 a	quadratus
 a	vercingetorix
+b	Papilio
+n	Oberthür, 1888
 s	coelus
 o	Klagesi
 a	klagesi
 i	Hectorides
+o	Agavus
 a	agavus
 e	Agavus Cattleheart
 d	Agavo-Parides
@@ -2156,12 +2327,31 @@ n	Drury, 1782
 z	Hectorides
 n	Hübner, 1821
 a	proneus
-i	Ascanides
+o	Ascanius
 a	ascanius
+e	Fluminense Swallowtail
 a	bunichus
 e	Bunichus Cattleheart
 d	Schwarzer Parides
 a	phalaecus
+o	Montezuma
+a	alopius
+e	White-dotted Cattleheart
+d	Weißgefleckter Parides
+b	Papilio
+n	Godman & Salvin, 1890
+a	gundlachianus
+e	Cuban Cattleheart
+d	Kubanischer Parides
+b	Papilio
+n	C. & R. Felder, 1864
+z	Blakea
+n	Grote, 1875
+a	montezuma
+e	Montezuma's Cattleheart
+d	Montezumas Parides
+b	Papilio
+n	Westwood, 1842
 h	Pharmacophagiti
 g	Pharmacophagus
 a	antenor
@@ -2170,7 +2360,10 @@ e	Madagascan Pipevine Swallowtail
 d	Madagassischer Riesenschwalbenschwanz
 b	Papilio
 n	Drury, 1773
+z	Pharmacophagus
+n	Haase, 1891
 s2	Atrophaneura
+s2	Parides
 j	Battina
 g	Battus
 i	Battus
@@ -2178,15 +2371,22 @@ o	Philenor
 a	devilliersii
 e	De Villiers' Swallowtail
 d	De Villiers' Schwalbenschwanz
+b	Papilio
+n	Godart, 1823
 a	philenor
 e	Pipevine Swallowtail
 e	Blue Swallowtail
 d	Pfeifenwinden-Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1771
+z	Laertias
+n	Hübner, 1819
 a	zetides
 e	Zetides Swallowtail
 d	Zetides-Schwalbenschwanz
+b	Papilio
+n	Munroe, 1971
+s	zetes
 o	Polydamas
 a	polydamas
 e	Gold Rim Swallowtail
@@ -2196,6 +2396,10 @@ d	Goldrandiger Schwalbenschwanz
 d	Polydamas-Schwalbenschwanz
 b	Papilio
 n	Linnaeus, 1758
+z	Battus
+n	Scopoli, 1777
+z	Ithoballus
+n	Hübner, 1819
 s	archidamas
 s	archidamus
 s	polydamus
@@ -2205,97 +2409,166 @@ o	Belus
 a	belus
 e	Belus Swallowtail
 d	Belus-Schwalbenschwanz
+b	Papilio
+n	Cramer, 1777
+z	Battuosa
+n	Möhn, 1999
 a	crassus
 e	Crassus Swallowtail
 d	Crassus-Schwalbenschwanz
+b	Papilio
+n	Cramer, 1777
 a	eracon
 e	West Mexican Swallowtail
 e	Colima Swallowtail
 d	Colima-Schwalbenschwanz
+b	Papilio
+n	Godman & Salvin, 1897
 a	ingenuus
 e	Dyar's Swallowtail
 e	Confused Swallowtail
 d	Dyar's Schwalbenschwanz
+b	Papilio
+n	Dyar, 1907
 s	chalceus
 a	laodamas
 e	Green-patch Swallowtail
 e	Yellow-spotted Swallowtail
 e	Laodamas Swallowtail
 d	Laodamas-Schwalbenschwanz
+b	Papilio
+n	C. & R. Felder, 1859
 s	laodamus
 a	lycidas
 e	Cramer's Swallowtail
 d	Cramer's Schwalbenschwanz
+b	Papilio
+n	Cramer, 1777
 a	polystictus
 e	Polystictus Swallowtail
 d	Polysticto-Schwalbenschwanz
+b	Papilio
+n	Butler, 1874
 o	Madyes
 a	madyes
 e	Madyes Swallowtail
 d	Madyes-Schwalbenschwanz
+b	Papilio
+n	Doubleday, 1846
 t	Teinopalpini
 g	Teinopalpus
 a	aureus
 e	Golden Kaiser-i-Hind
 d	Goldener Kaiser
+b	Teinopalpus
+n	Mell, 1923
 a	imperialis
 e	Kaiser-i-Hind
 d	Indischer Kaiser
+b	Teinopalpus
+n	Hope, 1843
+z	Teinopalpus
+n	Hope, 1843
 t	Leptocircini
 e2	Kite Swallowtails
 d2	Segelfalter
 sh	Graphiini
+sh	Lampropterini
+r	Reboud, 2024
+l	Clarifying the phylogeny and systematics of the recalcitrant tribe Leptocircini (Lepidoptera: Papilionidae) with whole-genome data
+p	10.1111/syen.12661
 g	Eurytides
 i	Eurytides
 o	Dolicaon
 a	bellerophon
+b	Papilio
+n	Dalman, 1823
+z	Bellerographium
+n	Möhn, 2002
 a	callias
+b	Papilio
+n	Rothschild & Jordan, 1906
 a	dolicaon
 e	Thin-tailed Kite-Swallowtail
 d	Haarschwanz-Segelfalter
+b	Papilio
+n	Cramer, 1775
+a	columbus
+e	Colombian Kite-Swallowtail
+d	Kolumbianischer Segelfalter
+b	Papilio
+n	Kollar, 1850
+s3	serville
 a	iphitas
+b	Eurytides
+n	Hübner, 1821
+z	Eurytides
+n	Hübner, 1821
 a	orabilis
 e	Thick-edged Kite-Swallowtail
 d	Schwarzrand-Segelfalter
+b	Papilio
+n	Butler, 1872
 a	salvini
 e	Salvin's Kite-Swallowtail
 d	Salvin's Segelfalter
+b	Papilio
+n	Bates, 1864
 a	serville
-u	columbus
+b	Papilio
+n	Godart, 1824
 o	Thyastes
 a	calliste
 e	Yellow Kite-Swallowtail
 d	Gelber Segelfalter
+b	Papilio
+n	Bates, 1864
 s2	Neographium
 s2	Protographium
 a	dioxippus
 e	Thick-bordered Kite-Swallowtail
-d	Kolumbianischer Segelfalter
+d	Schwarzsaum-Segelfalter
+b	Papilio
+n	Hewitson, 1856
 s2	Neographium
 s2	Protographium
 a	leucaspis
+b	Papilio
+n	Godart, 1819
 s2	Neographium
 s2	Protographium
 a	thyastes
 e	Orange Kite-Swallowtail
 d	Oranger Segelfalter
+b	Papilio
+n	Drury, 1782
+z	Eurygraphium
+n	Möhn, 2002
 s2	Neographium
 s2	Protographium
 i	Protesilaus
-a	orthosilaus
-s2	Protesilaus
 c	protesilaus
 e	Five-striped Kite-Swallowtail
 d	Fünfstrich-Segelfalter
 b	Papilio
 n	Linnaeus, 1758
+z	Cosmodesmus
+n	Haase, 1891
+z	Protesilaus
+n	Swainson, 1832
+s	exiguus
+s	penthesilaus
 s4	Protesilaus aguiari
 s4	Protesilaus earis
+s4	Protesilaus exiguus
 s4	Protesilaus glaucolaus
 s4	Protesilaus helios
 s4	Protesilaus leucosilaus
 s4	Protesilaus macrosilaus
+s4	Protesilaus macrosilaus penthesilaus
 s4	Protesilaus molops
+s4	Protesilaus orthosilaus
+s4	Protesilaus penthesilaus
 s2	Protesilaus
 s4	Protesilaus stenodesmus
 s4	Protesilaus telesilaus
@@ -2306,11 +2579,95 @@ k	helios
 k	leucosilaus
 k	macrosilaus
 k	molops
+k	orthosilaus
 k	protesilaus
 k	stenodesmus
 k	telesilaus
-i	Neographium
-o	Agesilaus
+i	Mimoides
+o	Epidaus
+a	epidaus
+e	Mexican Kite-Swallowtail
+d	Mexikanischer Segelfalter
+b	Papilio
+n	Doubleday, 1846
+z	Hyalaus
+n	Grishin, 2024
+s2	Neographium
+s2	Protographium
+o	Marcellus
+a	marcellus
+e	Zebra Swallowtail
+d	Zebraschwalbenschwanz
+b	Papilio
+n	Cramer, 1777
+z	Boreographium
+n	Grishin, 2021
+s2	Graphium
+s2	Neographium
+s2	Protographium
+o	Phaon
+a	ariarathes
+b	Papilio
+n	Esper, 1788
+z	Mimoides
+n	Brown, 1991
+s2	Mimoides
+a	euryleon
+e	False Cattleheart
+d	Falscher Parides
+b	Papilio
+n	Hewitson, 1856
+s2	Mimoides
+a	ilus
+e	Ilus Swallowtail
+d	Ilus-Schwalbenschwanz
+b	Papilio
+n	Fabricius, 1793
+s4	Mimoides branchus
+s2	Mimoides
+a	lysithous
+b	Hectorides
+n	Hübner, 1821
+s2	Graphium
+s2	Mimoides
+a	microdamas
+b	Papilio
+n	Burmeister, 1878
+s2	Mimoides
+a	pausanias
+e	Pausanias Swallowtail
+e	Bluish Mimic-Swallowtail
+d	Pausanias-Schwalbenschwanz
+b	Papilio
+n	Hewitson, 1852
+s2	Mimoides
+a	phaon
+e	Variable Swallowtail
+d	Veränderlicher Schwalbenschwanz
+b	Papilio
+n	Boisduval, 1836
+s2	Mimoides
+a	protodamas
+b	Papilio
+n	Godart, 1819
+s2	Mimoides
+a	thymbraeus
+e	Crescent Swallowtail
+d	Halbmond-Schwalbenschwanz
+b	Papilio
+n	Boisduval, 1836
+s2	Mimoides
+a	xeniades
+e	Xeniades Swallowtail
+d	Xeniades-Schwalbenschwanz
+b	Papilio
+n	Hewitson, 1867
+s2	Mimoides
+a	xynias
+b	Papilio
+n	Hewitson, 1875
+s2	Mimoides
+o	Philolaus
 a	agesilaus
 e	Short-lined Kite-Swallowtail
 d	Kurzstrich-Segelfalter
@@ -2318,92 +2675,60 @@ b	Papilio
 n	Guérin-Méneville & Percheron, 1835
 s2	Neographium
 s2	Protographium
-o	Asius
-a	asius
-s2	Neographium
-s2	Protographium
-o	Philolaus
 a	anaxilaus
 e	Small Kite-Swallowtail
 d	Kleiner Segelfalter
+b	Papilio
+n	C. & R. Felder, 1865
+s2	Neographium
+s2	Protographium
+a	asius
+b	Papilio
+n	Fabricius, 1781
+z	Asiographium
+n	Möhn, 2002
 s2	Neographium
 s2	Protographium
 a	celadon
 e	Cuban Kite-Swallowtail
 d	Kubanischer Segelfalter
+b	Papilio
+n	Lucas, 1852
 s2	Neographium
 s2	Protographium
 a	marcellinus
 e	Jamaican Kite-Swallowtail
 d	Jamaikanischer Segelfalter
+b	Papilio
+n	Doubleday, 1845
 s2	Neographium
 s2	Protographium
+w	oberthueri
+e	Oberthür's Kite Swallowtail
+d	Oberthür's Hybrid-Segelfalter
+b	Papilio
+n	Rothschild & Jordan, 1906
+s	oberthueri
+s2	Neographium oberthueri
+s2	Protographium oberthueri
+v	agesilaus
+v2	philolaus
 a	philolaus
 e	Dark Kite-Swallowtail
 d	Dunkler Segelfalter
 b	Papilio
 n	Boisduval, 1836
+z	Neographium
+n	Möhn, 2002
 s2	Neographium
 s2	Protographium
 a	zonaria
 e	Hispaniolan Kite-Swallowtail
 d	Hispaniolischer Segelfalter
-s2	Neographium
-s2	Protographium
-i	Boreographium
-a	marcellus
-e	Zebra Swallowtail
-d	Zebraschwalbenschwanz
 b	Papilio
-n	Cramer, 1777
-s2	Graphium
+n	Butler, 1870
 s2	Neographium
 s2	Protographium
-i	Hyalaus
-a	epidaus
-e	Mexican Kite-Swallowtail
-d	Mexikanischer Segelfalter
-b	Papilio
-n	Doubleday, 1846
-s2	Neographium
-s2	Protographium
-i	Mimoides
-a	ariarathes
-s2	Mimoides
-a	euryleon
-e	False Cattleheart
-d	Falscher Parides
-s2	Mimoides
-a	ilus
-e	Ilus Swallowtail
-d	Ilus-Schwalbenschwanz
-s4	Mimoides branchus
-s2	Mimoides
-a	lysithous
-s2	Mimoides
-a	microdamas
-s2	Mimoides
-a	pausanias
-e	Pausanias Swallowtail
-e	Bluish Mimic-Swallowtail
-d	Pausanias-Schwalbenschwanz
-s2	Mimoides
-a	phaon
-e	Variable Swallowtail
-d	Veränderlicher Schwalbenschwanz
-s2	Mimoides
-a	protodamas
-s2	Mimoides
-a	thymbraeus
-e	Crescent Swallowtail
-d	Halbmond-Schwalbenschwanz
-s2	Mimoides
-a	xeniades
-e	Xeniades Swallowtail
-d	Xeniades-Schwalbenschwanz
-s2	Mimoides
-a	xynias
-s2	Mimoides
 g	Graphium
 r	Makita, 2003
 l	Phylogeny of the Graphium butterflies inferred from nuclear 28S rDNA and mitochondrial ND5 gene sequences
@@ -2421,92 +2746,84 @@ d	Agamemnon-Segelfalter
 d	Neonsegelfalter
 b	Papilio
 n	Linnaeus, 1758
+z	Macfarlaneana
+n	Niculescu, 1989
 a	macfarlanei
 e	Green Triangle
 d	Grüner Eichelhäher
+b	Papilio
+n	Butler, 1877
 s	macfarlaneii
 s	macfarlanii
 a	meeki
 e	Meek's Triangle
 d	Meek's Eichelhäher
+b	Papilio
+n	Rothschild & Jordan, 1901
+a	mendana
+b	Papilio
+n	Godman & Salvin, 1888
+a	wallacei
+e	Wallace's Jay
+d	Wallace's Eichelhäher
+b	Papilio
+n	Hewitson, 1858
+s	browni
+s	hicetaon
+s	rubrosignatus
+u	browni
+u	hicetaon
+u	rubrosignatus
+u	wallacei
 o	Codrus
 a	codrus
 e	Common Yellowbottle
 e	Eastern Olive Triangle
 d	Großer Kolibrifalter
+b	Papilio
+n	Cramer, 1777
+z	Idaides
+n	Hübner, 1819
 a	empedovana
 e	Malayan Yellowbottle
 e	Western Olive Triangle
 d	Malaiischer Kolibrifalter
-s	empedocles
-a	mendana
-o	Policenes
-a	antheus
-e	Large Swordtail
-e	Large Striped Swordtail
-d	Großer Schwertschwanz
-a	colonna
-e	Black Swordtail
-e	Mamba Swordtail
-d	Schwarzer Schwertschwanz
-d	Mamba-Schwertschwanz
-a	evombar
-e	Madagscan Swordtail
-d	Madagassischer Schwertschwanz
-a	gudenusi
-e	Kigezi Swordtail
-d	Kigezi-Schwertschwanz
-a	illyris
-e	Creme-bandend Swordtail
-d	Gebänderter Schwertschwanz
-u	flavisparsus
-a	junodi
-e	Junod's Swordtail
-d	Junod's Schwertschwanz
-a	kirbyi
-e	Kirby's Swordtail
-d	Kirby's Schwertschwanz
-a	policenes
-e	Common Swordtail
-e	Small Striped Swordtail
-d	Gewöhnlicher Schwertschwanz
 b	Papilio
-n	Cramer, 1775
-s	biokoensis
-s	intermedia
-s	liponesco
-s	nigrescens
-s	policenoides
-u	biokoensis
-u	liponesco
-u	policenoides
-a	polistratus
-e	Dancing Swordtail
-d	Tansanischer Schwertschwanz
-a	porthaon
-e	Dark Swordtail
-e	Coastal Swordtail
-e	Cream-striped Swordtail
-d	Dunkler Schwertschwanz
+n	Corbet, 1941
+s	empedocles
 o	Sarpedon
 a	cloanthus
 e	Glassy Bluebottle
 d	Gläserner Kolibrifalter
+b	Papilio
+n	Westwood, 1841
 s	clymenius
+s	clymenus
+s	sumatrana
 s	sumatranum
+u	cloanthus
 u	clymenus
+u	kuge
 u	sumatranum
 a	sandawanum
 e	Apo Bluebottle
 d	Apo-Kolibrifalter
+b	Graphium
+n	Yamamoto, 1977
 c	sarpedon
 e	Common Bluebottle
 e	Blue Triangle
 d	Kolibrifalter
 b	Papilio
 n	Linnaeus, 1758
+z	Chlorisses
+n	Swainson, 1832
+z	Dalchina
+n	Moore, 1881
 z	Graphium
 n	Scopoli, 1777
+z	Zetides
+n	Hübner, 1819
 s	adonarensis
 s	huangshanensis
 s	protensor
@@ -2525,194 +2842,520 @@ p2	0341-0145, 6
 r	Cotton, 2022
 l	Graphium septentrionicolus Page & Treadaway, 2013 (Lepidoptera: Papilionidae) is a distinct species
 p	10.11646/zootaxa.5154.2.6
-o	Wallacei
-a	browni
-a	hicetaon
-a	wallacei
 o	Weiskei
 a	gelon
 e	New Caledonian Swallowtail
 d	Neukaledonischer Schwalbenschwanz
+b	Papilio
+n	Boisduval, 1859
 a	macleayanus
 e	Macleay's Swallowtail
 d	Macleay's Schwalbenschwanz
+b	Papilio
+n	Leach, 1814
 s	macleayanum
 a	weiskei
 e	Purple-spotted Swallowtail
 d	Violettgefleckter Schwalbenschwanz
+b	Papilio
+n	Ribbe, 1900
+z	Klinzigia
+n	Niculescu, 1977
+z	Klinzigiana
+n	Niculescu, 1989
 s	bachanensis
 s	batjanensis
 s	kosii
 s	stresemanni
 u	batjanensis
+u	goodenovii
 u	kosii
 u	stresemanni
+r2	Müller & Tennent, 1999
+l	A New Species of Graphium Scopoli (Lepidoptera: Papilionidae) from the Bismarck Archipelago, Papua New Guinea
+p	10.3853/j.0067-1975.51.1999.1303
 i	Eurypleana
 o	Eurypylus
 a	arycles
 e	Spotted Jay
 d	Gepunkteter Eichelhäher
+b	Papilio
+n	Boisduval, 1836
 a	bathycles
 e	Striped Jay
 e	Veined Jay
 d	Gestreifter Eichelhäher
+b	Papilio
+n	Zinken, 1831
 s	chiron
+s	chironides
 u	chironides
 a	doson
 e	Common Jay
 d	Gewöhnlicher Eichelhäher
 b	Papilio
 n	C. & R. Felder, 1864
+s	gyndes
+s	jason
+s	nauta
+u	gyndes
+u	nauta
 a	eurypylus
 e	Great Jay
 d	Großer Eichelhäher
 b	Papilio
 n	Linnaeus, 1758
+z	Eurypyleana
+n	Niculescu, 1989
 s	sallastinus
 u	sallastinus
 a	evemon
 e	Blue Jay
 e	Lesser Jay
 d	Blauer Eichelhäher
+b	Papilio
+n	Boisduval, 1836
 s	albociliatus
 u	albociliatus
 a	leechi
+b	Papilio
+n	Rothschild, 1895
 a	meyeri
+b	Papilio
+n	Hopffer, 1874
 a	procles
-o	Phidias
-a	phidias
+b	Papilio
+n	Grose-Smith, 1887
+o	Muhabbet
+a	muhabbet
+b	Graphium
+n	Koçak, 2007
+s	akikoae
+s	phidias
+s4	Paranticopsis phidias
 i	Arisbe
-o	Adamastor
-a	abri
-a	adamastor
-e	Boisduval's White Lady
-d	Boisduvals Schwertschwanz
-a	agamedes
-e	Westwood's White Lady
-d	Westwoods Schwertschwanz
-u	aurivilliusi
-a	almansor
-e	Honrath's White Lady
-d	Honraths Schwertschwanz
-u	deliae
-u	kigoma
-u	poggianus
-a	hachei
-e	Elegant Lady
-c	ucalegon
-e	Creamy Swordtail
-d	Cremefarbener Schwertschwanz
-k	auriger
-k	fulleri
-k	olbrechtsi
-k	rileyi
-k	schubotzi
-k	simoni
-k	ucalegon
-k	ucalegonides
 o	Angolanus
 a	angolanus
+e	White Lady
 e	Angolan White Lady
+e	White Lady Swordtail
 d	Afrikanischer Segelfalter
 d	Angolanischer Schwertschwanz
+b	Papilio
+n	Goeze, 1779
+z	Ailus
+n	Billberg, 1820
+z	Zelima
+n	Fabricius, 1807
+s	angolanum
 s	pylades
 a	endochus
+e	Malagasy White Lady
 e	Endochus Swordtail
 d	Endochus-Schwertschwanz
+b	Papilio
+n	Boisduval, 1836
 a	morania
 e	Small White Lady
+e	Lesser White Lady
 d	Morania-Schwertschwanz
+b	Papilio
+n	Angas, 1849
 a	ridleyanus
 e	Acraea Swordtail
+e	Red Lady
 d	Acräen-Schwertschwanz
+b	Papilio
+n	White, 1843
+a	schaffgotschi
+e	Schaffgotsch's Swordtail
+d	Schaffgotsch's Schwertschwanz
+b	Papilio
+n	Niepelt, 1927
+s3	taboranus
 a	taboranus
+e	Miombo Lady
 e	Tabora Lady
+d	Miombo-Schwertschwanz
 d	Tabora-Schwertschwanz
-u	schaffgotschi
+b	Papilio
+n	Oberthür, 1886
+o	Antheus
+a	antheus
+e	Large Swordtail
+e	Large Striped Swordtail
+d	Großer Schwertschwanz
+b	Papilio
+n	Cramer, 1779
+a	evombar
+e	Madagscan Swordtail
+d	Madagassischer Schwertschwanz
+b	Papilio
+n	Boisduval, 1836
+o	Colonna
+a	colonna
+e	Black Swordtail
+e	Mamba Swordtail
+d	Schwarzer Schwertschwanz
+d	Mamba-Schwertschwanz
+b	Papilio
+n	Ward, 1873
+o	Illyris
+a	gudenusi
+e	Kigezi Swordtail
+d	Kigezi-Schwertschwanz
+b	Papilio
+n	Rebel, 1911
+a	illyris
+e	Creme-bandend Swordtail
+d	Gebänderter Schwertschwanz
+b	Papilio
+n	Hewitson, 1873
+u	flavisparsus
+a	kirbyi
+e	Kirby's Swordtail
+d	Kirby's Schwertschwanz
+b	Papilio
+n	Hewitson, 1872
 o	Leonidas
 a	cyrnus
-e	Madagascan Red-veined Swordtail
 e	Green Lady
+e	Malagasy Green Lady
+e	Madagascan Red-veined Swordtail
 d	Madagassischer Segelfalter
+b	Papilio
+n	Boisduval, 1836
+a	latreillianus
+e	Coppery Swordtail
+e	Coppery Lady
+d	Kupferner Schwertschwanz
+b	Papilio
+n	Godart, 1819
 a	leonidas
 e	Veined Swordtail
 e	Leonidas Swordtail
+e	Veined Lady
 d	Leonidas-Schwertschwanz
+b	Papilio
+n	Fabricius, 1793
+z	Arisbe
+n	Hübner, 1819
 s	pelopidas
 u	pelopidas
 a	levassori
-o	Philonoe
-a	philonoe
-e	Eastern White Lady
-d	Ostafrikanischer Schwertschwanz
-o	Tynderaeus
-a	latreillianus
-e	Coppery Swordtail
-d	Kupferner Schwertschwanz
+e	Ivory Lady
+e	Comoro Lady
+d	Elfenbein-Schwertschwanz
+d	Komoren-Schwertschwanz
+b	Papilio
+n	Oberthür, 1890
 a	tynderaeus
 e	Electric Green Swordtail
+e	Electric Green Lady
 d	Neon-Schwertschwanz
-i	Paranticopsis
-a	delessertii
-e	Malayan Zebra
-d	Malaiisches Zebra
-a	deucalion
-e	Yellow Zebra
-d	Gelbes Zebra
-a	encelades
-a	idaeoides
-a	macareus
-e	Lesser Zebra
-d	Kleines Zebra
-a	megaera
-a	megarus
-e	Spotted Zebra
-d	Gepunktetes Zebra
-s2	Paranticopsis
-a	ramaceus
-e	Pendlebury's Zebra
-d	Pendlebury's Zebra
-a	stratocles
-e	Philippine Zebra
-d	Philippinisches Zebra
-a	thule
-a	xenocles
-e	Great Zebra
-d	Großes Zebra
-s2	Paranticopsis
+b	Papilio
+n	Fabricius, 1793
+o	Philonoe
+a	adamastor
+e	Boisduval's White Lady
+d	Boisduvals Schwertschwanz
+b	Papilio
+n	Boisduval, 1836
+s	abri
+a	agamedes
+e	Westwood's White Lady
+e	Glassy Lady
+d	Westwood's Schwertschwanz
+b	Papilio
+n	Westwood, 1842
+a	almansor
+e	Honrath's White Lady
+e	Hazel Lady
+d	Honraths Schwertschwanz
+b	Papilio
+n	Honrath, 1884
+u	almansor
+u	birbiri
+u	carchedonius
+u	dufranei
+u	escherichi
+u	uganda
+a	auriger
+e	Cream-banded Lady
+e	Gabonese Swordtail
+d	Gabunischer Schwertschwanz
+b	Papilio
+n	Butler, 1876
+w	aurivilliusi
+e	Lost Lady
+d	Verlorener Schwertschwanz
+b	Papilio
+n	Seeldrayers, 1896
+s	auriger aurivilliusi
+s	aurivilliusi
+v	adamastor
+v2	schubotzi
+a	fulleri
+e	Yellow-banded Lady
+d	Gelbbindiger Schwertschwanz
+b	Papilio
+n	Grose-Smith, 1883
+s	sanganus
+s	weberi
+a	hachei
+e	Elegant Lady
+d	Eleganter Schwertschwanz
+b	Papilio
+n	Dewitz, 1881
+s	martensi
+a	philonoe
+e	Eastern White Lady
+e	Dappled Lady
+e	White-dappled Swallowtail
+d	Ostafrikanischer Schwertschwanz
+b	Papilio
+n	Ward, 1873
+a	poggianus
+e	Pied Lady
+b	Papilio
+n	Honrath, 1884
+s	almansor deliae
+s	almansor kigoma
+s3	almansor
+s	deliae
+s	kigoma
+u	kigoma
+a	rileyi
+e	Riley's Lady
+d	Riley's Schwertschwanz
+b	Graphium
+n	Berger, 1950
+a	schubotzi
+e	Dark Lady
+e	Odin's Swordtail
+d	Odins Schwertschwanz
+b	Papilio
+n	Schultze, 1913
+s	auriger eyeni
+s3	auriger
+s	odin
+s	olbrechtsi
+s	olbrechtsi tongoni
+u	maculata
+u	olbrechtsi
+u	schubotzi
+u	tongoni
+a	simoni
+e	Simon's Swordtail
+e	Tan Lady
+d	Simon's Schwertschwanz
+b	Papilio
+n	Aurivillius, 1899
+a	ucalegon
+e	Creamy Swordtail
+e	Twin-spotted Lady
+d	Cremefarbener Schwertschwanz
+b	Papilio
+n	Hewitson, 1865
+u	fontainei
+u	schoutedeni
+u	ucalegon
+a	ucalegonides
+e	Sepia Lady
+d	Sepia-Schwertschwanz
+b	Papilio
+n	Staudinger, 1884
+o	Policenes
+a	junodi
+e	Junod's Swordtail
+d	Junod's Schwertschwanz
+b	Papilio
+n	Trimen, 1893
+a	policenes
+e	Common Swordtail
+e	Small Striped Swordtail
+d	Gewöhnlicher Schwertschwanz
+b	Papilio
+n	Cramer, 1775
+s	biokoensis
+s	bouyeri
+s	intermedia
+s	liponesco
+s	nigrescens
+s	policenoides
+s	polycenes
+u	biokoensis
+u	liponesco
+u	policenoides
+a	polistratus
+e	Dancing Swordtail
+d	Tansanischer Schwertschwanz
+b	Papilio
+n	Grose-Smith, 1889
+s	polystratus
+a	porthaon
+e	Dark Swordtail
+e	Coastal Swordtail
+e	Cream-striped Swordtail
+d	Dunkler Schwertschwanz
+b	Papilio
+n	Hewitson, 1865
 i	Pathysa
+o	Agetes
 a	agetes
 e	Four-bar Swordtail
 d	Vierstrich-Schwertschwanz
+b	Papilio
+n	Westwood, 1843
+z	Deoris
+n	Moore, 1903
+s2	Pathysa
+a	stratiotes
+e	Kinabalu Swordtail
+d	Kinabalu-Schwertschwanz
+b	Papilio
+n	Grose-Smith, 1887
+s2	Pathysa
+o	Antiphates
 a	androcles
 e	Giant Swordtail
 e	Lion Swordtail
 d	Riesenschwertschwanz
+b	Papilio
+n	Boisduval, 1836
+s2	Pathysa
 c	antiphates
 e	Five-bar Swordtail
 d	Fünfstrich-Schwertschwanz
 b	Papilio
 n	Cramer, 1775
+z	Pathysa
+n	Reakirt, 1865
+s4	Arisbe euphrates
+s4	Arisbe euphratoides
+s	ornatus
 s2	Pathysa
+s4	Pathysa epaminondas
+s4	Pathysa euphrates
+s4	Pathysa euphrates decolor
+s4	Pathysa euphrates euphratoides
 k	antiphates
 k	decolor
 k	epaminondas
 k	euphrates
 k	euphratoides
+o	Aristeus
 a	aristeus
 e	Chain Swordtail
 d	Ketten-Schwertschwanz
+b	Papilio
+n	Stoll, 1780
+s2	Arisbe
+s2	Pathysa
 a	dorcus
 e	Tabitha's Swordtail
 d	Tabitha-Schwertschwanz
+b	Papilio
+n	De Haan, 1840
+s2	Pathysa
 a	nomius
 e	Spot Swordtail
 d	Punkt-Schwertschwanz
+b	Papilio
+n	Esper, 1799
+s2	Pathysa
 a	rhesus
 e	Rhesus Swallowtail
 e	Monkey Swordtail
 d	Rhesus-Schwalbenschwanz
-a	stratiotes
+b	Papilio
+n	Boisduval, 1836
+s2	Pathysa
+o	Encelades
+a	encelades
+e	Sulawesi Zebra
+d	Sulawesisches Zebra
+b	Papilio
+n	Boisduval, 1836
+s2	Paranticopsis
+a	idaeoides
+b	Papilio
+n	Hewitson, 1855
+s2	Arisbe
+s2	Paranticopsis
+o	Macareus
+a	delessertii
+e	Malayan Zebra
+d	Malaiisches Zebra
+b	Papilio
+n	Guérin-Méneville, 1839
+s2	Arisbe
+s2	Paranticopsis
+a	macareus
+e	Lesser Zebra
+d	Kleines Zebra
+b	Papilio
+n	Godart, 1819
+z	Paranticopsis
+n	Wood-Mason & De Nicéville, 1887
+s2	Arisbe
+s4	Arisbe delesserti palawanus
+s	palawanus
+s2	Paranticopsis
+s4	Paranticopsis delessertii palawanus
+a	ramaceus
+e	Pendlebury's Zebra
+d	Pendlebury's Zebra
+b	Papilio
+n	Westwood, 1872
+s	interjectus
+s2	Paranticopsis
+s4	Paranticopsis ramaceus interjectus
+s4	Paranticopsis ramaceus pendleburyi
+u	interjectus
+u	pendleburyi
+a	xenocles
+e	Great Zebra
+d	Großes Zebra
+b	Papilio
+n	Doubleday, 1842
+s2	Paranticopsis
+o	Megarus
+a	deucalion
+e	Yellow Zebra
+d	Gelbes Zebra
+b	Papilio
+n	Boisduval, 1836
+s	leucadion
+s	marabuntana
+s2	Paranticopsis
+u	leucadion
+u	marabuntana
+a	megaera
+b	Papilio
+n	Staudinger, 1888
+s2	Paranticopsis
+a	megarus
+e	Spotted Zebra
+d	Gepunktetes Zebra
+b	Papilio
+n	Westwood, 1844
+s	ebertorum
+s	sagittiger
+s2	Paranticopsis
+u	ebertorum
+u	sagittiger
+a	stratocles
+e	Philippine Zebra
+d	Philippinisches Zebra
+b	Papilio
+n	C. & R. Felder, 1861
+s	senectus
+s	stratonices
+a	thule
+b	Papilio
+n	Wallace, 1865
+s	felixi
 i	Pazala
 r	Hu, 2018
 l	Revision of Pazala Moore, 1888: The Graphium (Pazala) mandarinus (Oberthür, 1879) Group, with Treatments of Known Taxa and Descriptions of New Species and New Subspecies (Lepidoptera: Papilionidae)
@@ -2721,31 +3364,70 @@ r	Zhang, 2020
 l	Revision of Pazala Moore, 1888: The Graphium (Pazala) alebion and G. (P.) tamerlanus Groups, with Notes on Taxonomic and Distribution Confusions (Lepidoptera: Papilionidae)
 p	10.11646/zootaxa.4759.1.5
 a	alebion
+b	Papilio
+n	Gray, 1853
+s2	Pazala
 a	eurous
 e	Six-bar Swordtail
 d	Sechsstrich-Schwertschwanz
+b	Papilio
+n	Leech, 1893
+s	caschmirensis
+s3	glycerion caschmirensis
+s	panopaea
+s4	Pazala euroa
+s2	Pazala
+u	caschmirensis
+u	panopaea
 c	mandarinus
 e	Spectacle Swordtail
 d	Mandarin-Schwertschwanz
+b	Papilio
+n	Oberthür, 1879
+z	Pazala
+n	Moore, 1888
+s	glycerion
+s	glycerion kimurai
+s	hoenei
+s	mandarinum
+s4	Pazala hoenei
+s4	Pazala mandarina
 k	confucius
+k	daiyuanae
 k	garhwalica
-k	glycerion
 k	hoeneanus
 k	mandarinus
 k	paphus
 k	sichuanica
+k	wenlingae
+r	Hu, 2019
+l	A New Species of the Graphium (Pazala) mandarinus Group from Central Vietnam (Lepidoptera: Papilionidae)
+p	10.11646/zootaxa.4554.1.10
 a	mullah
-c	tamerlana
-s	tamerlanus
+b	Papilio
+n	Alphéraky, 1897
+s2	Pazala
+c	tamerlanus
+b	Papilio
+n	Oberthür, 1876
+s	incertum
+s	taliensis
+s	tamerlana
+s	tamerlanum
+s4	Pazala incerta
+s4	Pazala tamerlana
+s4	Pazala timur
 k	incerta
 k	parus
-k	tamerlana
+k	tamerlanus
 k	timur
 g	Iphiclides
 a	feisthamelii
 e	Southern Scarce Swallowtail
 e	Iberian Scarce Swallowtail
 d	Iberischer Segelfalter
+b	Papilio
+n	Duponchel, 1832
 s	feisthameli
 s3	podalirius
 r2	Wiemers & Gottsberger, 2010
@@ -2757,18 +3439,28 @@ p	10.1111/zsc.12355
 a	podalirinus
 e	Chinese Scarce Swallowtail
 d	Chinesischer Segelfalter
+b	Papilio
+n	Oberthür, 1890
 s3	podalirius
 a	podalirius
 e	Scarce Swallowtail
 d	Segelfalter
 b	Papilio
 n	Linnaeus, 1758
+z	Iphiclides
+n	Hübner, 1819
+z	Podalirius
+n	Swainson, 1833
 g	Lamproptera
 a	curius
 e	White Dragontail
 d	Weißer Drachenschwanz
 b	Papilio
 n	Fabricius, 1787
+z	Lamproptera
+n	Gray, 1832
+z	Leptocircus
+n	Swainson, 1833
 s	curia
 s2	Leptocircus
 a	meges
@@ -2789,6 +3481,8 @@ e	Australian Swordtail
 d	Australischer Schwertschwanz
 b	Papilio
 n	Doubleday, 1846
+z	Protographium
+n	Munroe, 1961
 y	Parnassiinae
 e2	Apollo Butterflies
 e2	Parnassians
@@ -15004,8 +15698,7 @@ n	Collins & Larsen, 1991
 s2	Kamilla
 a	cytora
 e	Western Blue Mother-of-Pearl
-e	Western Blue Beauty
-d	Westafrikanischer Perlmuttfalter
+d	Westafrikanischer Perlmutt-Blattfalter
 b	Protogoniomorpha
 n	Doubleday, 1847
 s2	Salamis
@@ -15018,8 +15711,7 @@ n	Fabricius, 1793
 s2	Precis
 a	temora
 e	Blue Mother-of-Pearl
-e	Eastern Blue Beauty
-d	Blauer Perlmuttfalter
+d	Blauer Perlmutt-Blattfalter
 b	Salamis
 n	C. & R. Felder, 1867
 s2	Protogoniomorpha
@@ -15065,7 +15757,7 @@ u	elgiva
 g	Protogoniomorpha
 a	anacardii
 e	Clouded Mother-of-Pearl
-d	Dunkler Perlmuttfalter
+d	Dunkler Perlmutt-Blattfalter
 b	Papilio
 n	Linnaeus, 1758
 s	ancardii
@@ -15081,7 +15773,7 @@ u	nebulosa
 a	parhassus
 e	Common Mother-of-Pearl
 e	Forest Mother-of-Pearl
-d	Perlmuttfalter
+d	Afrikanischer Perlmutt-Blattfalter
 b	Papilio
 n	Drury, 1782
 s2	Salamis
@@ -15093,7 +15785,7 @@ b	Junonia
 n	Ward, 1870
 a	cacta
 e	Lilac Mother-of-Pearl
-d	Lilafarbener Perlmuttfalter
+d	Lilafarbener Perlmutt-Blattfalter
 b	Papilio
 n	Fabricius, 1793
 g	Yoma
@@ -18664,7 +19356,7 @@ d	Perlhuhnfalter
 g	Pseudargynnis
 a	hegemone
 e	False Fritillary
-d	Falscher Perlmutterfalter
+d	Falscher Perlmuttfalter
 h	Evenaiti
 sh	Evenaina
 g	Catuna
@@ -19701,7 +20393,7 @@ l	A peculiar new species of Dione (Agraulis) Boisduval & Le Conte (Lepidoptera, 
 p	10.3897/zookeys.1113.85769
 c	vanillae
 e	Gulf Fritillary
-d	Golf-Perlmutterfalter
+d	Golf-Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1758
 s4	Agraulis incarnata
@@ -20842,7 +21534,7 @@ s	mahratta
 u	mahratta
 t	Argynnini
 e2	Fritillaries
-d2	Perlmutterfalter
+d2	Perlmuttfalter
 r	Simonsen, 2006
 l	Morphology, molecules and fritillaries: Approaching a stable phylogeny for Argynnini (Lepidoptera: Nymphalidae)
 p	10.1163/187631206788831407
@@ -20858,7 +21550,7 @@ a	hyperbius
 e	Indian Fritillary
 e	Tropical Fritillary
 e	Laced Fritillary
-d	Indischer Perlmutterfalter
+d	Indischer Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1763
 z	Argyreus
@@ -20866,8 +21558,8 @@ n	Scopoli, 1777
 s2	Argyreus
 a	laodice
 e	Pallas' Fritillary
-d	Östlicher Perlmutterfalter
-d	Grünlicher Perlmutterfalter
+d	Östlicher Perlmuttfalter
+d	Grünlicher Perlmuttfalter
 a	pandora
 e	Cardinal
 d	Kardinal
@@ -20884,20 +21576,20 @@ z	Argynnis
 n	Fabricius, 1807
 a	ruslana
 e	Amur Fritillary
-d	Amur-Perlmutterfalter
+d	Amur-Perlmuttfalter
 a	sagana
 e	Sagana Fritillary
-d	Sagana-Perlmutterfalter
+d	Sagana-Perlmuttfalter
 s2	Damora
 i	Fabriciana
 a	adippe
 e	High Brown Fritillary
-d	Feuriger Perlmutterfalter
+d	Feuriger Perlmuttfalter
 d	Märzveilchenfalter
 s2	Fabriciana
 a	elisa
 e	Corsican Fritillary
-d	Korsischer Perlmutterfalter
+d	Korsischer Perlmuttfalter
 s2	Fabriciana
 a	kamala
 e	Common Silverstripe
@@ -20905,7 +21597,7 @@ d	Himalaya-Silberstrich
 s2	Fabriciana
 a	niobe
 e	Niobe Fritillary
-d	Mittlerer Perlmutterfalter
+d	Mittlerer Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1758
 z	Fabriciana
@@ -20915,13 +21607,13 @@ i	Speyeria
 a	adiaste
 e	Unsilvered Fritillary
 e	Adiaste Fritillary
-d	Silberloser Perlmutterfalter
+d	Silberloser Perlmuttfalter
 s2	Speyeria
 u	adiaste
 u	clemencei
 a	aglaja
 e	Dark Green Fritillary
-d	Großer Perlmutterfalter
+d	Großer Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1758
 s	aglaia
@@ -20945,7 +21637,7 @@ s2	Speyeria
 c	atlantis
 e	Atlantis Fritillary
 e	Northwestern Fritillary
-d	Atlantis-Perlmutterfalter
+d	Atlantis-Perlmuttfalter
 s	hesperis irene
 s	hesperis nausicaa
 s2	Speyeria
@@ -20958,23 +21650,23 @@ k	irene
 k	nausicaa
 a	callippe
 e	Callippe Fritillary
-d	Kalifornischer Perlmutterfalter
+d	Kalifornischer Perlmuttfalter
 a	clara
 e	Silverstreak
 e	Tibetan Fritillary
-d	Tibetischer Perlmutterfalter
+d	Tibetischer Perlmuttfalter
 s4	Mesoacidalia
 s2	Speyeria
 a	coronis
 e	Crown Fritillary
-d	Kronen-Perlmutterfalter
+d	Kronen-Perlmuttfalter
 s	carolae
 s4	Speyeria carolae
 s2	Speyeria
 u	carolae
 c	cybele
 e	Great Spangled Fritillary
-d	Kanadischer Perlmutterfalter
+d	Kanadischer Perlmuttfalter
 s2	Speyeria
 s2	Speyeria leto
 k	cybele
@@ -20989,8 +21681,8 @@ s2	Speyeria
 c	edwardsii
 e	Edwards' Fritillary
 e	Mormon Fritillary
-d	Edwards Perlmutterfalter
-d	Mormonen-Perlmutterfalter
+d	Edwards Perlmuttfalter
+d	Mormonen-Perlmuttfalter
 s2	Speyeria
 s4	Speyeria mormonia
 s4	Speyeria mormonia bischoffii
@@ -20999,15 +21691,15 @@ k	edwardsii
 k	mormonia
 a	egleis
 e	Great Basin Fritillary
-d	Sierra-Nevada-Perlmutterfalter
+d	Sierra-Nevada-Perlmuttfalter
 s2	Speyeria
 a	hydaspe
 e	Hydaspe Fritillary
-d	Hydaspes-Perlmutterfalter
+d	Hydaspes-Perlmuttfalter
 s2	Speyeria
 a	idalia
 e	Regal Fritillary
-d	Königs-Perlmutterfalter
+d	Königs-Perlmuttfalter
 b	Papilio
 n	Drury, 1773
 z	Speyeria
@@ -21016,7 +21708,7 @@ s2	Speyeria
 a	zerene
 e	Zerene Fritillary
 e	Oregon Silverspot
-d	Oregon-Perlmutterfalter
+d	Oregon-Perlmuttfalter
 s	adiaste atossa
 s4	Speyeria adiaste atossa
 s2	Speyeria
@@ -21028,23 +21720,23 @@ u	picta
 g	Brenthis
 a	daphne
 e	Marbled Fritillary
-d	Brombeer-Perlmutterfalter
+d	Brombeer-Perlmuttfalter
 a	hecate
 e	Twin-spot Fritillary
-d	Saumfleck-Perlmutterfalter
+d	Saumfleck-Perlmuttfalter
 a	ino
 e	Lesser Marbled Fritillary
-d	Mädesüß-Perlmutterfalter
+d	Mädesüß-Perlmuttfalter
 g	Issoria
 a	baumanni
 e	Baumann's Mountain Fritillary
-d	Baumanns Perlmutterfalter
+d	Baumanns Perlmuttfalter
 a	hanningtoni
 e	Hannington's Fritillary
-d	Hannington's Perlmutterfalter
+d	Hannington's Perlmuttfalter
 a	lathonia
 e	Queen of Spain Fritillary
-d	Kleiner Perlmutterfalter
+d	Kleiner Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1758
 z	Issoria
@@ -21055,105 +21747,105 @@ g	Boloria
 i	Boloria
 a	alaskensis
 e	Alaskan Fritillary
-d	Alaskischer Perlmutterfalter
+d	Alaskischer Perlmuttfalter
 a	aquilonaris
 e	Cranberry Fritillary
-d	Hochmoor-Perlmutterfalter
+d	Hochmoor-Perlmuttfalter
 a	graeca
 e	Balkan Fritillary
-d	Balkan-Perlmutterfalter
+d	Balkan-Perlmuttfalter
 a	napaea
 e	Mountain Fritillary
-d	Ähnlicher Perlmutterfalter
+d	Ähnlicher Perlmuttfalter
 a	pales
 e	Shepherd's Fritillary
-d	Hochalpen-Perlmutterfalter
-d	Alpenmatten-Perlmutterfalter
+d	Hochalpen-Perlmuttfalter
+d	Alpenmatten-Perlmuttfalter
 i	Proclossiana
 a	eunomia
 e	Bog Fritillary
-d	Randring-Perlmutterfalter
+d	Randring-Perlmuttfalter
 s2	Proclossiana
 i	Clossiana
 a	astarte
 e	Yukon Fritillary
-d	Yukon-Perlmutterfalter
+d	Yukon-Perlmuttfalter
 s2	Clossiana
 a	bellona
 e	American Meadow Fritillary
-d	Feuchtwiesen-Perlmutterfalter
+d	Feuchtwiesen-Perlmuttfalter
 s2	Clossiana
 a	chariclea
 e	Arctic Fritillary
 e	Purplish Fritillary
-d	Arktischer Perlmutterfalter
+d	Arktischer Perlmuttfalter
 s2	Clossiana
 a	dia
 e	Weaver's Fritillary
 e	Violet Fritillary
-d	Magerrasen-Perlmutterfalter
-d	Hainveilchen-Perlmutterfalter
+d	Magerrasen-Perlmuttfalter
+d	Hainveilchen-Perlmuttfalter
 s2	Clossiana
 a	epithore
 e	Pacific Fritillary
-d	Westküsten-Perlmutterfalter
+d	Westküsten-Perlmuttfalter
 s2	Clossiana
 a	euphrosyne
 e	Pearl-bordered Fritillary
-d	Silberfleck-Perlmutterfalter
-d	Veilchen-Perlmutterfalter
+d	Silberfleck-Perlmuttfalter
+d	Veilchen-Perlmuttfalter
 b	Papilio
 n	Linnaeus, 1758
 s2	Clossiana
 a	freija
 e	Freija's Fritillary
-d	Borealer Perlmutterfalter
+d	Borealer Perlmuttfalter
 s2	Clossiana
 a	frigga
 e	Frigga's Fritillary
-d	Nordischer Perlmutterfalter
+d	Nordischer Perlmuttfalter
 s2	Clossiana
 a	improba
 s2	Clossiana
 a	polaris
 e	Polar Fritillary
-d	Polar-Perlmutterfalter
+d	Polar-Perlmuttfalter
 s2	Clossiana
 c	selene
 e	Silver-bordered Fritillary
-d	Braunfleckiger Perlmutterfalter
+d	Braunfleckiger Perlmuttfalter
 s2	Clossiana
 k	myrina
 k	selene
 a	thore
 e	Thor's Fritillary
-d	Bergwald-Perlmutterfalter
+d	Bergwald-Perlmuttfalter
 s2	Clossiana
 a	titania
 e	Titania's Fritillary
-d	Natterwurz-Perlmutterfalter
+d	Natterwurz-Perlmuttfalter
 s2	Clossiana
 h	Yrameiti
 sh	Yrameina
 g	Yramea
 a	cytheris
 e	Queen of Falklands Fritillary
-d	Falkland-Perlmutterfalter
+d	Falkland-Perlmuttfalter
 s2	Issoria
 h	Pardopsiti
 sh	Pardopsina
 g	Pardopsis
 a	punctatissima
 e	Polka Dot
-d	Acräen-Perlmutterfalter
+d	Acräen-Perlmuttfalter
 j	Euptoietina
 g	Euptoieta
 a	claudia
 e	Variegated Fritillary
-d	Panaschierter Perlmutterfalter
+d	Panaschierter Perlmuttfalter
 a	hegesia
 e	Mexican Fritillary
-d	Mexikanischer Perlmutterfalter
+d	Mexikanischer Perlmuttfalter
 t	Vagrantini
 j	Vagrantina
 g	Cupha
@@ -23697,6 +24389,8 @@ d	Spanisches Wiesenvögelchen
 a	glycerion
 e	Chestnut Heath
 d	Rotbraunes Wiesenvögelchen
+b	Papilio
+n	Borkhausen, 1788
 a	hero
 e	Scarce Heath
 d	Wald-Wiesenvögelchen
@@ -23707,6 +24401,10 @@ a	oedippus
 e	False Ringlet
 d	Stromtal-Wiesenvögelchen
 d	Moor-Wiesenvögelchen
+b	Papilio
+n	Fabricius, 1787
+z	Coenonympha
+n	Hübner, 1819
 a	pamphilus
 e	Small Heath
 d	Kleines Wiesenvögelchen
@@ -76968,6 +77666,7 @@ g	Lobobunaea
 a	acetes
 e	Blushing Emperor Moth
 d	Rotbraunes Nachtpfauenauge
+a	goodii
 a	phaedusa
 e	Grey Giant Emperor Moth
 d	Graues Riesenpfauenauge
@@ -76975,6 +77674,13 @@ s	christyi
 s	falcatissima
 u	christyi
 u	falcatissima
+u	phaedusa
+a	saturnus
+e	Brown Giant Emperor Moth
+d	Braunes Riesenpfauenauge
+s	angasana
+s	hannibal
+s	weymeri
 g	Melanocera
 a	menippe
 e	Chestnut Emperor Moth
@@ -78215,6 +78921,9 @@ y	Agliinae
 d2	Nagelflecke
 t	Agliini
 g	Aglia
+a	homora
+e	Chinese Tau Emperor Moth
+d	Chinesischer Nagelfleck
 a	japonica
 e	Japanese Tau Emperor Moth
 d	Japanischer Nagelfleck
@@ -78810,6 +79519,14 @@ e	Walnut Sphinx
 d	Walnussschwärmer
 b	Sphinx
 n	Smith, 1797
+g	Anambulyx
+a	elwesi
+e	Elwes' Pink-and-green Hawkmoth
+d	Elwes' Abenpfauenauge
+b	Ambulyx
+n	Druce, 1882
+z	Anambulyx
+n	Rothschild & Jordan, 1903
 g	Callambulyx
 a	amanda
 a	junonia
