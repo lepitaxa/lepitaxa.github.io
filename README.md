@@ -23,13 +23,14 @@ This GitHub repository also provides a place to discuss data, propose changes an
 ### Project history
 |Date|Milestone|
 |---|---|
-|07.07.2008|Started experimenting with a first HTML-based tree for the superfamily Papilionoidea (butterflies).|
+|07.07.2008|Started experimenting with a first primitive, purely HTML-based tree for the superfamily Papilionoidea (butterflies).|
 |17.12.2013|Complete technical overhaul of the still experimental "Papilionoidea" project, including the use of CSS and JavaScript.|
 |05.12.2020|Formal creation of the Lepitaxa project with improved code and data structure, as well as a significantly expanded tree.|
 |17.09.2023|The Lepitaxa project moved to GitHub and is now available to the public domain, using GitHub Pages as a website host.|
+|28.07.2026|The ever-expanding tree surpassed 100K data points, now covering all known Lepidoperan families and most of its genera.|
 
 ### Basic structure
-Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or datapoints! An overview of the group structure can be found in the table below.
+Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or data points! An overview of the group structure can be found in the table below.
 
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
@@ -60,7 +61,7 @@ https://github.com/lepitaxa/lepitaxa.github.io.git
 ### Editing the data
 All Lepitaxa data is included within a single file, index.html. This file also contains all the HTML, CSS and JavaScript code needed for the Lepitaxa webpage. Theoretically, you can open and edit this file using any text editor, even Windows Notepad, although I highly recommend to use a more modern text editor with support for code highlighting, along with a proper monospace font like Courier or Consolas. A solid and popular choice would be Notepad++ (https://notepad-plus-plus.org/).
 
-To get around faster within the large dataset, simply use your text editors search function to jump to whatever datapoint you’d like to modify.
+To get around faster within the large dataset, simply use your text editors search function to jump to whatever data point you’d like to modify.
 
 ### Checking data integrity
 To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, it is recommended to additionally run an automated data integrity check. To do this, open index.html in a web browser, navigate to the bottom and click the data download button. Every data export will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them, reload the page and repeat the lepitest for confirmation.
@@ -97,7 +98,7 @@ s	hippocrates
 u	hippocrates
 ```
 
-These datapoints form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
+These data points form a very long, but simple list, resulting in a strictly linear dataset. The only thing that really matters is the correct order of the data points relative to each other. There is no true hierarchy or nesting present in the raw data! The taxon hierarchy visible on the Lepitaxa webpage is generated on page load by adding formatting and structure using CSS and JavaScript.
 
 ### Overview of supported data point classes and data types
 |Data point class|---------------<br>Data type<br>---------------|-------------------------------------------------------<br>Data string fine structure<br>-------------------------------------------------------|----------------------------------------<br>Short description<br>----------------------------------------|
