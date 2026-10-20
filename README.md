@@ -30,12 +30,12 @@ This GitHub repository also provides a place to discuss data, propose changes an
 |28.07.2026|The ever-expanding tree surpassed 100K data points, now covering all known Lepidoperan families and most of its genera.|
 
 ### Basic structure
-Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or data points! An overview of the group structure can be found in the table below.
+Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groupings do NOT necessarily represent actual monophyletic entities, but are purely for aesthetics and practical reasons! An overview of the group structure can be found in the table below.
 
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 |----------------|_"Macrolepidopterans"_|_"Großschmetterlinge"_|-----------------------------------------------------|
-|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsections Rhopalocera + Thyridina (Superfamilies Papilionoidea + Thyridoidea)|
 |![#FFCC66,#FF0000](https://placehold.co/110x50/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
 |![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
 |![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
@@ -44,8 +44,6 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 |![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea, Zygaenoidea and relatives)|
 |![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
 |![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera (Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
-
-Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
 ## Workspace setup
 ### Setting up Git
