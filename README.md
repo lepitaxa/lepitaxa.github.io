@@ -40,9 +40,9 @@ Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four
 |![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
 |![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 |----------------|_"Microlepidopterans"_|_"Kleinschmetterlinge"_|-----------------------------------------------------|
-|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa (Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa (Superfamilies Drepanoidea, Pyraloidea, Gelechioidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea and Zygaenoidea)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
 |![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera (Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
 
 ## Workspace setup
