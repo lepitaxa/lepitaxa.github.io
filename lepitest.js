@@ -321,9 +321,15 @@ if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
-if (f.matches('p[id]')) testArrayTX.push(f.id.replace(/_/g,' '));
+if (f.matches('p[id]:not(.a,.u,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
 if (f.matches('.b,.z,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
 if (f.matches('.a,.u,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
+
+// Remove the few rare basionym duplicates considered "valid" by ICZN ruling
+var b1 = testArrayBS.indexOf("papilio agathina"); testArrayBS.splice(b1,1);
+var b2 = testArrayBS.indexOf("papilio harpalyce"); testArrayBS.splice(b2,1);
+var b3 = testArrayBS.indexOf("papilio narcissus"); testArrayBS.splice(b3,1);
+var b4 = testArrayBS.indexOf("papilio sylvia"); testArrayBS.splice(b4,1);
 
 // Sort the names
 testArrayE.sort();
