@@ -409,6 +409,8 @@ The genus of the basionym (original combination) of the species' or species aggr
 - 19.2. Basionyms must be placed AFTER all common names, but BEFORE all TS's, synonyms, microspecies or subspecies, and references.
 - 19.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by an AUT. These two data points belong together and should not be separated!
 - 19.4. The naming of basionym genera follows Guidelines 1.2. and 1.3.
+- 19.5. More complex original combinations including subgenera, forms and trinominal names are, for simplicity, reduced to standard binominal basionyms.
+- 19.6. There can only be one unique basionym present for each animal species in zoology. Some very rare exceptions do exist within the Lepidoptera due to ICZN ruling, allowing the conservation of some very old, well established, select names for taxonomic stability. These should be, if not already present and dealt with in the dataset, reported as an issue on this GitHub repository, and will then be added as an exception to the duplicate checking of the lepitest script.
 </details>
 
 ---
@@ -423,6 +425,7 @@ The type species designation of given genus/subgenus/genus synonym. This data ty
 - 20.3. A type species designation must always be the first element of a TS data pair, therefore be followed by an AUT. These two data points belong together and should not be separated!
 - 20.4. The naming of designated genera follows Guidelines 1.2. and 1.3.
 - 20.5. If a species is being designated the type of more than one genus/subgenus/genus synonym, the TS's should be sorted alphabetically.
+- 20.6. If there are two or more separate genera with identical names, then the oldest name takes priority, newer ones are invalid and ignored.
 </details>
 
 ---
