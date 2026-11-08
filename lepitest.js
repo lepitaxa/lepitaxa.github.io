@@ -8,7 +8,7 @@ console.log('→ Run lepitest data integrity check ...'); var log = ''; var i = 
 $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nuller)});
 $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nuller)});
 
-// Trim v datapoints back to only show one species name
+// Trim v data points back to not show the second parent's species name
 $$('.v').forEach(f=>{f.innerHTML = f.innerHTML.replace(/ ×.+/,'')});
 
 // Remove ID links
@@ -92,7 +92,7 @@ if (f.matches('.p2') && !(/^ISSN-L \d{4}-\d{3}(\d|X), \d/.test(d))) {i++; log +=
 // Data order
 if (f.matches('.x9') && !(f.matches('p:first-of-type'))) {i += 1; log += '[#' + i + s2 + 'Only a single taxon of this type can exist at the very top of the list.\n'};
 if (f.matches('.f,.i,.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2') && f.matches('p:first-of-type') || f.matches('.k,.u,.ue') && f.matches('p:nth-of-type(2)')) {i++; log += '[#' + i + s2 + 'It must be located within a valid parent taxon.\n'};
-if (f.matches('.g') && f.nextElementSibling.matches('.o,.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2') || f.matches('.i,.o') && f.nextElementSibling.matches('.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2')) {i++; log += '[#' + i + s2 + 'There is at least one misplaced datapoint at the beginning of this GEN/SUBGEN/SPGR, e.g. SP subdata lacking its SP datapoint or a SPGR not located within a SUBGEN. The correct hierarchy is: GEN > SUBGEN > SPGR > SP > SP subdata.\n'};
+if (f.matches('.g') && f.nextElementSibling.matches('.o,.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2') || f.matches('.i,.o') && f.nextElementSibling.matches('.k,.u,.ue,.v,.v2,.e,.e2,.d,.d2,.b,.z,.n,.s,.s2,.s3,.s4,.sh,.l,.p,.p2')) {i++; log += '[#' + i + s2 + 'There is at least one misplaced data point at the beginning of this GEN/SUBGEN/SPGR, e.g. SP subdata lacking its SP data point or a SPGR not located within a SUBGEN. The correct hierarchy is: GEN > SUBGEN > SPGR > SP > SP subdata.\n'};
 if (f.matches('p.g~p:is(.e2,.d2)')) {i++; log += '[#' + i + s4 + 'This type 2 common name must be located below a SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
 if (f.matches('p.g~p.sh')) {i++; log += '[#' + i + s4 + 'This synonym must be located below a ORD, PARAPHYLUM, SUPERFAM, FAM, SUBFAM, TRI, SUBTRI or INFRATRI taxon.\n'};
 if (f.matches('.e,.d,.s,.b,.z,.n,.s2,.s3,.s4') && !(f.matches('p:is(.a,.ae,.c,.w)~p'))) {i++; log += '[#' + i + s4 + 'Type 1 common names, BAS, TS and SYN must be located below a SP/AGG/HYBR taxon.\n'};
@@ -231,7 +231,7 @@ while (sib) {
 $$('.a,.ae,.c').forEach(f=>{
 var sib = f.nextElementSibling;
 while (sib) {
-	if (sib.matches('.v,.v2')) {i++; log += '[#' + i + s7 + convert(f.classList) + ' ' + f.innerHTML + '". Species can' + "'t contain species hybrid PARENT datapoints, these belong to HYBR taxons.\n"};
+	if (sib.matches('.v,.v2')) {i++; log += '[#' + i + s7 + convert(f.classList) + ' ' + f.innerHTML + '". Species can' + "'t contain species hybrid PARENT data points, these belong to HYBR taxons.\n"};
 	if (sib.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2,.r,.r2,.l,.p,.p2)')) break
 	sib = sib.nextElementSibling}});
 
@@ -321,9 +321,15 @@ if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
-if (f.matches('p[id]')) testArrayTX.push(f.id.replace(/_/g,' '));
+if (f.matches('p[id]:not(.a,.u,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
 if (f.matches('.b,.z,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
 if (f.matches('.a,.u,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
+
+// Remove the few rare basionym duplicates considered "valid" by ICZN ruling
+var b1 = testArrayBS.indexOf("papilio agathina"); testArrayBS.splice(b1,1);
+var b2 = testArrayBS.indexOf("papilio harpalyce"); testArrayBS.splice(b2,1);
+var b3 = testArrayBS.indexOf("papilio narcissus"); testArrayBS.splice(b3,1);
+var b4 = testArrayBS.indexOf("papilio sylvia"); testArrayBS.splice(b4,1);
 
 // Sort the names
 testArrayE.sort();
@@ -383,22 +389,22 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////9 Run tsv converter, rebuild the ID links afterwards
+////9 Run tsv converter, rebuild the ID links and v data points afterwards
 console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Converting data to TSV format ...');
 
 // TSV converter
 var file_cont = 'META_DATASET\tLepitaxa-' + version + '\nMETA_ORIGIN\thttps://lepitaxa.github.io';
 $$('p:not(.b,.z,.l),.bs,.zs,.ls').forEach(f=>{file_cont += '\n' + convert(f.classList) + '\t' + f.innerHTML});
 
-// Generate, click and remove download link, rebuld IDs
+// Generate, click and remove download link
 var file_link = document.createElement('a');
 file_link.setAttribute('download','Lepitaxa-' + version + '.tsv');
 file_link.setAttribute('href','data:text/tsv;charset=utf-8,' + encodeURIComponent(file_cont));
 file_link.click(); console.log('→ Download ready!'); file_link.remove();
 
-
+// Rebuld IDs and v data points
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
-
+$$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 
 
 

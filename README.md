@@ -30,22 +30,20 @@ This GitHub repository also provides a place to discuss data, propose changes an
 |28.07.2026|The ever-expanding tree surpassed 100K data points, now covering all known Lepidoperan families and most of its genera.|
 
 ### Basic structure
-Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groups are NOT actual taxa or data points! An overview of the group structure can be found in the table below.
+Within Lepitaxa, the Lepidopterans are, for faster navigation, divided into four _"Macrolepidopteran"_ and four _"Microlepidopteran"_ groups, all with easily recognizable names and color coding. Keep in mind that these groupings do NOT necessarily represent actual monophyletic entities, but are purely for aesthetics and practical reasons! An overview of the group structure can be found in the table below.
 
 |Color|English name|German name|Included Taxa|
 |---|---|---|---|
 |----------------|_"Macrolepidopterans"_|_"Großschmetterlinge"_|-----------------------------------------------------|
-|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsection Rhopalocera (Superfamilies Papilionoidea + Thyridoidea)|
+|![#FFFF99,#FFC001](https://placehold.co/110x50/ff9/ffc001?text=PAP)|**Butterflies**|**Tagfalter**|Section Obtectomera / Subsections Rhopalocera + Thyridina (Superfamilies Papilionoidea + Thyridoidea)|
 |![#FFCC66,#FF0000](https://placehold.co/110x50/fc6/f00?text=NOC)|**Owlet Moths**|**Eulen**|Section Obtectomera / Subsection Macroheterocera / Infrasection Noctuina (Superfamily Noctuoidea)|
 |![#CCFFCC,#99CC00](https://placehold.co/110x50/cfc/9c0?text=GEO)|**Geometrid Moths**|**Spannerartige**|Section Obtectomera / Subsection Macroheterocera / Infrasection Geometrina (Superfamily Geometroidea)|
 |![#CCCCFF,#5C01FF](https://placehold.co/110x50/ccf/5c01ff?text=BOM)|**Silkmoths**|**Spinner**|Section Obtectomera / Subsection Macroheterocera / Infrasection Bombycina (Superfamilies Bombycoidea + Lasiocampoidea)|
 |----------------|_"Microlepidopterans"_|_"Kleinschmetterlinge"_|-----------------------------------------------------|
-|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa (Superfamilies Drepanoidea, Pyraloidea, etc.)|
-|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea, Zygaenoidea and relatives)|
-|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Gelechioidea, Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
+|![#FFCCFF,#BB00FF](https://placehold.co/110x50/fcf/bb00ff?text=HEM)|**Higher Micromoths**|**Höhere Motten**|Remaining Obtectomeran taxa (Superfamilies Drepanoidea, Pyraloidea, Gelechioidea, etc.)|
+|![#FFCCCC,#EE0099](https://placehold.co/110x50/fcc/e09?text=COS)|**Cossid Micromoths**|**Bohrerartige**|Section Cossina (Superfamilies Cossoidea and Zygaenoidea)|
+|![#BBFFFF,#1EB9BC](https://placehold.co/110x50/bff/1eb9bc?text=TYP)|**Typical Micromoths**|**Klassische Motten**|Remaining basal Distrysian taxa (Superfamilies Tortricoidea, Yponomeutoidea, Tineoidea, etc.)|
 |![#EEEECC,#AA8855](https://placehold.co/110x50/eec/a85?text=ARC)|**Archaic Micromoths**|**Primitive Motten**|Remaining basal Lepidoptera (Non-Ditrysian, like Adeloidea, Exoporia, Zeugloptera, etc.)|
-
-Note that within the _"Microlepidoptera"_, the group naming and color coding mostly does not represent actual monophyletic entities, but is purely for aesthetics and practical reasons. The _"Macrolepidopterans"_ are, on the other hand, divided into four strictly monophyletic groups here, that actually do make somewhat sense from a practical standpoint.
 
 ## Workspace setup
 ### Setting up Git
@@ -411,6 +409,8 @@ The genus of the basionym (original combination) of the species' or species aggr
 - 19.2. Basionyms must be placed AFTER all common names, but BEFORE all TS's, synonyms, microspecies or subspecies, and references.
 - 19.3. A basionym genus must always be the first element of a BAS data pair, therefore be followed by an AUT. These two data points belong together and should not be separated!
 - 19.4. The naming of basionym genera follows Guidelines 1.2. and 1.3.
+- 19.5. More complex original combinations including subgenera, forms and trinominal names are, for simplicity, reduced to standard binominal basionyms.
+- 19.6. There can only be one unique basionym present for each animal species in zoology. Some very rare exceptions do exist within the Lepidoptera due to ICZN ruling, allowing the conservation of some very old, well established, select names for taxonomic stability. These should be, if not already present and dealt with in the dataset, reported as an issue on this GitHub repository, and will then be added as an exception to the duplicate checking of the lepitest script.
 </details>
 
 ---
@@ -425,6 +425,7 @@ The type species designation of given genus/subgenus/genus synonym. This data ty
 - 20.3. A type species designation must always be the first element of a TS data pair, therefore be followed by an AUT. These two data points belong together and should not be separated!
 - 20.4. The naming of designated genera follows Guidelines 1.2. and 1.3.
 - 20.5. If a species is being designated the type of more than one genus/subgenus/genus synonym, the TS's should be sorted alphabetically.
+- 20.6. If there are two or more separate genera with identical names, then the oldest name takes priority, newer ones are invalid and ignored.
 </details>
 
 ---
