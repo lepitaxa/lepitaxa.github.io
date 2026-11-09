@@ -101,7 +101,7 @@ if (f.matches('p:is(.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p:is(.e,.d)') || f
 if (f.matches('p:is(.s,.s2,.s3,.s4)+p:is(.b,.z,.n)')) {i++; log += '[#' + i + s4 + 'Synonyms should be placed after basionyms and type species designations.\n'};
 if (f.matches('p:is(.z,.n)+p.b')) {i++; log += '[#' + i + s4 + 'Type species designations should be placed after basionyms. There can also be only one basionym listed per species-type taxon.\n'};
 if (f.matches('p:is(.u,.ue,.k,.v,.v2)+p:is(.b,.z,.n,.s,.s2,.s3,.s4)')) {i++; log += '[#' + i + s4 + 'SSP, SEG and PARENT should be placed after basionyms, type species designations and synonyms.\n'};
-if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.n,.z,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, type species designations, synonyms, SSP, SEG and PARENT.\n'};
+if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.z,.n,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, type species designations, synonyms, SSP, SEG and PARENT.\n'};
 if (f.matches('.v,.v2') && !(f.matches(':is(.w)~p'))) {i++; log += '[#' + i + s4 + 'PARENT taxons must be located below a HYBR taxon.\n'};
 if (f.matches('.n') && !(f.matches(':is(.b,.z)+p')) || f.matches('.b,.z') && !(/, \d\d\d\d<\/span>/.test(d))) {i++; log += '[#' + i + s4 + 'Every BAS and TS must be directly followed by a proper AUT.\n'};
 if (f.matches('.v2') && !(f.matches('p:is(.v)+p'))) {i++; log += '[#' + i + s4 + 'A hybrid PARENT taxon must be directly followed by the second PARENT.\n'};
@@ -122,7 +122,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.k') && sib.nextElementSibling.matches('.k') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + 'AGG ' + f.innerHTML + '". "SEG ' + sib.innerHTML + '" is listed twice within this AGG.\n'};
 	if (sib.matches('.k') && sib.nextElementSibling.matches('.k') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + 'AGG ' + f.innerHTML + '". Place "SEG ' + sib.innerHTML + '" in its correct alphabetical order within this AGG.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.k)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.k)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of TS within SP/AGG/HYBR
@@ -140,7 +140,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "SYN ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "SYN ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SYN_H within higher taxons
@@ -158,7 +158,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.u,.ue)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue)')) break
 	sib = sib.nextElementSibling}});
 	
 // Order of PARENT within HYBR
@@ -167,7 +167,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.v,.v2)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SP/AGG/HYBR within GEN/SUBGEN/SPGR
@@ -176,7 +176,7 @@ var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.a,.ae,.c')) testArray.push(sib.innerHTML);
 	if (sib.matches('.w')) testArray.push(sib.innerHTML.replace(' ×',''));
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.z,.n,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". The species "' + testArray[t] + '" is listed twice within this this ' + convert(f.classList) + '.\n'};
@@ -188,7 +188,7 @@ $$('.i').forEach(f=>{
 var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.o')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.z,.n,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + 'SUBGEN ' + f.innerHTML + '". "SPGR ' + testArray[t] + '" is listed twice within this this SUBGEN.\n'};
@@ -200,7 +200,7 @@ $$('.f,.y,.t,.j,.h').forEach(f=>{
 var sib = f.nextElementSibling.firstElementChild; var testArray = [];
 while (sib) {
 	if (sib.matches('.g')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.sh,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.z,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.sh,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "GEN ' + testArray[t] + '" is listed twice within this ' + convert(f.classList) + '.\n'};
@@ -266,7 +266,7 @@ var testArray = []; testArray.push(f.innerHTML);
 var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.i')) testArray.push(sib.innerHTML); break;
-	if (sib.matches('p:not(.w,.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	if (sib.matches('p:not(.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
 	sib = sib.nextElementSibling};
 
 if (testArray.length == 2 && testArray[0] !== testArray[1]) {i++; log += '[#' + i + ']  Invalid name detected for first SUBGEN of GEN "' + f.innerHTML + '". Both should have equal names.\n'};
@@ -325,7 +325,7 @@ if (f.matches('p[id]:not(.a,.u,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id
 if (f.matches('.b,.z,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
 if (f.matches('.a,.u,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
 
-// Remove the few rare basionym duplicates considered "valid" by ICZN ruling
+// Remove the few rare basionym duplicates deemed valid by ICZN ruling
 var b1 = testArrayBS.indexOf("papilio agathina"); testArrayBS.splice(b1,1);
 var b2 = testArrayBS.indexOf("papilio harpalyce"); testArrayBS.splice(b2,1);
 var b3 = testArrayBS.indexOf("papilio narcissus"); testArrayBS.splice(b3,1);
@@ -377,7 +377,7 @@ $$('div[id]').forEach(f=>{	if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || f.innerH
 ////8 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var size = count * 0.0000236;
+var size = count * 0.0000235;
 var info2;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
@@ -402,7 +402,7 @@ file_link.setAttribute('download','Lepitaxa-' + version + '.tsv');
 file_link.setAttribute('href','data:text/tsv;charset=utf-8,' + encodeURIComponent(file_cont));
 file_link.click(); console.log('→ Download ready!'); file_link.remove();
 
-// Rebuld IDs and v data points
+// Rebuild IDs and v data points
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 $$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 
