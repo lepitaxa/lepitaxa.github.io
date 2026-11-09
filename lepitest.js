@@ -43,19 +43,24 @@ if (f.matches('.e,.e2') && /Emporor/.test(d)) {i++; log += '[#' + i + s1 + 'Chec
 if (f.matches('.d,.d2') && /(A|a)craea/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Acräa" for typos.\n'};
 if (f.matches('.d,.d2') && /Chineische/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Chinesische" for typos.\n'};
 if (f.matches('.d,.d2') && /(Dickopf|kopfalter)/g.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Dickkopffalter" for typos.\n'};
+if (f.matches('.d,.d2') && /(fater|fatler)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "falter" for typos.\n'};
 if (f.matches('.d,.d2') && /fügel/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Flügel" for typos.\n'};
 if (f.matches('.d,.d2') && /(fügler|flüger)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "flügler" for typos.\n'};
+if (f.matches('.d,.d2') && /(F|f)uss/.test(d)) {i++; log += '[#' + i + s1 + '"Fuss" is an outdated spelling of "Fuß".\n'};
 if (f.matches('.d,.d2') && /Gelbich/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "gelblich" for typos.\n'};
 if (f.matches('.d,.d2') && /(G|g)elbing/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Gelbling" for typos.\n'};
 if (f.matches('.d,.d2') && /Gemeine/.test(d)) {i++; log += '[#' + i + s1 + '"Gemein" is an obsolescent german term for "Gewöhnlich". Use the latter term instead.\n'};
-if (f.matches('.d,.d2') && /Perlmutter/.test(d)) {i++; log += '[#' + i + s1 + '"Perlmutter" is an older, nowadays less common german term for "Perlmutt". Use the latter term instead.\n'};
-if (f.matches('.d,.d2') && /Passionsblumenfalter/.test(d)) {i++; log += '[#' + i + s1 + '"Passionsblumenfalter" is an older, needlessly long german term for "Passionsfalter". Use the latter term instead.\n'};
 if (f.matches('.d,.d2') && /Gewönliche/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Gewöhnlich" for typos.\n'};
 if (f.matches('.d,.d2') && /Gross/.test(d)) {i++; log += '[#' + i + s1 + '"Gross" is an outdated spelling of "Groß".\n'};
 if (f.matches('.d,.d2') && /(ikansche|ikanisce|ikanishe)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the terms "Amerikanische/Afrikanische" for typos.\n'};
+if (f.matches('.d,.d2') && /Passionsblumenfalter/.test(d)) {i++; log += '[#' + i + s1 + '"Passionsblumenfalter" is an older, needlessly long german term for "Passionsfalter". Use the latter term instead.\n'};
 if (f.matches('.d,.d2') && /(P|p)auenauge/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Pfauenauge" for typos.\n'};
+if (f.matches('.d,.d2') && /Perlmutter/.test(d)) {i++; log += '[#' + i + s1 + '"Perlmutter" is an older, nowadays less common german term for "Perlmutt". Use the latter term instead.\n'};
+if (f.matches('.d,.d2') && /Russ(?!i)/.test(d)) {i++; log += '[#' + i + s1 + '"Russ" is an outdated spelling of "Ruß".\n'};
 if (f.matches('.d,.d2') && /(Scwalben|Shwalben)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Schwalben" for typos.\n'};
 if (f.matches('.d,.d2') && /(scwanz|shwanz)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "schwanz" for typos.\n'};
+if (f.matches('.d,.d2') && /(S|s)piess/.test(d)) {i++; log += '[#' + i + s1 + '"Spiess" is an outdated spelling of "Spieß".\n'};
+if (f.matches('.d,.d2') && /(S|s)üss/.test(d)) {i++; log += '[#' + i + s1 + '"Süss" is an outdated spelling of "Süß".\n'};
 if (f.matches('.d,.d2') && /Tibetanisch/.test(d)) {i++; log += '[#' + i + s1 + '"Tibetanisch" is an incorrect spelling of "Tibetisch".\n'};
 if (f.matches('.d,.d2') && /(W|w)eiss/.test(d)) {i++; log += '[#' + i + s1 + '"Weiss" is an outdated spelling of "Weiß".\n'};
 if (f.matches('.e,.e2,.d,.d2') && /&/.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "and/und" instead of the "&" character as an abbreviation.\n'};
@@ -321,9 +326,9 @@ if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
-if (f.matches('p[id]:not(.a,.u,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
+if (f.matches('p[id]:not(.a,.ae,.u,.ue,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
 if (f.matches('.b,.z,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
-if (f.matches('.a,.u,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
+if (f.matches('.a,.ae,.u,.ue,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,'').replace(/ †/,''))});
 
 // Remove the few rare basionym duplicates deemed valid by ICZN ruling
 var b1 = testArrayBS.indexOf("papilio agathina"); testArrayBS.splice(b1,1);
