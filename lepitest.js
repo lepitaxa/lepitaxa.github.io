@@ -61,6 +61,7 @@ if (f.matches('.d,.d2') && /(Scwalben|Shwalben)/.test(d)) {i++; log += '[#' + i 
 if (f.matches('.d,.d2') && /(scwanz|shwanz)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "schwanz" for typos.\n'};
 if (f.matches('.d,.d2') && /(S|s)piess/.test(d)) {i++; log += '[#' + i + s1 + '"Spiess" is an outdated spelling of "Spieß".\n'};
 if (f.matches('.d,.d2') && /(S|s)üss/.test(d)) {i++; log += '[#' + i + s1 + '"Süss" is an outdated spelling of "Süß".\n'};
+if (f.matches('.d,.d2') && /Taiwanesisch/.test(d)) {i++; log += '[#' + i + s1 + '"Taiwanesisch" is an outdated spelling of "Taiwanisch".\n'};
 if (f.matches('.d,.d2') && /Tibetanisch/.test(d)) {i++; log += '[#' + i + s1 + '"Tibetanisch" is an incorrect spelling of "Tibetisch".\n'};
 if (f.matches('.d,.d2') && /(W|w)eiss/.test(d)) {i++; log += '[#' + i + s1 + '"Weiss" is an outdated spelling of "Weiß".\n'};
 if (f.matches('.e,.e2,.d,.d2') && /&/.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "and/und" instead of the "&" character as an abbreviation.\n'};
@@ -69,6 +70,7 @@ if (f.matches('.e,.e2,.d,.d2') && /Mt\./.test(d)) {i++; log += '[#' + i + s1 + '
 if (f.matches('.e,.e2,.d,.d2') && /(’|´)/.test(d)) {i++; log += '[#' + i + s1 + 'For an apostrophe, please use the simple U+0027 "typewriter apostrophe" character found on every keyboard.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /(Phillipin|Phillippin)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Philippin" for typos.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /Saimes/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Siamese" for typos.\n'};
+if (f.matches('.e,.e2,.d,.d2') && /Thaiwan/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Taiwan" for typos.\n'};
 if (f.matches('p:not(.r,.r2,.l,.p,.p2,.xp)') && /(P|p)aplio/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Papilio" for typos.\n'};
 if (f.matches('.a,.ae,.c,.k,.u,.ue,.e,.e2,.d,.d2') && /( -|- )/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces before/after the hyphen.\n'};
 
