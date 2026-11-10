@@ -62,7 +62,7 @@ All Lepitaxa data is included within a single file, index.html. This file also c
 To get around faster within the large dataset, simply use your text editors search function to jump to whatever data point you’d like to modify.
 
 ### Checking data integrity
-To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, it is recommended to additionally run an automated data integrity check. To do this, open index.html in a web browser, navigate to the bottom and click the data download button. Every data export will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them, reload the page and repeat the lepitest for confirmation.
+To check if your modifications show up correctly on the webpage, just open index.html in a web browser. Especially for larger modifications and additions, it is recommended to additionally run an automated data integrity check. To do so, open index.html in a web browser, navigate to the bottom and click the data download button. Every data export will trigger the lepitest script, which checks the data for common mistakes and when done, displays an error log listing all mistakes found. Try to fix them, reload the page and repeat the lepitest for confirmation.
 
 Note that running a successfull lepitest does NOT guarantee full data integrity, as this simple script can by no means detect everything. Also keep in mind that sometimes a single mistake within the data can cause several error points in a lepitest log, don’t get confused by that. They will all resolve after fixing the mistake.
 

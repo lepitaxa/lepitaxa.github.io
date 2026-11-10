@@ -11,6 +11,9 @@ $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nu
 // Trim v data points back to not show the second parent's species name
 $$('.v').forEach(f=>{f.innerHTML = f.innerHTML.replace(/ ×.+/,'')});
 
+// Remove quoation marks from paraphyla names
+$$('.xp').forEach(f=>{f.innerHTML = f.innerHTML.replace(/"(.+)"/g,'$1')});
+
 // Remove ID links
 $$('.link').forEach(f=>{f.remove()});
 
@@ -27,12 +30,11 @@ var s4 = ']  Invalid data order' + sd;
 var s5 = ']  Invalid data point' + sd;
 var sf = 'The suffix of this taxon type must be "';
 
-
 // Special characters and capitalization
-if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.b,.z,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
-if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.sh') && /[^A-z]/g.test(d) || f.matches('.b') && /[^A-z -]/g.test(f.firstElementChild.innerHTML) || f.matches('.z') && /[^A-z]/g.test(f.firstElementChild.innerHTML)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
+if (f.matches('p:not([class^="x"],.f,.y,.t,.j,.h)') && /(^ | $|^\t|\t$)/.test(d) || f.matches('.b,.z,.l') && /(^ | $|^\t|\t$)/.test(f.firstElementChild.innerHTML) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.b,.z,.l)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (f.matches('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.sh') && /[^A-z]/g.test(d) || f.matches('.b') && /[^A-z -]/g.test(f.firstElementChild.innerHTML) || f.matches('.z') && /[^A-z]/g.test(f.firstElementChild.innerHTML)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
-if (f.matches('p:not(.b,.z,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.b,.z') && /[^A-Z]/.test(f.firstElementChild.innerHTML.substring(0,1)) || f.matches('p:not(.xp,.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2)) || f.matches('.b,.z') && /[^a-z -]/.test(f.firstElementChild.innerHTML.substring(1,f.firstElementChild.innerHTML.length))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('p:not(.b,.z,.l,.p)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.b,.z') && /[^A-Z]/.test(f.firstElementChild.innerHTML.substring(0,1)) || f.matches('p:not(.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.b,.z') && /[^a-z -]/.test(f.firstElementChild.innerHTML.substring(1,f.firstElementChild.innerHTML.length))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && /\d/g.test(d)) {i++; log += '[#' + i + s1 + 'No numeric characters allowed in common names, use words instead.\n'};
 
@@ -71,12 +73,12 @@ if (f.matches('.e,.e2,.d,.d2') && /(’|´)/.test(d)) {i++; log += '[#' + i + s1
 if (f.matches('.e,.e2,.d,.d2') && /(Phillipin|Phillippin)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Philippin" for typos.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /Saimes/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Siamese" for typos.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /Thaiwan/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Taiwan" for typos.\n'};
-if (f.matches('p:not(.r,.r2,.l,.p,.p2,.xp)') && /(P|p)aplio/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Papilio" for typos.\n'};
+if (f.matches('p:not(.r,.r2,.l,.p,.p2)') && /(P|p)aplio/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Papilio" for typos.\n'};
 if (f.matches('.a,.ae,.c,.k,.u,.ue,.e,.e2,.d,.d2') && /( -|- )/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces before/after the hyphen.\n'};
 
 // Taxon suffixes
 if (f.matches('.sh') && !(/(a|e|i)$/.test(d))) {i++; log += '[#' + i + s1 + 'The suffix of this synonym must match a valid higher level taxon.\n'};
-if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && !(/a$/.test(d)) || f.matches('.xp') && !(/a"$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
+if (f.matches('[class^="x"]:not(.x,.xs)') && !(/a$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
 if (f.matches('.x') && !(/oidea$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'oidea".\n'};
 if (f.matches('.xs') && !(/iformes$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iformes".\n'};
 if (f.matches('.f') && !(/idae$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'idae".\n'};
@@ -396,7 +398,7 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////9 Run tsv converter, rebuild the ID links and v data points afterwards
+////9 Run tsv converter, rebuild the ID links, v and xp data points afterwards
 console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Converting data to TSV format ...');
 
 // TSV converter
@@ -409,9 +411,10 @@ file_link.setAttribute('download','Lepitaxa-' + version + '.tsv');
 file_link.setAttribute('href','data:text/tsv;charset=utf-8,' + encodeURIComponent(file_cont));
 file_link.click(); console.log('→ Download ready!'); file_link.remove();
 
-// Rebuild IDs and v data points
+// Rebuild IDs, v and xp data points
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 $$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
+$$('.xp').forEach(f=>{f.innerHTML = f.innerHTML.replace(/(.+)/,'"$1"')});
 
 
 
