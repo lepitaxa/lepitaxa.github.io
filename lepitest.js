@@ -11,6 +11,9 @@ $$('div').forEach(f=>{var nuller = document.createElement("p"); f.appendChild(nu
 // Trim v data points back to not show the second parent's species name
 $$('.v').forEach(f=>{f.innerHTML = f.innerHTML.replace(/ ×.+/,'')});
 
+// Remove quoation marks from paraphyla names
+$$('.xp').forEach(f=>{f.innerHTML = f.innerHTML.replace(/"(.+)"/g,'$1')});
+
 // Remove ID links
 $$('.link').forEach(f=>{f.remove()});
 
@@ -27,12 +30,11 @@ var s4 = ']  Invalid data order' + sd;
 var s5 = ']  Invalid data point' + sd;
 var sf = 'The suffix of this taxon type must be "';
 
-
 // Special characters and capitalization
-if (!f.matches('.xp') && /( |\t)$/.test(d) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.b,.z,.l,.xp)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
-if (f.matches('[class^="x"]:not(.xp),.f,.y,.t,.j,.h,.g,.i,.sh') && /[^A-z]/g.test(d) || f.matches('.b') && /[^A-z -]/g.test(f.firstElementChild.innerHTML) || f.matches('.z') && /[^A-z]/g.test(f.firstElementChild.innerHTML)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
+if (f.matches('p:not([class^="x"],.f,.y,.t,.j,.h)') && /(^ | $|^\t|\t$)/.test(d) || f.matches('.b,.z,.l') && /(^ | $|^\t|\t$)/.test(f.firstElementChild.innerHTML) || /(  |\.\.|--| † †| agg. agg.)/g.test(d) || f.matches('p:not(.b,.z,.l)') && /"/g.test(d) || f.matches('.n,.r2,.p2') && / ,/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces, tabs, special characters or suffixes.\n'};
+if (f.matches('[class^="x"],.f,.y,.t,.j,.h,.g,.i,.sh') && /[^A-z]/g.test(d) || f.matches('.b') && /[^A-z -]/g.test(f.firstElementChild.innerHTML) || f.matches('.z') && /[^A-z]/g.test(f.firstElementChild.innerHTML)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z and a-z only. Check for invalid spaces, tabs, line-breaks and special characters.\n'};
 if (f.matches('.o,.a,.ae,.c,.k,.u,.ue,.w,.v,.v2,.s,.s2,.s3,.s4') && /[^A-z-.†× ]/g.test(d)) {i++; log += '[#' + i + s1 + 'Allowed characters are A-Z, a-z and single spaces or hyphens only. Check for invalid tabs, line-breaks and special characters.\n'};
-if (f.matches('p:not(.b,.z,.l,.p,.xp)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.xp') && /[^A-Z]/.test(d.substring(1,2)) || f.matches('.b,.z') && /[^A-Z]/.test(f.firstElementChild.innerHTML.substring(0,1)) || f.matches('p:not(.xp,.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.xp') && /[^a-z]/.test(d.substring(2,d.length-2)) || f.matches('.b,.z') && /[^a-z -]/.test(f.firstElementChild.innerHTML.substring(1,f.firstElementChild.innerHTML.length))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
+if (f.matches('p:not(.b,.z,.l,.p)') && /[^A-ZÄČÖÕÜ]/.test(d.substring(0,1)) || f.matches('.b,.z') && /[^A-Z]/.test(f.firstElementChild.innerHTML.substring(0,1)) || f.matches('p:not(.b,.z,.n,.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2)') && /[^a-z -.†×;]/.test(d.substring(1,d.length)) || f.matches('.b,.z') && /[^a-z -]/.test(f.firstElementChild.innerHTML.substring(1,f.firstElementChild.innerHTML.length))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && (/ [a-z]/g.test(d) && !(/(and|of|du|und|von)/.test(d)) || /( And | Of | Du | Und | Von )/.test(d))) {i++; log += '[#' + i + s1 + 'Check for correct placement of uppercase and lowercase letters.\n'};
 if (f.matches('.d,.d2,.e,.e2') && /\d/g.test(d)) {i++; log += '[#' + i + s1 + 'No numeric characters allowed in common names, use words instead.\n'};
 
@@ -43,33 +45,42 @@ if (f.matches('.e,.e2') && /Emporor/.test(d)) {i++; log += '[#' + i + s1 + 'Chec
 if (f.matches('.d,.d2') && /(A|a)craea/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Acräa" for typos.\n'};
 if (f.matches('.d,.d2') && /Chineische/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Chinesische" for typos.\n'};
 if (f.matches('.d,.d2') && /(Dickopf|kopfalter)/g.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Dickkopffalter" for typos.\n'};
+if (f.matches('.d,.d2') && /(fater|fatler)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "falter" for typos.\n'};
 if (f.matches('.d,.d2') && /fügel/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Flügel" for typos.\n'};
 if (f.matches('.d,.d2') && /(fügler|flüger)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "flügler" for typos.\n'};
+if (f.matches('.d,.d2') && /(F|f)uss/.test(d)) {i++; log += '[#' + i + s1 + '"Fuss" is an outdated spelling of "Fuß".\n'};
 if (f.matches('.d,.d2') && /Gelbich/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "gelblich" for typos.\n'};
 if (f.matches('.d,.d2') && /(G|g)elbing/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Gelbling" for typos.\n'};
 if (f.matches('.d,.d2') && /Gemeine/.test(d)) {i++; log += '[#' + i + s1 + '"Gemein" is an obsolescent german term for "Gewöhnlich". Use the latter term instead.\n'};
-if (f.matches('.d,.d2') && /Perlmutter/.test(d)) {i++; log += '[#' + i + s1 + '"Perlmutter" is an older, nowadays less common german term for "Perlmutt". Use the latter term instead.\n'};
-if (f.matches('.d,.d2') && /Passionsblumenfalter/.test(d)) {i++; log += '[#' + i + s1 + '"Passionsblumenfalter" is an older, needlessly long german term for "Passionsfalter". Use the latter term instead.\n'};
 if (f.matches('.d,.d2') && /Gewönliche/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Gewöhnlich" for typos.\n'};
 if (f.matches('.d,.d2') && /Gross/.test(d)) {i++; log += '[#' + i + s1 + '"Gross" is an outdated spelling of "Groß".\n'};
 if (f.matches('.d,.d2') && /(ikansche|ikanisce|ikanishe)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the terms "Amerikanische/Afrikanische" for typos.\n'};
+if (f.matches('.d,.d2') && /Passionsblumenfalter/.test(d)) {i++; log += '[#' + i + s1 + '"Passionsblumenfalter" is an older, needlessly long german term for "Passionsfalter". Use the latter term instead.\n'};
 if (f.matches('.d,.d2') && /(P|p)auenauge/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Pfauenauge" for typos.\n'};
+if (f.matches('.d,.d2') && /Perlmutter/.test(d)) {i++; log += '[#' + i + s1 + '"Perlmutter" is an older, nowadays less common german term for "Perlmutt". Use the latter term instead.\n'};
+if (f.matches('.d,.d2') && /Russ(?!i)/.test(d)) {i++; log += '[#' + i + s1 + '"Russ" is an outdated spelling of "Ruß".\n'};
 if (f.matches('.d,.d2') && /(Scwalben|Shwalben)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Schwalben" for typos.\n'};
 if (f.matches('.d,.d2') && /(scwanz|shwanz)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "schwanz" for typos.\n'};
+if (f.matches('.d,.d2') && /(S|s)piess/.test(d)) {i++; log += '[#' + i + s1 + '"Spiess" is an outdated spelling of "Spieß".\n'};
+if (f.matches('.d,.d2') && /(S|s)üss/.test(d)) {i++; log += '[#' + i + s1 + '"Süss" is an outdated spelling of "Süß".\n'};
+if (f.matches('.d,.d2') && /Taiwanesisch/.test(d)) {i++; log += '[#' + i + s1 + '"Taiwanesisch" is an outdated spelling of "Taiwanisch".\n'};
 if (f.matches('.d,.d2') && /Tibetanisch/.test(d)) {i++; log += '[#' + i + s1 + '"Tibetanisch" is an incorrect spelling of "Tibetisch".\n'};
 if (f.matches('.d,.d2') && /(W|w)eiss/.test(d)) {i++; log += '[#' + i + s1 + '"Weiss" is an outdated spelling of "Weiß".\n'};
+if (f.matches('.d') && /s's|z's|x's/.test(d)) {i++; log += '[#' + i + s1 + 'Superfluous letter "s" after name ending with "s", "ß" or "x".\n'};
+if (f.matches('.e') && /' /.test(d)) {i++; log += '[#' + i + s1 + 'Missing letter "s" after apostrophe in this name.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /&/.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "and/und" instead of the "&" character as an abbreviation.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /St\./.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "Sankt/Saint" instead of the "St." abbreviation.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /Mt\./.test(d)) {i++; log += '[#' + i + s1 + 'Use the full word "Mount" instead of the "Mt." abbreviation.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /(’|´)/.test(d)) {i++; log += '[#' + i + s1 + 'For an apostrophe, please use the simple U+0027 "typewriter apostrophe" character found on every keyboard.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /(Phillipin|Phillippin)/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Philippin" for typos.\n'};
 if (f.matches('.e,.e2,.d,.d2') && /Saimes/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Siamese" for typos.\n'};
-if (f.matches('p:not(.r,.r2,.l,.p,.p2,.xp)') && /(P|p)aplio/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Papilio" for typos.\n'};
+if (f.matches('.e,.e2,.d,.d2') && /Thaiwan/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Taiwan" for typos.\n'};
+if (f.matches('p:not(.r,.r2,.l,.p,.p2)') && /(P|p)aplio/.test(d)) {i++; log += '[#' + i + s1 + 'Check the term "Papilio" for typos.\n'};
 if (f.matches('.a,.ae,.c,.k,.u,.ue,.e,.e2,.d,.d2') && /( -|- )/g.test(d)) {i++; log += '[#' + i + s1 + 'Check for excess spaces before/after the hyphen.\n'};
 
 // Taxon suffixes
 if (f.matches('.sh') && !(/(a|e|i)$/.test(d))) {i++; log += '[#' + i + s1 + 'The suffix of this synonym must match a valid higher level taxon.\n'};
-if (f.matches('[class^="x"]:not(.x,.xs,.xp)') && !(/a$/.test(d)) || f.matches('.xp') && !(/a"$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
+if (f.matches('[class^="x"]:not(.x,.xs)') && !(/a$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'a".\n'};
 if (f.matches('.x') && !(/oidea$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'oidea".\n'};
 if (f.matches('.xs') && !(/iformes$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'iformes".\n'};
 if (f.matches('.f') && !(/idae$/.test(d))) {i++; log += '[#' + i + s1 + sf + 'idae".\n'};
@@ -101,7 +112,7 @@ if (f.matches('p:is(.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)+p:is(.e,.d)') || f
 if (f.matches('p:is(.s,.s2,.s3,.s4)+p:is(.b,.z,.n)')) {i++; log += '[#' + i + s4 + 'Synonyms should be placed after basionyms and type species designations.\n'};
 if (f.matches('p:is(.z,.n)+p.b')) {i++; log += '[#' + i + s4 + 'Type species designations should be placed after basionyms. There can also be only one basionym listed per species-type taxon.\n'};
 if (f.matches('p:is(.u,.ue,.k,.v,.v2)+p:is(.b,.z,.n,.s,.s2,.s3,.s4)')) {i++; log += '[#' + i + s4 + 'SSP, SEG and PARENT should be placed after basionyms, type species designations and synonyms.\n'};
-if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.n,.z,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, type species designations, synonyms, SSP, SEG and PARENT.\n'};
+if (f.matches('p:is(.p,.p2)+p:is(.e,.e2,.d,.d2,.b,.z,.n,[class^="s"],.u,.ue,.k,.v,.v2)')) {i++; log += '[#' + i + s4 + 'REF, REF_TITLE and REF_ID should be placed after common names, basionyms, type species designations, synonyms, SSP, SEG and PARENT.\n'};
 if (f.matches('.v,.v2') && !(f.matches(':is(.w)~p'))) {i++; log += '[#' + i + s4 + 'PARENT taxons must be located below a HYBR taxon.\n'};
 if (f.matches('.n') && !(f.matches(':is(.b,.z)+p')) || f.matches('.b,.z') && !(/, \d\d\d\d<\/span>/.test(d))) {i++; log += '[#' + i + s4 + 'Every BAS and TS must be directly followed by a proper AUT.\n'};
 if (f.matches('.v2') && !(f.matches('p:is(.v)+p'))) {i++; log += '[#' + i + s4 + 'A hybrid PARENT taxon must be directly followed by the second PARENT.\n'};
@@ -122,7 +133,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.k') && sib.nextElementSibling.matches('.k') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + 'AGG ' + f.innerHTML + '". "SEG ' + sib.innerHTML + '" is listed twice within this AGG.\n'};
 	if (sib.matches('.k') && sib.nextElementSibling.matches('.k') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + 'AGG ' + f.innerHTML + '". Place "SEG ' + sib.innerHTML + '" in its correct alphabetical order within this AGG.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.k)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.k)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of TS within SP/AGG/HYBR
@@ -140,7 +151,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "SYN ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.s,.s2,.s3,.s4') && sib.nextElementSibling.matches('.s,.s2,.s3,.s4') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "SYN ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SYN_H within higher taxons
@@ -158,7 +169,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.u,.ue') && sib.nextElementSibling.matches('.u,.ue') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.u,.ue)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.u,.ue)')) break
 	sib = sib.nextElementSibling}});
 	
 // Order of PARENT within HYBR
@@ -167,7 +178,7 @@ var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" is listed twice within this ' + convert(f.classList) + '.\n'};
 	if (sib.matches('.v') && sib.nextElementSibling.matches('.v2') && sib.innerHTML.localeCompare(sib.nextElementSibling.innerHTML, 'en') == 1) {i++; log += '[#' + i + s6 + convert(f.classList) + ' ' + f.innerHTML + '". Place "'+ convert(sib.classList) + ' ' + sib.innerHTML + '" in its correct alphabetical order within this ' + convert(f.classList) + '.\n'};
-	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2)')) break
+	if (sib.nextElementSibling.matches('p:not(.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.v,.v2)')) break
 	sib = sib.nextElementSibling}});
 
 // Order of SP/AGG/HYBR within GEN/SUBGEN/SPGR
@@ -176,7 +187,7 @@ var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.a,.ae,.c')) testArray.push(sib.innerHTML);
 	if (sib.matches('.w')) testArray.push(sib.innerHTML.replace(' ×',''));
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.z,.n,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". The species "' + testArray[t] + '" is listed twice within this this ' + convert(f.classList) + '.\n'};
@@ -188,7 +199,7 @@ $$('.i').forEach(f=>{
 var sib = f.nextElementSibling; var testArray = [];
 while (sib) {
 	if (sib.matches('.o')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.n,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.d,.b,.z,.n,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + 'SUBGEN ' + f.innerHTML + '". "SPGR ' + testArray[t] + '" is listed twice within this this SUBGEN.\n'};
@@ -200,7 +211,7 @@ $$('.f,.y,.t,.j,.h').forEach(f=>{
 var sib = f.nextElementSibling.firstElementChild; var testArray = [];
 while (sib) {
 	if (sib.matches('.g')) testArray.push(sib.innerHTML);
-	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.sh,.u,.ue,.k,.v,.v2)')) break
+	if (sib.matches('p:not(.r,.r2,.l,.p,.p2,.e,.e2,.d,.d2,.b,.z,.n,.g,.i,.o,.a,.ae,.c,.w,.s,.s2,.s3,.s4,.sh,.u,.ue,.k,.v,.v2)')) break
 	sib = sib.nextElementSibling};
 for (let t = 0; t < testArray.length - 1; t++) {
 	if (testArray[t].localeCompare(testArray[t+1], 'en') == 0) {i++; log += '[#' + i + s5 + convert(f.classList) + ' ' + f.innerHTML + '". "GEN ' + testArray[t] + '" is listed twice within this ' + convert(f.classList) + '.\n'};
@@ -266,7 +277,7 @@ var testArray = []; testArray.push(f.innerHTML);
 var sib = f.nextElementSibling;
 while (sib) {
 	if (sib.matches('.i')) testArray.push(sib.innerHTML); break;
-	if (sib.matches('p:not(.w,.e,.d,.b,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
+	if (sib.matches('p:not(.w,.e,.d,.b,.z,.n,.s,.s2,.s3,.s4,.v,.v2,.r,.r2,.l,.p,.p2)')) break
 	sib = sib.nextElementSibling};
 
 if (testArray.length == 2 && testArray[0] !== testArray[1]) {i++; log += '[#' + i + ']  Invalid name detected for first SUBGEN of GEN "' + f.innerHTML + '". Both should have equal names.\n'};
@@ -321,11 +332,11 @@ if (f.matches('.e')) testArrayE.push(f.innerHTML);
 if (f.matches('.e2')) testArrayE2.push(f.innerHTML);
 if (f.matches('.d')) testArrayD.push(f.innerHTML);
 if (f.matches('.d2')) testArrayD2.push(f.innerHTML);
-if (f.matches('p[id]:not(.a,.u,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
+if (f.matches('p[id]:not(.a,.ae,.u,.ue,.k,.b,.z,.s,.s2,.s3,.s4)')) testArrayTX.push(f.id.replace(/_/g,' '));
 if (f.matches('.b,.z,.s,.s2,.s3,.s4')) testArrayBS.push(f.id.replace(/_/g,' ').replace(/.+\$/,''));
-if (f.matches('.a,.u,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,''))});
+if (f.matches('.a,.ae,.u,.ue,.k,.s,.s2,.s3,.s4')) testArraySY.push(f.id.replace(/_/g,' ').replace(/.+\$/,'').replace(/ †/,''))});
 
-// Remove the few rare basionym duplicates considered "valid" by ICZN ruling
+// Remove the few rare basionym duplicates deemed valid by ICZN ruling
 var b1 = testArrayBS.indexOf("papilio agathina"); testArrayBS.splice(b1,1);
 var b2 = testArrayBS.indexOf("papilio harpalyce"); testArrayBS.splice(b2,1);
 var b3 = testArrayBS.indexOf("papilio narcissus"); testArrayBS.splice(b3,1);
@@ -377,7 +388,7 @@ $$('div[id]').forEach(f=>{	if (/\/div\>(?!\n?\<)/g.test(f.innerHTML) || f.innerH
 ////8 Remove padding, calculate download size, finish log, show infos and results
 $$('p:not([class])').forEach(f=>{f.remove()});
 
-var size = count * 0.0000236;
+var size = count * 0.0000235;
 var info2;
 
 var info1 = 'CHECK AND EXPORT DATASET\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n- Export format: TSV\n- Estimated download size: ' + size.toFixed(1) + ' MB\n\n';
@@ -389,7 +400,7 @@ var results = '⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯�
 console.log(results); alert(info1 + info2 + results);
 
 
-////9 Run tsv converter, rebuild the ID links and v data points afterwards
+////9 Run tsv converter, rebuild the ID links, v and xp data points afterwards
 console.log('⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n→ Converting data to TSV format ...');
 
 // TSV converter
@@ -402,9 +413,10 @@ file_link.setAttribute('download','Lepitaxa-' + version + '.tsv');
 file_link.setAttribute('href','data:text/tsv;charset=utf-8,' + encodeURIComponent(file_cont));
 file_link.click(); console.log('→ Download ready!'); file_link.remove();
 
-// Rebuld IDs and v data points
+// Rebuild IDs, v and xp data points
 $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_lnk.href = 'https://lepitaxa.github.io#' + f.id; id_lnk.title= '→ Lepitaxa-Link'; id_lnk.classList.add('link'); f.prepend(id_lnk)});
 $$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
+$$('.xp').forEach(f=>{f.innerHTML = f.innerHTML.replace(/(.+)/,'"$1"')});
 
 
 
