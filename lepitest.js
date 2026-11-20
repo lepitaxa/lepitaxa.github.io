@@ -418,6 +418,10 @@ $$('.a,.ae,.c,.w,.g').forEach(f=>{var id_lnk = document.createElement('a'); id_l
 $$('.v').forEach(f=>{f.innerHTML += ' × ' + f.nextElementSibling.innerHTML});
 $$('.xp').forEach(f=>{f.innerHTML = f.innerHTML.replace(/(.+)/,'"$1"')});
 
+// Restore export button
+$('#dots').style.fill = 'none'; $$('.ex').forEach(f=>{f.style.fill = '#666'});
+
+
 
 
 ////// AUX FUNCTION - Class list data type extractor
